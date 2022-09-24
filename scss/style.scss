@@ -2785,7 +2785,10 @@ ul.list.books > li > a > span.name:hover {
 	.page__ {
 		&header {
 			color: $rgb-font--night;
-			background: $rgb-off-black;
+			// background: $rgb-off-black;
+			// ewu: Match the colors to the Key Abilities box.
+			background: #5e0000;
+			border-bottom: 2px solid #b29e74;
 		}
 
 		&title--home {
@@ -2806,11 +2809,15 @@ ul.list.books > li > a > span.name:hover {
 	.page__nav-inner > li.active > a,
 	.page__nav-inner > li.active > a:focus,
 	.page__nav-inner > li.active > a:hover {
-		background-color: $rgb-off-black;
-		border-top: 0;
-		border-color: $rgb-border-grey--night;
-		border-left-color: transparent;
-		border-right-color: transparent;
+		// background-color: $rgb-off-black;
+		// ewu: The currently-open header. Use a similar red/yellow to the banner.
+		background: #5e0000;
+		border-bottom: 2px solid #b29e74;
+		// background-color: $rgb-off-black;
+		// border-top: 0;
+		// border-color: $rgb-border-grey--night;
+		// border-left-color: transparent;
+		// border-right-color: transparent;
 		color: #d0d0d0;
 	}
 
@@ -2862,15 +2869,25 @@ ul.list.books > li > a > span.name:hover {
 		}
 	}
 
+	// ewu: Add margin to nav headers.
+	.nav > li {
+		margin-left: 0.25rem;
+		margin-right: 0.25rem;
+	}
+
 	.nav > li:not(.active) > a {
 		color: $rgb-font--night;
 		background-color: $rgb-bg--night;
-		border: 1px solid $rgb-border-grey--trans-night;
-		border-top: 0;
+		// ewu: Remove the border.
+		border: 0;
+		// border: 1px solid $rgb-border-grey--trans-night;
+		// border-top: 0;
 
 		&:focus,
 		&:hover {
-			background-color: lighten($rgb-bg--night, 2%);
+			// ewu: Show the banner red when hovering.
+			background: #5e0000;
+			// background-color: lighten($rgb-bg--night, 2%);
 			color: white;
 		}
 	}
@@ -2886,19 +2903,30 @@ ul.list.books > li > a > span.name:hover {
 		color: black !important;
 	}
 
+	// ewu: Nav header selected.
 	.nav li.open > a,
 	.nav li.open > a:focus,
 	.nav li.open > a:hover {
-		background-color: lighten($rgb-bg--night, 2%);
-		border-left: 1px solid $rgb-link-blue;
-		border-right: 1px solid $rgb-link-blue;
-		border-color: $rgb-link-blue;
+		// ewu: Use the same background color.
+		background: #5e0000;
+		border: 0;
+		border-bottom: 2px transparent #b29e74;
+		// ewu: Remove the rounding around the bottom of the button.
+		border-radius: 0;
+		// background-color: lighten($rgb-bg--night, 2%);
+		// border-left: 1px solid $rgb-link-blue;
+		// border-right: 1px solid $rgb-link-blue;
+		// border-color: $rgb-link-blue;
 	}
 
+	// ewu: The curent nav header while opened.
 	.nav li.active.open > a,
 	.nav li.active.open > a:focus,
 	.nav li.active.open > a:hover {
-		background-color: $rgb-off-black;
+		// ewu: Use the same border options.
+		background: #5e0000;
+		border-bottom: 2px solid #b29e74;
+		// background-color: $rgb-off-black;
 		color: white;
 	}
 
@@ -2987,6 +3015,15 @@ ul.list.books > li > a > span.name:hover {
 		background: $rgb-bg--night;
 		color: $rgb-font--night;
 		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.56);
+
+	}
+
+	// ewu: Style the main dropdown navigation in red.
+	.nav {
+		dialog.dialog-modal,
+		.dropdown-menu {
+			border: 2px solid #5e0000;
+		}
 	}
 
 	.dropdown-menu > li {
@@ -3018,9 +3055,13 @@ ul.list.books > li > a > span.name:hover {
 		&.active {
 			> a,
 			> span {
-				color: black;
-				// $night-pf2-red
-				background: #e06565;
+				// color: black;
+				// // $night-pf2-red
+				// background: #e06565;
+				// ewu: The currently-open page. Replace the default orange.
+				color: white;
+				font-weight: bold;
+				background-color: $rgb-off-black;
 			}
 		}
 
@@ -3040,6 +3081,11 @@ ul.list.books > li > a > span.name:hover {
 
 	.dropdown-menu .divider {
 		background-color: $rgb-border-grey--night;
+	}
+
+	// ewu: Use red dividers on nav bar.
+	.nav .dropdown-menu .divider {
+		background-color: #5e0000;
 	}
 
 	select,
