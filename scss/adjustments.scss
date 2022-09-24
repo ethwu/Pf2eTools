@@ -1,0 +1,235 @@
+// Author: Ethan Wu <ethanwu@cs.ucsb.edu>
+// Adjustments to the default styling for pf2etools.
+
+// Widen up the margins.
+
+// page header
+header.page__header {
+	padding: 1rem 0 1rem 0;
+	margin: 0 0 0 0;
+}
+
+
+// Wider left and right margins on pf2-table
+.pf2-book {
+    padding: 0.4rem 2rem 0.4rem 2rem;
+    hyphens: auto;
+}
+
+.pf2-sidebar .pf2-title {
+    padding-left: 1rem;
+}
+
+.pf2-sidebar__text {
+    padding-left: 1rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+
+.pf2-table {
+    margin: 1rem 0 0.3rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+
+    &__caption {
+        // Match the lower margin to the overall table padding.
+        margin-bottom: 0.3rem;
+        // Remove the left-side padding.
+        padding-left: 0;
+    }
+
+    &__label {
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .pf2-stat__source {
+        margin-top: 0.3rem;
+        padding: 0;
+    }
+}
+
+.btn {
+    font-size: 11pt;
+}
+
+#stat-tabs {
+    .btn {
+        font-size: 11pt;
+        margin: 0 0.3rem 0 0.3rem;
+        padding: 0 1rem 0 1rem;
+    }
+}
+
+// Improve the text size and padding on the search system.
+#listcontainer {
+    // The top level filters.
+    #filter-search-group {
+        font-size: 11pt;
+        height: max-content;
+
+        .btn, .form-control {
+            font-size: inherit;
+            height: 100%;
+        }
+
+        button#feelinglucky {
+            padding: 5.5px 12px;
+        }
+    }
+
+    // The row of buttons below the filter.
+    .fltr__mini-view {
+        .fltr__mini-pill {
+            margin: 0.3rem;
+            padding: 0.15rem;
+            font-size: 9pt;
+        }
+    }
+
+    // The headers on the filter.
+    #filtertools {
+        font-size: 11pt;
+    }
+
+    .list {
+        margin-top: 0.3rem;
+
+        li {
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
+
+            span.bold {
+                font-weight: normal !important;
+            }
+            font-size: 11pt;
+            line-height: initial;
+        }
+
+        li.list-multi-selected {
+            span.col-10 {
+                font-weight: bold !important;
+            }
+            box-shadow: none;
+        }
+    }
+}
+
+// Invert the source colors for legibility.
+.source {
+    display: inline-block;
+    width: 4em;
+
+	$rgb-source-APG: #4a6898;
+	$rgb-source-GMG: purple;
+	$rgb-source-B1: rgb(0, 137, 0);
+	$rgb-source-B2: rgb(0, 107, 0);
+	$rgb-source-B3: rgb(0, 77, 0);
+	$rgb-source-LOGM: #69af9a;
+	$rgb-source-Homebrew: $rgb-class-brew;
+	$rgb-source-CRB: #a2201f;
+	$rgb-source-SoM: #a24d08;
+	$rgb-source-G_G: #754f2f;
+	$rgb-source-AAWS: #365fac;
+	$rgb-source-LOME: #9b7c27;
+	$rgb-source-LOTGB: #ac408b;
+	$rgb-source-BotD: #2b4625;
+
+
+	&AAWS {
+        color: white !important;
+		background-color: $rgb-source-AAWS !important;
+		border-color: $rgb-source-AAWS !important;
+		text-decoration-color: $rgb-source-AAWS !important;
+	}
+
+	&APG {color: white !important;
+		background-color: $rgb-source-APG !important;
+		border-color: $rgb-source-APG !important;
+		text-decoration-color: $rgb-source-APG !important;
+	}
+
+	&GMG {color: white !important;
+		background-color: $rgb-source-GMG !important;
+		border-color: $rgb-source-GMG !important;
+		text-decoration-color: $rgb-source-GMG !important;
+	}
+
+	&B1 {color: white !important;
+		background-color: $rgb-source-B1 !important;
+		border-color: $rgb-source-B1 !important;
+		text-decoration-color: $rgb-source-B1 !important;
+	}
+
+	&B2 {color: white !important;
+		background-color: $rgb-source-B2 !important;
+		border-color: $rgb-source-B2 !important;
+		text-decoration-color: $rgb-source-B2 !important;
+	}
+
+	&B3 {color: white !important;
+		background-color: $rgb-source-B3 !important;
+		border-color: $rgb-source-B3 !important;
+		text-decoration-color: $rgb-source-B3 !important;
+	}
+
+	&LOME {color: white !important;
+		background-color: $rgb-source-LOME !important;
+		border-color: $rgb-source-LOME !important;
+		text-decoration-color: $rgb-source-LOME !important;
+	}
+
+	&LOGM,
+	&LOCG,
+	&LOWG,
+	&LOL,
+	&LOPSG,
+	&LOAG {color: white !important;
+		background-color: $rgb-source-LOGM !important;
+		border-color: $rgb-source-LOGM !important;
+		text-decoration-color: $rgb-source-LOGM !important;
+	}
+
+	&LOTGB {color: white !important;
+		background-color: $rgb-source-LOTGB !important;
+		border-color: $rgb-source-LOTGB !important;
+		text-decoration-color: $rgb-source-LOTGB !important;
+	}
+
+	&Homebrew {color: white !important;
+		background-color: $rgb-source-Homebrew !important;
+		border-color: $rgb-source-Homebrew !important;
+		text-decoration-color: $rgb-source-Homebrew !important;
+	}
+
+	&Spicy {color: white !important;
+		background-color: $rgb-subclass-ua !important;
+		border-color: $rgb-subclass-ua !important;
+		text-decoration-color: $rgb-subclass-ua !important;
+	}
+
+	&CRB {color: white !important;
+		background-color: $rgb-source-CRB !important;
+		border-color: $rgb-source-CRB !important;
+		text-decoration-color: $rgb-source-CRB !important;
+	}
+
+	&SoM {color: white !important;
+		background-color: $rgb-source-SoM !important;
+		border-color: $rgb-source-SoM !important;
+		text-decoration-color: $rgb-source-SoM !important;
+	}
+
+	&G_G {color: white !important;
+		background-color: $rgb-source-G_G !important;
+		border-color: $rgb-source-G_G !important;
+		text-decoration-color: $rgb-source-G_G !important;
+	}
+
+	&BotD {color: white !important;
+		background-color: $rgb-source-BotD !important;
+		border-color: $rgb-source-BotD !important;
+		text-decoration-color: $rgb-source-BotD !important;
+	}
+}
