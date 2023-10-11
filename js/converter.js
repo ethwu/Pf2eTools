@@ -3,7 +3,7 @@
 if (typeof module !== "undefined") {
 	require("../js/utils.js");
 	require("../js/parser.js");
-	Object.assign(global, require("./Tokenizer"));
+	Object.assign(global, require("./tokenizer.js"));
 	Object.assign(global, require("../js/converterutils.js"));
 	global.PropOrder = require("../js/utils-proporder.js");
 }
@@ -139,6 +139,7 @@ class Converter {
 					case "ITEM": (this._parsedData.item = this._parsedData.item || []).push(this._parseItem()); return;
 					case "BACKGROUND": (this._parsedData.background = this._parsedData.background || []).push(this._parseBackground()); return;
 					case "CREATURE": (this._parsedData.creature = this._parsedData.creature || []).push(this._parseCreature()); return;
+					case "HAZARD": (this._parsedData.hazard = this._parsedData.hazard || []).push(this._parseHazard()); return;
 					default: throw new Error(`Unexpected data creation! Attempted to create ${dataType}.`);
 				}
 			} else if (this._tokenIsType(this._tokenizerUtils.words, nextToken)) {
@@ -158,7 +159,9 @@ class Converter {
 		const [match, name, type, level] = this._tokenizerUtils.dataHeaders.find(it => it.type === "SPELL").regex.exec(headerToken.value);
 		const spell = {};
 		spell.name = name.toTitleCase();
-		spell.type = type.toTitleCase();
+		if (type.toTitleCase() !== "Spell") {
+			spell.type = type.toTitleCase();
+		}
 		spell.level = Number(level);
 		spell.source = this._source;
 		spell.page = this._page;
@@ -172,6 +175,11 @@ class Converter {
 			this._tokenStack = [];
 		}
 		this._parsing = null;
+
+		if (spell.traditions) {
+			spell.traditions = spell.traditions.map(t => t.toLowerCase());
+		}
+
 		return PropOrder.getOrdered(spell, "spell");
 	}
 	_parseFeat () {
@@ -214,9 +222,9 @@ class Converter {
 		this._parsing = item.name;
 		this._parseTraits(item);
 		this._parseProperties(item);
-		this._parseItemCategory(item);
 		this._parseItemRuneAppliesTo(item);
 		this._parseEntries(item);
+		this._parseItemCategory(item);
 		// Staffs and Wands usually dont have craft requirements for each variant item.
 		if (this._tokenIsType(this._tokenizerUtils.craftRequirements)) {
 			this._parseCraftRequirements(item);
@@ -245,6 +253,7 @@ class Converter {
 		this._parseBackgroundAbilityBoosts(background);
 		this._parseBackgroundSkills(background);
 		this._parseBackgroundFeats(background);
+		this._parseBackgroundSpells(background);
 		this._parseBackgroundMisc(background);
 		if (this._tokenStack.length > 0) {
 			this._cbWarn(`Token stack was not empty after parsing background "${background.name}"!`);
@@ -279,6 +288,30 @@ class Converter {
 		this._isParsingCreature = null;
 		this._parsing = null;
 		return PropOrder.getOrdered(creature, "creature");
+	}
+	_parseHazard () {
+		this._tokenStack.reverse();
+		// Hazards are creatures for the purpose of parsing abilities
+		this._isParsingCreature = true;
+		this._parsedProperties = [];
+		this._parsedAbilities = [];
+		const headerToken = this._consumeToken("HAZARD");
+		const [match, name, level] = this._tokenizerUtils.dataHeaders.find(it => it.type === "HAZARD").regex.exec(headerToken.value);
+		const hazard = {};
+		hazard.name = name.toTitleCase();
+		hazard.level = Number(level);
+		hazard.source = this._source;
+		hazard.page = this._page;
+		this._parsing = hazard.name;
+		this._parseTraits(hazard);
+		this._parseHazardProperties(hazard);
+		if (this._tokenStack.length > 0) {
+			this._cbWarn(`Token stack was not empty after parsing hazard "${hazard.name}"!`);
+			this._tokenStack = [];
+		}
+		this._isParsingCreature = null;
+		this._parsing = null;
+		return PropOrder.getOrdered(hazard, "hazard");
 	}
 
 	_parseTraits (obj, opts) {
@@ -322,11 +355,15 @@ class Converter {
 		else if (this._tokenIsType(this._tokenizerUtils.traditionsSubclasses)) this._parseTraditionsSubclasses(obj, opts);
 		else if (this._tokenIsType(this._tokenizerUtils.trigger)) this._parseTrigger(obj, opts);
 		else if (this._tokenIsType(this._tokenizerUtils.usage)) this._parseUsage(obj, opts);
+		else if (this._tokenIsType(this._tokenizerUtils.category)) this._parseCategory(obj, opts);
 		else throw new Error(`Unimplemented property creation of type "${this._peek().type}"`);
 	}
 
 	_parseAccess (obj, opts) {
 		this._parseGenericProperty(obj, this._tokenizerUtils.access, "access", opts);
+	}
+	_parseCategory (obj, opts) {
+		this._parseGenericProperty(obj, this._tokenizerUtils.category, "category", opts);
 	}
 	_parseActivateProperty (obj, opts) {
 		opts = opts || {};
@@ -402,12 +439,13 @@ class Converter {
 		this._parseGenericProperty(obj, this._tokenizerUtils.craftRequirements, "craftReq", opts);
 	}
 	_parseDuration (obj, opts) {
+		// TODO: Dismissible spells
 		opts = opts || {};
 		this._consumeToken(this._tokenizerUtils.duration);
 		this._parsedProperties.push(...this._tokenizerUtils.duration);
 		const entries = this._getEntries({checkContinuedLines: true, ...opts.getEntriesOpts});
 		const rendered = this._renderEntries(entries, {asString: true});
-		const regExpDuration = new RegExp(`(sustained)?(?: up to )?(\\d+)? ?(${this._tokenizerUtils.timeUnits.map(u => u.regex.source).join("|")})?`);
+		const regExpDuration = new RegExp(`(sustained)?(?: up to )?(\\d+)? ?(${this._tokenizerUtils.timeUnits.map(u => u.regex.source).join("|")})?$`);
 		const matched = regExpDuration.exec(rendered);
 		if (matched && matched[0]) {
 			obj.duration = {};
@@ -437,10 +475,10 @@ class Converter {
 		if (matched) {
 			obj.frequency = {};
 			const freq = matched[1].toLowerCase();
-			if (freq === "once") obj.frequency.freq = 1;
-			else if (freq === "twice") obj.frequency.freq = 2;
-			else if (!Number.isNaN(Number(freq.split(" ")[0]))) obj.frequency.freq = Number(freq.split(" ")[0]);
-			else obj.frequency.freq = freq.split(" ")[0];
+			if (freq === "once") obj.frequency.number = 1;
+			else if (freq === "twice") obj.frequency.number = 2;
+			else if (!Number.isNaN(Number(freq.split(" ")[0]))) obj.frequency.number = Number(freq.split(" ")[0]);
+			else obj.frequency.number = freq.split(" ")[0];
 
 			if (matched[2] === "every") obj.frequency.recurs = true;
 			if (matched[3]) obj.frequency.interval = Number(matched[3]);
@@ -571,6 +609,13 @@ class Converter {
 
 	_parseItemCategory (item) {
 		const cats = this._tokenizerUtils.itemCategories;
+		if (item.category) {
+			if (cats.map(c => c.cat.toLowerCase()).includes(item.category.toLowerCase())) {
+				return;
+			} else {
+				this._cbWarn(`Item category "${item.category}" is not recognised.`);
+			}
+		}
 		if (cats.map(c => c.cat.toLowerCase()).includes(item.type.toLowerCase())) {
 			item.category = item.type;
 			return;
@@ -588,6 +633,18 @@ class Converter {
 					return;
 				}
 			}
+		}
+		if (item.entries.filter(e => {
+			const regex = new RegExp(`${item.name} rune`, "i")
+			// TODO: this is now just shallow search, likely not going to improve on it further
+			if (typeof e === "string" && regex.test(e)) {
+				return true
+			} else if (typeof e === "object" && e.entries != null) {
+				return e.entries.some(ee => typeof ee === "string" && regex.test(ee));
+			}
+		}).length > 0) {
+			item.category = "Rune";
+			return;
 		}
 		item.category = "Unknown";
 		this._cbWarn(`Couldn't determine item category of "${item.name}".`);
@@ -627,8 +684,18 @@ class Converter {
 		const feats = Array.from(new Set(Array.from(entriesString.matchAll(reFeat)).filter(Boolean).map(m => m[1])));
 		if (feats.length) background.feats = feats;
 	}
+	_parseBackgroundSpells (background) {
+		// Look for "cast {@spell ...}" as a tell that there's a granted spell
+		const spells = background.entries.filter(e => typeof e === "string").join(" ").match(/(?<=\bcast (the )?\{@spell )[^{}]+(?=\})/gi);
+		if (spells) background.spells = spells;
+	}
 	_parseBackgroundMisc (background) {
-		if (background.entries.some(it => it.type === "ability")) background.ability = true;
+		let miscTags = [];
+		if (background.entries.some(it => it.type === "ability")) miscTags.push("ability");
+		if (background.entries.some(it => typeof it === "string" ? !!it.match(/\+\d \w+ bonus/) : false)) miscTags.push("situationalBenefit"); // will catch most
+		if (background.entries.some(it => typeof it === "string" ? !!it.match(/low-light vision|darkvision|scent|thoughtsense|tremorsense|wavesense/) : false)) miscTags.push("sense"); // best attempt
+		// equipment and drawbacks deemed infeasible to automatically recognise
+		if (miscTags.length) background.miscTags = miscTags;
 	}
 
 	_parseCreatureProperties (obj) {
@@ -641,7 +708,8 @@ class Converter {
 				this._push(actionToken);
 				this._push(atkToken);
 				breakOnLength += 1;
-			} else if (this._tokenIsType(this._tokenizerUtils.stringEntries)) this._parseCreatureAbilities(obj);
+			} else if (this._tokenIsType(this._tokenizerUtils.stringEntries) && this._peek().isStartNewLine) this._parseCreatureAbilities(obj);
+			else this._cbWarn(`Unexpected token "${this._peek().value}"`);
 			if (breakOnLength === this._tokenStack.length) break;
 		}
 	}
@@ -655,6 +723,7 @@ class Converter {
 		else if (this._tokenIsType(this._tokenizerUtils.fort)) this._parseCreatureSavingThrows(obj);
 		else if (this._tokenIsType(this._tokenizerUtils.hp)) this._parseHP(obj);
 		else if (this._tokenIsType(this._tokenizerUtils.hardness)) this._parseHardness(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.thresholds)) this._parseThresholds(obj);
 		else if (this._tokenIsType(this._tokenizerUtils.immunities)) this._parseImmunities(obj);
 		else if (this._tokenIsType(this._tokenizerUtils.weaknesses)) this._parseWeaknesses(obj);
 		else if (this._tokenIsType(this._tokenizerUtils.resistances)) this._parseResistances(obj);
@@ -687,8 +756,10 @@ class Converter {
 				} else {
 					rendered.split(", ").forEach(senseStr => {
 						const {range, rest} = this._parseRange_parseRangeStr(senseStr);
-						if (rest === "" && range.unit !== "unknown") senses.last().range = range;
-						else {
+
+						if (rest === "" && range.unit !== "unknown") {
+							Object.assign(senses.last(), range)
+						} else {
 							const name = range.unit === "unknown" ? senseStr : rest || senseStr;
 							const sense = {name, range: range.unit === "unknown" ? undefined : range};
 							senses.push(sense);
@@ -703,66 +774,114 @@ class Converter {
 	_parseLanguages (creature) {
 		this._consumeToken(this._tokenizerUtils.languages);
 		const entries = this._getEntries();
-		const languages = {};
+		let languages = [];
+		let abilities = [];
 
 		const numSemis = entries.filter(e => this._tokenIsType(this._tokenizerUtils.sentencesSemiColon, e)).length;
 		if (numSemis === 0) {
 			// assume no abilities
-			languages.languages = [];
 			entries.forEach(entry => {
 				if (this._tokenIsType(this._tokenizerUtils.sentences, entry)) {
 					const rendered = this._renderEntries([entry], {asString: true});
-					languages.languages.push(...rendered.split(", "));
+					languages.push(...rendered.split(", "));
 				} else if (this._tokenIsType(this._tokenizerUtils.parenthesis, entry)) {
-					languages.languages[languages.languages.length - 1] += ` ${this._renderToken(entry)}`;
+					languages[languages.length - 1] += ` ${this._renderToken(entry)}`;
 				} else {
 					throw new Error(`Unexpected token while paring languages: "${entry.type}"`);
 				}
 			});
 		} else if (numSemis === 1) {
 			const ixSemi = entries.findIndex(e => this._tokenIsType(this._tokenizerUtils.sentencesSemiColon, e));
-			languages.languages = this._renderEntries(entries.slice(0, ixSemi + 1), {asString: true}).split(", ");
-			languages.abilities = this._renderEntries(entries.slice(ixSemi + 1), {asString: true}).split(", ");
+			languages = this._renderEntries(entries.slice(0, ixSemi + 1), {asString: true}).split(", ");
+			abilities = this._renderEntries(entries.slice(ixSemi + 1), {asString: true}).split(", ");
 		} else {
 			// assume no abilities, languages seperated by semicolon
-			languages.languages = [];
 			entries.forEach(entry => {
 				if (this._tokenIsType(this._tokenizerUtils.sentences, entry)) {
 					const rendered = this._renderEntries([entry], {asString: true});
-					languages.languages.push(...rendered);
+					languages.push(...rendered);
 				} else if (this._tokenIsType(this._tokenizerUtils.parenthesis, entry)) {
-					languages.languages[languages.languages.length - 1] += ` ${this._renderToken(entry)}`;
+					languages[languages.length - 1] += ` ${this._renderToken(entry)}`;
 				} else {
 					throw new Error(`Unexpected token while paring languages: "${entry.type}"`);
 				}
 			});
 		}
-		creature.languages = languages;
+
+		const regexRemove = /['’-]/g;
+		const regexSplitWords = /\W+/;
+		const regexStartsUppercase = /^\p{Lu}/u;
+		const [filteredLanguages, notes] = languages.partition(lang => {
+			// heuristically detect language notes by looking for non-capitalized words
+			// remove some punctuation to avoid treating e.g. D'ziriak as multiple words
+			return lang.replace(regexRemove, "")
+				.split(regexSplitWords)
+				.every(w => regexStartsUppercase.test(w));
+		});
+
+		creature.languages = {};
+		if (filteredLanguages.length) {
+			// store languages as lowercased
+			creature.languages.languages = filteredLanguages.map(l => l.toLowerCase());
+		}
+		if (notes.length) {
+			creature.languages.notes = notes;
+		}
+		if (abilities.length) {
+			creature.languages.abilities = abilities;
+		}
 	}
 	_parseSkills (creature) {
 		this._consumeToken(this._tokenizerUtils.skillsProp);
 		const skills = {};
+		const loreSkillSome = /\((.*)\)/
 		const regexBonus = /\+(\d+)/;
 		const regexOtherBonus = /\+(\d+)\s([\w\s]+)/g;
-		while (this._tokenIsType(this._tokenizerUtils.skills)) {
+		// skill entries should be followed by the skill bonus
+		while (this._tokenIsType(this._tokenizerUtils.skills) && this._tokenIsType("SKILL_BONUS", this._peek(1))) {
 			const token = this._consumeToken(this._tokenizerUtils.skills);
-			const skill = token.value.trim().toLowerCase().replace(/\s/g, " ");
-			skills[skill] = {};
-			for (let i = 0; i < 2; i++) {
-				if (this._tokenIsType("PARENTHESIS")) {
-					const parenthesisText = this._getParenthesisInnerText(this._consumeToken("PARENTHESIS"));
-					const matches = Array.from(parenthesisText.matchAll(regexOtherBonus));
-					if (matches.length) matches.forEach(m => skills[skill][m[2]] = Number(m[1]));
-					else skills[skill].note = parenthesisText;
-				} else if (this._tokenIsType("SKILL_BONUS")) {
-					const bonusToken = this._consumeToken("SKILL_BONUS");
-					skills[skill].std = Number(regexBonus.exec(bonusToken.value.replace(/\s/g, ""))[1]);
-				} else break;
+
+			let skill = "";
+			if (token.type === "LORE_SOME") {
+				// "Lore (any that match these criteria) +10"
+				skill = "lore";
+				const match = loreSkillSome.exec(token.value);
+				const note = match[1].trim().replace(/\s/g, " ");
+				skills[skill] = {};
+				skills[skill].note = note;
+			} else {
+				skill = token.value.trim().toLowerCase().replace(/\s/g, " ");
+				skills[skill] = {};
+			}
+
+			const bonusToken = this._consumeToken("SKILL_BONUS");
+			skills[skill].std = Number(regexBonus.exec(bonusToken.value.replace(/\s/g, ""))[1]);
+
+			// optionally followed by other bonuses for the same skill
+			if (this._tokenIsType("PARENTHESIS")) {
+				const parenthesisText = this._getParenthesisInnerText(this._consumeToken("PARENTHESIS"));
+				const matches = Array.from(parenthesisText.matchAll(regexOtherBonus));
+				if (matches.length) matches.forEach(m => skills[skill][m[2]] = Number(m[1]));
+				else skills[skill].note = parenthesisText;
 			}
 		}
-		// FIXME: Skill abilities! Could also be regular ability? Probably not.
-		const entries = this._getEntries();
-		if (entries.length) throw new Error(`Skill abilities are not implemented yet! ${entries}`);
+
+		// if we found a skill entry without a bonus, assume it's part of a skill note
+		// e.g. "one or more Lore skills related to a specific plane" is incorrectly detected as a lore skill at first
+		let extraEntries = [];
+		if (this._tokenIsType(this._tokenizerUtils.skills)) {
+			const noteStart = this._consumeToken(this._tokenizerUtils.skills);
+			noteStart.type = "SENTENCE";
+			extraEntries.push(noteStart)
+		}
+
+		// assume that any text entries following the skills are skill notes
+		const entries = [...extraEntries, ...this._getEntries()];
+		if (entries.length) {
+			const rendered = this._renderEntries(entries, {asString: true});
+			skills.notes = rendered.split(", ");
+		}
+
 		creature.skills = skills;
 	}
 	_parseAbilityScores (creature) {
@@ -792,66 +911,107 @@ class Converter {
 		creature.items = rendered.split(", ");
 	}
 	_parseAC (creature) {
+		creature.defenses = creature.defenses || {};
 		this._consumeToken(this._tokenizerUtils.ac);
 		const ac = {};
 		const stdACToken = this._consumeToken(this._tokenizerUtils.sentences);
 		ac.std = Number(stdACToken.value.trim().replace(/[,;]/g, ""));
 		if (this._tokenIsType("PARENTHESIS")) {
-			const parenthesisText = this._renderToken(this._consumeToken("PARENTHESIS")).replace(/^\(|\)$/g, "");
-			const regexOtherAC = /.*(\d+)\s(.+)/g;
-			Array.from(parenthesisText.matchAll(regexOtherAC)).forEach(m => {
-				const num = Number(m[1]);
-				// small ACs are likely abilities like "+2 vs. magic"
-				if (num > 4) ac[m[2]] = Number(m[1]);
-				else (ac.abilities = ac.abilities || []).push(m[0]);
+			const parenthesisText = this._renderToken(this._consumeToken("PARENTHESIS")).replace(/^\(|\);?$/g, "");
+			const regexOtherAC = /^(\d+)\s+(.+)$/;
+			parenthesisText.split(",").map(t => t.trim()).forEach(t => {
+				const match = regexOtherAC.exec(t);
+				if (match) {
+					ac[match[2]] = Number(match[1]);
+				} else {
+					ac.abilities = ac.abilities || [];
+					ac.abilities.push(t)
+				}
 			});
 		}
 		this._getStatAbilities(ac);
-		creature.ac = ac;
+		creature.defenses.ac = ac;
 	}
 	_parseCreatureSavingThrows (creature) {
+		creature.defenses = creature.defenses || {};
 		const savingThrows = {};
 		const convertSavingThrow = (prop) => {
 			const bonus = this._getBonusPushAbilities();
 			savingThrows[prop] = {std: bonus};
 			if (this._tokenIsType("PARENTHESIS")) {
 				const parenthesisText = this._getParenthesisInnerText(this._consumeToken("PARENTHESIS"));
-				const regexOtherST = /\+(\d+)\s(.+)/g;
-				Array.from(parenthesisText.matchAll(regexOtherST)).forEach(m => savingThrows[prop][m[2]] = Number(m[1]));
+				const regexOtherST = /^\+(\d+)\s+(.+)$/;
+				parenthesisText.split(",").map(t => t.trim()).forEach(t => {
+					const match = regexOtherST.exec(t);
+					if (match) {
+						savingThrows[prop][match[2]] = Number(match[1]);
+					} else {
+						savingThrows[prop].abilities = savingThrows[prop].abilities || [];
+						savingThrows[prop].abilities.push(t)
+					}
+				});
 			}
 		}
-		this._consumeToken(this._tokenizerUtils.fort);
-		convertSavingThrow("fort");
-		this._consumeToken(this._tokenizerUtils.ref);
-		convertSavingThrow("ref");
-		this._consumeToken(this._tokenizerUtils.will);
-		convertSavingThrow("will");
+		if (this._tokenIsType(this._tokenizerUtils.fort)) {
+			this._consumeToken(this._tokenizerUtils.fort);
+			convertSavingThrow("fort");
+		}
+		if (this._tokenIsType(this._tokenizerUtils.ref)) {
+			this._consumeToken(this._tokenizerUtils.ref);
+			convertSavingThrow("ref");
+		}
+		if (this._tokenIsType(this._tokenizerUtils.will)) {
+			this._consumeToken(this._tokenizerUtils.will);
+			convertSavingThrow("will");
+		}
 		this._getStatAbilities(savingThrows);
-		creature.savingThrows = savingThrows;
+		creature.defenses.savingThrows = savingThrows;
 	}
 	_parseHP (creature) {
-		creature.hp = [];
+		creature.defenses = creature.defenses || {};
+		creature.defenses.hp = [];
 		while (this._tokenIsType(this._tokenizerUtils.hp)) {
 			this._consumeToken(this._tokenizerUtils.hp);
 			const hp = {};
 			if (this._tokenIsType("PARENTHESIS")) hp.name = this._getParenthesisInnerText(this._consumeToken("PARENTHESIS"));
 			hp.hp = this._getBonusPushAbilities();
-			creature.hp.push(hp);
+			creature.defenses.hp.push(hp);
+			if (this._tokenIsType("PARENTHESIS")) {
+				const parenthesisText = this._renderToken(this._consumeToken("PARENTHESIS")).replace(/^\(|\);?$/g, "");
+				parenthesisText.split(",").map(t => t.trim()).forEach(t => {
+					hp.notes = hp.notes || [];
+					hp.notes.push(t)
+				});
+			}
 			this._getStatAbilities(hp);
 		}
 	}
+	_parseThresholds (creature) {
+		creature.defenses = creature.defenses || {};
+		this._consumeToken(this._tokenizerUtils.thresholds);
+		const entries = this._getEntries();
+		const thresholds = this._splitSemiOrComma(entries);
+		creature.defenses.thresholds = thresholds.map(str => {
+			const regExp = /(\d+)\s+\((\d+)\s+squares\)/;
+			const match = regExp.exec(str);
+			if (match) return {value: Number(match[1]), squares: Number(match[2])};
+			return undefined;
+		});
+	}
 	_parseHardness (creature) {
+		creature.defenses = creature.defenses || {};
 		this._consumeToken(this._tokenizerUtils.hardness);
 		const token = this._consumeToken(this._tokenizerUtils.sentences);
 		const rendered = this._renderToken(token).replace(/[,.;]/, "");
 		// TODO: Surely this data structure should change
-		creature.hardness = Number(rendered);
+		creature.defenses.hardness = Number(rendered);
 	}
 	_parseImmunities (creature) {
 		// FIXME: data structure?
+		creature.defenses = creature.defenses || {};
 		this._consumeToken(this._tokenizerUtils.immunities);
 		const entries = this._getEntries();
-		creature.immunities = this._splitSemiOrComma(entries);
+		creature.defenses.immunities = this._splitSemiOrComma(entries);
 		// const immunities = this._splitSemiOrComma(entries);
 		// const filterFunc = i => Object.values(Parser.DMGTYPE_JSON_TO_FULL).includes(i.toLowerCase()) || /damage/.test(i);
 		// creature.immunities = {
@@ -860,16 +1020,18 @@ class Converter {
 		// }
 	}
 	_parseWeaknesses (creature) {
+		creature.defenses = creature.defenses || {};
 		this._consumeToken(this._tokenizerUtils.weaknesses);
 		const entries = this._getEntries();
 		const weaknesses = this._splitSemiOrComma(entries);
-		creature.weaknesses = weaknesses.map(this._parseWeakResistAmount);
+		creature.defenses.weaknesses = weaknesses.map(this._parseWeakResistAmount);
 	}
 	_parseResistances (creature) {
+		creature.defenses = creature.defenses || {};
 		this._consumeToken(this._tokenizerUtils.resistances);
 		const entries = this._getEntries();
 		const resistances = this._splitSemiOrComma(entries);
-		creature.resistances = resistances.map(this._parseWeakResistAmount);
+		creature.defenses.resistances = resistances.map(this._parseWeakResistAmount);
 	}
 	_parseWeakResistAmount (str) {
 		const amountRegExp = /(.*?)\s(\d+)(.+)?/;
@@ -904,7 +1066,12 @@ class Converter {
 		const reNameBonus = /(.*?) \+\s?(\d+)/;
 		const textEntries = [];
 		entries.forEach(entryToken => {
-			if (this._tokenIsType(this._tokenizerUtils.actions, entryToken)) attack.activity = this._renderToken(entryToken, {asObject: true});
+			if (this._tokenIsType(this._tokenizerUtils.actions, entryToken)) {
+				const activity = this._renderToken(entryToken, {asObject: true});
+				if (!(activity.unit === "action" && activity.number === 1)) {
+					attack.activity = activity;
+				}
+			}
 			if (this._tokenIsType(this._tokenizerUtils.sentences, entryToken)) textEntries.push(entryToken);
 			if (this._tokenIsType("PARENTHESIS", entryToken)) attack.traits = this._splitSemiOrComma(this._getParenthesisInnerText(entryToken), {isText: true});
 		});
@@ -918,6 +1085,10 @@ class Converter {
 		this._consumeToken(this._tokenizerUtils.damage);
 		const damageEntries = this._getEntries({checkContinuedLines: true});
 		attack.damage = this._renderEntries(damageEntries, {asString: true});
+		if (this._tokenIsType(this._tokenizerUtils.atkNoMAP)) {
+			this._consumeToken(this._tokenizerUtils.atkNoMAP);
+			attack.noMAP = true;
+		}
 		creature.attacks.push(attack);
 	}
 	_parseSpellCasting (creature) {
@@ -927,12 +1098,20 @@ class Converter {
 		const reSpellCast = this._tokenizerUtils.spellCasting.find(it => it.regex.test(castingToken.value)).regex;
 		const spellMatch = reSpellCast.exec(castingToken.value);
 		const name = spellMatch[1].trim();
-		casting.name = name;
+
 		const tradition = this._tokenizerUtils.spellTraditions.find(it => it.regex.test(name));
 		const type = this._tokenizerUtils.spellTypes.find(it => it.regex.test(name));
-		if (tradition) casting.tradition = tradition.unit;
-		if (type) casting.type = type.unit;
+		if (tradition) casting.tradition = tradition.unit.toLowerCase();
+		if (type) casting.type = type.unit.toTitleCase();
 		else casting.type = "Focus";
+
+		if (!casting.type || !casting.tradition
+			|| (!name.localeCompare(`${casting.type} ${casting.tradition}`, { sensitivity: "base" })
+				&& !name.localeCompare(`${casting.tradition} ${casting.type}`, { sensitivity: "base" }))
+		) {
+			casting.name = name;
+		}
+
 		this._parseSpells_parseProperties(casting);
 		casting.entry = this._parseSpellEntry();
 		if (this._tokenIsType(this._tokenizerUtils.cantrips)) casting.entry["0"] = this._parseCantrips();
@@ -997,7 +1176,8 @@ class Converter {
 				const src = Parser._parse_bToA(Parser.SOURCE_JSON_TO_FULL, matchSource[0]).toLowerCase();
 				if (src && src !== SRC_CRB.toLowerCase()) spells[spells.length - 1].source = src;
 			} else {
-				spells[spells.length - 1].note = [...(spells[spells.length - 1].note || "").split("; ").filter(Boolean), e].join("; ");
+				spells[spells.length - 1].notes = spells[spells.length - 1].notes || [];
+				spells[spells.length - 1].notes.push(e);
 			}
 		});
 	}
@@ -1080,24 +1260,20 @@ class Converter {
 		const reRitualCast = this._tokenizerUtils.ritualCasting.find(it => it.regex.test(castingToken.value)).regex;
 		const name = reRitualCast.exec(castingToken.value)[1].trim();
 		const tradition = this._tokenizerUtils.spellTraditions.find(it => it.regex.test(name));
-		if (tradition) ritualCasting.tradition = tradition.unit;
+		if (tradition) ritualCasting.tradition = tradition.unit.toLowerCase();
 		this._parseSpells_parseProperties(ritualCasting);
 		ritualCasting.rituals = [...this._parseSpells_parseSpells()];
 		creature.rituals.push(ritualCasting);
 	}
-	_parseCreatureAbilities (creature) {
+	_parseCreatureAbilities (creature, opts) {
+		opts = opts || {};
 		const cachedParsedProps = this._parsedProperties;
 		this._parsedProperties = [];
 
-		creature.abilities = creature.abilities || {};
-		const sectIx = this._tokenStack.some(t => this._tokenIsType(this._tokenizerUtils.ac, t)) + this._tokenStack.some(t => this._tokenIsType(this._tokenizerUtils.speed, t));
-		const section = ["bot", "mid", "top"][sectIx];
-		creature.abilities[section] = creature.abilities[section] || [];
-		const ability = {};
+		let ability = {};
 		const lookAhead = this._getLookahead();
 		if (lookAhead && this._tokenIsType(this._tokenizerUtils.afflictions, lookAhead)) {
-			const affliction = this._parseAffliction();
-			creature.abilities[section].push(affliction);
+			ability = this._parseAffliction();
 		} else {
 			ability.name = this._getAbilityName({doConsumeTokens: true})
 			this._parsedAbilities.push(ability.name);
@@ -1110,7 +1286,17 @@ class Converter {
 
 			this._parsedProperties = cachedParsedProps;
 			this._setIsGenericAbility(creature, ability);
+		}
 
+		if (opts.hazardMode) {
+			const isAbility = this._tokenStack.some(t => this._tokenIsType(this._tokenizerUtils.description));
+			if (isAbility) (creature.abilities = creature.abilities || []).push(ability);
+			else (creature.actions = creature.actions || []).push(ability)
+		} else {
+			creature.abilities = creature.abilities || {};
+			const sectIx = this._tokenStack.some(t => this._tokenIsType(this._tokenizerUtils.ac, t)) + this._tokenStack.some(t => this._tokenIsType(this._tokenizerUtils.speed, t));
+			const section = ["bot", "mid", "top"][sectIx];
+			creature.abilities[section] = creature.abilities[section] || [];
 			creature.abilities[section].push(ability);
 		}
 	}
@@ -1162,7 +1348,127 @@ class Converter {
 		// TODO:
 		opts = opts || {};
 		const rendered = opts.isText ? entries : this._renderEntries(entries, {asString: true, noTags: true});
-		return rendered.split(", ")
+
+		const sep = /\s*(?:;|,|$)\s*/;
+		const parts = rendered.split(sep);
+		if (opts.keepEmpty) return parts
+		else return parts.filter(s => s.length > 0)
+	}
+
+	_parseHazardProperties (obj) {
+		while (this._tokenStack.length) {
+			let breakOnLength = this._tokenStack.length;
+			if (this._tokenIsType(this._tokenizerUtils.propertiesHazards)) this._parseHazardProperty(obj);
+			else if (this._tokenIsType(this._tokenizerUtils.actions && this._tokenIsType(this._tokenizerUtils.attacks, this._peek(1)))) {
+				const actionToken = this._consumeToken(this._tokenizerUtils.actions);
+				const atkToken = this._consumeToken(this._tokenizerUtils.attacks);
+				this._push(actionToken);
+				this._push(atkToken);
+				breakOnLength += 1;
+			} else if (this._tokenIsType(this._tokenizerUtils.stringEntries) && this._peek().isStartNewLine) this._parseCreatureAbilities(obj, {hazardMode: true});
+			else this._cbWarn(`Unexpected token "${this._peek().value}"`);
+			if (breakOnLength === this._tokenStack.length) break;
+		}
+	}
+	_parseHazardProperty (obj) {
+		if (this._tokenIsType(this._tokenizerUtils.stealth)) this._parseStealth(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.description)) this._parseDescription(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.disable)) this._parseDisable(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.ac)) this._parseAC(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.hazardHardness)) this._parseHazardHardness(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.hazardHP)) this._parseHazardHP(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.creatureSavingThrows)) this._parseCreatureSavingThrows(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.immunities)) this._parseImmunities(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.resistances)) this._parseResistances(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.weaknesses)) this._parseWeaknesses(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.attacks)) this._parseAttacks(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.reset)) this._parseReset(obj);
+		else if (this._tokenIsType(this._tokenizerUtils.routine)) this._parseRoutine(obj);
+		else throw new Error(`Unimplemented property creation of type "${this._peek().type}"`);
+	}
+
+	_parseStealth (obj) {
+		this._consumeToken(this._tokenizerUtils.stealth);
+		const stealth = {};
+		if (this._tokenIsType("H_STEALTH_BONUS")) {
+			const bonus = this._consumeToken("H_STEALTH_BONUS");
+			stealth.bonus = Number(/\d+/.exec(bonus.value));
+		}
+		if (this._tokenIsType("H_STEALTH_DC")) {
+			const dc = this._consumeToken("H_STEALTH_DC");
+			stealth.dc = Number(/\d+/.exec(dc.value));
+		}
+		if (this._tokenIsType("H_STEALTH_MINPROF")) {
+			const minProf = this._consumeToken("H_STEALTH_MINPROF");
+			stealth.minProf = minProf.value.trim().replace(/^\(/, "").replace(/\)$/, "").toLowerCase();
+		}
+		const entries = this._getEntries();
+		if (entries.length) stealth.notes = this._renderEntries(entries, {asString: true});
+		obj.stealth = stealth;
+	}
+	_parseDescription (obj) {
+		this._consumeToken(this._tokenizerUtils.description);
+		const entries = this._getEntries();
+		obj.description = this._renderEntries(entries);
+	}
+	_parseDisable (obj) {
+		this._consumeToken(this._tokenizerUtils.disable);
+		const entries = this._getEntries();
+		// TODO: Perhaps parse a bit more?
+		obj.disable = {entries: this._renderEntries(entries)};
+	}
+	_parseHazardHardness (obj) {
+		obj.defenses = obj.defenses || {};
+		obj.defenses.hardness = obj.defenses.hardness || {};
+		const token = this._consumeToken(this._tokenizerUtils.hazardHardness);
+		const regex = this._tokenizerUtils.hazardHardness.find(it => it.regex.test(token.value)).regex;
+		let [match, name, value] = regex.exec(token.value);
+		if (this._tokenIsType(this._tokenizerUtils.parenthesis)) {
+			const innerText = this._getParenthesisInnerText(this._peek());
+			if (innerText.split(" ").length <= 2) {
+				this._consumeToken(this._tokenizerUtils.parenthesis);
+				if (name == null) name = innerText.uppercaseFirst();
+			}
+		}
+		if (this._tokenIsType(this._tokenizerUtils.stringEntries)) {
+			obj.defenses.hardness.notes = obj.defenses.hardness.notes || {};
+			obj.defenses.hardness.notes[name || "std"] = this._renderEntries(this._getEntries(), {asString: true}).trimAnyChar(".");
+		}
+		obj.defenses.hardness[name || "std"] = Number(value);
+	}
+	_parseHazardHP (obj) {
+		obj.defenses = obj.defenses || {};
+		obj.defenses.hp = obj.defenses.hp || {};
+		const token = this._consumeToken(this._tokenizerUtils.hazardHP);
+		const regex = this._tokenizerUtils.hazardHP.find(it => it.regex.test(token.value)).regex;
+		const [match, name, value] = regex.exec(token.value);
+		let key = name || "std";
+		if (key === "std" && obj.defenses.hardness) {
+			const lastKey = Object.keys(obj.defenses.hardness).filter(k => obj.defenses.hp[k] === undefined).last();
+			key = lastKey || key;
+		}
+		if (this._tokenIsType(this._tokenizerUtils.parenthesis)) {
+			if (name == null) key = this._getParenthesisInnerText(this._consumeToken(this._tokenizerUtils.parenthesis)).uppercaseFirst();
+		}
+		obj.defenses.hp[key] = Number(value);
+		if (this._tokenIsType(this._tokenizerUtils.hazardBT)) {
+			const btToken = this._consumeToken(this._tokenizerUtils.hazardBT);
+			obj.defenses.bt = obj.defenses.bt || {};
+			const btVal = /\d+/.exec(btToken.value)
+			obj.defenses.bt[key] = Number(btVal);
+		}
+		if (this._tokenIsType(this._tokenizerUtils.stringEntries)) {
+			obj.defenses.hp.notes = obj.defenses.hp.notes || {};
+			obj.defenses.hp.notes[key] = this._renderEntries(this._getEntries(), {asString: true}).trimAnyChar(".");
+		}
+	}
+	_parseReset (obj) {
+		this._consumeToken(this._tokenizerUtils.reset);
+		obj.reset = this._parseEntries(null, {entriesOnly: true, getEntriesOpts: {doFinalize: true}});
+	}
+	_parseRoutine (obj) {
+		this._consumeToken(this._tokenizerUtils.routine);
+		obj.routine = this._parseEntries(null, {entriesOnly: true, getEntriesOpts: {doFinalize: true}});
 	}
 
 	// FIXME: We might have tokenized some normal word occurrences of properties as property token. Do we need to check for that?
@@ -1171,16 +1477,16 @@ class Converter {
 		const entriesOut = [];
 		const parseEntryTypes = (token) => {
 			if (this._tokenIsType(this._tokenizerUtils.successDegrees, token)) entriesOut.push(this._parseSuccessDegrees());
-			else if (this._tokenIsType(this._tokenizerUtils.shieldData)) this._parseShieldData(obj, opts);
-			else if (this._tokenIsType(this._tokenizerUtils.amp, token)) this._parseAmp(obj);
-			else if (this._tokenIsType(this._tokenizerUtils.heightened, token)) this._parseHeightened(obj);
 			else if (this._tokenIsType(this._tokenizerUtils.listMarker, token)) entriesOut.push(this._parseList());
+			else if (!opts.entriesOnly && this._tokenIsType(this._tokenizerUtils.shieldData)) this._parseShieldData(obj, opts);
+			else if (!opts.entriesOnly && this._tokenIsType(this._tokenizerUtils.amp, token)) this._parseAmp(obj);
+			else if (!opts.entriesOnly && this._tokenIsType(this._tokenizerUtils.heightened, token)) this._parseHeightened(obj);
 			else if (!opts.noAbilities && this._tokenIsType(this._tokenizerUtils.activate, token)) entriesOut.push(this._parseActivate());
-			else if (this._tokenIsType(this._tokenizerUtils.itemVariants, token)) this._parseItemVariants(obj);
-			else if (this._tokenIsType(this._tokenizerUtils.afflictions, token)) entriesOut.push(this._parseAffliction());
-			else if (this._tokenIsType(this._tokenizerUtils.lvlEffect, token)) entriesOut.push(this._parseLvlEffect(obj));
-			else if (!opts.noAbilities && this._tokenIsType(this._tokenizerUtils.special, token)) this._parseSpecial(obj);
-			else if (!opts.noAbilities && this._tokenIsType(this._tokenizerUtils.effect, token)) entriesOut.push(this._parseAbility());
+			else if (!opts.entriesOnly && this._tokenIsType(this._tokenizerUtils.itemVariants, token)) this._parseItemVariants(obj);
+			else if (!opts.entriesOnly && this._tokenIsType(this._tokenizerUtils.afflictions, token)) entriesOut.push(this._parseAffliction());
+			else if (!opts.entriesOnly && this._tokenIsType(this._tokenizerUtils.lvlEffect, token)) entriesOut.push(this._parseLvlEffect(obj));
+			else if (!opts.entriesOnly && !opts.noAbilities && this._tokenIsType(this._tokenizerUtils.special, token)) this._parseSpecial(obj);
+			else if (!opts.entriesOnly && !opts.noAbilities && this._tokenIsType(this._tokenizerUtils.effect, token)) entriesOut.push(this._parseAbility());
 		}
 
 		while (this._tokenStack.length) {
@@ -1192,7 +1498,8 @@ class Converter {
 			if (lookAhead || !this._tokenIsType(this._tokenizerUtils.stringEntries)) parseEntryTypes(lookAhead);
 			if (breakOnLength === this._tokenStack.length) break;
 		}
-		obj.entries = entriesOut;
+		if (opts.entriesOnly) return entriesOut;
+		else obj.entries = entriesOut;
 	}
 
 	_parseSuccessDegrees () {
@@ -1222,19 +1529,19 @@ class Converter {
 			const token = this._consumeToken(this._tokenizerUtils.amp);
 			switch (token.type) {
 				case "AMP": {
-					amp.entries = this._renderEntries(this._getEntries());
+					amp.entries = this._parseEntries(null, {entriesOnly: true});
 					break;
 				} case "AMP_HEIGHTENED_PLUS_X": {
 					amp.heightened = amp.heightened || {};
 					amp.heightened.plusX = amp.heightened.plusX || {};
 					const level = /\d+/.exec(token.value)[0];
-					amp.heightened.plusX[level] = this._renderEntries(this._getEntries({checkLookahead: true}));
+					amp.heightened.plusX[level] = this._parseEntries(null, {entriesOnly: true});
 					break;
 				} case "AMP_HEIGHTENED_X": {
 					amp.heightened = amp.heightened || {};
 					amp.heightened.X = amp.heightened.X || {};
 					const level = /\d+/.exec(token.value)[0];
-					amp.heightened.X[level] = this._renderEntries(this._getEntries({checkLookahead: true}));
+					amp.heightened.X[level] = this._parseEntries(null, {entriesOnly: true});
 					break;
 				} default: throw new Error(`Unimplemented! ${token.type}`)
 			}
@@ -1249,11 +1556,11 @@ class Converter {
 			if (token.type === "HEIGHTENED_PLUS_X") {
 				entries.plusX = entries.plusX || {};
 				const level = /\d+/.exec(token.value)[0];
-				entries.plusX[level] = this._renderEntries(this._getEntries({checkLookahead: true}));
+				entries.plusX[level] = this._parseEntries(null, {entriesOnly: true});
 			} else if (token.type === "HEIGHTENED_X") {
 				entries.X = entries.X || {};
 				const level = /\d+/.exec(token.value)[0];
-				entries.X[level] = this._renderEntries(this._getEntries({checkLookahead: true}));
+				entries.X[level] = this._parseEntries(null, {entriesOnly: true});
 			} else if (token.type === "HEIGHTENED") {
 				// TODO?
 				throw new Error(`Heightened without level is not supported.`);
@@ -1647,7 +1954,7 @@ class Converter {
 			let idx = 0;
 			let startOfLine = "";
 
-			if (!name) throw new Error(`Error while parsing ability name: expected name but found none.`);
+			if (!name) throw new Error(`Error while parsing ability name of "${this._parsing}": expected name at "${renderedLine}" but found none.`);
 
 			while (!startOfLine.startsWith(name)) {
 				if (idx > tokens.length) throw new Error(`Error while parsing ability name: "${name}"`);
@@ -1725,15 +2032,21 @@ class Converter {
 		return this._tokenIsType(this._parsedProperties, token);
 	}
 	_isShortLine (entries) {
-		const text = [...entries, this._peek()].map(it => it.value.trim()).join(" ");
+		const lastIx = entries.map(e => e.isStartNewLine).lastIndexOf(true);
+		const text = entries.slice(~lastIx ? lastIx : 0, entries.length).map(it => it.value.trim()).join(" ");
 		const len = text.length;
 		// TODO: fiddle with number to improve this
 		// If the line is more than 10% shorter than the average length, its probably still a list entry,
 		// otherwise don't add the line to the list item. (It's a line after the list?).
-		if (entries.length === 0) return true;
-		if (/^[^A-Z]/.test(text)) return true;
 		if (Math.abs(this._avgLineLength - len) / this._avgLineLength > 0.10) return true;
 		return null;
+	}
+	_isLastListToken (entries) {
+		if (entries.length === 0) return false;
+		if (!this._peek().isStartNewLine) return false;
+		if (/^[^A-Z]/.test(this._renderToken(this._peek()))) return false;
+		if (this._isShortLine(entries)) return false;
+		return !this._getLookahead(5, "LIST_MARKER");
 	}
 	// FIXME: Clean this up. This is creating almost all errors.
 	/**
@@ -1759,7 +2072,7 @@ class Converter {
 			if (doCheckBreak && this._isParsingCreature && this._isAbilityName()) break;
 			if (doCheckBreak && opts.checkLookahead && this._getLookahead()) break;
 			if (doCheckBreak && opts.noCap && /^[A-Z\d]/.test(this._renderToken(this._peek()))) break;
-			if (doCheckBreak && opts.isListMode && !this._isShortLine(entries) && !this._getLookahead(5, "LIST_MARKER")) break;
+			if (doCheckBreak && opts.isListMode && this._isLastListToken(entries)) break;
 			entries.push(this._consumeToken(this._tokenizerUtils.stringEntries));
 			if (doCheckBreak && opts.checkContinuedLines && !this._isContinuedLine(entries.last())) break;
 			if (doCheckBreak && opts.breakAfterNewline && this._tokenIsType(this._tokenizerUtils.sentencesNewLine, entries.last())) break;

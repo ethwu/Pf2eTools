@@ -77,7 +77,7 @@
 					"page": 118,
 					"name": "Physical Description",
 					"entries": [
-						"Gripplis resemble humanoid tree frogs, with oversized eyes, wide mouths, and gangly physiques. Their slight frames and large toes afford excellent grip while climbing, while their colorful skin provides reliable camouflage that varies by their home environment\u2014 green and brown for jungle-dwelling groups, blue and orange for riparian communities, and many other colors between. A grippli grows quickly, reaching adult size of about 2 feet in height about 3 years after hatching, though they're only considered adults around age 12. Gripplis rarely live beyond 60 years, though exceptional individuals occasionally live as long as a century."
+						"Gripplis resemble humanoid tree frogs, with oversized eyes, wide mouths, and gangly physiques. Their slight frames and large toes afford excellent grip while climbing, while their colorful skin provides reliable camouflage that varies by their home environment\u2014green and brown for jungle-dwelling groups, blue and orange for riparian communities, and many other colors between. A grippli grows quickly, reaching adult size of about 2 feet in height about 3 years after hatching, though they're only considered adults around age 12. Gripplis rarely live beyond 60 years, though exceptional individuals occasionally live as long as a century."
 					]
 				},
 				{
@@ -123,11 +123,11 @@
 				{
 					"type": "pf2-sidebar",
 					"page": 121,
+					"source": "LOME",
 					"name": "Grippli Enclaves",
-					"entries": [
-						"Most gripplis originate from the Kaava Lands, a broad, jungled peninsula in the Mwangi Expanse. After centuries of colonial pressure, many gripplis have migrated to Vidrian, both to its capital, Anthusis, as well as its less settled lands. Likewise, once-isolationist gripplis now enjoy strong ties with Nantambu, and a sizeable population lives in and around that magical metropolis. Especially ambitious or underhanded gripplis make their fortunes in treacherous Bloodcove to the north, where they comprise a small minority.",
-						"Beyond western Garund, gripplis are much rarer. Small groups have made their homes in the Verduran forest, where they assist the Wildwood druids in patrolling the vast territory. Gripplis periodically travel to Katapesh, whose markets are eager for rare Kaava goods and never balk at strange visitors. Most notably, a sizable grippli population inhabits the deadly Valashmai Jungle of southern Tian Xia, where those gripplis clash with dinosaurs and even larger beasts."
-					]
+					"reference": {
+						"auto": true
+					}
 				}
 			],
 			"heritageInfo": [
@@ -165,7 +165,7 @@
 							},
 							"frequency": {
 								"unit": "hour",
-								"freq": 1
+								"number": 1
 							},
 							"trigger": "A creature touches you, such as by Grappling you, successfully hitting you with an unarmed attack, or using a touch-range spell against you.",
 							"entries": [

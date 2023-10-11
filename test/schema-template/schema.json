@@ -17,11 +17,11 @@
 				"https://raw.githubusercontent.com/Pf2eTools/Pf2eTools.github.io/master/test/schema-template/schema.json"
 			]
 		},
+		"source": {
+			"$ref": "source.json#/properties/source"
+		},
 		"changelog": {
 			"$ref": "changelog.json#/properties/changelog"
-		},
-		"licenses": {
-			"$ref": "licenses.json#/properties/licenses"
 		},
 		"renderdemo": {
 			"$ref": "renderdemo.json#/properties/renderdemo"
@@ -175,6 +175,12 @@
 		},
 		"quickRules": {
 			"$ref": "quickRules.json#/properties/quickRules"
+		},
+		"event": {
+			"$ref": "events.json#/properties/event"
+		},
+		"relicGift": {
+			"$ref": "relicGifts.json#/properties/relicGift"
 		}
 	},
 	"additionalProperties": false,

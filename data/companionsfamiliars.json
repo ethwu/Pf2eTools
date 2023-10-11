@@ -1,6 +1,62 @@
 {
 	"companion": [
 		{
+			"name": "Water Wraith",
+			"source": "LOIL",
+			"page": 107,
+			"type": "Companion",
+			"fluff": [
+				"Though they originate in the Mwangi Expanse, reptiles known as water wraiths migrated to the Impossible Lands in ages past. Driven to local extinction in the Nex-Geb war, they recently returned to lurk in the mighty Ustradi river. Alkenstar reconnaissance teams venturing into the inhospitable Mana Wastes value water wraiths both for their sharp instincts in finding water sources as well as their color-changing abilities that can transmit visual signals clearly over long distances\u2014a valuable tactical asset for Alkenstar's military intelligence efforts."
+			],
+			"size": [
+				"small"
+			],
+			"attacks": [
+				{
+					"range": "Melee",
+					"name": "jaws",
+					"damage": "{@damage 1d8} piercing"
+				},
+				{
+					"range": "Melee",
+					"name": "claw",
+					"traits": [
+						"agile"
+					],
+					"damage": "{@damage 1d6} slashing"
+				}
+			],
+			"abilityMods": {
+				"str": 3,
+				"dex": 2,
+				"con": 2,
+				"int": -4,
+				"wis": 1,
+				"cha": 0
+			},
+			"hp": 6,
+			"skill": "survival",
+			"special": "The water wraith can hold its breath for about 2 hours.",
+			"speed": {
+				"walk": 20,
+				"swim": 25
+			},
+			"support": "Your water wraith hisses and changes colors swiftly in an iridescent clash, overwhelming your foes in an avalanche of shades and hues. Until the start of your next turn, each time you hit a creature within your water wraith's reach, the creature is {@condition dazzled} for 1 round.",
+			"maneuver": {
+				"name": "Gulp Blood",
+				"source": "LOIL",
+				"page": 107,
+				"activity": {
+					"number": 1,
+					"unit": "action"
+				},
+				"requirements": "The water wraith's last action was a successful jaws attack against a foe.",
+				"entries": [
+					"The water wraith gains {@dice 2d8} temporary Hit Points that last for 1 round, and the foe takes {@dice 2d8} {@condition persistent damage||persistent bleed damage}. If the water wraith has a specialization, the water wraith instead gains {@dice 3d8} temporary Hit Points, and the target takes 3d6 {@condition persistent damage||persistent bleed damage}. If the targeted creature has absolutely no vital fluids, this ability might not function, at the GM's discretion."
+				]
+			}
+		},
+		{
 			"name": "Ape",
 			"source": "APG",
 			"page": 144,
@@ -37,7 +93,7 @@
 				"walk": 25,
 				"climb": 25
 			},
-			"support": "Your ape threatens your foes with menacing growls. Until the start of your next turn, if you hit and deal damage to a creature in your ape's reach, the creature becomes {@condition frightened} 1.",
+			"support": "Your ape threatens your foes with menacing growls. Until the start of your next turn, if you hit and deal damage to a creature in your ape's reach, the creature becomes {@condition frightened 1}.",
 			"maneuver": {
 				"name": "Frightning Display",
 				"source": "APG",
@@ -541,7 +597,7 @@
 					"The camel {@action Stride||Strides} twice with a +5-foot circumstance bonus to Speed, ignoring {@quickref difficult terrain||3|terrain} caused by rubble, sand, and uneven ground made of earth and stone."
 				]
 			},
-			"special": "mount; your camel ignores the harmful effects of mild, severe, and extreme cold or heat, selected when you gain the companion."
+			"special": "mount; your camel ignores the harmful effects of mild, severe, and extreme cold or heat, selected when you gain the companion"
 		},
 		{
 			"name": "Capybara",
@@ -966,7 +1022,7 @@
 			"speed": {
 				"walk": 40
 			},
-			"support": " horse adds momentum to your charge. Until the start of your next turn, if you moved at least 10 feet on the action before your {@action Strike}, add a circumstance bonus to damage for that {@action Strike} equal to twice the number of damage dice. If your weapon already has the {@trait jousting} weapon trait, increase the trait's damage bonus by 2 per die instead.",
+			"support": "Until the start of your next turn, if you're mounted on your horse and moved 10 feet or more on the action before a melee {@action Strike}, add a circumstance bonus to damage for that {@action Strike} equal to twice the number of weapon damage dice. If your weapon already has the {@trait jousting} weapon trait, increase the trait's damage bonus by 2 per die instead.",
 			"maneuver": {
 				"name": "Gallop",
 				"source": "CRB",
@@ -1026,7 +1082,7 @@
 			"speed": {
 				"walk": 40
 			},
-			"support": "The hyena mockingly yowls at your enemies and bites at them when you create an opening. Until the start of your next turn, each time you hit a creature in the hyena's reach with a {@action Strike}, the creature becomes {@condition frightened} 1.",
+			"support": "The hyena mockingly yowls at your enemies and bites at them when you create an opening. Until the start of your next turn, each time you hit a creature in the hyena's reach with a {@action Strike}, the creature becomes {@condition frightened 1}.",
 			"maneuver": {
 				"name": "Gnaw",
 				"source": "AoA5",
@@ -1039,8 +1095,7 @@
 				"entries": [
 					"The {@action Strike}'s target takes {@damage 1d6} {@condition persistent damage||persistent bleed damage} and takes a \u201310-foot status penalty to its Speed until it removes the bleed damage. If the hyena is a {@quickref specialized animal companion||0|Specialized Animal Companions}, the {@condition persistent damage||persistent bleed damage} increases to {@damage 2d6}."
 				]
-			},
-			"special": "mount"
+			}
 		},
 		{
 			"name": "Monitor Lizard",
@@ -1206,7 +1261,7 @@
 			"speed": {
 				"walk": 25
 			},
-			"support": "Your pangolin tears at your enemies with its serrated plates. Until the start of your next turn, your {@action Strike||Strikes} that damage a creature in your pangolin's reach also deal {@damage 1d6} {@condition persistent damage||persistent bleed damage}. If your pangolin is nimble or savage, the persistent bleed damage increases to {@damage 2d6}.",
+			"support": "Your pangolin tears at your enemies with its serrated plates. Until the start of your next turn, your {@action Strike||Strikes} that damage a creature in your pangolin's reach also deal {@damage 1d6} {@condition persistent damage||persistent bleed damage}. If your pangolin is nimble or savage, the {@condition persistent damage||persistent bleed damage} increases to {@damage 2d6}.",
 			"maneuver": {
 				"name": "Defensive Curl",
 				"source": "LOTGB",
@@ -1272,7 +1327,7 @@
 				},
 				"frequency": {
 					"unit": "hour",
-					"freq": 1
+					"number": 1
 				},
 				"entries": [
 					"The riding drake breathes a 30-foot cone of fire, dealing {@damage 1d6 + floor((#$prompt_number:min=2,title=Character Level,default=2$#)/2)d6|1d6} fire damage for every 2 levels the drake has to all creatures in the area (basic Reflex save). This uses a trained DC using the drake's Constitution modifier or an expert DC if the drake is specialized."
@@ -1327,7 +1382,7 @@
 			"speed": {
 				"walk": 30
 			},
-			"support": "Your scorpion drips poison from its stinger when you create an opening. Until the start of your next turn, your {@action Strike||Strikes} that damage a creature in your scorpion's reach also deal {@damage 1d6} {@condition persistent damage ||persistent poison damage}. If your scorpion is nimble or savage, the {@condition persistent damage ||persistent poison damage} increases to {@damage 2d6}.",
+			"support": "Your scorpion drips poison from its stinger when you create an opening. Until the start of your next turn, your {@action Strike||Strikes} that damage a creature in your scorpion's reach also deal {@damage 1d6} {@condition persistent damage||persistent poison damage}. If your scorpion is nimble or savage, the {@condition persistent damage||persistent poison damage} increases to {@damage 2d6}.",
 			"maneuver": {
 				"name": "Grab and Sting",
 				"source": "APG",
@@ -1615,14 +1670,18 @@
 				"walk": 10,
 				"fly": 45
 			},
-			"support": "The vulture retches and vomits onto a foe within 10 feet. Until the start of your next turn, if you hit and deal damage to the target, the target must succeed at a Fortitude save or become {@condition sickened} 1 ({@condition sickened} 2 on a critical failure). The DC of the Fortitude save is 12 (or 14, if the vulture is a {@quickref specialized animal companion||0|Specialized Animal Companions}) + your level + the vulture's Constitution modifier.",
+			"support": "The vulture retches and vomits onto a foe within 10 feet. Until the start of your next turn, if you hit and deal damage to the target, the target must succeed at a Fortitude save or become {@condition sickened 1} ({@condition sickened 2} on a critical failure). The DC of the Fortitude save is 12 (or 14, if the vulture is a {@quickref specialized animal companion||0|Specialized Animal Companions}) + your level + the vulture's Constitution modifier.",
 			"maneuver": {
 				"name": "Feast on the Fallen",
 				"source": "AoA5",
 				"page": 80,
+				"traits": [
+					"healing",
+					"manipulate"
+				],
 				"frequency": {
 					"unit": "hour",
-					"freq": 1
+					"number": 1
 				},
 				"activity": {
 					"number": 1,
@@ -1694,6 +1753,15 @@
 		}
 	],
 	"companionAbility": [
+		{
+			"name": "Unseen",
+			"source": "DA",
+			"page": 65,
+			"tier": 2,
+			"entries": [
+				"Cryptid animal companions look a touch peculiar, often with uncanny features or ones that seem to come from a different animal. If you take a feat that would normally allow you to choose to have your companion become a savage or nimble animal companion, you can choose to make it an unseen animal companion instead. An unseen companion increases its Wisdom modifier by 2 and its Strength, Dexterity, and Constitution modifiers by 1. It deals 3 additional damage with its unarmed attacks and deals an extra 1d4 precision damage against flat-footed targets (if the animal companion already deals precision damage, such as a cat, combine the precision damage). Increase its proficiency rank in {@skill Stealth} to expert. It also learns the advanced maneuver for its type."
+			]
+		},
 		{
 			"name": "Nimble",
 			"source": "CRB",
@@ -1813,7 +1881,7 @@
 			"page": 123,
 			"name": "Steadfast Strider",
 			"entries": [
-				"Your companion ignores natural difficult terrain and greater difficult terrain from sediment or stone and can move across quicksand, mud, and similar surfaces as if they were solid. It gains a +2 status bonus to saving throws and DCs to prevent being {@action Shove||Shoved} or {@action Trip||Tripped}. Its Strength modifier increases by 1 and its proficiency for barding increases to expert. This specialization can only be selected by shaitan-touched companions."
+				"Your companion ignores natural {@quickref difficult terrain||3|terrain} and {@quickref greater difficult terrain||3|terrain} from sediment or stone and can move across quicksand, mud, and similar surfaces as if they were solid. It gains a +2 status bonus to saving throws and DCs to prevent being {@action Shove||Shoved} or {@action Trip||Tripped}. Its Strength modifier increases by 1 and its proficiency for barding increases to expert. This specialization can only be selected by shaitan-touched companions."
 			]
 		},
 		{
@@ -1836,6 +1904,69 @@
 		}
 	],
 	"familiar": [
+		{
+			"name": "Ceru",
+			"source": "LOIL",
+			"page": 220,
+			"type": "Familiar",
+			"traits": [
+				"n",
+				"tiny",
+				"beast"
+			],
+			"requires": 4,
+			"granted": [
+				"{@familiarAbility cantrip connection} ({@spell guidance}, {@spell mage hand})",
+				"{@familiarAbility darkvision}",
+				"{@familiarAbility touch telepathy|APG}"
+			],
+			"abilities": [
+				{
+					"name": "Created Magic",
+					"entries": [
+						"Your ceru familiar grants you the {@spell mage hand} and {@spell guidance} cantrips via the {@familiarAbility cantrip connection} granted ability. If one or more of these cantrips isn't on your spell list, you can replace the cantrip or cantrips not on your spell list with a cantrip or cantrips from your spell list instead."
+					]
+				},
+				{
+					"name": "Turn of Fate",
+					"activity": {
+						"number": 2,
+						"unit": "action"
+					},
+					"traits": [
+						"divination"
+					],
+					"frequency": {
+						"number": 1,
+						"unit": "day"
+					},
+					"range": {
+						"unit": "feet",
+						"number": 30
+					},
+					"entries": [
+						"Your ceru shifts the scales of fortune for one target's next attempt at an attack roll, saving throw, or skill check. If targeted with bad fortune, the target attempts a Will save against your class DC or spell DC, whichever is higher, with effects depending on the result of their save; this is a {@trait misfortune} effect. If targeted with good fortune, the target rolls twice and uses the better result; this is a {@trait fortune} effect. Regardless of outcome, targets are immune to Turn of Fate for one day.",
+						{
+							"type": "successDegree",
+							"entries": {
+								"Success": [
+									"The target is unaffected."
+								],
+								"Failure": [
+									"The target rolls twice and uses the worse result."
+								],
+								"Critical Failure": [
+									"As failure, except the target is affected for the next three attempts."
+								]
+							}
+						}
+					]
+				}
+			],
+			"fluff": [
+				"Cerus are mortal-made creatures in the shape of tiny, blue elephants with spikes on their feet, tail, and ears. They're highly sought-after amongst circles of the affluent."
+			]
+		},
 		{
 			"name": "Polong",
 			"source": "BotD",
@@ -1880,7 +2011,7 @@
 				{
 					"name": "Undead",
 					"entries": [
-						"Your familiar is undead. It has {@ability negative healing} and is immune to {@trait death} effects, {@trait disease}, {@trait poison}, and {@condition unconscious}. It's destroyed at 0 HP."
+						"Your familiar is undead. It has {@ability negative healing|b2} and is immune to {@trait death} effects, {@trait disease}, {@trait poison}, and {@condition unconscious}. It's destroyed at 0 HP."
 					]
 				}
 			],
@@ -1918,7 +2049,7 @@
 				{
 					"name": "Undead",
 					"entries": [
-						"Your familiar is undead. It has {@ability negative healing} and is immune to {@trait death} effects, {@trait disease}, {@trait poison}, and {@condition unconscious}. It's destroyed at 0 HP."
+						"Your familiar is undead. It has {@ability negative healing|b2} and is immune to {@trait death} effects, {@trait disease}, {@trait poison}, and {@condition unconscious}. It's destroyed at 0 HP."
 					]
 				}
 			],
@@ -1950,7 +2081,7 @@
 				{
 					"name": "Undead",
 					"entries": [
-						"Your familiar is undead. It has {@ability negative healing} and is immune to {@trait death} effects, {@trait disease}, {@trait poison}, and {@condition unconscious}. It's destroyed at 0 HP."
+						"Your familiar is undead. It has {@ability negative healing|b2} and is immune to {@trait death} effects, {@trait disease}, {@trait poison}, and {@condition unconscious}. It's destroyed at 0 HP."
 					]
 				}
 			],
@@ -2060,7 +2191,7 @@
 					"frequency": {
 						"unit": "minute",
 						"interval": 10,
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The wyrm splatters ink in a 10-foot cone. Each creature in the area must succeed at a Reflex save or become covered in ink. Ink spray has the effects of {@spell glitterdust} except the creature isn't {@condition dazzled}, and it can remove its {@condition blindness} by spending a single action, which has the {@trait manipulate} trait, to wipe off the ink from their face."
@@ -2121,7 +2252,7 @@
 					},
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"Your clockwork familiar blows a billowing plume of steam into its square around itself. It gains a +1 circumstance bonus to its {@action Intimidation} checks, and any creature in the familiar's square has {@condition concealed||concealment}, though creatures in the square can't use this {@condition concealed||concealment} to {@action Hide} or {@action Sneak}. The steam and its effects remain for 1 round. To use this ability, your clockwork familiar must spend 1 hour of operational time."
@@ -2173,7 +2304,7 @@
 					"frequency": {
 						"unit": "minute",
 						"interval": 10,
-						"freq": 1
+						"number": 1
 					},
 					"requirements": "The dweomercat cub was targeted by a spell or was within the area of a spell as it was cast since its last turn",
 					"entries": [
@@ -2266,7 +2397,7 @@
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The faerie dragon breathes euphoric gas in a 10-foot cone. Each creature in the area must attempt a Fortitude save against your class DC or spell DC, whichever is higher. A creature that fails its save is {@condition stupefied||stupefied 2} and {@condition slowed||slowed 1} for {@dice 1d4} rounds; on a critical failure, the duration is 1 minute."
@@ -2319,7 +2450,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The imp offers a non-fiend within 15 feet a bargain, granting a boon of good luck if the creature accepts. The boon lasts for 1 hour once accepted. If the creature dies while the boon is in place, its soul travels to Hell, where it is bound for eternity and unable to be raised or resurrected except by {@spell wish} or similar magic. Once during the hour, the creature can roll an attack roll or saving throw twice and use the higher result."
@@ -2364,7 +2495,7 @@
 					},
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The nosoi croons an entrancing song. Each living or undead creature within a 60-foot emanation must attempt a Will save against your class DC or spell DC, whichever is higher, or be {@condition fascinated} for 1 round. A nosoi can use a 2-action activity, which has the {@trait auditory}, {@trait concentrate}, {@trait divine}, {@trait enchantment}, and {@trait mental} traits, to force affected creatures to attempt another Will save; on a failure, they are {@condition fascinated} for an additional round. A creature that succeeds at any save or has its {@condition fascinated||fascination} broken is temporarily immune for 24 hours. Despite being a {@trait mental} effect, this ability affects {@trait mindless} {@trait undead}. {@trait Psychopomp||Psychopomps} are immune to this ability."
@@ -2488,10 +2619,10 @@
 					"frequency": {
 						"unit": "minute",
 						"interval": 10,
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
-						"The shadow familiar makes a melee attack with an attack roll modifier equal to your spell attack roll modifier. If the {@action Strike} is successful, the target is {@condition enfeebled} 1 and its shadow disappears. After 24 hours, the {@condition enfeebled} condition ends, and they regain their shadow once more. Any effect that reduces or removes the {@condition enfeebled} condition restores their shadow as well.",
+						"The shadow familiar makes a melee attack with an attack roll modifier equal to your spell attack roll modifier. If the {@action Strike} is successful, the target is {@condition enfeebled 1} and its shadow disappears. After 24 hours, the {@condition enfeebled} condition ends, and they regain their shadow once more. Any effect that reduces or removes the {@condition enfeebled} condition restores their shadow as well.",
 						"This action has the trait matching your tradition of magic, or {@trait occult} if you aren't a spellcaster."
 					]
 				}
@@ -2542,13 +2673,22 @@
 	],
 	"familiarAbility": [
 		{
+			"name": "Alchemical Gut",
+			"source": "TV",
+			"page": 41,
+			"type": "Familiar",
+			"entries": [
+				"Choose one alchemical item with a level no higher than yours that has the {@trait distilling} trait. Your familiar can act as the chosen item by swallowing consumables to be affected, which takes two {@action Interact} actions on its part and one from you. Instead of taking the normal time to distill the consumable, however, your familiar regurgitates the distilled item 1 round later."
+			]
+		},
+		{
 			"name": "Mask Freeze",
 			"source": "LOCG",
 			"page": 100,
 			"type": "Familiar",
 			"entries": [
 				"When in mask form, your familiar can hide its obvious supernatural qualities to pass as a simple, unassuming mask. It doesn't need to {@action Impersonate} to fool a passing glance, and it gains a +4 circumstance bonus to its {@skill Deception} DC against an active observer {@action Seek||Seeking} or otherwise studying it.",
-				"{@note The following ability is available only to {@feat mask familiar|LOCG|mask familiars}.}"
+				"{@note This ability is available only to {@feat mask familiar|LOCG|mask familiars}.}"
 			]
 		},
 		{
@@ -2818,7 +2958,7 @@
 			"page": 229,
 			"type": "Familiar",
 			"entries": [
-				"Your familiar gains the Shadow {@action Step} action. You must be at least 7th level to select this familiar ability for your familiar.",
+				"Your familiar gains the Shadow Step action. You must be at least 7th level to select this familiar ability for your familiar.",
 				{
 					"type": "ability",
 					"name": "Shadow Step",
@@ -2826,7 +2966,7 @@
 						"number": 1,
 						"unit": "action"
 					},
-					"requirements": "The familiar is in dim light or darkness.",
+					"requirements": "The familiar is in dim light or darkness",
 					"traits": [
 						"conjuration",
 						"shadow",
@@ -2970,7 +3110,7 @@
 			"page": 218,
 			"type": "Master",
 			"entries": [
-				"Once per day, your familiar can use 2 actions with the {@trait concentrate} trait to regain 1 Focus Point, up to your usual maximum You must have a focus pool to select this."
+				"Once per day, your familiar can use 2 actions with the {@trait concentrate} trait to regain 1 Focus Point, up to your usual maximum. You must have a focus pool to select this."
 			]
 		},
 		{
@@ -3018,8 +3158,8 @@
 			"alignment": "must be good, usually neutral good",
 			"home": "Ethereal Plane or Negative Energy Plane",
 			"size": [
-				"Medium",
-				"Small"
+				"medium",
+				"small"
 			],
 			"suggestedAttacks": [
 				"claw (slashing), fist (bludgeoning), jaws (piercing)"
@@ -3561,7 +3701,7 @@
 					"name": "Construct Heart",
 					"type": "initial",
 					"entries": [
-						"Your construct eidolon has a link directly to your life force, which renders it a living creature and therefore susceptible to many ailments that bother only the living, though it does possess some resistances to these effects. It doesn't have a construct's normal immunities, but does gain a +2 circumstance bonus to saving throws against {@trait death} effects, {@trait disease}, {@trait necromancy}, and {@trait poison} effects, as well as effects causing the {@condition fatigued} or {@condition sickened} conditions. Additionally, its astral essence bleeds off slowly, and it only needs to succeed at a DC {@flatDC 10} flat check to remove {@condition persistent damage ||persistent bleed damage} (or DC {@flatDC 5} after receiving particularly effective aid)."
+						"Your construct eidolon has a link directly to your life force, which renders it a living creature and therefore susceptible to many ailments that bother only the living, though it does possess some resistances to these effects. It doesn't have a construct's normal immunities, but does gain a +2 circumstance bonus to saving throws against {@trait death} effects, {@trait disease}, {@trait necromancy}, and {@trait poison} effects, as well as effects causing the {@condition fatigued} or {@condition sickened} conditions. Additionally, its astral essence bleeds off slowly, and it only needs to succeed at a DC {@flatDC 10} flat check to remove {@condition persistent damage||persistent bleed damage} (or DC {@flatDC 5} after receiving particularly effective aid)."
 					]
 				},
 				{
@@ -3690,7 +3830,7 @@
 									"entries": {
 										"Critical Success": "The target is unaffected.",
 										"Success": "The target can't use reactions.",
-										"Failure": "The target is {@condition slowed} 1 and can't use reactions.",
+										"Failure": "The target is {@condition slowed 1} and can't use reactions.",
 										"Critical Failure": "As failure, and the target is also {@condition confused} for 1 round. The confusion can't be extended, but the other effects can."
 									}
 								}
@@ -3702,7 +3842,7 @@
 							"frequency": {
 								"unit": "minute",
 								"interval": 10,
-								"freq": 1
+								"number": 1
 							}
 						}
 					]

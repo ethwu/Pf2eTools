@@ -128,11 +128,11 @@
 				{
 					"type": "pf2-sidebar",
 					"page": 135,
+					"source": "LOAG",
 					"name": "Strix Settlements",
-					"entries": [
-						"Strix settlements, called roosts, are lofty dwellings at the highest point of the local landscape. Mountains are a particular favorite, especially if they provide tall spires that make foot traffic impossible. Strix living in forests build their communities around the largest trees available, and seaside dwellers prefer to nestle their dwellings along perilous cliffs.",
-						"By far, the largest strix community resides at Ciricskree, which translates from the Strix language to \"the Shrieking Spire.\" This tribe of over 500 individuals is the cultural epicenter for the Devil's Perch and the entire Avistani strix population. Additional settlements include the Ikaraka in the Barrowood forest at the base of the Menador Mountains, and the small Blackcove tribe along the shore, who have established a tolerant trading relationship with a nearby fishing village."
-					]
+					"reference": {
+						"auto": true
+					}
 				},
 				{
 					"type": "pf2-sidebar",
@@ -225,7 +225,7 @@
 					"source": "LOAG",
 					"page": 135,
 					"entries": [
-						"You come from a line of strix with exceptionally broad wings and lengthy talons. You gain a talon melee unarmed attack that deals {@damage 1d4} slashing damage. Your talon attack is in the brawling group and has the {@trait agile}, {@trait finesse}, and {@trait unarmed} traits."
+						"You come from a line of strix with exceptionally broad wings and lengthy talons. You gain a talon melee unarmed attack that deals {@damage 1d4} slashing damage. Your talon attack is in the {@group brawling} group and has the {@trait agile}, {@trait finesse}, and {@trait unarmed} traits."
 					]
 				},
 				{

@@ -135,6 +135,16 @@
 			],
 			"subclasses": [
 				{
+					"name": "Undead",
+					"type": "Eidolon",
+					"shortName": "Undead",
+					"source": "BotD",
+					"page": 36,
+					"subclassFeatures": [
+						"Eidolon|Summoner|SoM|Undead|BotD|1"
+					]
+				},
+				{
 					"name": "Angel",
 					"type": "Eidolon",
 					"shortName": "Angel",
@@ -438,7 +448,7 @@
 							"items": [
 								"Your eidolon gains item bonuses to {@skill Perception} and skills from any magical items that you have invested.",
 								"Your eidolon increases its item bonus to AC based on your armor's armor potency rune or bracers of armor. It also gains an item bonus to its saves from the resilient rune on your armor or from your bracers of armor. Other permanent items that grant or increase item bonuses to AC and saves might convey a similar benefit, as determined by the GM.",
-								"Your eidolon's Strikes benefit from the fundamental and property runes on your {@item handwraps of mighty blows (generic)|CRB|handwraps of mighty blows}. Alternatively, you can {@action Invest an Item||Invest} a magic weapon (even though magic weapons can't normally be Invested) to share its fundamental and property runes with your eidolon. You share these benefits only while you're holding the weapon, and you can have no more than one weapon invested in this way at a time. In either case, the eidolon gains only the benefits that can apply to its attacks, with the same limitations noted in {@item handwraps of mighty blows (generic)|CRB|handwraps of mighty blows}."
+								"Your eidolon's {@action Strike||Strikes} benefit from the fundamental and property runes on your {@item handwraps of mighty blows (generic)|CRB|handwraps of mighty blows}. Alternatively, you can {@action Invest an Item||Invest} a magic weapon (even though magic weapons can't normally be Invested) to share its fundamental and property runes with your eidolon. You share these benefits only while you're holding the weapon, and you can have no more than one weapon invested in this way at a time. In either case, the eidolon gains only the benefits that can apply to its attacks, with the same limitations noted in {@item handwraps of mighty blows (generic)|CRB|handwraps of mighty blows}."
 							]
 						}
 					]
@@ -449,7 +459,7 @@
 					"collapsible": true,
 					"name": "Lost and Altered Actions",
 					"entries": [
-						"If you or your eidolon becomes {@condition slowed}, {@condition stunned}, {@condition quickened}, or otherwise affected by something that changes the actions you gain at the start of each turn, it affects your shared actions. However, if you are both subject to such an effect, apply only the more severe one. For instance, if you or your eidolon were {@condition slowed} 1, you would start your turn with one fewer action, but if you were both {@condition slowed} 1, you would still lose only one action, rather than adding the two slowed effects together. However, if you were {@condition slowed} 1 and your eidolon {@condition slowed} 2, you'd have two fewer actions, because that's the more severe effect. If only one of you becomes restricted in how you can spend your actions, that restriction doesn't automatically extend to the other; for example, if your eidolon became {@condition immobilized} or {@condition petrified}, it wouldn't be able to move, but you could still use your actions to move. The GM resolves any situation that's unclear.",
+						"If you or your eidolon becomes {@condition slowed}, {@condition stunned}, {@condition quickened}, or otherwise affected by something that changes the actions you gain at the start of each turn, it affects your shared actions. However, if you are both subject to such an effect, apply only the more severe one. For instance, if you or your eidolon were {@condition slowed 1}, you would start your turn with one fewer action, but if you were both {@condition slowed 1}, you would still lose only one action, rather than adding the two slowed effects together. However, if you were {@condition slowed 1} and your eidolon {@condition slowed 2}, you'd have two fewer actions, because that's the more severe effect. If only one of you becomes restricted in how you can spend your actions, that restriction doesn't automatically extend to the other; for example, if your eidolon became {@condition immobilized} or {@condition petrified}, it wouldn't be able to move, but you could still use your actions to move. The GM resolves any situation that's unclear.",
 						"You, as the player, control both your summoner and your eidolon, and the two are generally considered to cooperate unless you decide for them not to. While a summoner's link with an eidolon is a partnership, ultimately the eidolon is linked to you, not the other way around. If there's ever a conflict of who should act, you win out over your eidolon. This means that if the eidolon comes under an effect that would take its actions out of your control, such as the {@condition confused} or {@condition controlled} condition, you can use all of your shared actions so your eidolon doesn't have any actions remaining to cause trouble (as long as you are able to act). However, if you came under such an effect, you would simply use all of your shared actions, preventing your eidolon from acting."
 					]
 				}
@@ -1222,6 +1232,38 @@
 		},
 		{
 			"name": "Eidolon",
+			"source": "BotD",
+			"page": 36,
+			"className": "Summoner",
+			"classSource": "SoM",
+			"subclassShortName": "Undead",
+			"subclassSource": "BotD",
+			"level": 1,
+			"entries": [
+				{
+					"type": "pf2-h2",
+					"name": "Eidolons and Undead",
+					"entries": [
+						"An eidolon and summoner link together via life force, which undead lack. Undead spirits often have an easier time manifesting on their own than sharing a link with a living creature. Dhampirs and other creatures with {@ability negative healing|b2} have a much easier time bonding with an undead as an eidolon. It might be more uncomfortable and unlikely, but an undead eidolon can bond with any living creature, and the connection to the living grants them unparalleled freedom from the cravings and weaknesses of undeath."
+					]
+				},
+				{
+					"type": "pf2-h4",
+					"name": "Undead",
+					"entries": [
+						"Your eidolon is an undead spirit pulled from the {@place Ethereal Plane} or {@place Negative Energy Plane}, embodied, and bound to your life force in an unusual, potentially antithetical way that even other summoners can't quite understand. Undead eidolons take about every imaginable shape and form, as their bodies manifest from their connection to you. Their ultimate form can be influenced by an amalgamation of the echoes and memories of their old life before becoming undead, their cause of death, their encounters in the afterlife, and portions of your own essences. Together, you and your eidolon need to explore the mysteries of life, death, and undeath to understand what your bond means for both of your futures.",
+						{
+							"type": "data",
+							"tag": "eidolon",
+							"name": "Undead Eidolon",
+							"source": "BotD"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Eidolon",
 			"source": "SoM",
 			"page": 62,
 			"className": "Summoner",
@@ -1266,7 +1308,7 @@
 					"type": "pf2-h4",
 					"name": "Devotion Phantom",
 					"entries": [
-						"Your eidolon is a demon, born of mortal sin congealed amid the chaos and evil of the Abyss, using its link to you to spread chaos at your side. Choose an associated sin for your demon. Demon eidolons have appearances as varied as the infinite Abyss. While demons are inherently untrustworthy, your demon eidolon has reached an accord with you and generally keeps it, though that doesn't mean your eidolon isn't actively working to bring your life deeper into its associated sin. Though a true demon, your demon eidolon's link to you as a mortal prevents them from casting the {@ritual abyssal pact|b1} ritual, even if they somehow learn it.",
+						"Your eidolon is a lost soul, unable to escape the mortal world due to a strong sense of duty, an undying devotion, or a need to complete an important task. Most phantom eidolons are humanoid with a spectral or ectoplasmic appearance, though some take far stranger forms. Your link with your eidolon prevents them from succumbing to corruption and undeath, and together, you will grow in strength and fulfill your phantom's devotion.",
 						{
 							"type": "data",
 							"tag": "eidolon",

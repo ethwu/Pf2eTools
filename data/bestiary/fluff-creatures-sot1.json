@@ -77,6 +77,9 @@
 						"Giant tsetse flies are only moderately smarter than ordinary flies, but some creatures have learned that they can train the creatures with frequent offerings of fresh blood. Giant tsetse flies might therefore be put to use as guardians or even mounts, but any potential trainer must take care not to become the voracious insect's next meal."
 					]
 				}
+			],
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/Fly_GiantTsetseFly.png"
 			]
 		},
 		{
@@ -143,7 +146,10 @@
 						]
 					}
 				}
-			}
+			},
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/Anadi_Fateweaver.png"
+			]
 		},
 		{
 			"name": "Anadi Lurker",
@@ -167,7 +173,10 @@
 						]
 					}
 				}
-			}
+			},
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/Anadi_Lurker.png"
+			]
 		},
 		{
 			"name": "Anadi Seeker",
@@ -191,7 +200,10 @@
 						]
 					}
 				}
-			}
+			},
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/Anadi.png"
+			]
 		},
 		{
 			"name": "Giant Mining Bee",
@@ -215,7 +227,10 @@
 						]
 					}
 				}
-			}
+			},
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/Bee_GiantBee.png"
+			]
 		},
 		{
 			"name": "Giant Worker Bee",
@@ -239,7 +254,10 @@
 						]
 					}
 				}
-			}
+			},
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/Bee_GiantBee.png"
+			]
 		},
 		{
 			"name": "Gnagrif",
@@ -264,7 +282,10 @@
 						]
 					}
 				}
-			}
+			},
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/Gremlin_Gnagrif.png"
+			]
 		},
 		{
 			"name": "Scrit",
@@ -282,13 +303,16 @@
 								"source": "SoT1",
 								"page": 82,
 								"entries": [
-									"Scrits are short, spindly gremlins with gray or beige leathery skin and a coat of smeared ink on their fingers. They make themselves the nightmare of many scribes and librarians, as they delight in nothing more than destroying books, scrolls, artwork, and other records or writing. The oils on a scrit's skin smears ink and renders text\u2014even magical writing\u2014 completely illegible. Once they have smeared every page of a book, scrits devour them whole, absorbing the contents the book used to hold. After eating books they find stupid or funny, scrits hold skits for other gremlins which mock the mortal authors for the amusement of the other fey."
+									"Scrits are short, spindly gremlins with gray or beige leathery skin and a coat of smeared ink on their fingers. They make themselves the nightmare of many scribes and librarians, as they delight in nothing more than destroying books, scrolls, artwork, and other records or writing. The oils on a scrit's skin smears ink and renders text\u2014even magical writing\u2014completely illegible. Once they have smeared every page of a book, scrits devour them whole, absorbing the contents the book used to hold. After eating books they find stupid or funny, scrits hold skits for other gremlins which mock the mortal authors for the amusement of the other fey."
 								]
 							}
 						]
 					}
 				}
-			}
+			},
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/Gremlin_Scrit.png"
+			]
 		},
 		{
 			"name": "Silverfish Swarm",
@@ -336,7 +360,10 @@
 						]
 					}
 				}
-			}
+			},
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/Silverfish_GiantSilverfish.png"
+			]
 		},
 		{
 			"name": "Spellskein",
@@ -354,7 +381,7 @@
 							"entries": [
 								"Some spellskeins have additional forms and abilities unique to the rituals that created them.",
 								"{@b Consecrate:} Spellskeins created during {@ritual consecrate} rituals have a religious symbol form and can use the one-action activity anoint while in that form. One creature within 10 feet gains a +1 status bonus to saving throws for one round.",
-								"{@b Control Weather:} Spellskeins created during {@ritual control weather} rituals have a storm cloud form and can gain the following attack in that form: {@b Ranged} {@as 1} zap +6 (range 30 feet), {@b Damage} {@damage 1d4+1} electricity.",
+								"{@b Control Weather:} Spellskeins created during {@ritual control weather} rituals have a storm cloud form and can gain the following attack in that form: {@b Ranged} {@as 1} zap +6 (range <30 feet>), {@b Damage} {@damage 1d4+1} electricity.",
 								"{@b Heroes' Feast:} Spellskeins created during {@ritual heroes' feast} rituals have a teapot form and can use the twoaction activity serve tea while in that form. A living creature that drinks the tea with an Interact action regains 1d4 Hit Points and is temporarily immune for 10 minutes. Unconsumed tea disappears at the beginning of the spellskein's next turn."
 							]
 						},
@@ -364,6 +391,9 @@
 						"Scrap pieces torn from the body of a spellskein sometimes animate as ever smaller, more mischievous constructs, which usually dart away to hide until it's safe to come out and cause trouble."
 					]
 				}
+			],
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/Spellskein.png"
 			]
 		},
 		{
@@ -403,6 +433,9 @@
 						}
 					]
 				}
+			],
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/Kurshkin.png"
 			]
 		},
 		{
@@ -445,6 +478,9 @@
 						}
 					]
 				}
+			],
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/StoneGhost.png"
 			]
 		},
 		{
@@ -566,6 +602,9 @@
 						]
 					}
 				}
+			],
+			"images": [
+				"https://2e.aonprd.com/Images/Monsters/TakuluOt.png"
 			]
 		},
 		{

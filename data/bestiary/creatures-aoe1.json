@@ -2,7 +2,6 @@
 	"creature": [
 		{
 			"name": "Almiraj",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 16,
 			"level": 1,
@@ -11,9 +10,6 @@
 				"n",
 				"small",
 				"beast"
-			],
-			"creatureType": [
-				"Beast"
 			],
 			"perception": {
 				"std": 8
@@ -30,20 +26,20 @@
 			],
 			"languages": {
 				"languages": [
-					"Sylvan (can't speak any language)"
+					"sylvan (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 7
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 7
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 7
 				},
-				"Survival": {
+				"survival": {
 					"std": 5
 				}
 			},
@@ -55,26 +51,6 @@
 				"wis": 2,
 				"cha": 3
 			},
-			"ac": {
-				"std": 16
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 6
-				},
-				"ref": {
-					"std": 11
-				},
-				"will": {
-					"std": 5
-				}
-			},
-			"hp": [
-				{
-					"hp": 20,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"burrow": 10
@@ -88,7 +64,6 @@
 						"finesse",
 						"magical"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+2} piercing",
 					"types": [
 						"piercing"
@@ -112,11 +87,31 @@
 						"name": "Magic Horn"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 16
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 6
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 5
+					}
+				},
+				"hp": [
+					{
+						"hp": 20
+					}
+				]
 			}
 		},
 		{
 			"name": "Antaro Boldblade",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 8,
 			"level": -1,
@@ -126,26 +121,23 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 4
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Dwarven"
+					"common",
+					"dwarven"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 4
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 6
 				},
-				"Religion": {
+				"religion": {
 					"std": 4
 				}
 			},
@@ -162,27 +154,6 @@
 				"wooden shield",
 				"splint mail"
 			],
-			"ac": {
-				"std": 15,
-				"with Shield Raised": 17
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 5
-				},
-				"ref": {
-					"std": 2
-				},
-				"will": {
-					"std": 8
-				}
-			},
-			"hp": [
-				{
-					"hp": 9,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 15
 			},
@@ -192,11 +163,10 @@
 					"name": "rapier",
 					"attack": 5,
 					"traits": [
-						"deadly 1d8",
+						"deadly <1d8>",
 						"disarm",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+2} piercing",
 					"types": [
 						"piercing"
@@ -205,9 +175,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Prepared",
 					"type": "Prepared",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 16,
 					"entry": {
 						"0": {
@@ -230,11 +199,32 @@
 						}
 					}
 				}
-			]
+			],
+			"defenses": {
+				"ac": {
+					"std": 15,
+					"with Shield Raised": 17
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 5
+					},
+					"ref": {
+						"std": 2
+					},
+					"will": {
+						"std": 8
+					}
+				},
+				"hp": [
+					{
+						"hp": 9
+					}
+				]
+			}
 		},
 		{
 			"name": "Battle Leader Rekarek",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 27,
 			"level": 2,
@@ -244,9 +234,6 @@
 				"small",
 				"humanoid",
 				"kobold"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 10
@@ -258,17 +245,17 @@
 			],
 			"languages": {
 				"languages": [
-					"Draconic"
+					"draconic"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 9
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 7
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 6
 				}
 			},
@@ -280,26 +267,6 @@
 				"wis": 1,
 				"cha": 1
 			},
-			"ac": {
-				"std": 17
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 12
-				},
-				"ref": {
-					"std": 8
-				},
-				"will": {
-					"std": 5
-				}
-			},
-			"hp": [
-				{
-					"hp": 40,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 20
 			},
@@ -309,9 +276,8 @@
 					"name": "greatpick",
 					"attack": 12,
 					"traits": [
-						"fatal d12"
+						"fatal <d12>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d10+3} piercing",
 					"types": [
 						"piercing"
@@ -324,7 +290,6 @@
 					"traits": [
 						"reach"
 					],
-					"effects": [],
 					"damage": "{@damage 1d8+3} piercing",
 					"types": [
 						"piercing"
@@ -336,10 +301,9 @@
 					"attack": 10,
 					"traits": [
 						"propulsive",
-						"range increment 50 feet",
-						"reload 1"
+						"range increment <50 feet>",
+						"reload <1>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+1} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -355,16 +319,36 @@
 						},
 						"requirements": "Rekarek is adjacent to two or more enemies",
 						"entries": [
-							"Rekarek makes three melee weapon Strikes, two of which must be against different enemies. These attacks count toward her multiple attack penalty, but only after all three Strikes have been made. After taking this activity, Rekarek is {@condition flat-footed} until the beginning of her next turn."
+							"Rekarek makes three melee weapon {@action Strike||Strikes}, two of which must be against different enemies. These attacks count toward her multiple attack penalty, but only after all three {@action Strike||Strikes} have been made. After taking this activity, Rekarek is {@condition flat-footed} until the beginning of her next turn."
 						],
 						"name": "Haphazard Hack"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 17
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 8
+					},
+					"will": {
+						"std": 5
+					}
+				},
+				"hp": [
+					{
+						"hp": 40
 					}
 				]
 			}
 		},
 		{
 			"name": "Binumir",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 82,
 			"level": 3,
@@ -374,10 +358,6 @@
 				"incorporeal",
 				"spirit",
 				"undead"
-			],
-			"creatureType": [
-				"Spirit",
-				"Undead"
 			],
 			"perception": {
 				"std": 10
@@ -389,11 +369,11 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
-				"Society": {
+				"society": {
 					"std": 10
 				}
 			},
@@ -405,37 +385,6 @@
 				"wis": 1,
 				"cha": 0
 			},
-			"ac": {
-				"std": 19
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 9
-				},
-				"ref": {
-					"std": 12
-				},
-				"will": {
-					"std": 8
-				}
-			},
-			"hp": [
-				{
-					"hp": 25,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease"
-			],
-			"resistances": [
-				{
-					"name": "all"
-				}
-			],
 			"speed": {
 				"fly": 25
 			},
@@ -449,7 +398,6 @@
 						"finesse",
 						"magical"
 					],
-					"effects": [],
 					"damage": "{@damage 1d8+4} negative",
 					"types": [
 						"negative"
@@ -476,29 +424,18 @@
 							"concentrate"
 						],
 						"entries": [
-							"The binumir unleashes a distressing cry that fills others with wrenching sadness. Creatures within 30 feet must attempt a DC 17 Will save.",
+							"The binumir unleashes a distressing cry that fills others with wrenching sadness. Creatures within 30 feet must attempt a {@dc 17} Will save.",
 							{
 								"type": "successDegree",
 								"entries": {
-									"Critical Success": "The target is unaffected and is temporarily immune to"
-								}
-							}
-						],
-						"name": "Agonizing Wail"
-					},
-					{
-						"entries": [
-							"Wail for 1 minute.",
-							{
-								"type": "successDegree",
-								"entries": {
+									"Critical Success": "The target is unaffected and is temporarily immune to Agonizing Wail for 1 minute.",
 									"Success": "The target can't use reactions for 1 round.",
 									"Failure": "The target is {@condition slowed|CRB|slowed 1} and can't use reactions for 1 minute as it sobs uncontrollably. It can attempt a new Will save to end the effect at the end of each of its turns.",
 									"Critical Failure": "As failure, but the target can't make saves to end the effect."
 								}
 							}
 						],
-						"name": "Agonizing"
+						"name": "Agonizing Wail"
 					},
 					{
 						"activity": {
@@ -506,16 +443,51 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The binumir makes four Strikes; no more than two can be against the same target. These attacks count toward the binumir's multiple attack penalty, but the penalty doesn't increase until after all the attacks have been made."
+							"The binumir makes four {@action Strike||Strikes}; no more than two can be against the same target. These attacks count toward the binumir's multiple attack penalty, but the penalty doesn't increase until after all the attacks have been made."
 						],
 						"name": "Dual Assault"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 19
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 9
+					},
+					"ref": {
+						"std": 12
+					},
+					"will": {
+						"std": 8
+					}
+				},
+				"hp": [
+					{
+						"hp": 25,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease"
+				],
+				"resistances": [
+					{
+						"name": "all damage",
+						"amount": 2,
+						"note": "except force, {@item ghost touch}, or positive; double resistance vs. non-magical"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Bolar Of Stonemoor",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 8,
 			"level": -1,
@@ -524,9 +496,6 @@
 				"medium",
 				"dwarf",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 3
@@ -538,18 +507,18 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Dwarven"
+					"common",
+					"dwarven"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 4
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 6
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 2
 				}
 			},
@@ -565,26 +534,6 @@
 				"battle axe",
 				"studded leather armor"
 			],
-			"ac": {
-				"std": 14
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 7
-				},
-				"ref": {
-					"std": 6
-				},
-				"will": {
-					"std": 3
-				}
-			},
-			"hp": [
-				{
-					"hp": 13,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 20
 			},
@@ -596,7 +545,6 @@
 					"traits": [
 						"sweep"
 					],
-					"effects": [],
 					"damage": "{@damage 1d8+4} slashing",
 					"types": [
 						"slashing"
@@ -622,11 +570,31 @@
 						"name": "Rage"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 14
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 7
+					},
+					"ref": {
+						"std": 6
+					},
+					"will": {
+						"std": 3
+					}
+				},
+				"hp": [
+					{
+						"hp": 13
+					}
+				]
 			}
 		},
 		{
 			"name": "Cobbleswarm",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 83,
 			"level": 2,
@@ -636,9 +604,6 @@
 				"aberration",
 				"earth",
 				"swarm"
-			],
-			"creatureType": [
-				"Aberration"
 			],
 			"perception": {
 				"std": 9
@@ -651,10 +616,10 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 10
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 13
 				}
 			},
@@ -666,50 +631,15 @@
 				"wis": 3,
 				"cha": 0
 			},
-			"ac": {
-				"std": 17
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 10
-				},
-				"ref": {
-					"std": 12
-				},
-				"will": {
-					"std": 7
-				}
-			},
-			"hp": [
-				{
-					"hp": 20,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"precision",
-				"swarm mind"
-			],
-			"weaknesses": [
-				{
-					"amount": 3,
-					"name": "area damage"
-				},
-				{
-					"amount": 3,
-					"name": "splash damage"
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"burrow": 10
 			},
-			"attacks": [],
 			"abilities": {
 				"top": [
 					{
 						"entries": [
-							"The cobbleswarm's space is difficult terrain."
+							"The cobbleswarm's space is {@quickref difficult terrain||3|terrain}."
 						],
 						"name": "Clutching Cobbles"
 					},
@@ -747,16 +677,51 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Each enemy in the cobbleswarm's space takes {@damage 2d4} bludgeoning damage (DC 17 basic Reflex save)."
+							"Each enemy in the cobbleswarm's space takes {@damage 2d4} bludgeoning damage ({@dc 17} basic Reflex save)."
 						],
 						"name": "Pummeling Assault"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 17
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 10
+					},
+					"ref": {
+						"std": 12
+					},
+					"will": {
+						"std": 7
+					}
+				},
+				"hp": [
+					{
+						"hp": 20
+					}
+				],
+				"immunities": [
+					"precision",
+					"swarm mind"
+				],
+				"weaknesses": [
+					{
+						"amount": 3,
+						"name": "area damage"
+					},
+					{
+						"amount": 3,
+						"name": "splash damage"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Eunice",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 12,
 			"level": 0,
@@ -766,26 +731,23 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 7
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Draconic"
+					"common",
+					"draconic"
 				]
 			},
 			"skills": {
-				"Arcana": {
+				"arcana": {
 					"std": 7
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 6
 				},
-				"Farming Lore": {
+				"farming lore": {
 					"std": 5
 				}
 			},
@@ -801,26 +763,6 @@
 				"dagger",
 				"spellbook"
 			],
-			"ac": {
-				"std": 15
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 4
-				},
-				"ref": {
-					"std": 8
-				},
-				"will": {
-					"std": 10
-				}
-			},
-			"hp": [
-				{
-					"hp": 20,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -832,20 +774,39 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4} piercing",
 					"types": [
 						"piercing"
 					]
 				}
-			]
+			],
+			"defenses": {
+				"ac": {
+					"std": 15
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 4
+					},
+					"ref": {
+						"std": 8
+					},
+					"will": {
+						"std": 10
+					}
+				},
+				"hp": [
+					{
+						"hp": 20
+					}
+				]
+			}
 		},
 		{
 			"name": "Gref",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 34,
 			"level": 2,
@@ -855,9 +816,6 @@
 				"small",
 				"humanoid",
 				"ratfolk"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 9
@@ -869,21 +827,21 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Undercommon"
+					"common",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 8
 				},
-				"Deception": {
+				"deception": {
 					"std": 6
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 8
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 8
 				}
 			},
@@ -895,26 +853,6 @@
 				"wis": 2,
 				"cha": 0
 			},
-			"ac": {
-				"std": 17
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 9
-				},
-				"ref": {
-					"std": 12
-				},
-				"will": {
-					"std": 4
-				}
-			},
-			"hp": [
-				{
-					"hp": 40,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -927,7 +865,6 @@
 						"agile",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+2} piercing",
 					"types": [
 						"piercing"
@@ -939,11 +876,10 @@
 					"attack": 10,
 					"traits": [
 						"agile",
-						"deadly d6",
+						"deadly <d6>",
 						"finesse",
 						"monk"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+2} piercing",
 					"types": [
 						"piercing"
@@ -954,10 +890,9 @@
 					"name": "crossbow",
 					"attack": 10,
 					"traits": [
-						"range increment 120 feet",
-						"reload 1"
+						"range increment <120 feet>",
+						"reload <1>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d8} piercing",
 					"types": [
 						"piercing"
@@ -995,11 +930,31 @@
 						"name": "Swarming See Pathfinder Bestiary"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 17
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 9
+					},
+					"ref": {
+						"std": 12
+					},
+					"will": {
+						"std": 4
+					}
+				},
+				"hp": [
+					{
+						"hp": 40
+					}
+				]
 			}
 		},
 		{
 			"name": "Grick",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 35,
 			"level": 3,
@@ -1007,9 +962,6 @@
 				"n",
 				"medium",
 				"aberration"
-			],
-			"creatureType": [
-				"Aberration"
 			],
 			"perception": {
 				"std": 12
@@ -1026,20 +978,20 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo (can't speak any language)"
+					"aklo (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 11
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 10
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 10
 				},
-				"Survival": {
+				"survival": {
 					"std": 8
 				}
 			},
@@ -1051,32 +1003,6 @@
 				"wis": 3,
 				"cha": -1
 			},
-			"ac": {
-				"std": 19
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 10
-				},
-				"ref": {
-					"std": 11
-				},
-				"will": {
-					"std": 12
-				}
-			},
-			"hp": [
-				{
-					"hp": 40,
-					"abilities": null
-				}
-			],
-			"resistances": [
-				{
-					"amount": 3,
-					"name": "physical"
-				}
-			],
 			"speed": {
 				"walk": 30,
 				"climb": 20
@@ -1086,7 +1012,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 12,
-					"effects": [],
 					"damage": "{@damage 1d8+6} piercing",
 					"types": [
 						"piercing"
@@ -1100,7 +1025,6 @@
 						"agile",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+6} slashing",
 					"types": [
 						"slashing"
@@ -1114,7 +1038,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -1135,11 +1058,37 @@
 						"name": "Vermicular Movement"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 19
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 10
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 12
+					}
+				},
+				"hp": [
+					{
+						"hp": 40
+					}
+				],
+				"resistances": [
+					{
+						"amount": 3,
+						"name": "physical"
+					}
+				]
 			}
 		},
 		{
 			"name": "Grospek Lavarsus",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 87,
 			"level": 7,
@@ -1150,38 +1099,36 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Male human city guard commander",
 			"perception": {
 				"std": 17
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Kelish"
+					"common",
+					"kelish"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 12
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 17
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 16
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 18
 				},
-				"Society": {
+				"society": {
 					"std": 15
 				},
-				"Absalom Lore": {
+				"absalom lore": {
 					"std": 15
 				},
-				"Legal Lore": {
+				"legal lore": {
 					"std": 15
 				}
 			},
@@ -1193,25 +1140,12 @@
 				"wis": 1,
 				"cha": 3
 			},
-			"ac": {
-				"std": 24
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 18
-				},
-				"ref": {
-					"std": 12
-				},
-				"will": {
-					"std": 16
-				}
-			},
-			"hp": [
-				{
-					"hp": 140,
-					"abilities": null
-				}
+			"items": [
+				"breastplate",
+				"hand crossbow with 10 bolts",
+				"good handcuffs (page 77)",
+				"lesser healing potion",
+				"Lawkeeper (+1 striking pacifying club; page 78)"
 			],
 			"speed": {
 				"walk": 25
@@ -1223,9 +1157,8 @@
 					"attack": 19,
 					"traits": [
 						"nonlethal",
-						"thrown 10 feet"
+						"thrown <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+13} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1236,10 +1169,9 @@
 					"name": "hand crossbow",
 					"attack": 16,
 					"traits": [
-						"range increment 60 feet",
-						"reload 1"
+						"range increment <60 feet>",
+						"reload <1>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6} piercing",
 					"types": [
 						"piercing"
@@ -1247,24 +1179,10 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+16, {@skill Intimidation} +18, {@skill Lore||Legal Lore} +15,"
-						],
-						"name": "Diplomacy"
-					},
-					{
-						"entries": [
-							"+15 Str +4, Dex +1, Con +5, Int +2, Wis +1, Cha +3 Items breastplate, hand crossbow with 10 bolts, good handcuffs (page 77), lesser healing potion, Lawkeeper (+1 striking pacifying club; page 78)"
-						],
-						"name": "Society"
-					}
-				],
 				"bot": [
 					{
 						"entries": [
-							"Lavarsus adds double his Strength modifier to any nonlethal melee Strikes he makes with a bludgeoning weapon."
+							"Lavarsus adds double his Strength modifier to any nonlethal melee {@action Strike||Strikes} he makes with a bludgeoning weapon."
 						],
 						"name": "Furious Pacifier"
 					},
@@ -1275,11 +1193,31 @@
 						"name": "Nonlethal Training"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 18
+					},
+					"ref": {
+						"std": 12
+					},
+					"will": {
+						"std": 16
+					}
+				},
+				"hp": [
+					{
+						"hp": 140
+					}
+				]
 			}
 		},
 		{
 			"name": "Hendrid Pratchett",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 89,
 			"level": 6,
@@ -1291,9 +1229,7 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Male half-elf serial killer",
 			"perception": {
 				"std": 17
 			},
@@ -1304,34 +1240,34 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Elven",
-					"Infernal"
+					"common",
+					"elven",
+					"infernal"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 14
 				},
-				"Arcana": {
+				"arcana": {
 					"std": 12
 				},
-				"Deception": {
+				"deception": {
 					"std": 15
 				},
-				"Medicine": {
+				"medicine": {
 					"std": 14
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 12
 				},
-				"Religion": {
+				"religion": {
 					"std": 13
 				},
-				"Society": {
+				"society": {
 					"std": 14
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 14
 				}
 			},
@@ -1343,25 +1279,12 @@
 				"wis": 1,
 				"cha": 5
 			},
-			"ac": {
-				"std": 24
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 12
-				},
-				"ref": {
-					"std": 16
-				},
-				"will": {
-					"std": 15
-				}
-			},
-			"hp": [
-				{
-					"hp": 100,
-					"abilities": null
-				}
+			"items": [
+				"armored coat (as leather armor)",
+				"corpseward pendant (page 80)",
+				"lesser healing potions (3)",
+				"hunting spider venom (3 doses, in Reaper's Lancet)",
+				"Reaper's Lancet (page 81; bonded item)"
 			],
 			"speed": {
 				"walk": 30
@@ -1372,7 +1295,7 @@
 					"name": "Reaper's Lancet blade",
 					"attack": 17,
 					"traits": [
-						"deadly 1d8",
+						"deadly <1d8>",
 						"finesse"
 					],
 					"effects": [
@@ -1392,7 +1315,6 @@
 						"finesse",
 						"shove"
 					],
-					"effects": [],
 					"damage": "{@damage 2d4+7} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1401,9 +1323,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Prepared",
 					"type": "Prepared",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 22,
 					"attack": 14,
 					"entry": {
@@ -1445,14 +1366,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+14 Str +3, Dex +4, Con +0, Int +2, Wis +1, Cha +5 Items armored coat (as leather armor), corpseward pendant (page 80), lesser healing potions (3), hunting spider venom (3 doses, in Reaper's Lancet), Reaper's Lancet (page 81; bonded item)"
-						],
-						"name": "Stealth"
-					}
-				],
 				"bot": [
 					{
 						"entries": [
@@ -1461,11 +1374,31 @@
 						"name": "Sword Cane Duelist"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": [
+					{
+						"hp": 100
+					}
+				]
 			}
 		},
 		{
 			"name": "Kekker",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 34,
 			"level": 2,
@@ -1475,9 +1408,6 @@
 				"small",
 				"humanoid",
 				"ratfolk"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 9
@@ -1489,21 +1419,21 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Undercommon"
+					"common",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 8
 				},
-				"Deception": {
+				"deception": {
 					"std": 6
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 8
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 8
 				}
 			},
@@ -1515,26 +1445,6 @@
 				"wis": 2,
 				"cha": 0
 			},
-			"ac": {
-				"std": 17
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 9
-				},
-				"ref": {
-					"std": 12
-				},
-				"will": {
-					"std": 4
-				}
-			},
-			"hp": [
-				{
-					"hp": 40,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -1547,7 +1457,6 @@
 						"agile",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+2} piercing",
 					"types": [
 						"piercing"
@@ -1559,11 +1468,10 @@
 					"attack": 10,
 					"traits": [
 						"agile",
-						"deadly d6",
+						"deadly <d6>",
 						"finesse",
 						"monk"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+2} piercing",
 					"types": [
 						"piercing"
@@ -1574,10 +1482,9 @@
 					"name": "crossbow",
 					"attack": 10,
 					"traits": [
-						"range increment 120 feet",
-						"reload 1"
+						"range increment <120 feet>",
+						"reload <1>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d8} piercing",
 					"types": [
 						"piercing"
@@ -1615,11 +1522,31 @@
 						"name": "Swarming See Pathfinder Bestiary"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 17
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 9
+					},
+					"ref": {
+						"std": 12
+					},
+					"will": {
+						"std": 4
+					}
+				},
+				"hp": [
+					{
+						"hp": 40
+					}
+				]
 			}
 		},
 		{
 			"name": "Kemeneles",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 53,
 			"level": 2,
@@ -1629,29 +1556,26 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 9
 			},
 			"languages": {
 				"languages": [
-					"Celestial",
-					"Common",
-					"Elven",
-					"Draconic",
-					"Dwarven"
+					"celestial",
+					"common",
+					"elven",
+					"draconic",
+					"dwarven"
 				]
 			},
 			"skills": {
-				"Arcana": {
+				"arcana": {
 					"std": 8
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 8
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 8
 				}
 			},
@@ -1663,27 +1587,6 @@
 				"wis": 3,
 				"cha": 1
 			},
-			"ac": {
-				"std": 15,
-				"without mage armor": 14
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 3
-				},
-				"ref": {
-					"std": 8
-				},
-				"will": {
-					"std": 11
-				}
-			},
-			"hp": [
-				{
-					"hp": 30,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -1698,7 +1601,6 @@
 						"nonlethal",
 						"unarmed"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1707,9 +1609,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Prepared",
 					"type": "Prepared",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 18,
 					"attack": 12,
 					"entry": {
@@ -1759,17 +1660,37 @@
 				"bot": [
 					{
 						"name": "Eschew Materials",
-						"entries": [],
 						"generic": {
 							"tag": "feat"
 						}
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 15,
+					"without mage armor": 14
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 3
+					},
+					"ref": {
+						"std": 8
+					},
+					"will": {
+						"std": 11
+					}
+				},
+				"hp": [
+					{
+						"hp": 30
 					}
 				]
 			}
 		},
 		{
 			"name": "Lyrma Swampwalker",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 54,
 			"level": 2,
@@ -1779,9 +1700,7 @@
 				"gnome",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Female gnome hunter",
 			"perception": {
 				"std": 11
 			},
@@ -1792,28 +1711,28 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Gnomish",
-					"Sylvan"
+					"common",
+					"gnomish",
+					"sylvan"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 8
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 9
 				},
-				"Medicine": {
+				"medicine": {
 					"std": 9
 				},
-				"Nature": {
+				"nature": {
 					"std": 7
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 8
 				},
-				"Survival": {
+				"survival": {
 					"std": 9
 				}
 			},
@@ -1828,26 +1747,6 @@
 			"items": [
 				"trident"
 			],
-			"ac": {
-				"std": 14
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 7
-				},
-				"ref": {
-					"std": 10
-				},
-				"will": {
-					"std": 9
-				}
-			},
-			"hp": [
-				{
-					"hp": 38,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -1857,29 +1756,41 @@
 					"name": "trident",
 					"attack": 11,
 					"traits": [
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d8+6} piercing",
 					"types": [
 						"piercing"
 					]
 				}
 			],
-			"abilities": {
-				"top": [
+			"defenses": {
+				"ac": {
+					"std": 14
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 7
+					},
+					"ref": {
+						"std": 10
+					},
+					"will": {
+						"std": 9
+					}
+				},
+				"hp": [
 					{
-						"entries": [
-							"+8, {@skill Survival} +9 Str +3, Dex +4, Con +1, Int \u20131, Wis +3, Cha +0 Items trident."
-						],
-						"name": "Stealth"
+						"hp": 38,
+						"notes": [
+							"currently 30"
+						]
 					}
 				]
 			}
 		},
 		{
 			"name": "Miriel Grayleaf",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 7,
 			"level": -1,
@@ -1888,9 +1799,6 @@
 				"medium",
 				"elf",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 2
@@ -1902,18 +1810,18 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Elven"
+					"common",
+					"elven"
 				]
 			},
 			"skills": {
-				"Arcana": {
+				"arcana": {
 					"std": 5
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 5
 				},
-				"Library Lore": {
+				"library lore": {
 					"std": 5
 				}
 			},
@@ -1929,26 +1837,6 @@
 				"crossbow with 10 bolts",
 				"dagger"
 			],
-			"ac": {
-				"std": 13
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 1
-				},
-				"ref": {
-					"std": 7
-				},
-				"will": {
-					"std": 4
-				}
-			},
-			"hp": [
-				{
-					"hp": 5,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
@@ -1960,10 +1848,9 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4} piercing",
 					"types": [
 						"piercing"
@@ -1974,10 +1861,9 @@
 					"name": "crossbow",
 					"attack": 5,
 					"traits": [
-						"range 120 feet",
-						"reload 1"
+						"range <120 feet>",
+						"reload <1>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d8} piercing",
 					"types": [
 						"piercing"
@@ -1996,11 +1882,31 @@
 						"name": "Cantrips"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 13
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 1
+					},
+					"ref": {
+						"std": 7
+					},
+					"will": {
+						"std": 4
+					}
+				},
+				"hp": [
+					{
+						"hp": 5
+					}
+				]
 			}
 		},
 		{
 			"name": "Pickled Punk",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 59,
 			"level": 1,
@@ -2008,9 +1914,6 @@
 				"ne",
 				"tiny",
 				"undead"
-			],
-			"creatureType": [
-				"Undead"
 			],
 			"perception": {
 				"std": 8
@@ -2022,17 +1925,17 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 7
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 5
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 7
 				}
 			},
@@ -2044,41 +1947,9 @@
 				"wis": 0,
 				"cha": -3
 			},
-			"ac": {
-				"std": 16
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 8
-				},
-				"ref": {
-					"std": 9
-				},
-				"will": {
-					"std": 3
-				}
-			},
-			"hp": [
-				{
-					"hp": 20,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease",
-				"paralyzed"
-			],
-			"weaknesses": [
-				{
-					"amount": 2,
-					"name": "fire"
-				}
-			],
 			"speed": {
 				"walk": 20
 			},
-			"attacks": [],
 			"abilities": {
 				"top": [
 					{
@@ -2102,7 +1973,7 @@
 							"poison"
 						],
 						"entries": [
-							"5 feet. A creature that enters or begins its turn within the aura must attempt a DC 14 Fortitude save, or DC 17 if the pickled punk is attached to the creature. On a failed save, the creature is {@condition sickened|CRB|sickened 1}, and on a critical failure, it's also {@condition enfeebled|CRB|enfeebled 1} for 1 minute."
+							"5 feet. A creature that enters or begins its turn within the aura must attempt a {@dc 14} Fortitude save, or {@dc 17} if the pickled punk is attached to the creature. On a failed save, the creature is {@condition sickened|CRB|sickened 1}, and on a critical failure, it's also {@condition enfeebled|CRB|enfeebled 1} for 1 minute."
 						],
 						"name": "Suffocating Fumes"
 					}
@@ -2115,11 +1986,42 @@
 						"name": "Attach"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 16
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 8
+					},
+					"ref": {
+						"std": 9
+					},
+					"will": {
+						"std": 3
+					}
+				},
+				"hp": [
+					{
+						"hp": 20
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyzed"
+				],
+				"weaknesses": [
+					{
+						"amount": 2,
+						"name": "fire"
+					}
+				]
 			}
 		},
 		{
 			"name": "Ralso",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 91,
 			"level": 4,
@@ -2131,9 +2033,7 @@
 				"humanoid",
 				"orc"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Female half-orc thief",
 			"perception": {
 				"std": 14
 			},
@@ -2144,29 +2044,29 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 12
 				},
-				"Deception": {
+				"deception": {
 					"std": 12
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 10
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 12
 				},
-				"Society": {
+				"society": {
 					"std": 7
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 12
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 12
 				}
 			},
@@ -2178,25 +2078,13 @@
 				"wis": 1,
 				"cha": 2
 			},
-			"ac": {
-				"std": 22
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 8
-				},
-				"ref": {
-					"std": 14
-				},
-				"will": {
-					"std": 9
-				}
-			},
-			"hp": [
-				{
-					"hp": 55,
-					"abilities": null
-				}
+			"items": [
+				"caltrops",
+				"daggers (2)",
+				"lesser healing potion",
+				"ring of discretion (page 80)",
+				"shortswords (2)",
+				"studded leather armor"
 			],
 			"speed": {
 				"walk": 25
@@ -2209,9 +2097,8 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+7} piercing",
 					"types": [
 						"piercing"
@@ -2224,10 +2111,9 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+7} piercing",
 					"types": [
 						"piercing"
@@ -2235,14 +2121,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+12, {@skill Society} +7, {@skill Stealth} +12, {@skill Thievery} +12 Str +3, Dex +4, Con +2, Int \u20131, Wis +1, Cha +2 Items caltrops, daggers (2), lesser healing potion, ring of discretion (page 80), shortswords (2), studded leather armor."
-						],
-						"name": "Intimidation"
-					}
-				],
 				"bot": [
 					{
 						"activity": {
@@ -2252,10 +2130,10 @@
 						"requirements": "Ralso is wielding two piercing weapons",
 						"frequency": {
 							"unit": "round",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
-							"Ralso makes two Strikes against a single creature within reach, one {@action Strike} per weapon. These attacks count toward Ralso's multiple attack penalty, but the penalty doesn't increase until after both attacks."
+							"Ralso makes two {@action Strike||Strikes} against a single creature within reach, one {@action Strike} per weapon. These attacks count toward Ralso's multiple attack penalty, but the penalty doesn't increase until after both attacks."
 						],
 						"name": "Double Stab"
 					},
@@ -2266,11 +2144,31 @@
 						"name": "Sneak"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 22
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 8
+					},
+					"ref": {
+						"std": 14
+					},
+					"will": {
+						"std": 9
+					}
+				},
+				"hp": [
+					{
+						"hp": 55
+					}
+				]
 			}
 		},
 		{
 			"name": "Shredskin",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 60,
 			"level": 2,
@@ -2278,9 +2176,6 @@
 				"ne",
 				"tiny",
 				"undead"
-			],
-			"creatureType": [
-				"Undead"
 			],
 			"perception": {
 				"std": 11
@@ -2292,20 +2187,20 @@
 			],
 			"languages": {
 				"languages": [
-					"Common (can't speak any language)"
+					"common (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 10
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 8
 				},
-				"Deception": {
+				"deception": {
 					"std": 8
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 8
 				}
 			},
@@ -2317,30 +2212,6 @@
 				"wis": 0,
 				"cha": 2
 			},
-			"ac": {
-				"std": 18
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 6
-				},
-				"ref": {
-					"std": 10
-				},
-				"will": {
-					"std": 8
-				}
-			},
-			"hp": [
-				{
-					"hp": 30,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"critical hits (except slashing)",
-				"death effects"
-			],
 			"speed": {
 				"fly": 30
 			},
@@ -2364,7 +2235,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 11,
-					"effects": [],
 					"damage": "{@damage 1d8+4} piercing",
 					"types": [
 						"piercing"
@@ -2379,7 +2249,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"{@damage 1d4+4} bludgeoning, DC 16."
+							"{@damage 1d4+4} bludgeoning, {@dc 16}"
 						],
 						"name": "Constrict",
 						"generic": {
@@ -2388,7 +2258,7 @@
 					},
 					{
 						"entries": [
-							"When a shredskin successfully Squeezes, it moves through the tight space at full speed. Narrow confines are not difficult terrain for a shredskin."
+							"When a shredskin successfully Squeezes, it moves through the tight space at full speed. Narrow confines are not {@quickref difficult terrain||3|terrain} for a shredskin."
 						],
 						"name": "Compression"
 					},
@@ -2404,11 +2274,35 @@
 						"name": "Control Body"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 18
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 6
+					},
+					"ref": {
+						"std": 10
+					},
+					"will": {
+						"std": 8
+					}
+				},
+				"hp": [
+					{
+						"hp": 30
+					}
+				],
+				"immunities": [
+					"critical hits (except slashing)",
+					"death effects"
+				]
 			}
 		},
 		{
 			"name": "Siege Shard",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 84,
 			"level": 3,
@@ -2417,9 +2311,6 @@
 				"n",
 				"tiny",
 				"construct"
-			],
-			"creatureType": [
-				"Construct"
 			],
 			"perception": {
 				"std": 9
@@ -2430,10 +2321,10 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 9
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 10
 				}
 			},
@@ -2445,33 +2336,6 @@
 				"wis": 2,
 				"cha": -4
 			},
-			"ac": {
-				"std": 19,
-				"when broken": 15
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 12
-				},
-				"ref": {
-					"std": 6
-				},
-				"will": {
-					"std": 9
-				}
-			},
-			"hp": [
-				{
-					"hp": 37,
-					"abilities": null
-				}
-			],
-			"hardness": 5,
-			"immunities": [
-				"bleed",
-				"death effects",
-				"disease"
-			],
 			"speed": {
 				"fly": 25
 			},
@@ -2480,7 +2344,6 @@
 					"range": "Melee",
 					"name": "slam",
 					"attack": 11,
-					"effects": [],
 					"damage": "{@damage 1d8+4} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -2489,9 +2352,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
 					"type": "Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"DC": 20,
 					"attack": 12,
 					"entry": {
@@ -2557,10 +2419,10 @@
 						],
 						"frequency": {
 							"unit": "minute",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
-							"The siege shard emits a disorienting psychic blast. All creatures within a 15 feet take {@damage 4d6} mental damage (DC 20 basic Will save)."
+							"The siege shard emits a disorienting psychic blast. All creatures within a 15 feet take {@damage 4d6} mental damage ({@dc 20} basic Will save)."
 						],
 						"name": "Overwhelming Anguish"
 					},
@@ -2575,11 +2437,39 @@
 						"name": "Rejuvenation"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 19,
+					"when broken": 15
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 6
+					},
+					"will": {
+						"std": 9
+					}
+				},
+				"hardness": 5,
+				"hp": [
+					{
+						"hp": 37
+					}
+				],
+				"immunities": [
+					"bleed",
+					"death effects",
+					"disease"
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Skebs",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 8,
 			"level": -1,
@@ -2589,29 +2479,26 @@
 				"halfling",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 4
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Halfling"
+					"common",
+					"halfling"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 5
 				},
-				"Deception": {
+				"deception": {
 					"std": 2
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 5
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 5
 				}
 			},
@@ -2627,26 +2514,6 @@
 				"daggers (4)",
 				"studded leather armor"
 			],
-			"ac": {
-				"std": 15
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 3
-				},
-				"ref": {
-					"std": 7
-				},
-				"will": {
-					"std": 4
-				}
-			},
-			"hp": [
-				{
-					"hp": 7,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -2658,10 +2525,9 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4} piercing",
 					"types": [
 						"piercing"
@@ -2674,10 +2540,9 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4} piercing",
 					"types": [
 						"piercing"
@@ -2706,7 +2571,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"{@damage 1d4} piercing Ranged dagger +8 (agile, finesse, thrown 10 feet, versatile S), Damage {@damage 1d4} piercing."
+							"{@damage 1d4} piercing Ranged dagger +8 (agile, finesse, thrown <10 feet>, versatile S), Damage {@damage 1d4} piercing."
 						],
 						"name": "S), Damage"
 					},
@@ -2723,11 +2588,31 @@
 						}
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 15
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 3
+					},
+					"ref": {
+						"std": 7
+					},
+					"will": {
+						"std": 4
+					}
+				},
+				"hp": [
+					{
+						"hp": 7
+					}
+				]
 			}
 		},
 		{
 			"name": "Vargouille",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 35,
 			"level": 2,
@@ -2736,10 +2621,6 @@
 				"small",
 				"beast",
 				"fiend"
-			],
-			"creatureType": [
-				"Fiend",
-				"Beast"
 			],
 			"perception": {
 				"std": 11
@@ -2751,14 +2632,14 @@
 			],
 			"languages": {
 				"languages": [
-					"Infernal"
+					"infernal"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 8
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 8
 				}
 			},
@@ -2770,26 +2651,6 @@
 				"wis": 3,
 				"cha": -1
 			},
-			"ac": {
-				"std": 18
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 10
-				},
-				"ref": {
-					"std": 8
-				},
-				"will": {
-					"std": 7
-				}
-			},
-			"hp": [
-				{
-					"hp": 30,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"fly": 25
 			},
@@ -2833,7 +2694,7 @@
 							"visual"
 						],
 						"entries": [
-							"The vargouille shrieks, its scream so terrible that all non-vargouilles within 60 feet must succeed at a DC 16 Fortitude save or be {@condition paralyzed} for 3 rounds. The effect ends early for a creature if the vargouille moves out of sight, moves farther than 60 feet from the creature, or attacks the creature with its fangs. After attempting its save, a creature is immune to that particular vargouille's Shriek for 24 hours."
+							"The vargouille shrieks, its scream so terrible that all non-vargouilles within 60 feet must succeed at a {@dc 16} Fortitude save or be {@condition paralyzed} for 3 rounds. The effect ends early for a creature if the vargouille moves out of sight, moves farther than 60 feet from the creature, or attacks the creature with its fangs. After attempting its save, a creature is immune to that particular vargouille's Shriek for 24 hours."
 						],
 						"name": "Shriek"
 					},
@@ -2843,7 +2704,7 @@
 						"traits": [
 							"disease"
 						],
-						"note": " Exposing the victim\nto sunlight or any {@spell light} spell of 3rd level or higher\npauses the progression of the disease until the victim\nis no longer in light.",
+						"note": "Exposing the victim to sunlight or any {@spell light} spell of 3rd level or higher pauses the progression of the disease until the victim is no longer in light.",
 						"DC": 18,
 						"savingThrow": "Fortitude",
 						"stages": [
@@ -2891,11 +2752,31 @@
 						]
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 18
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 10
+					},
+					"ref": {
+						"std": 8
+					},
+					"will": {
+						"std": 7
+					}
+				},
+				"hp": [
+					{
+						"hp": 30
+					}
+				]
 			}
 		},
 		{
 			"name": "Zrukbat",
-			"isNpc": false,
 			"source": "AoE1",
 			"page": 85,
 			"level": 2,
@@ -2903,9 +2784,6 @@
 				"cn",
 				"small",
 				"fey"
-			],
-			"creatureType": [
-				"Fey"
 			],
 			"perception": {
 				"std": 7
@@ -2917,21 +2795,21 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Sylvan"
+					"common",
+					"sylvan"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 10
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 9
 				},
-				"Deception": {
+				"deception": {
 					"std": 5
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 10
 				}
 			},
@@ -2943,29 +2821,6 @@
 				"wis": -1,
 				"cha": -1
 			},
-			"ac": {
-				"std": 18
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 9
-				},
-				"ref": {
-					"std": 10
-				},
-				"will": {
-					"std": 5
-				}
-			},
-			"hp": [
-				{
-					"hp": 30,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"sleep"
-			],
 			"speed": {
 				"walk": 20,
 				"climb": 20,
@@ -2976,7 +2831,6 @@
 					"range": "Melee",
 					"name": "claw",
 					"attack": 11,
-					"effects": [],
 					"damage": "{@damage 1d8+3} slashing",
 					"types": [
 						"slashing"
@@ -2986,7 +2840,6 @@
 					"range": "Melee",
 					"name": "fangs",
 					"attack": 11,
-					"effects": [],
 					"damage": "{@damage 1d6+3} piercing",
 					"types": [
 						"piercing"
@@ -3008,12 +2861,37 @@
 						],
 						"entries": [
 							"The zrukbat assumes the shape of any Small object or ornamentation, although the zrukbat's mimicked objects usually have unrealistic or suspicious quirks. This doesn't change the zrukbat's size but can alter their coloration and visual appearance. They have an automatic result of 23 on {@skill Deception} checks and DCs to pass as the mimicked object.",
-							"Go for the Eyes {@as 2} The zrukbat flies up to its Speed and makes a claw {@action Strike} at the end of its move. If the claw attack hits, the target must succeed on a DC 15 Fortitude saving throw or be {@condition blinded} for 1 round (or {@condition blinded} for 1 minute on a critical failure). If the {@action Strike} was a critical hit, the target's save result is one degree of success worse."
+							"Go for the Eyes {@as 2} The zrukbat flies up to its Speed and makes a claw {@action Strike} at the end of its move. If the claw attack hits, the target must succeed on a {@dc 15} Fortitude saving throw or be {@condition blinded} for 1 round (or {@condition blinded} for 1 minute on a critical failure). If the {@action Strike} was a critical hit, the target's save result is one degree of success worse."
 						],
 						"name": "Dubious Shifting"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 18
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 9
+					},
+					"ref": {
+						"std": 10
+					},
+					"will": {
+						"std": 5
+					}
+				},
+				"hp": [
+					{
+						"hp": 30
+					}
+				],
+				"immunities": [
+					"sleep"
+				]
+			},
+			"hasImages": true
 		}
 	]
 }

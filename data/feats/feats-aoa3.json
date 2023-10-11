@@ -17,8 +17,7 @@
 			],
 			"prerequisites": "Charisma 14, expert in {@skill Stealth} and {@skill Survival}, member of the Bellflower Network",
 			"entries": [
-				"You dedicate yourself to freeing slaves and escorting them to freedom. You gain a +5-foot status bonus to your Speed.",
-				"Choose up to six other people to be your \"crop.\" Members of your crop can use your Speed for overland travel if it's higher than their own. Members more than 60 feet from you lose all benefits (from this or other Bellflower tiller feats) of being part of your crop, but they regain those benefits immediately when they return. You can add or remove someone from your crop by spending 10 minutes in conversation with them."
+				"You dedicate yourself to freeing slaves and escorting them to freedom. You gain a +5-foot status bonus to your Speed. Choose up to six other people to be your \"crop.\" Members of your crop can use your Speed for overland travel if it's higher than their own. Members more than 60 feet from you lose all benefits (from this or other Bellflower tiller feats) of being part of your crop, but they regain those benefits immediately when they return. You can add or remove someone from your crop by spending 10 minutes in conversation with them."
 			],
 			"special": [
 				"You cannot select another dedication feat until you have gained two other feats from the Bellflower tiller archetype."
@@ -105,8 +104,7 @@
 			],
 			"prerequisites": "{@feat Bellflower Dedication|AoA3}",
 			"entries": [
-				"Making one's way to safety can be harrowing, but you have extensive practice at helping others along that path.",
-				"When you roll a success to {@action Aid} a member of your crop, you get a critical success instead."
+				"Making one's way to safety can be harrowing, but you have extensive practice at helping others along that path. When you roll a success to {@action Aid} a member of your crop, you get a critical success instead."
 			]
 		},
 		{
@@ -172,7 +170,7 @@
 			],
 			"prerequisites": "trained in {@skill Deception}",
 			"entries": [
-				"Choose a secret society (such as the Lacunafex or the Bellflower Network). You've learned that society's secret cant or jargon, enabling you to share {@condition hidden} messages when signing or speaking with others who've also learned it. If an observer succeeds at a {@skill Perception} check against your {@skill Deception} DC when you do this, they realize you are passing a message but fail to discern its content, unless they subsequently succeed at a {@skill Society} check against your {@skill Deception} DC. On a critical success, they learn not only the message, but also who you're passing the message to."
+				"Choose a secret society (such as the Lacunafex or the Bellflower Network). You've learned that society's secret cant or jargon, enabling you to share condition hidden messages when signing or speaking with others who've also learned it. If an observer succeeds at a {@skill Perception} check against your {@skill Deception} DC when you do this, they realize you are passing a message but fail to discern its content, unless they subsequently succeed at a {@skill Society} check against your {@skill Deception} DC. On a critical success, they learn not only the message, but also who you're passing the message to."
 			],
 			"special": [
 				"You can take this feat multiple times. You learn the secret speech of a different society each time."
@@ -251,8 +249,7 @@
 			],
 			"prerequisites": "expert in {@skill Crafting}",
 			"entries": [
-				"You spend 1 minute making quick adjustments to someone's clothing and appearance, causing their words to carry more weight with an audience of your choice.",
-				"While speaking to that audience, the target gains a +1 item bonus to {@skill Diplomacy} and {@skill Performance} checks. If you have master proficiency in {@skill Crafting}, the bonus increases to +2; if you have legendary proficiency in {@skill Crafting}, the bonus increases to +3. This bonus lasts until this ability is used on the target again, the situation they were prepared for ends, or they next change their outfit."
+				"You spend 1 minute making quick adjustments to someone's clothing and appearance, causing their words to carry more weight with an audience of your choice. While speaking to that audience, the target gains a +1 item bonus to {@skill Diplomacy} and {@skill Performance} checks. If you have master proficiency in {@skill Crafting}, the bonus increases to +2; if you have legendary proficiency in {@skill Crafting}, the bonus increases to +3. This bonus lasts until this ability is used on the target again, the situation they were prepared for ends, or they next change their outfit."
 			]
 		}
 	]

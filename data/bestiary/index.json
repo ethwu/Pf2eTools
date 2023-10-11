@@ -4,6 +4,8 @@
 	"B3": "creatures-b3.json",
 	"GMG": "creatures-gmg.json",
 	"LOME": "creatures-lome.json",
+	"LOMM": "creatures-lomm.json",
+	"LOIL": "creatures-loil.json",
 	"CRB": "creatures-crb.json",
 	"AoA1": "creatures-aoa1.json",
 	"AoA2": "creatures-aoa2.json",
@@ -40,5 +42,16 @@
 	"SoT4": "creatures-sot4.json",
 	"SoT5": "creatures-sot5.json",
 	"SoT6": "creatures-sot6.json",
-	"NGD": "creatures-ngd.json"
+	"OoA1": "creatures-ooa1.json",
+	"OoA2": "creatures-ooa2.json",
+	"OoA3": "creatures-ooa3.json",
+	"DA": "creatures-da.json",
+	"NGD": "creatures-ngd.json",
+	"BB": "creatures-bb.json",
+	"POS1": "creatures-pos1.json",
+	"AFoF": "creatures-afof.json",
+	"TaL": "creatures-tal.json",
+	"ToK": "creatures-tok.json",
+	"GW1": "creatures-gw1.json",
+	"GW3": "creatures-gw3.json"
 }

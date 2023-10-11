@@ -16,7 +16,7 @@
 			},
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
@@ -46,35 +46,12 @@
 				"religious symbol of {@deity Norgorber}",
 				"scale armor"
 			],
-			"ac": {
-				"std": 27
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 19
-				},
-				"ref": {
-					"std": 15
-				},
-				"will": {
-					"std": 14
-				}
-			},
-			"hp": [
-				{
-					"hp": 135
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
 						"shove"
@@ -85,10 +62,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"unarmed"
@@ -99,13 +72,9 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
 					"name": "fighter's fork",
 					"attack": 18,
@@ -130,12 +99,33 @@
 					{
 						"name": "Brute Strength",
 						"entries": [
-							"Abendego brutes deal an extra {@dice 2d8} damage with tridents, and a trident gains the {@trait shove} trait while the brute is using it in melee (both the extra damage dice and the {@trait shove} trait are included in the fighter's fork Strikes above)."
+							"Abendego brutes deal an extra {@dice 2d8} damage with tridents, and a trident gains the {@trait shove} trait while the brute is using it in melee (both the extra damage dice and the {@trait shove} trait are included in the fighter's fork {@action Strike||Strikes} above)."
 						]
 					}
 				]
 			},
-			"description": "Human bruiser"
+			"description": "Human bruiser",
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 19
+					},
+					"ref": {
+						"std": 15
+					},
+					"will": {
+						"std": 14
+					}
+				},
+				"hp": [
+					{
+						"hp": 135
+					}
+				]
+			}
 		},
 		{
 			"name": "Abendego Jailer",
@@ -153,7 +143,7 @@
 			},
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
@@ -185,37 +175,14 @@
 				"religious symbol of {@deity Norgorber}",
 				"+1 scale mail"
 			],
-			"ac": {
-				"std": 30
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 20
-				},
-				"ref": {
-					"std": 21
-				},
-				"will": {
-					"std": 17
-				}
-			},
-			"hp": [
-				{
-					"hp": 175
-				}
-			],
 			"speed": {
 				"walk": 20
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "mancatcher",
 					"attack": 23,
@@ -223,10 +190,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"versatile S"
@@ -237,13 +200,9 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
-						"thrown 10 feet",
+						"thrown <10 feet>",
 						"versatile S"
 					],
 					"name": "dagger",
@@ -259,7 +218,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -269,7 +227,7 @@
 					{
 						"name": "Restrain",
 						"entries": [
-							"When the jailer makes a successful mancatcher {@action Strike}, their target must succeed at a DC 27 Reflex save or become {@condition grabbed} until the end of the jailer's next turn.",
+							"When the jailer makes a successful mancatcher {@action Strike}, their target must succeed at a {@dc 27} Reflex save or become {@condition grabbed} until the end of the jailer's next turn.",
 							"Each time the target fails an attempt to {@action Escape} the jailer, it takes {@damage 2d6} piercing damage."
 						]
 					},
@@ -281,7 +239,28 @@
 					}
 				]
 			},
-			"description": "Human prison guard"
+			"description": "Human prison guard",
+			"defenses": {
+				"ac": {
+					"std": 30
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 20
+					},
+					"ref": {
+						"std": 21
+					},
+					"will": {
+						"std": 17
+					}
+				},
+				"hp": [
+					{
+						"hp": 175
+					}
+				]
+			}
 		},
 		{
 			"name": "Abendego Priest",
@@ -299,7 +278,7 @@
 			},
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
@@ -334,35 +313,12 @@
 				"+2 striking shortsword",
 				"studded leather armor"
 			],
-			"ac": {
-				"std": 30
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 20
-				},
-				"ref": {
-					"std": 21
-				},
-				"will": {
-					"std": 17
-				}
-			},
-			"hp": [
-				{
-					"hp": 175
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"magical",
@@ -374,10 +330,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"versatile S"
@@ -388,13 +340,9 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
-						"thrown 10 feet",
+						"thrown <10 feet>",
 						"versatile S"
 					],
 					"name": "dagger",
@@ -404,8 +352,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Prepared",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"type": "Prepared",
 					"DC": 30,
 					"attack": 22,
@@ -512,7 +459,7 @@
 					}
 				},
 				{
-					"name": "Cleric Domain",
+					"name": "Cleric Domain Spells",
 					"type": "Focus",
 					"fp": 2,
 					"DC": 30,
@@ -564,7 +511,28 @@
 					}
 				]
 			},
-			"description": "Human priest of {@deity Norgorber}"
+			"description": "Human priest of {@deity Norgorber}",
+			"defenses": {
+				"ac": {
+					"std": 30
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 20
+					},
+					"ref": {
+						"std": 21
+					},
+					"will": {
+						"std": 17
+					}
+				},
+				"hp": [
+					{
+						"hp": 175
+					}
+				]
+			}
 		},
 		{
 			"name": "Ajbal Kimon",
@@ -584,7 +552,7 @@
 			},
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
@@ -626,35 +594,12 @@
 				"+1 resilient mithral scale mail",
 				"+2 returning striking trident"
 			],
-			"ac": {
-				"std": 34
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 21
-				},
-				"ref": {
-					"std": 24
-				},
-				"will": {
-					"std": 23
-				}
-			},
-			"hp": [
-				{
-					"hp": 225
-				}
-			],
 			"speed": {
 				"walk": 20
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
 						"shove"
@@ -665,10 +610,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"versatile S"
@@ -679,13 +620,9 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
 					"name": "trident",
 					"attack": 25,
@@ -693,13 +630,9 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
-						"thrown 10 feet",
+						"thrown <10 feet>",
 						"versatile S"
 					],
 					"name": "dagger",
@@ -768,7 +701,7 @@
 						},
 						"requirements": "Ajbal's last action was a melee {@action Strike} that dealt sneak attack damage to a {@condition flat-footed} target",
 						"entries": [
-							"Ajbal deals 6 {@condition persistent damage ||persistent bleed damage} to the target creature, and the target is {@condition enfeebled||enfeebled 1} for as long as it's bleeding."
+							"Ajbal deals 6 {@condition persistent damage||persistent bleed damage} to the target creature, and the target is {@condition enfeebled||enfeebled 1} for as long as it's bleeding."
 						]
 					},
 					{
@@ -779,7 +712,28 @@
 					}
 				]
 			},
-			"description": "male human gang leader"
+			"description": "male human gang leader",
+			"defenses": {
+				"ac": {
+					"std": 34
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 21
+					},
+					"ref": {
+						"std": 24
+					},
+					"will": {
+						"std": 23
+					}
+				},
+				"hp": [
+					{
+						"hp": 225
+					}
+				]
+			}
 		},
 		{
 			"name": "Bharlen Sajor",
@@ -802,8 +756,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Necril"
+					"common",
+					"necril"
 				]
 			},
 			"skills": {
@@ -833,47 +787,12 @@
 				"heavy crossbow (20 bolts and 2 storm bolts [as storm arrows])",
 				"trident"
 			],
-			"ac": {
-				"std": 32
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 22
-				},
-				"ref": {
-					"std": 24
-				},
-				"will": {
-					"std": 18
-				}
-			},
-			"hp": [
-				{
-					"hp": 190,
-					"abilities": [
-						"negative healing",
-						"rejuvenation"
-					]
-				}
-			],
-			"immunities": [
-				"death",
-				"disease",
-				"electricity",
-				"paralyzed",
-				"poison",
-				"unconscious"
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"electricity",
 						"magical",
@@ -885,10 +804,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"electricity",
@@ -900,15 +815,11 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"electricity",
 						"magical",
-						"range increment 120 feet",
-						"reload 2"
+						"range increment <120 feet>",
+						"reload <2>"
 					],
 					"name": "shock heavy crossbow",
 					"attack": 24,
@@ -916,14 +827,10 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"electricity",
 						"magical",
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
 					"name": "shock trident",
 					"attack": 24,
@@ -971,7 +878,7 @@
 					{
 						"name": "Brute Strength",
 						"entries": [
-							"Bharlen deals an extra {@dice 1d8} damage with tridents, and a trident gains the {@trait shove} trait while she is using it in melee (both the extra damage die and the {@trait shove} trait have been included in Bharlen's trident Strikes above)."
+							"Bharlen deals an extra {@dice 1d8} damage with tridents, and a trident gains the {@trait shove} trait while she is using it in melee (both the extra damage die and the {@trait shove} trait have been included in Bharlen's trident {@action Strike||Strikes} above)."
 						]
 					},
 					{
@@ -986,7 +893,7 @@
 							"evocation"
 						],
 						"entries": [
-							"Bharlen unleashes crackling lightning in a 30-foot cone. Creatures in the area take {@damage 6d12} electricity damage (DC 30 basic Reflex save). Bharlen can use this ability once every {@dice 1d4} rounds.",
+							"Bharlen unleashes crackling lightning in a 30-foot cone. Creatures in the area take {@damage 6d12} electricity damage ({@dc 30} basic Reflex save). Bharlen can use this ability once every {@dice 1d4} rounds.",
 							{
 								"type": "affliction",
 								"name": "Graveknight's Curse This curse affects anyone who wears a",
@@ -1024,7 +931,40 @@
 					}
 				]
 			},
-			"description": "Female graveknight (Pathfinder Bestiary 190)"
+			"description": "Female graveknight (Pathfinder Bestiary 190)",
+			"defenses": {
+				"ac": {
+					"std": 32
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 22
+					},
+					"ref": {
+						"std": 24
+					},
+					"will": {
+						"std": 18
+					}
+				},
+				"hp": [
+					{
+						"hp": 190,
+						"abilities": [
+							"negative healing",
+							"rejuvenation"
+						]
+					}
+				],
+				"immunities": [
+					"death",
+					"disease",
+					"electricity",
+					"paralyzed",
+					"poison",
+					"unconscious"
+				]
+			}
 		},
 		{
 			"name": "Bog Mummy Amalgamation",
@@ -1056,8 +996,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Necril"
+					"common",
+					"necril"
 				]
 			},
 			"skills": {
@@ -1077,47 +1017,6 @@
 				"wis": 3,
 				"cha": 0
 			},
-			"ac": {
-				"std": 27
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 19
-				},
-				"ref": {
-					"std": 15
-				},
-				"will": {
-					"std": 20
-				}
-			},
-			"hp": [
-				{
-					"hp": 160,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease",
-				"paralyzed",
-				"poison",
-				"unconscious"
-			],
-			"weaknesses": [
-				{
-					"name": "cold",
-					"amount": 10
-				}
-			],
-			"resistances": [
-				{
-					"name": "fire",
-					"amount": 10
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"burrow": 15
@@ -1125,12 +1024,8 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "fist",
 					"attack": 20,
@@ -1149,7 +1044,7 @@
 						],
 						"entries": [
 							"30 feet.",
-							"A creature that begins its turn within the area feels as if its lungs are filling with silt and must succeed at a DC 25 Fortitude save or be unable to speak or breathe.",
+							"A creature that begins its turn within the area feels as if its lungs are filling with silt and must succeed at a {@dc 25} Fortitude save or be unable to speak or breathe.",
 							"The creature can still hold its breath and can attempt a new saving throw at the end of its turn. A creature that succeeds is temporarily immune to breath of silt for 24 hours."
 						]
 					},
@@ -1177,7 +1072,7 @@
 							"negative"
 						],
 						"entries": [
-							"This affliction can't be reduced below stage 1, nor can the damage from it be healed, until it's successfully treated with remove curse or a similar effect; the affliction can then be removed as normal for a disease. A creature killed by bog rot melts into a noxious sludge and can't be resurrected except by a 7th-level resurrect ritual or similar magic;",
+							"This affliction can't be reduced below stage 1, nor can the damage from it be healed, until it's successfully treated with remove curse or a similar effect; the affliction can then be removed as normal for a disease. A creature killed by bog rot melts into a noxious sludge and can't be resurrected except by a 7th-level resurrect ritual or similar magic",
 							{
 								"type": "affliction",
 								"DC": 21,
@@ -1204,8 +1099,51 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The amalgamation makes two fist Strikes against two different targets within its reach. Its multiple attack penalty doesn't increase until after both attacks."
+							"The amalgamation makes two fist {@action Strike||Strikes} against two different targets within its reach. Its multiple attack penalty doesn't increase until after both attacks."
 						]
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 19
+					},
+					"ref": {
+						"std": 15
+					},
+					"will": {
+						"std": 20
+					}
+				},
+				"hp": [
+					{
+						"hp": 160,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyzed",
+					"poison",
+					"unconscious"
+				],
+				"weaknesses": [
+					{
+						"name": "cold",
+						"amount": 10
+					}
+				],
+				"resistances": [
+					{
+						"name": "fire",
+						"amount": 10
 					}
 				]
 			}
@@ -1232,7 +1170,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Boggard"
+					"boggard"
 				]
 			},
 			"skills": {
@@ -1263,25 +1201,6 @@
 				"javelin (5)",
 				"studded leather armor"
 			],
-			"ac": {
-				"std": 24
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 18
-				},
-				"ref": {
-					"std": 15
-				},
-				"will": {
-					"std": 12
-				}
-			},
-			"hp": [
-				{
-					"hp": 140
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"swim": 25,
@@ -1292,10 +1211,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"backswing",
 						"shove"
@@ -1306,12 +1221,8 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "tongue",
 					"attack": 18,
@@ -1319,12 +1230,8 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"thrown 30 feet"
+						"thrown <30 feet>"
 					],
 					"name": "javelin",
 					"attack": 15,
@@ -1345,7 +1252,7 @@
 					{
 						"name": "Swamp Stride",
 						"entries": [
-							"A boggard hunter ignores difficult terrain caused by swamp terrain features."
+							"A boggard hunter ignores {@quickref difficult terrain||3|terrain} caused by swamp terrain features."
 						]
 					},
 					{
@@ -1361,7 +1268,7 @@
 							"mental"
 						],
 						"entries": [
-							"The boggard unleashes a terrifying croak. Any non-boggard within 30 feet becomes {@condition frightened||frightened 1} unless they succeed at a DC 25 Will save; those who critically succeed are temporarily immune for 1 minute."
+							"The boggard unleashes a terrifying croak. Any non-boggard within 30 feet becomes {@condition frightened||frightened 1} unless they succeed at a {@dc 25} Will save; those who critically succeed are temporarily immune for 1 minute."
 						]
 					},
 					{
@@ -1372,7 +1279,28 @@
 					}
 				]
 			},
-			"description": "Boggard hunter (Bestiary 44)"
+			"description": "Boggard hunter (Bestiary 44)",
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 18
+					},
+					"ref": {
+						"std": 15
+					},
+					"will": {
+						"std": 12
+					}
+				},
+				"hp": [
+					{
+						"hp": 140
+					}
+				]
+			}
 		},
 		{
 			"name": "Cyclops Bully",
@@ -1396,9 +1324,9 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Cyclops",
-					"Jotun"
+					"common",
+					"cyclops",
+					"jotun"
 				]
 			},
 			"skills": {
@@ -1424,38 +1352,15 @@
 				"greatclub",
 				"hide armor"
 			],
-			"ac": {
-				"std": 28
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 21
-				},
-				"ref": {
-					"std": 15
-				},
-				"will": {
-					"std": 17
-				}
-			},
-			"hp": [
-				{
-					"hp": 155
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"backswing",
-						"reach 10 feet",
+						"reach <10 feet>",
 						"shove"
 					],
 					"name": "greatclub",
@@ -1464,10 +1369,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"unarmed"
@@ -1491,7 +1392,7 @@
 							"occult"
 						],
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"trigger": "The cyclops bully fails (but does not critically fail) an attack roll or an {@skill Intimidation} check",
@@ -1505,7 +1406,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -1524,7 +1424,28 @@
 					}
 				]
 			},
-			"description": "Cyclops bruisers (Bestiary 68)"
+			"description": "Cyclops bruisers (Bestiary 68)",
+			"defenses": {
+				"ac": {
+					"std": 28
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 21
+					},
+					"ref": {
+						"std": 15
+					},
+					"will": {
+						"std": 17
+					}
+				},
+				"hp": [
+					{
+						"hp": 155
+					}
+				]
+			}
 		},
 		{
 			"name": "Golgopo",
@@ -1547,7 +1468,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Cyclops"
+					"cyclops"
 				]
 			},
 			"skills": {
@@ -1566,52 +1487,6 @@
 				"wis": 2,
 				"cha": -2
 			},
-			"ac": {
-				"std": 26
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 18
-				},
-				"ref": {
-					"std": 16
-				},
-				"will": {
-					"std": 14
-				}
-			},
-			"hp": [
-				{
-					"hp": 130
-				}
-			],
-			"immunities": [
-				"bleed",
-				"death effects",
-				"diseased",
-				"doomed",
-				"drained",
-				"fatigued",
-				"healing",
-				"necromancy",
-				"nonlethal attacks",
-				"paralyzed",
-				"poison",
-				"sickened",
-				"unconscious"
-			],
-			"weaknesses": [
-				{
-					"name": "acid",
-					"amount": 5
-				}
-			],
-			"resistances": [
-				{
-					"name": "fire",
-					"amount": 6
-				}
-			],
 			"speed": {
 				"walk": 15,
 				"climb": 15
@@ -1619,10 +1494,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"finesse"
 					],
@@ -1633,8 +1504,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 26,
 					"entry": {
@@ -1642,7 +1512,7 @@
 							"spells": [
 								{
 									"name": "ill omen",
-									"note": "Advanced Player's Guide 221"
+									"source": "APG"
 								}
 							]
 						},
@@ -1677,7 +1547,7 @@
 								},
 								{
 									"name": "seal fate",
-									"note": "Advanced Player's Guide 224"
+									"source": "APG"
 								}
 							]
 						}
@@ -1723,7 +1593,7 @@
 							"occult"
 						],
 						"entries": [
-							"The golgopo unleashes a wailing cry that heralds impending disaster. Each creature within 30 feet must attempt a DC 26 Will save. Golgopos and cyclopes are immune to this effect.",
+							"The golgopo unleashes a wailing cry that heralds impending disaster. Each creature within 30 feet must attempt a {@dc 26} Will save. Golgopos and cyclopes are immune to this effect.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -1744,7 +1614,56 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 26
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 18
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 14
+					}
+				},
+				"hp": [
+					{
+						"hp": 130
+					}
+				],
+				"immunities": [
+					"bleed",
+					"death effects",
+					"diseased",
+					"doomed",
+					"drained",
+					"fatigued",
+					"healing",
+					"necromancy",
+					"nonlethal attacks",
+					"paralyzed",
+					"poison",
+					"sickened",
+					"unconscious"
+				],
+				"weaknesses": [
+					{
+						"name": "acid",
+						"amount": 5
+					}
+				],
+				"resistances": [
+					{
+						"name": "fire",
+						"amount": 6
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Grouloop",
@@ -1769,7 +1688,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Boggard"
+					"boggard"
 				]
 			},
 			"skills": {
@@ -1802,25 +1721,6 @@
 				"leather armor",
 				"sickle"
 			],
-			"ac": {
-				"std": 27
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 18
-				},
-				"ref": {
-					"std": 15
-				},
-				"will": {
-					"std": 21
-				}
-			},
-			"hp": [
-				{
-					"hp": 185
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"swim": 25,
@@ -1831,10 +1731,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"trip"
@@ -1845,12 +1741,8 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "tongue",
 					"attack": 20,
@@ -1859,8 +1751,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Spontaneous",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"type": "Spontaneous",
 					"DC": 28,
 					"attack": 20,
@@ -1982,13 +1873,13 @@
 							"sonic"
 						],
 						"entries": [
-							"Grouloop utters a powerful croak that deals {@damage 6d10} sonic damage to any non-boggard within a 30-foot emanation (DC 27 basic Fortitude save). A creature with the {@condition frightened} condition that fails its saving throw increases its {@condition frightened} condition by 1 (on a critical failure, the creature is also {@condition fleeing} for as long as it is {@condition frightened}). Grouloop can't use Soul-Shaking Croak again for {@dice 1d4} rounds."
+							"Grouloop utters a powerful croak that deals {@damage 6d10} sonic damage to any non-boggard within a 30-foot emanation ({@dc 27} basic Fortitude save). A creature with the {@condition frightened} condition that fails its saving throw increases its {@condition frightened} condition by 1 (on a critical failure, the creature is also {@condition fleeing} for as long as it is {@condition frightened}). Grouloop can't use Soul-Shaking Croak again for {@dice 1d4} rounds."
 						]
 					},
 					{
 						"name": "Swamp Stride",
 						"entries": [
-							"Grouloop ignores difficult terrain caused by swamp terrain features."
+							"Grouloop ignores {@quickref difficult terrain||3|terrain} caused by swamp terrain features."
 						]
 					},
 					{
@@ -1999,7 +1890,28 @@
 					}
 				]
 			},
-			"description": "Female boggard ritualist (Bestiary 44)"
+			"description": "Female boggard ritualist (Bestiary 44)",
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 18
+					},
+					"ref": {
+						"std": 15
+					},
+					"will": {
+						"std": 21
+					}
+				},
+				"hp": [
+					{
+						"hp": 185
+					}
+				]
+			}
 		},
 		{
 			"name": "Halbrux Far-Sight",
@@ -2023,9 +1935,9 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Cyclops",
-					"Jotun"
+					"common",
+					"cyclops",
+					"jotun"
 				]
 			},
 			"skills": {
@@ -2066,35 +1978,12 @@
 				"+2 striking greatclub",
 				"average manacles (4)"
 			],
-			"ac": {
-				"std": 30
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 23
-				},
-				"ref": {
-					"std": 17
-				},
-				"will": {
-					"std": 21
-				}
-			},
-			"hp": [
-				{
-					"hp": 195
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"backswing",
 						"magical",
@@ -2107,8 +1996,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Spontaneous",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"type": "Spontaneous",
 					"DC": 30,
 					"attack": 22,
@@ -2238,7 +2126,7 @@
 					}
 				},
 				{
-					"name": "Revelation",
+					"name": "Revelation Spells",
 					"type": "Focus",
 					"fp": 3,
 					"DC": 30,
@@ -2247,14 +2135,14 @@
 							"spells": [
 								{
 									"name": "brain drain",
-									"note": "Advanced Player's Guide 230"
+									"source": "APG"
 								},
 								{
 									"name": "scholarly recollection"
 								},
 								{
 									"name": "vision of weakness",
-									"note": "Advanced Player's Guide 234"
+									"source": "APG"
 								}
 							]
 						}
@@ -2281,7 +2169,7 @@
 							"occult"
 						],
 						"frequency": {
-							"freq": "three",
+							"number": 3,
 							"unit": "day"
 						},
 						"trigger": "Halbrux is about to attempt a skill check",
@@ -2311,7 +2199,7 @@
 						],
 						"trigger": "Halbrux's turn begins",
 						"entries": [
-							"Halbrux identifies the immediate movements of a creature she can see and attempts a {@skill Lore||Fortune-Telling Lore} check against that creature's Reflex DC. On a success, Halbrux's melee Strikes deal an additional {@damage 4d6} precision damage ({@damage 6d6} precision damage on a critical success) to the creature until the end of Halbrux's turn."
+							"Halbrux identifies the immediate movements of a creature she can see and attempts a {@skill Lore||Fortune-Telling Lore} check against that creature's Reflex DC. On a success, Halbrux's melee {@action Strike||Strikes} deal an additional {@damage 4d6} precision damage ({@damage 6d6} precision damage on a critical success) to the creature until the end of Halbrux's turn."
 						]
 					},
 					{
@@ -2321,7 +2209,7 @@
 							"unit": "free"
 						},
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"entries": [
@@ -2336,7 +2224,28 @@
 					}
 				]
 			},
-			"description": "Female cyclops historian"
+			"description": "Female cyclops historian",
+			"defenses": {
+				"ac": {
+					"std": 30
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 23
+					},
+					"ref": {
+						"std": 17
+					},
+					"will": {
+						"std": 21
+					}
+				},
+				"hp": [
+					{
+						"hp": 195
+					}
+				]
+			}
 		},
 		{
 			"name": "Ixamè",
@@ -2373,9 +2282,9 @@
 			],
 			"languages": {
 				"languages": [
-					"Auran",
-					"Common",
-					"Draconic"
+					"auran",
+					"common",
+					"draconic"
 				]
 			},
 			"skills": {
@@ -2412,34 +2321,6 @@
 				"wis": 4,
 				"cha": 4
 			},
-			"ac": {
-				"std": 30
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 21
-				},
-				"ref": {
-					"std": 18
-				},
-				"will": {
-					"std": 20
-				}
-			},
-			"hp": [
-				{
-					"hp": 175,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"electricity",
-				"paralyzed",
-				"poison",
-				"sleep"
-			],
 			"speed": {
 				"walk": 40,
 				"fly": 140,
@@ -2450,13 +2331,9 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"poison",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "jaws",
 					"attack": 23,
@@ -2464,10 +2341,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile"
 					],
@@ -2477,12 +2350,8 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"name": "tail",
 					"attack": 21,
@@ -2490,13 +2359,9 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"deadly d8",
-						"reach 10 feet"
+						"deadly <d8>",
+						"reach <10 feet>"
 					],
 					"name": "horn",
 					"attack": 21,
@@ -2505,8 +2370,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"type": "Innate",
 					"DC": 29,
 					"entry": {
@@ -2547,7 +2411,7 @@
 							"mental"
 						],
 						"entries": [
-							"90 feet, DC 26"
+							"90 feet, {@dc 26}"
 						],
 						"generic": {
 							"tag": "ability"
@@ -2586,7 +2450,7 @@
 					{
 						"name": "Terwa",
 						"entries": [
-							"Lake that deals {@damage 11d6} poison damage in a 40- foot cone (DC 29 basic Reflex save). She can't use Breath Weapon again for {@dice 1d4} rounds."
+							"Lake that deals {@damage 11d6} poison damage in a 40- foot cone ({@dc 29} basic Reflex save). She can't use Breath Weapon again for {@dice 1d4} rounds."
 						]
 					},
 					{
@@ -2602,7 +2466,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Ixamè makes two claw Strikes and one horn {@action Strike} in any order."
+							"Ixamè makes two claw {@action Strike||Strikes} and one horn {@action Strike} in any order."
 						]
 					},
 					{
@@ -2613,7 +2477,37 @@
 					}
 				]
 			},
-			"description": "Female poison-wracked young cloud dragon (Pathfinder Bestiary 2 89)"
+			"description": "Female poison-wracked young cloud dragon (Pathfinder Bestiary 2 89)",
+			"defenses": {
+				"ac": {
+					"std": 30
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 21
+					},
+					"ref": {
+						"std": 18
+					},
+					"will": {
+						"std": 20
+					}
+				},
+				"hp": [
+					{
+						"hp": 175,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"electricity",
+					"paralyzed",
+					"poison",
+					"sleep"
+				]
+			}
 		},
 		{
 			"name": "Karumzek",
@@ -2644,10 +2538,10 @@
 			],
 			"languages": {
 				"languages": [
-					"Abyssal",
-					"Common",
-					"Infernal",
-					"Undercommon"
+					"abyssal",
+					"common",
+					"infernal",
+					"undercommon"
 				]
 			},
 			"skills": {
@@ -2675,34 +2569,6 @@
 				"wis": 2,
 				"cha": 0
 			},
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 12
-				},
-				"ref": {
-					"std": 12
-				},
-				"will": {
-					"std": 8
-				}
-			},
-			"hp": [
-				{
-					"hp": 60
-				}
-			],
-			"immunities": [
-				"poison"
-			],
-			"weaknesses": [
-				{
-					"name": "good",
-					"amount": 5
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"climb": 30
@@ -2710,10 +2576,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"name": "bite",
 					"attack": 12,
 					"damage": "{@damage 2d6+4} piercing plus karumzek venom"
@@ -2721,8 +2583,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 21,
 					"entry": {
@@ -2737,7 +2598,7 @@
 								},
 								{
 									"name": "vomit swarm",
-									"note": "Advanced Player's Guide 227"
+									"source": "APG"
 								}
 							]
 						},
@@ -2772,7 +2633,7 @@
 							"transmutation"
 						],
 						"entries": [
-							"A karumzek can take the shape of a Tiny spider. This doesn't change its Speed or Strikes.",
+							"A karumzek can take the shape of a Tiny spider. This doesn't change its Speed or {@action Strike||Strikes}.",
 							{
 								"type": "affliction",
 								"name": "Karumzek Venom",
@@ -2807,7 +2668,38 @@
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 12
+					},
+					"will": {
+						"std": 8
+					}
+				},
+				"hp": [
+					{
+						"hp": 60
+					}
+				],
+				"immunities": [
+					"poison"
+				],
+				"weaknesses": [
+					{
+						"name": "good",
+						"amount": 5
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Karumzek Swarm",
@@ -2862,66 +2754,13 @@
 				"wis": 3,
 				"cha": 0
 			},
-			"ac": {
-				"std": 30
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 21
-				},
-				"ref": {
-					"std": 24
-				},
-				"will": {
-					"std": 18
-				}
-			},
-			"hp": [
-				{
-					"hp": 175
-				}
-			],
-			"immunities": [
-				"poison",
-				"precision",
-				"swarm mind"
-			],
-			"weaknesses": [
-				{
-					"name": "area damage",
-					"amount": 10
-				},
-				{
-					"name": "splash damage",
-					"amount": 10
-				},
-				{
-					"name": "good",
-					"amount": 10
-				}
-			],
-			"resistances": [
-				{
-					"name": "bludgeoning",
-					"amount": 5
-				},
-				{
-					"name": "piercing",
-					"amount": 10
-				},
-				{
-					"name": "slashing",
-					"amount": 10
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"climb": 30
 			},
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 30,
 					"entry": {
@@ -2941,7 +2780,7 @@
 								},
 								{
 									"name": "vomit swarm",
-									"note": "Advanced Player's Guide 227"
+									"source": "APG"
 								}
 							]
 						}
@@ -2965,7 +2804,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Each enemy in the karumzek swarm's space takes {@damage 2d6} piercing damage (DC 27 basic Reflex save) plus karumzek venom."
+							"Each enemy in the karumzek swarm's space takes {@damage 2d6} piercing damage ({@dc 27} basic Reflex save) plus karumzek venom."
 						]
 					},
 					{
@@ -2995,6 +2834,60 @@
 						]
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 30
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 21
+					},
+					"ref": {
+						"std": 24
+					},
+					"will": {
+						"std": 18
+					}
+				},
+				"hp": [
+					{
+						"hp": 175
+					}
+				],
+				"immunities": [
+					"poison",
+					"precision",
+					"swarm mind"
+				],
+				"weaknesses": [
+					{
+						"name": "area damage",
+						"amount": 10
+					},
+					{
+						"name": "splash damage",
+						"amount": 10
+					},
+					{
+						"name": "good",
+						"amount": 10
+					}
+				],
+				"resistances": [
+					{
+						"name": "bludgeoning",
+						"amount": 5
+					},
+					{
+						"name": "piercing",
+						"amount": 10
+					},
+					{
+						"name": "slashing",
+						"amount": 10
+					}
+				]
 			}
 		},
 		{
@@ -3013,7 +2906,7 @@
 			},
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
@@ -3053,35 +2946,12 @@
 				"religious symbol of {@deity Norgorber}; one spy carries a greater cognitive mutagen and the other carries a vial of slumber wine",
 				"but the labels on each are switched."
 			],
-			"ac": {
-				"std": 29
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 17
-				},
-				"ref": {
-					"std": 22
-				},
-				"will": {
-					"std": 19
-				}
-			},
-			"hp": [
-				{
-					"hp": 170
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"versatile S"
@@ -3092,13 +2962,9 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
-						"thrown 10 feet",
+						"thrown <10 feet>",
 						"versatile S"
 					],
 					"name": "dagger",
@@ -3109,9 +2975,9 @@
 			"abilities": {
 				"top": [
 					{
-						"name": "Ranged Feint When the",
+						"name": "Ranged Feint",
 						"entries": [
-							"Norgorberite spy successfully Feints a creature, the target is {@condition flat-footed} against the spy's ranged attacks as well as melee attacks."
+							"When the Norgorberite spy successfully {@action Feint||Feints} a creature, the target is {@condition flat-footed} against the spy's ranged attacks as well as melee attacks."
 						]
 					}
 				],
@@ -3139,7 +3005,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The Norgorberite spy Interacts to draw a weapon, then Strikes with that weapon."
+							"The Norgorberite spy Interacts to draw a weapon, then {@action Strike||Strikes} with that weapon."
 						],
 						"generic": {
 							"tag": "feat",
@@ -3160,7 +3026,28 @@
 					}
 				]
 			},
-			"description": "Human infiltrator"
+			"description": "Human infiltrator",
+			"defenses": {
+				"ac": {
+					"std": 29
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 17
+					},
+					"ref": {
+						"std": 22
+					},
+					"will": {
+						"std": 19
+					}
+				},
+				"hp": [
+					{
+						"hp": 170
+					}
+				]
+			}
 		},
 		{
 			"name": "Onyiji",
@@ -3185,8 +3072,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Orc"
+					"common",
+					"orc"
 				]
 			},
 			"skills": {
@@ -3220,35 +3107,12 @@
 			"items": [
 				"+1 striking staff"
 			],
-			"ac": {
-				"std": 26
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 18
-				},
-				"ref": {
-					"std": 14
-				},
-				"will": {
-					"std": 16
-				}
-			},
-			"hp": [
-				{
-					"hp": 140
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"two-handed d8"
@@ -3260,8 +3124,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Prepared",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"type": "Prepared",
 					"DC": 26,
 					"attack": 18,
@@ -3308,7 +3171,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -3336,7 +3198,7 @@
 							"unit": "action"
 						},
 						"frequency": {
-							"freq": 2,
+							"number": 2,
 							"unit": "day"
 						},
 						"entries": [
@@ -3351,7 +3213,28 @@
 					}
 				]
 			},
-			"description": "Female half-orc staff warrior"
+			"description": "Female half-orc staff warrior",
+			"defenses": {
+				"ac": {
+					"std": 26
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 18
+					},
+					"ref": {
+						"std": 14
+					},
+					"will": {
+						"std": 16
+					}
+				},
+				"hp": [
+					{
+						"hp": 140
+					}
+				]
+			}
 		},
 		{
 			"name": "Screaming Sulfur",
@@ -3375,7 +3258,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
@@ -3391,65 +3274,17 @@
 				"wis": 7,
 				"cha": 3
 			},
-			"ac": {
-				"std": 27
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 16
-				},
-				"ref": {
-					"std": 20
-				},
-				"will": {
-					"std": 20
-				}
-			},
-			"hp": [
-				{
-					"hp": 125,
-					"abilities": [
-						"negative healing",
-						"rejuvenation"
-					]
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease",
-				"paralyzed",
-				"poison",
-				"precision",
-				"unconscious"
-			],
-			"resistances": [
-				{
-					"name": "all damage",
-					"amount": 10,
-					"note": "except force"
-				},
-				{
-					"name": "ghost touch"
-				},
-				{
-					"name": "or positive; double resistance vs. non-magical)"
-				}
-			],
 			"speed": {
 				"fly": 40
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse",
 						"magical",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"name": "ghostly hand",
 					"attack": 21,
@@ -3463,7 +3298,10 @@
 						"entries": [
 							"A screaming sulfur becomes bound to the location where the people whose souls make up its form died.",
 							"It can stray up to 1,000 feet from this site of death, or up to 100 feet from the edges of any waterway associated with its death, whichever distance is shorter."
-						]
+						],
+						"generic": {
+							"tag": "ability"
+						}
 					}
 				],
 				"mid": [
@@ -3476,7 +3314,7 @@
 							"mental"
 						],
 						"entries": [
-							"30 feet. The screaming sulfur constantly shrieks with the pained wails of countless spirits. A living creature that enters or starts its turn in the aura must succeed at a DC 26 Will save or become {@condition frightened||frightened 1} as long as it remains in the aura ({@condition frightened||frightened 2} on a critical failure). A creature that succeeds is temporarily immune for 1 hour."
+							"30 feet. The screaming sulfur constantly shrieks with the pained wails of countless spirits. A living creature that enters or starts its turn in the aura must succeed at a {@dc 26} Will save or become {@condition frightened||frightened 1} as long as it remains in the aura ({@condition frightened||frightened 2} on a critical failure). A creature that succeeds is temporarily immune for 1 hour."
 						]
 					},
 					{
@@ -3487,7 +3325,11 @@
 						],
 						"entries": [
 							"Blessing the site where the screaming sulfur was formed and burying whatever dead remain allows the spirits within the screaming sulfur to move on to the afterlife, rendering it inert."
-						]
+						],
+						"generic": {
+							"tag": "ability",
+							"add_hash": "Ghost"
+						}
 					}
 				],
 				"bot": [
@@ -3503,11 +3345,52 @@
 							"mental"
 						],
 						"entries": [
-							"The screaming sulfur bombards all creatures within its Agonizing Cries aura with visions of death and a feeling of suffocation. Each creature takes {@damage 4d6} mental damage (DC 26 basic Will save)."
+							"The screaming sulfur bombards all creatures within its Agonizing Cries aura with visions of death and a feeling of suffocation. Each creature takes {@damage 4d6} mental damage ({@dc 26} basic Will save)."
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 16
+					},
+					"ref": {
+						"std": 20
+					},
+					"will": {
+						"std": 20
+					}
+				},
+				"hp": [
+					{
+						"hp": 125,
+						"abilities": [
+							"negative healing",
+							"rejuvenation"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyzed",
+					"poison",
+					"precision",
+					"unconscious"
+				],
+				"resistances": [
+					{
+						"name": "all damage",
+						"amount": 10,
+						"note": "except force, {@item ghost touch}, or positive; double resistance vs. non-magical"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Ssumzili",
@@ -3530,9 +3413,9 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo",
-					"Common",
-					"Sylvan"
+					"aklo",
+					"common",
+					"sylvan"
 				]
 			},
 			"skills": {
@@ -3563,37 +3446,6 @@
 				"wis": 5,
 				"cha": 3
 			},
-			"ac": {
-				"std": 33
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 20
-				},
-				"ref": {
-					"std": 25
-				},
-				"will": {
-					"std": 23
-				}
-			},
-			"hp": [
-				{
-					"hp": 201
-				}
-			],
-			"weaknesses": [
-				{
-					"name": "cold iron",
-					"amount": 10
-				}
-			],
-			"resistances": [
-				{
-					"name": "fire",
-					"amount": 10
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"abilities": [
@@ -3603,10 +3455,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse"
@@ -3618,8 +3466,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"type": "Innate",
 					"DC": 29,
 					"entry": {
@@ -3662,7 +3509,9 @@
 							"spells": [
 								{
 									"name": "transmute rock and mud",
-									"note": "Advanced Player's Guide 226; rock to mud only"
+									"notes": [
+										"rock to mud only"
+									]
 								}
 							]
 						},
@@ -3671,7 +3520,9 @@
 								"spells": [
 									{
 										"name": "endure elements",
-										"note": "cold"
+										"notes": [
+											"cold"
+										]
 									}
 								]
 							}
@@ -3704,7 +3555,7 @@
 						],
 						"entries": [
 							"10 feet.",
-							"When it rains, the ground near a ssumzili becomes slick. When raining, all terrain within 10 feet of a ssumzili is slippery, with the effects of grease (DC 29). Ssumzilis are immune to this effect."
+							"When it rains, the ground near a ssumzili becomes slick. When raining, all terrain within 10 feet of a ssumzili is slippery, with the effects of grease ({@dc 29}). Ssumzilis are immune to this effect."
 						]
 					}
 				],
@@ -3712,7 +3563,7 @@
 					{
 						"name": "Puddle Stride",
 						"entries": [
-							"A ssumzili ignores difficult terrain caused by rain, such as puddles or wet rocks."
+							"A ssumzili ignores {@quickref difficult terrain||3|terrain} caused by rain, such as puddles or wet rocks."
 						]
 					},
 					{
@@ -3731,13 +3582,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The ssumzili makes a melee {@action Strike}."
-						]
-					},
-					{
-						"name": "If the",
-						"entries": [
-							"{@action Strike} damages the target, the target must also attempt a DC 32 Fortitude save.",
+							"The ssumzili makes a melee {@action Strike}. If the {@action Strike} damages the target, the target must also attempt a {@dc 32} Fortitude save.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -3758,7 +3603,41 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 33
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 20
+					},
+					"ref": {
+						"std": 25
+					},
+					"will": {
+						"std": 23
+					}
+				},
+				"hp": [
+					{
+						"hp": 201
+					}
+				],
+				"weaknesses": [
+					{
+						"name": "cold iron",
+						"amount": 10
+					}
+				],
+				"resistances": [
+					{
+						"name": "fire",
+						"amount": 10
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Terwa Chosen",
@@ -3777,8 +3656,8 @@
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Iruxi"
+					"common",
+					"iruxi"
 				]
 			},
 			"skills": {
@@ -3813,38 +3692,15 @@
 				"leather armor",
 				"+1 striking returning mambele (Pathfinder Lost Omens Gods & Magic 120)"
 			],
-			"ac": {
-				"std": 27
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 18
-				},
-				"ref": {
-					"std": 16
-				},
-				"will": {
-					"std": 15
-				}
-			},
-			"hp": [
-				{
-					"hp": 140
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"disarm",
-						"deadly d8"
+						"deadly <d8>"
 					],
 					"name": "mambele",
 					"attack": 20,
@@ -3852,10 +3708,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse"
@@ -3866,14 +3718,10 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"disarm",
-						"deadly d8",
-						"thrown 20 feet"
+						"deadly <d8>",
+						"thrown <20 feet>"
 					],
 					"name": "mambele",
 					"attack": 18,
@@ -3896,7 +3744,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -3911,7 +3758,7 @@
 							"divine"
 						],
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"trigger": "The Terwa chosen rolls a success or a critical failure on a check",
@@ -3928,7 +3775,7 @@
 							"unit": "action"
 						},
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "round"
 						},
 						"entries": [
@@ -3947,7 +3794,7 @@
 							"fortune"
 						],
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "hour"
 						},
 						"entries": [
@@ -3955,7 +3802,29 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 18
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": [
+					{
+						"hp": 140
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Terwa Prodigy",
@@ -3974,9 +3843,9 @@
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Draconic",
-					"Iruxi"
+					"common",
+					"draconic",
+					"iruxi"
 				]
 			},
 			"skills": {
@@ -4011,35 +3880,12 @@
 				"leather armor",
 				"+1 longbow"
 			],
-			"ac": {
-				"std": 23
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 13
-				},
-				"ref": {
-					"std": 15
-				},
-				"will": {
-					"std": 15
-				}
-			},
-			"hp": [
-				{
-					"hp": 100
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse"
@@ -4050,12 +3896,8 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"deadly d10",
+						"deadly <d10>",
 						"volley"
 					],
 					"name": "longbow",
@@ -4065,8 +3907,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"type": "Innate",
 					"DC": 24,
 					"attack": 16,
@@ -4140,7 +3981,29 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 23
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 13
+					},
+					"ref": {
+						"std": 15
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": [
+					{
+						"hp": 100
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Terwa Star Reader",
@@ -4159,9 +4022,9 @@
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Draconic",
-					"Iruxi"
+					"common",
+					"draconic",
+					"iruxi"
 				]
 			},
 			"skills": {
@@ -4193,35 +4056,12 @@
 				"hide armor",
 				"staff of fire"
 			],
-			"ac": {
-				"std": 24
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 12
-				},
-				"ref": {
-					"std": 15
-				},
-				"will": {
-					"std": 18
-				}
-			},
-			"hp": [
-				{
-					"hp": 115
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse"
@@ -4233,8 +4073,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Spontaneous",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Spontaneous",
 					"DC": 25,
 					"attack": 17,
@@ -4337,7 +4176,7 @@
 							"occult"
 						],
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"trigger": "An attack or effect would reduce an ally within 30 feet to 0 Hit Points or would cause the ally to gain the {@condition dying} condition",
@@ -4363,6 +4202,27 @@
 						]
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 15
+					},
+					"will": {
+						"std": 18
+					}
+				},
+				"hp": [
+					{
+						"hp": 115
+					}
+				]
 			}
 		},
 		{
@@ -4382,11 +4242,11 @@
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Draconic",
-					"Elven",
-					"Halfling",
-					"Iruxi"
+					"common",
+					"draconic",
+					"elven",
+					"halfling",
+					"iruxi"
 				]
 			},
 			"skills": {
@@ -4427,35 +4287,12 @@
 				"studded leather armor",
 				"infiltrator thieves' tools"
 			],
-			"ac": {
-				"std": 28
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 15
-				},
-				"ref": {
-					"std": 20
-				},
-				"will": {
-					"std": 18
-				}
-			},
-			"hp": [
-				{
-					"hp": 150
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"backswing",
 						"magical",
@@ -4479,7 +4316,7 @@
 							"fortune"
 						],
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"trigger": "Thiarvo fails a skill check or a saving throw",
@@ -4504,12 +4341,33 @@
 					{
 						"name": "Slippery Halfling",
 						"entries": [
-							"Thiarvo ignores difficult terrain from trees, foliage, rubble, and undergrowth."
+							"Thiarvo ignores {@quickref difficult terrain||3|terrain} from trees, foliage, rubble, and undergrowth."
 						]
 					}
 				]
 			},
-			"description": "Male halfling treasure hunter"
+			"description": "Male halfling treasure hunter",
+			"defenses": {
+				"ac": {
+					"std": 28
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 15
+					},
+					"ref": {
+						"std": 20
+					},
+					"will": {
+						"std": 18
+					}
+				},
+				"hp": [
+					{
+						"hp": 150
+					}
+				]
+			}
 		},
 		{
 			"name": "Yonsuu",
@@ -4533,10 +4391,10 @@
 			],
 			"languages": {
 				"languages": [
-					"Amurrun",
-					"Aquan",
-					"Common",
-					"Cyclops"
+					"amurrun",
+					"aquan",
+					"common",
+					"cyclops"
 				]
 			},
 			"skills": {
@@ -4577,35 +4435,12 @@
 				"+1 resilient studded leather",
 				"+2 striking trident"
 			],
-			"ac": {
-				"std": 31
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 19
-				},
-				"ref": {
-					"std": 24
-				},
-				"will": {
-					"std": 21
-				}
-			},
-			"hp": [
-				{
-					"hp": 200
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical"
 					],
@@ -4615,10 +4450,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse",
@@ -4630,13 +4461,9 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
-						"thrown 10 feet",
+						"thrown <10 feet>",
 						"versatile S"
 					],
 					"name": "dagger",
@@ -4656,7 +4483,7 @@
 							"fortune"
 						],
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"trigger": "Yonsuu fails or critically fails a Reflex saving throw",
@@ -4680,7 +4507,28 @@
 					}
 				]
 			},
-			"description": "Male catfolk head warden (Bestiary 54)"
+			"description": "Male catfolk head warden (Bestiary 54)",
+			"defenses": {
+				"ac": {
+					"std": 31
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 19
+					},
+					"ref": {
+						"std": 24
+					},
+					"will": {
+						"std": 21
+					}
+				},
+				"hp": [
+					{
+						"hp": 200
+					}
+				]
+			}
 		}
 	]
 }

@@ -37,8 +37,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Sylvan"
+					"common",
+					"sylvan"
 				]
 			},
 			"skills": {
@@ -70,45 +70,17 @@
 				"wis": 6,
 				"cha": 9
 			},
-			"ac": {
-				"std": 41
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 26
-				},
-				"ref": {
-					"std": 34
-				},
-				"will": {
-					"std": 29
-				}
-			},
-			"hp": [
-				{
-					"hp": 310
-				}
-			],
-			"immunities": [
-				"darkness",
-				"light",
-				"shadow (see one with shadows)"
-			],
 			"speed": {
 				"walk": 40
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse",
 						"magical",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "shadow claw",
 					"attack": 33,
@@ -131,7 +103,7 @@
 						},
 						"trigger": "A creature within the alapolo's reach attempts to move away from the alapolo",
 						"entries": [
-							"The triggering creature must succeed at a DC 36 Reflex save or its movement ends before it leaves the alopolo's reach."
+							"The triggering creature must succeed at a {@dc 36} Reflex save or its movement ends before it leaves the alopolo's reach."
 						]
 					}
 				],
@@ -149,7 +121,7 @@
 							"primal"
 						],
 						"entries": [
-							"The alapolo whispers an invitation to a creature within 30 feet. The creature must attempt a DC 38 Will save.",
+							"The alapolo whispers an invitation to a creature within 30 feet. The creature must attempt a {@dc 38} Will save.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -191,7 +163,34 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 41
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 26
+					},
+					"ref": {
+						"std": 34
+					},
+					"will": {
+						"std": 29
+					}
+				},
+				"hp": [
+					{
+						"hp": 310
+					}
+				],
+				"immunities": [
+					"darkness",
+					"light",
+					"shadow (see one with shadows)"
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Alate Ant",
@@ -222,7 +221,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
@@ -244,25 +243,6 @@
 				"wis": 6,
 				"cha": 4
 			},
-			"ac": {
-				"std": 39
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 24
-				},
-				"ref": {
-					"std": 30
-				},
-				"will": {
-					"std": 28
-				}
-			},
-			"hp": [
-				{
-					"hp": 295
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"climb": 20,
@@ -271,10 +251,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"finesse"
 					],
@@ -284,10 +260,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse"
@@ -325,7 +297,7 @@
 							"mental"
 						],
 						"entries": [
-							"The alate ant sprays a cloud of pheromones in a 15-foot cone. Non-ant creatures in the cone must succeed at a DC 37 Will save or become {@condition confused} for {@dice 1d4} rounds (1 minute on a critical failure). It can't use Pheromone Spray again for {@dice 1d4} rounds."
+							"The alate ant sprays a cloud of pheromones in a 15-foot cone. Non-ant creatures in the cone must succeed at a {@dc 37} Will save or become {@condition confused} for {@dice 1d4} rounds (1 minute on a critical failure). It can't use Pheromone Spray again for {@dice 1d4} rounds."
 						]
 					},
 					{
@@ -335,7 +307,7 @@
 							"unit": "action"
 						},
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"entries": [
@@ -354,9 +326,30 @@
 							"poison"
 						],
 						"entries": [
-							"As red guard ant, but DC 37.",
+							"As red guard ant, but {@dc 37}.",
 							"While a creature is {@condition enfeebled} from this poison, it is {@condition confused} (this confusion is an emotion, {@trait enchantment}, and {@trait mental} effect)."
 						]
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 39
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 24
+					},
+					"ref": {
+						"std": 30
+					},
+					"will": {
+						"std": 28
+					}
+				},
+				"hp": [
+					{
+						"hp": 295
 					}
 				]
 			}
@@ -402,53 +395,6 @@
 				"wis": 6,
 				"cha": -4
 			},
-			"ac": {
-				"std": 41
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 31
-				},
-				"ref": {
-					"std": 33
-				},
-				"will": {
-					"std": 27
-				}
-			},
-			"hp": [
-				{
-					"hp": 260
-				}
-			],
-			"immunities": [
-				"precision",
-				"swarm mind"
-			],
-			"weaknesses": [
-				{
-					"name": "area damage",
-					"amount": 20
-				},
-				{
-					"name": "splash damage",
-					"amount": 20
-				}
-			],
-			"resistances": [
-				{
-					"name": "bludgeoning",
-					"amount": 10
-				},
-				{
-					"name": "piercing",
-					"amount": 20
-				},
-				{
-					"name": "slashing",
-					"amount": 20
-				}
-			],
 			"speed": {
 				"walk": 30,
 				"fly": 30
@@ -458,7 +404,7 @@
 					{
 						"name": "Inexorable",
 						"entries": [
-							"The apocalypse ant swarm recovers from the {@condition slowed} and {@condition stunned} conditions at the end of its turn. It's immune to penalties to its Speeds and ignores difficult terrain and greater difficult terrain."
+							"The apocalypse ant swarm recovers from the {@condition slowed} and {@condition stunned} conditions at the end of its turn. It's immune to penalties to its Speeds and ignores {@quickref difficult terrain||3|terrain} and {@quickref greater difficult terrain||3|terrain}."
 						]
 					},
 					{
@@ -469,7 +415,7 @@
 						},
 						"trigger": "A creature leaves the swarm's space",
 						"entries": [
-							"The swarm loses {@dice 2d8} HP as ants cling to the creature and continue biting, dealing {@damage 7d8} {@condition persistent damage ||persistent piercing damage}. High winds or immersion in water reduces the DC of the flat check to end this {@condition persistent damage} to 5. Any area damage dealt to the creature destroys these clinging ants."
+							"The swarm loses {@dice 2d8} HP as ants cling to the creature and continue biting, dealing {@damage 7d8} {@condition persistent damage||persistent piercing damage}. High winds or immersion in water reduces the DC of the flat check to end this {@condition persistent damage} to 5. Any area damage dealt to the creature destroys these clinging ants."
 						]
 					}
 				],
@@ -481,16 +427,64 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Each enemy in the swarm's space takes {@damage 7d8} piercing damage (DC 39 basic Fortitude save). A creature that fails its save against Swarming Bites becomes {@condition clumsy||clumsy 1} for 1 round (1 minute on a critical failure). If the creature attempts a concentrate or manipulate action while affected, it must succeed at a DC {@flatDC 5} flat check or the action is lost; roll the check after spending the action, but before {@trait any} effects are applied."
+							"Each enemy in the swarm's space takes {@damage 7d8} piercing damage ({@dc 39} basic Fortitude save). A creature that fails its save against Swarming Bites becomes {@condition clumsy||clumsy 1} for 1 round (1 minute on a critical failure). If the creature attempts a concentrate or manipulate action while affected, it must succeed at a DC {@flatDC 5} flat check or the action is lost; roll the check after spending the action, but before {@trait any} effects are applied."
 						]
 					}
 				]
 			},
-			"description": "Variant army ant swarm (Pathfinder Bestiary 2 20)"
+			"description": "Variant army ant swarm (Pathfinder Bestiary 2 20)",
+			"defenses": {
+				"ac": {
+					"std": 41
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 31
+					},
+					"ref": {
+						"std": 33
+					},
+					"will": {
+						"std": 27
+					}
+				},
+				"hp": [
+					{
+						"hp": 260
+					}
+				],
+				"immunities": [
+					"precision",
+					"swarm mind"
+				],
+				"weaknesses": [
+					{
+						"name": "area damage",
+						"amount": 20
+					},
+					{
+						"name": "splash damage",
+						"amount": 20
+					}
+				],
+				"resistances": [
+					{
+						"name": "bludgeoning",
+						"amount": 10
+					},
+					{
+						"name": "piercing",
+						"amount": 20
+					},
+					{
+						"name": "slashing",
+						"amount": 20
+					}
+				]
+			}
 		},
 		{
 			"name": "Aspect of Hunger",
-			"isNpc": false,
 			"source": "SoT6",
 			"page": 58,
 			"level": 19,
@@ -499,9 +493,6 @@
 				"n",
 				"gargantuan",
 				"beast"
-			],
-			"creatureType": [
-				"Beast"
 			],
 			"perception": {
 				"std": 25
@@ -517,7 +508,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 38
 				}
 			},
@@ -529,29 +520,6 @@
 				"wis": -1,
 				"cha": -1
 			},
-			"ac": {
-				"std": 40
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 36
-				},
-				"ref": {
-					"std": 25
-				},
-				"will": {
-					"std": 27
-				}
-			},
-			"hp": [
-				{
-					"hp": 410,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"mental effects"
-			],
 			"speed": {
 				"walk": 40,
 				"burrow": 40,
@@ -564,9 +532,9 @@
 					"name": "jaws",
 					"attack": 36,
 					"traits": [
-						"deadly 3d10",
+						"deadly <3d10>",
 						"mental",
-						"reach 20 feet"
+						"reach <20 feet>"
 					],
 					"effects": [
 						"Improved Grab"
@@ -585,7 +553,7 @@
 						"agile",
 						"mental",
 						"poison",
-						"reach 20 feet"
+						"reach <20 feet>"
 					],
 					"effects": [
 						"aspect of hunger venom"
@@ -602,9 +570,8 @@
 					"attack": 34,
 					"traits": [
 						"mental",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d10+16} bludgeoning plus {@damage 2d6} mental",
 					"types": [
 						"bludgeoning",
@@ -629,8 +596,7 @@
 					{
 						"activity": {
 							"number": 1,
-							"unit": "reaction",
-							"entry": "{@as R}"
+							"unit": "reaction"
 						},
 						"entries": [
 							"The Aspect of Hunger negates the triggering condition or effect. Effects from artifacts, deities, or a similarly powerful source can't be avoided in this way."
@@ -639,7 +605,7 @@
 						"trigger": "The Aspect of Hunger would be affected by a condition or adverse effect (such as baleful polymorph).",
 						"frequency": {
 							"unit": "day",
-							"freq": 1
+							"number": 1
 						}
 					}
 				],
@@ -655,7 +621,7 @@
 							"primal"
 						],
 						"entries": [
-							"The Aspect of Hunger breathes a blast in a 60-foot cone that deals {@damage 18d6} mental damage to all creatures in the area (DC 41 basic Reflex save). It can't use Breath Weapon again for {@dice 1d4} rounds."
+							"The Aspect of Hunger breathes a blast in a 60-foot cone that deals {@damage 18d6} mental damage to all creatures in the area ({@dc 41} basic Reflex save). It can't use Breath Weapon again for {@dice 1d4} rounds."
 						],
 						"name": "Breath Weapon"
 					},
@@ -681,7 +647,7 @@
 							},
 							{
 								"stage": 3,
-								"entry": "{@damage 2d6} poison damage and {@condition drained 2} .",
+								"entry": "{@damage 2d6} poison damage and {@condition drained 2}.",
 								"duration": "1 round"
 							}
 						]
@@ -689,8 +655,7 @@
 					{
 						"activity": {
 							"number": 1,
-							"unit": "reaction",
-							"entry": "{@as R}"
+							"unit": "reaction"
 						},
 						"trigger": "The Aspect of Hunger Grabs a creature.",
 						"entries": [
@@ -729,7 +694,30 @@
 					}
 				]
 			},
-			"hasImages": true
+			"defenses": {
+				"ac": {
+					"std": 40
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 36
+					},
+					"ref": {
+						"std": 25
+					},
+					"will": {
+						"std": 27
+					}
+				},
+				"hp": [
+					{
+						"hp": 410
+					}
+				],
+				"immunities": [
+					"mental effects"
+				]
+			}
 		},
 		{
 			"name": "Aspect of Hunger",
@@ -789,14 +777,16 @@
 				}
 			},
 			"level": 19,
-			"immunities": [
-				"mental effects"
-			],
 			"speed": {
 				"walk": 40,
 				"burrow": 40,
 				"fly": 40,
 				"swim": 20
+			},
+			"defenses": {
+				"immunities": [
+					"mental effects"
+				]
 			}
 		},
 		{
@@ -864,39 +854,6 @@
 				"wis": 7,
 				"cha": 0
 			},
-			"ac": {
-				"std": null
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 39
-				},
-				"ref": {
-					"std": 30
-				},
-				"will": {
-					"std": 33
-				}
-			},
-			"hp": [
-				{
-					"hp": 420
-				}
-			],
-			"resistances": [
-				{
-					"name": "acid",
-					"amount": 20
-				},
-				{
-					"name": "electric",
-					"amount": 20
-				},
-				{
-					"name": "fire",
-					"amount": 20
-				}
-			],
 			"speed": {
 				"walk": 60,
 				"burrow": 60,
@@ -905,13 +862,9 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"reach 20 feet"
+						"reach <20 feet>"
 					],
 					"name": "acid maw",
 					"attack": 40,
@@ -919,13 +872,9 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"reach 20 feet"
+						"reach <20 feet>"
 					],
 					"name": "flame maw",
 					"attack": 40,
@@ -933,13 +882,9 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"reach 20 feet"
+						"reach <20 feet>"
 					],
 					"name": "shock maw",
 					"attack": 40,
@@ -947,14 +892,10 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"magical",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"name": "leg",
 					"attack": 40,
@@ -962,13 +903,9 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"reach 30 feet"
+						"reach <30 feet>"
 					],
 					"name": "tail lash",
 					"attack": 40,
@@ -1016,7 +953,7 @@
 							"primal"
 						],
 						"entries": [
-							"The Aspect of Insects breathes a blast of energy from one of its three heads; each creature in the area must attempt a DC 42 basic Reflex save. The Aspect of Insects can't use Breath Weapon again for {@dice 1d4} rounds.",
+							"The Aspect of Insects breathes a blast of energy from one of its three heads; each creature in the area must attempt a {@dc 42} basic Reflex save. The Aspect of Insects can't use Breath Weapon again for {@dice 1d4} rounds.",
 							{
 								"type": "list",
 								"items": [
@@ -1040,7 +977,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The Aspect of Insects makes two Strikes with different maws against the same target. If both hit, the target takes an extra {@damage 2d12+13} slashing damage (DC 42 basic Fortitude save). On a critical failure, the creature is torn to pieces and dies. The Aspect of Insect's multiple attack penalty increases only after all the attacks are made."
+							"The Aspect of Insects makes two {@action Strike||Strikes} with different maws against the same target. If both hit, the target takes an extra {@damage 2d12+13} slashing damage ({@dc 42} basic Fortitude save). On a critical failure, the creature is torn to pieces and dies. The Aspect of Insect's multiple attack penalty increases only after all the attacks are made."
 						]
 					},
 					{
@@ -1063,7 +1000,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Huge or smaller, leg, DC 42"
+							"Huge or smaller, leg, {@dc 42}"
 						],
 						"generic": {
 							"tag": "ability"
@@ -1071,7 +1008,42 @@
 					}
 				]
 			},
-			"description": "Variant mukradi (Pathfinder Bestiary 239)"
+			"description": "Variant mukradi (Pathfinder Bestiary 239)",
+			"defenses": {
+				"ac": {
+					"std": null
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 39
+					},
+					"ref": {
+						"std": 30
+					},
+					"will": {
+						"std": 33
+					}
+				},
+				"hp": [
+					{
+						"hp": 420
+					}
+				],
+				"resistances": [
+					{
+						"name": "acid",
+						"amount": 20
+					},
+					{
+						"name": "electric",
+						"amount": 20
+					},
+					{
+						"name": "fire",
+						"amount": 20
+					}
+				]
+			}
 		},
 		{
 			"name": "Cataclysm Beetle",
@@ -1102,7 +1074,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
@@ -1124,28 +1096,6 @@
 				"wis": 6,
 				"cha": 5
 			},
-			"ac": {
-				"std": 44
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 35
-				},
-				"ref": {
-					"std": 26
-				},
-				"will": {
-					"std": 30
-				}
-			},
-			"hp": [
-				{
-					"hp": 340
-				}
-			],
-			"immunities": [
-				"acid"
-			],
 			"speed": {
 				"walk": 30,
 				"climb": 20
@@ -1153,12 +1103,8 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "mandibles",
 					"attack": 35,
@@ -1173,11 +1119,34 @@
 							"unit": "feet",
 							"number": 120
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
 					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 44
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 35
+					},
+					"ref": {
+						"std": 26
+					},
+					"will": {
+						"std": 30
+					}
+				},
+				"hp": [
+					{
+						"hp": 340
+					}
+				],
+				"immunities": [
+					"acid"
 				]
 			}
 		},
@@ -1221,32 +1190,6 @@
 				"wis": 0,
 				"cha": -5
 			},
-			"ac": {
-				"std": 28
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 33
-				},
-				"ref": {
-					"std": 16
-				},
-				"will": {
-					"std": 20
-				}
-			},
-			"hp": [
-				{
-					"hp": 550
-				}
-			],
-			"immunities": [
-				"critical hits",
-				"mental",
-				"precision",
-				"unconscious",
-				"visual"
-			],
 			"speed": {
 				"walk": 20,
 				"climb": 20,
@@ -1255,12 +1198,8 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "pseudopod",
 					"attack": 35,
@@ -1285,7 +1224,7 @@
 							"olfactory"
 						],
 						"entries": [
-							"90 feet. The chromatic ooze emanates noxious chemicals into the environment. A creature that enters the aura or starts its turn within it is {@condition sickened||sickened 1} unless it succeeds at a DC 37 Fortitude save. Creatures with the scent ability or a particularly heightened sense of smell are {@condition sickened||sickened 2}, or {@condition sickened||sickened 1} on a successful Fortitude save. Creatures in the aura can't recover from the {@condition sickened} condition."
+							"90 feet. The chromatic ooze emanates noxious chemicals into the environment. A creature that enters the aura or starts its turn within it is {@condition sickened||sickened 1} unless it succeeds at a {@dc 37} Fortitude save. Creatures with the scent ability or a particularly heightened sense of smell are {@condition sickened||sickened 2}, or {@condition sickened||sickened 1} on a successful Fortitude save. Creatures in the aura can't recover from the {@condition sickened} condition."
 						]
 					},
 					{
@@ -1305,7 +1244,7 @@
 					{
 						"name": "Chromatic Slam",
 						"entries": [
-							"The ooze's pseudopod Strikes deal an additional {@dice 2d10} damage of the same type it resists from its Chromatic Shift ability, if any."
+							"The ooze's pseudopod {@action Strike||Strikes} deal an additional {@dice 2d10} damage of the same type it resists from its Chromatic Shift ability, if any."
 						]
 					},
 					{
@@ -1315,7 +1254,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"{@damage 3d10+13} bludgeoning, DC 40"
+							"{@damage 3d10+13} bludgeoning, {@dc 40}"
 						],
 						"generic": {
 							"tag": "ability"
@@ -1328,11 +1267,40 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The chromatic ooze concentrates its mass into several pseudopods, increasing its reach to 30 feet until the end of its turn. It then Strikes at up to four different creatures within its reach. This counts as two attacks for the ooze's multiple attack penalty, but the penalty doesn't increase until after it makes all the attacks."
+							"The chromatic ooze concentrates its mass into several pseudopods, increasing its reach to 30 feet until the end of its turn. It then {@action Strike||Strikes} at up to four different creatures within its reach. This counts as two attacks for the ooze's multiple attack penalty, but the penalty doesn't increase until after it makes all the attacks."
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 28
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 33
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 20
+					}
+				},
+				"hp": [
+					{
+						"hp": 550
+					}
+				],
+				"immunities": [
+					"critical hits",
+					"mental",
+					"precision",
+					"unconscious",
+					"visual"
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Clockwork Clock Tower",
@@ -1368,69 +1336,14 @@
 				"wis": 6,
 				"cha": -5
 			},
-			"ac": {
-				"std": 48
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 36
-				},
-				"ref": {
-					"std": 33
-				},
-				"will": {
-					"std": 31
-				}
-			},
-			"hp": [
-				{
-					"hp": 325
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease",
-				"doomed",
-				"drained",
-				"fatigued",
-				"healing",
-				"mental",
-				"necromancy",
-				"nonlethal attacks",
-				"paralyzed",
-				"poison",
-				"sickened",
-				"unconscious"
-			],
-			"weaknesses": [
-				{
-					"name": "electricity",
-					"amount": 20
-				},
-				{
-					"name": "orichalcum",
-					"amount": 20
-				}
-			],
-			"resistances": [
-				{
-					"name": "physical",
-					"amount": 20,
-					"note": "except adamantine or orichalcum"
-				}
-			],
 			"speed": {
 				"walk": 40
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"reach 30 feet"
+						"reach <30 feet>"
 					],
 					"name": "fist",
 					"attack": 36,
@@ -1438,13 +1351,9 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
-						"reach 20 feet"
+						"reach <20 feet>"
 					],
 					"name": "foot",
 					"attack": 36,
@@ -1456,7 +1365,7 @@
 					{
 						"name": "Wind-Up",
 						"entries": [
-							"1 week, DC 40 (Bestiary 3 48)"
+							"1 week, {@dc 40} (Bestiary 3 48)"
 						]
 					}
 				],
@@ -1480,7 +1389,7 @@
 						],
 						"trigger": "The clockwork clock tower rolls initiative",
 						"entries": [
-							"The clock tower chimes, and all non-clockwork creatures within 300 feet who can hear it must succeed at a DC 42 Will save or be {@condition slowed||slowed 1} for 1 round ({@condition slowed||slowed 2} on a critical failure)."
+							"The clock tower chimes, and all non-clockwork creatures within 300 feet who can hear it must succeed at a {@dc 42} Will save or be {@condition slowed||slowed 1} for 1 round ({@condition slowed||slowed 2} on a critical failure)."
 						]
 					}
 				],
@@ -1503,7 +1412,7 @@
 							"transmutation"
 						],
 						"entries": [
-							"A creature struck by a clockwork clock tower's fist must make a DC 40 Will save as time flows unevenly around it.",
+							"A creature struck by a clockwork clock tower's fist must make a {@dc 40} Will save as time flows unevenly around it.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -1534,14 +1443,68 @@
 							"attack"
 						],
 						"entries": [
-							"Huge or smaller, foot, DC 42"
+							"Huge or smaller, foot, {@dc 42}"
 						],
 						"generic": {
 							"tag": "ability"
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 48
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 36
+					},
+					"ref": {
+						"std": 33
+					},
+					"will": {
+						"std": 31
+					}
+				},
+				"hp": [
+					{
+						"hp": 325
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"doomed",
+					"drained",
+					"fatigued",
+					"healing",
+					"mental",
+					"necromancy",
+					"nonlethal attacks",
+					"paralyzed",
+					"poison",
+					"sickened",
+					"unconscious"
+				],
+				"weaknesses": [
+					{
+						"name": "electricity",
+						"amount": 20
+					},
+					{
+						"name": "orichalcum",
+						"amount": 20
+					}
+				],
+				"resistances": [
+					{
+						"name": "physical",
+						"amount": 20,
+						"note": "except adamantine or orichalcum"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Crawling Slurry",
@@ -1588,34 +1551,6 @@
 				"wis": 0,
 				"cha": -5
 			},
-			"ac": {
-				"std": 30
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 28
-				},
-				"ref": {
-					"std": 31
-				},
-				"will": {
-					"std": 20
-				}
-			},
-			"hp": [
-				{
-					"hp": 300
-				}
-			],
-			"immunities": [
-				"acid",
-				"critical hits",
-				"mental",
-				"poison",
-				"precision",
-				"unconscious",
-				"visual"
-			],
 			"speed": {
 				"walk": 30,
 				"climb": 20
@@ -1623,10 +1558,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"name": "pseudopod",
 					"attack": 32,
 					"damage": "{@damage 3d10+11} bludgeoning plus {@damage 2d8} acid and Grab"
@@ -1650,7 +1581,7 @@
 						},
 						"trigger": "The crawling slurry takes bludgeoning damage from a creature it can sense within 10 feet",
 						"entries": [
-							"The crawling slurry ejects a splash of acid onto the creature, dealing acid damage equal to the bludgeoning damage dealt to the crawling slurry (DC 37 basic Reflex)."
+							"The crawling slurry ejects a splash of acid onto the creature, dealing acid damage equal to the bludgeoning damage dealt to the crawling slurry ({@dc 37} basic Reflex)."
 						]
 					}
 				],
@@ -1662,7 +1593,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"{@damage 2d10+3} bludgeoning plus {@damage 2d8} acid, DC 37"
+							"{@damage 2d10+3} bludgeoning plus {@damage 2d8} acid, {@dc 37}"
 						],
 						"generic": {
 							"tag": "ability"
@@ -1681,14 +1612,45 @@
 							"unit": "action"
 						},
 						"entries": [
-							"DC 37, {@damage 5d10} acid, {@action Escape} DC 37, Rupture 20. A crawling slurry regains 30 Hit Points if a living creature it is engulfing dies."
+							"{@dc 37}, {@damage 5d10} acid, {@action Escape} {@dc 37}, Rupture 20. A crawling slurry regains 30 Hit Points if a living creature it is engulfing dies."
 						],
 						"generic": {
 							"tag": "ability"
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 30
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 28
+					},
+					"ref": {
+						"std": 31
+					},
+					"will": {
+						"std": 20
+					}
+				},
+				"hp": [
+					{
+						"hp": 300
+					}
+				],
+				"immunities": [
+					"acid",
+					"critical hits",
+					"mental",
+					"poison",
+					"precision",
+					"unconscious",
+					"visual"
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Hivebound Arboreal",
@@ -1719,9 +1681,9 @@
 			],
 			"languages": {
 				"languages": [
-					"Arboreal",
-					"Common",
-					"Sylvan"
+					"arboreal",
+					"common",
+					"sylvan"
 				],
 				"abilities": [
 					"speak with plants"
@@ -1750,44 +1712,6 @@
 				"wis": 6,
 				"cha": 5
 			},
-			"ac": {
-				"std": 44
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 35
-				},
-				"ref": {
-					"std": 26
-				},
-				"will": {
-					"std": 33
-				}
-			},
-			"hp": [
-				{
-					"hp": 400
-				}
-			],
-			"weaknesses": [
-				{
-					"name": "axe vulnerability"
-				},
-				{
-					"name": "fire",
-					"amount": 20
-				}
-			],
-			"resistances": [
-				{
-					"name": "bludgeoning",
-					"amount": 15
-				},
-				{
-					"name": "piercing",
-					"amount": 15
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"abilities": [
@@ -1797,12 +1721,8 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"name": "branch",
 					"attack": 36,
@@ -1810,13 +1730,9 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"trip",
-						"reach 20 feet"
+						"reach <20 feet>"
 					],
 					"name": "root",
 					"attack": 36,
@@ -1824,13 +1740,9 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"brutal",
-						"range increment 120 feet"
+						"range increment <120 feet>"
 					],
 					"name": "rock",
 					"attack": 36,
@@ -1839,8 +1751,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"type": "Innate",
 					"DC": 41,
 					"attack": 33,
@@ -1907,7 +1818,7 @@
 							"primal"
 						],
 						"entries": [
-							"20 feet. The hivebound arboreal is host to a cloud of flying ants that swarm around it and gnaw at any creature within the aura. Non-arboreal creatures that enter the aura or start their turn within it take {@damage 7d8} piercing damage from the bites (DC 38 basic Fortitude save). If the hivebound arboreal fails a saving throw against an area effect, the biting ants die off, and the aura is deactivated until new ants swarm out at the end of the hivebound arboreal's next turn (or after 1 minute, if the hivebound arboreal critically fails it saving throw)."
+							"20 feet. The hivebound arboreal is host to a cloud of flying ants that swarm around it and gnaw at any creature within the aura. Non-arboreal creatures that enter the aura or start their turn within it take {@damage 7d8} piercing damage from the bites ({@dc 38} basic Fortitude save). If the hivebound arboreal fails a saving throw against an area effect, the biting ants die off, and the aura is deactivated until new ants swarm out at the end of the hivebound arboreal's next turn (or after 1 minute, if the hivebound arboreal critically fails it saving throw)."
 						]
 					}
 				],
@@ -1919,7 +1830,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"{@damage 4d6+16} bludgeoning, DC 41"
+							"{@damage 4d6+16} bludgeoning, {@dc 41}"
 						],
 						"generic": {
 							"tag": "ability"
@@ -1943,14 +1854,53 @@
 							"number": 1,
 							"unit": "action"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
 					}
 				]
 			},
-			"description": "Variant arboreal regent (Pathfinder Bestiary 25)"
+			"description": "Variant arboreal regent (Pathfinder Bestiary 25)",
+			"defenses": {
+				"ac": {
+					"std": 44
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 35
+					},
+					"ref": {
+						"std": 26
+					},
+					"will": {
+						"std": 33
+					}
+				},
+				"hp": [
+					{
+						"hp": 400
+					}
+				],
+				"weaknesses": [
+					{
+						"name": "axe vulnerability"
+					},
+					{
+						"name": "fire",
+						"amount": 20
+					}
+				],
+				"resistances": [
+					{
+						"name": "bludgeoning",
+						"amount": 15
+					},
+					{
+						"name": "piercing",
+						"amount": 15
+					}
+				]
+			}
 		},
 		{
 			"name": "Ironclad Annihilator Beetle",
@@ -1987,25 +1937,6 @@
 				"wis": 5,
 				"cha": -1
 			},
-			"ac": {
-				"std": 49
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 38
-				},
-				"ref": {
-					"std": 32
-				},
-				"will": {
-					"std": 35
-				}
-			},
-			"hp": [
-				{
-					"hp": 400
-				}
-			],
 			"speed": {
 				"walk": 30,
 				"fly": 30
@@ -2013,13 +1944,9 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"reach 20 feet"
+						"reach <20 feet>"
 					],
 					"name": "mandible",
 					"attack": 39,
@@ -2027,13 +1954,9 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"name": "foot",
 					"attack": 37,
@@ -2062,7 +1985,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"{@damage 4d6+20} bludgeoning, DC 44"
+							"{@damage 4d6+20} bludgeoning, {@dc 44}"
 						],
 						"generic": {
 							"tag": "ability"
@@ -2075,11 +1998,11 @@
 							"unit": "action"
 						},
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "round"
 						},
 						"entries": [
-							"The ironclad annihilator beetle stomps the ground. All creatures within a 30-foot emanation must succeed at a DC 44 Fortitude saving throw or fall {@condition prone} and become {@condition stunned||stunned 1} ({@condition stunned} for 1 round on a critical failure)."
+							"The ironclad annihilator beetle stomps the ground. All creatures within a 30-foot emanation must succeed at a {@dc 44} Fortitude saving throw or fall {@condition prone} and become {@condition stunned||stunned 1} ({@condition stunned} for 1 round on a critical failure)."
 						]
 					},
 					{
@@ -2091,7 +2014,7 @@
 						"requirements": "The ironclad annihilator beetle has a creature {@condition grabbed}",
 						"entries": [
 							"The ironclad annihilator injects its ovipositor under the {@condition grabbed} creature's skin.",
-							"The creature takes {@damage 4d6+20} bludgeoning damage (DC 44 basic Fortitude save). On a failed save, the beetle implants an egg, and the target creature takes {@damage 4d6} {@condition persistent damage ||persistent bleed damage} that is unusually tenacious. The DC to stop the bleeding using {@action Administer First Aid} is 40, and healing the creature to full Hit Points doesn't automatically stop the bleeding. If the target creature dies from this bleed damage, its body is destroyed and unrecoverable except with powerful magic such as miracle or wish, and an immature ironclad annihilator beetle (with statistics as a giant stag beetle; Pathfinder Bestiary 41) bursts forth."
+							"The creature takes {@damage 4d6+20} bludgeoning damage ({@dc 44} basic Fortitude save). On a failed save, the beetle implants an egg, and the target creature takes {@damage 4d6} {@condition persistent damage||persistent bleed damage} that is unusually tenacious. The DC to stop the bleeding using {@action Administer First Aid} is 40, and healing the creature to full Hit Points doesn't automatically stop the bleeding. If the target creature dies from this bleed damage, its body is destroyed and unrecoverable except with powerful magic such as miracle or wish, and an immature ironclad annihilator beetle (with statistics as a giant stag beetle; Pathfinder Bestiary 41) bursts forth."
 						]
 					},
 					{
@@ -2107,11 +2030,32 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Huge or smaller, foot, DC 44"
+							"Huge or smaller, foot, {@dc 44}"
 						],
 						"generic": {
 							"tag": "ability"
 						}
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 49
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 38
+					},
+					"ref": {
+						"std": 32
+					},
+					"will": {
+						"std": 35
+					}
+				},
+				"hp": [
+					{
+						"hp": 400
 					}
 				]
 			}
@@ -2150,66 +2094,16 @@
 				"wis": 0,
 				"cha": -5
 			},
-			"ac": {
-				"std": 40
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 31
-				},
-				"ref": {
-					"std": 25
-				},
-				"will": {
-					"std": 27
-				}
-			},
-			"hp": [
-				{
-					"hp": 255,
-					"abilities": [
-						"repair mode"
-					]
-				}
-			],
-			"immunities": [
-				"bleed",
-				"death effects",
-				"disease",
-				"doomed",
-				"drained",
-				"fatigued",
-				"healing",
-				"magic (see below)",
-				"mental",
-				"necromancy",
-				"nonlethal attacks",
-				"paralyzed",
-				"poison",
-				"sickened",
-				"unconscious"
-			],
-			"resistances": [
-				{
-					"name": "physical",
-					"amount": 15,
-					"note": "except adamantine"
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"deadly 3d12",
+						"deadly <3d12>",
 						"magical",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"name": "staff",
 					"attack": 33,
@@ -2251,7 +2145,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The golem Strides up to its Speed, pushing back each creature whose space it moves into and damaging them if they try to stop its movement. A creature can try to bar the way by attempting a DC 43 Fortitude save.",
+							"The golem Strides up to its Speed, pushing back each creature whose space it moves into and damaging them if they try to stop its movement. A creature can try to bar the way by attempting a {@dc 43} Fortitude save.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -2293,12 +2187,60 @@
 							"fire"
 						],
 						"entries": [
-							"The golem vents a 30-foot cone of fiery splinters from its internal forge. This deals {@damage 13d6} piercing damage to all creatures in the cone (DC 38 basic Reflex save). Creatures who fail the save also take {@damage 2d6} {@condition persistent damage ||persistent fire damage} ({@damage 4d6} {@condition persistent damage ||persistent fire damage} on a critical failure). The golem can't use Vent Splinters again for {@dice 1d4} rounds."
+							"The golem vents a 30-foot cone of fiery splinters from its internal forge. This deals {@damage 13d6} piercing damage to all creatures in the cone ({@dc 38} basic Reflex save). Creatures who fail the save also take {@damage 2d6} {@condition persistent damage||persistent fire damage} ({@damage 4d6} {@condition persistent damage||persistent fire damage} on a critical failure). The golem can't use Vent Splinters again for {@dice 1d4} rounds."
 						]
 					}
 				]
 			},
-			"description": "Variant adamantine golem (Pathfinder Bestiary 189)"
+			"description": "Variant adamantine golem (Pathfinder Bestiary 189)",
+			"defenses": {
+				"ac": {
+					"std": 40
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 31
+					},
+					"ref": {
+						"std": 25
+					},
+					"will": {
+						"std": 27
+					}
+				},
+				"hp": [
+					{
+						"hp": 255,
+						"abilities": [
+							"repair mode"
+						]
+					}
+				],
+				"immunities": [
+					"bleed",
+					"death effects",
+					"disease",
+					"doomed",
+					"drained",
+					"fatigued",
+					"healing",
+					"magic (see below)",
+					"mental",
+					"necromancy",
+					"nonlethal attacks",
+					"paralyzed",
+					"poison",
+					"sickened",
+					"unconscious"
+				],
+				"resistances": [
+					{
+						"name": "physical",
+						"amount": 15,
+						"note": "except adamantine"
+					}
+				]
+			}
 		},
 		{
 			"name": "Red Commander Ant",
@@ -2329,7 +2271,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
@@ -2357,25 +2299,6 @@
 				"wis": 6,
 				"cha": 9
 			},
-			"ac": {
-				"std": 40
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 29
-				},
-				"ref": {
-					"std": 28
-				},
-				"will": {
-					"std": 31
-				}
-			},
-			"hp": [
-				{
-					"hp": 315
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"climb": 20
@@ -2383,12 +2306,8 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "mandibles",
 					"attack": 33,
@@ -2396,13 +2315,9 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "stinger",
 					"attack": 33,
@@ -2417,7 +2332,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -2431,7 +2345,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"{@dice 5d10}, DC 38. Before using Constrict, the ant can choose to smash one creature that it has {@condition Grabbed} or {@condition restrained} against the ground. That creature uses the result one degree of success worse than its Fortitude save result against Constrict, but it is then no longer {@condition grabbed} or {@condition restrained} by the ant."
+							"{@dice 5d10}, {@dc 38}. Before using Constrict, the ant can choose to smash one creature that it has {@condition Grabbed} or {@condition restrained} against the ground. That creature uses the result one degree of success worse than its Fortitude save result against Constrict, but it is then no longer {@condition grabbed} or {@condition restrained} by the ant."
 						],
 						"generic": {
 							"tag": "ability"
@@ -2457,7 +2371,7 @@
 							"poison"
 						],
 						"entries": [
-							"As red guard ant, but DC 38."
+							"As red guard ant, but {@dc 38}."
 						]
 					},
 					{
@@ -2470,11 +2384,33 @@
 							"concentrate"
 						],
 						"entries": [
-							"The red commander ant designates a single creature within 60 feet that it can see as its queen's enemy. All ants within 120 feet of the red commander ant deal an additional {@damage 1d8} bleed damage when they hit the target with mandibles Strikes. These effects last for 1 minute, or until the red commander ant uses The Queen's Enemy on a different creature."
+							"The red commander ant designates a single creature within 60 feet that it can see as its queen's enemy. All ants within 120 feet of the red commander ant deal an additional {@damage 1d8} bleed damage when they hit the target with mandibles {@action Strike||Strikes}. These effects last for 1 minute, or until the red commander ant uses The Queen's Enemy on a different creature."
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 40
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 29
+					},
+					"ref": {
+						"std": 28
+					},
+					"will": {
+						"std": 31
+					}
+				},
+				"hp": [
+					{
+						"hp": 315
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Red Guard Ant",
@@ -2505,7 +2441,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
@@ -2527,25 +2463,6 @@
 				"wis": 6,
 				"cha": 4
 			},
-			"ac": {
-				"std": 37
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 29
-				},
-				"ref": {
-					"std": 23
-				},
-				"will": {
-					"std": 26
-				}
-			},
-			"hp": [
-				{
-					"hp": 275
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"climb": 20
@@ -2553,20 +2470,12 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"name": "mandibles",
 					"attack": 30,
 					"damage": "{@damage 3d10+14} slashing plus"
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile"
 					],
@@ -2594,7 +2503,6 @@
 				"bot": [
 					{
 						"name": "Grab",
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -2610,7 +2518,7 @@
 							"primal"
 						],
 						"entries": [
-							"The red guard ant sprays a 15-foot cone of acid from its abdomen that deals {@damage 10d10} acid damage (DC 34 basic Reflex save). It can't use Formic Acid Spray again for {@dice 1d4} rounds."
+							"The red guard ant sprays a 15-foot cone of acid from its abdomen that deals {@damage 10d10} acid damage ({@dc 34} basic Reflex save). It can't use Formic Acid Spray again for {@dice 1d4} rounds."
 						]
 					},
 					{
@@ -2664,7 +2572,29 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 37
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 29
+					},
+					"ref": {
+						"std": 23
+					},
+					"will": {
+						"std": 26
+					}
+				},
+				"hp": [
+					{
+						"hp": 275
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Red Queen",
@@ -2695,7 +2625,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
@@ -2729,25 +2659,6 @@
 			"items": [
 				"ornate platinum and ruby jewelry worth 12,000 gp"
 			],
-			"ac": {
-				"std": 42
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 31
-				},
-				"ref": {
-					"std": 33
-				},
-				"will": {
-					"std": 29
-				}
-			},
-			"hp": [
-				{
-					"hp": 335
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"climb": 20
@@ -2755,13 +2666,9 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "mandible",
 					"attack": 35,
@@ -2769,10 +2676,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"magical"
@@ -2809,11 +2712,11 @@
 							"visual"
 						],
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"entries": [
-							"The Red Queen Strikes a creature with a vicious display that inspires her allies. Allies who can see the"
+							"The Red Queen {@action Strike||Strikes} a creature with a vicious display that inspires her allies. Allies who can see the"
 						]
 					},
 					{
@@ -2826,8 +2729,29 @@
 						"name": "Practiced Subterfuge When the Red",
 						"entries": [
 							"Queen makes a {@skill Deception} check to {@action Feint}, she compares her result to the Will DC of each enemy within 30 feet to determine the effect against that enemy. On a critical success, the creature is {@condition flat-footed} to all melee attacks, not just melee attacks from the Red Queen, until the end of her next turn.",
-							"Red Ant Venom (poison) As red guard ant (page 72), but DC 40."
+							"Red Ant Venom (poison) As red guard ant (page 72), but {@dc 40}."
 						]
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 42
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 31
+					},
+					"ref": {
+						"std": 33
+					},
+					"will": {
+						"std": 29
+					}
+				},
+				"hp": [
+					{
+						"hp": 335
 					}
 				]
 			}
@@ -2862,9 +2786,9 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo",
-					"Common",
-					"Necril"
+					"aklo",
+					"common",
+					"necril"
 				]
 			},
 			"skills": {
@@ -2898,46 +2822,16 @@
 			"items": [
 				"+3 greater striking orichalcum greatsword"
 			],
-			"ac": {
-				"std": 42
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 27
-				},
-				"ref": {
-					"std": 35
-				},
-				"will": {
-					"std": 29
-				}
-			},
-			"hp": [
-				{
-					"hp": 330,
-					"abilities": [
-						"(negative healing)"
-					]
-				}
-			],
-			"immunities": [
-				"death effects",
-				"drained"
-			],
 			"speed": {
 				"walk": 50
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"death",
 						"magical",
-						"versatile P"
+						"versatile <P>"
 					],
 					"name": "greatsword",
 					"attack": 36,
@@ -2945,17 +2839,13 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"death",
 						"disarm",
 						"finesse",
 						"magical",
-						"reach 10 feet",
+						"reach <10 feet>",
 						"trip"
 					],
 					"name": "shadow whip",
@@ -2965,8 +2855,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Prepared",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"type": "Prepared",
 					"DC": 40,
 					"attack": 32,
@@ -3059,8 +2948,7 @@
 					}
 				},
 				{
-					"name": "Arcane Innate",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"type": "Innate",
 					"DC": 40,
 					"entry": {
@@ -3095,7 +2983,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -3115,7 +3002,7 @@
 					{
 						"name": "Huntblade Brutality",
 						"entries": [
-							"Shianshi's greatsword Strikes have the {@trait death} trait and deal an additional {@dice 2d8} damage to {@condition drained}, {@condition flat-footed}, or {@condition frightened} creatures."
+							"Shianshi's greatsword {@action Strike||Strikes} have the {@trait death} trait and deal an additional {@dice 2d8} damage to {@condition drained}, {@condition flat-footed}, or {@condition frightened} creatures."
 						]
 					},
 					{
@@ -3147,12 +3034,40 @@
 						],
 						"requirements": "Shianshi has a creature {@condition grabbed} with her shadow whip",
 						"entries": [
-							"The {@condition grabbed} creature must succeed at a DC 41 Fortitude save or become {@condition drained||drained 2} ({@condition drained||drained 3} on a critical failure). If the creature is already {@condition drained}, this increases its {@condition drained} value instead, to a maximum of {@condition drained||drained 4}."
+							"The {@condition grabbed} creature must succeed at a {@dc 41} Fortitude save or become {@condition drained||drained 2} ({@condition drained||drained 3} on a critical failure). If the creature is already {@condition drained}, this increases its {@condition drained} value instead, to a maximum of {@condition drained||drained 4}."
 						]
 					}
 				]
 			},
-			"description": "Female variant sumbreiva (Pathfinder Bestiary 3 260)"
+			"description": "Female variant sumbreiva (Pathfinder Bestiary 3 260)",
+			"defenses": {
+				"ac": {
+					"std": 42
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 27
+					},
+					"ref": {
+						"std": 35
+					},
+					"will": {
+						"std": 29
+					}
+				},
+				"hp": [
+					{
+						"hp": 330,
+						"abilities": [
+							"(negative healing)"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"drained"
+				]
+			}
 		},
 		{
 			"name": "Slana",
@@ -3183,8 +3098,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Sylvan"
+					"common",
+					"sylvan"
 				]
 			},
 			"skills": {
@@ -3212,37 +3127,6 @@
 				"wis": 7,
 				"cha": 6
 			},
-			"ac": {
-				"std": 45
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 35
-				},
-				"ref": {
-					"std": 33
-				},
-				"will": {
-					"std": 33
-				}
-			},
-			"hp": [
-				{
-					"hp": 380,
-					"abilities": [
-						"fast healing 20"
-					]
-				}
-			],
-			"immunities": [
-				"frightened"
-			],
-			"resistances": [
-				{
-					"name": "sonic",
-					"amount": 30
-				}
-			],
 			"speed": {
 				"walk": 60,
 				"climb": 30,
@@ -3254,13 +3138,9 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"reach 20 feet",
+						"reach <20 feet>",
 						"sonic"
 					],
 					"name": "jaws",
@@ -3269,14 +3149,10 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"magical",
-						"reach 20 feet",
+						"reach <20 feet>",
 						"sonic"
 					],
 					"name": "claw",
@@ -3285,13 +3161,9 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"range 120 feet",
+						"range <120 feet>",
 						"sonic"
 					],
 					"name": "thunderclap",
@@ -3301,8 +3173,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"type": "Innate",
 					"DC": 40,
 					"attack": 32,
@@ -3362,7 +3233,7 @@
 							"sonic"
 						],
 						"entries": [
-							"The slana emits a deafening roar. All creatures within a 100-foot cone take {@damage 16d8} sonic damage (DC 44 basic Reflex saving throw). On a failed save, a creature is also {@condition deafened} for 1 minute and {@condition stunned||stunned 1} (or {@condition deafened} permanently and {@condition stunned||stunned 3} on a critical failure). The slana can't use Great Roar again for {@dice 1d4} rounds."
+							"The slana emits a deafening roar. All creatures within a 100-foot cone take {@damage 16d8} sonic damage ({@dc 44} basic Reflex saving throw). On a failed save, a creature is also {@condition deafened} for 1 minute and {@condition stunned||stunned 1} (or {@condition deafened} permanently and {@condition stunned||stunned 3} on a critical failure). The slana can't use Great Roar again for {@dice 1d4} rounds."
 						]
 					},
 					{
@@ -3378,11 +3249,45 @@
 					{
 						"name": "Thunder Trap",
 						"entries": [
-							"A creature hit by the slana's thunderclap attack is {@condition immobilized} and held in place by reverberations of sound until it Escapes or Forces Open the bonds of thunder that constrain it (DC 44). The target is {@condition deafened} as long as it is {@condition immobilized} by a thunder trap."
+							"A creature hit by the slana's thunderclap attack is {@condition immobilized} and held in place by reverberations of sound until it Escapes or Forces Open the bonds of thunder that constrain it ({@dc 44}). The target is {@condition deafened} as long as it is {@condition immobilized} by a thunder trap."
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 45
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 35
+					},
+					"ref": {
+						"std": 33
+					},
+					"will": {
+						"std": 33
+					}
+				},
+				"hp": [
+					{
+						"hp": 380,
+						"abilities": [
+							"fast healing 20"
+						]
+					}
+				],
+				"immunities": [
+					"frightened"
+				],
+				"resistances": [
+					{
+						"name": "sonic",
+						"amount": 30
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Ta'apundo",
@@ -3409,8 +3314,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Sylvan"
+					"common",
+					"sylvan"
 				]
 			},
 			"skills": {
@@ -3435,41 +3340,6 @@
 				"wis": 10,
 				"cha": 6
 			},
-			"ac": {
-				"std": 45
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 30
-				},
-				"ref": {
-					"std": 35
-				},
-				"will": {
-					"std": 33
-				}
-			},
-			"hp": [
-				{
-					"hp": 440
-				}
-			],
-			"weaknesses": [
-				{
-					"name": "cold iron",
-					"amount": 20
-				},
-				{
-					"name": "fire",
-					"amount": 20
-				}
-			],
-			"resistances": [
-				{
-					"name": "wood",
-					"amount": 20
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"abilities": [
@@ -3479,15 +3349,11 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse",
 						"magical",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "branch",
 					"attack": 24,
@@ -3527,7 +3393,7 @@
 						"trigger": "a non\u2013cold iron metal object damages the ta'apundo",
 						"entries": [
 							"The ta'apundo emits a jolt of magic into the object, transforming it into wood with an unlimited duration.",
-							"A thrown weapon, ammunition, or other unattended item automatically transforms; the wielder of an attended object can resist this effect with a successful DC 41 Fortitude save. Dispel magic can end the effect. While a weapon is wood, the ta'apundo's resistance applies. Once transformed, a formerly metal item's Hardness and HP change to those of wood. This typically inflicts a \u20132 circumstance penalty to attack rolls made with metal weapons and a \u20132 circumstance penalty to AC for those wearing metal armor; the GM might determine a different penalty for a specific weapon or armor."
+							"A thrown weapon, ammunition, or other unattended item automatically transforms; the wielder of an attended object can resist this effect with a successful {@dc 41} Fortitude save. Dispel magic can end the effect. While a weapon is wood, the ta'apundo's resistance applies. Once transformed, a formerly metal item's Hardness and HP change to those of wood. This typically inflicts a \u20132 circumstance penalty to attack rolls made with metal weapons and a \u20132 circumstance penalty to AC for those wearing metal armor; the GM might determine a different penalty for a specific weapon or armor."
 						]
 					}
 				],
@@ -3539,20 +3405,58 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The ta'apundo makes four branch Strikes against different targets, increasing its reach to 20 feet for these Strikes. These attacks count toward its multiple attack penalty, but this penalty doesn't increase until after all four attacks."
+							"The ta'apundo makes four branch {@action Strike||Strikes} against different targets, increasing its reach to 20 feet for these {@action Strike||Strikes}. These attacks count toward its multiple attack penalty, but this penalty doesn't increase until after all four attacks."
 						]
 					},
 					{
 						"name": "Woodland Stride",
 						"entries": [
-							"The ta'apundo ignores difficult and greater difficult terrain from foliage."
+							"The ta'apundo ignores difficult and {@quickref greater difficult terrain||3|terrain} from foliage."
 						],
 						"generic": {
 							"tag": "feat"
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 45
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 30
+					},
+					"ref": {
+						"std": 35
+					},
+					"will": {
+						"std": 33
+					}
+				},
+				"hp": [
+					{
+						"hp": 440
+					}
+				],
+				"weaknesses": [
+					{
+						"name": "cold iron",
+						"amount": 20
+					},
+					{
+						"name": "fire",
+						"amount": 20
+					}
+				],
+				"resistances": [
+					{
+						"name": "wood",
+						"amount": 20
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Tatterthread",
@@ -3588,9 +3492,9 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Jotun",
-					"Sylvan"
+					"common",
+					"jotun",
+					"sylvan"
 				],
 				"abilities": [
 					"tongues"
@@ -3628,47 +3532,6 @@
 				"wis": 6,
 				"cha": 7
 			},
-			"ac": {
-				"std": 46
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 35
-				},
-				"ref": {
-					"std": 30
-				},
-				"will": {
-					"std": 36
-				},
-				"abilities": [
-					"+1 status to all saves vs. magic"
-				]
-			},
-			"hp": [
-				{
-					"hp": 400,
-					"abilities": [
-						"regeneration 15 (deactivated by cold iron)"
-					]
-				}
-			],
-			"immunities": [
-				"flat-footed",
-				"negative"
-			],
-			"weaknesses": [
-				{
-					"name": "cold iron",
-					"amount": 20
-				}
-			],
-			"resistances": [
-				{
-					"name": "acid",
-					"amount": 20
-				}
-			],
 			"speed": {
 				"walk": 35,
 				"fly": 35
@@ -3676,15 +3539,11 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"deadly 2d12",
+						"deadly <2d12>",
 						"magical",
-						"reach 10 feet",
-						"versatile P"
+						"reach <10 feet>",
+						"versatile <P>"
 					],
 					"name": "caustic shears",
 					"attack": 38,
@@ -3692,14 +3551,10 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"magical",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "acid stream",
 					"attack": 38,
@@ -3708,8 +3563,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 42,
 					"entry": {
@@ -3753,7 +3607,9 @@
 							"spells": [
 								{
 									"name": "shadow blast",
-									"note": "acid only"
+									"notes": [
+										"acid only"
+									]
 								},
 								{
 									"name": "shadow siphon"
@@ -3824,7 +3680,7 @@
 							"occult"
 						],
 						"entries": [
-							"When Tatterthread deals acid damage with a {@action Strike}, she regains 10 Hit Points. The target must succeed at a DC 39 Fortitude save or become {@condition doomed||doomed 1} ({@condition doomed||doomed 2} on a critical failure)."
+							"When Tatterthread deals acid damage with a {@action Strike}, she regains 10 Hit Points. The target must succeed at a {@dc 39} Fortitude save or become {@condition doomed||doomed 1} ({@condition doomed||doomed 2} on a critical failure)."
 						]
 					},
 					{
@@ -3841,11 +3697,11 @@
 							"occult"
 						],
 						"frequency": {
-							"freq": "three",
+							"number": 3,
 							"unit": "day"
 						},
 						"entries": [
-							"Tatterthread produces a scrap of shadow linked to the fate of a creature within 100 feet of her, then snips it with her caustic shears. The target takes 100 acid damage (DC 42 basic Fortitude save). If the target is reduced to 0 Hit Points from this damage, it melts into a puddle of fetid acid and dies immediately.",
+							"Tatterthread produces a scrap of shadow linked to the fate of a creature within 100 feet of her, then snips it with her caustic shears. The target takes 100 acid damage ({@dc 42} basic Fortitude save). If the target is reduced to 0 Hit Points from this damage, it melts into a puddle of fetid acid and dies immediately.",
 							"If the target failed the saving throw, it loses any acid resistance it has for 1 minute (1 day on a critical failure). A creature slain by Shadow Snip can't be restored to life except by miracle, wish, or similarly powerful magic, or by divine intervention.",
 							"Regardless of the outcome of its save, a creature targeted by Shadow Snip becomes temporarily immune for 24 hours. The norn can't use Shadow Snip again for {@dice 1d4} rounds."
 						]
@@ -3867,7 +3723,51 @@
 					}
 				]
 			},
-			"description": "Variant norn (Pathfinder Bestiary 2 184)"
+			"description": "Variant norn (Pathfinder Bestiary 2 184)",
+			"defenses": {
+				"ac": {
+					"std": 46
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 35
+					},
+					"ref": {
+						"std": 30
+					},
+					"will": {
+						"std": 36
+					},
+					"abilities": [
+						"+1 status to all saves vs. magic"
+					]
+				},
+				"hp": [
+					{
+						"hp": 400,
+						"abilities": [
+							"regeneration 15 (deactivated by cold iron)"
+						]
+					}
+				],
+				"immunities": [
+					"flat-footed",
+					"negative"
+				],
+				"weaknesses": [
+					{
+						"name": "cold iron",
+						"amount": 20
+					}
+				],
+				"resistances": [
+					{
+						"name": "acid",
+						"amount": 20
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Thorn Guardian",
@@ -3902,54 +3802,12 @@
 				"wis": 5,
 				"cha": 2
 			},
-			"ac": {
-				"std": 39
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 27
-				},
-				"ref": {
-					"std": 30
-				},
-				"will": {
-					"std": 35
-				}
-			},
-			"hp": [
-				{
-					"hp": 330
-				}
-			],
-			"immunities": [
-				"critical hits",
-				"death effects",
-				"disease",
-				"doomed",
-				"drained",
-				"fatigued",
-				"grabbed",
-				"healing",
-				"mental",
-				"necromancy",
-				"nonlethal attacks",
-				"paralyzed",
-				"poison",
-				"precision",
-				"prone",
-				"sickened",
-				"unconscious"
-			],
 			"speed": {
 				"fly": 20
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"name": "briar",
 					"attack": 30,
 					"damage": "{@dice 3d12+12}"
@@ -3969,7 +3827,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -3982,7 +3839,7 @@
 						},
 						"trigger": "A creature within the thorn guardian's reach attacks the guardian's ward",
 						"entries": [
-							"The thorn guardian makes a briar {@action Strike} against the triggering creature. If it hits, it deals an additional {@damage 2d6} {@condition persistent damage ||persistent bleed}."
+							"The thorn guardian makes a briar {@action Strike} against the triggering creature. If it hits, it deals an additional {@damage 2d6} {@condition persistent damage||persistent bleed}."
 						]
 					}
 				],
@@ -4021,7 +3878,47 @@
 					}
 				]
 			},
-			"description": "Variant tattoo guardian (Pathfinder Bestiary 3 262)"
+			"description": "Variant tattoo guardian (Pathfinder Bestiary 3 262)",
+			"defenses": {
+				"ac": {
+					"std": 39
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 27
+					},
+					"ref": {
+						"std": 30
+					},
+					"will": {
+						"std": 35
+					}
+				},
+				"hp": [
+					{
+						"hp": 330
+					}
+				],
+				"immunities": [
+					"critical hits",
+					"death effects",
+					"disease",
+					"doomed",
+					"drained",
+					"fatigued",
+					"grabbed",
+					"healing",
+					"mental",
+					"necromancy",
+					"nonlethal attacks",
+					"paralyzed",
+					"poison",
+					"precision",
+					"prone",
+					"sickened",
+					"unconscious"
+				]
+			}
 		},
 		{
 			"name": "Unshadowed Anchor Root",
@@ -4053,12 +3950,12 @@
 			],
 			"languages": {
 				"languages": [
-					"Amurrun",
-					"Common",
-					"Gnoll",
-					"Iruxi",
-					"Necril",
-					"Sylvan"
+					"amurrun",
+					"common",
+					"gnoll",
+					"iruxi",
+					"necril",
+					"sylvan"
 				]
 			},
 			"skills": {
@@ -4092,41 +3989,12 @@
 				"wis": 5,
 				"cha": -1
 			},
-			"ac": {
-				"std": 39
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 30
-				},
-				"ref": {
-					"std": 27
-				},
-				"will": {
-					"std": 33
-				}
-			},
-			"hp": [
-				{
-					"hp": 270
-				}
-			],
-			"resistances": [
-				{
-					"name": "acid",
-					"amount": 20
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"name": "bite",
 					"attack": 28,
 					"damage": "{@damage 3d6+5} piercing"
@@ -4134,8 +4002,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Prepared",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"type": "Prepared",
 					"DC": 40,
 					"attack": 32,
@@ -4280,8 +4147,7 @@
 					}
 				},
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 40,
 					"attack": 32,
@@ -4298,7 +4164,9 @@
 							"spells": [
 								{
 									"name": "animal form",
-									"note": "canine form only"
+									"notes": [
+										"canine form only"
+									]
 								}
 							]
 						},
@@ -4306,8 +4174,10 @@
 							"spells": [
 								{
 									"name": "shadow blast",
-									"note": "acid only, ×2",
-									"amount": 2
+									"amount": 2,
+									"notes": [
+										"acid only"
+									]
 								},
 								{
 									"name": "shadow siphon",
@@ -4324,15 +4194,13 @@
 						"name": "Shadow's Displeasure As Unshadowed Okoro",
 						"traits": [
 							"page 18"
-						],
-						"entries": []
+						]
 					},
 					{
 						"name": "Vesicated Shadow As Unshadowed Okoro",
 						"traits": [
 							"page 18"
-						],
-						"entries": []
+						]
 					}
 				],
 				"bot": [
@@ -4356,8 +4224,34 @@
 						"name": "Unshadowed Okoro",
 						"traits": [
 							"page 19"
-						],
-						"entries": []
+						]
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 39
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 30
+					},
+					"ref": {
+						"std": 27
+					},
+					"will": {
+						"std": 33
+					}
+				},
+				"hp": [
+					{
+						"hp": 270
+					}
+				],
+				"resistances": [
+					{
+						"name": "acid",
+						"amount": 20
 					}
 				]
 			}
@@ -4384,8 +4278,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Dwarven"
+					"common",
+					"dwarven"
 				]
 			},
 			"skills": {
@@ -4428,44 +4322,15 @@
 			"items": [
 				"+3 greater striking mambele (Pathfinder Lost Omens Gods & Magic 120)"
 			],
-			"ac": {
-				"std": 41
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 33
-				},
-				"ref": {
-					"std": 30
-				},
-				"will": {
-					"std": 27
-				}
-			},
-			"hp": [
-				{
-					"hp": 330
-				}
-			],
-			"resistances": [
-				{
-					"name": "acid",
-					"amount": 20
-				}
-			],
 			"speed": {
 				"walk": 20
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"disarm",
-						"deadly d8",
+						"deadly <d8>",
 						"magical"
 					],
 					"name": "mambele",
@@ -4474,15 +4339,11 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"disarm",
-						"deadly d8",
+						"deadly <d8>",
 						"magical",
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
 					"name": "mambele",
 					"attack": 33,
@@ -4491,8 +4352,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Prepared",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"type": "Prepared",
 					"DC": 37,
 					"attack": 29,
@@ -4640,8 +4500,7 @@
 					}
 				},
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 40,
 					"attack": 32,
@@ -4650,8 +4509,10 @@
 							"spells": [
 								{
 									"name": "shadow blast",
-									"note": "acid only, ×2",
-									"amount": 2
+									"amount": 2,
+									"notes": [
+										"acid only"
+									]
 								},
 								{
 									"name": "shadow siphon",
@@ -4668,15 +4529,13 @@
 						"name": "Shadow's Displeasure As Unshadowed Okoro",
 						"traits": [
 							"page 18"
-						],
-						"entries": []
+						]
 					},
 					{
 						"name": "Vesicated Shadow As Unshadowed Okoro",
 						"traits": [
 							"page 18"
-						],
-						"entries": []
+						]
 					}
 				],
 				"bot": [
@@ -4700,8 +4559,7 @@
 						"name": "Unshadowed Okoro",
 						"traits": [
 							"page 19"
-						],
-						"entries": []
+						]
 					},
 					{
 						"name": "Wind Step",
@@ -4716,7 +4574,7 @@
 							"transmutation"
 						],
 						"entries": [
-							"Haibram draws air around him to aid his movement. He Strides up to his Speed, gaining the effects of air walk and ignoring difficult terrain while moving. He can increase the number of actions to 3 to {@action Stride} up to three times his Speed instead. Haibram begins to fall immediately after using Wind {@action Step} but treats the fall as 60 feet shorter thanks to the supporting winds."
+							"Haibram draws air around him to aid his movement. He Strides up to his Speed, gaining the effects of air walk and ignoring {@quickref difficult terrain||3|terrain} while moving. He can increase the number of actions to 3 to {@action Stride} up to three times his Speed instead. Haibram begins to fall immediately after using Wind {@action Step} but treats the fall as 60 feet shorter thanks to the supporting winds."
 						]
 					},
 					{
@@ -4731,8 +4589,35 @@
 							"evocation"
 						],
 						"entries": [
-							"Haibram imbues a weapon he's holding with the power of the wind until the start of his next turn. The wind's power allows Haibram to swing and hurl the weapon with great force, causing the weapon to deal an additional {@dice 2d10} damage. If the weapon does not have the {@trait thrown} trait, it also gains the thrown 10 feet trait during this attack."
+							"Haibram imbues a weapon he's holding with the power of the wind until the start of his next turn. The wind's power allows Haibram to swing and hurl the weapon with great force, causing the weapon to deal an additional {@dice 2d10} damage. If the weapon does not have the {@trait thrown} trait, it also gains the thrown <10 feet> trait during this attack."
 						]
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 41
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 33
+					},
+					"ref": {
+						"std": 30
+					},
+					"will": {
+						"std": 27
+					}
+				},
+				"hp": [
+					{
+						"hp": 330
+					}
+				],
+				"resistances": [
+					{
+						"name": "acid",
+						"amount": 20
 					}
 				]
 			}
@@ -4754,8 +4639,8 @@
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Draconic,"
+					"common",
+					"draconic,"
 				]
 			},
 			"skills": {
@@ -4795,43 +4680,14 @@
 			"items": [
 				"+3 major striking major staff of nature's vengeance (Advanced Player's Guide 263)"
 			],
-			"ac": {
-				"std": 40
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 32
-				},
-				"ref": {
-					"std": 29
-				},
-				"will": {
-					"std": 35
-				}
-			},
-			"hp": [
-				{
-					"hp": 290
-				}
-			],
-			"resistances": [
-				{
-					"name": "acid",
-					"amount": 20
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"two-hand d8"
+						"two-hand <d8>"
 					],
 					"name": "staff",
 					"attack": 30,
@@ -4840,8 +4696,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Prepared",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"type": "Prepared",
 					"DC": 41,
 					"attack": 33,
@@ -4997,8 +4852,7 @@
 					}
 				},
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 41,
 					"attack": 33,
@@ -5007,8 +4861,10 @@
 							"spells": [
 								{
 									"name": "shadow blast",
-									"note": "acid only, ×2",
-									"amount": 2
+									"amount": 2,
+									"notes": [
+										"acid only"
+									]
 								},
 								{
 									"name": "shadow siphon",
@@ -5022,8 +4878,7 @@
 			"abilities": {
 				"top": [
 					{
-						"name": "Gnoll, Iruxi, Necril, Orc, Sylvan",
-						"entries": []
+						"name": "Gnoll, Iruxi, Necril, Orc, Sylvan"
 					}
 				],
 				"mid": [
@@ -5031,15 +4886,13 @@
 						"name": "Shadow's Displeasure As Unshadowed Okoro",
 						"traits": [
 							"page 18"
-						],
-						"entries": []
+						]
 					},
 					{
 						"name": "Vesicated Shadow As Unshadowed Okoro",
 						"traits": [
 							"page 18"
-						],
-						"entries": []
+						]
 					}
 				],
 				"bot": [
@@ -5063,12 +4916,39 @@
 						"name": "Unshadowed Okoro",
 						"traits": [
 							"page 18"
-						],
-						"entries": []
+						]
 					}
 				]
 			},
-			"description": "Female human naturalist"
+			"description": "Female human naturalist",
+			"defenses": {
+				"ac": {
+					"std": 40
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 32
+					},
+					"ref": {
+						"std": 29
+					},
+					"will": {
+						"std": 35
+					}
+				},
+				"hp": [
+					{
+						"hp": 290
+					}
+				],
+				"resistances": [
+					{
+						"name": "acid",
+						"amount": 20
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Unshadowed Mariama",
@@ -5087,10 +4967,10 @@
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Dwarven",
-					"Gnoll",
-					"Sylvan"
+					"common",
+					"dwarven",
+					"gnoll",
+					"sylvan"
 				]
 			},
 			"skills": {
@@ -5121,41 +5001,12 @@
 				"wis": 4,
 				"cha": 3
 			},
-			"ac": {
-				"std": 39
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 30
-				},
-				"ref": {
-					"std": 27
-				},
-				"will": {
-					"std": 33
-				}
-			},
-			"hp": [
-				{
-					"hp": 270
-				}
-			],
-			"resistances": [
-				{
-					"name": "acid",
-					"amount": 20
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse",
@@ -5168,8 +5019,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Prepared",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Prepared",
 					"DC": 40,
 					"attack": 32,
@@ -5314,8 +5164,7 @@
 					}
 				},
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 40,
 					"attack": 32,
@@ -5324,8 +5173,10 @@
 							"spells": [
 								{
 									"name": "shadow blast",
-									"note": "acid only, ×2",
-									"amount": 2
+									"amount": 2,
+									"notes": [
+										"acid only"
+									]
 								},
 								{
 									"name": "shadow siphon",
@@ -5338,7 +5189,6 @@
 				{
 					"name": "Witch Hexes",
 					"type": "Focus",
-					"note": "Pathfinder Advanced Player's Guide 237",
 					"fp": 3,
 					"DC": 40,
 					"entry": {
@@ -5346,23 +5196,28 @@
 							"level": 9,
 							"spells": [
 								{
-									"name": "nudge fate"
+									"name": "nudge fate",
+									"source": "APG"
 								}
 							]
 						},
 						"9": {
 							"spells": [
 								{
-									"name": "blood ward"
+									"name": "blood ward",
+									"source": "APG"
 								},
 								{
-									"name": "cackle"
+									"name": "cackle",
+									"source": "APG"
 								},
 								{
-									"name": "curse of death"
+									"name": "curse of death",
+									"source": "APG"
 								},
 								{
-									"name": "malicious shadow"
+									"name": "malicious shadow",
+									"source": "APG"
 								}
 							]
 						}
@@ -5375,15 +5230,13 @@
 						"name": "Shadow's Displeasure As Unshadowed Okoro",
 						"traits": [
 							"page 18"
-						],
-						"entries": []
+						]
 					},
 					{
 						"name": "Vesicated Shadow As Unshadowed Okoro",
 						"traits": [
 							"page 18"
-						],
-						"entries": []
+						]
 					},
 					{
 						"name": "Weird Astrology",
@@ -5405,11 +5258,11 @@
 							"occult"
 						],
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"entries": [
-							"Mariama ties her fate with that of another creature within 30 feet. The creature must attempt a DC 40 Will save. Regardless of the result of its save, the creature is temporarily immune for 1 day.",
+							"Mariama ties her fate with that of another creature within 30 feet. The creature must attempt a {@dc 40} Will save. Regardless of the result of its save, the creature is temporarily immune for 1 day.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -5417,13 +5270,13 @@
 										"The creature is unaffected."
 									],
 									"Success": [
-										"The two fates are bound. Whenever Mariama takes damage, the creature takes damage of the same type equal to half the damage Mariama took (DC 37 basic Fortitude save). Immunities, resistances, and weaknesses still apply as normal. The creature can attempt to sever the bond by spending an action, which has the {@trait concentrate} trait, to attempt another DC 40 Will save. On a success, the bond is severed, and the effect ends. The bond also ends when Mariama falls {@condition unconscious}, or if she actively ends the effect herself as a free action."
+										"The two fates are bound. Whenever Mariama takes damage, the creature takes damage of the same type equal to half the damage Mariama took ({@dc 37} basic Fortitude save). Immunities, resistances, and weaknesses still apply as normal. The creature can attempt to sever the bond by spending an action, which has the {@trait concentrate} trait, to attempt another {@dc 40} Will save. On a success, the bond is severed, and the effect ends. The bond also ends when Mariama falls {@condition unconscious}, or if she actively ends the effect herself as a free action."
 									],
 									"Failure": [
 										"As success, but the creature takes damage equal to the full amount Mariama took. Severing the bond requires a 2-action activity, which has the {@trait concentrate} trait."
 									],
 									"Critical Failure": [
-										"As failure, but the basic Fortitude save is DC 40. Severing the bond requires a 3-action activity, which has the {@trait concentrate} trait."
+										"As failure, but the basic Fortitude save is {@dc 40}. Severing the bond requires a 3-action activity, which has the {@trait concentrate} trait."
 									]
 								}
 							}
@@ -5449,8 +5302,34 @@
 						"name": "Unshadowed Okoro",
 						"traits": [
 							"page 19"
-						],
-						"entries": []
+						]
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 39
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 30
+					},
+					"ref": {
+						"std": 27
+					},
+					"will": {
+						"std": 33
+					}
+				},
+				"hp": [
+					{
+						"hp": 270
+					}
+				],
+				"resistances": [
+					{
+						"name": "acid",
+						"amount": 20
 					}
 				]
 			}
@@ -5472,9 +5351,9 @@
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Draconic",
-					"Elven,"
+					"common",
+					"draconic",
+					"elven,"
 				]
 			},
 			"skills": {
@@ -5514,41 +5393,12 @@
 			"items": [
 				"+3 greater striking composite shortbow (30 arrows)"
 			],
-			"ac": {
-				"std": 39
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 30
-				},
-				"ref": {
-					"std": 27
-				},
-				"will": {
-					"std": 33
-				}
-			},
-			"hp": [
-				{
-					"hp": 270
-				}
-			],
-			"resistances": [
-				{
-					"name": "acid",
-					"amount": 20
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse",
@@ -5561,16 +5411,12 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"deadly 2d10",
+						"deadly <2d10>",
 						"magical",
 						"propulsive",
-						"range increment 60 feet",
-						"reload 0"
+						"range increment <60 feet>",
+						"reload <0>"
 					],
 					"name": "composite shortbow",
 					"attack": 28,
@@ -5579,8 +5425,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Spontaneous",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Spontaneous",
 					"DC": 40,
 					"attack": 32,
@@ -5734,8 +5579,7 @@
 					}
 				},
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 40,
 					"attack": 32,
@@ -5744,8 +5588,10 @@
 							"spells": [
 								{
 									"name": "shadow blast",
-									"note": "acid only, ×2",
-									"amount": 2
+									"amount": 2,
+									"notes": [
+										"acid only"
+									]
 								},
 								{
 									"name": "shadow siphon",
@@ -5759,8 +5605,7 @@
 			"abilities": {
 				"top": [
 					{
-						"name": "Terran",
-						"entries": []
+						"name": "Terran"
 					}
 				],
 				"mid": [
@@ -5825,7 +5670,7 @@
 							"shadow"
 						],
 						"entries": [
-							"Okoro can create immense blisters on a creature's shadow, which immediately burst, dealing {@damage 20d6} acid damage. He targets a creature within 60 feet that is casting a shadow, which must attempt a DC 37 Will save.",
+							"Okoro can create immense blisters on a creature's shadow, which immediately burst, dealing {@damage 20d6} acid damage. He targets a creature within 60 feet that is casting a shadow, which must attempt a {@dc 37} Will save.",
 							"Okoro can't use Rupture Shadow again for {@dice 1d4} rounds.",
 							{
 								"type": "successDegree",
@@ -5834,17 +5679,44 @@
 										"The target is unaffected and becomes temporarily immune for 1 day."
 									],
 									"Success": [
-										"The target takes half damage. The bursting shadow deals 5 acid splash damage to all creatures within 5 feet of the target."
+										"The target takes half damage. The bursting shadow deals 5 acid {@trait splash} damage to all creatures within 5 feet of the target."
 									],
 									"Failure": [
-										"The target takes full damage, and the bursting shadow deals 10 acid splash damage."
+										"The target takes full damage, and the bursting shadow deals 10 acid {@trait splash} damage."
 									],
 									"Critical Failure": [
-										"The target takes double damage, the bursting shadow deals 20 acid splash damage, and the target also takes {@damage 4d6} {@condition persistent damage ||persistent acid damage}."
+										"The target takes double damage, the bursting shadow deals 20 acid {@trait splash} damage, and the target also takes {@damage 4d6} {@condition persistent damage||persistent acid damage}."
 									]
 								}
 							}
 						]
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 39
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 30
+					},
+					"ref": {
+						"std": 27
+					},
+					"will": {
+						"std": 33
+					}
+				},
+				"hp": [
+					{
+						"hp": 270
+					}
+				],
+				"resistances": [
+					{
+						"name": "acid",
+						"amount": 20
 					}
 				]
 			}
@@ -5881,7 +5753,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				],
 				"abilities": [
 					"insect empathy",
@@ -5910,31 +5782,6 @@
 				"wis": 6,
 				"cha": 4
 			},
-			"ac": {
-				"std": 39
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 28
-				},
-				"ref": {
-					"std": 30
-				},
-				"will": {
-					"std": 25
-				}
-			},
-			"hp": [
-				{
-					"hp": 305
-				}
-			],
-			"weaknesses": [
-				{
-					"name": "silver",
-					"amount": 15
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"fly": 60
@@ -5942,20 +5789,12 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"name": "mandibles",
 					"attack": 29,
 					"damage": "{@damage 3d10+14} slashing plus curse of the wereant"
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse"
@@ -6016,7 +5855,7 @@
 							"transmutation"
 						],
 						"entries": [
-							"The wereant changes into their humanoid, hybrid, or animal shape. Each shape has a specific, persistent appearance. A true wereant's natural form is their hybrid shape. In humanoid shape, they use their original humanoid size, lose their jaws and claw Strikes, and gain a melee fist {@action Strike} that deals bludgeoning damage equal to the slashing damage dealt by their mandibles. In animal shape, they take the form of a Medium giant ant, gain a climb Speed of 20 feet, gain Grab on their mandibles {@action Strike}, and lose their weapon Strikes."
+							"The wereant changes into their humanoid, hybrid, or animal shape. Each shape has a specific, persistent appearance. A true wereant's natural form is their hybrid shape. In humanoid shape, they use their original humanoid size, lose their jaws and claw {@action Strike||Strikes}, and gain a melee fist {@action Strike} that deals bludgeoning damage equal to the slashing damage dealt by their mandibles. In animal shape, they take the form of a Medium giant ant, gain a climb Speed of 20 feet, gain Grab on their mandibles {@action Strike}, and lose their weapon {@action Strike||Strikes}."
 						],
 						"generic": {
 							"tag": "ability"
@@ -6046,11 +5885,11 @@
 							"unit": "action"
 						},
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "round"
 						},
 						"entries": [
-							"The wereant disciple Flies and makes two Strikes against different targets at any point during that movement. These Strikes deal an additional {@damage 2d6} precision damage if the disciple is above the target. If the wereant began this action {@condition hidden}, they remain {@condition hidden} until after this ability's Strikes. Both attacks count toward the disciple's multiple attack penalty, but the penalty doesn't increase until after both Strikes."
+							"The wereant disciple Flies and makes two {@action Strike||Strikes} against different targets at any point during that movement. These {@action Strike||Strikes} deal an additional {@damage 2d6} precision damage if the disciple is above the target. If the wereant began this action {@condition hidden}, they remain {@condition hidden} until after this ability's {@action Strike||Strikes}. Both attacks count toward the disciple's multiple attack penalty, but the penalty doesn't increase until after both {@action Strike||Strikes}."
 						]
 					},
 					{
@@ -6070,11 +5909,39 @@
 					{
 						"name": "Staggering Blow",
 						"entries": [
-							"A creature damaged by the wereant disciple's carapace fist {@action Strike} must succeed at a DC 35 Fortitude save or become {@condition stunned||stunned 1} ({@condition stunned||stunned 2} on a critical failure). If the {@action Strike} is a critical hit, a creature that fails the save is also {@condition paralyzed} for 1 round."
+							"A creature damaged by the wereant disciple's carapace fist {@action Strike} must succeed at a {@dc 35} Fortitude save or become {@condition stunned||stunned 1} ({@condition stunned||stunned 2} on a critical failure). If the {@action Strike} is a critical hit, a creature that fails the save is also {@condition paralyzed} for 1 round."
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 39
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 28
+					},
+					"ref": {
+						"std": 30
+					},
+					"will": {
+						"std": 25
+					}
+				},
+				"hp": [
+					{
+						"hp": 305
+					}
+				],
+				"weaknesses": [
+					{
+						"name": "silver",
+						"amount": 15
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Wereant Poisoner",
@@ -6108,7 +5975,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				],
 				"abilities": [
 					"insect empathy",
@@ -6149,51 +6016,18 @@
 			"items": [
 				"+2 greater striking kukri (2)"
 			],
-			"ac": {
-				"std": 40
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 27
-				},
-				"ref": {
-					"std": 32
-				},
-				"will": {
-					"std": 29
-				}
-			},
-			"hp": [
-				{
-					"hp": 350
-				}
-			],
-			"weaknesses": [
-				{
-					"name": "silver",
-					"amount": 15
-				}
-			],
 			"speed": {
 				"walk": 40
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"name": "mandibles",
 					"attack": 31,
-					"damage": "{@damage 3d10+12} slashing plus {@damage 2d6} {@condition persistent damage ||persistent poison} and curse of the wereant"
+					"damage": "{@damage 3d10+12} slashing plus {@damage 2d6} {@condition persistent damage||persistent poison} and curse of the wereant"
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse",
@@ -6202,7 +6036,7 @@
 					],
 					"name": "kukri",
 					"attack": 33,
-					"damage": "{@damage 3d6+12} slashing plus {@damage 2d6} {@condition persistent damage ||persistent poison}"
+					"damage": "{@damage 3d6+12} slashing plus {@damage 2d6} {@condition persistent damage||persistent poison}"
 				}
 			],
 			"abilities": {
@@ -6274,7 +6108,7 @@
 					{
 						"name": "Envenomed Weapons",
 						"entries": [
-							"Weapons the wereant poisoner holds deal an additional {@damage 2d6} {@condition persistent damage ||persistent poison damage} as poison seeps from the wereant's hands onto the weapon. Weapons cease to deal this {@condition persistent damage ||persistent poison damage} once the wereant lets them go. The kukri Strikes above include this {@condition persistent damage ||persistent poison damage}."
+							"Weapons the wereant poisoner holds deal an additional {@damage 2d6} {@condition persistent damage||persistent poison damage} as poison seeps from the wereant's hands onto the weapon. Weapons cease to deal this {@condition persistent damage||persistent poison damage} once the wereant lets them go. The kukri {@action Strike||Strikes} above include this {@condition persistent damage||persistent poison damage}."
 						]
 					},
 					{
@@ -6298,17 +6132,45 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The wereant poisoner makes two kukri Strikes and a mandibles {@action Strike} in any order."
+							"The wereant poisoner makes two kukri {@action Strike||Strikes} and a mandibles {@action Strike} in any order."
 						]
 					},
 					{
 						"name": "Vitriolic Strikes",
 						"entries": [
-							"If the wereant critically hits a creature with a melee {@action Strike}, that creature can't recover from {@condition persistent damage ||persistent poison damage} for 1 round."
+							"If the wereant critically hits a creature with a melee {@action Strike}, that creature can't recover from {@condition persistent damage||persistent poison damage} for 1 round."
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 40
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 27
+					},
+					"ref": {
+						"std": 32
+					},
+					"will": {
+						"std": 29
+					}
+				},
+				"hp": [
+					{
+						"hp": 350
+					}
+				],
+				"weaknesses": [
+					{
+						"name": "silver",
+						"amount": 15
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Wereant Sentinel",
@@ -6342,7 +6204,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				],
 				"abilities": [
 					"insect empathy",
@@ -6374,52 +6236,18 @@
 				"HP 136",
 				"BT 68)"
 			],
-			"ac": {
-				"std": 43,
-				"with shield raised);": 5
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 35
-				},
-				"ref": {
-					"std": 29
-				},
-				"will": {
-					"std": 32
-				}
-			},
-			"hp": [
-				{
-					"hp": 400
-				}
-			],
-			"weaknesses": [
-				{
-					"name": "silver",
-					"amount": 20
-				}
-			],
 			"speed": {
 				"walk": 40
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"name": "mandibles",
 					"attack": 36,
 					"damage": "{@damage 3d10+20} slashing plus Knockdown and curse of the wereant"
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
 						"trip"
@@ -6513,7 +6341,7 @@
 							"unit": "action"
 						},
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "round"
 						},
 						"entries": [
@@ -6547,8 +6375,36 @@
 					{
 						"name": "Shoved or",
 						"entries": [
-							"Tripped, and its melee Strikes deal an additional {@damage 2d8} mental damage. These effects end when it moves from its square using anything other than Hasty Reposition."
+							"Tripped, and its melee {@action Strike||Strikes} deal an additional {@damage 2d8} mental damage. These effects end when it moves from its square using anything other than Hasty Reposition."
 						]
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 43,
+					"with shield raised);": 5
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 35
+					},
+					"ref": {
+						"std": 29
+					},
+					"will": {
+						"std": 32
+					}
+				},
+				"hp": [
+					{
+						"hp": 400
+					}
+				],
+				"weaknesses": [
+					{
+						"name": "silver",
+						"amount": 20
 					}
 				]
 			}

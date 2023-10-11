@@ -10,12 +10,12 @@
 				"You're trained in the {@skill Medicine} skill and the {@skill Lore||Herbalism Lore} skill. You gain the {@feat Inoculation|APG} skill feat (Pathfinder Advanced Player's Guide 207)."
 			],
 			"boosts": [
-				"Constitution",
-				"Wisdom",
-				"Free"
+				"constitution",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Medicine"
+				"medicine"
 			],
 			"lore": [
 				"Herbalism"
@@ -34,12 +34,12 @@
 				"You're trained in the {@skill Stealth} skill and the {@skill Lore||Underworld Lore} skill. You gain the {@feat Experienced Smuggler} skill feat."
 			],
 			"boosts": [
-				"Strength",
-				"Dexterity",
-				"Free"
+				"strength",
+				"dexterity",
+				"free"
 			],
 			"skills": [
-				"Stealth"
+				"stealth"
 			],
 			"lore": [
 				"Underworld"
@@ -58,13 +58,13 @@
 				"You're trained in the {@skill Diplomacy} skill and the {@skill Lore} skill for your home settlement. You gain the {@feat No Cause for Alarm|APG} skill feat (Advanced Player's Guide 208)."
 			],
 			"boosts": [
-				"Wisdom",
-				"Charisma",
-				"Free"
+				"wisdom",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Diplomacy",
-				"Lore"
+				"diplomacy",
+				"lore"
 			],
 			"feats": [
 				"No Cause for Alarm|APG"
@@ -80,12 +80,12 @@
 				"You're trained in the {@skill Arcana} skill and the {@skill Lore||Necromancy Lore} skill. You gain the {@feat Quick Identification} skill feat."
 			],
 			"boosts": [
-				"Constitution",
-				"Intelligence",
-				"Free"
+				"constitution",
+				"intelligence",
+				"free"
 			],
 			"skills": [
-				"Arcana"
+				"arcana"
 			],
 			"lore": [
 				"Necromancy"
@@ -104,13 +104,13 @@
 				"You're trained in the {@skill Intimidation} skill and either {@skill Lore||Legal Lore} or the {@skill Lore} skill for your home settlement. You gain the {@feat Quick Coercion} skill feat."
 			],
 			"boosts": [
-				"Strength",
-				"Charisma",
-				"Free"
+				"strength",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Intimidation",
-				"Lore"
+				"intimidation",
+				"lore"
 			],
 			"lore": [
 				"Legal"
@@ -130,12 +130,12 @@
 				"You gain the {@feat Alchemical Crafting} skill feat."
 			],
 			"boosts": [
-				"Dexterity",
-				"Intelligence",
-				"Free"
+				"dexterity",
+				"intelligence",
+				"free"
 			],
 			"skills": [
-				"Crafting"
+				"crafting"
 			],
 			"lore": [
 				"Funeral"
@@ -158,15 +158,18 @@
 				"You can use Intelligence as your spellcasting ability for this innate spell."
 			],
 			"boosts": [
-				"Strength",
-				"Intelligence",
-				"Free"
+				"strength",
+				"intelligence",
+				"free"
 			],
 			"skills": [
-				"Athletics"
+				"athletics"
 			],
 			"lore": [
 				"Undead"
+			],
+			"spells": [
+				"disrupt undead"
 			]
 		},
 		{
@@ -187,7 +190,7 @@
 						"unit": "reaction"
 					},
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day"
 					},
 					"trigger": "You're reduced to 0 Hit Points",
@@ -198,14 +201,16 @@
 				}
 			],
 			"boosts": [
-				"Dexterity",
-				"Constitution",
-				"Free"
+				"dexterity",
+				"constitution",
+				"free"
 			],
 			"lore": [
 				"Undead"
 			],
-			"ability": true
+			"miscTags": [
+				"ability"
+			]
 		},
 		{
 			"name": "Willing Host",
@@ -226,7 +231,7 @@
 						"occult"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day"
 					},
 					"entries": [
@@ -236,14 +241,16 @@
 				}
 			],
 			"boosts": [
-				"Wisdom",
-				"Charisma",
-				"Free"
+				"wisdom",
+				"charisma",
+				"free"
 			],
 			"lore": [
 				"Spirit"
 			],
-			"ability": true
+			"miscTags": [
+				"ability"
+			]
 		}
 	]
 }

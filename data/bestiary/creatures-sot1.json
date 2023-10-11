@@ -17,7 +17,6 @@
 	"creature": [
 		{
 			"name": "Anadi Fateweaver",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 79,
 			"level": 5,
@@ -28,33 +27,30 @@
 				"anadi",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 14
 			},
 			"languages": {
 				"languages": [
-					"Anadi",
-					"Common"
+					"anadi",
+					"common"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 13
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 11,
 					"to Climb in true or spider form": 15
 				},
-				"Medicine": {
+				"medicine": {
 					"std": 12
 				},
-				"Nature": {
+				"nature": {
 					"std": 14
 				},
-				"Survival": {
+				"survival": {
 					"std": 12
 				}
 			},
@@ -71,36 +67,14 @@
 				"hide armor",
 				"shortsword"
 			],
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 9
-				},
-				"ref": {
-					"std": 12
-				},
-				"will": {
-					"std": 15
-				}
-			},
-			"hp": [
-				{
-					"hp": 75,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"climb": 25
 			},
-			"attacks": [],
 			"spellcasting": [
 				{
-					"name": "Arcane Spontaneous",
 					"type": "Spontaneous",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 23,
 					"attack": 15,
 					"entry": {
@@ -163,9 +137,8 @@
 					}
 				},
 				{
-					"name": "Arcane Innate",
 					"type": "Innate",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 23,
 					"entry": {
 						"0": {
@@ -234,7 +207,7 @@
 						"trigger": "An ally within 30 feet of the anadi fateweaver that they can see makes a skill check or a saving throw",
 						"frequency": {
 							"unit": "day",
-							"freq": 3
+							"number": 3
 						},
 						"entries": [
 							"The creature rerolls the triggering check and takes the new result."
@@ -293,11 +266,32 @@
 						"name": "Spin Silk"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 9
+					},
+					"ref": {
+						"std": 12
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": [
+					{
+						"hp": 75
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Anadi Lurker",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 78,
 			"level": 3,
@@ -308,36 +302,33 @@
 				"anadi",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 11
 			},
 			"languages": {
 				"languages": [
-					"Anadi",
-					"Common"
+					"anadi",
+					"common"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 9
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 10
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 5,
 					"weaving": 9
 				},
-				"Nature": {
+				"nature": {
 					"std": 7
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 11
 				},
-				"Survival": {
+				"survival": {
 					"std": 9
 				}
 			},
@@ -352,26 +343,6 @@
 			"items": [
 				"kukri",
 				"leather armor"
-			],
-			"ac": {
-				"std": 19
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 7
-				},
-				"ref": {
-					"std": 11
-				},
-				"will": {
-					"std": 9
-				}
-			},
-			"hp": [
-				{
-					"hp": 45,
-					"abilities": null
-				}
 			],
 			"speed": {
 				"walk": 25,
@@ -402,7 +373,6 @@
 						"finesse",
 						"trip"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+3} slashing",
 					"types": [
 						"slashing"
@@ -411,9 +381,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Innate",
 					"type": "Innate",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 20,
 					"entry": {
 						"0": {
@@ -469,7 +438,7 @@
 						],
 						"DC": 18,
 						"savingThrow": "Fortitude",
-						"maxDuration": "4\nrounds",
+						"maxDuration": "4 rounds",
 						"stages": [
 							{
 								"stage": 1,
@@ -523,11 +492,32 @@
 						"name": "Spin Silk"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 19
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 7
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 9
+					}
+				},
+				"hp": [
+					{
+						"hp": 45
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Anadi Seeker",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 78,
 			"level": 1,
@@ -538,36 +528,33 @@
 				"anadi",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 7
 			},
 			"languages": {
 				"languages": [
-					"Anadi",
-					"Common"
+					"anadi",
+					"common"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 6
 				},
-				"Arcana": {
+				"arcana": {
 					"std": 7
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 4
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 7,
 					"weaving": 11
 				},
-				"Nature": {
+				"nature": {
 					"std": 5
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 7
 				}
 			},
@@ -581,26 +568,6 @@
 			},
 			"items": [
 				"sling (20 sling bullets)"
-			],
-			"ac": {
-				"std": 15
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 4
-				},
-				"ref": {
-					"std": 10
-				},
-				"will": {
-					"std": 7
-				}
-			},
-			"hp": [
-				{
-					"hp": 20,
-					"abilities": null
-				}
 			],
 			"speed": {
 				"walk": 25,
@@ -628,10 +595,9 @@
 					"attack": 8,
 					"traits": [
 						"propulsive",
-						"range increment 50 feet",
-						"reload 1"
+						"range increment <50 feet>",
+						"reload <1>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -640,9 +606,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Innate",
 					"type": "Innate",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 17,
 					"entry": {
 						"0": {
@@ -736,7 +701,29 @@
 						"name": "Spin Silk"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 15
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 4
+					},
+					"ref": {
+						"std": 10
+					},
+					"will": {
+						"std": 7
+					}
+				},
+				"hp": [
+					{
+						"hp": 20
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Binji",
@@ -758,8 +745,8 @@
 						},
 						{
 							"mode": "replaceTxt",
-							"replace": "DC 13 Reflex",
-							"with": "DC 15 Reflex"
+							"replace": "{@dc 13} Reflex",
+							"with": "{@dc 15} Reflex"
 						}
 					],
 					"traits": {
@@ -772,14 +759,13 @@
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Undercommon"
+					"common",
+					"undercommon"
 				]
 			}
 		},
 		{
 			"name": "Bramble Champion Construct",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 41,
 			"level": 3,
@@ -790,9 +776,6 @@
 				"construct",
 				"mindless"
 			],
-			"creatureType": [
-				"Construct"
-			],
 			"perception": {
 				"std": 10
 			},
@@ -802,7 +785,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 9,
 					"to Shove": 10
 				}
@@ -818,32 +801,6 @@
 			"items": [
 				"wooden maul"
 			],
-			"ac": {
-				"std": 20
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 10
-				},
-				"ref": {
-					"std": 10
-				},
-				"will": {
-					"std": 8
-				}
-			},
-			"hp": [
-				{
-					"hp": 45,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"bleed",
-				"death effects",
-				"disease",
-				"doomed"
-			],
 			"speed": {
 				"walk": 20
 			},
@@ -854,10 +811,9 @@
 					"attack": 12,
 					"traits": [
 						"nonlethal",
-						"reach 10 feet",
+						"reach <10 feet>",
 						"shove"
 					],
-					"effects": [],
 					"damage": "{@damage 1d12+4} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -890,11 +846,37 @@
 						"name": "Hammer Block"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 20
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 10
+					},
+					"ref": {
+						"std": 10
+					},
+					"will": {
+						"std": 8
+					}
+				},
+				"hp": [
+					{
+						"hp": 45
+					}
+				],
+				"immunities": [
+					"bleed",
+					"death effects",
+					"disease",
+					"doomed"
+				]
 			}
 		},
 		{
 			"name": "Giant Mining Bee",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 80,
 			"level": 2,
@@ -902,9 +884,6 @@
 				"n",
 				"small",
 				"animal"
-			],
-			"creatureType": [
-				"Animal"
 			],
 			"perception": {
 				"std": 9
@@ -920,10 +899,10 @@
 				}
 			],
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 7
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 8
 				}
 			},
@@ -935,31 +914,6 @@
 				"wis": 1,
 				"cha": 0
 			},
-			"ac": {
-				"std": 18
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 9
-				},
-				"ref": {
-					"std": 11
-				},
-				"will": {
-					"std": 5
-				}
-			},
-			"hp": [
-				{
-					"hp": 30,
-					"abilities": null
-				}
-			],
-			"weaknesses": [
-				{
-					"name": "smoke susceptibility"
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"burrow": 10,
@@ -971,9 +925,8 @@
 					"name": "stinger",
 					"attack": 11,
 					"traits": [
-						"deadly d8"
+						"deadly <d8>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+4} piercing",
 					"types": [
 						"piercing"
@@ -986,7 +939,6 @@
 					"traits": [
 						"agile"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+4} piercing",
 					"types": [
 						"piercing"
@@ -1002,11 +954,37 @@
 						"name": "Smoke Susceptibility"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 18
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 9
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 5
+					}
+				},
+				"hp": [
+					{
+						"hp": 30
+					}
+				],
+				"weaknesses": [
+					{
+						"name": "smoke susceptibility"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Giant Silverfish",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 84,
 			"level": 0,
@@ -1015,9 +993,6 @@
 				"n",
 				"small",
 				"animal"
-			],
-			"creatureType": [
-				"Animal"
 			],
 			"perception": {
 				"std": 8
@@ -1028,13 +1003,13 @@
 				}
 			],
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 6
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 4
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 6
 				}
 			},
@@ -1046,26 +1021,6 @@
 				"wis": 1,
 				"cha": -2
 			},
-			"ac": {
-				"std": 15
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 7
-				},
-				"ref": {
-					"std": 8
-				},
-				"will": {
-					"std": 5
-				}
-			},
-			"hp": [
-				{
-					"hp": 17,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"climb": 20
@@ -1075,7 +1030,6 @@
 					"range": "Melee",
 					"name": "mandibles",
 					"attack": 8,
-					"effects": [],
 					"damage": "{@damage 1d6+2} piercing",
 					"types": [
 						"piercing"
@@ -1107,11 +1061,32 @@
 						"name": "Voracious Consumption"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 15
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 7
+					},
+					"ref": {
+						"std": 8
+					},
+					"will": {
+						"std": 5
+					}
+				},
+				"hp": [
+					{
+						"hp": 17
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Giant Tsetse Fly",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 81,
 			"level": 2,
@@ -1119,9 +1094,6 @@
 				"n",
 				"large",
 				"animal"
-			],
-			"creatureType": [
-				"Animal"
 			],
 			"perception": {
 				"std": 9
@@ -1137,10 +1109,10 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 8
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 5,
 					"to Hide": 9
 				}
@@ -1153,26 +1125,6 @@
 				"wis": 1,
 				"cha": -5
 			},
-			"ac": {
-				"std": 18
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 7
-				},
-				"ref": {
-					"std": 11
-				},
-				"will": {
-					"std": 5
-				}
-			},
-			"hp": [
-				{
-					"hp": 30,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 10,
 				"fly": 40
@@ -1242,17 +1194,38 @@
 							},
 							{
 								"stage": 3,
-								"entry": ";",
+								"entry": "",
 								"duration": "1 day"
 							}
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 18
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 7
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 5
+					}
+				},
+				"hp": [
+					{
+						"hp": 30
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Giant Worker Bee",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 80,
 			"level": 0,
@@ -1260,9 +1233,6 @@
 				"n",
 				"medium",
 				"animal"
-			],
-			"creatureType": [
-				"Animal"
 			],
 			"perception": {
 				"std": 5
@@ -1273,10 +1243,10 @@
 				}
 			],
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 6
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 5
 				}
 			},
@@ -1288,31 +1258,6 @@
 				"wis": 1,
 				"cha": -1
 			},
-			"ac": {
-				"std": 16
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 6
-				},
-				"ref": {
-					"std": 9
-				},
-				"will": {
-					"std": 3
-				}
-			},
-			"hp": [
-				{
-					"hp": 16,
-					"abilities": null
-				}
-			],
-			"weaknesses": [
-				{
-					"name": "smoke susceptibility"
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"fly": 40
@@ -1323,10 +1268,9 @@
 					"name": "stinger",
 					"attack": 8,
 					"traits": [
-						"deadly d6",
+						"deadly <d6>",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+2} piercing",
 					"types": [
 						"piercing"
@@ -1340,7 +1284,6 @@
 						"agile",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+2} piercing",
 					"types": [
 						"piercing"
@@ -1356,11 +1299,37 @@
 						"name": "Smoke Susceptibility"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 16
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 6
+					},
+					"ref": {
+						"std": 9
+					},
+					"will": {
+						"std": 3
+					}
+				},
+				"hp": [
+					{
+						"hp": 16
+					}
+				],
+				"weaknesses": [
+					{
+						"name": "smoke susceptibility"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Gnagrif",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 83,
 			"level": 2,
@@ -1370,9 +1339,6 @@
 				"tiny",
 				"fey",
 				"gremlin"
-			],
-			"creatureType": [
-				"fey"
 			],
 			"perception": {
 				"std": 7
@@ -1384,23 +1350,23 @@
 			],
 			"languages": {
 				"languages": [
-					"Undercommon"
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 8
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 6
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 6
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 8
 				},
-				"Survival": {
+				"survival": {
 					"std": 5
 				}
 			},
@@ -1415,32 +1381,6 @@
 			"items": [
 				"light hammer"
 			],
-			"ac": {
-				"std": 18
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 9
-				},
-				"ref": {
-					"std": 10
-				},
-				"will": {
-					"std": 5
-				}
-			},
-			"hp": [
-				{
-					"hp": 35,
-					"abilities": null
-				}
-			],
-			"weaknesses": [
-				{
-					"amount": 3,
-					"name": "cold iron"
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"burrow": 10,
@@ -1454,7 +1394,6 @@
 					"traits": [
 						"agile"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+4} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1466,9 +1405,8 @@
 					"attack": 10,
 					"traits": [
 						"agile",
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+4} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1477,9 +1415,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
 					"type": "Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"DC": 16,
 					"entry": {
 						"0": {
@@ -1521,9 +1458,9 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"trigger": "A creature {@action Stride||Strides} or {@action Step||Steps} into difficult terrain adjacent to the gnagrif",
+						"trigger": "A creature {@action Stride||Strides} or {@action Step||Steps} into {@quickref difficult terrain||3|terrain} adjacent to the gnagrif",
 						"entries": [
-							"The gnagrif gives the ground a hearty pound and it shifts beneath the triggering creature's feet. The triggering creature must succeed on a DC 18 Reflex save or fall {@condition prone}."
+							"The gnagrif gives the ground a hearty pound and it shifts beneath the triggering creature's feet. The triggering creature must succeed on a {@dc 18} Reflex save or fall {@condition prone}."
 						],
 						"name": "Soften Stone"
 					}
@@ -1552,7 +1489,7 @@
 					},
 					{
 						"entries": [
-							"A gnagrif ignores difficult terrain caused by rocks or rubble, including squares affected by their Stomp Around."
+							"A gnagrif ignores {@quickref difficult terrain||3|terrain} caused by rocks or rubble, including squares affected by their Stomp Around."
 						],
 						"name": "Rubble Stride"
 					},
@@ -1565,7 +1502,7 @@
 							"move"
 						],
 						"entries": [
-							"The gnagrif huffs and stamps its feet, churning the ground around it. The square it is in and all unoccupied adjacent squares become difficult terrain."
+							"The gnagrif huffs and stamps its feet, churning the ground around it. The square it is in and all unoccupied adjacent squares become {@quickref difficult terrain||3|terrain}."
 						],
 						"name": "Stomp Around"
 					},
@@ -1576,7 +1513,35 @@
 						"name": "Wrecker"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 18
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 9
+					},
+					"ref": {
+						"std": 10
+					},
+					"will": {
+						"std": 5
+					}
+				},
+				"hp": [
+					{
+						"hp": 35
+					}
+				],
+				"weaknesses": [
+					{
+						"amount": 3,
+						"name": "cold iron"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Kurshkin",
@@ -1591,9 +1556,7 @@
 				"fey",
 				"gremlin"
 			],
-			"creatureType": [
-				"Fey"
-			],
+			"description": "Female pugwampi jinxer",
 			"perception": {
 				"std": 10,
 				"to hear things": 2
@@ -1605,28 +1568,28 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Gnoll",
-					"Undercommon"
+					"common",
+					"gnoll",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Arcana": {
+				"arcana": {
 					"std": 8
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 8
 				},
-				"Deception": {
+				"deception": {
 					"std": 8
 				},
-				"Nature": {
+				"nature": {
 					"std": 8
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 11
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 9,
 					"to Steal": 11
 				}
@@ -1643,32 +1606,6 @@
 				"shortbow (60 arrows)",
 				"shortsword"
 			],
-			"ac": {
-				"std": 19
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 8
-				},
-				"ref": {
-					"std": 11
-				},
-				"will": {
-					"std": 8
-				}
-			},
-			"hp": [
-				{
-					"hp": 50,
-					"abilities": null
-				}
-			],
-			"weaknesses": [
-				{
-					"amount": 5,
-					"name": "cold iron"
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -1681,9 +1618,8 @@
 						"agile",
 						"finesse",
 						"magical",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+4} piercing",
 					"types": [
 						"piercing"
@@ -1694,12 +1630,11 @@
 					"name": "shortbow",
 					"attack": 12,
 					"traits": [
-						"deadly d10",
+						"deadly <d10>",
 						"magical",
-						"range increment 60 feet",
-						"reload 0"
+						"range increment <60 feet>",
+						"reload <0>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6} piercing",
 					"types": [
 						"piercing"
@@ -1708,9 +1643,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
 					"type": "Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"DC": 20,
 					"entry": {
 						"0": {
@@ -1743,14 +1677,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+11, {@skill Thievery} +9 (+11 to {@action Steal}) Str \u20132, Dex +4, Con +1, Int +1, Wis \u20131, Cha +3 Items shortbow (60 arrows), shortsword."
-						],
-						"name": "Stealth"
-					}
-				],
 				"mid": [
 					{
 						"activity": {
@@ -1772,27 +1698,17 @@
 							"primal"
 						],
 						"entries": [
-							"20 feet. Creatures other than animals, gremlins, and gnolls in the aura become extremely unlucky (DC 20 Will save; a creature must roll this Will save twice and take the worse result). On a successful save, the creature is temporarily immune to pugwampi unluck auras for 24 hours. On a failure, the creature must roll twice and take the worse result on all checks as long as it remains within the aura's emanation."
+							"20 feet. Creatures other than animals, gremlins, and gnolls in the aura become extremely unlucky ({@dc 20} Will save; a creature must roll this Will save twice and take the worse result). On a successful save, the creature is temporarily immune to pugwampi unluck auras for 24 hours. On a failure, the creature must roll twice and take the worse result on all checks as long as it remains within the aura's emanation."
 						],
 						"name": "Unluck Aura"
 					}
 				],
 				"bot": [
 					{
-						"activity": {
-							"number": 1,
-							"unit": "action"
-						},
 						"entries": [
-							"{@damage 1d6+4} piercing Ranged shortbow +12 (deadly d10, magical, range increment 60 feet, reload 0), Damage {@damage 1d6} piercing Primal Innate Spells DC 20; 2nd speak with animals (at will); 1st gust of wind, spider sting; Cantrips (2nd) prestidigitation."
+							"Kurshkin deals an additional {@dice 1d6} damage with her melee {@action Strike||Strikes} against creatures affected by her unluck aura."
 						],
-						"name": "S), Damage"
-					},
-					{
-						"entries": [
-							"Stabs Kurshkin deals an additional {@dice 1d6} damage with her melee Strikes against creatures affected by her unluck aura."
-						],
-						"name": "Lucky"
+						"name": "Lucky Stabs"
 					},
 					{
 						"entries": [
@@ -1801,11 +1717,38 @@
 						"name": "Natural Thief"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 19
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 8
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 8
+					}
+				},
+				"hp": [
+					{
+						"hp": 50
+					}
+				],
+				"weaknesses": [
+					{
+						"amount": 5,
+						"name": "cold iron"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Scrit",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 82,
 			"level": 0,
@@ -1815,9 +1758,6 @@
 				"tiny",
 				"fey",
 				"gremlin"
-			],
-			"creatureType": [
-				"Fey"
 			],
 			"perception": {
 				"std": 6
@@ -1829,20 +1769,20 @@
 			],
 			"languages": {
 				"languages": [
-					"Undercommon"
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 5
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 5
 				},
-				"Deception": {
+				"deception": {
 					"std": 4
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 7
 				}
 			},
@@ -1854,26 +1794,6 @@
 				"wis": 0,
 				"cha": 0
 			},
-			"ac": {
-				"std": 16
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 6
-				},
-				"ref": {
-					"std": 9
-				},
-				"will": {
-					"std": 4
-				}
-			},
-			"hp": [
-				{
-					"hp": 18,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -1913,7 +1833,7 @@
 						"traits": [
 							"poison"
 						],
-						"note": " A scrit's fingers are perpetually\ncovered in smeared ink from the writing it's\ndestroyed. This ink mixes with its skin oils to\ncreate a disgusting, sticky poison.",
+						"note": "A scrit's fingers are perpetually covered in smeared ink from the writing it's destroyed. This ink mixes with its skin oils to create a disgusting, sticky poison.",
 						"DC": 14,
 						"savingThrow": "Fortitude",
 						"maxDuration": "4 rounds",
@@ -1936,11 +1856,32 @@
 						"name": "Smear Text"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 16
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 6
+					},
+					"ref": {
+						"std": 9
+					},
+					"will": {
+						"std": 4
+					}
+				},
+				"hp": [
+					{
+						"hp": 18
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Shieldbearer Construct",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 40,
 			"level": 2,
@@ -1951,9 +1892,6 @@
 				"construct",
 				"mindless"
 			],
-			"creatureType": [
-				"Construct"
-			],
 			"perception": {
 				"std": 6
 			},
@@ -1963,7 +1901,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 8
 				}
 			},
@@ -1975,32 +1913,6 @@
 				"wis": 0,
 				"cha": -5
 			},
-			"ac": {
-				"std": 17
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 11
-				},
-				"ref": {
-					"std": 7
-				},
-				"will": {
-					"std": 6
-				}
-			},
-			"hp": [
-				{
-					"hp": 30,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"bleed",
-				"death effects",
-				"disease",
-				"doomed"
-			],
 			"speed": {
 				"walk": 20
 			},
@@ -2010,9 +1922,8 @@
 					"name": "wooden sword",
 					"attack": 11,
 					"traits": [
-						"versatile p"
+						"versatile <p>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d8+4} slashing",
 					"types": [
 						"slashing"
@@ -2038,7 +1949,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -2049,18 +1959,43 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Shield Block",
 						"generic": {
 							"tag": "ability"
 						}
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 17
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 11
+					},
+					"ref": {
+						"std": 7
+					},
+					"will": {
+						"std": 6
+					}
+				},
+				"hp": [
+					{
+						"hp": 30
+					}
+				],
+				"immunities": [
+					"bleed",
+					"death effects",
+					"disease",
+					"doomed"
+				]
 			}
 		},
 		{
 			"name": "Sicklehand Construct",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 41,
 			"level": 0,
@@ -2071,9 +2006,6 @@
 				"construct",
 				"mindless"
 			],
-			"creatureType": [
-				"Construct"
-			],
 			"perception": {
 				"std": 6
 			},
@@ -2083,10 +2015,10 @@
 				}
 			],
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 7
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 5,
 					"to Trip": 6
 				}
@@ -2102,36 +2034,6 @@
 			"items": [
 				"wooden sickles (2)"
 			],
-			"ac": {
-				"std": 16
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 5
-				},
-				"ref": {
-					"std": 9
-				},
-				"will": {
-					"std": 4
-				}
-			},
-			"hp": [
-				{
-					"hp": 15,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"bleed",
-				"death effects"
-			],
-			"weaknesses": [
-				{
-					"amount": 3,
-					"name": "fire"
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -2145,7 +2047,6 @@
 						"finesse",
 						"trip"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+1} slashing",
 					"types": [
 						"slashing"
@@ -2175,11 +2076,41 @@
 						"name": "Menacing Sickles"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 16
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 5
+					},
+					"ref": {
+						"std": 9
+					},
+					"will": {
+						"std": 4
+					}
+				},
+				"hp": [
+					{
+						"hp": 15
+					}
+				],
+				"immunities": [
+					"bleed",
+					"death effects"
+				],
+				"weaknesses": [
+					{
+						"amount": 3,
+						"name": "fire"
+					}
+				]
 			}
 		},
 		{
 			"name": "Silverfish Swarm",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 84,
 			"level": -1,
@@ -2190,9 +2121,6 @@
 				"animal",
 				"swarm"
 			],
-			"creatureType": [
-				"Animal"
-			],
 			"perception": {
 				"std": 5
 			},
@@ -2202,10 +2130,10 @@
 				}
 			],
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 6
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 4
 				}
 			},
@@ -2217,44 +2145,10 @@
 				"wis": 1,
 				"cha": -2
 			},
-			"ac": {
-				"std": 13
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 5
-				},
-				"ref": {
-					"std": 8
-				},
-				"will": {
-					"std": 4
-				}
-			},
-			"hp": [
-				{
-					"hp": 9,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"precision",
-				"swarm mind"
-			],
-			"weaknesses": [
-				{
-					"amount": 2,
-					"name": "area damage"
-				},
-				{
-					"name": "splash"
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"climb": 20
 			},
-			"attacks": [],
 			"abilities": {
 				"bot": [
 					{
@@ -2263,7 +2157,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Each enemy in the silverfish swarm's space takes {@damage 1d4} piercing damage (DC 14 basic Fortitude save). A creature that fails its save is {@condition sickened|CRB|sickened 1}."
+							"Each enemy in the silverfish swarm's space takes {@damage 1d4} piercing damage ({@dc 14} basic Fortitude save). A creature that fails its save is {@condition sickened|CRB|sickened 1}."
 						],
 						"name": "Swarming Bites"
 					},
@@ -2277,11 +2171,44 @@
 						"name": "Voracious Consumption"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 13
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 5
+					},
+					"ref": {
+						"std": 8
+					},
+					"will": {
+						"std": 4
+					}
+				},
+				"hp": [
+					{
+						"hp": 9
+					}
+				],
+				"immunities": [
+					"precision",
+					"swarm mind"
+				],
+				"weaknesses": [
+					{
+						"amount": 2,
+						"name": "area damage"
+					},
+					{
+						"name": "splash"
+					}
+				]
 			}
 		},
 		{
 			"name": "Spellskein",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 85,
 			"level": 0,
@@ -2290,9 +2217,6 @@
 				"n",
 				"tiny",
 				"construct"
-			],
-			"creatureType": [
-				"Construct"
 			],
 			"perception": {
 				"std": 2
@@ -2304,14 +2228,14 @@
 			],
 			"languages": {
 				"languages": [
-					"Common (can't speak any language)"
+					"common (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 5
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 7
 				}
 			},
@@ -2323,35 +2247,6 @@
 				"wis": 0,
 				"cha": -5
 			},
-			"ac": {
-				"std": 16
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 5
-				},
-				"ref": {
-					"std": 9
-				},
-				"will": {
-					"std": 4
-				}
-			},
-			"hp": [
-				{
-					"hp": 15,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"bleed",
-				"death effects",
-				"disease",
-				"doomed",
-				"drained",
-				"fatigued",
-				"healing"
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -2364,7 +2259,6 @@
 						"agile",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+1} slashing",
 					"types": [
 						"slashing"
@@ -2414,12 +2308,53 @@
 						],
 						"requirements": "The spellskein is folded into its lizard shape",
 						"entries": [
-							"The spellskein puffs out its cloth frills and shakes them from side to side to look fierce. The first creature hit by its sharp edge {@action Strike} before the start of its next turn must succeed on a DC 14 Will save or become {@condition frightened|CRB|frightened 1} ({@condition frightened|CRB|frightened 2} on a critical failure). Refold {@as 1} The spellskein folds itself into a crane, frog, or lizard shape, as it chooses."
+							"The spellskein puffs out its cloth frills and shakes them from side to side to look fierce. The first creature hit by its sharp edge {@action Strike} before the start of its next turn must succeed on a {@dc 14} Will save or become {@condition frightened|CRB|frightened 1} ({@condition frightened|CRB|frightened 2} on a critical failure)."
 						],
 						"name": "Lizard Frill"
+					},
+					{
+						"activity": {
+							"number": 1,
+							"unit": "action"
+						},
+						"entries": [
+							"The spellskein folds itself into a crane, frog, or lizard shape, as it chooses."
+						],
+						"name": "Refold"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 16
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 5
+					},
+					"ref": {
+						"std": 9
+					},
+					"will": {
+						"std": 4
+					}
+				},
+				"hp": [
+					{
+						"hp": 15
+					}
+				],
+				"immunities": [
+					"bleed",
+					"death effects",
+					"disease",
+					"doomed",
+					"drained",
+					"fatigued",
+					"healing"
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Stone Ghost",
@@ -2435,33 +2370,34 @@
 				"humanoid",
 				"oread"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Male human oread stone spirit",
 			"perception": {
 				"std": 13
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Gnoll",
-					"Terran"
+					"common",
+					"gnoll",
+					"terran"
 				]
 			},
 			"skills": {
-				"Arcana": {
+				"arcana": {
 					"std": 12
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 12
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 12
 				},
-				"Nature": {
+				"magaambya lore": {
+					"std": 12
+				},
+				"nature": {
 					"std": 13
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 11
 				}
 			},
@@ -2478,32 +2414,6 @@
 				"+1 morningstar",
 				"sling (10 bullets)"
 			],
-			"ac": {
-				"std": 20
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 11
-				},
-				"ref": {
-					"std": 9
-				},
-				"will": {
-					"std": 15
-				}
-			},
-			"hp": [
-				{
-					"hp": 40,
-					"abilities": null
-				}
-			],
-			"resistances": [
-				{
-					"amount": 5,
-					"name": "all damage"
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -2514,9 +2424,8 @@
 					"attack": 15,
 					"traits": [
 						"magical",
-						"versatile p"
+						"versatile <p>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+7} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -2528,10 +2437,9 @@
 					"attack": 11,
 					"traits": [
 						"propulsive",
-						"range increment 50 feet",
-						"reload 1"
+						"range increment <50 feet>",
+						"reload <1>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+5} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -2540,9 +2448,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Prepared",
 					"type": "Prepared",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"DC": 22,
 					"attack": 14,
 					"entry": {
@@ -2612,34 +2519,16 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+12, {@skill Nature} +13, {@skill Stealth} +11 Str +3, Dex +0, Con +4, Int +3, Wis +4, Cha +1 Items leather armor, +1 morningstar, sling (10 bullets)"
-						],
-						"name": "Magaambya Lore"
-					}
-				],
 				"mid": [
 					{
 						"entries": [
-							"Ghost can pass through objects made of stone or soil, including walls.",
+							"Stone Ghost can pass through objects made of stone or soil, including walls.",
 							"When inside an object, Stone Ghost can't perceive, attack, or interact with anything outside the object, and if he starts his turn inside an object, he is {@condition slowed|CRB|slowed 1}."
 						],
-						"name": "Stone Spirit Stone"
+						"name": "Stone Spirit"
 					}
 				],
 				"bot": [
-					{
-						"activity": {
-							"number": 1,
-							"unit": "action"
-						},
-						"entries": [
-							"{@damage 1d6+7} bludgeoning Ranged sling +11 (propulsive, range increment 50 feet, reload 1), Damage {@damage 1d6+5} bludgeoning Primal Prepared Spells DC 22, attack +14; 3rd earthbind, summon elemental (earth only); 2nd darkvision, glitterdust, shatter; 1st command (animals only), grease, pass without trace; Cantrips (3rd) acid splash, dancing lights, know direction, shield, tanglefoot."
-						],
-						"name": "P), Damage"
-					},
 					{
 						"activity": {
 							"number": 2,
@@ -2651,18 +2540,41 @@
 						],
 						"requirements": "A foe within Stone Ghost's reach is standing on stone or soil",
 						"entries": [
-							"Stone Ghost briefly extends his intangibility to a foe and drags or pounds them into the earth. He makes an {@skill Athletics} check against the target's Fortitude."
+							"Stone Ghost briefly extends his intangibility to a foe and drags or pounds them into the earth. He makes an {@skill Athletics} check against the target's Fortitude DC. On a success, the foe is planted waist-deep in the ground and is {@condition immobilized} and {@condition flat-footed} until it Escapes ({@dc 22}). On a critical success, the foe is completely buried and must hold its breath until it is free or else start suffocating. A successful {@action Escape} returns the foe to its original square on the surface, or the closest unoccupied square."
 						],
 						"name": "Entombing Grasp"
-					},
-					{
-						"entries": [
-							"On a success, the foe is planted waist-deep in the ground and is {@condition immobilized} and {@condition flat-footed} until it Escapes (DC 22). On a critical success, the foe is completely buried and must hold its breath until it is free or else start suffocating. A successful {@action Escape} returns the foe to its original square on the surface, or the closest unoccupied square."
-						],
-						"name": "DC."
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 20
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 11
+					},
+					"ref": {
+						"std": 9
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": [
+					{
+						"hp": 40
+					}
+				],
+				"resistances": [
+					{
+						"amount": 5,
+						"name": "all damage",
+						"note": "except force or {@item ghost touch}; double resistance vs. non-magical, stone, or effects with the earth trait"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Takulu Ot",
@@ -2677,39 +2589,36 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 11
 			},
 			"languages": {
 				"languages": [
-					"Amurrun",
-					"Common",
-					"Elven",
-					"Iruxi",
-					"Sylvan",
-					"Xanmba"
+					"amurrun",
+					"common",
+					"elven",
+					"iruxi",
+					"sylvan",
+					"xanmba"
 				]
 			},
 			"skills": {
-				"Arcana": {
+				"arcana": {
 					"std": 13
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 11
 				},
-				"Nature": {
+				"nature": {
 					"std": 9
 				},
-				"Performance": {
+				"performance": {
 					"std": 11
 				},
-				"Academia Lore": {
+				"academia lore": {
 					"std": 13
 				},
-				"Library Lore": {
+				"library lore": {
 					"std": 13
 				}
 			},
@@ -2726,26 +2635,6 @@
 				"{@item potion of minor healing}",
 				"{@item staff}"
 			],
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 9
-				},
-				"ref": {
-					"std": 12
-				},
-				"will": {
-					"std": 12
-				}
-			},
-			"hp": [
-				{
-					"hp": 60,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -2755,9 +2644,8 @@
 					"name": "staff",
 					"attack": 9,
 					"traits": [
-						"two-hand d8"
+						"two-hand <d8>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+1} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -2766,9 +2654,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Prepared",
 					"type": "Prepared",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 21,
 					"attack": 13,
 					"entry": {
@@ -2838,11 +2725,32 @@
 						"name": "Quick Lesson"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 9
+					},
+					"ref": {
+						"std": 12
+					},
+					"will": {
+						"std": 12
+					}
+				},
+				"hp": [
+					{
+						"hp": 60
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Umbo",
-			"isNpc": false,
 			"source": "SoT1",
 			"page": 22,
 			"level": 3,
@@ -2851,9 +2759,6 @@
 				"ne",
 				"medium",
 				"fungus"
-			],
-			"creatureType": [
-				"Fungus"
 			],
 			"perception": {
 				"std": 8
@@ -2870,17 +2775,17 @@
 			],
 			"languages": {
 				"languages": [
-					"Undercommon"
+					"undercommon"
 				],
 				"abilities": [
 					"telepathy 100 feet (myceloids)"
 				]
 			},
 			"skills": {
-				"Stealth": {
+				"stealth": {
 					"std": 9
 				},
-				"Survival": {
+				"survival": {
 					"std": 8
 				}
 			},
@@ -2892,32 +2797,6 @@
 				"wis": 2,
 				"cha": 0
 			},
-			"ac": {
-				"std": 18
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 12
-				},
-				"ref": {
-					"std": 7
-				},
-				"will": {
-					"std": 8
-				}
-			},
-			"hp": [
-				{
-					"hp": 50,
-					"abilities": null
-				}
-			],
-			"weaknesses": [
-				{
-					"amount": 5,
-					"name": "slashing"
-				}
-			],
 			"speed": {
 				"walk": 20
 			},
@@ -2952,7 +2831,7 @@
 						},
 						"frequency": {
 							"unit": "day",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
 							"Umbo expels spores in a 10-foot burst centered on a corner of his own space. This cloud lasts until the start of the myceloid's next turn. Each creature that is in the cloud or enters it is exposed to purple pox."
@@ -2965,7 +2844,7 @@
 						"traits": [
 							"disease"
 						],
-						"note": " Myceloids are immune",
+						"note": "Myceloids are immune",
 						"DC": 18,
 						"savingThrow": "Fortitude",
 						"onset": "1 minute",
@@ -3000,7 +2879,7 @@
 							"primal"
 						],
 						"entries": [
-							"Umbo targets one creature affected by purple pox within 30 feet. That creature must attempt a DC 18 Will save. It is then temporarily immune to spore domination for 10 minutes.",
+							"Umbo targets one creature affected by purple pox within 30 feet. That creature must attempt a {@dc 18} Will save. It is then temporarily immune to spore domination for 10 minutes.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -3012,6 +2891,33 @@
 							}
 						],
 						"name": "Spore Domination"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 18
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 7
+					},
+					"will": {
+						"std": 8
+					}
+				},
+				"hp": [
+					{
+						"hp": 50
+					}
+				],
+				"weaknesses": [
+					{
+						"amount": 5,
+						"name": "slashing"
 					}
 				]
 			}
@@ -3029,9 +2935,6 @@
 				"fey",
 				"gremlin"
 			],
-			"creatureType": [
-				"Fey"
-			],
 			"perception": {
 				"std": 8
 			},
@@ -3042,21 +2945,21 @@
 			],
 			"languages": {
 				"languages": [
-					"Undercommon"
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 10
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 9,
 					"to Shove": 11
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 12
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 10
 				}
 			},
@@ -3068,32 +2971,6 @@
 				"wis": 0,
 				"cha": 2
 			},
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 13
-				},
-				"ref": {
-					"std": 12
-				},
-				"will": {
-					"std": 8
-				}
-			},
-			"hp": [
-				{
-					"hp": 68,
-					"abilities": null
-				}
-			],
-			"weaknesses": [
-				{
-					"amount": 4,
-					"name": "cold iron"
-				}
-			],
 			"speed": {
 				"walk": 30,
 				"climb": 20
@@ -3104,10 +2981,9 @@
 					"name": "pick",
 					"attack": 14,
 					"traits": [
-						"fatal d10",
+						"fatal <d10>",
 						"shove"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+5} piercing",
 					"types": [
 						"piercing"
@@ -3136,7 +3012,6 @@
 						"agile",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+5} slashing",
 					"types": [
 						"slashing"
@@ -3145,9 +3020,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
 					"type": "Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"DC": 21,
 					"attack": 13,
 					"entry": {
@@ -3202,9 +3076,36 @@
 					},
 					{
 						"entries": [
-							"Urbel's melee Strikes deal an additional {@dice 1d6} damage to {@condition prone} targets."
+							"Urbel's melee {@action Strike||Strikes} deal an additional {@dice 1d6} damage to {@condition prone} targets."
 						],
 						"name": "Pound Down"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 13
+					},
+					"ref": {
+						"std": 12
+					},
+					"will": {
+						"std": 8
+					}
+				},
+				"hp": [
+					{
+						"hp": 68
+					}
+				],
+				"weaknesses": [
+					{
+						"amount": 4,
+						"name": "cold iron"
 					}
 				]
 			}

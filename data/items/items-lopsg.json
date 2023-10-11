@@ -29,11 +29,11 @@
 						"amount": 4
 					},
 					"entries": [
-						"The ampoule deals 1 damage and 1 splash damage."
+						"The ampoule deals 1 damage and 1 {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
-							"with": "When lesser alignment ampoule strikes a creature with a weakness to good, evil, chaos, or law, it deals 1 damage and 1 splash damage"
+							"with": "When lesser alignment ampoule strikes a creature with a weakness to good, evil, chaos, or law, it deals 1 damage and 1 {@trait splash} damage"
 						}
 					}
 				},
@@ -45,11 +45,11 @@
 						"amount": 12
 					},
 					"entries": [
-						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 1d4} damage and 2 splash damage."
+						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 1d4} damage and 2 {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
-							"with": "You gain a +1 item bonus to attack rolls. When moderate alignment ampoule strikes a creature with a weakness to good, evil, chaos, or law, it deals {@damage 1d4} damage and 2 splash damage"
+							"with": "You gain a +1 item bonus to attack rolls. When moderate alignment ampoule strikes a creature with a weakness to good, evil, chaos, or law, it deals {@damage 1d4} damage and 2 {@trait splash} damage"
 						}
 					}
 				},
@@ -61,11 +61,11 @@
 						"amount": 300
 					},
 					"entries": [
-						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 2d4} damage and 3 splash damage."
+						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 2d4} damage and 3 {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
-							"with": "You gain a +2 item bonus to attack rolls. When greater alignment ampoule strikes a creature with a weakness to good, evil, chaos, or law, it deals {@damage 2d4} damage and 3 splash damage"
+							"with": "You gain a +2 item bonus to attack rolls. When greater alignment ampoule strikes a creature with a weakness to good, evil, chaos, or law, it deals {@damage 2d4} damage and 3 {@trait splash} damage"
 						}
 					}
 				},
@@ -77,11 +77,11 @@
 						"amount": 3000
 					},
 					"entries": [
-						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 3d4} damage and 4 splash damage."
+						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 3d4} damage and 4 {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
-							"with": "You gain a +3 item bonus to attack rolls. When major alignment ampoule strikes a creature with a weakness to good, evil, chaos, or law, it deals {@damage 3d4} damage and 4 splash damage"
+							"with": "You gain a +3 item bonus to attack rolls. When major alignment ampoule strikes a creature with a weakness to good, evil, chaos, or law, it deals {@damage 3d4} damage and 4 {@trait splash} damage"
 						}
 					}
 				}
@@ -203,7 +203,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -216,7 +216,6 @@
 			"source": "LOPSG",
 			"page": 114,
 			"type": "Item",
-			"traits": [],
 			"price": {
 				"coin": "gp",
 				"amount": 5
@@ -366,11 +365,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You turn the key in the air and create a magic glyph.",
@@ -382,17 +381,16 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "minute",
-						"entry": "1 minute"
+						"unit": "minute"
 					},
 					"components": [
-						"(command",
+						"command",
 						"envision",
-						"Interact)"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You place the key on a Small object and turn it, creating a simple animated object for 1 hour. The animated object has the statistics of an {@creature animated broom} but has no bristles {@action Strike} and can't attack. It performs simple and broad menial tasks for you in exploration or downtime but is too slow to react to individual commands to assist you in a combat encounter."
@@ -419,7 +417,7 @@
 					"entries": [
 						"A greater key allows you to fully comprehend and thus partially bypass a construct's resistances. You ignore the first 5 resistance a construct has against your damaging effects, whether martial or magical. Additionally, the key's first activation casts a 5th-level {@spell summon construct}, and its second activation lasts 8 hours."
 					],
-					"variantType": "Cordelia's greater construct\nkey"
+					"variantType": "Cordelia's greater construct key"
 				}
 			]
 		},
@@ -447,15 +445,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
 						"envision"
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"requirements": "On your previous action this turn, you used this weapon to hit and damage a creature that has blood or other vital fluids",
 					"entries": [
@@ -669,15 +666,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "minute",
-						"entry": "1 minute"
+						"unit": "minute"
 					},
 					"components": [
-						"(Interact)"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You draw any number of pieces of mundane gear from the pack with a combined value of 1 gp or less."
@@ -904,15 +900,15 @@
 					"style": "compact",
 					"activity": {
 						"number": 10,
-						"unit": "minute",
-						"entry": "10 minutes (command,"
+						"unit": "minute"
 					},
 					"components": [
-						"Interact)"
+						"command",
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You teleport back to the attuned Pathfinder Lodge, as long as you are no more than 100 miles away. This {@trait teleportation} effect fails if you would bring another creature with you, even if you're carrying it in an extradimensional space."
@@ -950,11 +946,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You cause the wayfinder to transform into a Tiny bee hummingbird, only 2 inches long. Other than the wayfinder being a visible bird, this has the effects of prying eye. In addition to Seeking through the hummingbird, you can activate any aeon stone within the wayfinder as if the wayfinder were still on your person. When the effect ends, the wayfinder transforms back to normal in its current position. Damaging the bird ends the effect but does not destroy the wayfinder."
@@ -974,7 +970,7 @@
 			"hands": 2,
 			"category": "Adventuring Gear",
 			"entries": [
-				"A deck of marked playing cards appears to be an ordinary deck upon initial inspection but bears specific folds, colors, scratches, or other markings on each card that allow an informed user to know what's on the other side of a card. A deck of marked cards grants you a +1 item bonus to {@skill Games Lore} checks or other relevant checks to gamble with the cards. You can determine that an unattended deck of cards is marked with a successful DC 20 Perception check. Determining that a deck is marked during play is more difficult and is typically determined by a {@skill Perception} check against the dealer's {@skill Lore||Games Lore} or {@skill Thievery} DC."
+				"A deck of marked playing cards appears to be an ordinary deck upon initial inspection but bears specific folds, colors, scratches, or other markings on each card that allow an informed user to know what's on the other side of a card. A deck of marked cards grants you a +1 item bonus to {@skill Lore||Games Lore} checks or other relevant checks to gamble with the cards. You can determine that an unattended deck of cards is marked with a successful DC 20 Perception check. Determining that a deck is marked during play is more difficult and is typically determined by a {@skill Perception} check against the dealer's {@skill Lore||Games Lore} or {@skill Thievery} DC."
 			]
 		},
 		{
@@ -996,7 +992,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -1150,11 +1146,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"Placing the tip of the quill against a wall of wood, plaster, or stone and speaking a command word causes the ink to flow from the nib onto the wall in the shape of a glowing doorway, casting passwall on the touched surface."
@@ -1195,7 +1191,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 3
+						"number": 3
 					},
 					"entries": [
 						"You touch an adjacent creature, granting them {@dice 3d8} temporary Hit Points for 1 hour."
@@ -1213,7 +1209,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You touch an adjacent creature and attempt a counteract check against one poison or disease afflicting the creature. On a success, you halt the effects of the poison or disease for 1 day, rather than removing it. This temporarily relieves any penalties imposed by the affliction but doesn't cure the effect or count against its duration; the poison or disease is merely halted for a time, and it resumes where it left off once this effect ends."
@@ -1298,7 +1294,6 @@
 			"page": 35,
 			"type": "Item",
 			"level": 0,
-			"traits": [],
 			"price": {
 				"coin": "sp",
 				"amount": 5
@@ -1383,7 +1378,7 @@
 			},
 			"category": "Adventuring Gear",
 			"entries": [
-				"This carefully balanced metal bracket can be attached to the front or top of a shield or {@item tower shield} (but not a {@item buckler}), allowing you to carry a {@item torch} without giving up your shield or holding it in your other hand. While carrying a {@item torch} in this way, you must attempt a DC {@flatDC 11} flat check every time you use the {@action Shield Block} reaction; on a failure, the {@item torch} is extinguished."
+				"This carefully balanced metal bracket can be attached to the front or top of a shield or {@item tower shield} (but not a {@item buckler}), allowing you to carry a {@item torch} without giving up your shield or holding it in your other hand. While carrying a {@item torch} in this way, you must attempt a DC {@flatDC 11} flat check every time you use the {@feat Shield Block} reaction; on a failure, the {@item torch} is extinguished."
 			]
 		},
 		{
@@ -1398,7 +1393,7 @@
 			"bulk": 1,
 			"category": "Adventuring Gear",
 			"entries": [
-				"These specialized pieces of footwear are designed to distribute the wearer's weight over a larger area to prevent them from sinking while walking on snow. They are typically made with a wood frame and rawhide lacings that are tied over the wearer's other footwear. While wearing snowshoes, you ignore the effects of non-magical difficult terrain caused by snow (reducing greater difficult terrain from snow to ordinary difficult terrain). You take a \u201310-foot item penalty to your Speed if wearing snowshoes while walking on any surface other than snow."
+				"These specialized pieces of footwear are designed to distribute the wearer's weight over a larger area to prevent them from sinking while walking on snow. They are typically made with a wood frame and rawhide lacings that are tied over the wearer's other footwear. While wearing snowshoes, you ignore the effects of non-magical {@quickref difficult terrain||3|terrain} caused by snow (reducing {@quickref greater difficult terrain||3|terrain} from snow to ordinary {@quickref difficult terrain||3|terrain}). You take a \u201310-foot item penalty to your Speed if wearing snowshoes while walking on any surface other than snow."
 			]
 		},
 		{
@@ -1447,11 +1442,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"Unfolding the spectacles onto the bridge of the nose, you gain the effects of 2nd-level {@spell comprehend language} for one hour except that it applies to all languages you see rather than a single language, and it does not apply to language you hear."
@@ -1574,7 +1569,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",

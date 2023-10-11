@@ -263,7 +263,7 @@
 					"source": "APG",
 					"page": 9,
 					"entries": [
-						"Your family has particularly long, sharp claws capable of delivering bleeding wounds with a wicked swipe. You gain a claw unarmed attack that deals {@damage 1d6} slashing damage. Your claws are in the brawling group and have the {@trait agile}, {@trait finesse}, and {@trait unarmed} traits."
+						"Your family has particularly long, sharp claws capable of delivering bleeding wounds with a wicked swipe. You gain a claw unarmed attack that deals {@damage 1d6} slashing damage. Your claws are in the {@group brawling} group and have the {@trait agile}, {@trait finesse}, and {@trait unarmed} traits."
 					]
 				},
 				{
@@ -291,7 +291,7 @@
 					"source": "APG",
 					"page": 10,
 					"entries": [
-						"Your family has always seemed to bounce back from disaster, not through physical hardiness or specialized skill, but from sheer luck. Other catfolk whisper that you have nine lives. If you are reduced to 0 Hit Points by a critical hit on an attack roll, you become {@condition dying} 1 instead of {@condition dying} 2."
+						"Your family has always seemed to bounce back from disaster, not through physical hardiness or specialized skill, but from sheer luck. Other catfolk whisper that you have nine lives. If you are reduced to 0 Hit Points by a critical hit on an attack roll, you become {@condition dying 1} instead of {@condition dying 2}."
 					]
 				},
 				{

@@ -50,7 +50,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You press the button on the side of the music box, causing it to erupt with a cacophonous and discordant melody for 1 minute while it plays its entire melody, and it can't be shut off prematurely.",
@@ -112,7 +112,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The floorbell must be activated on level ground. When you do, specify the amount of weight that triggers the floorbell's alarm system. When the amount of weight you specify (or more) is placed on the floorbell, it emits an ear-piercing wail clearly audible to a range of 150 feet. A floorbell can also ring an alarm if a weight you specify is removed from the floorbell, such as if you activated it while a heavy sack was on it."
@@ -142,7 +142,7 @@
 			"bulk": "L",
 			"category": "Worn",
 			"entries": [
-				"A patchwork of humanoid flesh makes up this grotesque mask stitched together with black silk or wire. It is distinctive for its bulbous orange eye\u2014 crafted from a magical glass bauble\u2014and wide row of teeth. When worn, the mask amplifies your ability to sense fear in other creatures. You automatically know the value of the {@condition frightened} condition of any {@condition observed} creature, and you gain a +1 item bonus to {@skill Perception} checks to {@action Seek} {@condition frightened} creatures. Whenever you deal precision damage to a {@condition frightened} creature, you deal 1 additional precision damage. If you are not evil, you are {@condition drained|CRB|drained 2} while wearing the Skinsaw mask."
+				"A patchwork of humanoid flesh makes up this grotesque mask stitched together with black silk or wire. It is distinctive for its bulbous orange eye\u2014crafted from a magical glass bauble\u2014and wide row of teeth. When worn, the mask amplifies your ability to sense fear in other creatures. You automatically know the value of the {@condition frightened} condition of any {@condition observed} creature, and you gain a +1 item bonus to {@skill Perception} checks to {@action Seek} {@condition frightened} creatures. Whenever you deal precision damage to a {@condition frightened} creature, you deal 1 additional precision damage. If you are not evil, you are {@condition drained|CRB|drained 2} while wearing the Skinsaw mask."
 			]
 		},
 		{
@@ -173,12 +173,14 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact",
+						"{@action Interact}"
+					],
+					"traits": [
 						"manipulate"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You thrust your hand into the swarm, draw forth a squirming mass of vermin, and devour it. You recover {@dice 3d10+8} Hit Points and deal the same amount of bludgeoning damage to the swarm. The Hit Point recovery is a positive {@trait healing} effect."
@@ -215,7 +217,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You cinch the harness to prepare for mischief. You gain a +1 item bonus to {@skill Stealth} checks and a +10-foot item bonus to your Speed for 1 minute."

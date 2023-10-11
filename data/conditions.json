@@ -109,7 +109,7 @@
 			"source": "CRB",
 			"page": 619,
 			"entries": [
-				"You are carrying more weight than you can manage. While you're encumbered, you're {@condition clumsy} 1 and take a 10-foot penalty to all your Speeds. As with all penalties to your Speed, this can't reduce your Speed below 5 feet."
+				"You are carrying more weight than you can manage. While you're encumbered, you're {@condition clumsy 1} and take a 10-foot penalty to all your Speeds. As with all penalties to your Speed, this can't reduce your Speed below 5 feet."
 			]
 		},
 		{
@@ -140,10 +140,13 @@
 		},
 		{
 			"name": "Flat-Footed",
+			"alias": [
+				"Off-guard"
+			],
 			"source": "CRB",
 			"page": 620,
 			"entries": [
-				"You're distracted or otherwise unable to focus your full attention on defense. You take a \u20132 circumstance penalty to AC. Some effects give you the {@condition flat-footed} condition only to certain creatures or against certain attacks. Others\u2014especially conditions\u2014can make you universally flatfooted against everything. If a rule doesn't specify that the condition applies only to certain circumstances, it applies to all of them; for example, many effects simply say \"The target is {@condition flat-footed}."
+				"You're distracted or otherwise unable to focus your full attention on defense. You take a \u20132 circumstance penalty to AC. Some effects give you the {@condition flat-footed} condition only to certain creatures or against certain attacks. Others\u2014especially conditions\u2014can make you universally flatfooted against everything. If a rule doesn't specify that the condition applies only to certain circumstances, it applies to all of them; for example, many effects simply say \"The target is {@condition flat-footed}.\""
 			]
 		},
 		{
@@ -213,8 +216,7 @@
 			"page": 620,
 			"entries": [
 				"You can't use any action with the {@trait move} trait. If you're immobilized by something holding you in place and an external force would move you out of your space, the force must succeed at a check against either the DC of the effect holding you in place or the relevant defense (usually Fortitude DC) of the monster holding you in place."
-			],
-			"group": "Degrees of Detection"
+			]
 		},
 		{
 			"name": "Indifferent",

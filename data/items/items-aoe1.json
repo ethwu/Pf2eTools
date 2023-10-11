@@ -23,7 +23,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -56,7 +56,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Bomb",
@@ -115,11 +115,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 3
+						"number": 3
 					},
 					"entries": [
 						"You become undetectable to undead creatures for 10 minutes. Undead can't see, hear, or smell you, nor detect you with sensory capabilities such as scent or {@ability tremorsense}. A creature can attempt a single DC 18 Will saving throw to ignore this effect.",
@@ -176,7 +176,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -185,7 +185,6 @@
 				"Taking an additional dose of grolna while affected by the effects of stage 1 of a previous dose resets the duration of stage 1 and postpones the onset of stage 2 effects.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 13,
 					"savingThrow": "Fortitude",
 					"onset": "1 minute",
@@ -193,8 +192,13 @@
 					"stages": [
 						{
 							"stage": 1,
-							"entry": "gain scent",
-							"duration": "imprecise"
+							"entry": "gain scent (imprecise) 30 feet, gain a +3 item bonus to {@skill Survival} checks to follow tracks, and become {@condition stupefied 1}",
+							"duration": "1 hour"
+						},
+						{
+							"stage": 2,
+							"entry": "{@condition stupefied 2}",
+							"duration": "6 hours"
 						}
 					]
 				}
@@ -279,7 +283,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -287,7 +291,6 @@
 				"This soporific chemical comes in liquid form and is virtually undetectable by taste or scent. It's most commonly slipped into a victim's drink to quickly induce a deep unconsciousness.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 23,
 					"savingThrow": "Fortitude",
 					"onset": "1 minute",
@@ -332,7 +335,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -342,7 +345,6 @@
 				"Nearby guardians can then simply follow the resulting trail of discarded valuables to find the weakened trespasser.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 19,
 					"savingThrow": "Fortitude",
 					"onset": "1 minute",
@@ -396,7 +398,10 @@
 						"unit": "reaction"
 					},
 					"components": [
-						"command (mental)"
+						"command"
+					],
+					"traits": [
+						"mental"
 					],
 					"trigger": "You damage a creature with a pacifying weapon",
 					"entries": [
@@ -434,7 +439,7 @@
 						"unit": "reaction"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"trigger": "You damage a creature with",
 					"entries": [
@@ -469,7 +474,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"When activated, the rod records anything it sees and hears for 1 minute. Its lens acts as both eye and ear with precise vision and imprecise hearing. This recorded sequence can then be played back as many times as desired, the sights and sounds communicated telepathically to the rod's holder. The rod's recording sequence can be triggered manually by a person holding it, or it can be programmed to begin recording automatically in response to a specified stimulus, such as nearby movement or a specific trigger word spoken in its vicinity.",
@@ -496,6 +501,12 @@
 						"amount": 60
 					},
 					"entries": [],
+					"traits": [
+						"uncommon",
+						"divination",
+						"magical",
+						"scrying"
+					],
 					"variantType": "reusable"
 				}
 			]

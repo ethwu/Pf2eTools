@@ -153,7 +153,7 @@ class PageFilterItems extends PageFilter {
 		} else throw new Error(`"${it.name}" has no entries?`)
 		it._fDamage = undefined; // FIXME: set by trait implies
 		this.handleTraitImplies(it, { traitProp: "traits", entityTypes: ["item"] });
-		it._fTraits = (it.traits || []).map(t => Parser.getTraitName(t));
+		it._fTraits = (it.traits || []).concat(it?.weaponData?.traits || []).concat(it?.comboWeaponData?.traits || []).map(t => Parser.getTraitName(t));
 		if (!it._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "Rarity")).some(Boolean)) it._fTraits.push("Common");
 
 		// RuneItem Builder
@@ -278,7 +278,7 @@ class ModalFilterBaseItems extends ModalFilter {
 			<div class="col-2-2 text-center">${Array.isArray(item.category) ? item.category.join(", ") : item.category}</div>
 			<div class="col-2 text-center">${Parser.priceToFull(item.price)}</div>
 			<div class="col-1-3 text-center">${item.bulk ? item.bulk : "\u2014"}</div>
-			<div class="col-1-3 text-center ${Parser.sourceJsonToColor(item.source)} pr-0" title="${Parser.sourceJsonToFull(item.source)}" ${BrewUtil.sourceJsonToStyle(item.source)}>${source}</div>`;
+			<div class="col-1-3 text-center ${Parser.sourceJsonToColor(item.source)}" title="${Parser.sourceJsonToFull(item.source)}" ${BrewUtil.sourceJsonToStyle(item.source)}>${source}</div>`;
 
 		return new ListItem(
 			itI,

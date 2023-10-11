@@ -90,7 +90,7 @@ class PageFilterSpells extends PageFilter {
 		this._traitFilter = new TraitsFilter({header: "Traits",
 			discardCategories: {
 				Class: true,
-				"Schools & Traditions": true,
+				"School": true,
 			},
 		});
 		this._schoolFilter = new Filter({
@@ -113,17 +113,17 @@ class PageFilterSpells extends PageFilter {
 		spell._fSources = SourceFilter.getCompleteFilterSources(spell);
 		spell._fTraditions = (spell.traditions || [])
 			.concat(spell.spellLists || [])
-			.concat(spell.traditions ? spell.traditions.includes("Primal" || "Arcane") ? "Halcyon" : [] : []).map(t => t.toTitleCase());
+			.concat(spell.traditions ? spell.traditions.map(x => x.toLowerCase()).includes("primal" || "arcane") ? "Halcyon" : [] : []).map(t => t.toTitleCase());
 		spell._fSpellType = spell.traits.includes("cantrip") && spell.focus ? ["Focus", "Cantrip"] : spell.traits.includes("cantrip") ? ["Cantrip"] : spell.focus ? ["Focus"] : ["Spell"];
 		spell._fTraits = spell.traits.map(t => Parser.getTraitName(t));
 		if (!spell._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "Rarity")).some(Boolean)) spell._fTraits.push("Common");
 		spell._fClasses = spell._fTraits.filter(t => Renderer.trait.isTraitInCategory(t, "Class")) || [];
 		spell._fSubClasses = Object.entries(spell.subclass || {}).map(([k, v]) => {
 			return v.map(sc => {
-				const [cls, subCls] = k.split("|")
+				const [subCls, cls] = k.split("|")
 				return new FilterItem({
 					item: sc,
-					nest: `${subCls} (${cls})`,
+					nest: `${subCls} (${cls.replace(/\|.+/g, "")})`,
 				});
 			});
 		}).flat();

@@ -6,78 +6,91 @@
 	"type": "object",
 	"version": "0.0.1",
 	"definitions": {
-		"sourceList": {
-			"enum": [
-				"AAWS",
-				"APG",
-				"AV0",
-				"AV1",
-				"AV2",
-				"AV3",
-				"AoA0",
-				"AoA1",
-				"AoA2",
-				"AoA3",
-				"AoA4",
-				"AoA5",
-				"AoA6",
-				"AoE0",
-				"AoE1",
-				"AoE2",
-				"AoE3",
-				"AoE4",
-				"AoE5",
-				"AoE6",
-				"B1",
-				"B2",
-				"B3",
-				"CRB",
-				"EC0",
-				"EC1",
-				"EC2",
-				"EC3",
-				"EC4",
-				"EC5",
-				"EC6",
-				"FRP0",
-				"FRP1",
-				"FRP2",
-				"FRP3",
-				"FoP",
-				"G&G",
-				"GMG",
-				"LOACLO",
-				"LOAG",
-				"LOCG",
-				"LOGM",
-				"LOGMWS",
-				"LOL",
-				"LOME",
-				"LOPSG",
-				"LOTGB",
-				"LOWG",
-				"LTiBA",
-				"NGD",
-				"Sli",
-				"SoM",
-				"SoT0",
-				"SoT1",
-				"SoT2",
-				"SoT3",
-				"SoT4",
-				"SoT5",
-				"SoT6",
-				"OoA0",
-				"OoA1",
-				"OoA2",
-				"OoA3",
-				"QFF0",
-				"QFF1",
-				"QFF2",
-				"QFF3",
-				"TiO",
-				"BotD"
+		"spellsByLevelBlock": {
+			"type": "object",
+			"properties": {
+				"level": {
+					"type": "integer",
+					"minimum": 1
+				},
+				"slots": {
+					"type": "integer",
+					"minimum": 1
+				},
+				"spells": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"source": {
+								"type": "string",
+								"$ref": "utils.json#/definitions/sourceList"
+							},
+							"amount": {
+								"oneOf": [
+									{
+										"type": "integer",
+										"minimum": 2
+									},
+									{
+										"const": "at will"
+									}
+								]
+							},
+							"notes": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						},
+						"additionalProperties": false,
+						"required": [
+							"name"
+						]
+					},
+					"minItems": 1,
+					"uniqueItems": true
+				}
+			},
+			"additionalProperties": false,
+			"required": [
+				"spells"
 			]
+		},
+		"range": {
+			"type": "object",
+			"properties": {
+				"entry": {
+					"type": "string"
+				},
+				"unit": {
+					"type": "string",
+					"enum": [
+						"touch",
+						"feet",
+						"mile",
+						"planetary",
+						"interplanar",
+						"unlimited",
+						"unknown"
+					]
+				},
+				"number": {
+					"type": "integer",
+					"inclusiveMinimum": 0
+				}
+			},
+			"required": [
+				"unit"
+			],
+			"additionalProperties": false
+		},
+		"sourceList": {
+			"$ref": "_generated/sources.json#/definitions/sourceList"
 		},
 		"alignmentTraits": {
 			"type": "string",
@@ -144,6 +157,13 @@
 			"properties": {
 				"speedNote": {
 					"type": "string"
+				},
+				"abilities": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"minItems": 1
 				}
 			},
 			"additionalProperties": {
@@ -168,7 +188,7 @@
 				},
 				{
 					"properties": {
-						"freq": {
+						"number": {
 							"$comment": "In code return \"Once\" if =1, \"Twice\" if =2, and \"`n` times\" otherwise.",
 							"description": "How frequent it is; once, twice etc.",
 							"type": "integer",
@@ -221,13 +241,13 @@
 					"oneOf": [
 						{
 							"required": [
-								"freq",
+								"number",
 								"unit"
 							]
 						},
 						{
 							"required": [
-								"freq",
+								"number",
 								"customUnit"
 							]
 						}
@@ -290,12 +310,17 @@
 		"otherSources": {
 			"type": "object",
 			"patternProperties": {
-				"^(Reprinted|Expanded)$": {
+				"^(Reprinted|Expanded|Originally)$": {
 					"type": "array",
 					"items": {
 						"type": "string",
 						"pattern": "^[\\w\\d&]+\\|\\d+$"
 					},
+					"examples": [
+						[
+							""
+						]
+					],
 					"uniqueItems": true
 				}
 			},
@@ -642,29 +667,7 @@
 				"maximum": 30
 			}
 		},
-		"savingThrows": {
-			"type": "object",
-			"propertyNames": {
-				"enum": [
-					"fort",
-					"ref",
-					"will"
-				]
-			},
-			"additionalProperties": {
-				"type": "object",
-				"properties": {
-					"default": {
-						"type": "integer",
-						"minimum": 0
-					}
-				},
-				"additionalProperties": false,
-				"minProperties": 1
-			},
-			"minProperties": 1
-		},
-		"anyTrait": {
+		"anyTraitOld": {
 			"type": "string",
 			"description": "Any Trait in the game.",
 			"anyOf": [
@@ -767,13 +770,20 @@
 						"plant",
 						"fungus",
 						"olfactory",
+						"tethered",
 						"inhaled",
 						"incarnate",
 						"shove",
 						"alchemical",
+						"mutant",
+						"serpentfolk",
 						"death",
+						"mindless",
 						"light",
 						"emotion",
+						"catalyst",
+						"companion",
+						"ingested",
 						"fear",
 						"charm",
 						"summoned",
@@ -869,6 +879,9 @@
 					]
 				}
 			]
+		},
+		"anyTrait": {
+			"$ref": "_generated/traits.json#/definitions/anyTrait"
 		},
 		"loreSubjects": {
 			"type": "string",
@@ -979,6 +992,9 @@
 			]
 		},
 		"languages": {
+			"$ref": "_generated/languages.json#/definitions/language"
+		},
+		"languagesOld": {
 			"type": "string",
 			"enum": [
 				"Common",
@@ -989,30 +1005,40 @@
 				"Goblin",
 				"Undercommon",
 				"Draconic",
-				"Mwangi"
+				"Mwangi",
+				"Aklo",
+				"Taldane",
+				"Tien"
 			]
 		},
 		"skillName": {
 			"type": "string",
 			"description": "A Skill Trait",
-			"enum": [
-				"acrobatics",
-				"arcana",
-				"athletics",
-				"crafting",
-				"deception",
-				"diplomacy",
-				"intimidation",
-				"lore",
-				"medicine",
-				"nature",
-				"occultism",
-				"performance",
-				"religion",
-				"society",
-				"stealth",
-				"survival",
-				"thievery"
+			"oneOf": [
+				{
+					"enum": [
+						"acrobatics",
+						"arcana",
+						"athletics",
+						"crafting",
+						"deception",
+						"diplomacy",
+						"intimidation",
+						"lore",
+						"medicine",
+						"nature",
+						"occultism",
+						"performance",
+						"religion",
+						"society",
+						"stealth",
+						"survival",
+						"thievery"
+					]
+				},
+				{
+					"pattern": "^{[\\w '\\-]+} lore$"
+				}
 			]
 		},
 		"skillNameUpper": {
@@ -1060,6 +1086,8 @@
 				"summoner|SoM",
 				"swashbuckler|APG",
 				"witch|APG",
+				"psychic|DA",
+				"thaumaturge|DA",
 				"wizard"
 			]
 		},
@@ -1073,6 +1101,8 @@
 				"cleric",
 				"druid",
 				"fighter",
+				"psychic",
+				"thaumaturge",
 				"gunslinger",
 				"inventor",
 				"investigator",
@@ -1190,6 +1220,7 @@
 			}
 		},
 		"damageType": {
+			"$comment": "FIXME: This should be replaced by something accounting for splash and persistent damage, as well as trait-induced damage like versatile and modular",
 			"type": "string",
 			"enum": [
 				"electricity",
@@ -1214,8 +1245,8 @@
 				"persistent",
 				"persistent fire",
 				"persistent bleed damage",
-				"versatile p",
-				"versatile s",
+				"versatile <p>",
+				"versatile <s>",
 				"versatile fire",
 				"versatile p or s",
 				"persistent bleed",
@@ -1233,6 +1264,7 @@
 			"enum": [
 				"death",
 				"contingency",
+				"curse",
 				"detection",
 				"disease",
 				"emotion",
@@ -1281,7 +1313,9 @@
 				"Leather",
 				"Chain",
 				"Cloth",
-				"Composite"
+				"Composite",
+				"Wood",
+				"Skeletal"
 			]
 		},
 		"conditions": {
@@ -1390,19 +1424,136 @@
 				"water",
 				"wealth",
 				"wyrmkin",
-				"zeal"
+				"zeal",
+				"air (apocryphal)",
+				"ambition (apocryphal)",
+				"change (apocryphal)",
+				"cities (apocryphal)",
+				"cold (apocryphal)",
+				"confidence (apocryphal)",
+				"creation (apocryphal)",
+				"darkness (apocryphal)",
+				"death (apocryphal)",
+				"decay (apocryphal)",
+				"delirium (apocryphal)",
+				"destruction (apocryphal)",
+				"dreams (apocryphal)",
+				"dust (apocryphal)",
+				"duty (apocryphal)",
+				"earth (apocryphal)",
+				"family (apocryphal)",
+				"fate (apocryphal)",
+				"fire (apocryphal)",
+				"freedom (apocryphal)",
+				"glyph (apocryphal)",
+				"healing (apocryphal)",
+				"indulgence (apocryphal)",
+				"knowledge (apocryphal)",
+				"lightning (apocryphal)",
+				"luck (apocryphal)",
+				"magic (apocryphal)",
+				"might (apocryphal)",
+				"moon (apocryphal)",
+				"naga (apocryphal)",
+				"nature (apocryphal)",
+				"nightmares (apocryphal)",
+				"pain (apocryphal)",
+				"passion (apocryphal)",
+				"perfection (apocryphal)",
+				"plague (apocryphal)",
+				"protection (apocryphal)",
+				"repose (apocryphal)",
+				"secrecy (apocryphal)",
+				"sorrow (apocryphal)",
+				"souls (apocryphal)",
+				"stars (apocryphal)",
+				"sun (apocryphal)",
+				"swarm (apocryphal)",
+				"time (apocryphal)",
+				"toil (apocryphal)",
+				"travel (apocryphal)",
+				"trickery (apocryphal)",
+				"truth (apocryphal)",
+				"tyranny (apocryphal)",
+				"undeath (apocryphal)",
+				"vigil (apocryphal)",
+				"void (apocryphal)",
+				"water (apocryphal)",
+				"wealth (apocryphal)",
+				"wyrmkin (apocryphal)",
+				"zeal (apocryphal)"
 			]
+		},
+		"amp": {
+			"type": "object",
+			"properties": {
+				"entries": {
+					"type": "array",
+					"items": {
+						"$ref": "entry.json"
+					}
+				},
+				"heightened": {
+					"$ref": "utils.json#/definitions/heightened"
+				}
+			},
+			"minProperties": 1,
+			"additionalProperties": false
+		},
+		"heightened": {
+			"type": "object",
+			"properties": {
+				"X": {
+					"description": "An array of levels to which the spell can be heightened.",
+					"type": "object",
+					"patternProperties": {
+						"^([1-9]|10)$": {
+							"description": "An array of effects of heightening the spell to the given level.",
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							},
+							"minItems": 1
+						}
+					},
+					"minProperties": 1,
+					"additionalProperties": false
+				},
+				"plusX": {
+					"type": "object",
+					"patternProperties": {
+						"^([1-9]|10)$": {
+							"type": "array",
+							"items": {
+								"$ref": "entry.json"
+							},
+							"minItems": 1
+						}
+					},
+					"minProperties": 1,
+					"additionalProperties": false
+				}
+			},
+			"minProperties": 1,
+			"additionalProperties": false
 		},
 		"components": {
 			"type": "array",
 			"items": {
 				"type": "string",
-				"enum": [
-					"{@action Strike}",
-					"{@action Interact}",
-					"{@action Cast a Spell}",
-					"envision",
-					"command"
+				"oneOf": [
+					{
+						"enum": [
+							"envision",
+							"command"
+						]
+					},
+					{
+						"pattern": "\\{@action .+?\\}"
+					},
+					{
+						"pattern": "\\{@feat .+?\\}"
+					}
 				]
 			},
 			"minItems": 1
@@ -1458,6 +1609,9 @@
 					"type": "integer",
 					"minimum": 0
 				},
+				"range": {
+					"$ref": "#/definitions/range"
+				},
 				"components": {
 					"$ref": "#/definitions/components"
 				},
@@ -1468,7 +1622,13 @@
 					},
 					"minItems": 1
 				},
+				"note": {
+					"type": "string"
+				},
 				"trigger": {
+					"type": "string"
+				},
+				"prerequisites": {
 					"type": "string"
 				},
 				"requirements": {
@@ -1506,7 +1666,8 @@
 							"$ref": "#/definitions/tags"
 						},
 						"source": {
-							"type": "string"
+							"type": "string",
+							"$ref": "utils.json#/definitions/sourceList"
 						},
 						"name": {
 							"type": "string"
@@ -1703,6 +1864,10 @@
 				"name": {
 					"type": "string"
 				},
+				"activity": {
+					"type": "object",
+					"$ref": "#/definitions/activity"
+				},
 				"range": {
 					"type": "string",
 					"enum": [
@@ -1757,35 +1922,98 @@
 		},
 		"defenses": {
 			"type": "object",
+			"$comment": "HP will NOT match for creatures.",
 			"properties": {
 				"ac": {
 					"type": "object",
 					"properties": {
-						"default": {
+						"std": {
 							"type": "integer",
 							"exclusiveMinimum": 0
 						},
-						"note": {
-							"type": "string"
+						"patternProperties": {
+							"^.+$": {
+								"type": "integer",
+								"exclusiveMinimum": 0
+							}
+						},
+						"notes": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1
+						},
+						"abilities": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1
 						}
 					},
-					"additionalProperties": false,
+					"additionalProperties": {
+						"type": "integer"
+					},
 					"minProperties": 1
 				},
 				"savingThrows": {
 					"type": "object",
 					"properties": {
 						"fort": {
-							"type": "integer",
-							"minimum": 0
+							"type": "object",
+							"properties": {
+								"std": {
+									"type": "integer",
+									"minimum": 0
+								},
+								"abilities": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									},
+									"minItems": 1
+								}
+							}
 						},
 						"ref": {
-							"type": "integer",
-							"minimum": 0
+							"type": "object",
+							"properties": {
+								"std": {
+									"type": "integer",
+									"minimum": 0
+								},
+								"abilities": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									},
+									"minItems": 1
+								}
+							}
 						},
 						"will": {
-							"type": "integer",
-							"minimum": 0
+							"type": "object",
+							"properties": {
+								"std": {
+									"type": "integer",
+									"minimum": 0
+								},
+								"abilities": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									},
+									"minItems": 1
+								}
+							}
+						},
+						"abilities": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							},
+							"minItems": 1
 						}
 					},
 					"additionalProperties": false,
@@ -1794,7 +2022,7 @@
 				"hardness": {
 					"type": "object",
 					"properties": {
-						"default": {
+						"std": {
 							"type": "integer",
 							"minimum": 0
 						}
@@ -1809,28 +2037,75 @@
 					"minProperties": 1
 				},
 				"hp": {
-					"description": "Hit Points",
-					"type": "object",
-					"properties": {
-						"default": {
-							"type": "integer",
-							"exclusiveMinimum": 0
+					"oneOf": [
+						{
+							"description": "Hit Points",
+							"type": "object",
+							"properties": {
+								"std": {
+									"type": "integer",
+									"exclusiveMinimum": 0
+								},
+								"notes": {
+									"type": "object",
+									"patternProperties": {
+										"^.+$": {
+											"type": "string"
+										}
+									},
+									"minProperties": 1
+								}
+							},
+							"patternProperties": {
+								"^.+$": {
+									"type": "integer",
+									"exclusiveMinimum": 0
+								}
+							},
+							"additionalProperties": false,
+							"minProperties": 1
+						},
+						{
+							"type": "array",
+							"items": {
+								"description": "Hit Points",
+								"type": "object",
+								"properties": {
+									"hp": {
+										"type": "integer",
+										"exclusiveMinimum": 0
+									},
+									"name": {
+										"type": "string"
+									},
+									"abilities": {
+										"type": "array",
+										"items": {
+											"type": "string"
+										},
+										"minItems": 1
+									},
+									"notes": {
+										"type": "array",
+										"items": {
+											"type": "string"
+										},
+										"minItems": 1
+									}
+								},
+								"additionalProperties": false,
+								"required": [
+									"hp"
+								]
+							}
 						}
-					},
-					"patternProperties": {
-						"^.+$": {
-							"type": "integer",
-							"exclusiveMinimum": 0
-						}
-					},
-					"additionalProperties": false,
-					"minProperties": 1
+					]
 				},
 				"bt": {
 					"description": "Broken Threshold",
 					"type": "object",
 					"properties": {
-						"default": {
+						"std": {
 							"type": "integer",
 							"minimum": 0
 						}
@@ -1843,6 +2118,29 @@
 					},
 					"additionalProperties": false,
 					"minProperties": 1
+				},
+				"thresholds": {
+					"description": "The HP thresholds at which a troop creature (B3 p306) changes size. Rendered as \"<value1> (<squares1> squares), <value2> (<squares2> squares)\".",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"value": {
+								"type": "integer",
+								"minimum": 1
+							},
+							"squares": {
+								"type": "integer",
+								"minimum": 1
+							}
+						},
+						"required": [
+							"value",
+							"squares"
+						],
+						"additionalProperties": false
+					},
+					"minItems": 2
 				},
 				"notes": {
 					"type": "object",
@@ -1882,7 +2180,20 @@
 				"resistances": {
 					"type": "array",
 					"items": {
-						"type": "string"
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"amount": {
+								"type": "integer",
+								"minimum": 0
+							},
+							"note": {
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
 					},
 					"minItems": 1
 				},
@@ -2175,28 +2486,6 @@
 					"type": "object",
 					"properties": {
 						"mode": {
-							"const": "replaceName"
-						},
-						"replace": {
-							"type": "string"
-						},
-						"with": {
-							"type": "string"
-						},
-						"flags": {
-							"type": "string"
-						}
-					},
-					"required": [
-						"replace",
-						"with"
-					],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"mode": {
 							"const": "appendStr"
 						},
 						"str": {
@@ -2465,157 +2754,6 @@
 					"type": "object",
 					"properties": {
 						"mode": {
-							"const": "calculateProp"
-						},
-						"prop": {
-							"type": "string"
-						},
-						"formula": {
-							"type": "string"
-						}
-					},
-					"required": [
-						"prop",
-						"formula"
-					],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"mode": {
-							"const": "replaceSpells"
-						},
-						"spells": {
-							"type": "object"
-						},
-						"daily": {
-							"type": "object"
-						}
-					},
-					"required": [
-						"mode"
-					],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"mode": {
-							"const": "addSpells"
-						},
-						"spells": {
-							"type": "object"
-						},
-						"will": {
-							"type": "array"
-						},
-						"daily": {
-							"type": "object"
-						},
-						"weekly": {
-							"type": "object"
-						},
-						"yearly": {
-							"type": "object"
-						}
-					},
-					"required": [
-						"mode"
-					],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"mode": {
-							"const": "addSkills"
-						},
-						"skills": {
-							"type": "object"
-						}
-					},
-					"required": [
-						"mode",
-						"skills"
-					],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"mode": {
-							"const": "addSaves"
-						},
-						"saves": {
-							"type": "object"
-						}
-					},
-					"required": [
-						"mode",
-						"saves"
-					],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"mode": {
-							"const": "addAllSkills"
-						},
-						"skills": {
-							"type": "integer"
-						}
-					},
-					"required": [
-						"mode",
-						"skills"
-					],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"mode": {
-							"const": "addAllSaves"
-						},
-						"saves": {
-							"type": "integer"
-						}
-					},
-					"required": [
-						"mode",
-						"saves"
-					],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"mode": {
-							"const": "addSenses"
-						},
-						"senses": {
-							"anyOf": [
-								{
-									"type": "object"
-								},
-								{
-									"type": "array"
-								}
-							]
-						}
-					},
-					"required": [
-						"mode",
-						"senses"
-					],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"mode": {
 							"const": "scalarAddProp"
 						},
 						"prop": {
@@ -2659,66 +2797,15 @@
 					"type": "object",
 					"properties": {
 						"mode": {
-							"const": "scalarAddHit"
+							"const": "setProps"
 						},
-						"scalar": {
-							"type": "number"
+						"props": {
+							"type": "object"
 						}
 					},
 					"required": [
 						"mode",
-						"scalar"
-					],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"mode": {
-							"const": "scalarAddDc"
-						},
-						"scalar": {
-							"type": "number"
-						}
-					},
-					"required": [
-						"mode",
-						"scalar"
-					],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"mode": {
-							"const": "maxSize"
-						},
-						"max": {
-							"type": "string"
-						}
-					},
-					"required": [
-						"mode",
-						"max"
-					],
-					"additionalProperties": false
-				},
-				{
-					"type": "object",
-					"properties": {
-						"mode": {
-							"const": "scalarMultXp"
-						},
-						"scalar": {
-							"type": "number"
-						},
-						"floor": {
-							"type": "boolean"
-						}
-					},
-					"required": [
-						"mode",
-						"scalar"
+						"props"
 					],
 					"additionalProperties": false
 				}

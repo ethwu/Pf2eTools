@@ -1,8 +1,17 @@
 {
+	"_meta": {
+		"dependencies": {
+			"creature": [
+				"B1"
+			]
+		},
+		"internalCopies": [
+			"creature"
+		]
+	},
 	"creature": [
 		{
 			"name": "Ahvothian",
-			"isNpc": false,
 			"source": "Sli",
 			"page": 62,
 			"level": 7,
@@ -11,9 +20,6 @@
 				"ce",
 				"medium",
 				"fiend"
-			],
-			"creatureType": [
-				"Fiend"
 			],
 			"perception": {
 				"std": 18
@@ -25,28 +31,28 @@
 			],
 			"languages": {
 				"languages": [
-					"Abyssal",
-					"Common"
+					"abyssal",
+					"common"
 				],
 				"abilities": [
 					"speak with animals"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 19
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 11
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 15,
 					"against humanoids": 17
 				},
-				"Religion": {
+				"religion": {
 					"std": 11
 				},
-				"Survival": {
+				"survival": {
 					"std": 17
 				}
 			},
@@ -58,41 +64,10 @@
 				"wis": 4,
 				"cha": 2
 			},
-			"ac": {
-				"std": 25
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 18
-				},
-				"ref": {
-					"std": 12
-				},
-				"will": {
-					"std": 15
-				}
-			},
-			"hp": [
-				{
-					"hp": 160,
-					"abilities": null
-				}
-			],
-			"weaknesses": [
-				{
-					"amount": 5,
-					"name": "cold"
-				},
-				{
-					"amount": 5,
-					"name": "good"
-				}
-			],
-			"resistances": [
-				{
-					"amount": 10,
-					"name": "fire"
-				}
+			"items": [
+				"javelins (3)",
+				"longspear",
+				"trophies (animal, beast, and humanoid)"
 			],
 			"speed": {
 				"abilities": [
@@ -105,7 +80,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 18,
-					"effects": [],
 					"damage": "{@damage 2d10+8} piercing",
 					"types": [
 						"piercing"
@@ -116,7 +90,7 @@
 					"name": "longspear",
 					"attack": 18,
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"wicked trophies"
@@ -131,7 +105,7 @@
 					"name": "javelin",
 					"attack": 14,
 					"traits": [
-						"thrown 30 feet"
+						"thrown <30 feet>"
 					],
 					"effects": [
 						"Wicked"
@@ -144,9 +118,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Innate",
 					"type": "Innate",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 23,
 					"entry": {
 						"1": {
@@ -184,7 +157,18 @@
 								}
 							]
 						},
-						"constant": {}
+						"constant": {
+							"4": {
+								"spells": [
+									{
+										"name": "freedom of movement"
+									},
+									{
+										"name": "speak with animals"
+									}
+								]
+							}
+						}
 					}
 				}
 			],
@@ -195,7 +179,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -205,12 +188,6 @@
 				"bot": [
 					{
 						"entries": [
-							"Divine Innate Spells DC 23; 4th creation; 3rd earthbind (at will), fear (at will); 2nd death knell (at will); 1st charm (at will); Constant (4th) freedom of movement, speak with animals."
-						],
-						"name": "Trophies"
-					},
-					{
-						"entries": [
 							"When an ahvothian uses an innate spell against a reptile, the DC is 27 rather than 23."
 						],
 						"name": "Reptile Master"
@@ -218,17 +195,53 @@
 					{
 						"entries": [
 							"An ahvothian chooses a creature type (such as animal, celestial, or humanoid) from which they currently carry a trophy from a past kill.",
-							"Their weapon Strikes against creatures of that type deal an additional {@dice 1d10} damage and they gain a +2 status bonus on {@skill Intimidation} checks against creatures of that type.",
+							"Their weapon {@action Strike||Strikes} against creatures of that type deal an additional {@dice 1d10} damage and they gain a +2 status bonus on {@skill Intimidation} checks against creatures of that type.",
 							"The ahvothian doesn't lose these bonuses if they lose the trophies. Once per day, an ahvothian can change the creature type of their wicked trophies in a ritual that takes 1 hour. Nearly all ahvothians encountered on the Material Plane have selected humanoids as the focus of their wicked trophies."
 						],
 						"name": "Wicked Trophies"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 25
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 18
+					},
+					"ref": {
+						"std": 12
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": [
+					{
+						"hp": 160
+					}
+				],
+				"weaknesses": [
+					{
+						"amount": 5,
+						"name": "cold"
+					},
+					{
+						"amount": 5,
+						"name": "good"
+					}
+				],
+				"resistances": [
+					{
+						"amount": 10,
+						"name": "fire"
 					}
 				]
 			}
 		},
 		{
 			"name": "Angazhani Cultist",
-			"isNpc": false,
 			"source": "Sli",
 			"page": 30,
 			"level": 4,
@@ -238,37 +251,34 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 11
 			},
 			"languages": {
 				"languages": [
-					"Abyssal",
-					"Common",
-					"Mwangi"
+					"abyssal",
+					"common",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 12
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 8,
 					"against demons": 10
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 10
 				},
-				"Religion": {
+				"religion": {
 					"std": 8
 				},
-				"Survival": {
+				"survival": {
 					"std": 11
 				},
-				"Demon Lore": {
+				"demon lore": {
 					"std": 8
 				}
 			},
@@ -280,26 +290,6 @@
 				"wis": 3,
 				"cha": 2
 			},
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 13
-				},
-				"ref": {
-					"std": 9
-				},
-				"will": {
-					"std": 11
-				}
-			},
-			"hp": [
-				{
-					"hp": 60,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -309,9 +299,8 @@
 					"name": "spear",
 					"attack": 14,
 					"traits": [
-						"fatal d10"
+						"fatal <d10>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+6} piercing",
 					"types": [
 						"piercing"
@@ -322,10 +311,9 @@
 					"name": "spear",
 					"attack": 11,
 					"traits": [
-						"fatal d10",
-						"thrown 20 feet"
+						"fatal <d10>",
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+6} piercing",
 					"types": [
 						"piercing"
@@ -350,7 +338,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Shield Block",
 						"generic": {
 							"tag": "ability"
@@ -360,16 +347,92 @@
 				"bot": [
 					{
 						"entries": [
-							"Angazhani cultists inflict an extra {@dice 1d6} damage with their spears, and any spear gains the fatal d10 trait while the cultist is using it (both the extra weapon damage die and the {@trait fatal} trait have already been included in the cultist's spear Strikes above)."
+							"Angazhani cultists inflict an extra {@dice 1d6} damage with their spears, and any spear gains the fatal <d10> trait while the cultist is using it (both the extra weapon damage die and the {@trait fatal} trait have already been included in the cultist's spear {@action Strike||Strikes} above)."
 						],
 						"name": "Demonic Strength"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 13
+					},
+					"ref": {
+						"std": 9
+					},
+					"will": {
+						"std": 11
+					}
+				},
+				"hp": [
+					{
+						"hp": 60
 					}
 				]
 			}
 		},
 		{
+			"name": "Alchemical Golem",
+			"source": "Sli",
+			"page": 48,
+			"_copy": {
+				"name": "Alchemical Golem",
+				"source": "B1",
+				"_mod": {
+					"abilities.mid": [
+						{
+							"mode": "insertArr",
+							"items": {
+								"entries": [
+									"When the alchemical golem is reduced to 0 Hit Points, it explodes and deals damage from its alchemical rupture ability in a 10-foot emanation. If a critical hit reduced the golem to 0 Hit Points, creatures in the area treat their saving throws against the rupture effects as one degree worse."
+								],
+								"name": "Explode"
+							}
+						}
+					],
+					"traits": {
+						"mode": "insertArr",
+						"items": [
+							"unique"
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "Ngira",
+			"source": "Sli",
+			"page": 37,
+			"_copy": {
+				"name": "Angazhani Cultist",
+				"source": "Sli",
+				"_mod": {
+					"abilities.mid": [
+						{
+							"mode": "insertArr",
+							"items": {
+								"entries": [
+									"Ngira has a +1 profane bonus on attack rolls, skill checks, and saving throws from Sanura's profane gift. Sanura can communicate with Ngira telepathically at any distance, and Ngira treats saves against Sanura's {@spell suggestion} spells as one degree of success worse."
+								],
+								"name": "Profane Gift"
+							}
+						}
+					],
+					"traits": {
+						"mode": "insertArr",
+						"items": [
+							"unique"
+						]
+					}
+				}
+			}
+		},
+		{
 			"name": "Aspis Guard",
-			"isNpc": false,
 			"source": "Sli",
 			"page": 44,
 			"level": 5,
@@ -378,9 +441,6 @@
 				"medium",
 				"dwarf",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 14
@@ -392,22 +452,22 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Dwarven",
-					"Mwangi"
+					"common",
+					"dwarven",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 15
 				},
-				"Society": {
+				"society": {
 					"std": 9
 				},
-				"Survival": {
+				"survival": {
 					"std": 12
 				},
-				"Aspis Consortium Lore": {
+				"aspis consortium lore": {
 					"std": 9
 				}
 			},
@@ -419,25 +479,11 @@
 				"wis": 3,
 				"cha": 1
 			},
-			"ac": {
-				"std": 22
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 14
-				},
-				"ref": {
-					"std": 10
-				},
-				"will": {
-					"std": 12
-				}
-			},
-			"hp": [
-				{
-					"hp": 80,
-					"abilities": null
-				}
+			"items": [
+				"{@runeItem battle axe||+1 weapon potency||striking|}",
+				"{@item crossbow} (20 bolts)",
+				"{@item dagger}",
+				"{@item tower shield} (Hardness 5, HP 20, BT 10)"
 			],
 			"speed": {
 				"abilities": [
@@ -468,9 +514,8 @@
 					"attack": 15,
 					"traits": [
 						"agile",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+8} piercing",
 					"types": [
 						"piercing"
@@ -481,10 +526,9 @@
 					"name": "crossbow",
 					"attack": 12,
 					"traits": [
-						"range increment 120 feet",
-						"reload 1"
+						"range increment <120 feet>",
+						"reload <1>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d8+4} piercing",
 					"types": [
 						"piercing"
@@ -496,10 +540,9 @@
 					"attack": 12,
 					"traits": [
 						"agile",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+8} piercing",
 					"types": [
 						"piercing"
@@ -513,7 +556,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -521,8 +563,7 @@
 					},
 					{
 						"entries": [
-							"When the guard rolls a success on a Will save against a {@trait fear} effect, they get a critical success instead.",
-							"In addition, anytime they gain the {@condition frightened} condition, reduce its value by 1."
+							"When the guard rolls a success on a Will save against a {@trait fear} effect, they get a critical success instead. In addition, anytime they gain the {@condition frightened} condition, reduce its value by 1."
 						],
 						"name": "Bravery"
 					},
@@ -531,7 +572,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Shield Block",
 						"generic": {
 							"tag": "ability"
@@ -552,11 +592,31 @@
 						"name": "Unburdened Iron"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 22
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 14
+					},
+					"ref": {
+						"std": 10
+					},
+					"will": {
+						"std": 12
+					}
+				},
+				"hp": [
+					{
+						"hp": 80
+					}
+				]
 			}
 		},
 		{
 			"name": "Aspis Technician",
-			"isNpc": false,
 			"source": "Sli",
 			"page": 45,
 			"level": 7,
@@ -565,9 +625,6 @@
 				"small",
 				"gnome",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 15
@@ -579,26 +636,26 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Gnomish",
-					"Mwangi",
-					"Sylvan"
+					"common",
+					"gnomish",
+					"mwangi",
+					"sylvan"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 15
 				},
-				"Arcana": {
+				"arcana": {
 					"std": 15
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 17
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 15
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 15
 				}
 			},
@@ -610,36 +667,25 @@
 				"wis": 2,
 				"cha": 0
 			},
-			"ac": {
-				"std": 25
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 13
-				},
-				"ref": {
-					"std": 17
-				},
-				"will": {
-					"std": 15
-				}
-			},
-			"hp": [
-				{
-					"hp": 115,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
+			"items": [
+				"expanded {@item alchemist's tools}",
+				"{@item lesser bomber's eye elixir}",
+				"bronze Aspis Consortium badge",
+				"{@item moderate cheetah's elixir}",
+				"{@item hunting spider venom} (2)",
+				"{@runeItem rapier||+1 weapon potency||striking|}",
+				"{@item studded leather} armor"
+			],
 			"attacks": [
 				{
 					"range": "Melee",
 					"name": "rapier",
 					"attack": 18,
 					"traits": [
-						"deadly d8",
+						"deadly <d8>",
 						"disarm",
 						"finesse"
 					],
@@ -656,11 +702,10 @@
 					"name": "acid flask",
 					"attack": 18,
 					"traits": [
-						"range increment 20 feet",
+						"range increment <20 feet>",
 						"splash"
 					],
-					"effects": [],
-					"damage": "5 acid damage plus {@damage 2d6+2} {@condition persistent damage ||persistent acid} and 4 acid splash",
+					"damage": "5 acid damage plus {@damage 2d6+2} {@condition persistent damage||persistent acid} and 4 acid {@trait splash}",
 					"types": [
 						"acid",
 						"persistent"
@@ -671,11 +716,10 @@
 					"name": "alchemist's fire",
 					"attack": 18,
 					"traits": [
-						"range increment 20 feet",
+						"range increment <20 feet>",
 						"splash"
 					],
-					"effects": [],
-					"damage": "{@damage 2d8+2} fire plus 4 {@condition persistent damage ||persistent fire} and 4 fire splash",
+					"damage": "{@damage 2d8+2} fire plus 4 {@condition persistent damage||persistent fire} and 4 fire {@trait splash}",
 					"types": [
 						"fire",
 						"persistent"
@@ -686,10 +730,9 @@
 				"top": [
 					{
 						"entries": [
-							"Aspis technician carries the following infused items: 2 lesser antidotes, 2 moderate acid flasks, 2 moderate alchemist's fires, and 2 lesser elixirs of life.",
-							"These items last for 24 hours or until the next time the technician makes their daily preparations."
+							"An Aspis technician carries the following infused items: 2 lesser antidotes, 2 moderate acid flasks, 2 moderate alchemist's fires, and 2 lesser elixirs of life. These items last for 24 hours or until the next time the technician makes their daily preparations."
 						],
-						"name": "Infused Items An"
+						"name": "Infused Items"
 					}
 				],
 				"bot": [
@@ -740,22 +783,45 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The Aspis technician Interacts to draw a bomb, then Strikes with it."
+							"The Aspis technician {@action interact||Interacts} to draw a bomb, then {@action Strike||Strikes} with it."
 						],
 						"name": "Quick Bomber"
 					},
 					{
 						"entries": [
-							"Aspis technician deals an extra {@damage 2d6} precision damage to {@condition flat-footed} creatures."
+							"The Aspis technician deals an extra {@damage 2d6} precision damage to {@condition flat-footed} creatures."
 						],
-						"name": "Sneak Attack The"
+						"name": "Sneak Attack",
+						"generic": {
+							"tag": "ability"
+						}
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 25
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 13
+					},
+					"ref": {
+						"std": 17
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": [
+					{
+						"hp": 115
 					}
 				]
 			}
 		},
 		{
 			"name": "Croakchief Globblit Skink-eater",
-			"isNpc": false,
 			"source": "Sli",
 			"page": 22,
 			"level": 5,
@@ -767,29 +833,29 @@
 				"boggard",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 13
 			},
 			"languages": {
 				"languages": [
-					"Abyssal",
-					"Boggard",
-					"Common",
-					"Mwangi"
+					"abyssal",
+					"boggard",
+					"common",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 14
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 13
 				},
-				"Survival": {
+				"survival": {
 					"std": 11
+				},
+				"swamp lore": {
+					"std": "8"
 				}
 			},
 			"abilityMods": {
@@ -801,29 +867,9 @@
 				"cha": 2
 			},
 			"items": [
-				"breastplate",
-				"+1 striking greatclub",
-				"javelins (3)"
-			],
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 14
-				},
-				"ref": {
-					"std": 9
-				},
-				"will": {
-					"std": 13
-				}
-			},
-			"hp": [
-				{
-					"hp": 85,
-					"abilities": null
-				}
+				"{@item breastplate}",
+				"{@runeItem greatclub||+1 weapon potency||striking|}",
+				"{@item javelin||javelins} (3)"
 			],
 			"speed": {
 				"abilities": [
@@ -842,7 +888,6 @@
 						"magical",
 						"shove"
 					],
-					"effects": [],
 					"damage": "{@damage 2d10+5} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -853,22 +898,19 @@
 					"name": "tongue",
 					"attack": 14,
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"tongue grab"
-					],
-					"damage": "tongue grab",
-					"types": []
+					]
 				},
 				{
 					"range": "Ranged",
 					"name": "javelin",
 					"attack": 12,
 					"traits": [
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+5} piercing",
 					"types": [
 						"piercing"
@@ -876,14 +918,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+8 Str +5, Dex +2, Con +3, Int \u20131, Wis +2, Cha +2 Items breastplate, +1 striking greatclub, javelins (3)"
-						],
-						"name": "Lore"
-					}
-				],
 				"bot": [
 					{
 						"activity": {
@@ -915,7 +949,7 @@
 						},
 						"frequency": {
 							"unit": "turn",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
 							"Globblit makes a greatclub {@action Strike} and a tongue {@action Strike} against the same target. If the greatclub {@action Strike} hits, the target is {@condition flat-footed} against his tongue {@action Strike}. This counts as two attacks for Globblit's multiple attack penalty, but the penalty doesn't increase until after his Smash and Slurp."
@@ -924,22 +958,42 @@
 					},
 					{
 						"entries": [
-							"Globblit ignores difficult terrain caused by swamp terrain features."
+							"Globblit ignores {@quickref difficult terrain||3|terrain} caused by swamp terrain features."
 						],
 						"name": "Swamp Stride"
 					},
 					{
 						"entries": [
-							"Globblit hits a creature with his tongue, that creature becomes {@condition grabbed} by him. Unlike a normal grab, the creature isn't {@condition immobilized}, but it can't move beyond the reach of Globblit's tongue. A creature can sever the tongue by succeeding at an AC 18 {@action Strike} and dealing at least 6 slashing damage. Though this doesn't deal any damage to Globblit, it prevents him from using his tongue {@action Strike} until it regrows, which takes a week."
+							"If Globblit hits a creature with his tongue, that creature becomes {@condition grabbed} by him. Unlike a normal grab, the creature isn't {@condition immobilized}, but it can't move beyond the reach of Globblit's tongue. A creature can sever the tongue by succeeding at an AC 18 {@action Strike} and dealing at least 6 slashing damage. Though this doesn't deal any damage to Globblit, it prevents him from using his tongue {@action Strike} until it regrows, which takes a week."
 						],
-						"name": "Tongue Grab If"
+						"name": "Tongue Grab"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 14
+					},
+					"ref": {
+						"std": 9
+					},
+					"will": {
+						"std": 13
+					}
+				},
+				"hp": [
+					{
+						"hp": 85
 					}
 				]
 			}
 		},
 		{
 			"name": "Cursebreaker",
-			"isNpc": false,
 			"source": "Sli",
 			"page": 38,
 			"level": 9,
@@ -951,9 +1005,6 @@
 				"golem",
 				"mindless"
 			],
-			"creatureType": [
-				"Construct"
-			],
 			"perception": {
 				"std": 18
 			},
@@ -963,10 +1014,10 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 23
 				},
-				"Kibwe Lore": {
+				"kibwe lore": {
 					"std": 12
 				}
 			},
@@ -978,38 +1029,6 @@
 				"wis": 3,
 				"cha": -5
 			},
-			"ac": {
-				"std": 27
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 21
-				},
-				"ref": {
-					"std": 17
-				},
-				"will": {
-					"std": 20
-				}
-			},
-			"hp": [
-				{
-					"hp": 140,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"acid",
-				"bleed",
-				"death effects",
-				"disease"
-			],
-			"resistances": [
-				{
-					"amount": 10,
-					"name": "physical"
-				}
-			],
 			"speed": {
 				"walk": 20
 			},
@@ -1020,9 +1039,8 @@
 					"attack": 21,
 					"traits": [
 						"magical",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d10+10} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1042,7 +1060,7 @@
 					},
 					{
 						"entries": [
-							"A {@spell stone to flesh} spell negates Cursebreaker's golem antimagic and its resistance to physical damage for 1 round. A {@spell flesh to stone} spell reverses this effect immediately."
+							"A {@spell stone to flesh} spell negates Cursebreaker's {@ability golem antimagic} and its resistance to physical damage for 1 round. A {@spell flesh to stone} spell reverses this effect immediately."
 						],
 						"name": "Vulnerable to Stone to Flesh"
 					}
@@ -1058,7 +1076,7 @@
 						],
 						"trigger": "Cursebreaker hits a {@condition slowed} creature",
 						"entries": [
-							"The creature must succeed at a DC 27 Fortitude save or become {@condition paralyzed} for 1 round."
+							"The creature must succeed at a {@dc 27} Fortitude save or become {@condition paralyzed} for 1 round."
 						],
 						"name": "Impose Paralysis"
 					},
@@ -1068,7 +1086,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Cursebreaker {@action Stride||Strides} up to its Speed, pushing back each creature whose space it moves into and damaging them if they try to stop its movement. A creature can attempt to bar the way by succeeding at a DC 32 Fortitude save. On a critical success, the resisting creature takes no damage; otherwise it is damaged as if hit by Cursebreaker's fist."
+							"Cursebreaker {@action Stride||Strides} up to its Speed, pushing back each creature whose space it moves into and damaging them if they try to stop its movement. A creature can attempt to bar the way by succeeding at a {@dc 32} Fortitude save. On a critical success, the resisting creature takes no damage; otherwise it is damaged as if hit by Cursebreaker's fist."
 						],
 						"name": "Inexorable March"
 					},
@@ -1083,7 +1101,7 @@
 							"transmutation"
 						],
 						"entries": [
-							"Each creature in a 10-foot emanation must succeed at a DC 27 Fortitude save or be {@condition slowed|CRB|slowed 1} for 1 minute.",
+							"Each creature in a 10-foot emanation must succeed at a {@dc 27} Fortitude save or be {@condition slowed|CRB|slowed 1} for 1 minute.",
 							"Cursebreaker can't use Slowing Pulse again for {@dice 1d4} rounds."
 						],
 						"name": "Slowing Pulse"
@@ -1095,11 +1113,56 @@
 						"name": "Undo Curse"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 21
+					},
+					"ref": {
+						"std": 17
+					},
+					"will": {
+						"std": 20
+					}
+				},
+				"hp": [
+					{
+						"hp": 140
+					}
+				],
+				"immunities": [
+					"acid",
+					"bleed",
+					"death effects",
+					"disease",
+					"doomed",
+					"drained",
+					"fatigued",
+					"healing",
+					"magic (see below)",
+					"mental",
+					"necromancy",
+					"nonlethal attacks",
+					"paralyzed",
+					"poison",
+					"sickened",
+					"unconscious"
+				],
+				"resistances": [
+					{
+						"amount": 10,
+						"name": "physical",
+						"note": "except {@item adamantine (generic)||adamantine}"
+					}
+				]
 			}
 		},
 		{
 			"name": "Fuming Sludge",
-			"isNpc": false,
 			"source": "Sli",
 			"page": 63,
 			"level": 7,
@@ -1109,9 +1172,6 @@
 				"medium",
 				"mindless",
 				"ooze"
-			],
-			"creatureType": [
-				"Ooze"
 			],
 			"perception": {
 				"std": 11
@@ -1126,7 +1186,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 19
 				}
 			},
@@ -1138,39 +1198,6 @@
 				"wis": 0,
 				"cha": -5
 			},
-			"ac": {
-				"std": 16
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 18
-				},
-				"ref": {
-					"std": 8
-				},
-				"will": {
-					"std": 11
-				}
-			},
-			"hp": [
-				{
-					"hp": 160,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"fire",
-				"mental",
-				"piercing",
-				"precision",
-				"critical hits"
-			],
-			"weaknesses": [
-				{
-					"amount": 5,
-					"name": "cold"
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"climb": 20
@@ -1183,7 +1210,7 @@
 					"effects": [
 						"Grab"
 					],
-					"damage": "{@damage 2d10+6} bludgeoning plus {@damage 1d8} {@condition persistent damage ||persistent fire} and Grab",
+					"damage": "{@damage 2d10+6} bludgeoning plus {@damage 1d8} {@condition persistent damage||persistent fire} and Grab",
 					"types": [
 						"bludgeoning",
 						"persistent"
@@ -1195,12 +1222,12 @@
 					"attack": 17,
 					"traits": [
 						"brutal",
-						"range increment 20 feet"
+						"range increment <20 feet>"
 					],
 					"effects": [
 						"cooling glob"
 					],
-					"damage": "{@damage 3d6+6} bludgeoning plus {@damage 1d8} {@condition persistent damage ||persistent fire} and cooling glob",
+					"damage": "{@damage 3d6+6} bludgeoning plus {@damage 1d8} {@condition persistent damage||persistent fire} and cooling glob",
 					"types": [
 						"bludgeoning",
 						"persistent"
@@ -1221,7 +1248,7 @@
 							"fire"
 						],
 						"entries": [
-							"15 feet. The fuming sludge constantly emits incendiary smoke that creates concealment around it. The smoke doesn't impair the fuming sludge's chemical sense. A creature that enters the aura or begins its turn in the aura becomes {@condition sickened|CRB|sickened 1} (DC 25 Fortitude negates) and cannot recover from {@condition persistent damage ||persistent fire damage} for 1 round. It is then temporarily immune to the sickening effect of the smoldering haze for 1 minute. A creature that is currently holding its breath, that doesn't need to breathe, or that's immune to poison is immune to the aura's {@condition sickened} effect but not the concealment or inability to recover from {@condition persistent damage ||persistent fire damage}."
+							"15 feet. The fuming sludge constantly emits incendiary smoke that creates concealment around it. The smoke doesn't impair the fuming sludge's chemical sense. A creature that enters the aura or begins its turn in the aura becomes {@condition sickened|CRB|sickened 1} ({@dc 25} Fortitude negates) and cannot recover from {@condition persistent damage||persistent fire damage} for 1 round. It is then temporarily immune to the sickening effect of the smoldering haze for 1 minute. A creature that is currently holding its breath, that doesn't need to breathe, or that's immune to poison is immune to the aura's {@condition sickened} effect but not the concealment or inability to recover from {@condition persistent damage||persistent fire damage}."
 						],
 						"name": "Smoldering Haze"
 					}
@@ -1232,7 +1259,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -1246,7 +1272,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"{@damage 1d8+6} bludgeoning plus {@damage 1d8} {@condition persistent damage ||persistent fire}, DC 24."
+							"{@damage 1d8+6} bludgeoning plus {@damage 1d8} {@condition persistent damage||persistent fire}, {@dc 24}"
 						],
 						"name": "Constrict",
 						"generic": {
@@ -1256,16 +1282,49 @@
 					{
 						"entries": [
 							"A fuming sludge's ejected globs cling to targets.",
-							"A creature hit by an ejected glob {@action Strike} is {@condition encumbered} for 1 round. If the attack was a critical hit, the creature is instead {@condition restrained} for 1 round ({@action Escape} DC 24)."
+							"A creature hit by an ejected glob {@action Strike} is {@condition encumbered} for 1 round. If the attack was a critical hit, the creature is instead {@condition restrained} for 1 round ({@action Escape} {@dc 24})."
 						],
 						"name": "Cooling Glob"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 16
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 18
+					},
+					"ref": {
+						"std": 8
+					},
+					"will": {
+						"std": 11
+					}
+				},
+				"hp": [
+					{
+						"hp": 160
+					}
+				],
+				"immunities": [
+					"fire",
+					"mental",
+					"piercing",
+					"precision",
+					"critical hits"
+				],
+				"weaknesses": [
+					{
+						"amount": 5,
+						"name": "cold"
 					}
 				]
 			}
 		},
 		{
 			"name": "Nyamat Mshwe",
-			"isNpc": false,
 			"source": "Sli",
 			"page": 33,
 			"level": 6,
@@ -1275,37 +1334,34 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 16
 			},
 			"languages": {
 				"languages": [
-					"Abyssal",
-					"Common",
-					"Mwangi"
+					"abyssal",
+					"common",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 12
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 13,
 					"against demons": 15
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 15
 				},
-				"Religion": {
+				"religion": {
 					"std": 16
 				},
-				"Survival": {
+				"survival": {
 					"std": 12
 				},
-				"Demon Lore": {
+				"demon lore": {
 					"std": 13
 				}
 			},
@@ -1318,29 +1374,10 @@
 				"cha": 3
 			},
 			"items": [
-				"gluttonous spear (page 60)",
+				"{@item gluttonous spear|Sli}",
 				"hide armor",
-				"key to"
-			],
-			"ac": {
-				"std": 23
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 13
-				},
-				"ref": {
-					"std": 11
-				},
-				"will": {
-					"std": 16
-				}
-			},
-			"hp": [
-				{
-					"hp": 90,
-					"abilities": null
-				}
+				"key to {@creature cursebreaker|sli|Cursebreaker's} lock",
+				"{@item religious symbol (generic)||religious symbol} of {@deity Angazhan|LOGM}"
 			],
 			"speed": {
 				"walk": 25
@@ -1351,10 +1388,9 @@
 					"name": "spear",
 					"attack": 17,
 					"traits": [
-						"fatal d10",
+						"fatal <d10>",
 						"magical"
 					],
-					"effects": [],
 					"damage": "{@damage 3d6+4} piercing",
 					"types": [
 						"piercing"
@@ -1365,11 +1401,10 @@
 					"name": "spear",
 					"attack": 16,
 					"traits": [
-						"fatal d10",
+						"fatal <d10>",
 						"magical",
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d6+4} piercing",
 					"types": [
 						"piercing"
@@ -1378,13 +1413,104 @@
 			],
 			"rituals": [
 				{
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 24,
 					"rituals": [
 						{
-							"name": "Abyssal pact"
+							"name": "Abyssal pact",
+							"source": "B1"
 						}
 					]
+				}
+			],
+			"spellcasting": [
+				{
+					"tradition": "divine",
+					"DC": 24,
+					"attack": 16,
+					"type": "Prepared",
+					"entry": {
+						"0": {
+							"level": 3,
+							"spells": [
+								{
+									"name": "daze"
+								},
+								{
+									"name": "forbidding ward"
+								},
+								{
+									"name": "light"
+								},
+								{
+									"name": "stabilize"
+								}
+							]
+						},
+						"1": {
+							"spells": [
+								{
+									"name": "bane"
+								},
+								{
+									"name": "bless"
+								},
+								{
+									"name": "command"
+								},
+								{
+									"name": "ray of enfeeblement"
+								}
+							]
+						},
+						"2": {
+							"spells": [
+								{
+									"name": "death knell"
+								},
+								{
+									"name": "heal"
+								},
+								{
+									"name": "see invisibility"
+								},
+								{
+									"name": "spiritual weapon"
+								}
+							]
+						},
+						"3": {
+							"spells": [
+								{
+									"name": "chilling darkness"
+								},
+								{
+									"name": "fear"
+								},
+								{
+									"name": "harm"
+								}
+							]
+						}
+					}
+				},
+				{
+					"tradition": "divine",
+					"DC": 24,
+					"fp": 2,
+					"type": "Focus",
+					"entry": {
+						"3": {
+							"spells": [
+								{
+									"name": "touch of obedience",
+									"notes": [
+										"with a range of 30 feet"
+									]
+								}
+							]
+						}
+					}
 				}
 			],
 			"abilities": {
@@ -1410,7 +1536,7 @@
 				"bot": [
 					{
 						"entries": [
-							"Nyamat inflicts an extra {@dice 1d6} damage with his spear, and any spear gains the fatal d10 trait while Nyamat is using it (both the extra weapon damage die and the {@trait fatal} trait have already been included in Nyamat's spear Strikes above)."
+							"Nyamat inflicts an extra {@dice 1d6} damage with his spear, and any spear gains the fatal <d10> trait while Nyamat is using it (both the extra weapon damage die and the {@trait fatal} trait have already been included in Nyamat's spear {@action Strike||Strikes} above)."
 						],
 						"name": "Demonic Strength"
 					},
@@ -1421,11 +1547,31 @@
 						"name": "Steady Spellcasting"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 23
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 13
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 16
+					}
+				},
+				"hp": [
+					{
+						"hp": 90
+					}
+				]
 			}
 		},
 		{
 			"name": "Paga Nikohian",
-			"isNpc": false,
 			"source": "Sli",
 			"page": 51,
 			"level": 9,
@@ -1435,9 +1581,6 @@
 				"small",
 				"halfling",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 19
@@ -1449,38 +1592,41 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Dwarven",
-					"Halfling",
-					"Mwangi"
+					"common",
+					"dwarven",
+					"halfling",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 19
 				},
-				"Arcana": {
+				"arcana": {
 					"std": 16
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 16
 				},
-				"Deception": {
+				"deception": {
 					"std": 22
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 20
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 20
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 16
 				},
-				"Society": {
+				"society": {
 					"std": 18
 				},
-				"Thievery": {
+				"stealth": {
+					"std": 21
+				},
+				"thievery": {
 					"std": 19
 				}
 			},
@@ -1493,29 +1639,9 @@
 				"cha": 5
 			},
 			"items": [
-				"daggers (3)",
-				"slime whip",
-				"+1 studded leather"
-			],
-			"ac": {
-				"std": 28
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 16
-				},
-				"ref": {
-					"std": 21
-				},
-				"will": {
-					"std": 18
-				}
-			},
-			"hp": [
-				{
-					"hp": 155,
-					"abilities": null
-				}
+				"{@item dagger||daggers} (3)",
+				"{@item slime whip|Sli}",
+				"{@runeItem studded leather||+1 armor potency|}"
 			],
 			"speed": {
 				"walk": 25
@@ -1528,10 +1654,9 @@
 					"traits": [
 						"disarm",
 						"finesse",
-						"reach 10 feet",
+						"reach <10 feet>",
 						"trip"
 					],
-					"effects": [],
 					"damage": "{@damage 2d4+10} slashing",
 					"types": [
 						"slashing"
@@ -1543,10 +1668,9 @@
 					"attack": 20,
 					"traits": [
 						"agile",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+10} piercing",
 					"types": [
 						"piercing"
@@ -1558,10 +1682,9 @@
 					"attack": 20,
 					"traits": [
 						"agile",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+10} piercing",
 					"types": [
 						"piercing"
@@ -1570,9 +1693,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Spontaneous",
 					"type": "Spontaneous",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"DC": 28,
 					"attack": 21,
 					"entry": {
@@ -1666,7 +1788,7 @@
 					}
 				},
 				{
-					"name": "Bard Composition",
+					"name": "Bard Composition Spells",
 					"type": "Focus",
 					"DC": 28,
 					"fp": 2,
@@ -1696,21 +1818,9 @@
 				"top": [
 					{
 						"entries": [
-							"+20, {@skill Occultism} +16, {@skill Society} +18, {@skill Stealth} +21, {@skill Thievery} +19 Str +0, Dex +4, Con +1, Int +1, Wis +3, Cha +5 Items daggers (3), slime whip, +1 studded leather."
-						],
-						"name": "Intimidation"
-					},
-					{
-						"entries": [
-							"Paga gains a +2 circumstance bonus when using."
+							"Paga gains a +2 circumstance bonus when using the {@action Seek} action to find {@condition hidden} or {@condition undetected} creatures within 30 feet of her. When she targets an opponent that is {@condition concealed} from her or {@condition hidden}, she reduces the DC of the flat check to 3 for a {@condition concealed} target or 9 for a {@condition hidden} one."
 						],
 						"name": "Keen Eyes"
-					},
-					{
-						"entries": [
-							"{@action Seek} action to find {@condition hidden} or {@condition undetected} creatures within 30 feet of her. When she targets an opponent that is {@condition concealed} from her or {@condition hidden}, she reduces the DC of the flat check to 3 for a {@condition concealed} target or 9 for a {@condition hidden} one."
-						],
-						"name": "the"
 					}
 				],
 				"mid": [
@@ -1722,7 +1832,7 @@
 						"trigger": "Paga fails or critically fails a skill check or a saving throw",
 						"frequency": {
 							"unit": "day",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
 							"Paga rerolls the saving throw and must take the new result."
@@ -1743,7 +1853,7 @@
 							"visual"
 						],
 						"entries": [
-							"Paga cringes and cowers before a creature within 10 feet that can see her. The target must attempt a DC 28 Will save. The target is then temporarily immune for 1 hour.",
+							"Paga cringes and cowers before a creature within 10 feet that can see her. The target must attempt a {@dc 28} Will save. The target is then temporarily immune for 1 hour.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -1761,6 +1871,27 @@
 							"Paga's spells are disrupted by reactions only if she is critically hit."
 						],
 						"name": "Unbreakable Concentration"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 28
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 16
+					},
+					"ref": {
+						"std": 21
+					},
+					"will": {
+						"std": 18
+					}
+				},
+				"hp": [
+					{
+						"hp": 155
 					}
 				]
 			}

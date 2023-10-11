@@ -16,7 +16,7 @@
 			"bulk": "\u2013",
 			"category": "Worn",
 			"entries": [
-				"This ornate pendant of brass is adorned with a vibrant blue gemstone. An aluum charm grants control over a particular aluum and lesser influence over other such constructs. As long as you wear an aluum's linked aluum charm, that aluum follows your verbal commands, including somewhat nuanced orders like \"subdue this target\" or \"strike anyone wearing a blue robe.\"",
+				"This ornate pendant of brass is adorned with a vibrant blue gemstone. An {@i aluum charm} grants control over a particular aluum and lesser influence over other such constructs. As long as you wear an aluum's linked {@i aluum charm}, that aluum follows your verbal commands, including somewhat nuanced orders like \"subdue this target\" or \"strike anyone wearing a blue robe.\"",
 				{
 					"type": "ability",
 					"activity": {
@@ -28,10 +28,10 @@
 					],
 					"frequency": {
 						"unit": "round",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
-						"The charm grants you control over an aluum you can see within 60 feet, with a level equal to or lower than the charm. This has the effect of dominate and allows a DC 28 Will save. If the aluum is currently under the control of someone wearing its linked charm, it gets a result on its saving throw one degree higher than what it rolled. You can control only one aluum at a time using this activation, and controlling a new aluum ends the effect for one you had previously affected."
+						"The charm grants you control over an aluum you can see within 60 feet, with a level equal to or lower than the charm. This has the effect of {@spell dominate} and allows a DC 28 Will save. If the aluum is currently under the control of someone wearing its linked charm, it gets a result on its saving throw one degree higher than what it rolled. You can control only one aluum at a time using this activation, and controlling a new aluum ends the effect for one you had previously affected."
 					]
 				}
 			]
@@ -61,7 +61,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -69,7 +69,6 @@
 				"Typically used to fake one's death, this poison swiftly causes the imbiber to lose consciousness and suppresses vital signs. A creature examining the {@condition unconscious} target must succeed at a {@skill Medicine} check against the imbiber's {@skill Deception} DC + 4 to determine that the target is alive, and a critical success allows the examiner to determine that a toxin is causing the effect. The false death toxin has an extremely bitter taste ({@skill Perception} DC 10 to detect), making it difficult to trick a creature into consuming the poison against its wishes.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 18,
 					"savingThrow": "Fortitude",
 					"onset": "10 minutes",
@@ -119,7 +118,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -127,7 +126,6 @@
 				"This oil, which is pressed from vrock spores and mixed with a combination of acacia ash and thistle seeds, seeps into the skin of living creatures, initially inspiring irritability that unpredictably manifests as berserk rage.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 37,
 					"savingThrow": "Fortitude",
 					"onset": "{@dice 1d6} minutes",
@@ -147,111 +145,6 @@
 							"stage": 3,
 							"entry": "{@damage 8d6} mental damage, {@condition fatigued}, attack nearby creatures as if {@condition confused}",
 							"duration": "1 round"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Gorgon's Breath",
-			"source": "AoA5",
-			"page": 78,
-			"type": "Item",
-			"level": 13,
-			"traits": [
-				"uncommon",
-				"alchemical",
-				"consumable",
-				"inhaled",
-				"poison"
-			],
-			"price": {
-				"coin": "gp",
-				"amount": 475
-			},
-			"usage": "held in 1 hand",
-			"bulk": "L",
-			"activate": {
-				"activity": {
-					"number": 1,
-					"unit": "action"
-				},
-				"components": [
-					"Interact"
-				]
-			},
-			"category": "Poison",
-			"entries": [
-				"Gorgon's breath is a fine powder that can easily enter living creatures' bloodstreams through their lungs before binding to mucous membranes and causing any nearby soft tissues to harden.",
-				{
-					"type": "affliction",
-					"traits": [],
-					"DC": 32,
-					"savingThrow": "Fortitude",
-					"onset": "1 round",
-					"maxDuration": "6 rounds",
-					"stages": [
-						{
-							"stage": 1,
-							"entry": "{@condition slowed|CRB|slowed 1}",
-							"duration": "1 round"
-						},
-						{
-							"stage": 2,
-							"entry": "{@damage 4d6} bludgeoning damage and {@condition slowed|CRB|slowed 1}",
-							"duration": "1 round"
-						},
-						{
-							"stage": 3,
-							"entry": "{@condition petrified} ;",
-							"duration": "1 round"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Grinning Pugwampi",
-			"source": "AoA5",
-			"page": 77,
-			"type": "Item",
-			"level": 14,
-			"traits": [
-				"uncommon",
-				"consumable",
-				"enchantment",
-				"magical",
-				"misfortune",
-				"talisman"
-			],
-			"price": {
-				"coin": "gp",
-				"amount": 700
-			},
-			"usage": "affixed to weapon",
-			"bulk": "\u2013",
-			"category": "Talisman",
-			"entries": [
-				"This bone statuette of a sneering gremlin crumbles to dust when activated, imparting a fraction of its subject's infamous misfortune unto those you strike.",
-				{
-					"type": "ability",
-					"activity": {
-						"number": 1,
-						"unit": "free"
-					},
-					"components": [
-						"envision"
-					],
-					"trigger": "You damage a {@condition flat-footed} creature with the affixed weapon",
-					"entries": [
-						"The damaged creature must attempt a DC 33 Will save.",
-						{
-							"type": "successDegree",
-							"entries": {
-								"Critical Success": "The creature is unaffected.",
-								"Success": "The creature must roll twice and take the worse result on the next check it attempts.",
-								"Failure": "The creature must roll twice and take the worse result on all checks until the end of its next turn."
-							}
 						}
 					]
 				}
@@ -282,7 +175,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -290,7 +183,6 @@
 				"Derived from steeping toxic highland plum pits in refined grain alcohols, this clear tonic slowly shuts down the imbiber's senses.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 25,
 					"savingThrow": "Fortitude",
 					"onset": "10 minutes",
@@ -340,7 +232,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -348,7 +240,6 @@
 				"Upon being mixed and injected into the bloodstream, this powder of the crimson orchid quickly assaults the brain and nerves, disrupting the victim's ability to piece together coherent thoughts and spells.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 32,
 					"savingThrow": "Fortitude",
 					"maxDuration": "6 rounds",
@@ -392,8 +283,7 @@
 			"bulk": 1,
 			"category": "Held",
 			"entries": [
-				"This round shield is often fashioned to resemble the religious symbol of its dual-natured namesake.",
-				"A Nethysian bulwark is a high-grade cold iron shield (Hardness 10, HP 40, BT 20) that defends the wielder and can explode with retributive force when struck.",
+				"This round shield is often fashioned to resemble the religious symbol of its dual-natured namesake. A {@i Nethysian bulwark} is a high-grade cold iron shield (Hardness 10, HP 40, BT 20) that defends the wielder and can explode with retributive force when struck.",
 				{
 					"type": "ability",
 					"activity": {
@@ -403,67 +293,9 @@
 					"components": [
 						"envision"
 					],
-					"trigger": "The shield becomes {@condition broken} when performing a",
+					"trigger": "The shield becomes {@condition broken} when performing a {@feat Shield Block}",
 					"entries": [
 						"The shield explodes in a burst of bright light and shadowy tendrils, releasing a 15-foot cone of force that must include the attacker if possible. The cone deals {@damage 6d8} force damage to all creatures in the area (DC 34 basic Reflex save)."
-					]
-				}
-			]
-		},
-		{
-			"name": "Nightmare Salt",
-			"source": "AoA5",
-			"page": 79,
-			"type": "Item",
-			"level": 20,
-			"traits": [
-				"rare",
-				"alchemical",
-				"consumable",
-				"ingested",
-				"poison"
-			],
-			"price": {
-				"coin": "gp",
-				"amount": 14000
-			},
-			"usage": "held in 2 hands",
-			"bulk": "L",
-			"activate": {
-				"activity": {
-					"number": 3,
-					"unit": "action"
-				},
-				"components": [
-					"Interact"
-				]
-			},
-			"category": "Poison",
-			"entries": [
-				"This potent poison consists of crystals whose flavor and appearance mimics edible salt but whose effects are deadly: victims experience periods of waking nightmares that overload the senses and eventually result in death through a combination of shock and exhaustion.",
-				{
-					"type": "affliction",
-					"traits": [],
-					"DC": 43,
-					"savingThrow": "Fortitude",
-					"onset": "1 hour",
-					"maxDuration": "5 days",
-					"stages": [
-						{
-							"stage": 1,
-							"entry": "{@condition frightened|CRB|frightened 2} once every {@dice 1d4} hours, plus {@condition fatigued}",
-							"duration": "1 day"
-						},
-						{
-							"stage": 2,
-							"entry": "{@condition confused} for 1 minute once every {@dice 1d4} hours, plus {@condition frightened|CRB|frightened 3} and {@condition fatigued}",
-							"duration": "1 day"
-						},
-						{
-							"stage": 3,
-							"entry": "{@condition frightened|CRB|frightened 3}, plus {@condition confused} for {@dice 1d4} minutes, once every hour, plus {@condition fatigued} ;",
-							"duration": "1 day"
-						}
 					]
 				}
 			]
@@ -493,7 +325,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -501,10 +333,9 @@
 				"Created from a daemon's powdered soul gems or refined from the waters of Abaddon's rivers, oblivion essence causes victims to rapidly age and decay.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 42,
 					"savingThrow": "Fortitude",
-					"maxDuration": "6\nrounds",
+					"maxDuration": "6 rounds",
 					"stages": [
 						{
 							"stage": 1,
@@ -569,12 +400,12 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Bomb",
 			"entries": [
-				"Peshspine grenades are explosive bombs packed with alchemically treated needles from the pesh cactus. A peshspine grenade deals the listed piercing damage and splash damage. On a hit, the target gains the {@condition stupefied} condition until the end of its next turn.",
+				"Peshspine grenades are explosive bombs packed with alchemically treated needles from the pesh cactus. A peshspine grenade deals the listed piercing damage and {@trait splash} damage. On a hit, the target gains the {@condition stupefied} condition until the end of its next turn.",
 				"Many types of peshpine grenade grant an item bonus to attack rolls."
 			],
 			"generic": "G",
@@ -587,7 +418,7 @@
 						"amount": 3
 					},
 					"entries": [
-						"The bomb deals {@damage 1d6} piercing damage and 1 piercing splash damage, and the target is {@condition stupefied|CRB|stupefied 1}."
+						"The bomb deals {@damage 1d6} piercing damage and 1 piercing {@trait splash} damage, and the target is {@condition stupefied|CRB|stupefied 1}."
 					]
 				},
 				{
@@ -599,7 +430,7 @@
 					},
 					"entries": [
 						"You gain a +1 item bonus to attack rolls.",
-						"The bomb deals {@damage 2d6} piercing damage and 2 piercing splash damage, and the target is {@condition stupefied|CRB|stupefied 1}."
+						"The bomb deals {@damage 2d6} piercing damage and 2 piercing {@trait splash} damage, and the target is {@condition stupefied|CRB|stupefied 1}."
 					]
 				},
 				{
@@ -611,7 +442,7 @@
 					},
 					"entries": [
 						"You gain a +2 item bonus to attack rolls.",
-						"The bomb deals {@damage 3d6} piercing damage and 3 piercing splash damage, and the target is {@condition stupefied|CRB|stupefied 2}."
+						"The bomb deals {@damage 3d6} piercing damage and 3 piercing {@trait splash} damage, and the target is {@condition stupefied|CRB|stupefied 2}."
 					]
 				},
 				{
@@ -623,7 +454,7 @@
 					},
 					"entries": [
 						"You gain a +3 item bonus to attack rolls.",
-						"The bomb deals {@damage 4d6} piercing damage and 4 piercing splash damage, and the target is {@condition stupefied|CRB|stupefied 3}."
+						"The bomb deals {@damage 4d6} piercing damage and 4 piercing {@trait splash} damage, and the target is {@condition stupefied|CRB|stupefied 3}."
 					]
 				}
 			]
@@ -653,7 +484,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -661,10 +492,9 @@
 				"Alchemists have refined the devastatingly allergenic pollen of the widow orchid to create this venom, which swiftly causes the victim's eyes to leak mucus and swell shut.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 36,
 					"savingThrow": "Fortitude",
-					"maxDuration": "6\nrounds",
+					"maxDuration": "6 rounds",
 					"stages": [
 						{
 							"stage": 1,

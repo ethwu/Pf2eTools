@@ -27,7 +27,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You grasp the Crimson Fulcrum Lens in one hand and make a {@action Strike} that doesn't require that hand. The {@action Strike} deals an additional {@damage 1d8} precision damage (or {@damage 2d8} precision damage if you make a jaws {@action Strike}) and doesn't count toward your multiple attack penalty."
@@ -40,7 +40,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"traits": [
 						"attack",
@@ -83,7 +83,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "you would be destroyed and are able to rejuvenate",
 					"requirements": "At least one glimmer remains in the Ebon Fulcrum Lens",
@@ -98,11 +98,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"requirements": "At least one glimmer remains in the Ebon Fulcrum Lens",
 					"entries": [
@@ -140,14 +140,14 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"traits": [
 						"healing"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You grasp the Emerald Fulcrum Lens in one hand, regain 30 Hit Points, and gain a +2 item bonus to saving throws against magic for 1 round."
@@ -160,7 +160,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"traits": [
 						"attack",
@@ -218,7 +218,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -248,12 +248,12 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Bomb",
 			"entries": [
-				"Necrotic bombs combine reagents most people consider disgusting at best and unholy at worst, creating a life-sucking miasma upon contact with air. A necrotic bomb deals the listed negative damage and splash damage, and it sickens the primary target on a critical hit. This damage harms only living creatures.",
+				"Necrotic bombs combine reagents most people consider disgusting at best and unholy at worst, creating a life-sucking miasma upon contact with air. A necrotic bomb deals the listed negative damage and {@trait splash} damage, and it sickens the primary target on a critical hit. This damage harms only living creatures.",
 				"Many types grant an item bonus to attack rolls."
 			],
 			"generic": "G",
@@ -266,7 +266,7 @@
 						"amount": 3
 					},
 					"entries": [
-						"The bomb deals {@damage 1d6} negative damage and 1 negative splash damage. On a critical hit, the target is {@condition sickened|CRB|sickened 1}."
+						"The bomb deals {@damage 1d6} negative damage and 1 negative {@trait splash} damage. On a critical hit, the target is {@condition sickened|CRB|sickened 1}."
 					]
 				},
 				{
@@ -277,7 +277,7 @@
 						"amount": 10
 					},
 					"entries": [
-						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d6} negative damage and 2 negative splash damage. On a critical hit, the target is {@condition sickened|CRB|sickened 2}."
+						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d6} negative damage and 2 negative {@trait splash} damage. On a critical hit, the target is {@condition sickened|CRB|sickened 2}."
 					]
 				},
 				{
@@ -288,7 +288,7 @@
 						"amount": 250
 					},
 					"entries": [
-						"You gain a +2 bonus to attack rolls. The bomb deals {@damage 3d6} negative damage and 3 negative splash damage. On a critical hit, the target is {@condition sickened|CRB|sickened 3}."
+						"You gain a +2 bonus to attack rolls. The bomb deals {@damage 3d6} negative damage and 3 negative {@trait splash} damage. On a critical hit, the target is {@condition sickened|CRB|sickened 3}."
 					]
 				},
 				{
@@ -299,7 +299,7 @@
 						"amount": 2500
 					},
 					"entries": [
-						"You gain a +3 bonus to attack rolls. The bomb deals {@damage 4d6} negative damage and 4 negative splash damage. On a critical hit, the target is {@condition sickened|CRB|sickened 4}."
+						"You gain a +3 bonus to attack rolls. The bomb deals {@damage 4d6} negative damage and 4 negative {@trait splash} damage. On a critical hit, the target is {@condition sickened|CRB|sickened 4}."
 					]
 				}
 			]
@@ -331,11 +331,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You hold up the Ochre Fulcrum Lens in your hand and the item casts crushing despair (DC 31 Will save)."
@@ -348,8 +348,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact (attack",
-						"possession)"
+						"{@action Interact}"
+					],
+					"traits": [
+						"attack",
+						"possession"
 					],
 					"entries": [
 						"as Crimson Fulcrum Lens, but the melee spell attack modifier is +21."
@@ -401,7 +404,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -409,10 +412,9 @@
 				"Stupor poison is a more potent distillation of lethargy poison. Further exposure to stupor poison doesn't require the target to attempt additional saving throws; only failing a saving throw against an ongoing exposure can progress its stage.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 20,
 					"savingThrow": "Fortitude",
-					"maxDuration": "6\nhours",
+					"maxDuration": "6 hours",
 					"stages": [
 						{
 							"stage": 1,

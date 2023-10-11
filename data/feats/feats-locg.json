@@ -21,7 +21,7 @@
 			"frequency": {
 				"unit": "minute",
 				"interval": 10,
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You critically succeed at a saving throw against a foe's spell, and that spell is of a level you can normally cast.",
 			"entries": [
@@ -101,7 +101,7 @@
 			"traits": [
 				"archetype"
 			],
-			"prerequisites": "{@feat Knight Vigilant|LOCG}, {@feat Shield Block}, master in {@skill Religion}",
+			"prerequisites": "{@feat Knight Vigilant Dedication|LOCG}, {@feat Shield Block}, master in {@skill Religion}",
 			"requirements": "You are wielding a shield.",
 			"entries": [
 				"Inspired by the tale of Arnisant, you transform your shield into a magic ward. Until the beginning of your next turn, you gain the following reaction:",
@@ -203,7 +203,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "An ally within 30 feet gains the {@condition dying} condition.",
 			"access": "mountain dwarf ethnicity",
@@ -316,7 +316,7 @@
 			],
 			"prerequisites": "expert in {@skill Deception}, {@skill Diplomacy}, or {@skill Intimidation}; {@feat Firebrand Braggart Dedication|LOCG}",
 			"entries": [
-				"You call out a foe, causing them to become flustered and easier to defeat. Select one creature you can see and declare a challenge. For your challenge, attempt a {@skill Deception}, {@skill Diplomacy}, or {@skill Intimidation} check against that creature's Will DC. Your challenge must include a linguistic, auditory, or visual component and gains the corresponding trait. If you succeed, you gain a +2 status bonus to damage rolls with your weapon or unarmed Strikes against that foe until the end of your next turn; if you have master proficiency in the skill you used, you gain a +4 status bonus instead, and if you're legendary, you gain a +6 status bonus. On a critical success, the status bonus lasts for 3 rounds instead. Whether you succeed or fail, creatures who witnessed your challenge gain a +4 circumstance bonus to their Will DCs against your attempts to challenge for 1 minute."
+				"You call out a foe, causing them to become flustered and easier to defeat. Select one creature you can see and declare a challenge. For your challenge, attempt a {@skill Deception}, {@skill Diplomacy}, or {@skill Intimidation} check against that creature's Will DC. Your challenge must include a linguistic, auditory, or visual component and gains the corresponding trait. If you succeed, you gain a +2 status bonus to damage rolls with your weapon or unarmed {@action Strike||Strikes} against that foe until the end of your next turn; if you have master proficiency in the skill you used, you gain a +4 status bonus instead, and if you're legendary, you gain a +6 status bonus. On a critical success, the status bonus lasts for 3 rounds instead. Whether you succeed or fail, creatures who witnessed your challenge gain a +4 circumstance bonus to their Will DCs against your attempts to challenge for 1 minute."
 			],
 			"leadsTo": [
 				"Demanding Challenge|LOCG"
@@ -416,7 +416,7 @@
 			"prerequisites": "{@feat Magaambyan Attendant Dedication|LOCG}, Cascade Bearers affiliation",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"requirements": "You haven't yet acted on your turn.",
 			"entries": [
@@ -499,7 +499,7 @@
 			],
 			"prerequisites": "trained in clan daggers",
 			"entries": [
-				"By moving your clan dagger with rapid precision, you can protect yourself more effectively. Make two clan dagger Strikes against different targets. Your multiple attack penalty applies normally to these Strikes. You then use an {@action Interact} action to gain the +1 circumstance bonus to your AC from your clan dagger's parrying trait."
+				"By moving your clan dagger with rapid precision, you can protect yourself more effectively. Make two clan dagger {@action Strike||Strikes} against different targets. Your multiple attack penalty applies normally to these {@action Strike||Strikes}. You then use an {@action Interact} action to gain the +1 circumstance bonus to your AC from your clan dagger's parrying trait."
 			],
 			"leadsTo": [
 				"Protective Sheath|LOCG"
@@ -647,7 +647,7 @@
 			"frequency": {
 				"unit": "minute",
 				"interval": 10,
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You take damage that would reduce you to 0 Hit Points.",
 			"entries": [
@@ -789,7 +789,7 @@
 			"prerequisites": "{@feat Gnome Obsession}",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"Your desire for stimulation has led you from one pursuit to another and granted you a smattering of expertise with myriad crafts and professions. You reflect on snippets you've learned to temporarily become trained in one {@skill Lore} skill of your choice. This proficiency lasts for 10 minutes or until you critically fail a check with that skill. Since this training is temporary, you can't use it as a prerequisite for a permanent character option like a feat or a skill increase."
@@ -888,7 +888,7 @@
 			],
 			"prerequisites": "{@feat Magaambyan Attendant Dedication|LOCG}, Emerald Boughs affiliation",
 			"entries": [
-				"You use Emerald Bough techniques to create a small extradimensional space called a hideaway that lasts as long as you are conscious. The hideaway functions as a type I bag of holding, but has no Bulk and takes no hands; it holds one object with a maximum Bulk equal to your highest mental ability score modifier; as you open the hideaway with pure thought, activating it to retrieve an item is a free action with the envision component instead of a single action with the {@action Interact} component. The hideaway's access point appears as an obviously magical gap within 1 foot of your body. Only you can access the hideaway; you can you use an {@action Interact} action each round to physically hold it open for another person. A successful {@spell dispel magic} spell or similar effect against your spell DC and the hideaway's counteract level of 2 expels the object; the object is also expelled if you become {@condition unconscious}. After a successful {@spell dispel magic} spell or when you become conscious again, the hideaway immediately reforms with no additional action from you. You can also dismiss the hideaway (if it is empty) or re-form it using a single action with the envision component."
+				"You use Emerald Bough techniques to create a small extradimensional space called a hideaway that lasts as long as you are conscious. The hideaway functions as a {@item bag of holding (type I)||type I bag of holding}, but has no Bulk and takes no hands; it holds one object with a maximum Bulk equal to your highest mental ability score modifier; as you open the hideaway with pure thought, activating it to retrieve an item is a free action with the envision component instead of a single action with the {@action Interact} component. The hideaway's access point appears as an obviously magical gap within 1 foot of your body. Only you can access the hideaway; you can you use an {@action Interact} action each round to physically hold it open for another person. A successful {@spell dispel magic} spell or similar effect against your spell DC and the hideaway's counteract level of 2 expels the object; the object is also expelled if you become {@condition unconscious}. After a successful {@spell dispel magic} spell or when you become conscious again, the hideaway immediately reforms with no additional action from you. You can also dismiss the hideaway (if it is empty) or re-form it using a single action with the envision component."
 			]
 		},
 		{
@@ -908,7 +908,7 @@
 			"traits": [
 				"archetype"
 			],
-			"prerequisites": "{@feat Knight Vigilant|LOCG}, expert in medium or heavy armor",
+			"prerequisites": "{@feat Knight Vigilant Dedication|LOCG}, expert in medium or heavy armor",
 			"trigger": "An undead hits you with an unarmed attack.",
 			"requirements": "You are wearing medium or heavy armor in which you have expert proficiency.",
 			"entries": [
@@ -1665,7 +1665,7 @@
 			"level": 6,
 			"featType": {
 				"archetype": [
-					"Hellknight Armiger"
+					"Hellknight Signifer"
 				]
 			},
 			"traits": [
@@ -1780,7 +1780,7 @@
 			],
 			"prerequisites": "{@feat Fang Sharpener|LOCG}",
 			"entries": [
-				"You'll eat anything and anyone. Whenever you inflict {@condition persistent damage ||persistent bleed damage} with your jaws unarmed attack, you gain temporary Hit Points equal to half your level for 1 minute."
+				"You'll eat anything and anyone. Whenever you inflict {@condition persistent damage||persistent bleed damage} with your jaws unarmed attack, you gain temporary Hit Points equal to half your level for 1 minute."
 			]
 		},
 		{
@@ -1858,7 +1858,7 @@
 			"prerequisites": "{@feat Illusion Sense}",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "Your turn begins.",
 			"entries": [
@@ -1879,7 +1879,7 @@
 			],
 			"prerequisites": "trained in {@skill Crafting}",
 			"entries": [
-				"You can jury-rig your weapons to perform in unexpected ways. When you use this ability, add one of the following weapon traits to a melee weapon you wield: {@trait deadly d6}, {@trait disarm}, {@trait nonlethal}, {@trait shove}, {@trait trip}, {@trait versatile B}, {@trait versatile P}, or {@trait versatile S}. You cannot add a trait that the weapon already has. The weapon retains this trait until you a successfully hit and deal damage with the weapon. The weapon retains this trait only while you wield it, and you can have only one weapon modified in this way at any time.",
+				"You can jury-rig your weapons to perform in unexpected ways. When you use this ability, add one of the following weapon traits to a melee weapon you wield: {@trait deadly <d6>}, {@trait disarm}, {@trait nonlethal}, {@trait shove}, {@trait trip}, {@trait versatile B}, {@trait versatile <P>}, or {@trait versatile S}. You cannot add a trait that the weapon already has. The weapon retains this trait until you a successfully hit and deal damage with the weapon. The weapon retains this trait only while you wield it, and you can have only one weapon modified in this way at any time.",
 				"If you have expert proficiency in {@skill Crafting}, you can use this feat as a 2-action activity. If you have legendary proficiency in {@skill Crafting}, you can apply two weapon traits from the list when using this feat."
 			]
 		},
@@ -1972,7 +1972,7 @@
 			"traits": [
 				"archetype"
 			],
-			"prerequisites": "{@feat Knight Vigilant|LOCG}; expert in light armor, medium armor, or unarmored defense; trained in heavy armor",
+			"prerequisites": "{@feat Knight Vigilant Dedication|LOCG}; expert in light armor, medium armor, or unarmored defense; trained in heavy armor",
 			"entries": [
 				"As a knight in shining armor, you train daily in the heaviest armor, expanding your expertise to heavy armor. You gain expert proficiency in heavy armor.",
 				"Knight Reclaimant Knights reclaimant spend much of their time amid the horrors of the Gravelands, rescuing civilians that remain and striking back against the Whispering Tyrant's agents. Accomplishing these goals requires the adoption of subtle tactics, with a focus on stealth and survival."
@@ -2005,11 +2005,19 @@
 				"Invoke The Crimson Oath|LOCG",
 				"Reaper Of Repose|LOCG",
 				"Survivor Of Desolation|LOCG",
-				"Shall Not Falter, Shall Not Rout|LOL"
+				"Shepherd of Desolation|LOKL",
+				"Shall Not Falter, Shall Not Rout|LOL",
+				"Ashen Veil|LOKL",
+				"Voice Cold as Death|LOKL",
+				"Hilt Hammer|LOKL",
+				"For Love, for Lightning|LOKL",
+				"Reclaimant Plea|LOKL",
+				"Crimson Oath Devotion|LOKL",
+				"The Tyrant Falls!|LOKL"
 			]
 		},
 		{
-			"name": "Knight Vigilant",
+			"name": "Knight Vigilant Dedication",
 			"source": "LOCG",
 			"page": 94,
 			"level": 6,
@@ -2034,7 +2042,19 @@
 				"Aegis Of Arnisant|LOCG",
 				"Endure Death's Touch|LOCG",
 				"Knight In Shining Armor|LOCG",
-				"Unshakable Idealism|LOCG"
+				"Unshakable Idealism|LOCG",
+				"Divine Healing|LOKL",
+				"Interrupt Charge|LOKL",
+				"Phalanx Formation|LOKL",
+				"Emissary of Peace|LOKL",
+				"Instant Armor|LOKL",
+				"Lead the Way|LOKL",
+				"Guarded Advance|LOKL",
+				"Vigilant Benediction|LOKL",
+				"Instinctual Interception|LOKL",
+				"Keep Up the Good Fight|LOKL",
+				"Tower Shield Mastery|LOKL",
+				"Stalwart Standard|LOKL"
 			]
 		},
 		{
@@ -2053,7 +2073,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You roll a critical failure on a saving throw against an {@trait emotion} effect.",
 			"access": "Vudrani ethnicity",
@@ -2136,7 +2156,7 @@
 			],
 			"frequency": {
 				"unit": "minute",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You cast an innate spell from a gnome heritage or ancestry feat.",
 			"entries": [
@@ -2719,7 +2739,7 @@
 				"human"
 			],
 			"frequency": {
-				"freq": 3,
+				"number": 3,
 				"unit": "day"
 			},
 			"requirements": "You must spend 10 minutes just after your daily preparations examining the sky or consulting a star chart or you can't use this action that day.",
@@ -2741,7 +2761,7 @@
 			],
 			"prerequisites": "{@feat Torch Goblin|LOCG}",
 			"entries": [
-				"Your bodily fluids burn with surprising volatility, as if you ran on oil instead of blood. As long as you are taking {@condition persistent damage ||persistent fire damage}, you gain a boiling spit ranged unarmed attack with a range of 30 feet that deals {@damage 1d6} fire damage."
+				"Your bodily fluids burn with surprising volatility, as if you ran on oil instead of blood. As long as you are taking {@condition persistent damage||persistent fire damage}, you gain a boiling spit ranged unarmed attack with a range of 30 feet that deals {@damage 1d6} fire damage."
 			]
 		},
 		{
@@ -2791,7 +2811,7 @@
 				"leshy"
 			],
 			"entries": [
-				"Your body produces a nearly endless supply of hard seedpods. You gain a seedpod ranged unarmed attack with a range increment of 10 feet that deals {@damage 1d4} bludgeoning damage; these Strikes have the {@trait manipulate} trait. On a critical hit, a seedpod bursts, issuing forth a tangle of vegetation that imposes a \u201310-foot circumstance penalty on the target's Speed for 1 round. Seedpods do not add critical specialization effects."
+				"Your body produces a nearly endless supply of hard seedpods. You gain a seedpod ranged unarmed attack with a range increment of 10 feet that deals {@damage 1d4} bludgeoning damage; these {@action Strike||Strikes} have the {@trait manipulate} trait. On a critical hit, a seedpod bursts, issuing forth a tangle of vegetation that imposes a \u201310-foot circumstance penalty on the target's Speed for 1 round. Seedpods do not add critical specialization effects."
 			],
 			"leadsTo": [
 				"Thorned Seedpod|LOAG"
@@ -3209,6 +3229,9 @@
 			"prerequisites": "{@feat Knight Reclaimant Dedication|LOCG}",
 			"entries": [
 				"You gain a +2 circumstance bonus to saving throws against unnatural weather events or environmental hazards occurring in blighted or otherwise unnaturally marred regions. If you roll a success on a saving throw against such an effect, you get a critical success instead; if you roll a critical failure, you get a failure instead. This does not apply to unnatural events created or directed by active effects, such as spells that create anomalous weather or hazardous areas."
+			],
+			"leadsTo": [
+				"Shepherd of Desolation|LOKL"
 			]
 		},
 		{
@@ -3400,7 +3423,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You succeed at a skill check to {@action Recall Knowledge} to identify a creature.",
 			"entries": [
@@ -3436,7 +3459,7 @@
 			"prerequisites": "{@ancestry goblin|crb|charhide goblin |charhide goblin} heritage",
 			"entries": [
 				"You've spent enough time on fire that you know how to use it to your advantage.",
-				"You can light yourself thoroughly on fire with a held torch, a bottle of alchemist's fire, or a similar incendiary, dealing yourself {@damage 1d6} {@condition persistent damage ||persistent fire damage}. As long as you are suffering {@condition persistent damage ||persistent fire damage}, all your melee attacks against adjacent creatures deal an additional 1 fire damage per weapon damage die. Any creature that successfully Grapples, Shoves, or Trips you takes {@damage 1d6} fire damage; if it uses a weapon for that action, the weapon takes the damage instead. You must still attempt the flat check to remove the {@condition persistent damage ||persistent fire damage} each round, as normal."
+				"You can light yourself thoroughly on fire with a held torch, a bottle of alchemist's fire, or a similar incendiary, dealing yourself {@damage 1d6} {@condition persistent damage||persistent fire damage}. As long as you are suffering {@condition persistent damage||persistent fire damage}, all your melee attacks against adjacent creatures deal an additional 1 fire damage per weapon damage die. Any creature that successfully Grapples, Shoves, or Trips you takes {@damage 1d6} fire damage; if it uses a weapon for that action, the weapon takes the damage instead. You must still attempt the flat check to remove the {@condition persistent damage||persistent fire damage} each round, as normal."
 			],
 			"leadsTo": [
 				"Scalding Spit|LOCG"
@@ -3578,7 +3601,7 @@
 			"traits": [
 				"archetype"
 			],
-			"prerequisites": "{@feat Knight Vigilant|LOCG}, expert in Will saves",
+			"prerequisites": "{@feat Knight Vigilant Dedication|LOCG}, expert in Will saves",
 			"entries": [
 				"Your faith and hope can't be shaken, and you won't flee when lives are at stake. You gain a +1 circumstance bonus on saves against {@trait fear} effects and {@trait emotion} effects that inflict despair. When you would gain the {@condition fleeing} condition, you can choose to stand your ground and be {@condition stunned} for the effect's duration as well, preventing you from running and allowing you to re-enter the fight more quickly when the effect ends."
 			]
@@ -3648,7 +3671,7 @@
 			],
 			"prerequisites": "chameleon gnome heritage",
 			"frequency": {
-				"freq": 1,
+				"number": 1,
 				"recurs": true,
 				"interval": 10,
 				"unit": "minute"

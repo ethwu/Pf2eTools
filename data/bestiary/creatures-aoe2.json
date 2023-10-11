@@ -1,8 +1,184 @@
 {
 	"creature": [
 		{
+			"name": "Tyrroicese",
+			"source": "AoE2",
+			"page": 40,
+			"description": "Eldritch horror from the Dark Tapestry",
+			"level": 10,
+			"traits": [
+				"unique",
+				"ne",
+				"large",
+				"construct",
+				"ooze"
+			],
+			"perception": {
+				"std": 16
+			},
+			"senses": [
+				{
+					"name": "motion sense ",
+					"range": 60
+				},
+				{
+					"name": "no vision"
+				}
+			],
+			"languages": {
+				"languages": [
+					"aklo"
+				]
+			},
+			"skills": {
+				"athletics": {
+					"std": 23
+				},
+				"dark tapestry lore": {
+					"std": 15
+				},
+				"religion": {
+					"std": 18
+				}
+			},
+			"abilityMods": {
+				"str": 7,
+				"dex": 2,
+				"con": 5,
+				"int": -3,
+				"wis": 3,
+				"cha": 4
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 21
+					},
+					"ref": {
+						"std": 14
+					},
+					"will": {
+						"std": 19
+					}
+				},
+				"hp": [
+					{
+						"hp": 320
+					}
+				],
+				"immunities": [
+					"acid",
+					"critical hits",
+					"piercing",
+					"precision",
+					"slashing",
+					"unconscious",
+					"visual"
+				],
+				"weaknesses": [
+					{
+						"name": "good",
+						"amount": 10
+					}
+				],
+				"resistances": [
+					{
+						"name": "evil",
+						"amount": 10
+					}
+				]
+			},
+			"speed": {
+				"walk": 15
+			},
+			"attacks": [
+				{
+					"range": "Melee",
+					"traits": [
+						"acid",
+						"magical",
+						"reach <15 feet>",
+						"versatile <P>"
+					],
+					"name": "pseudopod",
+					"attack": 23,
+					"damage": "{@damage 2d10+13} bludgeoning plus {@damage 1d6} acid"
+				}
+			],
+			"abilities": {
+				"top": [
+					{
+						"name": "Motion",
+						"entries": [
+							"Sense Tyrroicese can sense nearby motion through vibration and air movement."
+						]
+					}
+				],
+				"bot": [
+					{
+						"name": "Pseudopod Burst",
+						"activity": {
+							"number": 2,
+							"unit": "action"
+						},
+						"entries": [
+							"Tyrroicese makes up to three pseudopod strikes, each against a different creature.",
+							"Tyrroicese's multiple attack penalty doesn't increase until after all these attacks are made."
+						]
+					},
+					{
+						"name": "Rallying Call",
+						"activity": {
+							"number": 1,
+							"unit": "action"
+						},
+						"traits": [
+							"occult"
+						],
+						"entries": [
+							"When Tyrroicese subsumed Corporal Quordein, it gained a perverted form of the commander's ability to rally allies. The first time Tyrroicese uses this ability, it summons an ochre jelly (Bestiary 255), which leaks out of the ceiling of area D13 and drops to the floor to join the fight, siding with Tyrroicese. Thereafter, when Tyrroicese uses this ability, any oozes within 60 feet become {@condition quickened} for 1 round (the oozes can use their extra action only to {@action Stride}) and, if they're not allied with the agents, the oozes ally themselves with Tyrroicese."
+						]
+					},
+					{
+						"name": "Stretching Step",
+						"activity": {
+							"number": 1,
+							"unit": "free"
+						},
+						"traits": [
+							"move"
+						],
+						"frequency": {
+							"number": 1,
+							"unit": "round"
+						},
+						"entries": [
+							"Tyrroicese forcefully extends a sticky pseudopod, plants it on a wall within 45 feet, and retracts the muscle.",
+							"Tyrroicese springs over to a space adjacent to the wall, moving through the intervening squares as normal but ignoring any difficult or greater difficult terrain."
+						]
+					},
+					{
+						"name": "Subsume",
+						"activity": {
+							"number": 1,
+							"unit": "action"
+						},
+						"traits": [
+							"incapacitation"
+						],
+						"entries": [
+							"Tyrroicese lifts an adjacent {@condition dying} creature with its pseudopods and subsumes that creature into its own oozy flesh. The subsumed creature's {@condition dying} value does not increase, though it can't decrease either. Tyrroicese regains 30 HP and also gains the ability to use one or two of the subsumed creature's special abilities or feats, subject to the GM's discretion. A creature adjacent to Tyrroicese can extract a subsumed creature by spending 2 actions to attempt a DC 29 {@skill Athletics} check.",
+							"On a success, the subsumed creature is pulled from Tyrroicese and falls into the nearest available space."
+						]
+					}
+				]
+			}
+		},
+		{
 			"name": "Bone Skipper Swarm",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 80,
 			"level": 6,
@@ -12,9 +188,6 @@
 				"large",
 				"animal",
 				"swarm"
-			],
-			"creatureType": [
-				"Animal"
 			],
 			"perception": {
 				"std": 17
@@ -30,7 +203,7 @@
 				}
 			],
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 17
 				}
 			},
@@ -42,44 +215,10 @@
 				"wis": 2,
 				"cha": -5
 			},
-			"ac": {
-				"std": 24
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 14
-				},
-				"ref": {
-					"std": 17
-				},
-				"will": {
-					"std": 12
-				}
-			},
-			"hp": [
-				{
-					"hp": 120,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"precision",
-				"swarm mind"
-			],
-			"weaknesses": [
-				{
-					"amount": 9,
-					"name": "area damage"
-				},
-				{
-					"name": "splash"
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"fly": 40
 			},
-			"attacks": [],
 			"abilities": {
 				"top": [
 					{
@@ -96,7 +235,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Each enemy in the swarm's space takes {@damage 3d6} piercing damage (DC 24 basic Reflex save) plus exposure to marrow rot."
+							"Each enemy in the swarm's space takes {@damage 3d6} piercing damage ({@dc 24} basic Reflex save) plus exposure to marrow rot."
 						],
 						"name": "Swarming Bites"
 					},
@@ -106,7 +245,7 @@
 						"traits": [
 							"disease"
 						],
-						"note": " Marrow rot affects only creatures with a skeletal\nsystem",
+						"note": "Marrow rot affects only creatures with a skeletal system",
 						"DC": 24,
 						"savingThrow": "Fortitude",
 						"onset": "1 day",
@@ -129,11 +268,44 @@
 						]
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 14
+					},
+					"ref": {
+						"std": 17
+					},
+					"will": {
+						"std": 12
+					}
+				},
+				"hp": [
+					{
+						"hp": 120
+					}
+				],
+				"immunities": [
+					"precision",
+					"swarm mind"
+				],
+				"weaknesses": [
+					{
+						"amount": 9,
+						"name": "area damage"
+					},
+					{
+						"name": "splash"
+					}
+				]
 			}
 		},
 		{
 			"name": "Copper Hand Illusionist",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 23,
 			"level": 5,
@@ -143,32 +315,29 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 15
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Vudrani"
+					"common",
+					"vudrani"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 13
 				},
-				"Arcana": {
+				"arcana": {
 					"std": 13
 				},
-				"Deception": {
+				"deception": {
 					"std": 9
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 13
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 13
 				}
 			},
@@ -185,26 +354,6 @@
 				"moderate healing potion",
 				"spellbook"
 			],
-			"ac": {
-				"std": 22
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 8
-				},
-				"ref": {
-					"std": 13
-				},
-				"will": {
-					"std": 12
-				}
-			},
-			"hp": [
-				{
-					"hp": 70,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -216,10 +365,9 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+5} piercing",
 					"types": [
 						"piercing"
@@ -228,9 +376,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Prepared",
 					"type": "Prepared",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 23,
 					"attack": 15,
 					"entry": {
@@ -303,33 +450,42 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+13 Str +2, Dex +4, Con +1, Int +4, Wis +1, Cha +0 Items +1 dagger, moderate healing potion, spellbook."
-						],
-						"name": "Thievery"
-					}
-				],
 				"bot": [
 					{
 						"entries": [
-							"{@damage 1d4+5} piercing Arcane Prepared Spells DC 23, attack +15; 3rd haste, hypnotic pattern, vampiric touch; 2nd dispel magic, invisibility, mirror image, telekinetic maneuver; 1st color spray, illusory disguise, illusory object, spider sting; Cantrips (3rd) daze, detect magic, electric arc, ghost sound, shield."
+							"The Copper Hand illusionist deals {@dice 2d6} additional precision damage to {@condition flat-footed} creatures."
 						],
-						"name": "S), Damage"
+						"name": "Sneak Attack"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 22,
+					"notes": [
+						"with {@spell mage armor}"
+					]
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 8
 					},
+					"ref": {
+						"std": 13
+					},
+					"will": {
+						"std": 12
+					}
+				},
+				"hp": [
 					{
-						"entries": [
-							"Hand illusionist deals {@dice 2d6} additional precision damage to {@condition flat-footed} creatures."
-						],
-						"name": "Sneak Attack The Copper"
+						"hp": 70
 					}
 				]
 			}
 		},
 		{
 			"name": "Copper Hand Rogue",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 16,
 			"level": 4,
@@ -340,29 +496,26 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 13
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Vudrani"
+					"common",
+					"vudrani"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 12
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 10
 				},
-				"Deception": {
+				"deception": {
 					"std": 11
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 12
 				}
 			},
@@ -374,26 +527,6 @@
 				"wis": 2,
 				"cha": 1
 			},
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 12
-				},
-				"ref": {
-					"std": 14
-				},
-				"will": {
-					"std": 10
-				}
-			},
-			"hp": [
-				{
-					"hp": 60,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -405,9 +538,8 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+5} piercing",
 					"types": [
 						"piercing"
@@ -418,10 +550,9 @@
 					"name": "hand crossbow",
 					"attack": 14,
 					"traits": [
-						"range 60 feet",
-						"reload 1"
+						"range <60 feet>",
+						"reload <1>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6} piercing",
 					"types": [
 						"piercing"
@@ -455,16 +586,36 @@
 					},
 					{
 						"entries": [
-							"Hand rogue deals {@dice 1d6} additional precision damage to {@condition flat-footed} creatures."
+							"The Copper Hand rogue deals {@dice 1d6} additional precision damage to {@condition flat-footed} creatures."
 						],
-						"name": "Sneak Attack The Copper"
+						"name": "Sneak Attack"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 14
+					},
+					"will": {
+						"std": 10
+					}
+				},
+				"hp": [
+					{
+						"hp": 60
 					}
 				]
 			}
 		},
 		{
 			"name": "Dreadsong Dancer",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 81,
 			"level": 8,
@@ -473,9 +624,6 @@
 				"le",
 				"medium",
 				"fiend"
-			],
-			"creatureType": [
-				"Fiend"
 			],
 			"perception": {
 				"std": 13
@@ -487,27 +635,27 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Infernal (can't speak any language)"
+					"common",
+					"infernal (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 18
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 16
 				},
-				"Deception": {
+				"deception": {
 					"std": 18
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 14
 				},
-				"Performance": {
+				"performance": {
 					"std": 18
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 18
 				}
 			},
@@ -519,36 +667,6 @@
 				"wis": 3,
 				"cha": 6
 			},
-			"ac": {
-				"std": 27
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 13
-				},
-				"ref": {
-					"std": 19
-				},
-				"will": {
-					"std": 16
-				}
-			},
-			"hp": [
-				{
-					"hp": 160,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"poison",
-				"disease"
-			],
-			"weaknesses": [
-				{
-					"amount": 10,
-					"name": "good"
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -561,7 +679,6 @@
 						"agile",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 2d10+6} slashing",
 					"types": [
 						"slashing"
@@ -573,12 +690,11 @@
 					"attack": 20,
 					"traits": [
 						"agile",
-						"deadly d10",
+						"deadly <d10>",
 						"finesse",
 						"magical",
 						"trip"
 					],
-					"effects": [],
 					"damage": "{@damage 2d10+8} slashing",
 					"types": [
 						"slashing"
@@ -587,9 +703,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
 					"type": "Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"DC": 23,
 					"entry": {
 						"1": {
@@ -621,14 +736,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+18 Str +4, Dex +6, Con +3, Int +4, Wis +3, Cha +6."
-						],
-						"name": "Stealth"
-					}
-				],
 				"mid": [
 					{
 						"entries": [
@@ -641,9 +748,9 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"trigger": "A creature plays an instrument while",
+						"trigger": "A creature plays an instrument while {@action Cast a Spell||Casting a Spell} or casts a composition spell within 20 feet of the dreadsong dancer",
 						"entries": [
-							"{@action Cast a Spell||Casting a Spell} or casts a composition spell within 20 feet of the dreadsong dancer; The dreadsong dancer {@action Stride||Strides} up to 20 feet and makes a songblade {@action Strike} against the triggering creature. If the {@action Strike} hits, the spell is disrupted."
+							"The dreadsong dancer {@action Stride||Strides} up to 20 feet and makes a songblade {@action Strike} against the triggering creature. If the {@action Strike} hits, the spell is disrupted."
 						],
 						"name": "Jealous Musician"
 					}
@@ -663,7 +770,7 @@
 						],
 						"entries": [
 							"The dreadsong dancer whirls their howling songblades and cloaks themself in illusion magic.",
-							"Each non-fiend creature in a 30-foot emanation from the dreadsong dancer must attempt a DC 29 Will save.",
+							"Each non-fiend creature in a 30-foot emanation from the dreadsong dancer must attempt a {@dc 29} Will save.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -681,21 +788,54 @@
 							"number": 1,
 							"unit": "action"
 						},
-						"traits": [
+						"entries": [
 							"songblade"
 						],
-						"entries": [],
 						"name": "Rend",
 						"generic": {
 							"tag": "ability"
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 13
+					},
+					"ref": {
+						"std": 19
+					},
+					"will": {
+						"std": 16
+					},
+					"abilities": [
+						"+2 status to all saves vs. composition spells"
+					]
+				},
+				"hp": [
+					{
+						"hp": 160
+					}
+				],
+				"immunities": [
+					"disease",
+					"poison"
+				],
+				"weaknesses": [
+					{
+						"amount": 10,
+						"name": "good"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Excorion",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 82,
 			"level": 7,
@@ -704,9 +844,6 @@
 				"ne",
 				"medium",
 				"undead"
-			],
-			"creatureType": [
-				"Undead"
 			],
 			"perception": {
 				"std": 18
@@ -717,13 +854,13 @@
 				}
 			],
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 16
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 17
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 16
 				}
 			},
@@ -735,43 +872,6 @@
 				"wis": 1,
 				"cha": 0
 			},
-			"ac": {
-				"std": 24
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 17
-				},
-				"ref": {
-					"std": 18
-				},
-				"will": {
-					"std": 14
-				}
-			},
-			"hp": [
-				{
-					"hp": 160,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"mental",
-				"death effects",
-				"disease"
-			],
-			"weaknesses": [
-				{
-					"amount": 10,
-					"name": "positive"
-				},
-				{
-					"amount": 5,
-					"name": "slashing"
-				}
-			],
 			"speed": {
 				"walk": 35
 			},
@@ -797,9 +897,8 @@
 					"name": "bloody spew",
 					"attack": 18,
 					"traits": [
-						"range 20 feet"
+						"range <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d6+4} bludgeoning and {@condition dazzled} for 1 round",
 					"types": [
 						"bludgeoning",
@@ -817,9 +916,9 @@
 					},
 					{
 						"entries": [
-							"Shoved, or otherwise forcibly moved except by magic, and the excorion ignores difficult terrain (but not greater difficult terrain)."
+							"Shoved, or otherwise forcibly moved except by magic, and the excorion ignores {@quickref difficult terrain||3|terrain} (but not {@quickref greater difficult terrain||3|terrain})."
 						],
-						"name": "Tripped,"
+						"name": "Tripped"
 					}
 				],
 				"bot": [
@@ -839,7 +938,6 @@
 							"unit": "action"
 						},
 						"requirements": "The excorion has at least 70",
-						"entries": [],
 						"name": "Vital Transfusion"
 					},
 					{
@@ -855,16 +953,55 @@
 						},
 						"entries": [
 							"The excorion spews necrotic blood all over a foe it has {@condition grabbed}.",
-							"The {@condition grabbed} creature must succeed at a DC 25 Fortitude save or become {@condition sickened|CRB|sickened 2}."
+							"The {@condition grabbed} creature must succeed at a {@dc 25} Fortitude save or become {@condition sickened|CRB|sickened 2}."
 						],
 						"name": "Vomit Blood"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 17
+					},
+					"ref": {
+						"std": 18
+					},
+					"will": {
+						"std": 14
+					}
+				},
+				"hp": [
+					{
+						"hp": 160,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"mental",
+					"death effects",
+					"disease"
+				],
+				"weaknesses": [
+					{
+						"amount": 10,
+						"name": "positive"
+					},
+					{
+						"amount": 5,
+						"name": "slashing"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Fayati Alummur",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 26,
 			"level": 8,
@@ -875,32 +1012,30 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Female human guildmaster",
 			"perception": {
 				"std": 19
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Vudrani"
+					"common",
+					"vudrani"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 18
 				},
-				"Deception": {
+				"deception": {
 					"std": 18
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 16
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 18
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 18
 				}
 			},
@@ -912,25 +1047,13 @@
 				"wis": 2,
 				"cha": 4
 			},
-			"ac": {
-				"std": 27
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 15
-				},
-				"ref": {
-					"std": 18
-				},
-				"will": {
-					"std": 16
-				}
-			},
-			"hp": [
-				{
-					"hp": 150,
-					"abilities": null
-				}
+			"items": [
+				"+1 daggers (3)",
+				"moderate darkvision elixir",
+				"jade bauble talisman (affixed to main-gauche)",
+				"leather armor",
+				"+1 striking main-gauche",
+				"+1 striking rapier"
 			],
 			"speed": {
 				"walk": 25
@@ -941,11 +1064,10 @@
 					"name": "rapier",
 					"attack": 20,
 					"traits": [
-						"deadly d8",
+						"deadly <d8>",
 						"disarm",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+5} piercing",
 					"types": [
 						"piercing"
@@ -961,9 +1083,8 @@
 						"finesse",
 						"magical",
 						"parry",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d4+5} piercing",
 					"types": [
 						"piercing"
@@ -976,10 +1097,9 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+5} piercing",
 					"types": [
 						"piercing"
@@ -992,10 +1112,9 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+5} piercing",
 					"types": [
 						"piercing"
@@ -1003,14 +1122,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+18, {@skill Thievery} +18 Str +1, Dex +6, Con +1, Int +0, Wis +2, Cha +4 Items +1 daggers (3), moderate darkvision elixir, jade bauble talisman (affixed to main-gauche), leather armor, +1 striking main-gauche, +1 striking rapier."
-						],
-						"name": "Stealth"
-					}
-				],
 				"mid": [
 					{
 						"activity": {
@@ -1049,9 +1160,9 @@
 					},
 					{
 						"entries": [
-							"Fayati critically succeeds at a {@action Strike} against a creature, until the start of her next turn, the first time that another member of the Copper Hand deals damage to that creature during their turn, they deal an additional {@damage 1d6} precision damage to it."
+							"Whenever Fayati critically succeeds at a {@action Strike} against a creature, until the start of her next turn, the first time that another member of the Copper Hand deals damage to that creature during their turn, they deal an additional {@damage 1d6} precision damage to it."
 						],
-						"name": "Guildmaster's Lead Whenever"
+						"name": "Guildmaster's Lead"
 					},
 					{
 						"entries": [
@@ -1063,11 +1174,31 @@
 						}
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 15
+					},
+					"ref": {
+						"std": 18
+					},
+					"will": {
+						"std": 16
+					}
+				},
+				"hp": [
+					{
+						"hp": 150
+					}
+				]
 			}
 		},
 		{
 			"name": "Frefferth",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 35,
 			"level": 9,
@@ -1076,9 +1207,6 @@
 				"le",
 				"medium",
 				"undead"
-			],
-			"creatureType": [
-				"Undead"
 			],
 			"perception": {
 				"std": 18
@@ -1091,21 +1219,21 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Necril"
+					"common",
+					"necril"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 21
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 23
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 16
 				},
-				"Survival": {
+				"survival": {
 					"std": 17
 				}
 			},
@@ -1117,39 +1245,6 @@
 				"wis": 4,
 				"cha": 6
 			},
-			"ac": {
-				"std": 30
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 14
-				},
-				"ref": {
-					"std": 16
-				},
-				"will": {
-					"std": 19
-				}
-			},
-			"hp": [
-				{
-					"hp": 125,
-					"abilities": [
-						"fast healing 8"
-					]
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease",
-				"fear"
-			],
-			"weaknesses": [
-				{
-					"amount": 10,
-					"name": "good"
-				}
-			],
 			"speed": {
 				"walk": 20
 			},
@@ -1160,9 +1255,8 @@
 					"attack": 21,
 					"traits": [
 						"magical",
-						"two-hand d12"
+						"two-hand <d12>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+12} slashing",
 					"types": [
 						"slashing"
@@ -1174,9 +1268,8 @@
 					"attack": 20,
 					"traits": [
 						"magical",
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+12} piercing",
 					"types": [
 						"piercing"
@@ -1188,9 +1281,8 @@
 					"attack": 19,
 					"traits": [
 						"magical",
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+12} piercing",
 					"types": [
 						"piercing"
@@ -1207,7 +1299,7 @@
 							"mental"
 						],
 						"entries": [
-							"30 feet, DC 25."
+							"30 feet, {@dc 25}"
 						],
 						"name": "Frightful Presence",
 						"generic": {
@@ -1219,7 +1311,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -1277,11 +1368,45 @@
 						"name": "Summon Steed"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 30
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 14
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 19
+					}
+				},
+				"hp": [
+					{
+						"hp": 125,
+						"abilities": [
+							"fast healing 8"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"fear"
+				],
+				"weaknesses": [
+					{
+						"amount": 10,
+						"name": "good"
+					}
+				]
 			}
 		},
 		{
 			"name": "Giant Bone Skipper",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 80,
 			"level": 7,
@@ -1290,9 +1415,6 @@
 				"n",
 				"large",
 				"animal"
-			],
-			"creatureType": [
-				"Animal"
 			],
 			"perception": {
 				"std": 17
@@ -1308,13 +1430,13 @@
 				}
 			],
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 19
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 15
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 15
 				}
 			},
@@ -1326,26 +1448,6 @@
 				"wis": 2,
 				"cha": -5
 			},
-			"ac": {
-				"std": 25
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 15
-				},
-				"ref": {
-					"std": 17
-				},
-				"will": {
-					"std": 15
-				}
-			},
-			"hp": [
-				{
-					"hp": 115,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"fly": 40
@@ -1386,7 +1488,7 @@
 					},
 					{
 						"entries": [
-							"As bone skipper swarm, but DC 25."
+							"As bone skipper swarm, but {@dc 25}."
 						],
 						"name": "Marrow Rot",
 						"entries_as_xyz": [
@@ -1396,7 +1498,7 @@
 								"traits": [
 									"disease"
 								],
-								"note": " Marrow rot affects only creatures with a skeletal\nsystem",
+								"note": "Marrow rot affects only creatures with a skeletal system",
 								"DC": 24,
 								"savingThrow": "Fortitude",
 								"onset": "1 day",
@@ -1421,11 +1523,32 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 25
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 15
+					},
+					"ref": {
+						"std": 17
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": [
+					{
+						"hp": 115
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Kolo Harvan",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 17,
 			"level": 2,
@@ -1436,32 +1559,29 @@
 				"halfling",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 8
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Halfling"
+					"common",
+					"halfling"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 7
 				},
-				"Deception": {
+				"deception": {
 					"std": 8
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 8
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 9
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 7
 				}
 			},
@@ -1473,25 +1593,10 @@
 				"wis": 0,
 				"cha": 4
 			},
-			"ac": {
-				"std": 18
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 5
-				},
-				"ref": {
-					"std": 11
-				},
-				"will": {
-					"std": 8
-				}
-			},
-			"hp": [
-				{
-					"hp": 30,
-					"abilities": null
-				}
+			"items": [
+				"daggers (5)",
+				"standard skeleton key",
+				"studded leather armor"
 			],
 			"speed": {
 				"walk": 25
@@ -1504,9 +1609,8 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4} piercing",
 					"types": [
 						"piercing"
@@ -1518,10 +1622,9 @@
 					"attack": 11,
 					"traits": [
 						"agile",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+3} piercing",
 					"types": [
 						"piercing"
@@ -1529,14 +1632,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+7 Str +0, Dex +3, Con +1, Int +1, Wis +0, Cha +4 Items daggers (5), standard skeleton key, studded leather armor."
-						],
-						"name": "Thievery"
-					}
-				],
 				"mid": [
 					{
 						"activity": {
@@ -1553,16 +1648,36 @@
 				"bot": [
 					{
 						"entries": [
-							"Kolo's melee Strikes deal an extra {@damage 1d6} precision damage to Medium or larger creatures."
+							"Kolo's melee {@action Strike||Strikes} deal an extra {@damage 1d6} precision damage to Medium or larger creatures."
 						],
 						"name": "Upward Stab"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 18
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 5
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 8
+					}
+				},
+				"hp": [
+					{
+						"hp": 30
 					}
 				]
 			}
 		},
 		{
 			"name": "Najra Lizard",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 83,
 			"level": 4,
@@ -1571,9 +1686,6 @@
 				"cn",
 				"tiny",
 				"dragon"
-			],
-			"creatureType": [
-				"Dragon"
 			],
 			"perception": {
 				"std": 11
@@ -1590,21 +1702,21 @@
 			],
 			"languages": {
 				"languages": [
-					"Draconic"
+					"draconic"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 14
 				},
-				"Deception": {
+				"deception": {
 					"std": 10,
 					"to Create a Diversion": 12
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 12
 				},
-				"Survival": {
+				"survival": {
 					"std": 12
 				}
 			},
@@ -1616,30 +1728,6 @@
 				"wis": 3,
 				"cha": 2
 			},
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 10
-				},
-				"ref": {
-					"std": 12
-				},
-				"will": {
-					"std": 11
-				}
-			},
-			"hp": [
-				{
-					"hp": 60,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"paralyzed",
-				"sleep"
-			],
 			"speed": {
 				"walk": 30
 			},
@@ -1663,7 +1751,7 @@
 					"traits": [
 						"agile",
 						"poison",
-						"range increment 20 feet"
+						"range increment <20 feet>"
 					],
 					"effects": [
 						"najra lizard venom"
@@ -1675,14 +1763,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+12 Str \u20131, Dex +4, Con +2, Int \u20131, Wis +3, Cha +2."
-						],
-						"name": "Survival"
-					}
-				],
 				"mid": [
 					{
 						"activity": {
@@ -1698,23 +1778,62 @@
 				],
 				"bot": [
 					{
-						"entries": [
-							"The creature is extremely thirsty and can't quench its thirst while poisoned; Saving Throw DC 21 Fortitude; Maximum Duration 4 hours; Stage 1 {@damage 1d4} poison damage, {@condition fatigued}, and {@dice 1d4} damage that can't be recovered until the creature quenches its thirst (1 round); Stage 2 as stage 1 (1 hour)"
-						],
-						"name": "Najra Lizard Venom"
+						"type": "affliction",
+						"name": "Najra Lizard Venom",
+						"note": "The creature is extremely thirsty and can't quench its thirst while poisoned",
+						"DC": 21,
+						"savingThrow": "Fortitude",
+						"maxDuration": "4 hours",
+						"stages": [
+							{
+								"stage": 1,
+								"entry": "{@damage 1d4} poison damage, {@condition fatigued}, and {@dice 1d4} damage that can't be recovered until the creature quenches its thirst",
+								"duration": "1 round"
+							},
+							{
+								"stage": 2,
+								"entry": "as stage 1",
+								"duration": "1 hour"
+							}
+						]
 					},
 					{
 						"entries": [
-							"The najra lizard's melee Strikes deal {@damage 1d6} precision damage to creatures sharing a square with more than one najra lizard."
+							"The najra lizard's melee {@action Strike||Strikes} deal {@damage 1d6} precision damage to creatures sharing a square with more than one najra lizard."
 						],
 						"name": "Najra Swarm Attack"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 10
+					},
+					"ref": {
+						"std": 12
+					},
+					"will": {
+						"std": 11
+					}
+				},
+				"hp": [
+					{
+						"hp": 60
+					}
+				],
+				"immunities": [
+					"paralyzed",
+					"sleep"
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Ofalth Zombie",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 47,
 			"level": 7,
@@ -1727,10 +1846,6 @@
 				"undead",
 				"zombie"
 			],
-			"creatureType": [
-				"Aberration",
-				"Undead"
-			],
 			"perception": {
 				"std": 15
 			},
@@ -1740,7 +1855,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 20
 				}
 			},
@@ -1752,32 +1867,6 @@
 				"wis": 0,
 				"cha": 2
 			},
-			"ac": {
-				"std": 22
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 18
-				},
-				"ref": {
-					"std": 11
-				},
-				"will": {
-					"std": 13
-				}
-			},
-			"hp": [
-				{
-					"hp": 190,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease"
-			],
 			"speed": {
 				"walk": 30
 			},
@@ -1787,7 +1876,7 @@
 					"name": "fist",
 					"attack": 18,
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"wretched weeps"
@@ -1802,7 +1891,7 @@
 					"name": "fling offal",
 					"attack": 17,
 					"traits": [
-						"range increment 30 feet"
+						"range increment <30 feet>"
 					],
 					"effects": [
 						"wretched weeps"
@@ -1836,7 +1925,7 @@
 							"necromancy"
 						],
 						"entries": [
-							"10 feet, DC 24.",
+							"10 feet, {@dc 24}.",
 							"As zombie ability (Bestiary 340)."
 						],
 						"name": "Rotting Aura"
@@ -1858,17 +1947,44 @@
 							"disease"
 						],
 						"entries": [
-							"As ofalth, but DC 22."
+							"As ofalth, but {@dc 22}."
 						],
 						"name": "Wretched Weeps",
-						"entries_as_xyz": "Ability not found: 'Wretched Weeps As ofalth, but DC 22.' in Ofalth Zombie, p.47"
+						"entries_as_xyz": "Ability not found: 'Wretched Weeps As ofalth, but {@dc 22}.' in Ofalth Zombie, p.47"
 					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 22
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 18
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 13
+					}
+				},
+				"hp": [
+					{
+						"hp": 190,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease"
 				]
 			}
 		},
 		{
 			"name": "Shristi Melipdra",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 91,
 			"level": 7,
@@ -1879,31 +1995,29 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Male human guard captain",
 			"perception": {
 				"std": 18
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Goblin",
-					"Hallit",
-					"Vudrani"
+					"common",
+					"goblin",
+					"hallit",
+					"vudrani"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 16
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 17
 				},
-				"Society": {
+				"society": {
 					"std": 13
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 16
 				}
 			},
@@ -1917,27 +2031,8 @@
 			},
 			"items": [
 				"Foreign Guard uniform",
-				"handcuffs (2;"
-			],
-			"ac": {
-				"std": 26
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 13
-				},
-				"ref": {
-					"std": 18
-				},
-				"will": {
-					"std": 16
-				}
-			},
-			"hp": [
-				{
-					"hp": 100,
-					"abilities": null
-				}
+				"handcuffs (2; Pathfinder Adventure Path #157 77)",
+				"victor's medallion from the Challenge of Sky and Heaven"
 			],
 			"speed": {
 				"walk": 35
@@ -1950,9 +2045,8 @@
 					"traits": [
 						"nonlethal",
 						"unarmed",
-						"versatile p"
+						"versatile <p>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d10+4} slashing",
 					"types": [
 						"slashing"
@@ -1968,7 +2062,6 @@
 						"nonlethal",
 						"unarmed"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+4} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1976,27 +2069,12 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+16 Str +4, Dex +3, Con +2, Int +0, Wis +3, Cha +1 Items Foreign Guard uniform, handcuffs (2;"
-						],
-						"name": "Stealth"
-					},
-					{
-						"entries": [
-							"#157 77), victor's medallion from the Challenge of Sky and Heaven."
-						],
-						"name": "Pathfinder Adventure Path"
-					}
-				],
 				"mid": [
 					{
 						"activity": {
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -2013,15 +2091,9 @@
 							"flourish"
 						],
 						"entries": [
-							"Shristi makes two unarmed Strikes. If both hit the same creature, combine their damage for the purposes of resistances and weaknesses. He applies his multiple attack penalty to."
+							"Shristi makes two unarmed {@action Strike||Strikes}. If both hit the same creature, combine their damage for the purposes of resistances and weaknesses. He applies his multiple attack penalty to the {@action Strike||Strikes} normally. As it has the {@trait flourish} trait, Shristi can use {@action Flurry of Blows} only once per turn."
 						],
 						"name": "Flurry of Blows"
-					},
-					{
-						"entries": [
-							"Strikes normally. As it has the {@trait flourish} trait, Shristi can use {@action Flurry of Blows} only once per turn."
-						],
-						"name": "the"
 					},
 					{
 						"activity": {
@@ -2036,10 +2108,10 @@
 						],
 						"frequency": {
 							"unit": "day",
-							"freq": 2
+							"number": 2
 						},
 						"entries": [
-							"With a loud shout, Shristi unleashes his ki as a crackling shroud of thunder and lightning that engulfs his body. Until the end of his next turn, Shristi's unarmed Strikes and Strikes with weapons that have the {@trait monk} trait deal an additional 3 electricity damage and 3 sonic damage."
+							"With a loud shout, Shristi unleashes his ki as a crackling shroud of thunder and lightning that engulfs his body. Until the end of his next turn, Shristi's unarmed {@action Strike||Strikes} and {@action Strike||Strikes} with weapons that have the {@trait monk} trait deal an additional 3 electricity damage and 3 sonic damage."
 						],
 						"name": "Heaven's Thunder"
 					},
@@ -2052,29 +2124,37 @@
 							"stance"
 						],
 						"entries": [
-							"Shristi enters a combat stance perfected by past champions of the Challenge of."
+							"Shristi enters a combat stance perfected by past champions of the Challenge of Sky and Heaven. While in this stance, the only {@action Strike||Strikes} Shristi can make are skyward slash unarmed attacks. These deal {@damage 1d10} slashing damage; are in the {@group brawling}; and have the {@trait nonlethal}, {@trait unarmed}, and {@trait versatile <P>} traits.",
+							"While in Sky and Heaven Stance Shristi gains resistance 2 to electricity and sonic damage."
 						],
 						"name": "Sky and Heaven Stance"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 26
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 13
 					},
-					{
-						"entries": [
-							"While in this stance, the only Strikes Shristi can make are skyward slash unarmed attacks.",
-							"These deal {@damage 1d10} slashing damage; are in the {@group brawling}; and have the nonlethal, unarmed, and versatile P traits."
-						],
-						"name": "Sky and Heaven."
+					"ref": {
+						"std": 18
 					},
+					"will": {
+						"std": 16
+					}
+				},
+				"hp": [
 					{
-						"entries": [
-							"Shristi gains resistance 2 to electricity and sonic damage."
-						],
-						"name": "While in Sky and Heaven Stance,"
+						"hp": 100
 					}
 				]
 			}
 		},
 		{
 			"name": "Skinsaw Murderer",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 50,
 			"level": 6,
@@ -2085,26 +2165,23 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 17
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Daemonic"
+					"common",
+					"daemonic"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 15
 				},
-				"Deception": {
+				"deception": {
 					"std": 12
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 15
 				}
 			},
@@ -2116,26 +2193,6 @@
 				"wis": 1,
 				"cha": 0
 			},
-			"ac": {
-				"std": 22
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 14
-				},
-				"ref": {
-					"std": 17
-				},
-				"will": {
-					"std": 9
-				}
-			},
-			"hp": [
-				{
-					"hp": 120,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -2148,9 +2205,8 @@
 						"agile",
 						"finesse",
 						"magical",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+5} piercing",
 					"types": [
 						"piercing"
@@ -2163,10 +2219,9 @@
 					"traits": [
 						"agile",
 						"backstabber",
-						"deadly d8",
+						"deadly <d8>",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+5} piercing",
 					"types": [
 						"piercing"
@@ -2179,10 +2234,9 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+5} piercing",
 					"types": [
 						"piercing"
@@ -2197,7 +2251,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"{@damage 1d6+5} piercing Melee war razor +17 (agile, backstabber, deadly d8, finesse), Damage {@damage 1d4+5} piercing Ranged {@as 1} dagger +17 (agile, finesse, thrown 10 feet, versatile S), Damage {@damage 1d4+5} piercing."
+							"{@damage 1d6+5} piercing Melee war razor +17 (agile, backstabber, deadly <d8>, finesse), Damage {@damage 1d4+5} piercing Ranged {@as 1} dagger +17 (agile, finesse, thrown <10 feet>, versatile S), Damage {@damage 1d4+5} piercing."
 						],
 						"name": "S), Damage"
 					},
@@ -2224,11 +2278,31 @@
 						"name": "Twin Takedown"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 22
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 14
+					},
+					"ref": {
+						"std": 17
+					},
+					"will": {
+						"std": 9
+					}
+				},
+				"hp": [
+					{
+						"hp": 120
+					}
+				]
 			}
 		},
 		{
 			"name": "Skinsaw Seamer",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 51,
 			"level": 8,
@@ -2239,35 +2313,32 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 18
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Daemonic"
+					"common",
+					"daemonic"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 18
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 17
 				},
-				"Deception": {
+				"deception": {
 					"std": 16
 				},
-				"Religion": {
+				"religion": {
 					"std": 17
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 16
 				},
-				"Norgorber Lore": {
+				"norgorber lore": {
 					"std": 16
 				}
 			},
@@ -2279,26 +2350,6 @@
 				"wis": 3,
 				"cha": 2
 			},
-			"ac": {
-				"std": 26
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 16
-				},
-				"ref": {
-					"std": 18
-				},
-				"will": {
-					"std": 17
-				}
-			},
-			"hp": [
-				{
-					"hp": 130,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -2310,10 +2361,9 @@
 					"traits": [
 						"agile",
 						"backstabber",
-						"deadly d8",
+						"deadly <d8>",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+7} piercing",
 					"types": [
 						"piercing"
@@ -2327,9 +2377,8 @@
 						"agile",
 						"finesse",
 						"magical",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+7} piercing",
 					"types": [
 						"piercing"
@@ -2342,10 +2391,9 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+7} piercing",
 					"types": [
 						"piercing"
@@ -2373,7 +2421,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"{@damage 2d6+7} piercing Ranged dagger +20 (agile, finesse, thrown 10 feet, versatile S), Damage {@damage 1d4+7} piercing."
+							"{@damage 2d6+7} piercing Ranged dagger +20 (agile, finesse, thrown <10 feet>, versatile S), Damage {@damage 1d4+7} piercing."
 						],
 						"name": "S), Damage"
 					},
@@ -2384,7 +2432,7 @@
 						},
 						"requirements": "The Skinsaw seamer dealt damage with a melee weapon other than its war razor with their last action",
 						"entries": [
-							"The seamer makes a war razor {@action Strike} against the same creature that they just damaged. On a hit, the seamer slices a strip of flesh from the target and deals {@damage 1d6} {@condition persistent damage ||persistent bleed damage} in addition to the war razor's usual damage."
+							"The seamer makes a war razor {@action Strike} against the same creature that they just damaged. On a hit, the seamer slices a strip of flesh from the target and deals {@damage 1d6} {@condition persistent damage||persistent bleed damage} in addition to the war razor's usual damage."
 						],
 						"name": "Flay"
 					},
@@ -2395,16 +2443,45 @@
 						},
 						"requirements": "The Skinsaw seamer is currently grappling a creature",
 						"entries": [
-							"The seamer stitches a piece of cloth to the creature's arm, face, or leg, potentially hindering it. The creature must attempt a DC 26 Reflex saving throw; if the seamer has already successfully used their Flay ability against the creature within the past minute, the creature's save result is one degree of success worse. Critical Success The creature is unaffected. Success The creature takes {@damage 1d4} piercing damage. Failure The creature is {@condition clumsy|CRB|clumsy 1}, {@condition dazzled}, {@condition enfeebled|CRB|enfeebled 1}, or {@condition flat-footed} (seamer's choice). This effect lasts until the creature spends a single action to tear out the stitching, which deals {@damage 1d6} piercing damage to it. Critical Failure The creature is {@condition clumsy|CRB|clumsy 2}, {@condition blinded}, {@condition enfeebled|CRB|enfeebled 2}, or {@condition flat-footed} (seamer's choice). This effect lasts until the creature spends 2 actions to tear out the stitching, which deals {@damage 2d6} piercing damage to it."
+							"The seamer stitches a piece of cloth to the creature's arm, face, or leg, potentially hindering it. The creature must attempt a {@dc 26} Reflex saving throw; if the seamer has already successfully used their Flay ability against the creature within the past minute, the creature's save result is one degree of success worse.",
+							{
+								"type": "successDegree",
+								"entries": {
+									"Critical Success": "The creature is unaffected.",
+									"Success": "The creature takes {@damage 1d4} piercing damage.",
+									"Failure": "The creature is {@condition clumsy|CRB|clumsy 1}, {@condition dazzled}, {@condition enfeebled|CRB|enfeebled 1}, or {@condition flat-footed} (seamer's choice). This effect lasts until the creature spends a single action to tear out the stitching, which deals {@damage 1d6} piercing damage to it.",
+									"Critical Failure": "The creature is {@condition clumsy|CRB|clumsy 2}, {@condition blinded}, {@condition enfeebled|CRB|enfeebled 2}, or {@condition flat-footed} (seamer's choice). This effect lasts until the creature spends 2 actions to tear out the stitching, which deals {@damage 2d6} piercing damage to it."
+								}
+							}
 						],
 						"name": "Quick Stitch"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 26
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 16
+					},
+					"ref": {
+						"std": 18
+					},
+					"will": {
+						"std": 17
+					}
+				},
+				"hp": [
+					{
+						"hp": 130
 					}
 				]
 			}
 		},
 		{
 			"name": "Skinstitch",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 84,
 			"level": 5,
@@ -2415,9 +2492,6 @@
 				"construct",
 				"mindless"
 			],
-			"creatureType": [
-				"Construct"
-			],
 			"perception": {
 				"std": 12
 			},
@@ -2427,7 +2501,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 15
 				}
 			},
@@ -2439,38 +2513,6 @@
 				"wis": 0,
 				"cha": 0
 			},
-			"ac": {
-				"std": 22
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 16
-				},
-				"ref": {
-					"std": 14
-				},
-				"will": {
-					"std": 7
-				}
-			},
-			"hp": [
-				{
-					"hp": 95,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"bleed",
-				"death effects",
-				"disease",
-				"doomed"
-			],
-			"weaknesses": [
-				{
-					"amount": 5,
-					"name": "fire"
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -2483,7 +2525,6 @@
 						"agile",
 						"sweep"
 					],
-					"effects": [],
 					"damage": "{@damage 2d4+8} slashing",
 					"types": [
 						"slashing"
@@ -2495,9 +2536,8 @@
 					"attack": 15,
 					"traits": [
 						"forceful",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+8} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -2520,7 +2560,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The skinstitch makes a blade {@action Strike} against an animal or humanoid. On a success, the skinstitch slices a long strip of flesh from the target; if the skinstitch dealt damage, it deals an additional {@damage 1d6} {@condition persistent damage ||persistent bleed damage}."
+							"The skinstitch makes a blade {@action Strike} against an animal or humanoid. On a success, the skinstitch slices a long strip of flesh from the target; if the skinstitch dealt damage, it deals an additional {@damage 1d6} {@condition persistent damage||persistent bleed damage}."
 						],
 						"name": "Flay"
 					},
@@ -2534,20 +2574,49 @@
 						],
 						"requirements": "The skinstitch hasn't used this ability since the last time it successfully used its Flay ability",
 						"entries": [
-							"The skinstitch sews flayed flesh to its body to seal tears and rents. The skinstitch regains 8."
+							"The skinstitch sews flayed flesh to its body to seal tears and rents. The skinstitch regains 8 Hit Points."
 						],
 						"name": "Stitch Skin"
-					},
-					{
-						"entries": [],
-						"name": "Hit Points."
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 22
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 16
+					},
+					"ref": {
+						"std": 14
+					},
+					"will": {
+						"std": 7
+					}
+				},
+				"hp": [
+					{
+						"hp": 95
+					}
+				],
+				"immunities": [
+					"bleed",
+					"death effects",
+					"disease",
+					"doomed"
+				],
+				"weaknesses": [
+					{
+						"amount": 5,
+						"name": "fire"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Tenome",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 85,
 			"level": 4,
@@ -2555,9 +2624,6 @@
 				"ne",
 				"medium",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 14
@@ -2569,23 +2635,23 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 12
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 11
 				},
-				"Deception": {
+				"deception": {
 					"std": 10
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 10
 				},
-				"Survival": {
+				"survival": {
 					"std": 8
 				}
 			},
@@ -2597,26 +2663,6 @@
 				"wis": 0,
 				"cha": 2
 			},
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 13
-				},
-				"ref": {
-					"std": 15
-				},
-				"will": {
-					"std": 12
-				}
-			},
-			"hp": [
-				{
-					"hp": 60,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -2625,7 +2671,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 14,
-					"effects": [],
 					"damage": "{@damage 2d8+4} piercing",
 					"types": [
 						"piercing"
@@ -2669,7 +2714,7 @@
 						],
 						"requirements": "The tenome has a creature {@condition grabbed} or {@condition restrained}",
 						"entries": [
-							"The tenome makes a jaws {@action Strike} against the {@condition grabbed} or {@condition restrained} creature. If the {@action Strike} hits, the creature must succeed at a DC 18 Fortitude save or become {@condition drained|CRB|drained 1} (or the value of the creature's {@condition drained} condition increases by 1 if it already has a {@condition drained} value, to a maximum of {@condition drained|CRB|drained 4}). The tenome regains {@dice 1d8} Hit Points each time it uses Bone Drink."
+							"The tenome makes a jaws {@action Strike} against the {@condition grabbed} or {@condition restrained} creature. If the {@action Strike} hits, the creature must succeed at a {@dc 18} Fortitude save or become {@condition drained|CRB|drained 1} (or the value of the creature's {@condition drained} condition increases by 1 if it already has a {@condition drained} value, to a maximum of {@condition drained|CRB|drained 4}). The tenome regains {@dice 1d8} Hit Points each time it uses Bone Drink."
 						],
 						"name": "Bone Drink"
 					},
@@ -2692,16 +2737,37 @@
 							"or"
 						],
 						"entries": [
-							"{@as 2} (emotion, enchantment, fear, incapacitation, mental, occult, visual) A tenome can gaze at a creature within 30 feet by presenting one of its eyes. The target must succeed at a DC 21 Will save or become {@condition frightened|CRB|frightened 1}. If the tenome uses 2 actions and presents both of its eyes, the target is also {@condition paralyzed} if it fails the save. A creature that successfully saves is temporarily immune for 24 hours."
+							"{@as 2} (emotion, enchantment, fear, incapacitation, mental, occult, visual) A tenome can gaze at a creature within 30 feet by presenting one of its eyes. The target must succeed at a {@dc 21} Will save or become {@condition frightened|CRB|frightened 1}. If the tenome uses 2 actions and presents both of its eyes, the target is also {@condition paralyzed} if it fails the save. A creature that successfully saves is temporarily immune for 24 hours."
 						],
 						"name": "Terrifying Gaze"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 13
+					},
+					"ref": {
+						"std": 15
+					},
+					"will": {
+						"std": 12
+					}
+				},
+				"hp": [
+					{
+						"hp": 60
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Teraphant",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 86,
 			"level": 9,
@@ -2710,9 +2776,6 @@
 				"n",
 				"huge",
 				"beast"
-			],
-			"creatureType": [
-				"Beast"
 			],
 			"perception": {
 				"std": 18
@@ -2728,17 +2791,17 @@
 			],
 			"languages": {
 				"languages": [
-					"Vudrani (can't speak any language)"
+					"vudrani (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 20
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 18
 				},
-				"Survival": {
+				"survival": {
 					"std": 18
 				}
 			},
@@ -2750,26 +2813,6 @@
 				"wis": 3,
 				"cha": 3
 			},
-			"ac": {
-				"std": 27
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 20
-				},
-				"ref": {
-					"std": 14
-				},
-				"will": {
-					"std": 18
-				}
-			},
-			"hp": [
-				{
-					"hp": 175,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 45
 			},
@@ -2779,9 +2822,8 @@
 					"name": "horn",
 					"attack": 20,
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d6+9} piercing",
 					"types": [
 						"piercing"
@@ -2792,22 +2834,19 @@
 					"name": "trunk",
 					"attack": 20,
 					"traits": [
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"effects": [
 						"grabbing trunk"
-					],
-					"damage": "grabbing trunk",
-					"types": []
+					]
 				},
 				{
 					"range": "Melee",
 					"name": "foot",
 					"attack": 20,
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d10+9} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -2855,7 +2894,7 @@
 						},
 						"requirements": "The teraphant has a creature {@condition grabbed}",
 						"entries": [
-							"The teraphant slams the creature onto one of its horns. The target must attempt a DC 27 Reflex save or suffer {@damage 3d6+9} piercing damage and {@damage 1d6} {@condition persistent damage ||persistent bleed damage} ({@damage 6d6+18} piercing damage on a critical failure)."
+							"The teraphant slams the creature onto one of its horns. The target must attempt a {@dc 27} Reflex save or suffer {@damage 3d6+9} piercing damage and {@damage 1d6} {@condition persistent damage||persistent bleed damage} ({@damage 6d6+18} piercing damage on a critical failure)."
 						],
 						"name": "Impale"
 					},
@@ -2865,7 +2904,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The teraphant lets out a loud trumpet that deals {@damage 8d8} mental damage (DC 27 basic Will save) in a 30-foot cone. A creature that fails its save is also pushed 15 feet (30 feet on a critical failure). If a pushed creatures strikes a solid barrier, it takes {@damage 3d6} bludgeoning damage and stops. The teraphant can't use."
+							"The teraphant lets out a loud trumpet that deals {@damage 8d8} mental damage ({@dc 27} basic Will save) in a 30-foot cone. A creature that fails its save is also pushed 15 feet (30 feet on a critical failure). If a pushed creatures strikes a solid barrier, it takes {@damage 3d6} bludgeoning damage and stops. The teraphant can't use."
 						],
 						"name": "Psychokinetic Trumpet"
 					},
@@ -2881,7 +2920,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Large or smaller, foot, DC 27."
+							"Large or smaller, foot, {@dc 27}"
 						],
 						"name": "Trample",
 						"generic": {
@@ -2889,11 +2928,32 @@
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 20
+					},
+					"ref": {
+						"std": 14
+					},
+					"will": {
+						"std": 18
+					}
+				},
+				"hp": [
+					{
+						"hp": 175
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Vaultbreaker Ooze",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 87,
 			"level": 6,
@@ -2903,9 +2963,6 @@
 				"large",
 				"mindless",
 				"ooze"
-			],
-			"creatureType": [
-				"Ooze"
 			],
 			"perception": {
 				"std": 10
@@ -2918,7 +2975,7 @@
 				}
 			],
 			"skills": {
-				"Thievery": {
+				"thievery": {
 					"std": 17
 				}
 			},
@@ -2930,31 +2987,6 @@
 				"wis": 0,
 				"cha": -5
 			},
-			"ac": {
-				"std": 13
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 17
-				},
-				"ref": {
-					"std": 10
-				},
-				"will": {
-					"std": 8
-				}
-			},
-			"hp": [
-				{
-					"hp": 150,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"acid",
-				"mental",
-				"critical hits"
-			],
 			"speed": {
 				"walk": 20,
 				"climb": 10
@@ -2964,7 +2996,6 @@
 					"range": "Melee",
 					"name": "pseudopod",
 					"attack": 17,
-					"effects": [],
 					"damage": "{@damage 1d8+8} bludgeoning plus {@damage 2d6} acid",
 					"types": [
 						"acid",
@@ -2998,9 +3029,9 @@
 							"polymorph",
 							"transmutation"
 						],
-						"trigger": "A creature Strikes the vaultbreaker ooze",
+						"trigger": "A creature {@action Strike||Strikes} the vaultbreaker ooze",
 						"entries": [
-							"The ooze's outer plasm hardens into a protective shell of precious metals. Until the start of its next turn, it gains resistance 5 to physical damage (except adamantine), it has a \u20135-foot penalty to its Speed, and its pseudopod Strikes gain the versatile."
+							"The ooze's outer plasm hardens into a protective shell of precious metals. Until the start of its next turn, it gains resistance 5 to physical damage (except adamantine), it has a \u20135-foot penalty to its Speed, and its pseudopod {@action Strike||Strikes} gain the versatile."
 						],
 						"name": "Metallify"
 					},
@@ -3018,7 +3049,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"DC 23, {@damage 2d8+9} acid, {@action Escape} DC 23, Rupture 14 (19 when using Metallify)"
+							"{@dc 23}, {@damage 2d8+9} acid, {@action Escape} {@dc 23}, Rupture 14 (19 when using Metallify)"
 						],
 						"name": "Engulf",
 						"generic": {
@@ -3041,11 +3072,37 @@
 						"name": "Form Tool"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 13
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 17
+					},
+					"ref": {
+						"std": 10
+					},
+					"will": {
+						"std": 8
+					}
+				},
+				"hp": [
+					{
+						"hp": 150
+					}
+				],
+				"immunities": [
+					"acid",
+					"mental",
+					"critical hits"
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Wrent Dicaspiron",
-			"isNpc": false,
 			"source": "AoE2",
 			"page": 89,
 			"level": 10,
@@ -3056,29 +3113,26 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 22
 			},
 			"languages": {
 				"languages": [
-					"Common",
-					"Daemonic"
+					"common",
+					"daemonic"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 20
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 22
 				},
-				"Religion": {
+				"religion": {
 					"std": 17
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 16
 				}
 			},
@@ -3090,26 +3144,6 @@
 				"wis": 1,
 				"cha": 2
 			},
-			"ac": {
-				"std": 30
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 22
-				},
-				"ref": {
-					"std": 20
-				},
-				"will": {
-					"std": 17
-				}
-			},
-			"hp": [
-				{
-					"hp": 180,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -3122,7 +3156,6 @@
 						"forceful",
 						"sweep"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+8} slashing",
 					"types": [
 						"slashing"
@@ -3135,7 +3168,7 @@
 					"traits": [
 						"disarm",
 						"finesse",
-						"reach 15 feet",
+						"reach <15 feet>",
 						"trip"
 					],
 					"effects": [
@@ -3162,7 +3195,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -3172,7 +3204,7 @@
 				"bot": [
 					{
 						"entries": [
-							"Any creature taking {@condition persistent damage ||persistent bleed damage} is {@condition flat-footed} against the Skinner's attacks. When attacking a {@condition flat-footed} creature, the Skinner deals an additional {@damage 2d6} precision damage."
+							"Any creature taking {@condition persistent damage||persistent bleed damage} is {@condition flat-footed} against the Skinner's attacks. When attacking a {@condition flat-footed} creature, the Skinner deals an additional {@damage 2d6} precision damage."
 						],
 						"name": "Bloody Sneak Attack"
 					},
@@ -3201,7 +3233,7 @@
 					},
 					{
 						"entries": [
-							"Skinner makes a successful cleaver {@action Strike} against a {@condition grabbed} creature, she also deals {@damage 1d6} {@condition persistent damage ||persistent bleed damage} (or {@dice 2d6} on a critical hit)."
+							"Skinner makes a successful cleaver {@action Strike} against a {@condition grabbed} creature, she also deals {@damage 1d6} {@condition persistent damage||persistent bleed damage} (or {@dice 2d6} on a critical hit)."
 						],
 						"name": "Flay Whenever the"
 					},
@@ -3215,6 +3247,27 @@
 							"The Skinner pulls the creature into the nearest open adjacent square and makes a cleaver {@action Strike} against the creature."
 						],
 						"name": "Hook and Flay"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 30
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 22
+					},
+					"ref": {
+						"std": 20
+					},
+					"will": {
+						"std": 17
+					}
+				},
+				"hp": [
+					{
+						"hp": 180
 					}
 				]
 			}

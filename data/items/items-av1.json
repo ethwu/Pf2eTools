@@ -26,10 +26,10 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "month"
 					},
 					"entries": [
@@ -43,10 +43,10 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "month"
 					},
 					"entries": [
@@ -85,12 +85,15 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact (emotion",
-						"visual)"
+						"{@action Interact}"
+					],
+					"traits": [
+						"emotion",
+						"visual"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You direct the lantern's light upon a single living creature within 60 feet. That creature must attempt a DC 20 Will save to resist the light's effects.",
@@ -127,7 +130,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -188,7 +191,7 @@
 			"bulk": 2,
 			"category": "Artifact",
 			"entries": [
-				"This hefty tome was compiled centuries ago by an anonymous author who sought to collect all parables, myths, stories, and encounters with the Outer Goddess {@deity Nhimbaloth|LOGM}. According to the introduction, the author's original intent was to create a work that foes of the Empty Death could use to fight against her influence, but as one reads through the book, it becomes apparent that the opposite effect has been achieved\u2014by compiling these stories, the author inadvertently generated a work that made it easier for {@deity Nhimbaloth|LOGM} to influence the world. Those who venerate the Empty Death seek copies of this book to use as a guide and religious text, while those who don't know better and peruse the book as though it were merely an anthology of stories find themselves unwittingly falling prey to {@deity Nhimbaloth|LOGM}'s cult or agents of the entity herself. Those who study from The Whispering Reeds for too long are often cursed to rise as ghosts after death\u2014 though their existence never lasts for long, as they are inevitably consumed by {@deity Nhimbaloth|LOGM}.",
+				"This hefty tome was compiled centuries ago by an anonymous author who sought to collect all parables, myths, stories, and encounters with the Outer Goddess {@deity Nhimbaloth|LOGM}. According to the introduction, the author's original intent was to create a work that foes of the Empty Death could use to fight against her influence, but as one reads through the book, it becomes apparent that the opposite effect has been achieved\u2014by compiling these stories, the author inadvertently generated a work that made it easier for {@deity Nhimbaloth|LOGM} to influence the world. Those who venerate the Empty Death seek copies of this book to use as a guide and religious text, while those who don't know better and peruse the book as though it were merely an anthology of stories find themselves unwittingly falling prey to {@deity Nhimbaloth|LOGM}'s cult or agents of the entity herself. Those who study from The Whispering Reeds for too long are often cursed to rise as ghosts after death\u2014though their existence never lasts for long, as they are inevitably consumed by {@deity Nhimbaloth|LOGM}.",
 				"If a character understands the dangers of this book, however, moderated use can stall or even prevent such a fate from befalling them. If a character takes special care, they can even potentially use The Whispering Reeds for its original purpose\u2014as a weapon against the cult of {@deity Nhimbaloth|LOGM}. Using the text too often or leveraging some of its more powerful effects, however, causes the user to feel an ominous chill. In these cases, the user is exposed to the tome's curse, Empty Death (see below)",
 				"The anonymous compiler wanted to produce an enormous print run of The Whispering Reeds, but after the initial run they realized the danger and scuttled those plans, instead attempting to destroy those copies already created. This crusade caught the attention of {@deity Nhimbaloth|LOGM}'s cult, who swiftly assassinated the compiler.",
 				"Fewer than two dozen copies of this rare tome are believed to still exist. The book's sinister nature causes all attempts to transcribe it to fail, resulting in bodies of gibberish, nonsense text.",
@@ -197,11 +200,10 @@
 					"type": "ability",
 					"activity": {
 						"number": 10,
-						"unit": "minute",
-						"entry": "10 minutes"
+						"unit": "minute"
 					},
 					"components": [
-						"(Investigate)"
+						"{@action Investigate}"
 					],
 					"entries": [
 						"You gain a +2 item bonus to skill checks to {@action Recall Knowledge} about {@deity Nhimbaloth|LOGM}, her faith, or creatures associated with her (such as incorporeal undead, vampiric mists, wisps, and other incorporeal creatures associated with death). Each time you use this ability after the first in a 24-hour period, you are exposed to the Empty Death."
@@ -215,11 +217,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You read aloud a phrase from the book and target a single incorporeal undead creature within 30 feet. That undead creature takes {@damage 5d6} positive damage (DC 27 basic Will save) as portions of their incorporeal being are consumed in patches of seven equally spaced holes. Each time you use this ability after the first in a 24-hour period, you are exposed to the Empty Death."
@@ -233,11 +235,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You invoke a tale from The Whispering Reeds that parallels the situation, environment, or creatures nearby. Eerie mists and indistinct whispers rise in a 20-foot emanation around you, and clusters of seven perfectly spaced divots manifest in the ground, vegetation, and flesh of creatures in the emanation other than yourself and up to three creatures you designate at the time of activation. Creatures afflicted with these divots suffer from agonizing mental anguish in the form of crippling despair and take {@damage 4d6} mental damage (DC 27 basic Will save). The mists, whispers, and strange divots fade away at the end of the round, but any creature that takes mental damage from the effect also takes a \u20131 penalty to saving throws against effects with the {@trait emotion} trait for 1 minute. You are exposed to the Empty Death each time you use this ability."
@@ -250,11 +252,11 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 3
+						"number": 3
 					},
 					"entries": [
 						"You cast one of the following spells at the lowest level possible (unless otherwise specified): {@spell crushing despair} (one target within 30 feet only), {@spell fear} (3rd), {@spell paranoia}, or {@spell phantasmal killer}. You are exposed to the Empty Death each time you use this ability.",
-						"Empty Death (curse, necromancy, occult) Saving Throw DC 27 Will; Effect If you activate The Whispering Reeds and are not a worshipper of {@deity Nhimbaloth|LOGM}, you become {@condition stupefied|CRB|stupefied 2} for 24 hours as your thoughts fill with paranoia that something is watching you from the other side of death. If you die while affected by the Empty Death, you immediately become a chaotic evil ghost. Every 7 days that pass after you become a ghost, you must succeed at a DC {@flatDC 2} flat check\u2014 failure indicates that you are consumed by {@deity Nhimbaloth|LOGM}.",
+						"Empty Death (curse, necromancy, occult) Saving Throw DC 27 Will; Effect If you activate The Whispering Reeds and are not a worshipper of {@deity Nhimbaloth|LOGM}, you become {@condition stupefied|CRB|stupefied 2} for 24 hours as your thoughts fill with paranoia that something is watching you from the other side of death. If you die while affected by the Empty Death, you immediately become a chaotic evil ghost. Every 7 days that pass after you become a ghost, you must succeed at a DC {@flatDC 2} flat check\u2014failure indicates that you are consumed by {@deity Nhimbaloth|LOGM}.",
 						"A creature whose ghost is consumed in this way does not travel to the River of Souls and is utterly annihilated; this creature can only be restored to life via a 10th-level spell effect or ritual like {@spell wish}."
 					]
 				}

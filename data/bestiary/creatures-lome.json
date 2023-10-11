@@ -2,7 +2,6 @@
 	"creature": [
 		{
 			"name": "Aigamuxa",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 293,
 			"level": 8,
@@ -12,10 +11,6 @@
 				"large",
 				"giant",
 				"humanoid"
-			],
-			"creatureType": [
-				"Giant",
-				"Humanoid"
 			],
 			"perception": {
 				"std": 19
@@ -29,17 +24,17 @@
 			],
 			"languages": {
 				"languages": [
-					"Mwangi"
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 18
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 16
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 14,
 					"in deserts": 18
 				}
@@ -52,26 +47,6 @@
 				"wis": 3,
 				"cha": 0
 			},
-			"ac": {
-				"std": 27
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 19
-				},
-				"ref": {
-					"std": 16
-				},
-				"will": {
-					"std": 13
-				}
-			},
-			"hp": [
-				{
-					"hp": 140,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
@@ -82,7 +57,7 @@
 					"attack": 20,
 					"traits": [
 						"agile",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"Grab"
@@ -96,7 +71,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 20,
-					"effects": [],
 					"damage": "{@damage 2d12+9} piercing",
 					"types": [
 						"piercing"
@@ -165,13 +139,39 @@
 						"name": "The First Aigamuxas"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 19
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 13
+					}
+				},
+				"hp": [
+					{
+						"hp": 140
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Anadi Elder",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 292,
+			"otherSources": {
+				"Originally": [
+					"AoA1|85"
+				]
+			},
 			"level": 6,
 			"traits": [
 				"uncommon",
@@ -180,39 +180,37 @@
 				"anadi",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 15
 			},
 			"languages": {
 				"languages": [
-					"Anadi",
-					"Mwangi"
+					"anadi",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 15,
 					"to Climb in hybrid or spider form": 17
 				},
-				"Crafting": {
+				"crafting": {
+					"std": 13,
+					"to weaving": 17
+				},
+				"deception": {
 					"std": 13
 				},
-				"Deception": {
-					"std": 13
-				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 11
 				},
-				"Nature": {
+				"nature": {
 					"std": 15
 				},
-				"Society": {
+				"society": {
 					"std": 11
 				},
-				"Survival": {
+				"survival": {
 					"std": 13
 				}
 			},
@@ -229,26 +227,6 @@
 				"hide armor",
 				"shortsword"
 			],
-			"ac": {
-				"std": 23
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 11
-				},
-				"ref": {
-					"std": 14
-				},
-				"will": {
-					"std": 17
-				}
-			},
-			"hp": [
-				{
-					"hp": 95,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"climb": 25
@@ -261,9 +239,8 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+6} piercing",
 					"types": [
 						"piercing"
@@ -289,13 +266,12 @@
 					"name": "composite longbow",
 					"attack": 16,
 					"traits": [
-						"deadly d10",
+						"deadly <d10>",
 						"propulsive",
-						"range increment 100 feet",
-						"reload 0",
-						"volley 30 feet"
+						"range increment <100 feet>",
+						"reload <0>",
+						"volley <30 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d8+1} piercing",
 					"types": [
 						"piercing"
@@ -304,9 +280,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Innate",
 					"type": "Innate",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 24,
 					"attack": 16,
 					"entry": {
@@ -405,7 +380,7 @@
 							"transmutation"
 						],
 						"entries": [
-							"The anadi changes into their hybrid form, spider form, or human form. The above statistics assume the anadi is in their hybrid form. While in their human form, the anadi hunter can't use their fangs attack and loses their climb Speed. When in spider form, they can't use weapons."
+							"The anadi changes into their hybrid form, spider form, or human form. The above statistics assume the anadi is in their hybrid form. While in their human form, the anadi elder can't use their fangs attack and loses their climb Speed. When in spider form, they can't use weapons."
 						],
 						"name": "Change Shape",
 						"generic": {
@@ -424,13 +399,39 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 23
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 11
+					},
+					"ref": {
+						"std": 14
+					},
+					"will": {
+						"std": 17
+					}
+				},
+				"hp": [
+					{
+						"hp": 95
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Anadi Hunter",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 291,
+			"otherSources": {
+				"Originally": [
+					"AoA1|84"
+				]
+			},
 			"level": 2,
 			"traits": [
 				"uncommon",
@@ -439,33 +440,31 @@
 				"anadi",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 9
 			},
 			"languages": {
 				"languages": [
-					"Anadi",
-					"Mwangi"
+					"anadi",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 8
 				},
-				"Athletics": {
-					"std": 6
+				"athletics": {
+					"std": 6,
+					"to Climb in hybrid or spider form": 8
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 6,
 					"to weaving": 10
 				},
-				"Nature": {
+				"nature": {
 					"std": 5
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 8
 				}
 			},
@@ -482,26 +481,6 @@
 				"leather armor",
 				"shortsword"
 			],
-			"ac": {
-				"std": 17
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 4
-				},
-				"ref": {
-					"std": 10
-				},
-				"will": {
-					"std": 7
-				}
-			},
-			"hp": [
-				{
-					"hp": 27,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"climb": 25
@@ -514,9 +493,8 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+4} piercing",
 					"types": [
 						"piercing"
@@ -542,12 +520,11 @@
 					"name": "composite shortbow",
 					"attack": 9,
 					"traits": [
-						"deadly d10",
+						"deadly <d10>",
 						"propulsive",
-						"range increment 60 feet",
-						"reload 0"
+						"range increment <60 feet>",
+						"reload <0>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+4} piercing",
 					"types": [
 						"piercing"
@@ -609,13 +586,39 @@
 						"name": "Spin Silk"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 17
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 4
+					},
+					"ref": {
+						"std": 10
+					},
+					"will": {
+						"std": 7
+					}
+				},
+				"hp": [
+					{
+						"hp": 27
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Anadi Sage",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 292,
+			"otherSources": {
+				"Originally": [
+					"AoA1|85"
+				]
+			},
 			"level": 4,
 			"traits": [
 				"uncommon",
@@ -624,36 +627,34 @@
 				"anadi",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
 				"std": 12
 			},
 			"languages": {
 				"languages": [
-					"Anadi",
-					"Mwangi"
+					"anadi",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 12,
 					"to Climb in hybrid or spider form": 14
 				},
-				"Crafting": {
-					"std": 10
+				"crafting": {
+					"std": 10,
+					"to weaving": 14
 				},
-				"Deception": {
+				"deception": {
 					"std": 8
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 10
 				},
-				"Nature": {
+				"nature": {
 					"std": 12
 				},
-				"Survival": {
+				"survival": {
 					"std": 10
 				}
 			},
@@ -669,26 +670,6 @@
 				"hide armor",
 				"shortsword"
 			],
-			"ac": {
-				"std": 20
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 8
-				},
-				"ref": {
-					"std": 11
-				},
-				"will": {
-					"std": 14
-				}
-			},
-			"hp": [
-				{
-					"hp": 58,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"climb": 25
@@ -701,9 +682,8 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+3} piercing",
 					"types": [
 						"piercing"
@@ -727,9 +707,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Innate",
 					"type": "Innate",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 21,
 					"entry": {
 						"0": {
@@ -811,7 +790,7 @@
 							"transmutation"
 						],
 						"entries": [
-							"The anadi changes into their hybrid form, spider form, or human form. The above statistics assume the anadi is in their hybrid form. While in their human form, the anadi hunter can't use their fangs attack and loses their climb Speed. When in spider form, they can't use weapons."
+							"The anadi changes into their hybrid form, spider form, or human form. The above statistics assume the anadi is in their hybrid form. While in their human form, the anadi sage can't use their fangs attack and loses their climb Speed. When in spider form, they can't use weapons."
 						],
 						"name": "Change Shape",
 						"generic": {
@@ -830,21 +809,44 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 20
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 8
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 14
+					}
+				},
+				"hp": [
+					{
+						"hp": 58
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Asanbosam",
-			"isNpc": false,
 			"source": "LOME",
-			"page": 294,
+			"page": 293,
+			"otherSources": {
+				"Originally": [
+					"AoA2|80"
+				]
+			},
 			"level": 6,
 			"traits": [
 				"ce",
 				"large",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 17
@@ -856,23 +858,23 @@
 			],
 			"languages": {
 				"languages": [
-					"Mwangi"
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 13
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 16
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 11
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 15
 				},
-				"Survival": {
+				"survival": {
 					"std": 13
 				}
 			},
@@ -884,26 +886,6 @@
 				"wis": 1,
 				"cha": -2
 			},
-			"ac": {
-				"std": 24
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 15
-				},
-				"ref": {
-					"std": 17
-				},
-				"will": {
-					"std": 10
-				}
-			},
-			"hp": [
-				{
-					"hp": 95,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 35,
 				"climb": 20
@@ -914,9 +896,8 @@
 					"name": "cold iron jaws",
 					"attack": 17,
 					"traits": [
-						"deadly d8"
+						"deadly <d8>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+7} piercing",
 					"types": [
 						"piercing"
@@ -928,7 +909,7 @@
 					"attack": 17,
 					"traits": [
 						"agile",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"Grab"
@@ -943,34 +924,66 @@
 				"bot": [
 					{
 						"activity": {
+							"number": 2,
+							"unit": "action"
+						},
+						"requirements": "The asanbosam is positioned above a creature",
+						"entries": [
+							"The asanbosam makes a claw {@action Strike} with its reach increased to 15 feet. On a hit, the {@action Strike} deals an additional {@damage 1d6} slashing damage and the asanbosam immediately {@ability Grab||Grabs} the target and pulls it to a space adjacent to the asanbosam. This counts as two attacks for the asanbosam's multiple attack penalty."
+						],
+						"name": "Attack from Above"
+					},
+					{
+						"activity": {
 							"number": 1,
 							"unit": "action"
 						},
 						"requirements": "A {@condition grabbed}, {@condition paralyzed}, {@condition restrained}, {@condition unconscious}, or willing creature is within reach of the asanbosam's jaws",
 						"entries": [
-							"The asanbosam sinks its teeth into the creature to drink its blood. If the victim is {@condition grabbed}, this is automatic; otherwise, the asanbosam must succeed at an {@skill Athletics} check against the victim's Fortitude DC. The victim becomes {@condition drained 1} and the asanbosam regains 10 HP, gaining any excess Hit Points beyond its maximum as temporary Hit Points.",
-							"These temporary Hit Points remain for 1 minute. Drinking Blood from a creature that's already {@condition drained} increases the victim's {@condition drained} value by 1 to a maximum of {@condition drained 3}, but doesn't restore any HP to the asanbosam.",
-							"A victim's {@condition drained} condition decreases by 1 each week.",
-							"A blood transfusion, which requires a successful DC 20 {@skill Medicine} check and a blood donor or sufficient blood, reduces the {@condition drained} value by 1 after 10 minutes."
+							"The asanbosam sinks its teeth into the creature to drink its blood. If the victim is {@condition grabbed}, this is automatic; otherwise, the asanbosam must succeed at an {@skill Athletics} check against the victim's Fortitude DC. The victim becomes {@condition drained 1} and the asanbosam regains 10 HP, gaining any excess Hit Points beyond its maximum as temporary Hit Points. These temporary Hit Points remain for 1 minute. Drinking Blood from a creature that's already {@condition drained} increases the victim's {@condition drained} value by 1 to a maximum of {@condition drained 3}, but doesn't restore any HP to the asanbosam.",
+							"A victim's {@condition drained} condition decreases by 1 each week. A blood transfusion, which requires a successful {@dc 20} {@skill Medicine} check and a blood donor or sufficient blood, reduces the {@condition drained} value by 1 after 10 minutes."
 						],
 						"name": "Drink Blood"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 15
+					},
+					"ref": {
+						"std": 17
+					},
+					"will": {
+						"std": 10
+					}
+				},
+				"hp": [
+					{
+						"hp": 95
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Biloko Veteran",
-			"isNpc": false,
 			"source": "LOME",
-			"page": 296,
+			"page": 294,
+			"otherSources": {
+				"Originally": [
+					"AoA2|83"
+				]
+			},
 			"level": 4,
 			"traits": [
 				"ne",
 				"small",
 				"fey"
-			],
-			"creatureType": [
-				"Fey"
 			],
 			"perception": {
 				"std": 11
@@ -987,27 +1000,27 @@
 			],
 			"languages": {
 				"languages": [
-					"Mwangi",
-					"Sylvan"
+					"mwangi",
+					"sylvan"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 10
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 10
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 12
 				},
-				"Nature": {
+				"nature": {
 					"std": 9
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 13
 				},
-				"Survival": {
+				"survival": {
 					"std": 11
 				}
 			},
@@ -1023,26 +1036,6 @@
 				"longspear",
 				"shortbow (20 arrows)"
 			],
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 8
-				},
-				"ref": {
-					"std": 14
-				},
-				"will": {
-					"std": 11
-				}
-			},
-			"hp": [
-				{
-					"hp": 58,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 20
 			},
@@ -1051,7 +1044,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 12,
-					"effects": [],
 					"damage": "{@damage 2d8+4} piercing",
 					"types": [
 						"piercing"
@@ -1062,9 +1054,8 @@
 					"name": "longspear",
 					"attack": 12,
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d8+4} piercing",
 					"types": [
 						"piercing"
@@ -1075,11 +1066,10 @@
 					"name": "shortbow",
 					"attack": 12,
 					"traits": [
-						"deadly d10",
-						"range increment 60 feet",
-						"reload 0"
+						"deadly <d10>",
+						"range increment <60 feet>",
+						"reload <0>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+4} piercing",
 					"types": [
 						"piercing"
@@ -1088,9 +1078,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
 					"type": "Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"DC": 18,
 					"entry": {
 						"1": {
@@ -1110,7 +1099,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -1139,21 +1127,44 @@
 						"name": "Swipe"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 8
+					},
+					"ref": {
+						"std": 14
+					},
+					"will": {
+						"std": 11
+					}
+				},
+				"hp": [
+					{
+						"hp": 58
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Biloko Warrior",
-			"isNpc": false,
 			"source": "LOME",
-			"page": 296,
+			"page": 294,
+			"otherSources": {
+				"Originally": [
+					"AoA2|82"
+				]
+			},
 			"level": 1,
 			"traits": [
 				"ne",
 				"small",
 				"fey"
-			],
-			"creatureType": [
-				"Fey"
 			],
 			"perception": {
 				"std": 7
@@ -1170,24 +1181,24 @@
 			],
 			"languages": {
 				"languages": [
-					"Mwangi",
-					"Sylvan"
+					"mwangi",
+					"sylvan"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 7
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 7
 				},
-				"Nature": {
+				"nature": {
 					"std": 5
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 6
 				},
-				"Survival": {
+				"survival": {
 					"std": 6
 				}
 			},
@@ -1203,27 +1214,6 @@
 				"spear",
 				"wooden shield (Hardness 3, HP 12, BT 6)"
 			],
-			"ac": {
-				"std": 16,
-				"with shield raised": 18
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 4
-				},
-				"ref": {
-					"std": 7
-				},
-				"will": {
-					"std": 7
-				}
-			},
-			"hp": [
-				{
-					"hp": 19,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 20
 			},
@@ -1232,7 +1222,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 7,
-					"effects": [],
 					"damage": "{@damage 1d8+3} piercing",
 					"types": [
 						"piercing"
@@ -1242,7 +1231,6 @@
 					"range": "Melee",
 					"name": "spear",
 					"attack": 7,
-					"effects": [],
 					"damage": "{@damage 1d6+3} piercing",
 					"types": [
 						"piercing"
@@ -1253,9 +1241,8 @@
 					"name": "spear",
 					"attack": 6,
 					"traits": [
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+3} piercing",
 					"types": [
 						"piercing"
@@ -1264,9 +1251,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
 					"type": "Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"DC": 14,
 					"entry": {
 						"1": {
@@ -1286,7 +1272,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Shield Block",
 						"generic": {
 							"tag": "ability"
@@ -1305,22 +1290,46 @@
 						"name": "Inspired Feast"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 16,
+					"with shield raised": 18
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 4
+					},
+					"ref": {
+						"std": 7
+					},
+					"will": {
+						"std": 7
+					}
+				},
+				"hp": [
+					{
+						"hp": 19
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Charau-ka Acolyte Of Angazhan",
-			"isNpc": false,
 			"source": "LOME",
-			"page": 298,
+			"page": 297,
+			"otherSources": {
+				"Originally": [
+					"AoA2|85"
+				]
+			},
 			"level": 3,
 			"traits": [
 				"ne",
 				"small",
 				"charau-ka",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 8
@@ -1337,25 +1346,25 @@
 			],
 			"languages": {
 				"languages": [
-					"Abyssal",
-					"Draconic",
-					"Mwangi"
+					"abyssal",
+					"draconic",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 7
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 7
 				},
-				"Nature": {
+				"nature": {
 					"std": 9
 				},
-				"Religion": {
+				"religion": {
 					"std": 11
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 7
 				}
 			},
@@ -1371,26 +1380,6 @@
 				"hide armor",
 				"spear"
 			],
-			"ac": {
-				"std": 19
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 8
-				},
-				"ref": {
-					"std": 7
-				},
-				"will": {
-					"std": 11
-				}
-			},
-			"hp": [
-				{
-					"hp": 45,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"climb": 25
@@ -1401,9 +1390,8 @@
 					"name": "spear",
 					"attack": 10,
 					"traits": [
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+5} piercing",
 					"types": [
 						"piercing"
@@ -1417,7 +1405,6 @@
 						"agile",
 						"nonlethal"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+5} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1428,10 +1415,9 @@
 					"name": "spear",
 					"attack": 10,
 					"traits": [
-						"deadly d6",
-						"thrown 20 feet"
+						"deadly <d6>",
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+5} piercing",
 					"types": [
 						"piercing"
@@ -1442,10 +1428,9 @@
 					"name": "thrown debris",
 					"attack": 10,
 					"traits": [
-						"deadly d6",
-						"thrown 20 feet"
+						"deadly <d6>",
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+5} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1454,9 +1439,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Prepared",
 					"type": "Prepared",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 17,
 					"attack": 11,
 					"entry": {
@@ -1524,33 +1508,55 @@
 						"trigger": "The charau-ka's turn begins",
 						"frequency": {
 							"unit": "hour",
-							"freq": 1
+							"number": 1
 						}
 					},
 					{
 						"entries": [
-							"Any weapon a charau-ka throws gains the deadly d6 weapon trait. Furthermore, when a charau-ka throws an improvised weapon, they do not take the \u20132 penalty for doing so, nor does they take a penalty for using a thrown improvised weapon with the {@trait nonlethal} trait to make a lethal attack.",
-							"Charau-ka aColyte of angazhan Even with the Gorilla King's fall, many charau-ka still worship the terrible might of the god Angazhan (page 133). The strongest of these acolytes guard the steps of the High Throne in Usaro, ensuring that no one without Angazhan's favor or suitable physical prowess can approach the top of the massive stone step pyramid."
+							"Any weapon a charau-ka throws gains the {@trait deadly <d6>} weapon trait. Furthermore, when a charau-ka throws an improvised weapon, they do not take the \u20132 penalty for doing so, nor does they take a penalty for using a thrown improvised weapon with the {@trait nonlethal} trait to make a lethal attack."
 						],
 						"name": "Thrown Weapon Mastery"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 19
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 8
+					},
+					"ref": {
+						"std": 7
+					},
+					"will": {
+						"std": 11
+					}
+				},
+				"hp": [
+					{
+						"hp": 45
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Charau-ka Butcher",
-			"isNpc": false,
 			"source": "LOME",
-			"page": 298,
+			"page": 297,
+			"otherSources": {
+				"Originally": [
+					"AoA2|85"
+				]
+			},
 			"level": 6,
 			"traits": [
 				"ne",
 				"small",
 				"charau-ka",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 13
@@ -1567,24 +1573,24 @@
 			],
 			"languages": {
 				"languages": [
-					"Draconic",
-					"Mwangi"
+					"draconic",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 11
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 15
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 14
 				},
-				"Religion": {
+				"religion": {
 					"std": 9
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 13
 				}
 			},
@@ -1600,26 +1606,6 @@
 				"hide armor",
 				"+1 striking trident"
 			],
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 16
-				},
-				"ref": {
-					"std": 12
-				},
-				"will": {
-					"std": 13
-				}
-			},
-			"hp": [
-				{
-					"hp": 95,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"climb": 25
@@ -1632,7 +1618,6 @@
 					"traits": [
 						"magical"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+8} slashing",
 					"types": [
 						"slashing"
@@ -1646,7 +1631,6 @@
 						"agile",
 						"nonlethal"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+8} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1657,11 +1641,10 @@
 					"name": "trident",
 					"attack": 16,
 					"traits": [
-						"deadly d6",
+						"deadly <d6>",
 						"magical",
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+6} piercing",
 					"types": [
 						"piercing"
@@ -1672,10 +1655,9 @@
 					"name": "thrown debris",
 					"attack": 15,
 					"traits": [
-						"deadly d6",
-						"thrown 20 feet"
+						"deadly <d6>",
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+8} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1683,21 +1665,12 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+13 Str +5, Dex +3, Con +3, Int +0, Wis +1, Cha +2 Items hide armor, +1 striking trident."
-						],
-						"name": "Stealth"
-					}
-				],
 				"mid": [
 					{
 						"activity": {
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -1721,7 +1694,7 @@
 				"bot": [
 					{
 						"entries": [
-							"While the charau-ka butcher is raging, their melee Strikes deal an additional {@damage 1d4} {@condition persistent damage ||persistent bleed damage}."
+							"While the charau-ka butcher is raging, their melee {@action Strike||Strikes} deal an additional {@damage 1d4} {@condition persistent damage||persistent bleed damage}."
 						],
 						"name": "Mauler"
 					},
@@ -1733,7 +1706,10 @@
 						"entries": [
 							"As the barbarian class ability; AC 22, +9 Hit Points, +2 melee damage."
 						],
-						"name": "Rage"
+						"name": "Rage",
+						"generic": {
+							"tag": "action"
+						}
 					},
 					{
 						"activity": {
@@ -1751,33 +1727,55 @@
 						"trigger": "The charau-ka's turn begins",
 						"frequency": {
 							"unit": "hour",
-							"freq": 1
+							"number": 1
 						}
 					},
 					{
 						"entries": [
-							"Any weapon a charau-ka throws gains the deadly d6 weapon trait. Furthermore, when a charau-ka throws an improvised weapon, they do not take the \u20132 penalty for doing so, nor does they take a penalty for using a thrown improvised weapon with the {@trait nonlethal} trait to make a lethal attack.",
-							"Charau-ka aColyte of angazhan Even with the Gorilla King's fall, many charau-ka still worship the terrible might of the god Angazhan (page 133). The strongest of these acolytes guard the steps of the High Throne in Usaro, ensuring that no one without Angazhan's favor or suitable physical prowess can approach the top of the massive stone step pyramid."
+							"Any weapon a charau-ka throws gains the {@trait deadly <d6>} weapon trait. Furthermore, when a charau-ka throws an improvised weapon, they do not take the \u20132 penalty for doing so, nor does they take a penalty for using a thrown improvised weapon with the {@trait nonlethal} trait to make a lethal attack."
 						],
 						"name": "Thrown Weapon Mastery"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 16
+					},
+					"ref": {
+						"std": 12
+					},
+					"will": {
+						"std": 13
+					}
+				},
+				"hp": [
+					{
+						"hp": 95
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Charau-ka Warrior",
-			"isNpc": false,
 			"source": "LOME",
-			"page": 229977,
+			"page": 296,
+			"otherSources": {
+				"Originally": [
+					"AoA2|84"
+				]
+			},
 			"level": 1,
 			"traits": [
 				"ne",
 				"small",
 				"charau-ka",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 6
@@ -1794,18 +1792,18 @@
 			],
 			"languages": {
 				"languages": [
-					"Draconic",
-					"Mwangi"
+					"draconic",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 6
 				},
-				"Religion": {
+				"religion": {
 					"std": 4
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 6
 				}
 			},
@@ -1822,26 +1820,6 @@
 				"hatchet",
 				"hide armor"
 			],
-			"ac": {
-				"std": 16
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 7
-				},
-				"ref": {
-					"std": 8
-				},
-				"will": {
-					"std": 4
-				}
-			},
-			"hp": [
-				{
-					"hp": 20,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"climb": 25
@@ -1855,7 +1833,6 @@
 						"agile",
 						"sweep"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+3} slashing",
 					"types": [
 						"slashing"
@@ -1868,9 +1845,8 @@
 					"traits": [
 						"agile",
 						"finesse",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+3} piercing",
 					"types": [
 						"piercing"
@@ -1884,7 +1860,6 @@
 						"agile",
 						"nonlethal"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+3} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1896,11 +1871,10 @@
 					"attack": 7,
 					"traits": [
 						"agile",
-						"deadly d6",
+						"deadly <d6>",
 						"sweep",
-						"thrown 10 feet"
+						"thrown <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+3} slashing",
 					"types": [
 						"slashing"
@@ -1912,11 +1886,10 @@
 					"attack": 7,
 					"traits": [
 						"agile",
-						"deadly d6",
-						"thrown 10 feet",
-						"versatile s"
+						"deadly <d6>",
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+3} piercing",
 					"types": [
 						"piercing"
@@ -1927,10 +1900,9 @@
 					"name": "thrown debris",
 					"attack": 7,
 					"traits": [
-						"deadly d6",
-						"thrown 20 feet"
+						"deadly <d6>",
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+3} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1951,7 +1923,7 @@
 						"trigger": "The charau-ka's turn begins",
 						"frequency": {
 							"unit": "hour",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
 							"The charau-ka is {@condition quickened} until the end of their turn and can use the extra action only to {@action Stride} or {@action Strike}. While in the frenzy, the charau-ka can't speak and automatically critically fails {@skill Stealth} checks, due to their loud wailing."
@@ -1960,27 +1932,49 @@
 					},
 					{
 						"entries": [
-							"Any weapon a charau-ka throws gains the deadly d6 weapon trait. Furthermore, when a charau-ka throws an improvised weapon, they do not take the \u20132 penalty for doing so, nor does they take a penalty for using a thrown improvised weapon with the {@trait nonlethal} trait to make a lethal attack.",
-							"Charau-ka aColyte of angazhan Even with the Gorilla King's fall, many charau-ka still worship the terrible might of the god Angazhan (page 133). The strongest of these acolytes guard the steps of the High Throne in Usaro, ensuring that no one without Angazhan's favor or suitable physical prowess can approach the top of the massive stone step pyramid."
+							"Any weapon a charau-ka throws gains the {@trait deadly <d6>} weapon trait. Furthermore, when a charau-ka throws an improvised weapon, they do not take the \u20132 penalty for doing so, nor does they take a penalty for using a thrown improvised weapon with the {@trait nonlethal} trait to make a lethal attack."
 						],
 						"name": "Thrown Weapon Mastery"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 16
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 7
+					},
+					"ref": {
+						"std": 8
+					},
+					"will": {
+						"std": 4
+					}
+				},
+				"hp": [
+					{
+						"hp": 20
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Eloko",
-			"isNpc": false,
 			"source": "LOME",
-			"page": 296,
+			"page": 295,
+			"otherSources": {
+				"Originally": [
+					"AoA2|83"
+				]
+			},
 			"level": 7,
 			"traits": [
 				"ne",
 				"small",
 				"fey"
-			],
-			"creatureType": [
-				"Fey"
 			],
 			"perception": {
 				"std": 15
@@ -1997,22 +1991,28 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo",
-					"Mwangi",
-					"Sylvan"
+					"aklo",
+					"mwangi",
+					"sylvan"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 18
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 13
 				},
-				"Nature": {
+				"deception": {
+					"std": 15
+				},
+				"nature": {
 					"std": 13
 				},
-				"Survival": {
+				"stealth": {
+					"std": 16
+				},
+				"survival": {
 					"std": 13
 				}
 			},
@@ -2024,25 +2024,9 @@
 				"wis": 4,
 				"cha": 1
 			},
-			"ac": {
-				"std": 25
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 12
-				},
-				"ref": {
-					"std": 18
-				},
-				"will": {
-					"std": 15
-				}
-			},
-			"hp": [
-				{
-					"hp": 115,
-					"abilities": null
-				}
+			"items": [
+				"blowgun (10 poisoned darts)",
+				"+1 dagger"
 			],
 			"speed": {
 				"walk": 20
@@ -2052,7 +2036,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 16,
-					"effects": [],
 					"damage": "{@damage 2d8+6} piercing",
 					"types": [
 						"piercing"
@@ -2065,9 +2048,8 @@
 					"traits": [
 						"agile",
 						"magical",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+8} piercing",
 					"types": [
 						"piercing"
@@ -2080,11 +2062,10 @@
 					"traits": [
 						"agile",
 						"nonlethal",
-						"range increment 20 feet",
-						"reload 1"
+						"range increment <20 feet>",
+						"reload <1>"
 					],
-					"effects": [],
-					"damage": "1 piercing plus {@damage 2d4} {@condition persistent damage ||persistent poison}",
+					"damage": "1 piercing plus {@damage 2d4} {@condition persistent damage||persistent poison}",
 					"types": [
 						"persistent",
 						"piercing"
@@ -2097,10 +2078,9 @@
 					"traits": [
 						"agile",
 						"magical",
-						"thrown 10 feet",
-						"versatile s"
+						"thrown <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+8} piercing",
 					"types": [
 						"piercing"
@@ -2109,9 +2089,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
 					"type": "Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"DC": 22,
 					"entry": {
 						"1": {
@@ -2164,11 +2143,32 @@
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 25
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 18
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": [
+					{
+						"hp": 115
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Grootslang",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 298,
 			"level": 16,
@@ -2177,9 +2177,6 @@
 				"ce",
 				"gargantuan",
 				"beast"
-			],
-			"creatureType": [
-				"Beast"
 			],
 			"perception": {
 				"std": 28
@@ -2196,22 +2193,22 @@
 			],
 			"languages": {
 				"languages": [
-					"Aquan",
-					"Draconic",
-					"Mwangi"
+					"aquan",
+					"draconic",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 34
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 28
 				},
-				"Nature": {
+				"nature": {
 					"std": 26
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 23
 				}
 			},
@@ -2223,26 +2220,6 @@
 				"wis": 6,
 				"cha": 0
 			},
-			"ac": {
-				"std": 38
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 30
-				},
-				"ref": {
-					"std": 27
-				},
-				"will": {
-					"std": 26
-				}
-			},
-			"hp": [
-				{
-					"hp": 370,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"swim": 30
@@ -2254,9 +2231,8 @@
 					"attack": 30,
 					"traits": [
 						"magical",
-						"reach 20 feet"
+						"reach <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d12+15} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -2269,7 +2245,7 @@
 					"traits": [
 						"agile",
 						"magical",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"effects": [
 						"Improved Grab"
@@ -2286,7 +2262,7 @@
 					"traits": [
 						"agile",
 						"magical",
-						"reach 30 feet"
+						"reach <30 feet>"
 					],
 					"effects": [
 						"Grab"
@@ -2302,9 +2278,8 @@
 					"attack": 30,
 					"traits": [
 						"magical",
-						"reach 20 feet"
+						"reach <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d12+15} piercing",
 					"types": [
 						"piercing"
@@ -2326,7 +2301,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -2367,7 +2341,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"tail only, {@damage 2d12+12} bludgeoning, DC 34."
+							"tail only, {@damage 2d12+12} bludgeoning, {@dc 34}"
 						],
 						"name": "Greater Constrict",
 						"generic": {
@@ -2393,7 +2367,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The grootslang makes a foot {@action Strike} against a creature in reach. Whether or not the {@action Strike} hits, all creatures within 10 feet of the grootslang must attempt a DC 37 Reflex save.",
+							"The grootslang makes a foot {@action Strike} against a creature in reach. Whether or not the {@action Strike} hits, all creatures within 10 feet of the grootslang must attempt a {@dc 37} Reflex save.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -2407,11 +2381,32 @@
 						"name": "Thunderous Slam"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 38
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 30
+					},
+					"ref": {
+						"std": 27
+					},
+					"will": {
+						"std": 26
+					}
+				},
+				"hp": [
+					{
+						"hp": 370
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "K'nonna",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 300,
 			"level": 8,
@@ -2419,9 +2414,6 @@
 				"ne",
 				"medium",
 				"aberration"
-			],
-			"creatureType": [
-				"Aberration"
 			],
 			"perception": {
 				"std": 16
@@ -2438,14 +2430,14 @@
 			],
 			"languages": {
 				"languages": [
-					"Mwangi (half; see Half Speaker)"
+					"mwangi (half; see half speaker)"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 21
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 16
 				}
 			},
@@ -2457,26 +2449,6 @@
 				"wis": 4,
 				"cha": 3
 			},
-			"ac": {
-				"std": 26
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 19
-				},
-				"ref": {
-					"std": 11
-				},
-				"will": {
-					"std": 11
-				}
-			},
-			"hp": [
-				{
-					"hp": 140,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
@@ -2488,7 +2460,6 @@
 					"traits": [
 						"agile"
 					],
-					"effects": [],
 					"damage": "{@damage 2d10+8} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -2511,13 +2482,13 @@
 				"mid": [
 					{
 						"entries": [
-							"When offered a gift worth at least 50 gp, the k'nonna must attempt a DC 20 Will saving throw; if the gift is worth at least 100 gp, the DC is instead 25. If they fail the save, the k'nonna accepts the gift, becomes {@condition fascinated} until the end of their next turn, and cannot attack while {@condition fascinated}. On a critical failure, the fascination lasts for 1 minute. Offering a gift is an {@action Interact} action, and offering multiple gifts in the same round has no additional effect."
+							"When offered a gift worth at least 50 gp, the k'nonna must attempt a {@dc 20} Will saving throw; if the gift is worth at least 100 gp, the DC is instead 25. If they fail the save, the k'nonna accepts the gift, becomes {@condition fascinated} until the end of their next turn, and cannot attack while {@condition fascinated}. On a critical failure, the fascination lasts for 1 minute. Offering a gift is an {@action Interact} action, and offering multiple gifts in the same round has no additional effect."
 						],
 						"name": "Gilded Fascination"
 					},
 					{
 						"entries": [
-							"A k'nonna can communicate easily with other k'nonna, but when communicating with other creatures, only half of the spoken words make sense. In order to convey information to a k'nonna or understand what they're saying, a non-k'nonna must succeed at a DC 20 {@skill Perception} check."
+							"A k'nonna can communicate easily with other k'nonna, but when communicating with other creatures, only half of the spoken words make sense. In order to convey information to a k'nonna or understand what they're saying, a non-k'nonna must succeed at a {@dc 20} {@skill Perception} check."
 						],
 						"name": "Half-Speaker"
 					},
@@ -2540,11 +2511,32 @@
 						"name": "Pounce"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 26
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 19
+					},
+					"ref": {
+						"std": 11
+					},
+					"will": {
+						"std": 11
+					}
+				},
+				"hp": [
+					{
+						"hp": 140
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Kaava Stalker",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 301,
 			"level": 1,
@@ -2552,9 +2544,6 @@
 				"n",
 				"small",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 7
@@ -2566,25 +2555,25 @@
 			],
 			"languages": {
 				"languages": [
-					"Kaava",
-					"Mwangi"
+					"kaava",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 7
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 6
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 5
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 9,
 					"in forests or jungles": 11
 				},
-				"Survival": {
+				"survival": {
 					"std": 7
 				}
 			},
@@ -2600,26 +2589,6 @@
 				"obsidian sickle",
 				"spear (3)"
 			],
-			"ac": {
-				"std": 16
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 5
-				},
-				"ref": {
-					"std": 9
-				},
-				"will": {
-					"std": 7
-				}
-			},
-			"hp": [
-				{
-					"hp": 20,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
@@ -2633,7 +2602,6 @@
 						"finesse",
 						"trip"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+3} slashing",
 					"types": [
 						"slashing"
@@ -2643,7 +2611,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 8,
-					"effects": [],
 					"damage": "{@damage 1d6+3} piercing",
 					"types": [
 						"piercing"
@@ -2654,9 +2621,8 @@
 					"name": "spear",
 					"attack": 9,
 					"traits": [
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+3} piercing",
 					"types": [
 						"piercing"
@@ -2665,12 +2631,6 @@
 			],
 			"abilities": {
 				"top": [
-					{
-						"entries": [
-							"+9 (+11 in forests or jungles), {@skill Survival} +7 Str +3, Dex +4, Con +0, Int +0, Wis +2, Cha +0 Items obsidian sickle, spear (3)"
-						],
-						"name": "Stealth"
-					},
 					{
 						"entries": [
 							"A kaava moving at half their Speed or less steps so lightly that they leave virtually no trace. The DCs of checks to {@action Track} a kaava are increased by 10."
@@ -2686,11 +2646,38 @@
 						"name": "Skulking Attack"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 16
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 5
+					},
+					"ref": {
+						"std": 9
+					},
+					"will": {
+						"std": 7
+					}
+				},
+				"hp": [
+					{
+						"hp": 20
+					}
+				],
+				"resistances": [
+					{
+						"amount": 3,
+						"name": "poison"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Karina",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 302,
 			"level": 5,
@@ -2699,10 +2686,6 @@
 				"large",
 				"beast",
 				"fiend"
-			],
-			"creatureType": [
-				"Beast",
-				"Fiend"
 			],
 			"perception": {
 				"std": 12
@@ -2714,20 +2697,20 @@
 			],
 			"languages": {
 				"languages": [
-					"Mwangi (can't speak any language)"
+					"mwangi (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 13
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 12
 				},
-				"Deception": {
+				"deception": {
 					"std": 12
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 15
 				}
 			},
@@ -2739,26 +2722,6 @@
 				"wis": 1,
 				"cha": 6
 			},
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 12
-				},
-				"ref": {
-					"std": 15
-				},
-				"will": {
-					"std": 10
-				}
-			},
-			"hp": [
-				{
-					"hp": 95,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 10,
 				"fly": 40
@@ -2770,7 +2733,7 @@
 					"attack": 15,
 					"traits": [
 						"magical",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"grave blight"
@@ -2862,11 +2825,32 @@
 						"name": "Mocking Cry"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 15
+					},
+					"will": {
+						"std": 10
+					}
+				},
+				"hp": [
+					{
+						"hp": 95
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Maliadi",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 302,
 			"level": 17,
@@ -2875,9 +2859,6 @@
 				"le",
 				"gargantuan",
 				"beast"
-			],
-			"creatureType": [
-				"Beast"
 			],
 			"perception": {
 				"std": 29
@@ -2897,26 +2878,26 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo",
-					"Common",
-					"Draconic",
-					"Mwangi"
+					"aklo",
+					"common",
+					"draconic",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 36
 				},
-				"Deception": {
+				"deception": {
 					"std": 28
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 28
 				},
-				"Nature": {
+				"nature": {
 					"std": 29
 				},
-				"Survival": {
+				"survival": {
 					"std": 29
 				}
 			},
@@ -2928,30 +2909,6 @@
 				"wis": 6,
 				"cha": 3
 			},
-			"ac": {
-				"std": 40
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 34
-				},
-				"ref": {
-					"std": 25
-				},
-				"will": {
-					"std": 28
-				}
-			},
-			"hp": [
-				{
-					"hp": 285,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"fire",
-				"death effects"
-			],
 			"speed": {
 				"abilities": [
 					"freedom of movement"
@@ -2965,11 +2922,10 @@
 					"name": "jaws",
 					"attack": 35,
 					"traits": [
-						"deadly d12",
+						"deadly <d12>",
 						"magical",
-						"reach 20 feet"
+						"reach <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d12+19} piercing plus",
 					"types": [
 						"piercing"
@@ -2982,9 +2938,8 @@
 					"traits": [
 						"agile",
 						"magical",
-						"reach 20 feet"
+						"reach <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d10+17} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -2993,9 +2948,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
 					"type": "Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"DC": 38,
 					"attack": 30,
 					"entry": {
@@ -3105,7 +3059,6 @@
 							"number": 1,
 							"unit": "action"
 						},
-						"entries": [],
 						"name": "Improved Grab",
 						"generic": {
 							"tag": "ability"
@@ -3117,7 +3070,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The maliadi tries to capsize an adjacent aquatic vessel of its size or smaller. The maliadi must succeed at a DC 35 {@skill Athletics} check (reduced by 5 for each size smaller the vessel is than the maliadi) or the pilot's {@skill Lore||Sailing Lore} DC, whichever is higher."
+							"The maliadi tries to capsize an adjacent aquatic vessel of its size or smaller. The maliadi must succeed at a {@dc 35} {@skill Athletics} check (reduced by 5 for each size smaller the vessel is than the maliadi) or the pilot's {@skill Lore||Sailing Lore} DC, whichever is higher."
 						],
 						"name": "Capsize"
 					},
@@ -3135,11 +3088,36 @@
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 40
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 34
+					},
+					"ref": {
+						"std": 25
+					},
+					"will": {
+						"std": 28
+					}
+				},
+				"hp": [
+					{
+						"hp": 285
+					}
+				],
+				"immunities": [
+					"fire",
+					"death effects"
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Mamlambo",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 304,
 			"level": 9,
@@ -3150,9 +3128,6 @@
 				"aquatic",
 				"beast"
 			],
-			"creatureType": [
-				"Beast"
-			],
 			"perception": {
 				"std": 19
 			},
@@ -3162,13 +3137,13 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 21
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 19
 				},
-				"Survival": {
+				"survival": {
 					"std": 17,
 					"to Track": 19
 				}
@@ -3181,26 +3156,6 @@
 				"wis": 4,
 				"cha": 0
 			},
-			"ac": {
-				"std": 28
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 19
-				},
-				"ref": {
-					"std": 20
-				},
-				"will": {
-					"std": 15
-				}
-			},
-			"hp": [
-				{
-					"hp": 155,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 10,
 				"swim": 40
@@ -3211,7 +3166,7 @@
 					"name": "jaws",
 					"attack": 21,
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"Improved Grab"
@@ -3227,9 +3182,8 @@
 					"attack": 21,
 					"traits": [
 						"agile",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+11} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -3249,7 +3203,7 @@
 							"primal"
 						],
 						"entries": [
-							"30 feet. The mamlambo emits dim light from its skin. A creature that enters or begins its turn in the aura must attempt a DC 23 Will save. Humanoids take a \u20132 penalty to this saving throw. Regardless of the save's result, the creature is temporarily immune for 10 minutes.",
+							"30 feet. The mamlambo emits dim light from its skin. A creature that enters or begins its turn in the aura must attempt a {@dc 23} Will save. Humanoids take a \u20132 penalty to this saving throw. Regardless of the save's result, the creature is temporarily immune for 10 minutes.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -3284,7 +3238,6 @@
 							"number": 1,
 							"unit": "action"
 						},
-						"entries": [],
 						"name": "Aquatic Ambush",
 						"generic": {
 							"tag": "ability"
@@ -3297,7 +3250,7 @@
 						},
 						"requirements": "The mamlambo has a creature {@condition grabbed} or {@condition restrained}, or there is a {@condition dying}, {@condition immobilized}, or {@condition unconscious} creature within the mamlambo's reach",
 						"entries": [
-							"The mamlambo deals {@damage 2d8+11} piercing damage to the creature (DC 28 basic Fortitude save). On a failure, the creature also takes an additional {@damage 2d6} {@condition persistent damage ||persistent bleed damage}, or {@damage 4d6} {@condition persistent damage ||persistent bleed damage} on a critical failure."
+							"The mamlambo deals {@damage 2d8+11} piercing damage to the creature ({@dc 28} basic Fortitude save). On a failure, the creature also takes an additional {@damage 2d6} {@condition persistent damage||persistent bleed damage}, or {@damage 4d6} {@condition persistent damage||persistent bleed damage} on a critical failure."
 						],
 						"name": "Face Eater"
 					},
@@ -3309,11 +3262,32 @@
 						"name": "An Unusual Phobia"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 28
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 19
+					},
+					"ref": {
+						"std": 20
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": [
+					{
+						"hp": 155
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Pygmy Kaava",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 301,
 			"level": 0,
@@ -3321,9 +3295,6 @@
 				"n",
 				"small",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 6
@@ -3335,22 +3306,22 @@
 			],
 			"languages": {
 				"languages": [
-					"Kaava",
-					"Mwangi"
+					"kaava",
+					"mwangi"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 5
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 4
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 7,
 					"in forests or jungles": 9
 				},
-				"Survival": {
+				"survival": {
 					"std": 6
 				}
 			},
@@ -3366,26 +3337,6 @@
 				"obsidian sickle",
 				"spear"
 			],
-			"ac": {
-				"std": 15
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 5
-				},
-				"ref": {
-					"std": 7
-				},
-				"will": {
-					"std": 6
-				}
-			},
-			"hp": [
-				{
-					"hp": 15,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
@@ -3399,7 +3350,6 @@
 						"finesse",
 						"trip"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+2} slashing",
 					"types": [
 						"slashing"
@@ -3409,7 +3359,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 7,
-					"effects": [],
 					"damage": "{@damage 1d6+2} piercing",
 					"types": [
 						"piercing"
@@ -3420,9 +3369,8 @@
 					"name": "spear",
 					"attack": 8,
 					"traits": [
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+2} piercing",
 					"types": [
 						"piercing"
@@ -3431,12 +3379,6 @@
 			],
 			"abilities": {
 				"top": [
-					{
-						"entries": [
-							"+6 Str +2, Dex +3, Con +1, Int +1, Wis +2, Cha +0 Items obsidian sickle, spear."
-						],
-						"name": "Survival"
-					},
 					{
 						"entries": [
 							"A kaava moving at half their Speed or less steps so lightly that they leave virtually no trace. The DCs of checks to {@action Track} a kaava are increased by 10."
@@ -3452,11 +3394,38 @@
 						"name": "Woodland Stride"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 15
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 5
+					},
+					"ref": {
+						"std": 7
+					},
+					"will": {
+						"std": 6
+					}
+				},
+				"hp": [
+					{
+						"hp": 15
+					}
+				],
+				"resistances": [
+					{
+						"amount": 2,
+						"name": "poison"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Rompo",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 305,
 			"level": 5,
@@ -3464,9 +3433,6 @@
 				"n",
 				"medium",
 				"beast"
-			],
-			"creatureType": [
-				"Beast"
 			],
 			"perception": {
 				"std": 15
@@ -3482,13 +3448,13 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 13
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 12
 				},
-				"Survival": {
+				"survival": {
 					"std": 12
 				}
 			},
@@ -3500,26 +3466,6 @@
 				"wis": 2,
 				"cha": 0
 			},
-			"ac": {
-				"std": 21
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 15
-				},
-				"ref": {
-					"std": 9
-				},
-				"will": {
-					"std": 11
-				}
-			},
-			"hp": [
-				{
-					"hp": 80,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 30,
 				"climb": 25
@@ -3544,7 +3490,6 @@
 					"traits": [
 						"agile"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+5} slashing",
 					"types": [
 						"slashing"
@@ -3573,7 +3518,7 @@
 							"primal"
 						],
 						"entries": [
-							"60 feet. The rompo hums in a low voice. Each creature within the emanation must succeed at a DC 19 Will save or become {@condition fascinated} and compelled to move away from the rompo, traveling to the furthest edge of the emanation.",
+							"60 feet. The rompo hums in a low voice. Each creature within the emanation must succeed at a {@dc 19} Will save or become {@condition fascinated} and compelled to move away from the rompo, traveling to the furthest edge of the emanation.",
 							"{@condition Fascinated} creatures are also {@condition flat-footed}. The effect lasts for 1 round, but if the rompo spends a single action on subsequent rounds, it can extend the duration by 1 round for all affected creatures. If the rompo attacks, the {@condition fascinated} condition ends only for the creature that is attacked. On a successful save, a creature is temporarily immune to Crooning Cry for 24 hours."
 						],
 						"name": "Crooning Cry"
@@ -3605,21 +3550,43 @@
 							},
 							{
 								"stage": 4,
-								"entry": "{@condition unconscious} ;",
+								"entry": "{@condition unconscious} ",
 								"duration": "1 day"
 							}
 						],
 						"name": "Rompo Chills"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 21
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 15
+					},
+					"ref": {
+						"std": 9
+					},
+					"will": {
+						"std": 11
+					}
+				},
+				"hp": [
+					{
+						"hp": 80
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Sié Goluo",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 306,
 			"level": 14,
+			"hasImages": true,
 			"traits": [
 				"unique",
 				"ng",
@@ -3627,10 +3594,6 @@
 				"beast",
 				"incorporeal",
 				"spirit"
-			],
-			"creatureType": [
-				"Beast",
-				"Spirit"
 			],
 			"perception": {
 				"std": 25
@@ -3643,20 +3606,20 @@
 			],
 			"languages": {
 				"languages": [
-					"Mwangi (can't speak any language)"
+					"mwangi (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 31
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 28
 				},
-				"Nature": {
+				"nature": {
 					"std": 31
 				},
-				"Survival": {
+				"survival": {
 					"std": 28
 				}
 			},
@@ -3668,34 +3631,6 @@
 				"wis": 8,
 				"cha": 4
 			},
-			"ac": {
-				"std": 36
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 28
-				},
-				"ref": {
-					"std": 20
-				},
-				"will": {
-					"std": 28
-				}
-			},
-			"hp": [
-				{
-					"hp": 320,
-					"abilities": [
-						"rejuvenation"
-					]
-				}
-			],
-			"resistances": [
-				{
-					"amount": 10,
-					"name": "all damage"
-				}
-			],
 			"speed": {
 				"walk": 40
 			},
@@ -3705,9 +3640,8 @@
 					"name": "horn",
 					"attack": 31,
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d10+16} piercing damage plus {@damage 1d12} force damage",
 					"types": [
 						"force",
@@ -3717,9 +3651,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
 					"type": "Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"DC": 34,
 					"entry": {
 						"3": {
@@ -3749,37 +3682,32 @@
 							"divine",
 							"necromancy"
 						],
-						"entries": [],
-						"name": "Rejuvenation"
-					},
-					{
 						"entries": [
-							"Sié Goluo is destroyed, he reforms, fully healed, at a location of his choosing anywhere on the Material Plane after {@dice 2d4} days. If every person of Mwangi descent rejects belief in Sié Goluo, the spirit is permanently destroyed."
+							"When Sié Goluo is destroyed, he reforms, fully healed, at a location of his choosing anywhere on the Material Plane after {@dice 2d4} days. If every person of Mwangi descent rejects belief in Sié Goluo, the spirit is permanently destroyed."
 						],
-						"name": "When"
+						"name": "Rejuvenation",
+						"generic": {
+							"tag": "ability",
+							"add_hash": "Ghost"
+						}
 					},
 					{
 						"activity": {
 							"number": 1,
 							"unit": "free"
 						},
-						"trigger": "A creature on the",
-						"entries": [],
-						"name": "Ancestral Response"
-					},
-					{
+						"trigger": "A creature on the Material Plane calls out for Sié Goluo",
 						"entries": [
-							"Plane calls out for Sié Goluo; Sié Goluo instantaneously appears in an unoccupied space within 30 feet of the triggering creature and heals {@dice 8d8} hit points on all allies that can see him within 60 feet.",
+							"Sié Goluo instantaneously appears in an unoccupied space within 30 feet of the triggering creature and heals {@dice 8d8} hit points on all allies that can see him within 60 feet.",
 							"Allies healed this way gain a +2 circumstance bonus on saving throws for 1 minute. Creatures that receive these benefits become temporarily immune to them for 1 year."
 						],
-						"name": "Material"
+						"name": "Ancestral Response"
 					},
 					{
 						"activity": {
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Ferocity",
 						"generic": {
 							"tag": "ability"
@@ -3793,7 +3721,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Sié Goluo {@action Stride||Strides} twice, then makes a horn {@action Strike}. On a hit, Sié Goluo creates a shock wave that deals {@damage 4d12} force damage in a 30-foot cone (DC 34 basic Reflex save). Creatures that fail their save are pushed away 5 feet (10 feet on a critical failure)."
+							"Sié Goluo {@action Stride||Strides} twice, then makes a horn {@action Strike}. On a hit, Sié Goluo creates a shock wave that deals {@damage 4d12} force damage in a 30-foot cone ({@dc 34} basic Reflex save). Creatures that fail their save are pushed away 5 feet (10 feet on a critical failure)."
 						],
 						"name": "Spirit Charge"
 					},
@@ -3804,11 +3732,40 @@
 						"name": "Spirit Steps"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 36
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 28
+					},
+					"ref": {
+						"std": 20
+					},
+					"will": {
+						"std": 28
+					}
+				},
+				"hp": [
+					{
+						"hp": 320,
+						"abilities": [
+							"rejuvenation"
+						]
+					}
+				],
+				"resistances": [
+					{
+						"amount": 10,
+						"name": "all damage"
+					}
+				]
 			}
 		},
 		{
 			"name": "Solar Ibis",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 307,
 			"level": 7,
@@ -3816,9 +3773,6 @@
 				"ng",
 				"medium",
 				"beast"
-			],
-			"creatureType": [
-				"Beast"
 			],
 			"perception": {
 				"std": 17
@@ -3833,15 +3787,15 @@
 			],
 			"languages": {
 				"languages": [
-					"Mwangi",
-					"Sylvan (can't speak any"
+					"mwangi",
+					"sylvan (can't speak any"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 18
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 14
 				}
 			},
@@ -3853,26 +3807,6 @@
 				"wis": 3,
 				"cha": 3
 			},
-			"ac": {
-				"std": 25
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 12
-				},
-				"ref": {
-					"std": 17
-				},
-				"will": {
-					"std": 15
-				}
-			},
-			"hp": [
-				{
-					"hp": 45,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 10,
 				"fly": 60
@@ -3882,7 +3816,6 @@
 					"range": "Melee",
 					"name": "beak",
 					"attack": 18,
-					"effects": [],
 					"damage": "{@damage 2d10+11} piercing",
 					"types": [
 						"piercing"
@@ -3913,7 +3846,7 @@
 							"light"
 						],
 						"entries": [
-							"30 feet. The solar ibis's halo sheds bright light. Creatures that start their turn in the aura must succeed at a DC 22 Fortitude save or be {@condition dazzled} for 1 minute. A creature that critically fails its save is instead {@condition blinded} for 1 minute. Creatures who successfully save are temporarily immune to this effect for 24 hours. The solar ibis can extinguish or resume the halo's light as a single action, which has the {@trait concentrate} trait."
+							"30 feet. The solar ibis's halo sheds bright light. Creatures that start their turn in the aura must succeed at a {@dc 22} Fortitude save or be {@condition dazzled} for 1 minute. A creature that critically fails its save is instead {@condition blinded} for 1 minute. Creatures who successfully save are temporarily immune to this effect for 24 hours. The solar ibis can extinguish or resume the halo's light as a single action, which has the {@trait concentrate} trait."
 						],
 						"name": "Blinding Halo"
 					},
@@ -3948,16 +3881,37 @@
 							"light"
 						],
 						"entries": [
-							"The solar ibis detonates its halo, sending shards of burning light in all directions that deal {@damage 6d8} fire damage to all creatures in a 20-foot emanation (DC 22 basic Reflex save). The shards deal an extra {@damage 6d8} good damage against fiends and undead. The solar ibis can't use Light Shatter again for {@dice 1d4} rounds, and its Blinding Halo is extinguished during this time. The halo is restored automatically once the {@dice 1d4} rounds have passed."
+							"The solar ibis detonates its halo, sending shards of burning light in all directions that deal {@damage 6d8} fire damage to all creatures in a 20-foot emanation ({@dc 22} basic Reflex save). The shards deal an extra {@damage 6d8} good damage against fiends and undead. The solar ibis can't use Light Shatter again for {@dice 1d4} rounds, and its Blinding Halo is extinguished during this time. The halo is restored automatically once the {@dice 1d4} rounds have passed."
 						],
 						"name": "Light Shatter"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 25
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 17
+					},
+					"will": {
+						"std": 15
+					}
+				},
+				"hp": [
+					{
+						"hp": 45
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Zinba",
-			"isNpc": false,
 			"source": "LOME",
 			"page": 308,
 			"level": 10,
@@ -3967,9 +3921,6 @@
 				"large",
 				"amphibious",
 				"beast"
-			],
-			"creatureType": [
-				"Beast"
 			],
 			"perception": {
 				"std": 20
@@ -3986,20 +3937,20 @@
 			],
 			"languages": {
 				"languages": [
-					"Sylvan (can't speak any language)"
+					"sylvan (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 18
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 25
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 18
 				},
-				"Survival": {
+				"survival": {
 					"std": 18
 				}
 			},
@@ -4011,26 +3962,6 @@
 				"wis": 3,
 				"cha": 0
 			},
-			"ac": {
-				"std": 28
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 23
-				},
-				"ref": {
-					"std": 20
-				},
-				"will": {
-					"std": 18
-				}
-			},
-			"hp": [
-				{
-					"hp": 220,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 30,
 				"burrow": 10,
@@ -4042,7 +3973,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 21,
-					"effects": [],
 					"damage": "{@damage 2d10+11} piercing plus",
 					"types": [
 						"piercing"
@@ -4054,9 +3984,8 @@
 					"attack": 21,
 					"traits": [
 						"agile",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+9} bludgeoning plus Push 10 feet",
 					"types": [
 						"bludgeoning"
@@ -4084,7 +4013,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"{@damage 2d10+6} bludgeoning, DC 29."
+							"{@damage 2d10+6} bludgeoning, {@dc 29}"
 						],
 						"name": "Greater Constrict",
 						"generic": {
@@ -4142,14 +4071,36 @@
 						"stages": [
 							{
 								"stage": 1,
-								"entry": "{@damage 3d6} poison ;",
+								"entry": "{@damage 3d6} poison ",
 								"duration": "1 round"
 							}
 						],
 						"name": "Zinba Venom"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 28
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 23
+					},
+					"ref": {
+						"std": 20
+					},
+					"will": {
+						"std": 18
+					}
+				},
+				"hp": [
+					{
+						"hp": 220
+					}
+				]
+			},
+			"hasImages": true
 		}
 	]
 }

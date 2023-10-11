@@ -2,7 +2,6 @@
 	"creature": [
 		{
 			"name": "Ammut",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 77,
 			"level": 18,
@@ -11,9 +10,6 @@
 				"ne",
 				"huge",
 				"fiend"
-			],
-			"creatureType": [
-				"Fiend"
 			],
 			"perception": {
 				"std": 33
@@ -33,27 +29,27 @@
 			],
 			"languages": {
 				"languages": [
-					"Celestial",
-					"Infernal"
+					"celestial",
+					"infernal"
 				],
 				"abilities": [
 					"telepathy 100 feet"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 34
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 33
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 29
 				},
-				"Religion": {
+				"religion": {
 					"std": 32
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 35
 				}
 			},
@@ -65,35 +61,6 @@
 				"wis": 6,
 				"cha": 7
 			},
-			"ac": {
-				"std": 41
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 35
-				},
-				"ref": {
-					"std": 27
-				},
-				"will": {
-					"std": 28
-				}
-			},
-			"hp": [
-				{
-					"hp": 350,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"evil"
-			],
-			"weaknesses": [
-				{
-					"amount": 20,
-					"name": "good"
-				}
-			],
 			"speed": {
 				"walk": 50,
 				"burrow": 30
@@ -105,7 +72,7 @@
 					"attack": 32,
 					"traits": [
 						"agile",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"wasting wound"
@@ -120,13 +87,13 @@
 					"name": "foot",
 					"attack": 30,
 					"traits": [
-						"deadly d10"
+						"deadly <d10>"
 					],
 					"effects": [
 						"{@dice 4d8+12}",
-						"{@condition stunned|CRB|stunned 1} (DC 38 Fortitude negates)"
+						"{@condition stunned|CRB|stunned 1} ({@dc 38} Fortitude negates)"
 					],
-					"damage": "{@dice 4d8+12} plus {@condition stunned|CRB|stunned 1} (DC 38 Fortitude negates)",
+					"damage": "{@dice 4d8+12} plus {@condition stunned|CRB|stunned 1} ({@dc 38} Fortitude negates)",
 					"types": []
 				},
 				{
@@ -134,7 +101,7 @@
 					"name": "jaws",
 					"attack": 32,
 					"traits": [
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"effects": [
 						"Improved Grab"
@@ -147,9 +114,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Innate",
 					"type": "Innate",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 37,
 					"entry": {
 						"6": {
@@ -191,7 +157,7 @@
 							"fire"
 						],
 						"entries": [
-							"The ammut exhales a blast of flame that deals {@damage 18d6} fire damage to all creatures in a 30- foot cone (DC 37 basic Reflex save). The ammut can't use their Breath Weapon again for {@dice 1d4} rounds."
+							"The ammut exhales a blast of flame that deals {@damage 18d6} fire damage to all creatures in a 30- foot cone ({@dc 37} basic Reflex save). The ammut can't use their Breath Weapon again for {@dice 1d4} rounds."
 						],
 						"name": "Breath Weapon"
 					},
@@ -219,7 +185,6 @@
 						"name": "Fast Swallow"
 					},
 					{
-						"entries": [],
 						"name": "Swallow Whole."
 					},
 					{
@@ -242,16 +207,46 @@
 							"necromancy"
 						],
 						"entries": [
-							"A creature dealt damage by an ammut's claw {@action Strike} must succeed at a DC 37 Will save or become {@condition enfeebled|CRB|enfeebled 1} and {@condition drained|CRB|drained 1} (or {@condition enfeebled|CRB|enfeebled 2} and {@condition drained|CRB|drained 2} on a critical failed save). The conditions cannot be mitigated until the curse is removed, and the curse cannot be removed until all damage dealt by the claw {@action Strike} is healed. Each day, a creature afflicted with wasting wound must attempt another saving throw; on a failed save, the values of its {@condition enfeebled} and {@condition drained} conditions each increase by 1. If the victim dies while cursed, its soul is destroyed, as per the ammut's devour soul ability."
+							"A creature dealt damage by an ammut's claw {@action Strike} must succeed at a {@dc 37} Will save or become {@condition enfeebled|CRB|enfeebled 1} and {@condition drained|CRB|drained 1} (or {@condition enfeebled|CRB|enfeebled 2} and {@condition drained|CRB|drained 2} on a critical failed save). The conditions cannot be mitigated until the curse is removed, and the curse cannot be removed until all damage dealt by the claw {@action Strike} is healed. Each day, a creature afflicted with wasting wound must attempt another saving throw; on a failed save, the values of its {@condition enfeebled} and {@condition drained} conditions each increase by 1. If the victim dies while cursed, its soul is destroyed, as per the ammut's devour soul ability."
 						],
 						"name": "Wasting Wound"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 41
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 35
+					},
+					"ref": {
+						"std": 27
+					},
+					"will": {
+						"std": 28
+					}
+				},
+				"hp": [
+					{
+						"hp": 350
+					}
+				],
+				"immunities": [
+					"evil"
+				],
+				"weaknesses": [
+					{
+						"amount": 20,
+						"name": "good"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Ararda",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 79,
 			"level": 18,
@@ -262,9 +257,6 @@
 				"earth",
 				"elemental",
 				"genie"
-			],
-			"creatureType": [
-				"Elemental"
 			],
 			"perception": {
 				"std": 31
@@ -284,27 +276,27 @@
 			],
 			"languages": {
 				"languages": [
-					"Terran",
-					"Undercommon"
+					"terran",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 35
 				},
-				"Deception": {
+				"deception": {
 					"std": 30
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 30
 				},
-				"Nature": {
+				"nature": {
 					"std": 33
 				},
-				"Survival": {
+				"survival": {
 					"std": 33
 				},
-				"Black Desert Lore": {
+				"black desert lore": {
 					"std": 27
 				}
 			},
@@ -318,41 +310,6 @@
 			},
 			"items": [
 				"+2 greater striking maul"
-			],
-			"ac": {
-				"std": 43
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 33
-				},
-				"ref": {
-					"std": 30
-				},
-				"will": {
-					"std": 31
-				}
-			},
-			"hp": [
-				{
-					"hp": 280,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"disease"
-			],
-			"weaknesses": [
-				{
-					"amount": 20,
-					"name": "sonic"
-				}
-			],
-			"resistances": [
-				{
-					"amount": 20,
-					"name": "electricity"
-				}
 			],
 			"speed": {
 				"abilities": [
@@ -369,10 +326,9 @@
 					"attack": 35,
 					"traits": [
 						"magical",
-						"reach 10 feet",
+						"reach <10 feet>",
 						"shove"
 					],
-					"effects": [],
 					"damage": "{@damage 3d12+17} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -388,7 +344,7 @@
 						"electricity",
 						"magical",
 						"nonlethal",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"blightburn sickness (page 73)"
@@ -407,7 +363,7 @@
 						"earth",
 						"electricity",
 						"magical",
-						"range increment 30 feet"
+						"range increment <30 feet>"
 					],
 					"effects": [
 						"blightburn sickness (page 73)"
@@ -421,9 +377,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Innate",
 					"type": "Innate",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 37,
 					"entry": {
 						"4": {
@@ -484,14 +439,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+33, {@skill Survival} +33 Str +9, Dex +6, Con +7, Int +3, Wis +7, Cha +6 Items +2 greater striking maul."
-						],
-						"name": "Nature"
-					}
-				],
 				"mid": [
 					{
 						"traits": [
@@ -501,9 +448,7 @@
 							"disease"
 						],
 						"entries": [
-							"60 feet. Blightburn crystals infused into an ararda's body attempt to counteract any teleportation spell moving into or out of the aura's emanation (counteract check +31; 7th level)",
-							"In addition, any creature that starts its turn within the emanation is exposed to blightburn sickness (page 73). The aura is blocked by lead sheeting, 1 foot of stone, or large {@trait force} effects (such as a wall of force, but not a {@spell shield} spell)",
-							"An ararda can suppress their aura with an action that has the {@trait concentrate} trait."
+							"60 feet. Blightburn crystals infused into an ararda's body attempt to counteract any teleportation spell moving into or out of the aura's emanation (counteract check +31; 7th level). In addition, any creature that starts its turn within the emanation is exposed to blightburn sickness (page 73). The aura is blocked by lead sheeting, 1 foot of stone, or large {@trait force} effects (such as a wall of force, but not a {@spell shield} spell). An ararda can suppress their aura with an action that has the {@trait concentrate} trait."
 						],
 						"name": "Blightburn Radiation"
 					},
@@ -530,14 +475,14 @@
 							"transmutation"
 						],
 						"entries": [
-							"As muurfeli, but with the appearance of a Tiny or Small scorpion (rather than owl) and piercing damage for their Strikes (rather than slashing)."
+							"As muurfeli, but with the appearance of a Tiny or Small scorpion (rather than owl) and piercing damage for their {@action Strike||Strikes} (rather than slashing)."
 						],
 						"name": "Change Shape",
 						"generic": {
 							"tag": "ability"
 						},
 						"entries_as_xyz": [
-							"The muurfeli can take on the form of an owl. The owl form always looks the same, but the muurfeli can choose to become either Tiny or Small in this form. This transformation doesn't change their Speed or the attack and damage bonuses of their Strikes, but might change the damage type their Strikes deal (typically to slashing)."
+							"The muurfeli can take on the form of an owl. The owl form always looks the same, but the muurfeli can choose to become either Tiny or Small in this form. This transformation doesn't change their Speed or the attack and damage bonuses of their {@action Strike||Strikes}, but might change the damage type their {@action Strike||Strikes} deal (typically to slashing)."
 						]
 					},
 					{
@@ -547,11 +492,47 @@
 						"name": "Earth Glide"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 43
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 33
+					},
+					"ref": {
+						"std": 30
+					},
+					"will": {
+						"std": 31
+					}
+				},
+				"hp": [
+					{
+						"hp": 280
+					}
+				],
+				"immunities": [
+					"disease"
+				],
+				"weaknesses": [
+					{
+						"amount": 20,
+						"name": "sonic"
+					}
+				],
+				"resistances": [
+					{
+						"amount": 20,
+						"name": "electricity"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Death Drider",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 35,
 			"level": 13,
@@ -561,9 +542,7 @@
 				"large",
 				"undead"
 			],
-			"creatureType": [
-				"Undead"
-			],
+			"description": "Variant driders (Pathfinder Bestiary 159)",
 			"perception": {
 				"std": 24
 			},
@@ -574,22 +553,22 @@
 			],
 			"languages": {
 				"languages": [
-					"Elven",
-					"Necril",
-					"Undercommon"
+					"elven",
+					"necril",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 30
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 28
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 24
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 30
 				}
 			},
@@ -601,31 +580,6 @@
 				"wis": 5,
 				"cha": 4
 			},
-			"ac": {
-				"std": 34
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 24
-				},
-				"ref": {
-					"std": 26
-				},
-				"will": {
-					"std": 23
-				}
-			},
-			"hp": [
-				{
-					"hp": 235,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects"
-			],
 			"speed": {
 				"walk": 30,
 				"climb": 30
@@ -648,39 +602,25 @@
 					"name": "web",
 					"attack": 27,
 					"traits": [
-						"range increment 30 feet"
+						"range increment <30 feet>"
 					],
 					"effects": [
 						"hungering web"
-					],
-					"damage": "hungering web",
-					"types": []
+					]
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+30 Str +6, Dex +8, Con +4, Int \u20131, Wis +5, Cha +4."
-						],
-						"name": "Stealth"
-					}
-				],
 				"mid": [
 					{
 						"activity": {
 							"number": 1,
 							"unit": "reaction"
 						},
-						"trigger": "The death drider is reduced to 0",
-						"entries": [],
-						"name": "Sack of Spiders"
-					},
-					{
+						"trigger": "The death drider is reduced to 0 Hit Points",
 						"entries": [
-							"The death drider explodes in a shower of spiders. Each adjacent creature must succeed at a DC 31 Reflex save or take {@damage 3d6} piercing damage and be exposed to death drider venom."
+							"The death drider explodes in a shower of spiders. Each adjacent creature must succeed at a {@dc 31} Reflex save or take {@damage 3d6} piercing damage and be exposed to death drider venom."
 						],
-						"name": "Hit Points; Effect"
+						"name": "Sack of Spiders"
 					}
 				],
 				"bot": [
@@ -690,7 +630,7 @@
 						"traits": [
 							"poison"
 						],
-						"note": " The {@condition drained} condition\npersists after the poison's duration ends",
+						"note": "The {@condition drained} condition persists after the poison's duration ends",
 						"DC": 32,
 						"savingThrow": "Fortitude",
 						"maxDuration": "6 rounds",
@@ -711,13 +651,49 @@
 								"duration": "1 round"
 							}
 						]
+					},
+					{
+						"entries": [
+							"A creature hit by a death drider's web attack is {@condition immobilized} and stuck to the nearest surface ({@action Escape} {@dc 31}). Each round thereafter until it breaks free, the creature takes {@damage 3d6} piercing damage ({@dc 31} basic Reflex save) and, on a failed save, is exposed to death drider venom."
+						],
+						"name": "Hungering Web"
 					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 34
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 24
+					},
+					"ref": {
+						"std": 26
+					},
+					"will": {
+						"std": 23
+					}
+				},
+				"hp": [
+					{
+						"hp": 235,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyze",
+					"poison",
+					"unconscious"
 				]
 			}
 		},
 		{
 			"name": "Dyzallin Shraen",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 86,
 			"level": 19,
@@ -728,9 +704,7 @@
 				"mummy",
 				"undead"
 			],
-			"creatureType": [
-				"Undead"
-			],
+			"description": "Male drow mummy mage (Bestiary 136, 240)",
 			"perception": {
 				"std": 32
 			},
@@ -741,42 +715,42 @@
 			],
 			"languages": {
 				"languages": [
-					"Abyssal",
-					"Common",
-					"Elven",
-					"Necril",
-					"Undercommon"
+					"abyssal",
+					"common",
+					"elven",
+					"necril",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 31
 				},
-				"Arcana": {
+				"arcana": {
 					"std": 33
 				},
-				"Deception": {
+				"deception": {
 					"std": 38
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 34
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 36
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 35
 				},
-				"Religion": {
+				"religion": {
 					"std": 28
 				},
-				"Society": {
+				"society": {
 					"std": 33
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 31
 				},
-				"Shraen Lore": {
+				"shraen lore": {
 					"std": 31
 				}
 			},
@@ -788,42 +762,13 @@
 				"wis": 3,
 				"cha": 9
 			},
-			"ac": {
-				"std": 42
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 30
-				},
-				"ref": {
-					"std": 32
-				},
-				"will": {
-					"std": 33
-				}
-			},
-			"hp": [
-				{
-					"hp": 380,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects"
-			],
-			"weaknesses": [
-				{
-					"amount": 15,
-					"name": "fire"
-				}
-			],
-			"resistances": [
-				{
-					"amount": 20,
-					"name": "electricity"
-				}
+			"items": [
+				"circlet of persuasion",
+				"+2 greater striking hand crossbow (10 bolts)",
+				"scroll of heroism (9th)",
+				"scroll of maze",
+				"scroll of unrelenting observation",
+				"wand of manifold missiles (7th)"
 			],
 			"speed": {
 				"walk": 25
@@ -850,8 +795,8 @@
 					"name": "hand crossbow",
 					"attack": 36,
 					"traits": [
-						"range increment 60 feet",
-						"reload 1"
+						"range increment <60 feet>",
+						"reload <1>"
 					],
 					"effects": [
 						"insidious mummy rot"
@@ -864,9 +809,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Spontaneous",
 					"type": "Spontaneous",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"DC": 41,
 					"entry": {
 						"0": {
@@ -1043,18 +987,18 @@
 							]
 						},
 						"10": {
+							"slots": 1,
 							"spells": [
 								{
-									"name": "1 slot) time stop"
+									"name": "time stop"
 								}
 							]
 						}
 					}
 				},
 				{
-					"name": "Divine Innate",
 					"type": "Innate",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 41,
 					"entry": {
 						"0": {
@@ -1089,7 +1033,7 @@
 			],
 			"rituals": [
 				{
-					"tradition": "Occult",
+					"tradition": "occult",
 					"DC": 41,
 					"rituals": [
 						{
@@ -1100,28 +1044,12 @@
 						},
 						{
 							"name": "terminate bloodline",
-							"notes": [
-								"page 74"
-							]
+							"source": "EC5"
 						}
 					]
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+34, {@skill Intimidation} +36, {@skill Occultism} +35,"
-						],
-						"name": "Diplomacy"
-					},
-					{
-						"entries": [
-							"+28, {@skill Lore||Shraen Lore} +31, {@skill Society} +33, {@skill Stealth} +31 Str +2, Dex +6, Con +4, Int +6, Wis +3, Cha +9 Items circlet of persuasion, +2 greater striking hand crossbow (10 bolts), scroll of heroism (9th), scroll of maze, scroll of unrelenting observation, wand of manifold missiles (7th)"
-						],
-						"name": "Religion"
-					}
-				],
 				"mid": [
 					{
 						"traits": [
@@ -1130,7 +1058,7 @@
 						],
 						"entries": [
 							"When Dyzallin is destroyed, necromantic energies rebuild his body inside the mirror in his laboratory over the next {@dice 1d10} days.",
-							"His re-forming body is visible in the mirror, but the mirror can't be destroyed while he is re-forming unless a consecrate ritual is first cast upon it. Once Dyzallin's rejuvenation is complete, he steps out of the mirror."
+							"His re-forming body is visible in the mirror, but the mirror can't be destroyed while he is re-forming unless a {@ritual consecrate} ritual is first cast upon it. Once Dyzallin's rejuvenation is complete, he steps out of the mirror."
 						],
 						"name": "Mirror Rejuvenation"
 					},
@@ -1145,7 +1073,7 @@
 							"mental"
 						],
 						"entries": [
-							"30 feet. Living creatures are {@condition frightened|CRB|frightened 2} while in Dyzallin's utter despair aura. They can't naturally recover from this fear while in the area but lose the {@condition frightened} condition immediately upon leaving the area. When a creature first enters the aura, it must succeed at a DC 39 Will save (after taking the penalty from being {@condition frightened}) or be {@condition paralyzed} for {@dice 1d4} rounds. The creature is then temporarily immune to the paralysis caused by the utter despair aura for 24 hours."
+							"30 feet. Living creatures are {@condition frightened|CRB|frightened 2} while in Dyzallin's utter despair aura. They can't naturally recover from this fear while in the area but lose the {@condition frightened} condition immediately upon leaving the area. When a creature first enters the aura, it must succeed at a {@dc 39} Will save (after taking the penalty from being {@condition frightened}) or be {@condition paralyzed} for {@dice 1d4} rounds. The creature is then temporarily immune to the paralysis caused by the utter despair aura for 24 hours."
 						],
 						"name": "Utter Despair"
 					},
@@ -1190,7 +1118,7 @@
 							"divine",
 							"necromancy"
 						],
-						"note": "\nThis disease and damage from it can't be healed until the\ncurse is removed. A creature killed by this curse turns\nto sand and can't be resurrected except by a 9th-level\nresurrect ritual or similar magic",
+						"note": "This disease and damage from it can't be healed until the curse is removed. A creature killed by this curse turns to sand and can't be resurrected except by a 9th-level {@ritual resurrect} ritual or similar magic",
 						"DC": 39,
 						"savingThrow": "Fortitude",
 						"stages": [
@@ -1207,11 +1135,58 @@
 						]
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 42
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 30
+					},
+					"ref": {
+						"std": 32
+					},
+					"will": {
+						"std": 33
+					},
+					"abilities": [
+						"+1 status to all saves vs. magical effects and positive effects",
+						"+2 status to all saves vs. mental effects"
+					]
+				},
+				"hp": [
+					{
+						"hp": 380,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyzed",
+					"poison",
+					"sleep",
+					"unconscious"
+				],
+				"weaknesses": [
+					{
+						"amount": 15,
+						"name": "fire"
+					}
+				],
+				"resistances": [
+					{
+						"amount": 20,
+						"name": "electricity"
+					}
+				]
 			}
 		},
 		{
 			"name": "Hollow Hush",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 39,
 			"level": 18,
@@ -1221,9 +1196,7 @@
 				"large",
 				"aberration"
 			],
-			"creatureType": [
-				"Aberration"
-			],
+			"description": "Variant quelaunt (Pathfinder Bestiary 273)",
 			"perception": {
 				"std": 33
 			},
@@ -1236,23 +1209,29 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo (can't speak any language);"
+					"aklo (can't speak any language);"
+				],
+				"abilities": [
+					"telepathy 100 feet"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 32
 				},
-				"Deception": {
+				"deception": {
 					"std": 35
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 35
 				},
-				"Medicine": {
+				"medicine": {
 					"std": 33
 				},
-				"Stealth": {
+				"occultism": {
+					"std": 31
+				},
+				"stealth": {
 					"std": 31
 				}
 			},
@@ -1264,27 +1243,6 @@
 				"wis": 7,
 				"cha": 9
 			},
-			"ac": {
-				"std": 41
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 31
-				},
-				"ref": {
-					"std": 30
-				},
-				"will": {
-					"std": 35,
-					"vs. emotion effects": 37
-				}
-			},
-			"hp": [
-				{
-					"hp": 355,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"abilities": [
 					"air walk"
@@ -1299,9 +1257,8 @@
 					"traits": [
 						"agile",
 						"magical",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d10+14} slashing",
 					"types": [
 						"slashing"
@@ -1310,9 +1267,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
 					"type": "Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"DC": 42,
 					"entry": {
 						"2": {
@@ -1356,25 +1312,25 @@
 								}
 							]
 						},
-						"constant": {}
+						"constant": {
+							"4": {
+								"spells": [
+									{
+										"name": "air walk"
+									}
+								]
+							}
+						}
 					}
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+35, {@skill Medicine} +33, {@skill Occultism} +31, {@skill Stealth} +31 Str +6, Dex +5, Con +4, Int +5, Wis +7, Cha +9."
-						],
-						"name": "Intimidation"
-					}
-				],
 				"bot": [
 					{
 						"entries": [
-							"Hush can cast the following cleric domain spells as 9th-level occult innate spells at will without spending Focus Points: {@spell blind ambition} (Core Rulebook 389), {@spell captivating adoration} (Core Rulebook 389), and {@spell delusional pride} (Core Rulebook 391)."
+							"Hollow Hush can cast the following cleric domain spells as 9th-level occult innate spells at will without spending Focus Points: {@spell blind ambition}, {@spell captivating adoration}, and {@spell delusional pride}."
 						],
-						"name": "Emotional Focus Hollow"
+						"name": "Emotional Focus"
 					},
 					{
 						"activity": {
@@ -1399,10 +1355,10 @@
 						],
 						"frequency": {
 							"unit": "round",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
-							"Hollow Hush feeds on the emotional unrest of a single creature within 30 feet that's currently affected by an {@trait emotion} effect. The target must succeed at a DC 41 Will save or take {@damage 5d10} mental damage and be {@condition stunned} for 1 round. If the target fails its saving throw, Hollow Hush regains the same number of Hit Points and Feed on Emotion does not cost Hollow Hush an action, allowing it to use another action this turn."
+							"Hollow Hush feeds on the emotional unrest of a single creature within 30 feet that's currently affected by an {@trait emotion} effect. The target must succeed at a {@dc 41} Will save or take {@damage 5d10} mental damage and be {@condition stunned} for 1 round. If the target fails its saving throw, Hollow Hush regains the same number of Hit Points and Feed on Emotion does not cost Hollow Hush an action, allowing it to use another action this turn."
 						],
 						"name": "Feed on Emotion"
 					},
@@ -1412,7 +1368,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Hollow Hush attempts three claw Strikes, each against a different target within reach.",
+							"Hollow Hush attempts three claw {@action Strike||Strikes}, each against a different target within reach.",
 							"The multiple attack penalty applies to each attack, but increases only after all the attacks have been made."
 						],
 						"name": "Rapid Strikes"
@@ -1433,11 +1389,38 @@
 						"name": "Spiral of Despair"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 41
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 31
+					},
+					"ref": {
+						"std": 30
+					},
+					"will": {
+						"std": 35,
+						"vs. emotion effects": 37
+					}
+				},
+				"hp": [
+					{
+						"hp": 355
+					}
+				],
+				"resistances": [
+					{
+						"amount": 20,
+						"name": "mental"
+					}
+				]
 			}
 		},
 		{
 			"name": "Iffdahsil",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 81,
 			"level": 21,
@@ -1447,10 +1430,6 @@
 				"gargantuan",
 				"aberration",
 				"undead"
-			],
-			"creatureType": [
-				"Aberration",
-				"Undead"
 			],
 			"perception": {
 				"std": 38
@@ -1477,15 +1456,15 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo",
-					"Necril"
+					"aklo",
+					"necril"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 40
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 36
 				}
 			},
@@ -1497,54 +1476,6 @@
 				"wis": 8,
 				"cha": 7
 			},
-			"ac": {
-				"std": 43,
-				"abilities": "all-around vision"
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 39
-				},
-				"ref": {
-					"std": 36
-				},
-				"will": {
-					"std": 35
-				}
-			},
-			"hp": [
-				{
-					"hp": 380,
-					"abilities": [
-						"fast healing 30",
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"blinded",
-				"controlled"
-			],
-			"weaknesses": [
-				{
-					"amount": 20,
-					"name": "good"
-				}
-			],
-			"resistances": [
-				{
-					"amount": 20,
-					"name": "acid"
-				},
-				{
-					"amount": 20,
-					"name": "cold"
-				},
-				{
-					"amount": 15,
-					"name": "physical"
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"burrow": 40,
@@ -1557,7 +1488,7 @@
 					"attack": 38,
 					"traits": [
 						"magical",
-						"reach 30 feet"
+						"reach <30 feet>"
 					],
 					"effects": [
 						"Grab"
@@ -1570,9 +1501,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
 					"type": "Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"DC": 42,
 					"entry": {
 						"7": {
@@ -1586,8 +1516,9 @@
 							"spells": [
 								{
 									"name": "disappearance",
+									"amount": "at will",
 									"notes": [
-										"at will; self only"
+										"self only"
 									]
 								},
 								{
@@ -1614,7 +1545,7 @@
 							"occult"
 						],
 						"entries": [
-							"60 feet, DC 45. A creature entering or starting its turn in the aura that fails at a Fortitude save becomes {@condition doomed|CRB|doomed 1} and {@condition drained|CRB|drained 1}. If the target was already {@condition doomed} or {@condition drained}, the values of these conditions increase by 1, to a maximum of {@condition doomed|CRB|doomed 3} and {@condition drained|CRB|drained 3}. A creature that dies while {@condition doomed|CRB|doomed 3} and {@condition drained|CRB|drained 3} in this way disintegrates into black sand."
+							"60 feet, {@dc 45}. A creature entering or starting its turn in the aura that fails at a Fortitude save becomes {@condition doomed|CRB|doomed 1} and {@condition drained|CRB|drained 1}. If the target was already {@condition doomed} or {@condition drained}, the values of these conditions increase by 1, to a maximum of {@condition doomed|CRB|doomed 3} and {@condition drained|CRB|drained 3}. A creature that dies while {@condition doomed|CRB|doomed 3} and {@condition drained|CRB|drained 3} in this way disintegrates into black sand."
 						],
 						"name": "Aura of Annihilation"
 					},
@@ -1655,7 +1586,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"DC 43, {@damage 10d6} negative, {@action Escape} DC 43, Rupture 45."
+							"{@dc 43}, {@damage 10d6} negative, {@action Escape} {@dc 43}, Rupture 45."
 						],
 						"name": "Engulf",
 						"generic": {
@@ -1668,17 +1599,67 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Iffdahsil deals {@damage 8d8} piercing damage to each creature in a 10-foot emanation (DC 43 basic Reflex save) and can also attempt to Grab any creatures who critically fail their save as a free action.",
+							"Iffdahsil deals {@damage 8d8} piercing damage to each creature in a 10-foot emanation ({@dc 43} basic Reflex save) and can also attempt to Grab any creatures who critically fail their save as a free action.",
 							"Iffdahsil is then {@condition flat-footed} until the start of its next turn."
 						],
 						"name": "Tentacular Burst"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 43,
+					"abilities": "all-around vision"
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 39
+					},
+					"ref": {
+						"std": 36
+					},
+					"will": {
+						"std": 35
+					}
+				},
+				"hp": [
+					{
+						"hp": 380,
+						"abilities": [
+							"fast healing 30",
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"blinded",
+					"controlled"
+				],
+				"weaknesses": [
+					{
+						"amount": 20,
+						"name": "good"
+					}
+				],
+				"resistances": [
+					{
+						"amount": 20,
+						"name": "acid"
+					},
+					{
+						"amount": 20,
+						"name": "cold"
+					},
+					{
+						"amount": 15,
+						"name": "physical"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Kharostan",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 88,
 			"level": 16,
@@ -1690,10 +1671,7 @@
 				"humanoid",
 				"urdefhan"
 			],
-			"creatureType": [
-				"Humanoid",
-				"Fiend"
-			],
+			"description": "Male urdefhan war champion (Bestiary 2 272)",
 			"perception": {
 				"std": 29
 			},
@@ -1707,32 +1685,35 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo",
-					"Common",
-					"Daemonic",
-					"Undercommon"
+					"aklo",
+					"common",
+					"daemonic",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 28
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 31
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 25
 				},
-				"Religion": {
-					"std": 27
-				},
-				"Stealth": {
+				"intimidate": {
 					"std": 28
 				},
-				"Survival": {
+				"religion": {
+					"std": 27
+				},
+				"stealth": {
+					"std": 28
+				},
+				"survival": {
 					"std": 29
 				},
-				"Black Desert Lore": {
+				"black desert lore": {
 					"std": 25
 				}
 			},
@@ -1744,36 +1725,10 @@
 				"wis": 3,
 				"cha": 4
 			},
-			"ac": {
-				"std": 38
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 28
-				},
-				"ref": {
-					"std": 30
-				},
-				"will": {
-					"std": 25
-				}
-			},
-			"hp": [
-				{
-					"hp": 280,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects"
-			],
-			"weaknesses": [
-				{
-					"amount": 15,
-					"name": "positive"
-				}
+			"items": [
+				"+1 striking composite longbow (40 arrows)",
+				"+2 greater striking rhoka sword (page 83)",
+				"studded leather armor"
 			],
 			"speed": {
 				"walk": 30,
@@ -1785,12 +1740,11 @@
 					"name": "rhoka sword",
 					"attack": 32,
 					"traits": [
-						"fatal d10",
+						"fatal <d10>",
 						"magical",
-						"reach 10 feet",
-						"two-hand d12"
+						"reach <10 feet>",
+						"two-hand <d12>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d8+12} slashing",
 					"types": [
 						"slashing"
@@ -1813,14 +1767,13 @@
 					"name": "composite longbow",
 					"attack": 32,
 					"traits": [
-						"deadly d10",
+						"deadly <d10>",
 						"magical",
 						"propulsive",
-						"range increment 100 feet",
-						"reload 0",
-						"volley 30 feet"
+						"range increment <100 feet>",
+						"reload <0>",
+						"volley <30 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+9} piercing",
 					"types": [
 						"piercing"
@@ -1829,9 +1782,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Innate",
 					"type": "Innate",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 37,
 					"entry": {
 						"1": {
@@ -1854,25 +1806,20 @@
 									"name": "death knell"
 								}
 							]
+						},
+						"constant": {
+							"8": {
+								"spells": [
+									{
+										"name": "true seeing"
+									}
+								]
+							}
 						}
 					}
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+25, Intimidate +28, {@skill Religion} +27, {@skill Stealth} +28,"
-						],
-						"name": "Crafting"
-					},
-					{
-						"entries": [
-							"+29 Str +6, Dex +6, Con +4, Int +1, Wis +3, Cha +4 Items +1 striking composite longbow (40 arrows), +2 greater striking rhoka sword (page 83), studded leather armor."
-						],
-						"name": "Survival"
-					}
-				],
 				"mid": [
 					{
 						"traits": [
@@ -1881,7 +1828,7 @@
 							"negative"
 						],
 						"entries": [
-							"When Kharostan dies, his daemon-tainted flesh quickly rots away and sublimates into a foul-smelling gas that fills a 10-foot emanation around his body. All creatures within the area take {@damage 20d6} negative damage as their flesh curdles and rots as well (DC 37 basic Fortitude save)."
+							"When Kharostan dies, his daemon-tainted flesh quickly rots away and sublimates into a foul-smelling gas that fills a 10-foot emanation around his body. All creatures within the area take {@damage 20d6} negative damage as their flesh curdles and rots as well ({@dc 37} basic Fortitude save)."
 						],
 						"name": "Necrotic Decay"
 					},
@@ -1890,7 +1837,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -1899,17 +1845,8 @@
 				],
 				"bot": [
 					{
-						"traits": [
-							"8th"
-						],
 						"entries": [
-							"true seeing."
-						],
-						"name": "Constant"
-					},
-					{
-						"entries": [
-							"Kharostan's melee Strikes ignore 10 points of a creature's resistance to physical damage."
+							"Kharostan's melee {@action Strike||Strikes} ignore 10 points of a creature's resistance to physical damage."
 						],
 						"name": "Devastating Strikes"
 					},
@@ -1964,10 +1901,10 @@
 						"trigger": "Kharostan damages a creature with a jaws {@action Strike}",
 						"frequency": {
 							"unit": "round",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
-							"Kharostan's bite leaves the victim's flesh translucent around the site of the injury. He chooses one of the effects below, each of which requires the damaged creature to attempt a DC 37 Fortitude save. If the jaws {@action Strike} was a critical hit, the creature takes both effects, rolling the saving throw once and using the result for both effects.",
+							"Kharostan's bite leaves the victim's flesh translucent around the site of the injury. He chooses one of the effects below, each of which requires the damaged creature to attempt a {@dc 37} Fortitude save. If the jaws {@action Strike} was a critical hit, the creature takes both effects, rolling the saving throw once and using the result for both effects.",
 							{
 								"type": "list",
 								"items": [
@@ -1979,11 +1916,45 @@
 						"name": "Wicked Bite"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 38
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 28
+					},
+					"ref": {
+						"std": 30
+					},
+					"will": {
+						"std": 25
+					}
+				},
+				"hp": [
+					{
+						"hp": 280,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"fear"
+				],
+				"weaknesses": [
+					{
+						"amount": 15,
+						"name": "positive"
+					}
+				]
 			}
 		},
 		{
 			"name": "Muurfeli",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 78,
 			"level": 16,
@@ -1994,9 +1965,6 @@
 				"air",
 				"elemental",
 				"genie"
-			],
-			"creatureType": [
-				"Elemental"
 			],
 			"perception": {
 				"std": 30
@@ -2011,24 +1979,24 @@
 			],
 			"languages": {
 				"languages": [
-					"Auran",
-					"Undercommon"
+					"auran",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 33
 				},
-				"Arcana": {
+				"arcana": {
 					"std": 27
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 31
 				},
-				"Deception": {
+				"deception": {
 					"std": 28
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 31
 				}
 			},
@@ -2042,38 +2010,6 @@
 			},
 			"items": [
 				"+2 greater striking scimitar"
-			],
-			"ac": {
-				"std": 39
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 25
-				},
-				"ref": {
-					"std": 31
-				},
-				"will": {
-					"std": 27
-				}
-			},
-			"hp": [
-				{
-					"hp": 300,
-					"abilities": null
-				}
-			],
-			"weaknesses": [
-				{
-					"amount": 10,
-					"name": "cold"
-				}
-			],
-			"resistances": [
-				{
-					"amount": 15,
-					"name": "fire"
-				}
 			],
 			"speed": {
 				"walk": 35,
@@ -2089,9 +2025,8 @@
 						"finesse",
 						"magical",
 						"nonlethal",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d10+15} bludgeoning plus {@damage 2d6} poison",
 					"types": [
 						"bludgeoning",
@@ -2105,10 +2040,9 @@
 					"traits": [
 						"forceful",
 						"magical",
-						"reach 10 feet",
+						"reach <10 feet>",
 						"sweep"
 					],
-					"effects": [],
 					"damage": "{@damage 3d6+17} slashing plus {@damage 2d6} poison",
 					"types": [
 						"poison",
@@ -2124,9 +2058,8 @@
 						"evocation",
 						"magical",
 						"poison",
-						"range increment 20 feet"
+						"range increment <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+7} bludgeoning plus {@damage 2d8+5} poison",
 					"types": [
 						"bludgeoning",
@@ -2136,9 +2069,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Innate",
 					"type": "Innate",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 36,
 					"entry": {
 						"2": {
@@ -2194,14 +2126,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+31 Str +7, Dex +9, Con +5, Int +5, Wis +3, Cha +6 Items +2 greater striking scimitar."
-						],
-						"name": "Stealth"
-					}
-				],
 				"mid": [
 					{
 						"traits": [
@@ -2209,7 +2133,7 @@
 							"aura"
 						],
 						"entries": [
-							"30 feet, DC 33. Swirling winds of noxious, flammable gas surround a muurfeli.",
+							"30 feet, {@dc 33}. Swirling winds of noxious, flammable gas surround a muurfeli.",
 							"An open flame, spark, or similar {@trait fire} effect in the area causes an explosion that deals {@damage 20d6} fire damage to all creatures in the aura (including the muurfeli) and temporarily disables the aura for 1 minute. When the muurfeli takes damage from an ability with the {@trait water} trait or fails a saving throw against a {@trait water} effect, their firedamp winds aura is disabled for 1 minute. A creature that enters or begins its turn in the aura must attempt a Fortitude save.",
 							{
 								"type": "successDegree",
@@ -2237,7 +2161,7 @@
 							"transmutation"
 						],
 						"entries": [
-							"The muurfeli can take on the form of an owl. The owl form always looks the same, but the muurfeli can choose to become either Tiny or Small in this form. This transformation doesn't change their Speed or the attack and damage bonuses of their Strikes, but might change the damage type their Strikes deal (typically to slashing)."
+							"The muurfeli can take on the form of an owl. The owl form always looks the same, but the muurfeli can choose to become either Tiny or Small in this form. This transformation doesn't change their Speed or the attack and damage bonuses of their {@action Strike||Strikes}, but might change the damage type their {@action Strike||Strikes} deal (typically to slashing)."
 						],
 						"name": "Change Shape",
 						"generic": {
@@ -2245,11 +2169,48 @@
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 39
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 25
+					},
+					"ref": {
+						"std": 31
+					},
+					"will": {
+						"std": 27
+					}
+				},
+				"hp": [
+					{
+						"hp": 300
+					}
+				],
+				"weaknesses": [
+					{
+						"amount": 10,
+						"name": "cold"
+					}
+				],
+				"resistances": [
+					{
+						"amount": 15,
+						"name": "fire"
+					},
+					{
+						"amount": 15,
+						"name": "poison"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Obsidian Golem",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 80,
 			"level": 16,
@@ -2261,9 +2222,6 @@
 				"golem",
 				"mindless"
 			],
-			"creatureType": [
-				"Construct"
-			],
 			"perception": {
 				"std": 28
 			},
@@ -2273,7 +2231,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 33
 				}
 			},
@@ -2285,40 +2243,6 @@
 				"wis": 0,
 				"cha": -5
 			},
-			"ac": {
-				"std": 40
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 29
-				},
-				"ref": {
-					"std": 24
-				},
-				"will": {
-					"std": 26
-				}
-			},
-			"hp": [
-				{
-					"hp": 230,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"bleed",
-				"death effects",
-				"disease",
-				"doomed",
-				"drained",
-				"fatigued"
-			],
-			"resistances": [
-				{
-					"amount": 15,
-					"name": "physical"
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"fly": 25
@@ -2329,12 +2253,11 @@
 					"name": "fist",
 					"attack": 33,
 					"traits": [
-						"deadly d10",
+						"deadly <d10>",
 						"magical",
-						"reach 10 feet",
-						"versatile s"
+						"reach <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 4d10+15} piercing",
 					"types": [
 						"piercing"
@@ -2346,12 +2269,11 @@
 					"attack": 31,
 					"traits": [
 						"agile",
-						"deadly d10",
+						"deadly <d10>",
 						"magical",
-						"reach 10 feet",
-						"versatile s"
+						"reach <10 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d10+15} piercing",
 					"types": [
 						"piercing"
@@ -2362,12 +2284,11 @@
 					"name": "obsidian sliver",
 					"attack": 32,
 					"traits": [
-						"deadly d8",
+						"deadly <d8>",
 						"magical",
-						"range increment 30 feet",
-						"versatile s"
+						"range increment <30 feet>",
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 4d8+15} piercing",
 					"types": [
 						"piercing"
@@ -2393,7 +2314,7 @@
 					},
 					{
 						"entries": [
-							"Casting a {@spell shatter} spell on an obsidian golem affects the golem normally, but also causes jagged chunks of obsidian to flake off its body. The squares on which the golem was standing (or the squares below it, if it was flying) become difficult terrain."
+							"Casting a {@spell shatter} spell on an obsidian golem affects the golem normally, but also causes jagged chunks of obsidian to flake off its body. The squares on which the golem was standing (or the squares below it, if it was flying) become {@quickref difficult terrain||3|terrain}."
 						],
 						"name": "Vulnerable to Shatter"
 					}
@@ -2406,7 +2327,7 @@
 						},
 						"entries": [
 							"The obsidian golem slings razor-sharp shards of itself in a 15-foot cone.",
-							"Creatures in the area take {@damage 4d8+9} slashing damage (DC 37 basic Reflex save)."
+							"Creatures in the area take {@damage 4d8+9} slashing damage ({@dc 37} basic Reflex save)."
 						],
 						"name": "Fling Shards"
 					},
@@ -2417,11 +2338,46 @@
 						"name": "Shred Armor"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 40
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 29
+					},
+					"ref": {
+						"std": 24
+					},
+					"will": {
+						"std": 26
+					}
+				},
+				"hp": [
+					{
+						"hp": 230
+					}
+				],
+				"immunities": [
+					"bleed",
+					"death effects",
+					"disease",
+					"doomed",
+					"drained",
+					"fatigued"
+				],
+				"resistances": [
+					{
+						"amount": 15,
+						"name": "physical"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Qormintur",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 91,
 			"level": 16,
@@ -2433,9 +2389,7 @@
 				"dwarf",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Female duergar seneschal (Bestiary 138)",
 			"perception": {
 				"std": 29
 			},
@@ -2446,32 +2400,35 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Dwarven",
-					"Elven",
-					"Undercommon"
+					"common",
+					"dwarven",
+					"elven",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 29
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 32
 				},
-				"Deception": {
+				"deception": {
 					"std": 25
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 28
 				},
-				"Society": {
+				"society": {
 					"std": 30
 				},
-				"Survival": {
+				"stealth": {
 					"std": 27
 				},
-				"Shraen Lore": {
+				"survival": {
+					"std": 27
+				},
+				"shraen lore": {
 					"std": 28
 				}
 			},
@@ -2483,31 +2440,13 @@
 				"wis": 3,
 				"cha": 1
 			},
-			"ac": {
-				"std": 39
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 28
-				},
-				"ref": {
-					"std": 30
-				},
-				"will": {
-					"std": 26
-				}
-			},
-			"hp": [
-				{
-					"hp": 295,
-					"abilities": null
-				}
-			],
-			"resistances": [
-				{
-					"amount": 15,
-					"name": "poison"
-				}
+			"items": [
+				"expanded alchemist's tools",
+				"+2 greater resilient standard-grade mithral breastplate",
+				"greater comprehension elixir",
+				"infused reagents (12)",
+				"greater messenger's ring",
+				"+2 greater striking shortsword"
 			],
 			"speed": {
 				"walk": 20
@@ -2521,9 +2460,8 @@
 						"agile",
 						"finesse",
 						"magical",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d6+11} piercing",
 					"types": [
 						"piercing"
@@ -2534,11 +2472,10 @@
 					"name": "acid flask",
 					"attack": 32,
 					"traits": [
-						"range increment 60 feet",
+						"range increment <60 feet>",
 						"splash 10 feet"
 					],
-					"effects": [],
-					"damage": "7 acid damage plus {@damage 3d6} {@condition persistent damage ||persistent acid damage} and 9 acid splash damage",
+					"damage": "7 acid damage plus {@damage 3d6} {@condition persistent damage||persistent acid damage} and 9 acid {@trait splash} damage",
 					"types": [
 						"acid",
 						"persistent"
@@ -2549,11 +2486,10 @@
 					"name": "alchemist's fire",
 					"attack": 32,
 					"traits": [
-						"range increment 60 feet",
+						"range increment <60 feet>",
 						"splash 10 feet"
 					],
-					"effects": [],
-					"damage": "{@damage 3d8+6} fire plus 3 {@condition persistent damage ||persistent fire} and 9 fire splash",
+					"damage": "{@damage 3d8+6} fire plus 3 {@condition persistent damage||persistent fire} and 9 fire {@trait splash}",
 					"types": [
 						"fire",
 						"persistent"
@@ -2562,9 +2498,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
 					"type": "Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"DC": 35,
 					"entry": {
 						"2": {
@@ -2594,23 +2529,17 @@
 				"top": [
 					{
 						"entries": [
-							"+28, {@skill Lore||Shraen Lore} +28, {@skill Society} +30, {@skill Stealth} +27, {@skill Survival} +27 Str +2, Dex +5, Con +3, Int +6, Wis +3, Cha +1 Items expanded alchemist's tools, +2 greater resilient standard-grade mithral breastplate, greater comprehension elixir, infused reagents (12), greater messenger's ring, +2 greater striking shortsword."
+							"Qormintur carries the following infused items: 6 {@item greater acid flask||greater acid flasks}, 6 {@item greater alchemist's fire||greater alchemist's fires}, 2 {@item major antidote||major antidotes}, and 2 {@item greater elixir of life||greater elixirs of life}. These items last for 24 hours, or until the next time Qormintur makes her daily preparations."
 						],
-						"name": "Occultism"
-					},
-					{
-						"entries": [
-							"Items Qormintur carries the following infused items: 6 greater acid flasks, 6 greater alchemist's fires, 2 major antidotes, and 2 greater elixirs of life. These items last for 24 hours, or until the next time Qormintur makes her daily preparations."
-						],
-						"name": "Infused"
+						"name": "Infused Items"
 					}
 				],
 				"mid": [
 					{
 						"entries": [
-							"Mind Qormintur automatically {@quickref disbelieves all illusions|CRB|2|disbelieving illusions|0} of 8th level or lower."
+							"Qormintur automatically {@quickref disbelieves all illusions|CRB|2|disbelieving illusions|0} of 8th level or lower."
 						],
-						"name": "Iron"
+						"name": "Iron Mind"
 					},
 					{
 						"entries": [
@@ -2619,7 +2548,6 @@
 						"name": "Juggernaut"
 					},
 					{
-						"entries": [],
 						"name": "Light Blindness",
 						"generic": {
 							"tag": "ability"
@@ -2628,18 +2556,8 @@
 				],
 				"bot": [
 					{
-						"activity": {
-							"number": 1,
-							"unit": "action"
-						},
 						"entries": [
-							"{@damage 3d6+11} piercing Ranged acid flask +32 (range increment 60 feet, splash 10 feet), Damage 7 acid damage plus {@damage 3d6} {@condition persistent damage ||persistent acid damage} and 9 acid splash damage Ranged {@as 1} alchemist's fire +32 (range increment 60 feet, splash 10 feet), Damage {@damage 3d8+6} fire plus 3 {@condition persistent damage ||persistent fire} and 9 fire splash Occult Innate Spells DC 35; 4th invisibility (self only); 2nd enlarge (self only)"
-						],
-						"name": "S), Damage"
-					},
-					{
-						"entries": [
-							"When throwing an alchemical bomb with the {@trait splash} trait, Qormintur can choose to deal splash damage to her primary target only, rather than dealing the usual splash damage."
+							"When throwing an alchemical bomb with the {@trait splash} trait, Qormintur can choose to deal {@trait splash} damage to her primary target only, rather than dealing the usual {@trait splash} damage."
 						],
 						"name": "Bomber"
 					},
@@ -2667,7 +2585,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Qormintur Interacts to draw an alchemical bomb, then Strikes with it."
+							"Qormintur Interacts to draw an alchemical bomb, then {@action Strike||Strikes} with it."
 						],
 						"name": "Quick Bomber"
 					},
@@ -2692,11 +2610,40 @@
 						"name": "Uncanny Bombs"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 39
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 28
+					},
+					"ref": {
+						"std": 30
+					},
+					"will": {
+						"std": 26
+					},
+					"abilities": [
+						"+2 status on all saves vs. magical effects"
+					]
+				},
+				"hp": [
+					{
+						"hp": 295
+					}
+				],
+				"resistances": [
+					{
+						"amount": 15,
+						"name": "poison"
+					}
+				]
 			}
 		},
 		{
 			"name": "Raptor Guard Wight",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 32,
 			"level": 13,
@@ -2706,9 +2653,7 @@
 				"medium",
 				"undead"
 			],
-			"creatureType": [
-				"Undead"
-			],
+			"description": "Variant wight (Pathfinder Bestiary 332)",
 			"perception": {
 				"std": 22
 			},
@@ -2719,25 +2664,25 @@
 			],
 			"languages": {
 				"languages": [
-					"Draconic",
-					"Necril",
-					"Undercommon"
+					"draconic",
+					"necril",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 24
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 27
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 27
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 24
 				},
-				"Survival": {
+				"survival": {
 					"std": 22
 				}
 			},
@@ -2749,30 +2694,10 @@
 				"wis": 3,
 				"cha": 4
 			},
-			"ac": {
-				"std": 34
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 26
-				},
-				"ref": {
-					"std": 23
-				},
-				"will": {
-					"std": 21
-				}
-			},
-			"hp": [
-				{
-					"hp": 240,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects"
+			"items": [
+				"+1 resilient bone armor (as hide armor)",
+				"greater demon mask in the form of a dinosaur-skull helm",
+				"+1 striking spear"
 			],
 			"speed": {
 				"walk": 25
@@ -2829,7 +2754,7 @@
 					"attack": 24,
 					"traits": [
 						"magical",
-						"range increment 20 feet"
+						"range increment <20 feet>"
 					],
 					"effects": [
 						"terror master",
@@ -2842,14 +2767,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+24, {@skill Survival} +22 Str +8, Dex +5, Con +3, Int +0, Wis +3, Cha +4 Items +1 resilient bone armor (as hide armor), greater demon mask in the form of a dinosaur-skull helm, +1 striking spear."
-						],
-						"name": "Stealth"
-					}
-				],
 				"mid": [
 					{
 						"traits": [
@@ -2857,7 +2774,7 @@
 							"olfactory"
 						],
 						"entries": [
-							"30 feet. A creature that enters the area must attempt a DC 32 Fortitude save.",
+							"30 feet. A creature that enters the area must attempt a {@dc 32} Fortitude save.",
 							"On a failure, the creature is {@condition sickened|CRB|sickened 2} and {@condition doomed|CRB|doomed 1} for as long as it is {@condition sickened}; on a critical failure, the creature is instead {@condition doomed|CRB|doomed 2} for as long as it is {@condition sickened}. While within the aura, the creature takes a \u20132 circumstance penalty to saves to recover from the {@condition sickened} condition.",
 							"A creature that succeeds at its save is temporarily immune to any creature's death stench for 1 minute."
 						],
@@ -2868,7 +2785,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -2882,7 +2798,7 @@
 							"necromancy"
 						],
 						"entries": [
-							"When the Raptor Guard wight damages a living creature with a melee {@action Strike}, the wight gains 13 temporary Hit Points and the target creature must succeed at a DC 32 Fortitude save or become {@condition drained|CRB|drained 1}. Further damage dealt by the wight increases the {@condition drained} condition by 1 on a failed save, to a maximum of {@condition drained|CRB|drained 4}."
+							"When the Raptor Guard wight damages a living creature with a melee {@action Strike}, the wight gains 13 temporary Hit Points and the target creature must succeed at a {@dc 32} Fortitude save or become {@condition drained|CRB|drained 1}. Further damage dealt by the wight increases the {@condition drained} condition by 1 on a failed save, to a maximum of {@condition drained|CRB|drained 4}."
 						],
 						"name": "Drain Life"
 					},
@@ -2892,19 +2808,13 @@
 							"necromancy"
 						],
 						"entries": [
-							"The."
+							"The Raptor Guard wight's ranged spear {@action Strike||Strikes} apply drain life, but the wight doesn't gain any temporary Hit Points if the attack hits."
 						],
 						"name": "Hungry Spear"
 					},
 					{
 						"entries": [
-							"Guard wight's ranged spear Strikes apply drain life, but the wight doesn't gain any temporary Hit Points if the attack hits."
-						],
-						"name": "Raptor"
-					},
-					{
-						"entries": [
-							"As long as the Raptor Guard wears its dinosaur-skull helm, its Strikes deal an additional {@damage 1d10} negative damage, or an additional {@dice 2d10} damage to {@condition frightened} creatures."
+							"As long as the Raptor Guard wears its dinosaur-skull helm, its {@action Strike||Strikes} deal an additional {@damage 1d10} negative damage, or an additional {@dice 2d10} damage to {@condition frightened} creatures."
 						],
 						"name": "Terror Master"
 					},
@@ -2919,11 +2829,41 @@
 						"name": "Wight Spawn"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 34
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 26
+					},
+					"ref": {
+						"std": 23
+					},
+					"will": {
+						"std": 21
+					}
+				},
+				"hp": [
+					{
+						"hp": 240,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyzed",
+					"poison",
+					"unconscious"
+				]
 			}
 		},
 		{
 			"name": "Shraen Graveknight",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 52,
 			"level": 15,
@@ -2932,9 +2872,7 @@
 				"medium",
 				"undead"
 			],
-			"creatureType": [
-				"Undead"
-			],
+			"description": "Drow graveknight (Pathfinder Bestiary 190)",
 			"perception": {
 				"std": 26
 			},
@@ -2945,22 +2883,22 @@
 			],
 			"languages": {
 				"languages": [
-					"Elven",
-					"Necril",
-					"Undercommon"
+					"elven",
+					"necril",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 31
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 27
 				},
-				"Religion": {
+				"religion": {
 					"std": 24
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 27
 				}
 			},
@@ -2972,37 +2910,12 @@
 				"wis": 3,
 				"cha": 6
 			},
-			"ac": {
-				"std": 37
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 25
-				},
-				"ref": {
-					"std": 27
-				},
-				"will": {
-					"std": 26
-				}
-			},
-			"hp": [
-				{
-					"hp": 295,
-					"abilities": [
-						"negative healing",
-						"rejuvenation"
-					]
-				}
-			],
-			"immunities": [
-				"cold"
-			],
-			"resistances": [
-				{
-					"amount": 30,
-					"name": "positive"
-				}
+			"items": [
+				"+2 greater resilient standard-grade elven chain",
+				"hand crossbow (10 bolts)",
+				"main-gauche",
+				"purple worm venom (2)",
+				"rapier"
 			],
 			"speed": {
 				"walk": 30
@@ -3014,12 +2927,11 @@
 					"attack": 31,
 					"traits": [
 						"cold",
-						"deadly 2d8",
+						"deadly <2d8>",
 						"disarm",
 						"finesse",
 						"magical"
 					],
-					"effects": [],
 					"damage": "{@damage 3d6+14} piercing plus {@damage 1d6} cold",
 					"types": [
 						"cold",
@@ -3037,9 +2949,8 @@
 						"finesse",
 						"magical",
 						"parry",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d4+14} piercing plus {@damage 1d6} cold",
 					"types": [
 						"cold",
@@ -3054,7 +2965,6 @@
 						"agile",
 						"cold"
 					],
-					"effects": [],
 					"damage": "{@damage 3d6+10} piercing plus {@damage 1d6} cold",
 					"types": [
 						"cold",
@@ -3068,8 +2978,8 @@
 					"traits": [
 						"cold",
 						"magical",
-						"range increment 60 feet",
-						"reload 1"
+						"range increment <60 feet>",
+						"reload <1>"
 					],
 					"effects": [
 						"purple worm venom"
@@ -3083,9 +2993,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Innate",
 					"type": "Innate",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 36,
 					"entry": {
 						"0": {
@@ -3116,14 +3025,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+27 Str +4, Dex +8, Con +4, Int +2, Wis +3, Cha +6 Items +2 greater resilient standard-grade elven chain, hand crossbow (10 bolts), main-gauche, purple worm venom (2), rapier."
-						],
-						"name": "Stealth"
-					}
-				],
 				"mid": [
 					{
 						"entries": [
@@ -3137,7 +3038,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -3156,17 +3056,17 @@
 							"evocation"
 						],
 						"entries": [
-							"As graveknight, but {@damage 8d12} cold and DC 36."
+							"As graveknight, but {@damage 8d12} cold and {@dc 36}."
 						],
 						"name": "Devastating Blast",
-						"entries_as_xyz": "Ability not found: 'Devastating Blast As graveknight, but {@damage 8d12} cold and DC 36.' in Shraen Graveknight, p.52"
+						"entries_as_xyz": "Ability not found: 'Devastating Blast As graveknight, but {@damage 8d12} cold and {@dc 36}.' in Shraen Graveknight, p.52"
 					},
 					{
 						"entries": [
-							"As graveknight, but DC 36."
+							"As graveknight, but {@dc 36}."
 						],
 						"name": "Graveknight's Curse",
-						"entries_as_xyz": "Ability not found: 'Graveknight's Curse As graveknight, but DC 36.' in Shraen Graveknight, p.52"
+						"entries_as_xyz": "Ability not found: 'Graveknight's Curse As graveknight, but {@dc 36}.' in Shraen Graveknight, p.52"
 					},
 					{
 						"activity": {
@@ -3174,7 +3074,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The Shraen graveknight {@action Step||Steps} once then Strikes with its rapier. A creature damaged by the attack must attempt a DC 36 Fortitude save. On a failure, the creature takes {@damage 4d6} {@condition persistent damage ||persistent bleed damage}. On a critical failure, the attack pierces the creature's heart, and the creature dies."
+							"The Shraen graveknight {@action Step||Steps} once then {@action Strike||Strikes} with its rapier. A creature damaged by the attack must attempt a {@dc 36} Fortitude save. On a failure, the creature takes {@damage 4d6} {@condition persistent damage||persistent bleed damage}. On a critical failure, the attack pierces the creature's heart, and the creature dies."
 						],
 						"name": "Heart-Seeking Strike"
 					},
@@ -3184,7 +3084,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The Shraen graveknight draws a weapon, then Strikes with it."
+							"The Shraen graveknight draws a weapon, then {@action Strike||Strikes} with it."
 						],
 						"name": "Quick Draw"
 					},
@@ -3203,11 +3103,54 @@
 						"entries_as_xyz": "Ability not found: 'Weapon Master As graveknight.' in Shraen Graveknight, p.52"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 37
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 25
+					},
+					"ref": {
+						"std": 27
+					},
+					"will": {
+						"std": 26
+					},
+					"abilities": [
+						"+1 status bonus to all saves vs. magic effects",
+						"+2 status bonus to all saves vs. mental effects"
+					]
+				},
+				"hp": [
+					{
+						"hp": 295,
+						"abilities": [
+							"negative healing",
+							"rejuvenation"
+						]
+					}
+				],
+				"immunities": [
+					"cold",
+					"death",
+					"disease",
+					"paralyzed",
+					"poison",
+					"sleep",
+					"unconscious"
+				],
+				"resistances": [
+					{
+						"amount": 30,
+						"name": "positive"
+					}
+				]
 			}
 		},
 		{
 			"name": "Urdefhan Dominator",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 83,
 			"level": 14,
@@ -3216,9 +3159,6 @@
 				"medium",
 				"humanoid",
 				"urdefhan"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 26
@@ -3230,28 +3170,28 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo",
-					"Daemonic",
-					"Undercommon"
+					"aklo",
+					"daemonic",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Crafting": {
+				"crafting": {
 					"std": 24
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 26
 				},
-				"Religion": {
+				"religion": {
 					"std": 29
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 25
 				},
-				"Survival": {
+				"survival": {
 					"std": 27
 				},
-				"Daemon Lore": {
+				"daemon lore": {
 					"std": 24
 				}
 			},
@@ -3266,37 +3206,6 @@
 			"items": [
 				"+2 striking rhoka sword"
 			],
-			"ac": {
-				"std": 35
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 25
-				},
-				"ref": {
-					"std": 25
-				},
-				"will": {
-					"std": 29
-				}
-			},
-			"hp": [
-				{
-					"hp": 250,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects (except"
-			],
-			"weaknesses": [
-				{
-					"amount": 15,
-					"name": "positive"
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -3306,11 +3215,10 @@
 					"name": "rhoka sword",
 					"attack": 26,
 					"traits": [
-						"fatal d10",
+						"fatal <d10>",
 						"magical",
-						"two-hand d12"
+						"two-hand <d12>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+10} slashing",
 					"types": [
 						"slashing"
@@ -3334,9 +3242,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Innate",
 					"type": "Innate",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 35,
 					"attack": 29,
 					"entry": {
@@ -3450,21 +3357,13 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+25, {@skill Survival} +27 Str +4, Dex +5, Con +3, Int +4, Wis +7, Cha +6 Items +2 striking rhoka sword."
-						],
-						"name": "Stealth"
-					}
-				],
 				"mid": [
 					{
 						"entries": [
-							"As urdefhan warrior, but {@damage 15d6} negative damage and DC 34."
+							"As urdefhan warrior, but {@damage 15d6} negative damage and {@dc 34}."
 						],
 						"name": "Necrotic Decay",
-						"entries_as_xyz": "Ability not found: 'Necrotic Decay As urdefhan warrior, but {@damage 15d6} negative damage and DC 34.' in Urdefhan Dominator, p.83"
+						"entries_as_xyz": "Ability not found: 'Necrotic Decay As urdefhan warrior, but {@damage 15d6} negative damage and {@dc 34}.' in Urdefhan Dominator, p.83"
 					}
 				],
 				"bot": [
@@ -3473,7 +3372,7 @@
 							"number": 1,
 							"unit": "action"
 						},
-						"requirements": "The urdefhan dominator has a creature dominated with its dominate innate spell",
+						"requirements": "The urdefhan dominator has a creature dominated with its {@spell dominate} innate spell",
 						"entries": [
 							"The urdefhan taps into the dominated creature's sight, hearing, and any other senses it has. The urdefhan can change back and forth from its own senses to the target's senses as a single action, which has the {@trait concentrate} trait."
 						],
@@ -3481,17 +3380,52 @@
 					},
 					{
 						"entries": [
-							"As urdefhan warrior, but DC 33."
+							"As urdefhan warrior, but {@dc 33}."
 						],
 						"name": "Wicked Bite",
-						"entries_as_xyz": "Ability not found: 'Wicked Bite As urdefhan warrior, but DC 33.' in Urdefhan Dominator, p.83"
+						"entries_as_xyz": "Ability not found: 'Wicked Bite As urdefhan warrior, but {@dc 33}.' in Urdefhan Dominator, p.83"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 35
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 25
+					},
+					"ref": {
+						"std": 25
+					},
+					"will": {
+						"std": 29
+					}
+				},
+				"hp": [
+					{
+						"hp": 250,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects (except necrotic decay)",
+					"disease",
+					"fear"
+				],
+				"weaknesses": [
+					{
+						"amount": 15,
+						"name": "positive"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Urdefhan High Tormentor",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 82,
 			"level": 10,
@@ -3500,9 +3434,6 @@
 				"medium",
 				"humanoid",
 				"urdefhan"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 22
@@ -3514,25 +3445,25 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo",
-					"Daemonic",
-					"Undercommon"
+					"aklo",
+					"daemonic",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 18
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 19
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 21
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 22
 				},
-				"Religion": {
+				"religion": {
 					"std": 22
 				}
 			},
@@ -3547,37 +3478,6 @@
 			"items": [
 				"+1 striking warhammer"
 			],
-			"ac": {
-				"std": 30
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 19
-				},
-				"ref": {
-					"std": 16
-				},
-				"will": {
-					"std": 22
-				}
-			},
-			"hp": [
-				{
-					"hp": 195,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects (except necrotic"
-			],
-			"weaknesses": [
-				{
-					"amount": 10,
-					"name": "positive"
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -3590,7 +3490,6 @@
 						"magical",
 						"shove"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+11} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -3614,9 +3513,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Innate",
 					"type": "Innate",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 30,
 					"attack": 22,
 					"entry": {
@@ -3696,7 +3594,7 @@
 			],
 			"rituals": [
 				{
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 30,
 					"rituals": [
 						{
@@ -3706,14 +3604,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+22 Str +5, Dex +2, Con +3, Int +1, Wis +6, Cha +3 Items +1 striking warhammer."
-						],
-						"name": "Religion"
-					}
-				],
 				"mid": [
 					{
 						"traits": [
@@ -3721,10 +3611,10 @@
 							"negative"
 						],
 						"entries": [
-							"As urdefhan warrior, but {@damage 10d6} negative damage and DC 29."
+							"As urdefhan warrior, but {@damage 10d6} negative damage and {@dc 29}."
 						],
 						"name": "Necrotic Decay",
-						"entries_as_xyz": "Ability not found: 'Necrotic Decay As urdefhan warrior, but {@damage 10d6} negative damage and DC 29.' in Urdefhan High Tormentor, p.82"
+						"entries_as_xyz": "Ability not found: 'Necrotic Decay As urdefhan warrior, but {@damage 10d6} negative damage and {@dc 29}.' in Urdefhan High Tormentor, p.82"
 					}
 				],
 				"bot": [
@@ -3747,17 +3637,52 @@
 					},
 					{
 						"entries": [
-							"As urdefhan warrior, but DC 29."
+							"As urdefhan warrior, but {@dc 29}."
 						],
 						"name": "Wicked Bite",
-						"entries_as_xyz": "Ability not found: 'Wicked Bite As urdefhan warrior, but DC 29.' in Urdefhan High Tormentor, p.82"
+						"entries_as_xyz": "Ability not found: 'Wicked Bite As urdefhan warrior, but {@dc 29}.' in Urdefhan High Tormentor, p.82"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 30
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 19
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 22
+					}
+				},
+				"hp": [
+					{
+						"hp": 195,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects (except necrotic decay)",
+					"disease",
+					"fear"
+				],
+				"weaknesses": [
+					{
+						"amount": 10,
+						"name": "positive"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Urdefhan Hunter",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 82,
 			"level": 12,
@@ -3766,9 +3691,6 @@
 				"medium",
 				"humanoid",
 				"urdefhan"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 26
@@ -3780,25 +3702,25 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo",
-					"Daemonic",
-					"Undercommon"
+					"aklo",
+					"daemonic",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 24
 				},
-				"Nature": {
+				"nature": {
 					"std": 23
 				},
-				"Religion": {
+				"religion": {
 					"std": 21
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 26
 				},
-				"Survival": {
+				"survival": {
 					"std": 25,
 					"to Track": 27
 				}
@@ -3815,37 +3737,6 @@
 				"+1 striking composite longbow with 50 arrows",
 				"+1 striking rhoka sword"
 			],
-			"ac": {
-				"std": 34
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 20
-				},
-				"ref": {
-					"std": 26
-				},
-				"will": {
-					"std": 23
-				}
-			},
-			"hp": [
-				{
-					"hp": 190,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects (except necrotic decay)"
-			],
-			"weaknesses": [
-				{
-					"amount": 12,
-					"name": "positive"
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
@@ -3855,11 +3746,10 @@
 					"name": "rhoka sword",
 					"attack": 24,
 					"traits": [
-						"fatal d10",
+						"fatal <d10>",
 						"magical",
-						"two-hand d12"
+						"two-hand <d12>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+10} slashing",
 					"types": [
 						"slashing"
@@ -3885,14 +3775,13 @@
 					"name": "composite longbow",
 					"attack": 26,
 					"traits": [
-						"deadly d10",
+						"deadly <d10>",
 						"magical",
 						"propulsive",
-						"range increment 100 feet",
-						"reload 0",
-						"volley 30 feet"
+						"range increment <100 feet>",
+						"reload <0>",
+						"volley <30 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+4} piercing",
 					"types": [
 						"piercing"
@@ -3901,9 +3790,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Innate",
 					"type": "Innate",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 29,
 					"attack": 23,
 					"entry": {
@@ -3935,10 +3823,10 @@
 				"mid": [
 					{
 						"entries": [
-							"As urdefhan warrior, but {@damage 12d6} negative damage and DC 32."
+							"As urdefhan warrior, but {@damage 12d6} negative damage and {@dc 32}."
 						],
 						"name": "Necrotic Decay",
-						"entries_as_xyz": "Ability not found: 'Necrotic Decay As urdefhan warrior, but {@damage 12d6} negative damage and DC 32.' in Urdefhan Hunter, p.82"
+						"entries_as_xyz": "Ability not found: 'Necrotic Decay As urdefhan warrior, but {@damage 12d6} negative damage and {@dc 32}.' in Urdefhan Hunter, p.82"
 					}
 				],
 				"bot": [
@@ -3961,31 +3849,63 @@
 							"number": 1,
 							"unit": "action"
 						},
-						"requirements": "The urdefhan hunter is wielding a ranged weapon with reload 0",
+						"requirements": "The urdefhan hunter is wielding a ranged weapon with reload <0>",
 						"entries": [
-							"The urdefhan hunter makes two Strikes with the required weapon at a single target. These Strikes both count toward the urdefhan's multiple attack penalty, but the penalty doesn't increase until both attacks are resolved."
+							"The urdefhan hunter makes two {@action Strike||Strikes} with the required weapon at a single target. These {@action Strike||Strikes} both count toward the urdefhan's multiple attack penalty, but the penalty doesn't increase until both attacks are resolved."
 						],
 						"name": "Double Shot"
 					},
 					{
 						"entries": [
-							"Urdefhan hunters can make composite longbow Strikes while mounted."
+							"Urdefhan hunters can make composite longbow {@action Strike||Strikes} while mounted."
 						],
 						"name": "Mounted Bow Expert"
 					},
 					{
 						"entries": [
-							"As urdefhan warrior, but DC 32."
+							"As urdefhan warrior, but {@dc 32}."
 						],
 						"name": "Wicked Bite",
-						"entries_as_xyz": "Ability not found: 'Wicked Bite As urdefhan warrior, but DC 32.' in Urdefhan Hunter, p.82"
+						"entries_as_xyz": "Ability not found: 'Wicked Bite As urdefhan warrior, but {@dc 32}.' in Urdefhan Hunter, p.82"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 34
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 20
+					},
+					"ref": {
+						"std": 26
+					},
+					"will": {
+						"std": 23
+					}
+				},
+				"hp": [
+					{
+						"hp": 190,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects (except necrotic decay)"
+				],
+				"weaknesses": [
+					{
+						"amount": 12,
+						"name": "positive"
 					}
 				]
 			}
 		},
 		{
 			"name": "Vitalia",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 84,
 			"level": 18,
@@ -3996,9 +3916,6 @@
 				"aberration",
 				"aquatic",
 				"mindless"
-			],
-			"creatureType": [
-				"Aberration"
 			],
 			"perception": {
 				"std": 30
@@ -4019,7 +3936,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 33
 				}
 			},
@@ -4031,39 +3948,6 @@
 				"wis": 0,
 				"cha": 0
 			},
-			"ac": {
-				"std": 39
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 35
-				},
-				"ref": {
-					"std": 25
-				},
-				"will": {
-					"std": 24
-				}
-			},
-			"hp": [
-				{
-					"hp": 425,
-					"abilities": [
-						"fast healing 20"
-					]
-				}
-			],
-			"immunities": [
-				"bleed",
-				"mental",
-				"sleep"
-			],
-			"weaknesses": [
-				{
-					"amount": 15,
-					"name": "piercing"
-				}
-			],
 			"speed": {
 				"walk": 15,
 				"swim": 30
@@ -4075,7 +3959,7 @@
 					"attack": 33,
 					"traits": [
 						"magical",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"effects": [
 						"Grab"
@@ -4092,9 +3976,8 @@
 					"traits": [
 						"acid",
 						"magical",
-						"range increment 40 feet"
+						"range increment <40 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d10} bludgeoning plus {@damage 3d10} acid",
 					"types": [
 						"acid",
@@ -4104,9 +3987,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
 					"type": "Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"DC": 36,
 					"entry": {
 						"6": {
@@ -4147,7 +4029,7 @@
 						},
 						"trigger": "A creature lands a critical hit with a melee {@action Strike} against the vitalia",
 						"entries": [
-							"The vitalia sprays blood at the triggering creature. The creature must succeed at a DC 39 Reflex save or become {@condition dazzled} for 1 round (or {@condition blinded} for 1 round on a critical failure)."
+							"The vitalia sprays blood at the triggering creature. The creature must succeed at a {@dc 39} Reflex save or become {@condition dazzled} for 1 round (or {@condition blinded} for 1 round on a critical failure)."
 						],
 						"name": "Blood Eruption"
 					}
@@ -4159,7 +4041,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"{@damage 4d8+10} bludgeoning, DC 37."
+							"{@damage 4d8+10} bludgeoning, {@dc 37}"
 						],
 						"name": "Constrict",
 						"generic": {
@@ -4188,19 +4070,54 @@
 						],
 						"frequency": {
 							"unit": "day",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
-							"The vitalia pumps copious amounts of blood into the air, creating a cascading rain of vital fluids in a 15-foot emanation. All creatures in the area are {@condition concealed} from one another. A creature that benefits from consuming blood (such as bloodseekers or vampires) gains fast healing 10 while in the area. While in the area, a creature taking {@condition persistent damage ||persistent bleed damage} cannot end that condition, even if it spends actions to attempt a flat check to do so. The rain lasts for 1 minute."
+							"The vitalia pumps copious amounts of blood into the air, creating a cascading rain of vital fluids in a 15-foot emanation. All creatures in the area are {@condition concealed} from one another. A creature that benefits from consuming blood (such as bloodseekers or vampires) gains fast healing 10 while in the area. While in the area, a creature taking {@condition persistent damage||persistent bleed damage} cannot end that condition, even if it spends actions to attempt a flat check to do so. The rain lasts for 1 minute."
 						],
 						"name": "Sanguine Rain"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 39
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 35
+					},
+					"ref": {
+						"std": 25
+					},
+					"will": {
+						"std": 24
+					}
+				},
+				"hp": [
+					{
+						"hp": 425,
+						"abilities": [
+							"fast healing 20"
+						]
+					}
+				],
+				"immunities": [
+					"bleed",
+					"mental",
+					"sleep"
+				],
+				"weaknesses": [
+					{
+						"amount": 15,
+						"name": "piercing"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Xulgath Deepmouth",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 85,
 			"level": 12,
@@ -4210,9 +4127,6 @@
 				"medium",
 				"humanoid",
 				"xulgath"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 26
@@ -4224,27 +4138,27 @@
 			],
 			"languages": {
 				"languages": [
-					"Draconic",
-					"Undercommon"
+					"draconic",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 22
 				},
-				"Crafting": {
+				"crafting": {
 					"std": 22
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 25
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 25
 				},
-				"Religion": {
+				"religion": {
 					"std": 25
 				},
-				"Society": {
+				"society": {
 					"std": 22
 				}
 			},
@@ -4261,26 +4175,6 @@
 				"+1 hide armor",
 				"bone religious symbol of"
 			],
-			"ac": {
-				"std": 33
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 18
-				},
-				"ref": {
-					"std": 22
-				},
-				"will": {
-					"std": 25
-				}
-			},
-			"hp": [
-				{
-					"hp": 215,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -4294,7 +4188,6 @@
 						"free-hand",
 						"magical"
 					],
-					"effects": [],
 					"damage": "{@damage 2d4+6} piercing",
 					"types": [
 						"piercing"
@@ -4304,7 +4197,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 20,
-					"effects": [],
 					"damage": "{@damage 2d6+6} piercing",
 					"types": [
 						"piercing"
@@ -4317,7 +4209,6 @@
 					"traits": [
 						"agile"
 					],
-					"effects": [],
 					"damage": "{@damage 2d4+6} slashing",
 					"types": [
 						"slashing"
@@ -4326,9 +4217,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Prepared",
 					"type": "Prepared",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 33,
 					"attack": 27,
 					"entry": {
@@ -4400,9 +4290,7 @@
 								},
 								{
 									"name": "ravening maw",
-									"notes": [
-										"Pathfinder Adventure Path #153 67"
-									]
+									"source": "EC3"
 								}
 							]
 						},
@@ -4432,7 +4320,7 @@
 							"olfactory"
 						],
 						"entries": [
-							"30 feet. As xulgath warrior (Bestiary 336), but DC 28."
+							"30 feet. As xulgath warrior (Bestiary 336), but {@dc 28}."
 						],
 						"name": "Stench"
 					}
@@ -4447,12 +4335,11 @@
 							"concentrate"
 						],
 						"entries": [
-							"The deepmouth warps part of a scalescribed creature's flesh into a mouthed tentacle, then wills it to lash out. The deepmouth makes a jaws {@action Strike} that originates from any living scalescribed creature within 120 feet; this {@action Strike} also has reach 15 feet and deals an additional {@damage 2d8} negative damage. If the {@action Strike} originates from a creature other than the deepmouth, that creature triggers reactions as though it had made."
+							"The deepmouth warps part of a scalescribed creature's flesh into a mouthed tentacle, then wills it to lash out. The deepmouth makes a jaws {@action Strike} that originates from any living scalescribed creature within 120 feet; this {@action Strike} also has reach <15 feet> and deals an additional {@damage 2d8} negative damage. If the {@action Strike} originates from a creature other than the deepmouth, that creature triggers reactions as though it had made."
 						],
 						"name": "Devourer's Dictum"
 					},
 					{
-						"entries": [],
 						"name": "the Strike."
 					},
 					{
@@ -4465,11 +4352,32 @@
 						"name": "Scalescribe"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 33
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 18
+					},
+					"ref": {
+						"std": 22
+					},
+					"will": {
+						"std": 25
+					}
+				},
+				"hp": [
+					{
+						"hp": 215
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Zinogyvaz",
-			"isNpc": false,
 			"source": "EC5",
 			"page": 35,
 			"level": 16,
@@ -4480,9 +4388,7 @@
 				"undead",
 				"vampire"
 			],
-			"creatureType": [
-				"Undead"
-			],
+			"description": "Female vampire drider priest (Pathfinder Bestiary 159, 318)",
 			"perception": {
 				"std": 28
 			},
@@ -4493,31 +4399,31 @@
 			],
 			"languages": {
 				"languages": [
-					"Elven",
-					"Necril",
-					"Undercommon"
+					"elven",
+					"necril",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 28
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 26
 				},
-				"Deception": {
+				"deception": {
 					"std": 28
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 28
 				},
-				"Religion": {
+				"religion": {
 					"std": 33
 				},
-				"Society": {
+				"society": {
 					"std": 26
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 28
 				}
 			},
@@ -4529,44 +4435,10 @@
 				"wis": 7,
 				"cha": 6
 			},
-			"ac": {
-				"std": 39
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 26
-				},
-				"ref": {
-					"std": 27
-				},
-				"will": {
-					"std": 30
-				}
-			},
-			"hp": [
-				{
-					"hp": 240,
-					"abilities": [
-						"coffin restoration (as vampire)",
-						"fast healing 20"
-					]
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease"
-			],
-			"weaknesses": [
-				{
-					"name": "vampire weaknesses;"
-				}
-			],
-			"resistances": [
-				{
-					"amount": 20,
-					"name": "physical",
-					"note": "(except magical silver)"
-				}
+			"items": [
+				"bracers of armor II",
+				"+2 greater striking composite shortbow (20 arrows)",
+				"religious symbol of Urgathoa"
 			],
 			"speed": {
 				"walk": 30,
@@ -4588,23 +4460,35 @@
 				},
 				{
 					"range": "Ranged",
-					"name": "composite shortbow (deadly d10, magical,\npropulsive, range increment 60 feet, reload 0), Damage\n3d6+13 piercing\nRanged [one-action] web",
+					"name": "composite shortbow",
+					"traits": [
+						"deadly <d10>",
+						"magical",
+						"propulsive",
+						"range increment <60 feet>",
+						"reload <0>"
+					],
+					"damage": "{@damage 3d6+13} piercing",
+					"types": [
+						"piercing"
+					]
+				},
+				{
+					"range": "Ranged",
+					"name": "web",
 					"attack": 32,
 					"traits": [
-						"range increment 30 feet"
+						"range increment <30 feet>"
 					],
 					"effects": [
 						"web trap"
-					],
-					"damage": "web trap",
-					"types": []
+					]
 				}
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Prepared",
 					"type": "Prepared",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 37,
 					"attack": 29,
 					"entry": {
@@ -4705,9 +4589,8 @@
 					}
 				},
 				{
-					"name": "Divine Innate",
 					"type": "Innate",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 37,
 					"entry": {
 						"0": {
@@ -4756,12 +4639,6 @@
 			"abilities": {
 				"top": [
 					{
-						"entries": [
-							"+28, {@skill Religion} +33, {@skill Society} +26, {@skill Stealth} +28 Str +5, Dex +7, Con +4, Int +2, Wis +7, Cha +6 Items bracers of armor II, +2 greater striking composite shortbow (20 arrows), religious symbol of {@deity Urgathoa}."
-						],
-						"name": "Intimidation"
-					},
-					{
 						"traits": [
 							"divine",
 							"enchantment",
@@ -4800,13 +4677,13 @@
 							"transmutation"
 						],
 						"entries": [
-							"As vampire, but hunting spider or spider swarm only, and Zinogyvaz keeps her fangs and web Strikes in either form."
+							"As vampire, but hunting spider or spider swarm only, and Zinogyvaz keeps her fangs and web {@action Strike||Strikes} in either form."
 						],
 						"name": "Change Shape",
 						"generic": {
 							"tag": "ability"
 						},
-						"entries_as_xyz": "Ability not found: '{@action Change Shape|LOAG} As vampire, but hunting spider or spider swarm only, and Zinogyvaz keeps her fangs and web Strikes in either form.' in Zinogyvaz, p.35"
+						"entries_as_xyz": "Ability not found: '{@action Change Shape|LOAG} As vampire, but hunting spider or spider swarm only, and Zinogyvaz keeps her fangs and web {@action Strike||Strikes} in either form.' in Zinogyvaz, p.35"
 					},
 					{
 						"traits": [
@@ -4830,16 +4707,10 @@
 							"necromancy"
 						],
 						"entries": [
-							"As vampire. When."
+							"As vampire. When Drinking Blood, Zinogyvaz regains 24 Hit Points and may inject the victim with vampire drider venom."
 						],
 						"name": "Drink Blood",
 						"entries_as_xyz": "Ability not found: 'Drink Blood As vampire.' in Zinogyvaz, p.35"
-					},
-					{
-						"entries": [
-							"Blood, Zinogyvaz regains 24 Hit Points and may inject the victim with vampire drider venom."
-						],
-						"name": "Drinking"
 					},
 					{
 						"activity": {
@@ -4881,9 +4752,54 @@
 					},
 					{
 						"entries": [
-							"A creature hit by Zinogyvaz's web attack is {@condition immobilized} and stuck to the nearest surface ({@action Escape} DC 35)."
+							"A creature hit by Zinogyvaz's web attack is {@condition immobilized} and stuck to the nearest surface ({@action Escape} {@dc 35})."
 						],
 						"name": "Web Trap"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 39
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 26
+					},
+					"ref": {
+						"std": 27
+					},
+					"will": {
+						"std": 30
+					}
+				},
+				"hp": [
+					{
+						"hp": 240,
+						"abilities": [
+							"coffin restoration (as vampire)",
+							"fast healing 20",
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyze",
+					"poison",
+					"sleep"
+				],
+				"weaknesses": [
+					{
+						"name": "vampire weaknesses"
+					}
+				],
+				"resistances": [
+					{
+						"amount": 20,
+						"name": "physical",
+						"note": "except magical silver"
 					}
 				]
 			}

@@ -41,7 +41,7 @@ class VariantRulesPage extends ListPage {
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border">
 			<span class="bold col-7 pl-0">${rule.name}</span>
 			<span class="col-3 text-center">${rule.subCategory ? rule.subCategory : rule.category ? rule.category : "\u2014"}</span>
-			<span class="col-2 text-center ${Parser.sourceJsonToColor(rule.source)} pr-0" title="${Parser.sourceJsonToFull(rule.source)}" ${BrewUtil.sourceJsonToStyle(rule.source)}>${source}</span>
+			<span class="col-2 text-center ${Parser.sourceJsonToColor(rule.source)}" title="${Parser.sourceJsonToFull(rule.source)}" ${BrewUtil.sourceJsonToStyle(rule.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -53,6 +53,7 @@ class VariantRulesPage extends ListPage {
 				search: searchStack.join(","),
 				source,
 				category: rule.subCategory || rule.category || "",
+				aliases: rule.alias ? rule.alias.join(" - ") : "",
 			},
 			{
 				uniqueId: rule.uniqueId ? rule.uniqueId : rlI,

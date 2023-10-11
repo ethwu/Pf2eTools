@@ -22,11 +22,11 @@ class TokenizerUtils {
 			{regex: /^(.+)\s(ITEM|RUNE|MATERIAL|SNARE) (\d{1,2}\+?)\s/, type: "ITEM", mode: "item"},
 			{regex: /^(.*?)\sBACKGROUND\s/, type: "BACKGROUND", mode: "background"},
 			{regex: /^(.*?)\sCREATURE (–?\d{1,2})\s/, type: "CREATURE", mode: "creature"},
+			{regex: /^(.*?)\sHAZARD (–?\d{1,2})\s/, type: "HAZARD", mode: "hazard"},
 		]
 	}
 	static get unimplemented () {
 		return [
-			{regex: /^(.+)HAZARD[\s\S]*?\n{2,}/, type: "UNIMPLEMENTED"},
 			{regex: /^(.+)RITUAL[\s\S]*?\n{2,}/, type: "UNIMPLEMENTED"},
 			{regex: /^(.+)VEHICLE[\s\S]*?\n{2,}/, type: "UNIMPLEMENTED"},
 		]
@@ -161,6 +161,11 @@ class TokenizerUtils {
 			{regex: /^Trigger\s/, type: "TRIGGER", lookbehind: /(\n|[;.)\]]\s)$/, lookaheadIncDepth: 3},
 		]
 	}
+	static get category () {
+		return [
+			{regex: /^Category\s/, type: "CATEGORY", lookbehind: /(\n|[;.)]\s)$/},
+		]
+	}
 	static get usage () {
 		return [
 			{regex: /^Usage\s/, type: "USAGE", lookbehind: /(\n|[;.)]\s)$/},
@@ -196,6 +201,7 @@ class TokenizerUtils {
 			{regex: /^([A-Z][a-z]*?)\sLore\s/, type: "LORE"},
 			// We are back with ugly regex
 			{regex: /^((?:\b[\w-]*?\s)+)Lore\s/, type: "LORE"},
+			{regex: /^Lore\s+\(.*?\)\s/, type: "LORE_SOME"},
 			{regex: /^Lore\s/, type: "LORE_ALL"},
 			{regex: /^Medicine\s/, type: "MEDICINE"},
 			{regex: /^Nature\s/, type: "NATURE"},
@@ -251,6 +257,11 @@ class TokenizerUtils {
 			{regex: /^HP\s/, type: "HP", lookbehind: /\n$/, prev: {depth: 10, types: [...this.creatureSavingThrows.map(it => it.type)]}},
 		]
 	}
+	static get thresholds () {
+		return [
+			{regex: /^Thresholds\s/, type: "THRESHOLDS", lookbehind: /(\n|[;,.)]\s)$/},
+		]
+	}
 	static get resistances () {
 		return [
 			{regex: /^Resistances\s/, type: "RESISTANCES", lookbehind: /(\n|[;,.)]\s)$/},
@@ -296,7 +307,7 @@ class TokenizerUtils {
 		return [
 			{regex: /^((?:Arcane|Divine|Occult|Primal)\s(?:Innate|Prepared|Spontaneous)?)\s?Spells?/, type: "SPELL_CASTING", lookbehind: /\n$/, mode: "cr_spells"},
 			{regex: /^((?:Innate|Prepared|Spontaneous)\s(?:Arcane|Divine|Occult|Primal)?)\s?Spells?/, type: "SPELL_CASTING", lookbehind: /\n$/, mode: "cr_spells"},
-			{regex: /^((?:[A-Z][a-z]+ )+)Spells\s(?![A-Z][a-z])/, type: "SPELL_CASTING", lookbehind: /\n$/, mode: "cr_spells"},
+			{regex: /^((?:[A-Z][a-z]+\s)+Spells)\s(?![A-Z][a-z])/, type: "SPELL_CASTING", lookbehind: /\n$/, mode: "cr_spells"},
 			{regex: /^(Witch Hexes)/, type: "SPELL_CASTING", lookbehind: /\n$/, mode: "cr_spells"},
 		]
 	}
@@ -334,6 +345,52 @@ class TokenizerUtils {
 		]
 	}
 
+	static get stealth () {
+		return [
+			{regex: /^Stealth\s/, type: "HAZARD_STEALTH", lookbehind: /\n$/, mode: "h_stealth"},
+		]
+	}
+	static get description () {
+		return [
+			{regex: /^Description\s/, type: "DESCRIPTION", lookbehind: /\n$/},
+		]
+	}
+	static get disable () {
+		return [
+			{regex: /^Disable\s/, type: "DISABLE", lookbehind: /\n$/},
+		]
+	}
+	static get hazardHP () {
+		return [
+			{regex: /^([A-Z]\w+\s)?HP\s(\d+)[\s;,.]/, type: "HAZARD_HP"},
+		]
+	}
+	static get hazardBT () {
+		return [
+			{regex: /^\(BT\s\d+\)[\s;,.]/, type: "HAZARD_BT", prev: {depth: 1, types: [...this.hazardHP.map(it => it.type)]}},
+		]
+	}
+	static get hazardHardness () {
+		return [
+			{regex: /^([A-Z]\w+\s)?Hardness\s(\d+)[\s;,.]/, type: "HAZARD_HARDNESS"},
+		]
+	}
+	static get atkNoMAP () {
+		return [
+			{regex: /^no multiple attack penalty/, type: "ATK_NO_MAP"},
+		]
+	}
+	static get reset () {
+		return [
+			{regex: /^Reset/, type: "RESET", lookbehind: /\n$/},
+		]
+	}
+	static get routine () {
+		return [
+			{regex: /^Routine/, type: "ROUTINE", lookbehind: /\n$/},
+		]
+	}
+
 	// TODO: propertiesSpells and propertiesFeats dont seem quite right...
 	static get properties () {
 		return [
@@ -358,6 +415,7 @@ class TokenizerUtils {
 			...this.traditions,
 			...this.traditionsSubclasses,
 			...this.trigger,
+			...this.category,
 			...this.usage,
 		]
 	}
@@ -425,6 +483,7 @@ class TokenizerUtils {
 			...this.targets,
 			...this.trigger,
 			...this.usage,
+			...this.category,
 		]
 	}
 	static get propertiesBackgrounds () {
@@ -452,6 +511,7 @@ class TokenizerUtils {
 			...this.ac,
 			...this.creatureSavingThrows,
 			...this.hp,
+			...this.thresholds,
 			...this.resistances,
 			...this.weaknesses,
 			...this.immunities,
@@ -461,6 +521,26 @@ class TokenizerUtils {
 			...this.damage,
 			...this.spellCasting,
 			...this.ritualCasting,
+		]
+	}
+	static get propertiesHazards () {
+		return [
+			...this.stealth,
+			...this.description,
+			...this.disable,
+			...this.ac,
+			...this.creatureSavingThrows,
+			...this.hazardHardness,
+			...this.hazardHP,
+			...this.hazardBT,
+			...this.immunities,
+			...this.weaknesses,
+			...this.resistances,
+			...this.attacks,
+			...this.damage,
+			...this.atkNoMAP,
+			...this.reset,
+			...this.routine,
 		]
 	}
 
@@ -527,7 +607,7 @@ class TokenizerUtils {
 
 	static get special () {
 		return [
-			{regex: /^Special/, type: "SPECIAL"},
+			{regex: /^Special\s/, type: "SPECIAL", lookbehind: /\n$/},
 		]
 	}
 
@@ -709,6 +789,31 @@ class TokenizerUtils {
 				{regex: /^[,;]\s/, type: null},
 				{regex: /^\s+/, type: null},
 			],
+			hazard: [
+				...this.endData,
+
+				// PROPERTIES
+				...this.propertiesHazards,
+				...this.propertiesAbilities,
+
+				// DATA ENTRIES
+				...this.traits,
+				...this.successDegrees,
+				...this.afflictions,
+
+				// Generic
+				...this.actions,
+				...this.genericEntries,
+				...this.words,
+				{regex: /^\s+/, type: null},
+			],
+			h_stealth: [
+				{regex: /^\+\s?\d+/, type: "H_STEALTH_BONUS"},
+				{regex: /^DC\s\d+/, type: "H_STEALTH_DC"},
+				{regex: /^\((untrained|trained|expert|master|legendary)\)/i, type: "H_STEALTH_MINPROF"},
+				{regex: /^[,;]\s/, type: null},
+				{regex: /^\s+/, type: null},
+			],
 		}
 	}
 	// endregion
@@ -779,8 +884,8 @@ class TokenizerUtils {
 
 	static get sensesTypes () {
 		return [
-			{regex: /precise/, type: "precise"},
 			{regex: /imprecise/, type: "imprecise"},
+			{regex: /precise/, type: "precise"},
 			{regex: /vague/, type: "vague"},
 		]
 	}
@@ -820,6 +925,7 @@ class TokenizerUtils {
 			{cat: "Snare"},
 			{cat: "Spellheart"},
 			{cat: "Staff"},
+			{cat: "Missive"},
 			{cat: "Structure"},
 			{cat: "Talisman"},
 			{cat: "Tattoo"},

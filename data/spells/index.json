@@ -5,6 +5,8 @@
 	"LOCG": "spells-locg.json",
 	"LOGM": "spells-logm.json",
 	"LOL": "spells-lol.json",
+	"LOIL": "spells-loil.json",
+	"LOMM": "spells-lomm.json",
 	"LOPSG": "spells-lopsg.json",
 	"SoM": "spells-som.json",
 	"AoA3": "spells-aoa3.json",
@@ -28,5 +30,11 @@
 	"SoT1": "spells-sot1.json",
 	"SoT3": "spells-sot3.json",
 	"SoT4": "spells-sot4.json",
-	"SoT5": "spells-sot5.json"
+	"SoT5": "spells-sot5.json",
+	"DA": "spells-da.json",
+	"LOKL": "spells-lokl.json",
+	"BotD": "spells-botd.json",
+	"ToK": "spells-tok.json",
+	"TV": "spells-tv.json",
+	"GW1": "spells-gw1.json"
 }

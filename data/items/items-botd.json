@@ -31,7 +31,7 @@
 						"envision"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day"
 					},
 					"entries": [
@@ -48,12 +48,12 @@
 						"{@action Strike}"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day"
 					},
 					"requirements": "The Lady's chalice is full of a vial's worth of holy water",
 					"entries": [
-						"The chalice splashes a spiral of holy water into an adjacent space. This is a simple thrown weapon with a range of 5 feet. Unlike an alchemical bomb, it doesn't add the {@trait manipulate} trait to the attack made with it. If it hits, it deals {@damage 2d6} good damage and 2 good splash damage (including to you, if you're evil)."
+						"The chalice splashes a spiral of holy water into an adjacent space. This is a simple thrown weapon with a range of 5 feet. Unlike an alchemical bomb, it doesn't add the {@trait manipulate} trait to the attack made with it. If it hits, it deals {@damage 2d6} good damage and 2 good {@trait splash} damage (including to you, if you're evil)."
 					]
 				}
 			]
@@ -98,15 +98,14 @@
 			],
 			"usage": "varies by weapon",
 			"bulk": "varies by weapon",
-			"category": "Weapon",
+			"category": "Material",
 			"entries": [
 				"Peachwood weapons have a particularly auburn tinge to them when under direct sunlight.",
-				"Peachwood is treated as darkwood for any undead creatures' resistances or weaknesses related to darkwood (allowing a peachwood weapon to bypass a jiang-shi's resistance, for example). In addition, peachwood weapons bypass a small portion of the resistances of any undead creature. Strikes with a peachwood weapon treat an undead's resistances against physical damage as 2 lower for standardgrade peachwood, and 4 lower for high-grade."
+				"Peachwood is treated as darkwood for any undead creatures' resistances or weaknesses related to darkwood (allowing a peachwood weapon to bypass a jiang-shi's resistance, for example). In addition, peachwood weapons bypass a small portion of the resistances of any undead creature. {@action Strike||Strikes} with a peachwood weapon treat an undead's resistances against physical damage as 2 lower for standardgrade peachwood, and 4 lower for high-grade."
 			],
 			"generic": "G",
 			"variants": [
 				{
-					"name": "standard-grade peachwood weapon",
 					"level": 12,
 					"price": {
 						"amount": 2000,
@@ -120,7 +119,6 @@
 					"variantType": "standard-grade"
 				},
 				{
-					"name": "high-grade peachwood weapon",
 					"level": 18,
 					"price": {
 						"amount": 19000,
@@ -168,50 +166,46 @@
 			"generic": "G",
 			"variants": [
 				{
-					"name": "lesser",
 					"level": 2,
 					"price": {
 						"amount": 7,
 						"coin": "gp"
 					},
 					"entries": [
-						"The bomb deals {@damage 1d4} positive damage and 1 positive splash damage, as well as {@dice 1d4} additional fire damage. As normal, positive damage harms only undead and other creatures with negative healing. Undead with a particular vulnerability to sunlight (such as vampires or wraiths) take the maximum amount of positive damage from bottled sunlight (4 instead of {@dice 1d4}). For any ability that depends on the number of weapon dice bottled sunlight has, count only the positive damage dice."
+						"The bomb deals {@damage 1d4} positive damage and 1 positive {@trait splash} damage, as well as {@dice 1d4} additional fire damage. As normal, positive damage harms only undead and other creatures with negative healing. Undead with a particular vulnerability to sunlight (such as vampires or wraiths) take the maximum amount of positive damage from bottled sunlight (4 instead of {@dice 1d4}). For any ability that depends on the number of weapon dice bottled sunlight has, count only the positive damage dice."
 					],
 					"variantType": "lesser"
 				},
 				{
-					"name": "moderate",
 					"level": 4,
 					"price": {
 						"amount": 20,
 						"coin": "gp"
 					},
 					"entries": [
-						"The bomb deals {@damage 2d4} positive damage, 2 positive splash damage, and {@dice 2d4} additional fire damage."
+						"The bomb deals {@damage 2d4} positive damage, 2 positive {@trait splash} damage, and {@dice 2d4} additional fire damage."
 					],
 					"variantType": "moderate"
 				},
 				{
-					"name": "greater",
 					"level": 12,
 					"price": {
 						"amount": 360,
 						"coin": "gp"
 					},
 					"entries": [
-						"The bomb deals {@damage 3d4} positive damage, 3 positive splash damage, and {@dice 3d4} additional fire damage."
+						"The bomb deals {@damage 3d4} positive damage, 3 positive {@trait splash} damage, and {@dice 3d4} additional fire damage."
 					],
 					"variantType": "greater"
 				},
 				{
-					"name": "major",
 					"level": 18,
 					"price": {
 						"amount": 4500,
 						"coin": "gp"
 					},
 					"entries": [
-						"The bomb deals {@damage 4d4} positive damage, 4 positive splash damage, and {@dice 4d4} additional fire damage."
+						"The bomb deals {@damage 4d4} positive damage, 4 positive {@trait splash} damage, and {@dice 4d4} additional fire damage."
 					],
 					"variantType": "major"
 				}
@@ -249,7 +243,7 @@
 						"envision"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day"
 					},
 					"trigger": "You critically hit an undead creature with the celestial peachwood sword",
@@ -281,45 +275,47 @@
 						"{@action Cast a Spell}"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day"
 					},
-					"variants": [
-						{
-							"name": "dawnlight",
-							"level": 3,
-							"price": {
-								"amount": 60,
-								"coin": "gp"
-							},
-							"entries": []
-						},
-						{
-							"name": "greater dawnlight",
-							"level": 7,
-							"price": {
-								"amount": 320,
-								"coin": "gp"
-							},
-							"entries": [
-								"Whenever you successfully counteract magical darkness while holding this symbol, the clash of magic unleashes a momentary flash of light. Creatures with darkvision in the area of the {@spell light} spell or targeted by it must succeed at a DC 23 Fortitude save or be {@condition dazzled} for 1 round. Those with light blindness are also exposed to bright light.",
-								"Change the list of spells to 3rd-level versions of disrupt undead, light, and searing light. The spell attack roll and counteract modifier are +13."
-							]
-						},
-						{
-							"name": "major dawnlight",
-							"level": 11,
-							"price": {
-								"amount": 1300,
-								"coin": "gp"
-							},
-							"entries": [
-								"A major dawnlight creates a flash of light like a greater dawnlight, but the DC is 28. Change the list of spells to 5th-level versions of disrupt undead and light, and 4th-level versions of searing light and vital beacon. The spell attack roll and counteract modifier are +18."
-							]
-						}
-					],
 					"entries": [
 						"The dawnlight casts 1st-level {@spell disrupt undead} or light. The dawnlight's spell attack roll and counteract modifier are +7, and any spell with the {@trait light} trait is treated as though its counteract level were 1 higher for counteracting darkness."
+					]
+				}
+			],
+			"generic": "G",
+			"variants": [
+				{
+					"variantType": "dawnlight",
+					"name": "Dawnlight",
+					"level": 3,
+					"price": {
+						"amount": 60,
+						"coin": "gp"
+					},
+					"entries": []
+				},
+				{
+					"variantType": "greater",
+					"level": 7,
+					"price": {
+						"amount": 320,
+						"coin": "gp"
+					},
+					"entries": [
+						"Whenever you successfully counteract magical darkness while holding this symbol, the clash of magic unleashes a momentary flash of light. Creatures with darkvision in the area of the {@spell light} spell or targeted by it must succeed at a DC 23 Fortitude save or be {@condition dazzled} for 1 round. Those with light blindness are also exposed to bright light.",
+						"Change the list of spells to 3rd-level versions of disrupt undead, light, and searing light. The spell attack roll and counteract modifier are +13."
+					]
+				},
+				{
+					"variantType": "major",
+					"level": 11,
+					"price": {
+						"amount": 1300,
+						"coin": "gp"
+					},
+					"entries": [
+						"A major dawnlight creates a flash of light like a greater dawnlight, but the DC is 28. Change the list of spells to 5th-level versions of disrupt undead and light, and 4th-level versions of searing light and vital beacon. The spell attack roll and counteract modifier are +18."
 					]
 				}
 			],
@@ -401,9 +397,9 @@
 					"level": 12,
 					"price": {
 						"amount": 350,
-						"coin": "gp",
-						"note": "; Bulk 8"
+						"coin": "gp"
 					},
+					"bulk": 8,
 					"entries": [
 						"This feast feeds up to 4 willing undead."
 					],
@@ -429,7 +425,7 @@
 			"bulk": 1,
 			"category": "Held",
 			"entries": [
-				"This +3 greater disrupting greater striking silver longsword is made from the purest silver. The blade is carefully etched to depict a vast and sprawling necropolis, a place where the dead are laid to rest. Whenever you critically hit an undead creature with final rest, the undead creature takes {@damage 3d6} {@condition persistent damage ||persistent good damage}, with a DC 36 Fortitude save.",
+				"This +3 greater disrupting greater striking silver longsword is made from the purest silver. The blade is carefully etched to depict a vast and sprawling necropolis, a place where the dead are laid to rest. Whenever you critically hit an undead creature with final rest, the undead creature takes {@damage 3d6} {@condition persistent damage||persistent good damage}, with a DC 36 Fortitude save.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -437,13 +433,13 @@
 							"No effect."
 						],
 						"Success": [
-							"The creature takes half the {@condition persistent damage ||persistent good damage}."
+							"The creature takes half the {@condition persistent damage||persistent good damage}."
 						],
 						"Failure": [
-							"The creature is {@condition stunned||stunned 1} and takes the full {@condition persistent damage ||persistent good damage}."
+							"The creature is {@condition stunned||stunned 1} and takes the full {@condition persistent damage||persistent good damage}."
 						],
 						"Critical Failure": [
-							"The creature is {@condition stunned||stunned 3} and takes double the {@condition persistent damage ||persistent good damage}."
+							"The creature is {@condition stunned||stunned 3} and takes double the {@condition persistent damage||persistent good damage}."
 						]
 					}
 				},
@@ -458,7 +454,7 @@
 						"envision"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day"
 					},
 					"entries": [
@@ -506,7 +502,7 @@
 						"positive"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day"
 					},
 					"trigger": "You gain the {@condition drained} condition from an undead creature",
@@ -567,7 +563,7 @@
 			"category": "Consumable",
 			"entries": [
 				"This crystal vial contains salts blessed by channeling life-giving energies into waters purified by holy fire.",
-				"You can activate this vial by throwing it as a {@action Strike}. It's a simple thrown ranged weapon with a range increment of 10 feet. Unlike an alchemical bomb, it doesn't add the {@trait manipulate} trait to the attack made with it. On a hit against an undead, life salt deals 1 {@condition persistent damage ||persistent positive damage}, and the undead must succeed at a DC 20 Will save or be unable to attack you as long as it continues taking the {@condition persistent damage ||persistent positive damage}.",
+				"You can activate this vial by throwing it as a {@action Strike}. It's a simple thrown ranged weapon with a range increment of 10 feet. Unlike an alchemical bomb, it doesn't add the {@trait manipulate} trait to the attack made with it. On a hit against an undead, life salt deals 1 {@condition persistent damage||persistent positive damage}, and the undead must succeed at a DC 20 Will save or be unable to attack you as long as it continues taking the {@condition persistent damage||persistent positive damage}.",
 				"If you use a {@condition hostile} action against any undead, this second effect ends, and the undead can attack you normally."
 			]
 		},
@@ -658,14 +654,13 @@
 				},
 				"components": [
 					"envision"
-				]
+				],
+				"requirements": "You are an expert in {@skill Perception}."
 			},
 			"category": "Talisman",
 			"entries": [
-				"{@skill Perception}.",
 				"Symbols of good fortune and luck are carved on this thin, square wooden plaque. It smells of sandalwood from the blessings placed upon it. After activation, for the next minute, you can sense attacks from undead. You aren't {@condition flat-footed} to {@condition hidden}, {@condition undetected}, or flanking undead of your level or lower, or undead of your level or lower using surprise attack. However, they can still help their allies flank."
-			],
-			"requirements": "You are an expert in"
+			]
 		},
 		{
 			"name": "Undead Detection Dye",

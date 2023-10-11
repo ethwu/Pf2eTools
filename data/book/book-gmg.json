@@ -56,7 +56,7 @@
 						"No two Game Masters are the same. Perhaps you're a veteran Game Master who's looking for new ways to customize the game and tailor it to suit your interests and those of your players. Or perhaps you're a brand new GM and looking for guidance to feel comfortable leading a game of your own. Maybe you've been a Game Master for years, but this is your first time running a Pathfinder game. No matter where you are as a Game Master, this book is a valuable tool that can help you tell the stories you want to tell with your players.",
 						"If you're a newer Game Master, you'll find a wealth of information to help you feel confident in running your games. Chapter 1 in particular can help you better understand how to run a game in the different modes of play, how to adjudicate the rules quickly and fairly, and what to do when special circumstances or problems crop up at your table. This chapter also contains advice on using and determining rarity in your game, working with your players to create a collaborative story, and adapting your game to meet the needs of the players at your table.",
 						"You'll also find the NPC Gallery in Chapter 5 useful as a source of stock NPCs to play a role in your game and also for examples to compare against when using the rules in Chapter 2 to build your own monsters and NPCs.",
-						"If you're a Game Master running a published Pathfinder adventure, you'll find guidance in Chapter 1 specifically for running published adventures, and much of the advice in that chapter about running a game applies to published adventures. A number of adventures\u2014 especially scenarios in the Pathfinder Society Organized Play campaign and Pathfinder Adventure Path volumes\u2014 use the subsystems in Chapter 3. The Victory Points subsystem is the most fundamental of these, but many adventures also use the other subsystems found here, such as vehicles, chases, and influence.",
+						"If you're a Game Master running a published Pathfinder adventure, you'll find guidance in Chapter 1 specifically for running published adventures, and much of the advice in that chapter about running a game applies to published adventures. A number of adventures\u2014especially scenarios in the Pathfinder Society Organized Play campaign and Pathfinder Adventure Path volumes\u2014use the subsystems in Chapter 3. The Victory Points subsystem is the most fundamental of these, but many adventures also use the other subsystems found here, such as vehicles, chases, and influence.",
 						"If you are looking to create your own Pathfinder adventures, Chapter 1 provides you design guidance ranging from the broad strokes of an entire campaign, to individual adventures, and then to the particular considerations of any given encounter. Chapter 2 is a veritable toolbox you can use to build the creatures, hazards, items, and other elements you want to use in your adventures. If you plan to set your adventures in a world of your own design, the world-building section of Chapter 2 can guide that process and help you establish the details you'll need to ensure your setting is a vibrant backdrop for fantastic adventure. The NPC Gallery in Chapter 5 can help populate your story and world so that you don't have to create every element from scratch.",
 						"If you're an experienced Game Master, you will find a wealth of customization options to tailor your games to the needs of players. The advice in Chapter 1, such as the guidance to make encounters more dynamic, can help you fine-tune your GM skills and enrich your game. Using the tools in Chapter 2, you'll be able to build precisely the option you need for any game. Chapter 3 offers a variety of rules subsystems that provide a framework for specific endeavors and situations, from chases and duels to social influence and overland exploration. In Chapter 4, you'll find variant rules options that let you tweak specific elements of the game, from backgrounds to the entire mathematical underpinning of the game, to suit your preferences or the needs of a particular setting or story.",
 						{
@@ -79,7 +79,7 @@
 			"page": 7,
 			"name": "Chapter 1: Gamemastery Basics",
 			"entries": [
-				"The information presented here provides {@condition helpful} guidance on how to be a dynamic and engaging GM, and supplements the GM advice found in Chapter 10 of the {@i Core Rulebook}. Some sections either refer back to that chapter or repeat some of that information for convenience. This chapter begins with general advice, then covers the following topics.",
+				"The information presented here provides helpful guidance on how to be a dynamic and engaging GM, and supplements the GM advice found in Chapter 10 of the {@i Core Rulebook}. Some sections either refer back to that chapter or repeat some of that information for convenience. This chapter begins with general advice, then covers the following topics.",
 				{
 					"type": "list",
 					"items": [
@@ -299,7 +299,7 @@
 									"page": 10,
 									"name": "Rewinding",
 									"entries": [
-										"Though \"rewinding\" can happen in any mode of play, it's usually most troublesome in encounters. Rewinding happens when a player forgot to add in a certain bonus or take a certain action, or wishes they had used their actions in a different order, and wants to rewind to account for what they missed. The best policy is usually to let them rewind as needed within their own turn but stop them before they intrude into someone else's. This keeps interruptions within reasonable bounds. You might find some adjustments are easy enough to make outside of a turn and can be allowed. For instance, if someone forgot to add the fire damage from a {@i flaming} rune to one of their hits, it's pretty easy to reduce the monster's HP on another turn, but if they realized their attack missed only because they forgot the bonus from {@i bless}, that could be too much of an interruption. Your ruling should stand on such matters. Try to be consistent about what kinds of things you will rewind for and when."
+										"Though \"rewinding\" can happen in any mode of play, it's usually most troublesome in encounters. Rewinding happens when a player forgot to add in a certain bonus or take a certain action, or wishes they had used their actions in a different order, and wants to rewind to account for what they missed. The best policy is usually to let them rewind as needed within their own turn but stop them before they intrude into someone else's. This keeps interruptions within reasonable bounds. You might find some adjustments are easy enough to make outside of a turn and can be allowed. For instance, if someone forgot to add the fire damage from a {@item flaming (generic)||flaming} rune to one of their hits, it's pretty easy to reduce the monster's HP on another turn, but if they realized their attack missed only because they forgot the bonus from {@i bless}, that could be too much of an interruption. Your ruling should stand on such matters. Try to be consistent about what kinds of things you will rewind for and when."
 									]
 								},
 								{
@@ -417,7 +417,7 @@
 										"Is this negative circumstance easy to replicate in pretty much every battle?"
 									]
 								},
-								" Once again, answering yes to most of these questions means it is more likely you should apply a penalty, and answering yes to the final question means it less likely you should do so."
+								"Once again, answering yes to most of these questions means it is more likely you should apply a penalty, and answering yes to the final question means it less likely you should do so."
 							]
 						},
 						{
@@ -1461,7 +1461,7 @@
 					"name": "Resolving Problems",
 					"entries": [
 						"When dealing with problems at the table, keep in mind the primary reason to play Pathfinder is to have fun. And that's true for everyone\u2014player or GM. Don't \"solve\" a problem by reducing everyone's enjoyment of the game or their ability to forge a path for their characters. Of course, sometimes your solution might not make everyone deliriously happy. Play style is a highly personal, individual thing, rarely does a group agree on all things all the time.",
-						"Solving problems can be as collaborative as the rest of the game. Only a foolish GM ignores the players' opinions\u2014 but that said, the final decision in resolving a problem rests with you.",
+						"Solving problems can be as collaborative as the rest of the game. Only a foolish GM ignores the players' opinions\u2014but that said, the final decision in resolving a problem rests with you.",
 						"Issues at the table arise occasionally. Broadly, such problems can be separated into four main categories: distractions, total party kills, problematic players, and power imbalances. The first of these is covered in detail on page 491 of the {@i Core Rulebook}, and guidance for the others appears here.",
 						{
 							"type": "pf2-h2",
@@ -1483,7 +1483,7 @@
 							"page": 31,
 							"name": "Problematic Players",
 							"entries": [
-								"Most players who cause problems do so unintentionally\u2014 perhaps bringing out-of-game issues and stresses to the table. You shouldn't immediately jump on every instance of problematic play\u2014everyone has a bad night on occasion. However, if someone disrupts the game on an ongoing basis, you owe it to all the players to deal with the problem. If you don't, bad feelings, grudges, and even ruined friendships could result. Handling a problematic player requires tact: making demands in front of the rest of the group is rarely the best way to resolve the problem. Attempt to handle the problem privately away from the game, or call a break to have a private conversation if the situation is really urgent. As with all emotionally charged conversations, email, text messages and the like can lose the subtlety of speech\u2014it's better to meet the player face to face, if possible. Here are some problematic behaviors that often come up and might require you to intervene.",
+								"Most players who cause problems do so unintentionally\u2014perhaps bringing out-of-game issues and stresses to the table. You shouldn't immediately jump on every instance of problematic play\u2014everyone has a bad night on occasion. However, if someone disrupts the game on an ongoing basis, you owe it to all the players to deal with the problem. If you don't, bad feelings, grudges, and even ruined friendships could result. Handling a problematic player requires tact: making demands in front of the rest of the group is rarely the best way to resolve the problem. Attempt to handle the problem privately away from the game, or call a break to have a private conversation if the situation is really urgent. As with all emotionally charged conversations, email, text messages and the like can lose the subtlety of speech\u2014it's better to meet the player face to face, if possible. Here are some problematic behaviors that often come up and might require you to intervene.",
 								{
 									"type": "list",
 									"items": [
@@ -1499,7 +1499,7 @@
 										"Repeatedly arguing with decisions made by other players or the GM.",
 										"Ignoring other players' opinions.",
 										"Deliberately derailing the adventure's plot.",
-										"Being deliberately rude or cruel to other players\u2014 especially if it's on the basis of their ethnicity, gender, sexual orientation, political or religious affiliation, the color of their skin, or the like."
+										"Being deliberately rude or cruel to other players\u2014especially if it's on the basis of their ethnicity, gender, sexual orientation, political or religious affiliation, the color of their skin, or the like."
 									]
 								},
 								{
@@ -1929,7 +1929,7 @@
 												{
 													"name": "Time Frame",
 													"entries": [
-														" 1-1/2 years weekly, 3 years biweekly."
+														"1-1/2 years weekly, 3 years biweekly."
 													]
 												}
 											]
@@ -2115,7 +2115,7 @@
 									"page": 39,
 									"name": "Dealing with Failure",
 									"entries": [
-										"If a campaign ends prematurely, get a sense from the players of whether they want to continue. The advice on Total Party Kills on page 30 should be {@condition helpful}. If the campaign ended in a stranger way than a total party kill\u2014 say, a PC handing over the powerful relic the villain needed to complete a master plan\u2014you can still look for ways the campaign might continue. Maybe the PCs struggle to survive in the world after the calamity, or maybe they have just enough time they might still be able to stop the plan."
+										"If a campaign ends prematurely, get a sense from the players of whether they want to continue. The advice on Total Party Kills on page 30 should be {@condition helpful}. If the campaign ended in a stranger way than a total party kill\u2014say, a PC handing over the powerful relic the villain needed to complete a master plan\u2014you can still look for ways the campaign might continue. Maybe the PCs struggle to survive in the world after the calamity, or maybe they have just enough time they might still be able to stop the plan."
 									]
 								},
 								{
@@ -2546,7 +2546,7 @@
 														{
 															"name": "Encounter Tropes",
 															"entries": [
-																"Fights showcasing otherworldly environs\u2014 on the sides of glaciers, in limitless oceans, on chunks of rock floating along rivers of lava, atop bottomless pits, or on the chains of 100-foot-tall gates."
+																"Fights showcasing otherworldly environs\u2014on the sides of glaciers, in limitless oceans, on chunks of rock floating along rivers of lava, atop bottomless pits, or on the chains of 100-foot-tall gates."
 															]
 														}
 													]
@@ -2672,7 +2672,7 @@
 													"items": [
 														"Demonstrate the ruthlessness of the enemy, especially the discrepancy between their care for their cause and their ambivalence or hatred toward everything else.",
 														"Have enemies focus purely on their goal. Have them fall back on their rhetoric or dogma to justify themselves.",
-														"If something about the extremists' cause is just\u2014such as preserving the natural world or protecting their people\u2014 reveal the foes' sympathetic side. Demonstrate the horror of what they're fighting against in addition to the horror of the way they fight it.",
+														"If something about the extremists' cause is just\u2014such as preserving the natural world or protecting their people\u2014reveal the foes' sympathetic side. Demonstrate the horror of what they're fighting against in addition to the horror of the way they fight it.",
 														"When the PCs make progress, show uncertainty or demoralization in their foes, possibly even desertion."
 													]
 												},
@@ -3058,9 +3058,6 @@
 									"page": 51,
 									"name": "TREASURE BY ENCOUNTER",
 									"id": "1-3",
-									"entries": [
-										"1 175 gp 13 gp 18 gp 26 gp 35 gp 35 gp 2 300 gp 23 gp 30 gp 45 gp 60 gp 60 gp 3 500 gp 38 gp 50 gp 75 gp 100 gp 100 gp 4 850 gp 65 gp 85 gp 130 gp 170 gp 170 gp 5 1,350 gp 100 gp 135 gp 200 gp 270 gp 270 gp 6 2,000 gp 150 gp 200 gp 300 gp 400 gp 400 gp 7 2,900 gp 220 gp 290 gp 440 gp 580 gp 580 gp 8 4,000 gp 300 gp 400 gp 600 gp 800 gp 800 gp 9 5,700 gp 430 gp 570 gp 860 gp 1,140 gp 1,140 gp 10 8,000 gp 600 gp 800 gp 1,200 gp 1,600 gp 1,600 gp 11 11,500 gp 865 gp 1,150 gp 1,725 gp 2,300 gp 2,300 gp 12 16,500 gp 1,250 gp 1,650 gp 2,475 gp 3,300 gp 3,300 gp 13 25,000 gp 1,875 gp 2,500 gp 3,750 gp 5,000 gp 5,000 gp 14 36,500 gp 2,750 gp 3,650 gp 5,500 gp 7,300 gp 7,300 gp 15 54,500 gp 4,100 gp 5,450 gp 8,200 gp 10,900 gp 10,900 gp 16 82,500 gp 6,200 gp 8,250 gp 12,400 gp 16,500 gp 16,500 gp 17 128,000 gp 9,600 gp 12,800 gp 19,200 gp 25,600 gp 25,600 gp 18 208,000 gp 15,600 gp 20,800 gp 31,200 gp 41,600 gp 41,600 gp 19 355,000 gp 26,600 gp 35,500 gp 53,250 gp 71,000 gp 71,000 gp 20 490,000 gp 36,800 gp 49,000 gp 73,500 gp 98,000 gp 98,000 gp."
-									],
 									"colStyles": [
 										"",
 										"text-center",
@@ -3477,7 +3474,7 @@
 									"page": 58,
 									"name": "RESKINNING A CREATURE",
 									"entries": [
-										"Sometimes you need a creature with abilities that are almost exactly the same as those of a published creature. In that case, it can be more efficient to simply \"reskin\" the old creature rather than design a new one\u2014that is, to change the description but keep the abilities mostly the same. Occasionally reskinning requires small mechanical adjustments. For instance, a fire cat that has immunity to fire, an aura that deals fire damage, and the ability to light people on fire with its jaws to deal {@condition persistent damage ||persistent fire damage} could be reskinned as a caustic animate tree that has immunity to acid, an aura that deals acid damage, and branch attacks that smear acidic sap on a creature's body when they hit, dealing {@condition persistent damage ||persistent acid damage}."
+										"Sometimes you need a creature with abilities that are almost exactly the same as those of a published creature. In that case, it can be more efficient to simply \"reskin\" the old creature rather than design a new one\u2014that is, to change the description but keep the abilities mostly the same. Occasionally reskinning requires small mechanical adjustments. For instance, a fire cat that has immunity to fire, an aura that deals fire damage, and the ability to light people on fire with its jaws to deal {@condition persistent damage||persistent fire damage} could be reskinned as a caustic animate tree that has immunity to acid, an aura that deals acid damage, and branch attacks that smear acidic sap on a creature's body when they hit, dealing {@condition persistent damage||persistent acid damage}."
 									]
 								},
 								{
@@ -3524,7 +3521,7 @@
 										"{@b Magical Striker} high attack and high damage; moderate to high spell DCs; either a scattering of innate spells or prepared or spontaneous spells up to half the creature's level (rounded up) minus 1",
 										"{@b Skill Paragon} high or extreme ability modifier matching its best skills; typically high Reflex or Will and low Fortitude; many skills at moderate or high and potentially one or two extreme skills; at least one special ability to use the creature's skills in combat",
 										"{@b Skirmisher} high Dex modifier; low Fortitude, high Reflex; higher Speed than typical",
-										"{@b Sniper} high {@skill Perception}; high Dex modifier; low Fortitude, high Reflex; moderate to low HP; ranged Strikes have high attack bonus and damage or moderate attack bonus and extreme damage (melee Strikes are weaker)",
+										"{@b Sniper} high {@skill Perception}; high Dex modifier; low Fortitude, high Reflex; moderate to low HP; ranged {@action Strike||Strikes} have high attack bonus and damage or moderate attack bonus and extreme damage (melee {@action Strike||Strikes} are weaker)",
 										"{@b Soldier} high Str modifier; high to extreme AC; high Fortitude; high attack bonus and high damage; {@action Attack of Opportunity} or other tactical abilities",
 										"{@b Spellcaster} high or extreme modifier for the corresponding mental ability; low Fortitude, high Will; low HP; low attack bonus and moderate or low damage; high or extreme spell DCs; prepared or spontaneous spells up to half the creature's level (rounded up)"
 									]
@@ -5220,8 +5217,8 @@
 							"page": 64,
 							"name": "Strikes",
 							"entries": [
-								"When building your creature's selection of Strikes, use the following sections to set the {@action Strike}'s attack bonus and damage. Give the attack all the normal traits if it's a weapon; for unarmed attacks or weapons you invent, give whatever traits you feel are appropriate. Note that these traits might influence the damage you give the {@action Strike}.",
-								"You might want to make sure a creature has an unarmed attack if you think it's likely to get disarmed. At 7th level and higher, PCs might have the ability to fly, which makes it more important for creatures to have decent ranged Strikes to make sure they aren't totally hopeless against flying PCs (though they could instead have fast fly Speeds or something similar)",
+								"When building your creature's selection of {@action Strike||Strikes}, use the following sections to set the {@action Strike}'s attack bonus and damage. Give the attack all the normal traits if it's a weapon; for unarmed attacks or weapons you invent, give whatever traits you feel are appropriate. Note that these traits might influence the damage you give the {@action Strike}.",
+								"You might want to make sure a creature has an unarmed attack if you think it's likely to get disarmed. At 7th level and higher, PCs might have the ability to fly, which makes it more important for creatures to have decent ranged {@action Strike||Strikes} to make sure they aren't totally hopeless against flying PCs (though they could instead have fast fly Speeds or something similar)",
 								{
 									"type": "pf2-h3",
 									"source": "GMG",
@@ -5443,10 +5440,10 @@
 									"name": "Strike Damage",
 									"entries": [
 										"Table 2\u201310 on the next page gives the damage a creature should deal with a single {@action Strike}. You might use a lower category if the creature has better accuracy, or a higher category if its accuracy is lower.",
-										"A creature that's meant to be primarily a combat threat uses high damage for its melee Strikes, or moderate for melee Strikes that have the {@trait agile} trait. Ranged attacks more typically use the moderate value, or even low. A creature that's meant to be highly damaging uses the extreme damage values, but might then have a moderate attack bonus. As with most statistics, extreme damage is more likely at higher levels. You can also use the extreme value for special attacks that the creature can use only a limited number of times or under circumstances that aren't likely to happen every round.",
-										"More versatile creatures, such as ones that can cast some spells and aren't meant to primarily get their damage through Strikes, go one category lower: moderate for their main melee Strikes, low for agile and ranged Strikes.",
-										"Spellcasters and other creatures that aren't meant to be competent in a direct fight might use the low damage value, or even less if they completely don't care about their Strikes.",
-										"On Table 2\u201310, you'll find a damage expression (a die roll or rolls plus a flat modifier) you can use as is, or you can take the damage in parentheses and build your own damage expression to hit that number. If you do the latter, remember that a d4 counts as 2.5 damage, a d6 as 3.5, a d8 as 4.5, a d10 as 5.5, and a d12 as 6.5. Usually a damage expression works best when roughly half the damage is from dice and half is from the flat modifier. If your creature deals special damage, like {@damage 1d6} fire from {@i flaming} attacks, that counts toward its total damage per {@action Strike}. Keep in mind that a creature using a weapon should have a damage value that feels right for that weapon. Extreme damage works well for two-handed weapons that uses d10s or d12s for damage. On the other hand, a dagger uses only d4s, so a dagger wielder would need something like sneak attack to deal extreme damage, or you might compensate for the dagger's lower damage per {@action Strike} by giving the creature the ability to attack more efficiently or use other tricks."
+										"A creature that's meant to be primarily a combat threat uses high damage for its melee {@action Strike||Strikes}, or moderate for melee {@action Strike||Strikes} that have the {@trait agile} trait. Ranged attacks more typically use the moderate value, or even low. A creature that's meant to be highly damaging uses the extreme damage values, but might then have a moderate attack bonus. As with most statistics, extreme damage is more likely at higher levels. You can also use the extreme value for special attacks that the creature can use only a limited number of times or under circumstances that aren't likely to happen every round.",
+										"More versatile creatures, such as ones that can cast some spells and aren't meant to primarily get their damage through {@action Strike||Strikes}, go one category lower: moderate for their main melee {@action Strike||Strikes}, low for agile and ranged {@action Strike||Strikes}.",
+										"Spellcasters and other creatures that aren't meant to be competent in a direct fight might use the low damage value, or even less if they completely don't care about their {@action Strike||Strikes}.",
+										"On Table 2\u201310, you'll find a damage expression (a die roll or rolls plus a flat modifier) you can use as is, or you can take the damage in parentheses and build your own damage expression to hit that number. If you do the latter, remember that a d4 counts as 2.5 damage, a d6 as 3.5, a d8 as 4.5, a d10 as 5.5, and a d12 as 6.5. Usually a damage expression works best when roughly half the damage is from dice and half is from the flat modifier. If your creature deals special damage, like {@damage 1d6} fire from {@item flaming (generic)||flaming} attacks, that counts toward its total damage per {@action Strike}. Keep in mind that a creature using a weapon should have a damage value that feels right for that weapon. Extreme damage works well for two-handed weapons that uses d10s or d12s for damage. On the other hand, a dagger uses only d4s, so a dagger wielder would need something like sneak attack to deal extreme damage, or you might compensate for the dagger's lower damage per {@action Strike} by giving the creature the ability to attack more efficiently or use other tricks."
 									]
 								},
 								{
@@ -5673,7 +5670,7 @@
 							"name": "Spells",
 							"entries": [
 								"Your creature might have magical abilities that are best represented by spells. If you're making a highly spellcasting-themed creature, give it prepared or spontaneous spells. For a creature that has spells due to its magical nature, especially if that magic isn't its core focus, consider giving it some innate spells instead.",
-								"How many spells you should give a creature depends on how you expect it to spend its actions in combat. If it's primarily going to be making Strikes, it might not have any spells, or it might just have a few to help it move around better or protect against certain types of magic.",
+								"How many spells you should give a creature depends on how you expect it to spend its actions in combat. If it's primarily going to be making {@action Strike||Strikes}, it might not have any spells, or it might just have a few to help it move around better or protect against certain types of magic.",
 								"When choosing spells, lean hard into the creature's theme. While many PCs choose spells to cover a wide variety of situations, creatures are more evocative the more focused they are. Consider selecting about three-quarters of the spells based on relevance to the theme and the remainder for other things. However, make sure the spells aren't one note\u2014selecting {@i fireball} for most of a creature's spell slots doesn't make for a compelling fire creature in the way a diverse selection of fire spells would.",
 								"When choosing spells, some spells won't be very useful if cast at an extremely low level compared to the creature's levels. Most notably, damaging spells drop off in usefulness for a creature that's expected to last only a single fight. A damaging spell 2 levels below the highest level a creature of that level can cast is still potentially useful, but beyond that, don't bother. Spells that have the {@trait incapacitation} trait should be in the highest level slot if you want the creature to potentially get their full effect against PCs.",
 								{
@@ -5684,7 +5681,7 @@
 									"entries": [
 										"Set the creature's spell DC and spell attack roll using Table 2\u201311 on page 66. Most creatures use the same DC for all their spells, even if they have multiple types, such as a creature with both prepared spells and innate spells.",
 										"Use the high numbers for primary casters, and the moderate numbers for creatures that have some supplemental spells but are focused more on combat.",
-										"At 15th level and higher, the extreme numbers become standard for spellcasters. A few creatures might use the extreme numbers at lower levels, but they tend to be highly specialized, with very weak defenses and Strikes.",
+										"At 15th level and higher, the extreme numbers become standard for spellcasters. A few creatures might use the extreme numbers at lower levels, but they tend to be highly specialized, with very weak defenses and {@action Strike||Strikes}.",
 										"Secondary spellcasters can go up to high numbers if they're above 15th level and have offensive spells. There is no low value\u2014the creature shouldn't have any spells in the first place if it would be that bad at using them!"
 									]
 								},
@@ -6056,7 +6053,7 @@
 									"entries": [
 										"Abilities a creature uses on its turn have the most flexibility and scope. You can use Table 2\u201311 to determine active ability DCs as well as spell DCs. You can have an ability use 1 to 3 actions as needed (or be a free action in rare cases) and use just about any type of tactic. Feats, spells, and existing creature abilities provide a wide variety of examples, so look for something similar to your idea to use as a basis.",
 										"Consider how you want your creature to spend its turns.",
-										"Two-action activities pretty much define the creature's turn, and single actions work best for supplemental benefits or normal Strikes. And as you build out your idea of a creature's turn, don't forget about movement! A creature often needs to spend actions getting into position, especially early in a fight. This is especially challenging with meleeonly creatures. You can give such creatures abilities similar to Sudden Charge or the deadly mantis's Leaping Grab.",
+										"Two-action activities pretty much define the creature's turn, and single actions work best for supplemental benefits or normal {@action Strike||Strikes}. And as you build out your idea of a creature's turn, don't forget about movement! A creature often needs to spend actions getting into position, especially early in a fight. This is especially challenging with meleeonly creatures. You can give such creatures abilities similar to Sudden Charge or the deadly mantis's Leaping Grab.",
 										"Use 3-action abilities sparingly, as a creature can't use them if it is {@condition slowed} or {@condition stunned}\u2014making a creature's coolest or most defining ability use up 3 actions might mean the creature never gets to use it. These activities should be reserved for abilities that include some movement (like Trample) or that the creature is likely to use before engaging in combat. Don't make an ability use 3 actions as a way to balance it\u2014saying \"This can be more powerful than other abilities because it is less likely to work,\" is a recipe for frustration if you've made a cool ability that's too hard or even impossible for the creature to use.",
 										"Be especially careful with activities when designing boss creatures. They're likely to get targeted with the PCs' most powerful detrimental effects, get {@condition grabbed}, become {@condition slowed}, or otherwise have their actions restricted. Bosses need to have solid options they can use with 1 or 2 actions.",
 										"This lets them use their remaining actions to get away, use a simple ability, or otherwise keep the fight dynamic.",
@@ -6066,7 +6063,7 @@
 											"page": 68,
 											"name": "Free Actions",
 											"entries": [
-												"Use free actions that don't have triggers sparingly, and when you do, they should almost always be used for support or utility actions, not Strikes or movement. If you come up with a free action, consider whether it should be its own action or part of a combo, such as drawing a weapon and attacking. In cases like the latter, you might be better off making a single action that allows the creature to draw a weapon and then {@action Strike}."
+												"Use free actions that don't have triggers sparingly, and when you do, they should almost always be used for support or utility actions, not {@action Strike||Strikes} or movement. If you come up with a free action, consider whether it should be its own action or part of a combo, such as drawing a weapon and attacking. In cases like the latter, you might be better off making a single action that allows the creature to draw a weapon and then {@action Strike}."
 											]
 										},
 										{
@@ -6249,7 +6246,7 @@
 										"Reactions and free actions with triggers can give a creature an impact outside its turn. This can make the fight more interesting, but may also be risky. It's tempting to give every creature a reaction, but that's not necessarily a good idea.",
 										"To decide whether your creature should have a reaction, first consider if the creature has the reflexes or insight to react well in the first place\u2014for instance, an ogre doesn't have {@action Attack of Opportunity} because it's a big oaf. Oozes, constructs, and unintelligent creatures are less likely to have reactions than others for this reason.",
 										"Second, look at the complexity of the encounter your creature is likely to appear in. If you'll have a large number of creatures, skipping reactions can make the fight flow faster. A creature that's more likely to fight solo, on the other hand, might have a reaction to give it a way to continue to be dangerous amid an onslaught of attacks by the party.",
-										"When creating reactions, be careful with \"gotcha\" abilities\u2014ones that punish players for making perfectly reasonable choices, for rolling poorly, and so on. If you include abilities like this, they need to reinforce the creature's core theme and the play style you want it to use in combat. For example, a creature that Strikes as a reaction when someone fails an attack roll will encourage PCs to use their actions on other tactics, rather than attacking multiple times each turn. Is that what you want? Is this dynamic essential for making the creature feel like it's supposed to? This isn't the type of ability you'd give to any old creature\u2014 only an incredible duelist or something similar.",
+										"When creating reactions, be careful with \"gotcha\" abilities\u2014ones that punish players for making perfectly reasonable choices, for rolling poorly, and so on. If you include abilities like this, they need to reinforce the creature's core theme and the play style you want it to use in combat. For example, a creature that {@action Strike||Strikes} as a reaction when someone fails an attack roll will encourage PCs to use their actions on other tactics, rather than attacking multiple times each turn. Is that what you want? Is this dynamic essential for making the creature feel like it's supposed to? This isn't the type of ability you'd give to any old creature\u2014only an incredible duelist or something similar.",
 										"Reactions should require something out of the ordinary to happen, or should be relatively weak if triggered by something ordinary. A reaction that triggers anytime someone tries to {@action Strike} a creature is likely to be perceived by the players as uninteresting because it's so predictable.",
 										"The best reactions should be telegraphed so when they happen, it makes sense to the players. Think of one of the core reactions of the game: {@feat Shield Block}. The creature raises its shield\u2014an obvious action the PCs can see\u2014so when it blocks damage from an attack, that makes perfect sense.",
 										"Similarly, if you made a crystalline creature, you might have it build up sonic energy in a low thrum, so when it uses a reaction to release a burst of sonic energy when hit, the players can say, \"Oh, I should have seen that coming.\"",
@@ -7389,7 +7386,7 @@
 													},
 													{
 														"name": "Weaknesses",
-														"entry": "area damage, splash damage"
+														"entry": "area damage, {@trait splash} damage"
 													},
 													{
 														"name": "Resistances",
@@ -7539,7 +7536,7 @@
 									"page": 73,
 									"name": "CLASS ABILITIES",
 									"entries": [
-										"You don't need to give an NPC all the abilities from its class\u2014 especially those that just alter numbers. The following abilities are good quick choices that make for more interesting encounters.",
+										"You don't need to give an NPC all the abilities from its class\u2014especially those that just alter numbers. The following abilities are good quick choices that make for more interesting encounters.",
 										{
 											"type": "list",
 											"style": "list-no-bullets",
@@ -9145,7 +9142,7 @@
 										]
 									]
 								},
-								"You can use the table found here to quickly apply a quirk to any item, such as items found as treasure or new items that a PC creates. Rather than rolling, you can instead choose one yourself or invent a new quirk. Item quirks don't normally have any {@trait mechanical} effect, since their only purpose is to be colorful and further flesh out the world, though you can add one if you so choose. Such."
+								"You can use the table found here to quickly apply a quirk to any item, such as items found as treasure or new items that a PC creates. Rather than rolling, you can instead choose one yourself or invent a new quirk. Item quirks don't normally have any mechanical effect, since their only purpose is to be colorful and further flesh out the world, though you can add one if you so choose. Such."
 							]
 						}
 					]
@@ -9157,7 +9154,7 @@
 					"name": "Item Quirks",
 					"blue": true,
 					"entries": [
-						"You can use the table found here to quickly apply a quirk to any item, such as items found as treasure or new items that a PC creates. Rather than rolling, you can instead choose one yourself or invent a new quirk. Item quirks don't normally have any {@trait mechanical} effect, since their only purpose is to be colorful and further flesh out the world, though you can add one if you so choose. Such effects should never grant more than a +1 item bonus or \u20131 item penalty, and even then the statistic or check it applies to should be narrow. For a quirk that grants an item the ability to speak, you choose the language based on the history of the item, or your best guess of what that history might be. It's typically a language spoken by the item's creator.",
+						"You can use the table found here to quickly apply a quirk to any item, such as items found as treasure or new items that a PC creates. Rather than rolling, you can instead choose one yourself or invent a new quirk. Item quirks don't normally have any mechanical effect, since their only purpose is to be colorful and further flesh out the world, though you can add one if you so choose. Such effects should never grant more than a +1 item bonus or \u20131 item penalty, and even then the statistic or check it applies to should be narrow. For a quirk that grants an item the ability to speak, you choose the language based on the history of the item, or your best guess of what that history might be. It's typically a language spoken by the item's creator.",
 						{
 							"type": "table",
 							"source": "GMG",
@@ -9796,7 +9793,8 @@
 							"page": 90,
 							"name": "Specific Cursed Items",
 							"entries": [
-								"The following are a few examples of cursed items."
+								"The following are a few examples of cursed items.",
+								"{@note Please visit the {@filter items page|items||source=gmg|item=cursed} to view all cursed items.}"
 							]
 						},
 						{
@@ -9806,7 +9804,8 @@
 							"name": "Item Curses",
 							"entries": [
 								"Most curses alter a base item. Item curses alter their base item, much like a property rune, though they can't be detected or identified unless a creature critically succeeds at a check to Identify the Item. A curse can be applied to the specific types of magic items listed in its Usage entry.",
-								"Curses typically can't be removed or transferred from the item, though at your discretion, either might be possible after the curse is {@condition broken}. If the PCs manage to break the curse, the newly uncursed item could be quite valuable."
+								"Curses typically can't be removed or transferred from the item, though at your discretion, either might be possible after the curse is {@condition broken}. If the PCs manage to break the curse, the newly uncursed item could be quite valuable.",
+								"{@note Please visit the {@filter items page|items||source=gmg|category=curse} to view all item curses.}"
 							]
 						}
 					]
@@ -9859,7 +9858,7 @@
 							"page": 95,
 							"name": "Relic Aspects",
 							"entries": [
-								"Each relic is associated with aspects\u2014typically two\u2014that speak to its overall concept and purpose. The individual gifts each have an associated aspect. You should almost always select gifts that have an aspect matching one of those found on the relic. For example, a brass dagger recovered from the City of Brass might have the fire and mind aspects, which means that it could have the flare bolt gift (which has the fire aspect), but not the rolling geode gift (which has the earth aspect)",
+								"Each relic is associated with aspects\u2014typically two\u2014that speak to its overall concept and purpose. The individual gifts each have an associated aspect. You should almost always select gifts that have an aspect matching one of those found on the relic. For example, a brass dagger recovered from the City of Brass might have the fire and mind aspects, which means that it could have the {@relicGift flare bolt} gift (which has the fire aspect), but not the {@relicGift rolling geode} gift (which has the earth aspect)",
 								"Usually you can determine at least one aspect of a relic easily by looking at the history of the item or personality of the character. For example, if a player decides that their background relic is a rusty mace wielded by the character's great grandmother in battle against rising undead hordes, the mace might have the life aspect, as it was used to slay countless undead creatures. There's no harm in letting the player choose an aspect for a background relic; through play, the item will reveal another aspect associated with it. In the previous example, the mace might reveal itself to have powers against demons as well, in which case its aspects might be celestial and life."
 							]
 						},
@@ -9871,58 +9870,13 @@
 							"entries": [
 								"As a relic's bearer performs mighty deeds and advances their story, the relic gets stronger. The most basic advancement for a relic is its level, which always matches that of its owner. Weapons and armor can gain fundamental runes normally. You decide what, if any, property runes can be added to a given relic; by default, they can't have property runes, like any other specific item.",
 								"The more complex advancement comes from gifts.",
-								"Table 2\u201322: Relic Gifts shows the typical number of gifts a relic should have at a given level, but relics don't follow this strictly. Rather, gifts arise according to the pace of the story, the needs of the campaign, and the relationship between the character and the relic. Generally speaking, this results in a relic gaining one gift for every 4 levels its bearer has, but this might fluctuate as the campaign progresses. For example, a relic might gain its first gift at 4th level after the bearer defeats a powerful foe. It might then gain its second at 7th, after they perform a special ritual. That same relic might not gain another gift until 13th level and then again at 16th as the player reaches other major milestones.",
+								"{@table Relic Gifts|GMG|Table 2\u201322: Relic Gifts} shows the typical number of gifts a relic should have at a given level, but relics don't follow this strictly. Rather, gifts arise according to the pace of the story, the needs of the campaign, and the relationship between the character and the relic. Generally speaking, this results in a relic gaining one gift for every 4 levels its bearer has, but this might fluctuate as the campaign progresses. For example, a relic might gain its first gift at 4th level after the bearer defeats a powerful foe. It might then gain its second at 7th, after they perform a special ritual. That same relic might not gain another gift until 13th level and then again at 16th as the player reaches other major milestones.",
 								"The gift types\u2014minor, major, and grand\u2014indicate their general power level. Again, the table indicates what's generally appropriate at certain levels, but you can alter them as you see fit. You should usually avoid giving a minor gift at 10th level or higher, because it just won't be that impressive, though some of them scale well enough to be interesting at higher levels. The Gold Piece Equivalent entry for each gift helps you determine how much you should reduce treasure when using relics (see Adjusting Treasure below)",
 								{
-									"type": "table",
-									"source": "GMG",
-									"page": 95,
-									"name": "RELIC GIFTS",
-									"id": "2-22",
-									"colStyles": [
-										"text-center",
-										"text-center",
-										"text-center",
-										"text-center"
-									],
-									"rows": [
-										[
-											"Number of Gifts",
-											"Minimum Level",
-											"Gift Type",
-											"Gold Piece Equivalent"
-										],
-										[
-											"1",
-											"1st",
-											"Minor",
-											"20 gp"
-										],
-										[
-											"2",
-											"5th",
-											"Minor",
-											"160 gp"
-										],
-										[
-											"3",
-											"9th",
-											"Major",
-											"700 gp"
-										],
-										[
-											"4",
-											"13th",
-											"Major",
-											"3,000 gp"
-										],
-										[
-											"5",
-											"17th",
-											"Grand",
-											"15,000 gp"
-										]
-									]
+									"type": "data",
+									"tag": "table",
+									"name": "Relic Gifts",
+									"source": "GMG"
 								},
 								"You decide what gifts a relic gains, generally by either selecting a single gift or offering two paths for the relic to grow and allowing the player to choose, but this should be informed by the story and the nature of the character bearing the relic. A relic should complement the bearer, bolstering the bearer's strengths and helping to overcome their weaknesses. Within that framework, you should try to maintain a cohesive theme for the relic."
 							]
@@ -9933,7 +9887,7 @@
 							"page": 95,
 							"name": "Adjusting Treasure",
 							"entries": [
-								"When you incorporate relics into your game, you can adjust the treasure gained by the party down to account for the relics increasing in power. Essentially, some of the treasure from Table 10\u20139: Party Treasure by Level on page 509 of the {@i Core Rulebook} should be replaced with relic seeds and gifts instead. You can use the relic's minimum level, replacing a permanent item of that level, or you can use the gp equivalent. Keep in mind that relic gifts are often a little more powerful than other items with the same Price even when they start out, and they often scale without any additional costs, so PCs with relics will usually be a bit more powerful.",
+								"When you incorporate relics into your game, you can adjust the treasure gained by the party down to account for the relics increasing in power. Essentially, some of the treasure from {@table Party Treasure by Level||Table 10\u20139: Party Treasure by Level} on page 509 of the {@i Core Rulebook} should be replaced with relic seeds and gifts instead. You can use the relic's minimum level, replacing a permanent item of that level, or you can use the gp equivalent. Keep in mind that relic gifts are often a little more powerful than other items with the same Price even when they start out, and they often scale without any additional costs, so PCs with relics will usually be a bit more powerful.",
 								"If you prefer, you can grant relics in addition to other rewards. This means PCs will be much more powerful, but you're rewarding their investment in the story."
 							]
 						},
@@ -9945,6 +9899,15 @@
 							"entries": [
 								"A relic seed can be quite simple: imagine a standard item with two aspects and an appearance that matches the theme. You can also use an existing magic item for a campaign relic; pick two aspects for it, and tweak its appearance or characteristics to make it clearly different from other items of its type. You can choose a tradition for the seed and apply that trait to the seed and all the gifts of the seed. This tradition might be derived from the background of the item, or it might appear or change through story moments involving the relic.",
 								"If you want a relic to have an additional special benefit, you can design it to grant a bonus to a skill, typically a +1 item bonus for a 3rd-level relic."
+							]
+						},
+						{
+							"type": "pf2-brown-box",
+							"name": "Player-Driven Relics",
+							"page": 96,
+							"entries": [
+								"Though these rules assume you as the GM are providing relic gifts as a form of treasure with input from the players, you can instead have the players make all the decisions for their relics. Encourage the players to choose different styles of items and aspects to match their characters' themes, rather than simply choosing the most powerful combination of options. Have players describe how their relic gets more powerful in the story. What acts from previous sessions lent the relic power? What special meditations or practices did they perform to unlock new gifts? How does it feel to have the relic grow?",
+								"As the item and the character level up, the player chooses which gifts the item gets from the list as a part of character advancement. You still adjust treasure as normal for incorporating relics into your game. In fact, if the player tries to optimize the combinations, they will likely be more powerful than under the standard method."
 							]
 						},
 						{
@@ -9962,6 +9925,14 @@
 									"name": "Gift Saves and Spell Attack Rolls",
 									"entries": [
 										"Many gifts allow for a saving throw or have other abilities that change as the relic goes up in level. The DC for any saving throw called for by a gift is its owner's class DC or spell DC. The spell attack modifier of a gift is 10 lower than that DC. A relic's counteract modifier is equal to its owner's counteract modifier."
+									]
+								},
+								"{@note Please visit the {@filter relic gifts page|relicgifts||source=gmg} to view all relic gifts.}",
+								{
+									"type": "pf2-brown-box",
+									"name": "Runes as Gifts",
+									"entries": [
+										"You can substitute runes for gifts. If you choose to allow property runes on the relic, you'll want them to take up rune slots. Otherwise, you can give as many or few as you prefer, just like any other gifts. Runes are sorted into minor, major, and grand categories, but you should use their normal level and Price when you adjust treasure, instead of the number and levels on the {@table Relic Gifts|GMG|Table 2\u201322}. If you're using the player-driven relics variant, it's recommended you do not include this option."
 									]
 								}
 							]
@@ -10016,7 +9987,8 @@
 							"page": 106,
 							"name": "Artifacts",
 							"entries": [
-								"Countless artifacts have been created over the ages, only a few of which are described here."
+								"Countless artifacts have been created over the ages, only a few of which are described here.",
+								"{@note Please visit the {@filter items page|items||source=gmg|item=artifact} to view all artifacts.}"
 							]
 						}
 					]
@@ -11104,7 +11076,7 @@
 							"page": 122,
 							"name": "Design Approach",
 							"entries": [
-								"World building can be approached in many ways, but it fundamentally comes down to a simple preference. Do you start at a high level and zoom in, or do you start small and build up? This section outlines a largely top-down approach, but you can design from the bottom up simply by starting at the end of this section and working backwards. Either way, you may find yourself skipping between sections as inspiration strikes\u2014and that's OK! When building a world, there's a risk of becoming overwhelmed by the sheer number of decisions to be made. Remember that you don't need to make every decision for every aspect of your world all at once. Focus first on the elements you need for your story and the game, then add as much of the rest as you'd like. You'll also want to allow room for input from your players\u2014 gaming sessions are more memorable and engaging when the storytelling experience is shared between everyone at the table (page 32 has more information on players contributing to the narrative)",
+								"World building can be approached in many ways, but it fundamentally comes down to a simple preference. Do you start at a high level and zoom in, or do you start small and build up? This section outlines a largely top-down approach, but you can design from the bottom up simply by starting at the end of this section and working backwards. Either way, you may find yourself skipping between sections as inspiration strikes\u2014and that's OK! When building a world, there's a risk of becoming overwhelmed by the sheer number of decisions to be made. Remember that you don't need to make every decision for every aspect of your world all at once. Focus first on the elements you need for your story and the game, then add as much of the rest as you'd like. You'll also want to allow room for input from your players\u2014gaming sessions are more memorable and engaging when the storytelling experience is shared between everyone at the table (page 32 has more information on players contributing to the narrative)",
 								"Before you decide anything else, however, you should establish your concept and your goals. Do you envision a high-magic steampunk setting where humans are a tiny minority? A world where the only magic derives from squabbling pantheons of gods whose followers are caught up in their wars for power? A quaint town isolated from an otherwise-unknown world beyond a vast, impenetrable forest of mist-choked, skeletal trees? Are you designing a world for a multi-year campaign, or for a fast-paced one-shot adventure? Having an idea in mind will help steer your choices as you build your world, and knowing your goals will help you focus on building what you need.",
 								{
 									"type": "pf2-h3",
@@ -11775,7 +11747,7 @@
 									"page": 136,
 									"name": "Alignment Trait",
 									"entries": [
-										"Certain planes, particularly in the Outer Sphere, are attuned to an alignment. Most inhabitants share that alignment\u2014 even powerful creatures such as deities. Planes with the neutral alignment trait are more often a mix of alignments than strongly neutral, and planes with no alignment affinity simply don't have an alignment trait, rather than being neutral. Alignments are given as an abbreviation ({@i Pathfinder Bestiary} 345), which appears first in the plane's list of traits.",
+										"Certain planes, particularly in the Outer Sphere, are attuned to an alignment. Most inhabitants share that alignment\u2014even powerful creatures such as deities. Planes with the neutral alignment trait are more often a mix of alignments than strongly neutral, and planes with no alignment affinity simply don't have an alignment trait, rather than being neutral. Alignments are given as an abbreviation ({@i Pathfinder Bestiary} 345), which appears first in the plane's list of traits.",
 										"Spells that share any of the plane's alignment traits are enhanced, and those with opposing traits are impeded. For instance, in the chaotic evil Abyss, chaotic and evil spells are enhanced, and lawful and good spells are impeded."
 									]
 								},
@@ -11851,7 +11823,7 @@
 										"{@b Air:} Planes with this trait consist mostly of open spaces and air of various levels of turbulence, though they also contain rare islands of floating stone and other elements and energies. Air planes usually have breathable atmospheres, though they may include clouds of acidic or toxic gas. Air magic is enhanced, and earth magic is impeded. Earth creatures often find themselves at a disadvantage within air planes, which tend to at least make them uncomfortable, as there is little solid ground for them to gain their bearings.",
 										"{@b Earth:} These planes are mostly solid. Travelers arriving upon an earth plane risk suffocation if they don't reach a cavern or some other air pocket within the plane's solid matter. Creatures who can't burrow are entombed in the plane's substance and must attempt to dig their way toward an air pocket. Earth magic is enhanced, and air magic is impeded. Air creatures are ill at ease, as they rarely have the space to move freely through even the most lofty warrens.",
 										"{@b Fire:} Planes with this trait are composed of flames that continually burn with no fuel source. Fire planes are extremely {@condition hostile} to non-fire creatures.",
-										"Unprotected wood, paper, cloth, and other flammable materials catch fire almost immediately, and creatures wearing unprotected flammable clothing catch fire, typically taking {@damage 1d6} {@condition persistent damage ||persistent fire damage}. Extraplanar creatures take moderate environmental fire damage at the end of each round (sometimes minor environmental damage in safer areas, or major or massive damage in even more fiery areas). Fire magic is enhanced, and cold and water magic are impeded. Water creatures are extremely uncomfortable on a fire plane, and any natural resistance they have against fire doesn't function against this environmental fire damage.",
+										"Unprotected wood, paper, cloth, and other flammable materials catch fire almost immediately, and creatures wearing unprotected flammable clothing catch fire, typically taking {@damage 1d6} {@condition persistent damage||persistent fire damage}. Extraplanar creatures take moderate environmental fire damage at the end of each round (sometimes minor environmental damage in safer areas, or major or massive damage in even more fiery areas). Fire magic is enhanced, and cold and water magic are impeded. Water creatures are extremely uncomfortable on a fire plane, and any natural resistance they have against fire doesn't function against this environmental fire damage.",
 										"{@b Water:} These planes are mostly liquid. Visitors who can't breathe water or reach an air pocket likely drown. Water magic is enhanced, and fire magic is impeded. Creatures with a weakness to water take damage equal to double their weakness at the end of each round.",
 										"{@b Negative:} Planes with this trait are vast, empty reaches that suck the life from the living. They tend to be lonely, haunted planes, {@condition drained} of color and filled with winds carrying the moans of those who died within them. At the end of each round, a living creature takes at least minor negative environmental damage. In the strongest areas of a negative plane, they could take moderate or even major negative damage at the end of each round. This damage has the {@trait death} trait, and if a living creature is reduced to 0 Hit Points by this negative damage and killed, it crumbles into ash and can become a wraith ({@i Bestiary} 335). Negative magic is enhanced, and positive magic is impeded.",
 										"{@b Positive:} These planes are awash with life energy. Colors are brighter, fires are hotter, noises are louder, and sensations are more intense. At the end of each round, an undead creature takes at least minor positive environmental damage. In the strongest areas of a positive plane, they could take moderate or even major positive damage at the end of each round. While this might seem safe for living creatures, positive planes present a different danger. Living creatures regain an amount of HP each round equal to the environmental damage undead take in the same area. If this would bring the living creature above their maximum HP, any excess becomes temporary HP. Unlike normal, these temporary HP combine with each other, and they last until the creature leaves the plane. If a creature's temporary HP from a positive plane ever exceeds its maximum HP, it explodes in a burst of overloaded positive energy, spreading across the area to birth new souls. Positive magic is enhanced, and negative magic is impeded.",
@@ -11866,7 +11838,7 @@
 							"page": 138,
 							"name": "Planar Stat Blocks",
 							"entries": [
-								"Each of the planes listed in the following pages includes a short stat block of key information. The plane's type\u2014 whether it is a plane, dimension, or demiplane\u2014appears in the stat block's heading, followed by the traits that define that plane. The following entries also provide important information about each plane.",
+								"Each of the planes listed in the following pages includes a short stat block of key information. The plane's type\u2014whether it is a plane, dimension, or demiplane\u2014appears in the stat block's heading, followed by the traits that define that plane. The following entries also provide important information about each plane.",
 								"{@b Category:} This indicates whether the plane is an Inner Plane, Outer Plane, Transitive Plane, or dimension.",
 								"{@b Divinities:} A list of all of the deities, demigods, and other powers that call this realm their home.",
 								"{@b Native Inhabitants:} A sample of typical inhabitants of the plane. Also listed are the plane's petitioners, the souls of dead mortals who have been judged and sent on to whichever plane reflects the life they led. More information on petitioners can be found in {@i Pathfinder Bestiary 2}",
@@ -12689,7 +12661,7 @@
 								},
 								"If the means of bypassing the obstacle helps automatically without requiring a check\u2014such as using a certain spell to assist\u2014the PCs typically get 1 Chase Point. You can increase that to 2 if you feel the action is extremely helpful.",
 								"Chase Points represent the ability of the whole group to bypass the obstacle. A character who critically succeeds is able to help the other characters continue onward, while one who critically fails needs extra assistance. Players often have ideas for ways to overcome the obstacle beyond the choices you created for the obstacle. If their idea is applicable, you'll need to determine the DC and skill or other statistic being used for that approach. This is great as long as it's creative, but be wary of a situation where a character who is legendary at a skill tries to justify how they can bypass every obstacle with that skill, such as using {@skill Acrobatics} to tumble around them all, or the like. You can determine that some tactics just won't work against certain obstacles, or would help only one character without benefiting the rest and therefore aren't all that useful.",
-								"Once the PCs accumulate enough Chase Points to overcome the obstacle, they immediately move to the next. Extra Chase Points don't carry over to the next obstacle\u2014 each requires its own number of Chase Points to overcome. However, anyone who hasn't already taken their turn that round can still take it against the new obstacle. Consequently, the characters best suited to overcoming the current obstacle might act first, since the remaining characters might be better suited against the next one. The number of Chase Points the PCs have can never fall below 0.",
+								"Once the PCs accumulate enough Chase Points to overcome the obstacle, they immediately move to the next. Extra Chase Points don't carry over to the next obstacle\u2014each requires its own number of Chase Points to overcome. However, anyone who hasn't already taken their turn that round can still take it against the new obstacle. Consequently, the characters best suited to overcoming the current obstacle might act first, since the remaining characters might be better suited against the next one. The number of Chase Points the PCs have can never fall below 0.",
 								"It might help to put your obstacles in a stat block for easy reference. Inside published adventures, chase obstacles are likely to be presented in stat block form, as follows.",
 								{
 									"type": "data",
@@ -13994,7 +13966,7 @@
 							"name": "Organization Npcs",
 							"entries": [
 								"Followers and lieutenants are noncombatant NPCs of the levels indicated on Table 3\u20133: Organization Statistics by Level. When an organization has followers or lieutenants of several levels, most of them are at the lowest possible level. As a rule of thumb, an organization has twice as many NPCs of a given level than of the next-higher level. This allows you to quickly estimate the level composition of the organization's members, but you can of course change the levels of various followers as much as you like. When the minimum level for lieutenants increases, either the lower-level lieutenants level up to the new minimum, or they become followers of more powerful lieutenants the PCs recruit, whichever fits best with the story.",
-								"Followers and lieutenants are loyal to the PCs and their organization, working to maintain the organization, its base of operations, and their own way of life. Because of this work, PCs don't need to pay for basic upkeep of their base of operations or for expansions to house the burgeoning activity as their organization grows in level\u2014 the followers and lieutenants take care of all of that. But similarly, these followers and lieutenants never get involved in the PCs' adventuring, nor do they provide a source of free magic or labor.",
+								"Followers and lieutenants are loyal to the PCs and their organization, working to maintain the organization, its base of operations, and their own way of life. Because of this work, PCs don't need to pay for basic upkeep of their base of operations or for expansions to house the burgeoning activity as their organization grows in level\u2014the followers and lieutenants take care of all of that. But similarly, these followers and lieutenants never get involved in the PCs' adventuring, nor do they provide a source of free magic or labor.",
 								{
 									"type": "pf2-h3",
 									"source": "GMG",
@@ -15214,7 +15186,7 @@
 									"source": "GMG",
 									"page": 184,
 									"entries": [
-										"In this variant, some creatures exemplify the concepts of extreme good and evil by their very nature. Only fiends, celestials, and other residents of aligned Outer Sphere planes have an alignment. Remove most alignment restrictions\u2014 such as the cleric and champion restrictions\u2014but not ones related to those extraplanar creatures. Replace the removed restrictions with appropriate anathema if necessary."
+										"In this variant, some creatures exemplify the concepts of extreme good and evil by their very nature. Only fiends, celestials, and other residents of aligned Outer Sphere planes have an alignment. Remove most alignment restrictions\u2014such as the cleric and champion restrictions\u2014but not ones related to those extraplanar creatures. Replace the removed restrictions with appropriate anathema if necessary."
 									]
 								},
 								{
@@ -15224,7 +15196,7 @@
 									"page": 184,
 									"entries": [
 										"Changing character alignment can be extremely dramatic under the Core Rulebook rules. Sometimes, this comes as a surprise to the player, as they find out they and the GM had differing ideas on how their acts impact alignment. The incremental alignment variant breaks each axis of alignment into seven steps that reflect how close a character is to shifting alignments.",
-										"This lets you and the player better understand where the character falls, and it allows a player who wants to play a character living on the edge between alignments to see that represented in the rules. This is not meant to be a highly granular system or one a player can exploit by repeatedly making trivial gestures toward a given alignment. It's meant to indicate the trends of a character's behavior and foreshadow any alignment change that might occur over time. It's typically harder to reach the ends of the scale through minor acts, especially for the evil versus good axis. A character who commits multiple minor acts toward an alignment might shift one step, but it would take a truly reprehensible act to shift them fully to evil all at once\u2014 and to recover it could take a long-term atonement and commitment to good.",
+										"This lets you and the player better understand where the character falls, and it allows a player who wants to play a character living on the edge between alignments to see that represented in the rules. This is not meant to be a highly granular system or one a player can exploit by repeatedly making trivial gestures toward a given alignment. It's meant to indicate the trends of a character's behavior and foreshadow any alignment change that might occur over time. It's typically harder to reach the ends of the scale through minor acts, especially for the evil versus good axis. A character who commits multiple minor acts toward an alignment might shift one step, but it would take a truly reprehensible act to shift them fully to evil all at once\u2014and to recover it could take a long-term atonement and commitment to good.",
 										"If a rule depends on a character's alignment, disregard the \"fully\" and \"somewhat\" distinctions. A protection spell keyed against evil works against both somewhat and fully evil characters. However, some spells, like detect alignment, might give more precise information.",
 										{
 											"name": "Changing Alignment",
@@ -16000,7 +15972,7 @@
 									"name": "Building a Dual-Class Character",
 									"entries": [
 										"When building a dual-class character, the primary changes to the character creation process are fairly straightforward. Choose and implement your character's ancestry and background as normal. Then, when you get to the step of choosing a class, select two classes and add everything from each class except Hit Points and starting skills: initial proficiencies, class features, class feats, extra skill feats and skill increases for rogues, and so on. As always, use the highest proficiency granted for a given statistic. For instance, if one class gave you expert proficiency in Will saves and the other gave you master proficiency in Will saves, you would be a master in Will saves.",
-										"Use only the higher Hit Points per level from the two classes. For starting skills, apply the skills automatically granted by each class, and then apply the larger number of additional skills. For instance, a {@class cleric} of {@deity Shelyn}/{@class ranger} would gain Hit Points equal to 10 + their Constitution modifier per level, start with the trained proficiency rank in {@skill Nature} and {@skill Survival} from {@class ranger} and {@skill Religion} and either {@skill Crafting} or {@skill Performance} from {@skill cleric}, and then gain a number of additional skills of their choice equal to 4 + their Intelligence modifier, since the ranger provides the trained proficiency rank in more additional skills than the cleric does (this example doesn't include any skills they gained from their background or other sources). This character would also have the {@classFeature deity|Cleric||1}, {@classFeature divine spellcasting|Cleric||1}, {@classFeature divine font|Cleric||1}, and {@classFeature doctrine|Cleric||1} class features from {@class cleric} plus the {@classFeature Hunt Prey|Ranger||1}, {@classFeature hunter's edge|Ranger||1}, and {@classFeature ranger feats|Ranger||1||ranger feat} class features from {@class ranger}.",
+										"Use only the higher Hit Points per level from the two classes. For starting skills, apply the skills automatically granted by each class, and then apply the larger number of additional skills. For instance, a {@class cleric} of {@deity Shelyn}/{@class ranger} would gain Hit Points equal to 10 + their Constitution modifier per level, start with the trained proficiency rank in {@skill Nature} and {@skill Survival} from {@class ranger} and {@skill Religion} and either {@skill Crafting} or {@skill Performance} from {@class cleric}, and then gain a number of additional skills of their choice equal to 4 + their Intelligence modifier, since the ranger provides the trained proficiency rank in more additional skills than the cleric does (this example doesn't include any skills they gained from their background or other sources). This character would also have the {@classFeature deity|Cleric||1}, {@classFeature divine spellcasting|Cleric||1}, {@classFeature divine font|Cleric||1}, and {@classFeature doctrine|Cleric||1} class features from {@class cleric} plus the {@classFeature Hunt Prey|Ranger||1}, {@classFeature hunter's edge|Ranger||1}, and {@classFeature ranger feats|Ranger||1||ranger feat} class features from {@class ranger}.",
 										{
 											"type": "pf2-h4",
 											"name": "Spells",
@@ -16344,7 +16316,7 @@
 											"name": "Devastating Attacks",
 											"level": 4,
 											"entries": [
-												"At 4th level, your weapon and unarmed Strikes deal two damage dice instead of one. This increases to three at 12th level and to four at 19th level."
+												"At 4th level, your weapon and unarmed {@action Strike||Strikes} deal two damage dice instead of one. This increases to three at 12th level and to four at 19th level."
 											]
 										},
 										{
@@ -16387,7 +16359,7 @@
 									"entries": [
 										"With this variant, you can ignore as much of {@table Party Treasure by Level|CRB|Table 10\u20139: Party Treasure by Level} on page 509 of the Core Rulebook as you want, though you'll usually want to provide consistent currency. The main area your choice will impact is in spellcasting items, such as scrolls and wands.",
 										"Remove all potency runes, striking runes, and resilient runes. Items that normally grant an item bonus to statistics or damage dice no longer do, other than the base item bonus to AC from armor. Apex items do not increase ability scores. If your world still includes magic items, a safe bet is to continue to give out consumable items at roughly the rate on {@table Party Treasure by Level|CRB|Table 10\u20139} of the Core Rulebook.",
-										"If you choose to eliminate runes entirely, this can reduce the PCs' damage since they won't have runes like flaming or holy. If you've removed nearly all treasure, challenges might become more difficult, even with automatic bonuses."
+										"If you choose to eliminate runes entirely, this can reduce the PCs' damage since they won't have runes like {@item flaming (generic)||flaming} or {@item holy}. If you've removed nearly all treasure, challenges might become more difficult, even with automatic bonuses."
 									]
 								}
 							]
@@ -17228,7 +17200,7 @@
 							"page": 203,
 							"name": "Adjusting Level",
 							"entries": [
-								"Sometimes you'll need an NPC that fills a particular role\u2014say an angry drunk\u2014 but the level in the stat block presented isn't the right fit for your group. You can start by applying the elite or weak adjustments on page 6 of the {@i Bestiary} to adjust the NPC's level by 1 in either direction.",
+								"Sometimes you'll need an NPC that fills a particular role\u2014say an angry drunk\u2014but the level in the stat block presented isn't the right fit for your group. You can start by applying the elite or weak adjustments on page 6 of the {@i Bestiary} to adjust the NPC's level by 1 in either direction.",
 								"If you need to change the NPC's level beyond that, use the values from the tables in Building Creatures in Chapter 2, and add or remove special abilities as necessary to suit the NPC's new level."
 							]
 						},
@@ -18133,7 +18105,7 @@
 							"page": 219,
 							"name": "Poacher",
 							"entries": [
-								"Some forests are protected by kings, others only by wild things. Laws against hunting may protect the private reserves of nobles or guard the viability of animal populations of shared forests during specific seasons. Poachers violate those laws\u2014 sometimes out of greed, sometimes out of desperation, and sometimes for sport.",
+								"Some forests are protected by kings, others only by wild things. Laws against hunting may protect the private reserves of nobles or guard the viability of animal populations of shared forests during specific seasons. Poachers violate those laws\u2014sometimes out of greed, sometimes out of desperation, and sometimes for sport.",
 								"Although penalties against poaching often include public shaming (see Penalties for Poaching), in lean times a successful poacher is a local hero."
 							]
 						},

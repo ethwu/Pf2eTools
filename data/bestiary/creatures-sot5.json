@@ -31,7 +31,7 @@
 			},
 			"languages": {
 				"languages": [
-					"Ikeshti"
+					"ikeshti"
 				],
 				"abilities": [
 					"can speak and understand only simple words"
@@ -59,62 +59,21 @@
 				"wis": 4,
 				"cha": 0
 			},
-			"ac": {
-				"std": 35
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 27
-				},
-				"ref": {
-					"std": 25
-				},
-				"will": {
-					"std": 22
-				}
-			},
-			"hp": [
-				{
-					"hp": 280
-				}
-			],
-			"resistances": [
-				{
-					"name": "cold",
-					"amount": 15
-				},
-				{
-					"name": "fire",
-					"amount": 15
-				},
-				{
-					"name": "mental",
-					"amount": 15
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "jaws",
 					"attack": 29,
-					"damage": "{@damage 3d8+14} piercing and {@damage 2d8} {@condition persistent damage ||persistent bleed}"
+					"damage": "{@damage 3d8+14} piercing and {@damage 2d8} {@condition persistent damage||persistent bleed}"
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile"
 					],
@@ -139,7 +98,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -167,7 +125,43 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 35
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 27
+					},
+					"ref": {
+						"std": 25
+					},
+					"will": {
+						"std": 22
+					}
+				},
+				"hp": [
+					{
+						"hp": 280
+					}
+				],
+				"resistances": [
+					{
+						"name": "cold",
+						"amount": 15
+					},
+					{
+						"name": "fire",
+						"amount": 15
+					},
+					{
+						"name": "mental",
+						"amount": 15
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Contemplative",
@@ -198,7 +192,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Akitonian"
+					"akitonian"
 				],
 				"abilities": [
 					"telepathy 30 feet"
@@ -229,37 +223,6 @@
 				"wis": 2,
 				"cha": 3
 			},
-			"ac": {
-				"std": 19
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 4
-				},
-				"ref": {
-					"std": 9
-				},
-				"will": {
-					"std": 10
-				}
-			},
-			"hp": [
-				{
-					"hp": 32
-				}
-			],
-			"weaknesses": [
-				{
-					"name": "physical",
-					"amount": 2
-				}
-			],
-			"resistances": [
-				{
-					"name": "mental",
-					"amount": 5
-				}
-			],
 			"speed": {
 				"walk": 5,
 				"fly": 25
@@ -267,10 +230,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"finesse"
 					],
@@ -281,8 +240,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 18,
 					"attack": 10,
@@ -339,11 +297,45 @@
 					{
 						"name": "Atrophied",
 						"entries": [
-							"A contemplative's limbs are withered and incapable of significant physical exertion. A contemplative can't properly wield a two-handed weapon or object without dedicating its telekinetic powers to supporting the weapon, and even then, it takes a \u20132 penalty to Strikes with such a weapon. It also can't use its spells or fly as long as it wields a two-handed weapon or object."
+							"A contemplative's limbs are withered and incapable of significant physical exertion. A contemplative can't properly wield a two-handed weapon or object without dedicating its telekinetic powers to supporting the weapon, and even then, it takes a \u20132 penalty to {@action Strike||Strikes} with such a weapon. It also can't use its spells or fly as long as it wields a two-handed weapon or object."
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 19
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 4
+					},
+					"ref": {
+						"std": 9
+					},
+					"will": {
+						"std": 10
+					}
+				},
+				"hp": [
+					{
+						"hp": 32
+					}
+				],
+				"weaknesses": [
+					{
+						"name": "physical",
+						"amount": 2
+					}
+				],
+				"resistances": [
+					{
+						"name": "mental",
+						"amount": 5
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Contemplative Meditant",
@@ -373,7 +365,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Akitonian"
+					"akitonian"
 				],
 				"abilities": [
 					"telepathy 60 feet",
@@ -396,37 +388,6 @@
 				"wis": 6,
 				"cha": 4
 			},
-			"ac": {
-				"std": 38
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 21
-				},
-				"ref": {
-					"std": 27
-				},
-				"will": {
-					"std": 29
-				}
-			},
-			"hp": [
-				{
-					"hp": 275
-				}
-			],
-			"weaknesses": [
-				{
-					"name": "physical",
-					"amount": 10
-				}
-			],
-			"resistances": [
-				{
-					"name": "mental",
-					"amount": 15
-				}
-			],
 			"speed": {
 				"walk": 5,
 				"fly": 25
@@ -434,10 +395,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"finesse",
 						"magical"
@@ -449,8 +406,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 39,
 					"attack": 29,
@@ -507,7 +463,9 @@
 								},
 								{
 									"name": "disappearance",
-									"note": "self only"
+									"notes": [
+										"self only"
+									]
 								},
 								{
 									"name": "discern location"
@@ -574,15 +532,49 @@
 							"occult"
 						],
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "round"
 						},
 						"entries": [
-							"The contemplative attempts to hinder a target creature's personal flow of time. The target must be within 60 feet, and once targeted must attempt a DC 36 Will save, becoming {@condition slowed||slowed 1} on a failure or {@condition slowed||slowed 2} on a critical failure. Each time an affected creature ends its turn, its {@condition slowed} value decreases by 1. A creature that critically succeeds on their save against Temporal Suppression is temporarily immune to it for 24 hours."
+							"The contemplative attempts to hinder a target creature's personal flow of time. The target must be within 60 feet, and once targeted must attempt a {@dc 36} Will save, becoming {@condition slowed||slowed 1} on a failure or {@condition slowed||slowed 2} on a critical failure. Each time an affected creature ends its turn, its {@condition slowed} value decreases by 1. A creature that critically succeeds on their save against Temporal Suppression is temporarily immune to it for 24 hours."
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 38
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 21
+					},
+					"ref": {
+						"std": 27
+					},
+					"will": {
+						"std": 29
+					}
+				},
+				"hp": [
+					{
+						"hp": 275
+					}
+				],
+				"weaknesses": [
+					{
+						"name": "physical",
+						"amount": 10
+					}
+				],
+				"resistances": [
+					{
+						"name": "mental",
+						"amount": 15
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Contemplative Mentor",
@@ -612,7 +604,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Akitonian"
+					"akitonian"
 				],
 				"abilities": [
 					"telepathy 100 feet",
@@ -635,37 +627,6 @@
 				"wis": 5,
 				"cha": 6
 			},
-			"ac": {
-				"std": 44
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 24
-				},
-				"ref": {
-					"std": 30
-				},
-				"will": {
-					"std": 33
-				}
-			},
-			"hp": [
-				{
-					"hp": 335
-				}
-			],
-			"weaknesses": [
-				{
-					"name": "physical",
-					"amount": 10
-				}
-			],
-			"resistances": [
-				{
-					"name": "mental",
-					"amount": 20
-				}
-			],
 			"speed": {
 				"walk": 5,
 				"fly": 30
@@ -673,10 +634,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"finesse",
 						"magical"
@@ -688,8 +645,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 43,
 					"attack": 33,
@@ -742,7 +698,9 @@
 								},
 								{
 									"name": "disappearance",
-									"note": "self only"
+									"notes": [
+										"self only"
+									]
 								},
 								{
 									"name": "discern location"
@@ -814,8 +772,7 @@
 						"name": "Red Star",
 						"traits": [
 							"page 77"
-						],
-						"entries": []
+						]
 					},
 					{
 						"name": "Project Calm",
@@ -830,7 +787,7 @@
 							"occult"
 						],
 						"entries": [
-							"The contemplative mentor projects a field of perfect calm in a 60-foot emanation. All creatures within the area of effect must succeed at a DC 40 Will save or be unable to take {@condition hostile} actions for 1 round. After using this ability, the contemplative is {@condition drained||drained 1}, or increases its {@condition drained} value by 1 if it was already {@condition drained}. A contemplative mentor can't use this ability if its {@condition drained} value is 3 or more."
+							"The contemplative mentor projects a field of perfect calm in a 60-foot emanation. All creatures within the area of effect must succeed at a {@dc 40} Will save or be unable to take {@condition hostile} actions for 1 round. After using this ability, the contemplative is {@condition drained||drained 1}, or increases its {@condition drained} value by 1 if it was already {@condition drained}. A contemplative mentor can't use this ability if its {@condition drained} value is 3 or more."
 						]
 					},
 					{
@@ -845,8 +802,41 @@
 							"occult"
 						],
 						"entries": [
-							"As contemplative meditant, but DC 40."
+							"As contemplative meditant, but {@dc 40}."
 						]
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 44
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 24
+					},
+					"ref": {
+						"std": 30
+					},
+					"will": {
+						"std": 33
+					}
+				},
+				"hp": [
+					{
+						"hp": 335
+					}
+				],
+				"weaknesses": [
+					{
+						"name": "physical",
+						"amount": 10
+					}
+				],
+				"resistances": [
+					{
+						"name": "mental",
+						"amount": 20
 					}
 				]
 			}
@@ -868,9 +858,9 @@
 			},
 			"languages": {
 				"languages": [
-					"Akitonian",
-					"Aklo",
-					"Common"
+					"akitonian",
+					"aklo",
+					"common"
 				]
 			},
 			"skills": {
@@ -899,38 +889,12 @@
 				"+2 striking dueling pistol (10 thasteron rounds; Guns & Gears 152)",
 				"+2 striking handwraps of mighty blows"
 			],
-			"ac": {
-				"std": 34
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 21
-				},
-				"ref": {
-					"std": 25
-				},
-				"will": {
-					"std": 23
-				},
-				"abilities": [
-					"evasion"
-				]
-			},
-			"hp": [
-				{
-					"hp": 235
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"magical",
@@ -942,10 +906,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"backstabber",
 						"forceful",
@@ -958,17 +918,13 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"concealable",
 						"concussive",
-						"fatal d10",
+						"fatal <d10>",
 						"magical",
-						"range increment 60 feet",
-						"reload 1"
+						"range increment <60 feet>",
+						"reload <1>"
 					],
 					"name": "dueling pistol",
 					"attack": 26,
@@ -1010,11 +966,11 @@
 							"flourish"
 						],
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "turn"
 						},
 						"entries": [
-							"The acolyte makes two unarmed Strikes, or one unarmed {@action Strike} and a dueling pistol {@action Strike}. If both hit the same creature, combine their damages for the purposes of resistances and weaknesses. The acolyte's multiple attack penalty applies normally to these Strikes."
+							"The acolyte makes two unarmed {@action Strike||Strikes}, or one unarmed {@action Strike} and a dueling pistol {@action Strike}. If both hit the same creature, combine their damages for the purposes of resistances and weaknesses. The acolyte's multiple attack penalty applies normally to these {@action Strike||Strikes}."
 						]
 					},
 					{
@@ -1028,7 +984,7 @@
 						],
 						"entries": [
 							"The acolyte takes the stance of thousand ants, a style mimicking the distracting strikes of a swarm of tiny, vicious creatures.",
-							"The acolyte can make thousand wounds unarmed attacks. These deal {@damage 1d12} piercing damage; are in the brawling group; and have the backstabber, {@trait forceful}, and {@trait unarmed} traits. While in this stance, if the acolyte successfully Trips a target, the target is {@condition flat-footed} until the start of the target's next turn."
+							"The acolyte can make thousand wounds unarmed attacks. These deal {@damage 1d12} piercing damage; are in the {@group brawling} group; and have the backstabber, {@trait forceful}, and {@trait unarmed} traits. While in this stance, if the acolyte successfully Trips a target, the target is {@condition flat-footed} until the start of the target's next turn."
 						]
 					},
 					{
@@ -1042,7 +998,31 @@
 					}
 				]
 			},
-			"description": "Human devotee"
+			"description": "Human devotee",
+			"defenses": {
+				"ac": {
+					"std": 34
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 21
+					},
+					"ref": {
+						"std": 25
+					},
+					"will": {
+						"std": 23
+					},
+					"abilities": [
+						"evasion"
+					]
+				},
+				"hp": [
+					{
+						"hp": 235
+					}
+				]
+			}
 		},
 		{
 			"name": "Dwandek",
@@ -1065,9 +1045,9 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Necril",
-					"Undercommon"
+					"common",
+					"necril",
+					"undercommon"
 				]
 			},
 			"skills": {
@@ -1100,52 +1080,7 @@
 			},
 			"items": [
 				"diadem of intellect",
-				"wand of inexhaustible cynicism|som"
-			],
-			"ac": {
-				"std": 40
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 31
-				},
-				"ref": {
-					"std": 27
-				},
-				"will": {
-					"std": 30
-				}
-			},
-			"hp": [
-				{
-					"hp": 270,
-					"abilities": [
-						"negative healing",
-						"rejuvenation"
-					]
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease",
-				"paralyzed",
-				"poison",
-				"unconscious"
-			],
-			"resistances": [
-				{
-					"name": "arcane spell damage",
-					"amount": 5
-				},
-				{
-					"name": "cold",
-					"amount": 20
-				},
-				{
-					"name": "physical",
-					"amount": 15,
-					"note": "except magic bludgeoning"
-				}
+				"{@item 7th-Level Spell Magic Wand||wand} of {@spell inexhaustible cynicism|som}"
 			],
 			"speed": {
 				"walk": 25,
@@ -1154,10 +1089,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"finesse",
 						"magical"
@@ -1169,8 +1100,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Prepared",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"type": "Prepared",
 					"DC": 39,
 					"attack": 29,
@@ -1338,7 +1268,7 @@
 							"necromancy"
 						],
 						"entries": [
-							"30 feet. As lich, but DC 35."
+							"30 feet. As lich, but {@dc 35}."
 						]
 					}
 				],
@@ -1361,7 +1291,7 @@
 							"unit": "reaction"
 						},
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"trigger": "Dwandek attempts a save against an arcane spell but hasn't rolled yet",
@@ -1378,7 +1308,7 @@
 							"unit": "free"
 						},
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"entries": [
@@ -1394,7 +1324,7 @@
 							"necromancy"
 						],
 						"entries": [
-							"As lich, but DC 38."
+							"As lich, but {@dc 38}."
 						]
 					},
 					{
@@ -1405,7 +1335,54 @@
 					}
 				]
 			},
-			"description": "Male human lich necromancer (Pathfinder Bestiary 220)"
+			"description": "Male human lich necromancer (Pathfinder Bestiary 220)",
+			"defenses": {
+				"ac": {
+					"std": 40
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 31
+					},
+					"ref": {
+						"std": 27
+					},
+					"will": {
+						"std": 30
+					}
+				},
+				"hp": [
+					{
+						"hp": 270,
+						"abilities": [
+							"negative healing",
+							"rejuvenation"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyzed",
+					"poison",
+					"unconscious"
+				],
+				"resistances": [
+					{
+						"name": "arcane spell damage",
+						"amount": 5
+					},
+					{
+						"name": "cold",
+						"amount": 20
+					},
+					{
+						"name": "physical",
+						"amount": 15,
+						"note": "except magic bludgeoning"
+					}
+				]
+			}
 		},
 		{
 			"name": "Formian Mageslayer",
@@ -1444,8 +1421,10 @@
 			],
 			"languages": {
 				"languages": [
-					"Akitonian",
-					"Formian",
+					"akitonian",
+					"formian"
+				],
+				"abilities": [
 					"telepathy 120 feet"
 				]
 			},
@@ -1480,37 +1459,6 @@
 				"wis": 7,
 				"cha": 5
 			},
-			"ac": {
-				"std": 38
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 25
-				},
-				"ref": {
-					"std": 28
-				},
-				"will": {
-					"std": 30
-				}
-			},
-			"hp": [
-				{
-					"hp": 240
-				}
-			],
-			"immunities": [
-				"sleep"
-			],
-			"resistances": [
-				{
-					"name": "sonic",
-					"amount": 15
-				},
-				{
-					"name": "spell resistance"
-				}
-			],
 			"speed": {
 				"walk": 30,
 				"fly": 30
@@ -1518,30 +1466,22 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse"
 					],
 					"name": "claw",
 					"attack": 32,
-					"damage": "{@damage 3d10+13} slashing plus {@damage 3d6} {@condition persistent damage ||persistent mental damage} and stupefying touch"
+					"damage": "{@damage 3d10+13} slashing plus {@damage 3d6} {@condition persistent damage||persistent mental damage} and stupefying touch"
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"range 60 feet"
+						"range <60 feet>"
 					],
 					"name": "acid spit",
 					"attack": 32,
-					"damage": "{@damage 3d6+8} acid plus {@damage 3d6} {@condition persistent damage ||persistent acid damage}"
+					"damage": "{@damage 3d6+8} acid plus {@damage 3d6} {@condition persistent damage||persistent acid damage}"
 				}
 			],
 			"abilities": {
@@ -1585,7 +1525,7 @@
 							"abjuration",
 							"primal"
 						],
-						"trigger": "A creature within the formian mageslayer's disrupting aura that the formian mageslayer can see succeeds at a DC {@flatDC 5} flat check to Cast the Spell in the aura",
+						"trigger": "A creature within the formian mageslayer's disrupting aura that the formian mageslayer can see succeeds at a DC {@flatDC 5} flat check to {@action Cast a Spell||Cast the Spell} in the aura",
 						"entries": [
 							"The mageslayer attempts to unravel the spell's magic and attempts to counteract the spell. They use their {@skill Arcana} modifier as their counteract modifier with a counteract level of 8. If the formian mageslayer succeeds, they counter the spell and use the dispersed energy to gain a number of temporary Hit Points equal to twice the spell's level for 1 minute. If the formian mageslayer critically fails this counteract check, their disrupting aura deactivates for 1 minute."
 						]
@@ -1600,11 +1540,45 @@
 							"primal"
 						],
 						"entries": [
-							"A creature damaged by a mageslayer's claw {@action Strike} must succeed at a DC 37 Will save. The creature becomes {@condition stupefied||stupefied 2} for 1 round on a failure. On a critical failure, the creature is {@condition stupefied||stupefied 2} for 1 hour."
+							"A creature damaged by a mageslayer's claw {@action Strike} must succeed at a {@dc 37} Will save. The creature becomes {@condition stupefied||stupefied 2} for 1 round on a failure. On a critical failure, the creature is {@condition stupefied||stupefied 2} for 1 hour."
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 38
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 25
+					},
+					"ref": {
+						"std": 28
+					},
+					"will": {
+						"std": 30
+					}
+				},
+				"hp": [
+					{
+						"hp": 240
+					}
+				],
+				"immunities": [
+					"sleep"
+				],
+				"resistances": [
+					{
+						"name": "sonic",
+						"amount": 15
+					},
+					{
+						"name": "spell resistance"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Formian Queen",
@@ -1642,8 +1616,10 @@
 			],
 			"languages": {
 				"languages": [
-					"Akitonian",
-					"Formian",
+					"akitonian",
+					"formian"
+				],
+				"abilities": [
 					"telepathy 200 feet"
 				]
 			},
@@ -1678,49 +1654,16 @@
 				"wis": 6,
 				"cha": 8
 			},
-			"ac": {
-				"std": 40
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 34
-				},
-				"ref": {
-					"std": 26
-				},
-				"will": {
-					"std": 31
-				}
-			},
-			"hp": [
-				{
-					"hp": 255
-				}
-			],
-			"resistances": [
-				{
-					"name": "all physical",
-					"amount": 15
-				},
-				{
-					"name": "sonic",
-					"amount": 15
-				}
-			],
 			"speed": {
 				"walk": 10
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"magic",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"name": "claw",
 					"attack": 33,
@@ -1729,8 +1672,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"type": "Innate",
 					"DC": 38,
 					"attack": 30,
@@ -1807,7 +1749,7 @@
 							"primal"
 						],
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"entries": [
@@ -1828,7 +1770,7 @@
 							"primal"
 						],
 						"entries": [
-							"A formian queen transfers her consciousness to the body of any formian within range of her telepathy to whom she has a line of effect. As long as the queen's consciousness is outside her body, her body is {@condition unconscious} (though she is aware if any damage is dealt to it). An unwilling target can attempt a DC 38 Will saving throw to resist being possessed, but the queen's offspring are part of her hive mind and thus are almost always willing. The queen receives all sensory input from the target creature; she can speak through it, and she can use her own modifier for Intelligence-, Wisdom-, and Charisma-based skill checks. If the target creature is slain or moves to a different plane from the queen's body, the queen returns to her own body immediately and is {@condition stunned||stunned 1}; otherwise, she can return to her own body as a free action, ending the {@trait possession} effect."
+							"A formian queen transfers her consciousness to the body of any formian within range of her telepathy to whom she has a line of effect. As long as the queen's consciousness is outside her body, her body is {@condition unconscious} (though she is aware if any damage is dealt to it). An unwilling target can attempt a {@dc 38} Will saving throw to resist being possessed, but the queen's offspring are part of her hive mind and thus are almost always willing. The queen receives all sensory input from the target creature; she can speak through it, and she can use her own modifier for Intelligence-, Wisdom-, and Charisma-based skill checks. If the target creature is slain or moves to a different plane from the queen's body, the queen returns to her own body immediately and is {@condition stunned||stunned 1}; otherwise, she can return to her own body as a free action, ending the {@trait possession} effect."
 						]
 					},
 					{
@@ -1844,7 +1786,7 @@
 						],
 						"entries": [
 							"The formian queen unleashes a blast of debilitating telepathic feedback, targeting as many creatures as she wishes within range of her telepathy and to whom she has a line of effect.",
-							"Targeted creatures must attempt a DC 38 Will save.",
+							"Targeted creatures must attempt a {@dc 38} Will save.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -1852,20 +1794,52 @@
 										"The creature is unaffected and is temporarily immune to Telepathic Feedback for 24 hours."
 									],
 									"Success": [
-										"The creature takes {@damage 3d6} mental damage, {@damage 1d6} {@condition persistent damage ||persistent mental damage}, and is {@condition sickened||sickened 1}."
+										"The creature takes {@damage 3d6} mental damage, {@damage 1d6} {@condition persistent damage||persistent mental damage}, and is {@condition sickened||sickened 1}."
 									],
 									"Failure": [
-										"The creature takes {@damage 6d6} mental damage, {@damage 1d6} {@condition persistent damage ||persistent mental damage}, and is {@condition sickened||sickened 2}."
+										"The creature takes {@damage 6d6} mental damage, {@damage 1d6} {@condition persistent damage||persistent mental damage}, and is {@condition sickened||sickened 2}."
 									],
 									"Critical Failure": [
-										"The creature takes {@damage 12d6} mental damage, {@damage 1d6} {@condition persistent damage ||persistent mental damage}, and is {@condition stunned||stunned 3}. Upon recovering from the {@condition stunned} condition, the creature becomes {@condition sickened||sickened 2}."
+										"The creature takes {@damage 12d6} mental damage, {@damage 1d6} {@condition persistent damage||persistent mental damage}, and is {@condition stunned||stunned 3}. Upon recovering from the {@condition stunned} condition, the creature becomes {@condition sickened||sickened 2}."
 									]
 								}
 							}
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 40
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 34
+					},
+					"ref": {
+						"std": 26
+					},
+					"will": {
+						"std": 31
+					}
+				},
+				"hp": [
+					{
+						"hp": 255
+					}
+				],
+				"resistances": [
+					{
+						"name": "all physical",
+						"amount": 15
+					},
+					{
+						"name": "sonic",
+						"amount": 15
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Formian Worker",
@@ -1895,8 +1869,10 @@
 			],
 			"languages": {
 				"languages": [
-					"Akitonian",
-					"Formian",
+					"akitonian",
+					"formian"
+				],
+				"abilities": [
 					"telepathy 30 feet"
 				]
 			},
@@ -1916,31 +1892,6 @@
 				"wis": 1,
 				"cha": 0
 			},
-			"ac": {
-				"std": 16
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 8
-				},
-				"ref": {
-					"std": 4
-				},
-				"will": {
-					"std": 6
-				}
-			},
-			"hp": [
-				{
-					"hp": 20
-				}
-			],
-			"resistances": [
-				{
-					"name": "sonic",
-					"amount": 2
-				}
-			],
 			"speed": {
 				"walk": 30,
 				"burrow": 5
@@ -1948,10 +1899,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"name": "jaws",
 					"attack": 7,
 					"damage": "{@damage 1d4+4} slashing"
@@ -1986,7 +1933,35 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 16
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 8
+					},
+					"ref": {
+						"std": 4
+					},
+					"will": {
+						"std": 6
+					}
+				},
+				"hp": [
+					{
+						"hp": 20
+					}
+				],
+				"resistances": [
+					{
+						"name": "sonic",
+						"amount": 2
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Gluttonworm",
@@ -2028,25 +2003,6 @@
 				"wis": 5,
 				"cha": -1
 			},
-			"ac": {
-				"std": 41
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 35
-				},
-				"ref": {
-					"std": 29
-				},
-				"will": {
-					"std": 32
-				}
-			},
-			"hp": [
-				{
-					"hp": 445
-				}
-			],
 			"speed": {
 				"walk": 30,
 				"burrow": 40
@@ -2054,13 +2010,9 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"deadly 3d10",
-						"reach 20 feet"
+						"deadly <3d10>",
+						"reach <20 feet>"
 					],
 					"name": "jaws",
 					"attack": 37,
@@ -2068,10 +2020,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"name": "body",
 					"attack": 33,
 					"damage": "{@damage 4d8+18} bludgeoning"
@@ -2085,7 +2033,7 @@
 							"aura"
 						],
 						"entries": [
-							"15 feet. Ground in the aura is greater difficult terrain."
+							"15 feet. Ground in the aura is {@quickref greater difficult terrain||3|terrain}."
 						]
 					},
 					{
@@ -2095,13 +2043,13 @@
 							"primal"
 						],
 						"entries": [
-							"A gluttonworm in contact with a significant body of sand, such as a desert or beach, gains fast healing 10. If the gluttonworm is subject to {@condition persistent damage ||persistent bleed}, the flowing blood quickly congeals with the sand covering its body, instantly ending the bleed duration and giving the gluttonworm a +2 circumstance bonus to AC until the end of its next turn."
+							"A gluttonworm in contact with a significant body of sand, such as a desert or beach, gains fast healing 10. If the gluttonworm is subject to {@condition persistent damage||persistent bleed}, the flowing blood quickly congeals with the sand covering its body, instantly ending the bleed duration and giving the gluttonworm a +2 circumstance bonus to AC until the end of its next turn."
 						]
 					},
 					{
 						"name": "Inexorable",
 						"entries": [
-							"The gluttonworm recovers from the {@condition paralyzed}, {@condition slowed}, and {@condition stunned} conditions at the end of its turn. It's also immune to penalties to its Speeds and the {@condition immobilized} condition, and it ignores difficult terrain and greater difficult terrain."
+							"The gluttonworm recovers from the {@condition paralyzed}, {@condition slowed}, and {@condition stunned} conditions at the end of its turn. It's also immune to penalties to its Speeds and the {@condition immobilized} condition, and it ignores {@quickref difficult terrain||3|terrain} and {@quickref greater difficult terrain||3|terrain}."
 						]
 					}
 				],
@@ -2124,7 +2072,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The gluttonworm Strides up to double its Speed and can move through the spaces of Large or smaller creatures, gulping each creature whose space the worm enters and attempting a body {@action Strike} against each of them. The gluttonworm can use this {@action Strike} on each creature only once in a single use of Gulping Charge. Creatures can attempt a DC 41 basic Reflex save against this damage."
+							"The gluttonworm Strides up to double its Speed and can move through the spaces of Large or smaller creatures, gulping each creature whose space the worm enters and attempting a body {@action Strike} against each of them. The gluttonworm can use this {@action Strike} on each creature only once in a single use of Gulping Charge. Creatures can attempt a {@dc 41} basic Reflex save against this damage."
 						]
 					},
 					{
@@ -2140,7 +2088,7 @@
 							"primal"
 						],
 						"entries": [
-							"The gluttonworm exhales swirling sand in a 60-foot cone. Creatures in the area must attempt a DC 41 Reflex save. It can't Spew Sandstorm again for {@dice 1d4} rounds.",
+							"The gluttonworm exhales swirling sand in a 60-foot cone. Creatures in the area must attempt a {@dc 41} Reflex save. It can't Spew Sandstorm again for {@dice 1d4} rounds.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -2177,7 +2125,29 @@
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 41
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 35
+					},
+					"ref": {
+						"std": 29
+					},
+					"will": {
+						"std": 32
+					}
+				},
+				"hp": [
+					{
+						"hp": 445
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Ikeshti Brood-Minder",
@@ -2195,8 +2165,8 @@
 			},
 			"languages": {
 				"languages": [
-					"Akitonian",
-					"Ikeshti"
+					"akitonian",
+					"ikeshti"
 				]
 			},
 			"skills": {
@@ -2222,45 +2192,12 @@
 				"wis": 1,
 				"cha": 0
 			},
-			"ac": {
-				"std": 18
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 9
-				},
-				"ref": {
-					"std": 10
-				},
-				"will": {
-					"std": 5
-				}
-			},
-			"hp": [
-				{
-					"hp": 30
-				}
-			],
-			"resistances": [
-				{
-					"name": "cold",
-					"amount": 2
-				},
-				{
-					"name": "fire",
-					"amount": 2
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse"
@@ -2279,12 +2216,43 @@
 							"unit": "action"
 						},
 						"frequency": {
-							"freq": 1,
+							"number": 1,
 							"unit": "day"
 						},
 						"entries": [
-							"The ikeshti squirts blood from one of their eyes at a target within 30 feet. The target must attempt a DC 18 Fortitude save or become {@condition sickened||sickened 1} ({@condition sickened||sickened 2} on a critical failure)."
+							"The ikeshti squirts blood from one of their eyes at a target within 30 feet. The target must attempt a {@dc 18} Fortitude save or become {@condition sickened||sickened 1} ({@condition sickened||sickened 2} on a critical failure)."
 						]
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 18
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 9
+					},
+					"ref": {
+						"std": 10
+					},
+					"will": {
+						"std": 5
+					}
+				},
+				"hp": [
+					{
+						"hp": 30
+					}
+				],
+				"resistances": [
+					{
+						"name": "cold",
+						"amount": 2
+					},
+					{
+						"name": "fire",
+						"amount": 2
 					}
 				]
 			}
@@ -2310,8 +2278,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Draconic"
+					"common",
+					"draconic"
 				]
 			},
 			"skills": {
@@ -2342,35 +2310,12 @@
 				"signal horn",
 				"+1 striking spear"
 			],
-			"ac": {
-				"std": 33
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 25
-				},
-				"ref": {
-					"std": 23
-				},
-				"will": {
-					"std": 24
-				}
-			},
-			"hp": [
-				{
-					"hp": 235
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical"
 					],
@@ -2380,13 +2325,9 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
 					"name": "spear",
 					"attack": 24,
@@ -2395,8 +2336,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Prepared",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"type": "Prepared",
 					"DC": 33,
 					"attack": 25,
@@ -2454,7 +2394,7 @@
 					}
 				},
 				{
-					"name": "Magus Conflux",
+					"name": "Magus Conflux Spells",
 					"type": "Focus",
 					"fp": 2,
 					"entry": {
@@ -2477,7 +2417,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -2488,7 +2427,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -2511,7 +2449,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The Iobane magus makes three spear Strikes, each with a range of 10 feet."
+							"The Iobane magus makes three spear {@action Strike||Strikes}, each with a range of 10 feet."
 						]
 					},
 					{
@@ -2530,7 +2468,28 @@
 					}
 				]
 			},
-			"description": "Human magus"
+			"description": "Human magus",
+			"defenses": {
+				"ac": {
+					"std": 33
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 25
+					},
+					"ref": {
+						"std": 23
+					},
+					"will": {
+						"std": 24
+					}
+				},
+				"hp": [
+					{
+						"hp": 235
+					}
+				]
+			}
 		},
 		{
 			"name": "Khefak Scuttler",
@@ -2578,25 +2537,6 @@
 				"wis": 0,
 				"cha": -3
 			},
-			"ac": {
-				"std": 15
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 7
-				},
-				"ref": {
-					"std": 5
-				},
-				"will": {
-					"std": 2
-				}
-			},
-			"hp": [
-				{
-					"hp": 7
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"burrow": 5,
@@ -2605,10 +2545,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse"
@@ -2627,7 +2563,29 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 15
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 7
+					},
+					"ref": {
+						"std": 5
+					},
+					"will": {
+						"std": 2
+					}
+				},
+				"hp": [
+					{
+						"hp": 7
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "King of Biting Ants",
@@ -2659,11 +2617,11 @@
 			],
 			"languages": {
 				"languages": [
-					"Abyssal",
-					"Akitonian",
-					"Aklo",
-					"Common",
-					"Infernal"
+					"abyssal",
+					"akitonian",
+					"aklo",
+					"common",
+					"infernal"
 				]
 			},
 			"skills": {
@@ -2703,49 +2661,6 @@
 			"items": [
 				"wand of manifold missiles (7th)"
 			],
-			"ac": {
-				"std": null
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 31
-				},
-				"ref": {
-					"std": 36
-				},
-				"will": {
-					"std": 32
-				}
-			},
-			"hp": [
-				{
-					"hp": 300
-				}
-			],
-			"immunities": [
-				"disease",
-				"paralyzed",
-				"poison",
-				"precision",
-				"swarm mind",
-				"unconscious"
-			],
-			"weaknesses": [
-				{
-					"name": "area damage",
-					"amount": 15
-				},
-				{
-					"name": "splash damage",
-					"amount": 15
-				}
-			],
-			"resistances": [
-				{
-					"name": "physical",
-					"amount": 15
-				}
-			],
 			"speed": {
 				"walk": 30,
 				"climb": 20
@@ -2753,22 +2668,17 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "tendril",
 					"attack": 34,
-					"damage": "{@damage 4d10+15} {@condition persistent damage ||persistent piercing damage} plus swarming bites"
+					"damage": "{@damage 4d10+15} {@condition persistent damage||persistent piercing damage} plus swarming bites"
 				}
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Spontaneous",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Spontaneous",
 					"DC": 44,
 					"attack": 34,
@@ -2906,7 +2816,9 @@
 								},
 								{
 									"name": "visions of danger",
-									"note": "biting ants only"
+									"notes": [
+										"biting ants only"
+									]
 								},
 								{
 									"name": "warp mind"
@@ -2955,7 +2867,9 @@
 								},
 								{
 									"name": "visions of danger",
-									"note": "biting ants only"
+									"notes": [
+										"biting ants only"
+									]
 								}
 							]
 						}
@@ -2997,7 +2911,7 @@
 					{
 						"name": "Biting Ants",
 						"entries": [
-							"Strides to a creature, ends h i s movement sharing a space with it, and deals {@damage 3d8} piercing damage and {@damage 3d8} poison damage to it (DC 39 basic Reflex save). A creature that fails this save also takes {@damage 2d8} {@condition persistent damage ||persistent piercing damage}."
+							"Strides to a creature, ends h i s movement sharing a space with it, and deals {@damage 3d8} piercing damage and {@damage 3d8} poison damage to it ({@dc 39} basic Reflex save). A creature that fails this save also takes {@damage 2d8} {@condition persistent damage||persistent piercing damage}."
 						]
 					},
 					{
@@ -3023,7 +2937,7 @@
 					{
 						"name": "Swarming Bites",
 						"entries": [
-							"While a creature is taking {@condition persistent damage ||persistent piercing damage} from the King of Biting Ants's tendril"
+							"While a creature is taking {@condition persistent damage||persistent piercing damage} from the King of Biting Ants's tendril"
 						]
 					},
 					{
@@ -3034,7 +2948,53 @@
 					}
 				]
 			},
-			"description": "Male worm that walks sorcerer (Pathfinder Bestiary 2 296)"
+			"description": "Male worm that walks sorcerer (Pathfinder Bestiary 2 296)",
+			"defenses": {
+				"ac": {
+					"std": null
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 31
+					},
+					"ref": {
+						"std": 36
+					},
+					"will": {
+						"std": 32
+					}
+				},
+				"hp": [
+					{
+						"hp": 300
+					}
+				],
+				"immunities": [
+					"disease",
+					"paralyzed",
+					"poison",
+					"precision",
+					"swarm mind",
+					"unconscious"
+				],
+				"weaknesses": [
+					{
+						"name": "area damage",
+						"amount": 15
+					},
+					{
+						"name": "splash damage",
+						"amount": 15
+					}
+				],
+				"resistances": [
+					{
+						"name": "physical",
+						"amount": 15
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Mpondo",
@@ -3058,9 +3018,9 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Draconic",
-					"Necril"
+					"common",
+					"draconic",
+					"necril"
 				]
 			},
 			"skills": {
@@ -3098,38 +3058,15 @@
 				"signal horn",
 				"+2 striking spear"
 			],
-			"ac": {
-				"std": 37
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 25
-				},
-				"ref": {
-					"std": 23
-				},
-				"will": {
-					"std": 27
-				}
-			},
-			"hp": [
-				{
-					"hp": 285
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"two-hand d12"
+						"two-hand <d12>"
 					],
 					"name": "bastard sword",
 					"attack": 30,
@@ -3137,10 +3074,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical"
 					],
@@ -3150,13 +3083,9 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
 					"name": "spear",
 					"attack": 27,
@@ -3165,8 +3094,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Prepared",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"type": "Prepared",
 					"DC": 37,
 					"attack": 28,
@@ -3224,7 +3152,7 @@
 					}
 				},
 				{
-					"name": "Magus Conflux",
+					"name": "Magus Conflux Spells",
 					"type": "Focus",
 					"fp": 2,
 					"entry": {
@@ -3260,7 +3188,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -3271,8 +3198,7 @@
 						"name": "Red Star",
 						"traits": [
 							"see page 77"
-						],
-						"entries": []
+						]
 					},
 					{
 						"name": "Iobane Vision",
@@ -3291,8 +3217,7 @@
 						},
 						"frequency": {
 							"special": "Until recharged"
-						},
-						"entries": []
+						}
 					},
 					{
 						"name": "Warder-Chief Mpondo Casts a",
@@ -3308,7 +3233,28 @@
 					}
 				]
 			},
-			"description": "Male human guardian"
+			"description": "Male human guardian",
+			"defenses": {
+				"ac": {
+					"std": 37
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 25
+					},
+					"ref": {
+						"std": 23
+					},
+					"will": {
+						"std": 27
+					}
+				},
+				"hp": [
+					{
+						"hp": 285
+					}
+				]
+			}
 		},
 		{
 			"name": "Ravager of Tindalos",
@@ -3335,7 +3281,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo"
+					"aklo"
 				]
 			},
 			"skills": {
@@ -3364,43 +3310,6 @@
 				"wis": 7,
 				"cha": 5
 			},
-			"ac": {
-				"std": 43
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 30
-				},
-				"ref": {
-					"std": 33
-				},
-				"will": {
-					"std": 31
-				}
-			},
-			"hp": [
-				{
-					"hp": 250
-				}
-			],
-			"immunities": [
-				"controlled",
-				"emotion"
-			],
-			"resistances": [
-				{
-					"name": "mental",
-					"amount": 20
-				},
-				{
-					"name": "poison",
-					"amount": 20
-				},
-				{
-					"name": "physical",
-					"amount": 20
-				}
-			],
 			"speed": {
 				"walk": 30,
 				"fly": 30
@@ -3408,10 +3317,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magic"
 					],
@@ -3421,10 +3326,6 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"magic"
@@ -3436,8 +3337,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"type": "Innate",
 					"DC": 40,
 					"attack": 32,
@@ -3466,7 +3366,9 @@
 								},
 								{
 									"name": "disappearance",
-									"note": "self only"
+									"notes": [
+										"self only"
+									]
 								}
 							]
 						},
@@ -3490,7 +3392,7 @@
 							"mental"
 						],
 						"entries": [
-							"Whenever a creature targets the ravager of Tindalos with a {@trait mental} effect, that creature takes {@damage 9d6} mental damage (DC 40 basic Will save). On a critical failure, it also becomes {@condition confused} for 1 minute."
+							"Whenever a creature targets the ravager of Tindalos with a {@trait mental} effect, that creature takes {@damage 9d6} mental damage ({@dc 40} basic Will save). On a critical failure, it also becomes {@condition confused} for 1 minute."
 						]
 					},
 					{
@@ -3502,7 +3404,7 @@
 							"visual"
 						],
 						"entries": [
-							"60 feet. As hound of Tindalos, but DC 37 and {@dice 9d6} damage."
+							"60 feet. As hound of Tindalos, but {@dc 37} and {@dice 9d6} damage."
 						]
 					},
 					{
@@ -3530,12 +3432,51 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The ravager of Tindalos makes three Strikes with its jaws attack. Each {@action Strike} must be against a different opponent within its reach. Each attack counts toward the ravager's multiple attack penalty, but does not increase its penalty until it has made all the attacks."
+							"The ravager of Tindalos makes three {@action Strike||Strikes} with its jaws attack. Each {@action Strike} must be against a different opponent within its reach. Each attack counts toward the ravager's multiple attack penalty, but does not increase its penalty until it has made all the attacks."
 						]
 					}
 				]
 			},
-			"description": "Variant hound of Tindalos (Pathfinder Bestiary 2 146)"
+			"description": "Variant hound of Tindalos (Pathfinder Bestiary 2 146)",
+			"defenses": {
+				"ac": {
+					"std": 43
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 30
+					},
+					"ref": {
+						"std": 33
+					},
+					"will": {
+						"std": 31
+					}
+				},
+				"hp": [
+					{
+						"hp": 250
+					}
+				],
+				"immunities": [
+					"controlled",
+					"emotion"
+				],
+				"resistances": [
+					{
+						"name": "mental",
+						"amount": 20
+					},
+					{
+						"name": "poison",
+						"amount": 20
+					},
+					{
+						"name": "physical",
+						"amount": 20
+					}
+				]
+			}
 		},
 		{
 			"name": "Shobhad Enforcer",
@@ -3558,8 +3499,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Akitonian",
-					"Shobhad"
+					"akitonian",
+					"shobhad"
 				]
 			},
 			"skills": {
@@ -3589,39 +3530,16 @@
 				"+2 striking handwraps of mighty blows",
 				"+1 resilient chainmail"
 			],
-			"ac": {
-				"std": 38
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 31
-				},
-				"ref": {
-					"std": 26
-				},
-				"will": {
-					"std": 27
-				}
-			},
-			"hp": [
-				{
-					"hp": 320
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"reach 10 feet",
-						"versatile P"
+						"reach <10 feet>",
+						"versatile <P>"
 					],
 					"name": "greatsword",
 					"attack": 31,
@@ -3629,16 +3547,12 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse",
 						"magical",
 						"nonlethal",
-						"reach 10 feet",
+						"reach <10 feet>",
 						"unarmed"
 					],
 					"name": "fist",
@@ -3663,7 +3577,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -3674,7 +3587,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -3704,7 +3616,29 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 38
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 31
+					},
+					"ref": {
+						"std": 26
+					},
+					"will": {
+						"std": 27
+					}
+				},
+				"hp": [
+					{
+						"hp": 320
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Shobhad Sniper",
@@ -3727,8 +3661,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Akitonian",
-					"Shobhad"
+					"akitonian",
+					"shobhad"
 				]
 			},
 			"skills": {
@@ -3758,41 +3692,18 @@
 				"+2 striking handwraps of mighty blows",
 				"+1 resilient leather armor"
 			],
-			"ac": {
-				"std": 40
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 28
-				},
-				"ref": {
-					"std": 32
-				},
-				"will": {
-					"std": 26
-				}
-			},
-			"hp": [
-				{
-					"hp": 320
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse",
 						"magical",
 						"nonlethal",
-						"reach 10 feet",
+						"reach <10 feet>",
 						"unarmed"
 					],
 					"name": "fist",
@@ -3801,17 +3712,13 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"backstabber",
 						"concussive",
-						"fatal d12",
+						"fatal <d12>",
 						"kickback",
-						"volley; range increment 120 feet",
-						"reload 1"
+						"volley; range increment <120 feet>",
+						"reload <1>"
 					],
 					"name": "longrifle",
 					"attack": 34,
@@ -3834,7 +3741,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -3845,7 +3751,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -3874,7 +3779,29 @@
 						]
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 40
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 28
+					},
+					"ref": {
+						"std": 32
+					},
+					"will": {
+						"std": 26
+					}
+				},
+				"hp": [
+					{
+						"hp": 320
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Skartitch Chip-Tooth",
@@ -3898,8 +3825,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Akitonian",
-					"Shobhad"
+					"akitonian",
+					"shobhad"
 				]
 			},
 			"skills": {
@@ -3951,25 +3878,6 @@
 				"+2 resilient leather armor",
 				"disintegration bolt (3)"
 			],
-			"ac": {
-				"std": 39
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 26
-				},
-				"ref": {
-					"std": 29
-				},
-				"will": {
-					"std": 26
-				}
-			},
-			"hp": [
-				{
-					"hp": 290
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"burrow": 15
@@ -3977,10 +3885,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse",
@@ -3993,14 +3897,10 @@
 				},
 				{
 					"range": "Ranged",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"range increment 120 feet",
-						"reload 1"
+						"range increment <120 feet>",
+						"reload <1>"
 					],
 					"name": "crossbow",
 					"attack": 31,
@@ -4054,7 +3954,28 @@
 					}
 				]
 			},
-			"description": "Female ratfolk crime lord (Pathfinder Bestiary 277)"
+			"description": "Female ratfolk crime lord (Pathfinder Bestiary 277)",
+			"defenses": {
+				"ac": {
+					"std": 39
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 26
+					},
+					"ref": {
+						"std": 29
+					},
+					"will": {
+						"std": 26
+					}
+				},
+				"hp": [
+					{
+						"hp": 290
+					}
+				]
+			}
 		},
 		{
 			"name": "Sparkeater",
@@ -4072,7 +3993,7 @@
 				"dragon",
 				"undead"
 			],
-			"description": "His melee Strikes have a reach of only 5 feet, and he lacks the Ravenous Repast ability, as he was never a ravener in the first place."
+			"description": "His melee {@action Strike||Strikes} have a reach of only 5 feet, and he lacks the Ravenous Repast ability, as he was never a ravener in the first place."
 		},
 		{
 			"name": "Spawn of Taon",
@@ -4095,8 +4016,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Necril"
+					"common",
+					"necril"
 				]
 			},
 			"skills": {
@@ -4124,65 +4045,18 @@
 				"wis": 4,
 				"cha": 5
 			},
-			"ac": {
-				"std": 30
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 22
-				},
-				"ref": {
-					"std": 22
-				},
-				"will": {
-					"std": 19
-				}
-			},
-			"hp": [
-				{
-					"hp": 175,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease",
-				"paralyzed",
-				"poison",
-				"unconscious"
-			],
-			"resistances": [
-				{
-					"name": "piercing",
-					"amount": 12
-				},
-				{
-					"name": "slashing",
-					"amount": 6
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"name": "claw",
 					"attack": 24,
 					"damage": "{@damage 2d12+13} slashing plus Grab"
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile"
 					],
@@ -4201,12 +4075,53 @@
 							"necromancy"
 						],
 						"entries": [
-							"A living creature hit by a mohrg's tongue {@action Strike} must succeed at a DC 30 Fortitude save or become {@condition paralyzed}. The creature can attempt a new save at the end of each of its turns. The DC cumulatively decreases by 1 on each attempt."
+							"A living creature hit by a mohrg's tongue {@action Strike} must succeed at a {@dc 30} Fortitude save or become {@condition paralyzed}. The creature can attempt a new save at the end of each of its turns. The DC cumulatively decreases by 1 on each attempt."
 						]
 					}
 				]
 			},
-			"description": "Variant mohrg spawn (Pathfinder Bestiary 2 172)"
+			"description": "Variant mohrg spawn (Pathfinder Bestiary 2 172)",
+			"defenses": {
+				"ac": {
+					"std": 30
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 22
+					},
+					"ref": {
+						"std": 22
+					},
+					"will": {
+						"std": 19
+					}
+				},
+				"hp": [
+					{
+						"hp": 175,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyzed",
+					"poison",
+					"unconscious"
+				],
+				"resistances": [
+					{
+						"name": "piercing",
+						"amount": 12
+					},
+					{
+						"name": "slashing",
+						"amount": 6
+					}
+				]
+			}
 		},
 		{
 			"name": "Taon",
@@ -4229,8 +4144,8 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Necril"
+					"common",
+					"necril"
 				]
 			},
 			"skills": {
@@ -4261,44 +4176,6 @@
 			"items": [
 				"Spellcutter"
 			],
-			"ac": {
-				"std": 38
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 28
-				},
-				"ref": {
-					"std": 26
-				},
-				"will": {
-					"std": 23
-				}
-			},
-			"hp": [
-				{
-					"hp": 230,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease",
-				"paralyzed",
-				"poison"
-			],
-			"resistances": [
-				{
-					"name": "piercing",
-					"amount": 15
-				},
-				{
-					"name": "slashing",
-					"amount": 10
-				}
-			],
 			"speed": {
 				"walk": 50,
 				"climb": 25
@@ -4306,23 +4183,15 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"name": "claw",
 					"attack": 29,
 					"damage": "{@damage 3d12+14} slashing plus Grab"
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"name": "tongue",
 					"attack": 29,
@@ -4330,13 +4199,9 @@
 				},
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"magical",
-						"versatile P"
+						"versatile <P>"
 					],
 					"name": "Spellcutter",
 					"attack": 31,
@@ -4351,7 +4216,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"generic": {
 							"tag": "ability"
 						}
@@ -4382,12 +4246,52 @@
 							"necromancy"
 						],
 						"entries": [
-							"A living creature hit by Taon's tongue {@action Strike} must succeed at a DC 36 Fortitude save or become {@condition paralyzed}. The creature can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each attempt."
+							"A living creature hit by Taon's tongue {@action Strike} must succeed at a {@dc 36} Fortitude save or become {@condition paralyzed}. The creature can attempt a new save at the end of each of its turns, and the DC cumulatively decreases by 1 on each attempt."
 						]
 					}
 				]
 			},
-			"description": "Male variant mohrg (Pathfinder Bestiary 2 172)"
+			"description": "Male variant mohrg (Pathfinder Bestiary 2 172)",
+			"defenses": {
+				"ac": {
+					"std": 38
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 28
+					},
+					"ref": {
+						"std": 26
+					},
+					"will": {
+						"std": 23
+					}
+				},
+				"hp": [
+					{
+						"hp": 230,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyzed",
+					"poison"
+				],
+				"resistances": [
+					{
+						"name": "piercing",
+						"amount": 15
+					},
+					{
+						"name": "slashing",
+						"amount": 10
+					}
+				]
+			}
 		},
 		{
 			"name": "Thasteron Khefak",
@@ -4435,33 +4339,6 @@
 				"wis": 2,
 				"cha": -3
 			},
-			"ac": {
-				"std": 19
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 12
-				},
-				"ref": {
-					"std": 9
-				},
-				"will": {
-					"std": 7
-				}
-			},
-			"hp": [
-				{
-					"hp": 42
-				}
-			],
-			"immunities": [
-				"radiation"
-			],
-			"resistances": [
-				{
-					"name": "5 poison"
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"burrow": 5,
@@ -4470,10 +4347,6 @@
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile"
 					],
@@ -4497,8 +4370,38 @@
 							"radiation"
 						],
 						"entries": [
-							"10 feet. Thasteron khefaks convert radioactive minerals they eat into thasteron, a combustive fuel (page 77). The more radioactive elements of the material concentrates in their chitin and taints the air around them. A creature who begins their turn within this aura must succeed at a DC 20 Fortitude saving throw or become {@condition sickened||sickened 1} ({@condition sickened||sickened 2} on a critical failure)."
+							"10 feet. Thasteron khefaks convert radioactive minerals they eat into thasteron, a combustive fuel (page 77). The more radioactive elements of the material concentrates in their chitin and taints the air around them. A creature who begins their turn within this aura must succeed at a {@dc 20} Fortitude saving throw or become {@condition sickened||sickened 1} ({@condition sickened||sickened 2} on a critical failure)."
 						]
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 19
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 12
+					},
+					"ref": {
+						"std": 9
+					},
+					"will": {
+						"std": 7
+					}
+				},
+				"hp": [
+					{
+						"hp": 42
+					}
+				],
+				"immunities": [
+					"radiation"
+				],
+				"resistances": [
+					{
+						"amount": 5,
+						"name": "poison"
 					}
 				]
 			}
@@ -4527,9 +4430,9 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Infernal",
-					"Taldane"
+					"common",
+					"infernal",
+					"taldane"
 				]
 			},
 			"skills": {
@@ -4554,60 +4457,12 @@
 				"wis": 5,
 				"cha": 6
 			},
-			"ac": {
-				"std": 33
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 21
-				},
-				"ref": {
-					"std": 25
-				},
-				"will": {
-					"std": 28
-				}
-			},
-			"hp": [
-				{
-					"hp": 200,
-					"abilities": [
-						"(negative healing",
-						"rejuvenation)"
-					]
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease",
-				"paralyzed",
-				"poison",
-				"precision",
-				"unconscious"
-			],
-			"resistances": [
-				{
-					"name": "all damage",
-					"amount": 15,
-					"note": "except force"
-				},
-				{
-					"name": "ghost touch"
-				},
-				{
-					"name": "or positive; double resistance vs. non-magical)"
-				}
-			],
 			"speed": {
 				"fly": 25
 			},
 			"attacks": [
 				{
 					"range": "Melee",
-					"activity": {
-						"number": 1,
-						"unit": "action"
-					},
 					"traits": [
 						"agile",
 						"finesse",
@@ -4620,8 +4475,7 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Innate",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"type": "Innate",
 					"DC": 36,
 					"attack": 28,
@@ -4733,7 +4587,7 @@
 							"sonic"
 						],
 						"entries": [
-							"Tollvych cries out in pain as his body twists and grinds into horrific, distorted shapes. All creatures within a 30-foot emanation take {@damage 16d6} bludgeoning damage (DC 36 basic Reflex save) as the sound of the Bone-Shattering Cry shakes and shatters their own bones.",
+							"Tollvych cries out in pain as his body twists and grinds into horrific, distorted shapes. All creatures within a 30-foot emanation take {@damage 16d6} bludgeoning damage ({@dc 36} basic Reflex save) as the sound of the Bone-Shattering Cry shakes and shatters their own bones.",
 							"Tollvych can't use Bone-Shattering Cry for {@dice 1d4} rounds."
 						]
 					},
@@ -4752,12 +4606,55 @@
 							"mental"
 						],
 						"entries": [
-							"Tollvych laments his fate, forcing each living creature within 30 feet to attempt a DC 36 Will save. On a failure, a creature becomes {@condition frightened||frightened 2} (or {@condition frightened||frightened 3} on a critical failure). On a success, a creature is temporarily immune to Tollvych's frightful moan for 1 minute."
-						]
+							"Tollvych laments his fate, forcing each living creature within 30 feet to attempt a {@dc 36} Will save. On a failure, a creature becomes {@condition frightened||frightened 2} (or {@condition frightened||frightened 3} on a critical failure). On a success, a creature is temporarily immune to Tollvych's frightful moan for 1 minute."
+						],
+						"generic": {
+							"tag": "ability"
+						}
 					}
 				]
 			},
-			"description": "Male human ghost (Pathfinder Bestiary 166)"
+			"description": "Male human ghost (Pathfinder Bestiary 166)",
+			"defenses": {
+				"ac": {
+					"std": 33
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 21
+					},
+					"ref": {
+						"std": 25
+					},
+					"will": {
+						"std": 28
+					}
+				},
+				"hp": [
+					{
+						"hp": 200,
+						"abilities": [
+							"negative healing",
+							"rejuvenation"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyzed",
+					"poison",
+					"precision",
+					"unconscious"
+				],
+				"resistances": [
+					{
+						"name": "all damage",
+						"amount": 15,
+						"note": "except force, {@item ghost touch}, or positive; double resistance vs. non-magical"
+					}
+				]
+			}
 		}
 	]
 }

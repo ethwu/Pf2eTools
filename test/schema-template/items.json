@@ -21,8 +21,14 @@
 					"name": {
 						"type": "string"
 					},
-					"destruction": {
+					"prerequisites": {
 						"type": "string"
+					},
+					"destruction": {
+						"type": "array",
+						"items": {
+							"$ref": "entry.json"
+						}
 					},
 					"page": {
 						"type": "integer"
@@ -93,6 +99,11 @@
 						"description": "Causes the item to not be generated in generic variants under the assumption it already exists (like in \"baseitems\").",
 						"type": "boolean"
 					},
+					"genericItem": {
+						"title": "Generic Item",
+						"description": "Often generated, soemtimes manually added. Refers to the \"original\" item that this item is a variant of.",
+						"type": "string"
+					},
 					"type": {
 						"type": "string",
 						"title": "Item Type",
@@ -160,6 +171,25 @@
 							"$ref": "entry.json"
 						}
 					},
+					"duration": {
+						"type": "object",
+						"required": [],
+						"properties": {
+							"type": {
+								"type": "string"
+							},
+							"entry": {
+								"type": "string"
+							},
+							"number": {
+								"type": "integer"
+							},
+							"unit": {
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
+					},
 					"category": {
 						"type": "string",
 						"enum": [
@@ -170,10 +200,14 @@
 							"Assistive Item",
 							"Bomb",
 							"Companion",
+							"Missive",
+							"Coda",
 							"Consumable",
+							"Adjustment",
 							"Contract",
 							"Customization",
 							"Curse",
+							"Grimoire",
 							"Elixir",
 							"Adventuring Gear",
 							"Grimore",
@@ -182,7 +216,9 @@
 							"Modification",
 							"Oil",
 							"Other",
+							"Plant",
 							"Poison",
+							"Pet",
 							"Potion",
 							"Rune",
 							"Scroll",
@@ -221,7 +257,8 @@
 							"Unarmored",
 							"Vision",
 							"Wheelchair",
-							"Wheelchair Upgrade"
+							"Wheelchair Upgrade",
+							"Animal Caretaking"
 						]
 					},
 					"appliesTo": {
@@ -247,6 +284,12 @@
 					"add_hash": {
 						"type": "string"
 					},
+					"hasFluff": {
+						"type": "boolean",
+						"enum": [
+							true
+						]
+					},
 					"usage": {
 						"type": "string"
 					},
@@ -266,43 +309,69 @@
 						"uniqueItems": true
 					},
 					"craftReq": {
-						"type": "string"
+						"type": "array",
+						"items": {
+							"$ref": "entry.json"
+						}
 					}
 				},
 				"additionalProperties": false,
-				"required": [
-					"source",
-					"name",
-					"page"
-				],
-				"anyOf": [
+				"allOf": [
 					{
-						"not": {
-							"required": [
-								"generic",
-								"add_hash"
-							]
-						}
+						"oneOf": [
+							{
+								"required": [
+									"variantType"
+								]
+							},
+							{
+								"required": [
+									"source",
+									"name",
+									"page"
+								]
+							},
+							{
+								"required": [
+									"source",
+									"name",
+									"page",
+									"variantType"
+								]
+							}
+						]
 					},
 					{
-						"required": [
-							"add_hash"
-						],
-						"not": {
-							"required": [
-								"generic"
-							]
-						}
-					},
-					{
-						"required": [
-							"generic"
-						],
-						"not": {
-							"required": [
-								"add_hash"
-							]
-						}
+						"anyOf": [
+							{
+								"not": {
+									"required": [
+										"generic",
+										"add_hash"
+									]
+								}
+							},
+							{
+								"required": [
+									"add_hash"
+								],
+								"not": {
+									"required": [
+										"generic"
+									]
+								}
+							},
+							{
+								"required": [
+									"generic"
+								],
+								"not": {
+									"required": [
+										"add_hash"
+									]
+								}
+							}
+						]
 					}
 				]
 			},
@@ -332,6 +401,12 @@
 					"type": "string"
 				},
 				"damageType": {
+					"$ref": "utils.json#/definitions/damageTypeTags"
+				},
+				"damage2": {
+					"type": "string"
+				},
+				"damageType2": {
 					"$ref": "utils.json#/definitions/damageTypeTags"
 				},
 				"reload": {
@@ -382,9 +457,7 @@
 				"group",
 				"ac",
 				"dexCap",
-				"str",
-				"checkPen",
-				"speedPen"
+				"checkPen"
 			],
 			"properties": {
 				"group": {

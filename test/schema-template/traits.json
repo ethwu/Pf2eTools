@@ -21,6 +21,12 @@
 					"page": {
 						"type": "integer"
 					},
+					"alias": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
 					"categories": {
 						"type": "array",
 						"items": {
@@ -28,37 +34,47 @@
 							"oneOf": [
 								{
 									"enum": [
+										"Action & Ability",
+										"Alignment",
 										"Ancestry & Heritage",
+										"Armor",
+										"Class",
+										"Combat",
 										"Creature",
 										"Creature Type",
-										"Schools & Traditions",
-										"General",
-										"Energy & Elements",
-										"Class",
-										"Armor & Weapon",
-										"Planar",
-										"Item",
-										"Alignment",
-										"Scope",
 										"Effect",
-										"Time",
-										"Size",
+										"Energy & Element",
+										"Equipment",
+										"Feat",
+										"Settlement",
+										"General",
 										"Gravity",
-										"Combat",
+										"Hazard",
+										"Item",
 										"Morphic",
+										"Planar",
 										"Rarity",
-										"Equipment"
+										"School",
+										"Tradition",
+										"Scope",
+										"Size",
+										"Spell",
+										"Time",
+										"Weapon"
 									]
 								},
 								{
 									"enum": [
-										"_alignAbv",
-										"_settlement",
-										"_school"
+										"_alignAbv"
 									]
 								}
 							]
 						}
+					},
+					"variable": {
+						"type": "boolean",
+						"const": true,
+						"description": "Whether the trait has a variable value, which is enclosed in <these 'brackets'>.\nMainly for schema generation."
 					},
 					"otherSources": {
 						"$ref": "utils.json#/definitions/otherSources"

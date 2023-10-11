@@ -10,17 +10,17 @@
 				"You're trained in the {@skill Arcana} skill and the {@skill Lore||Library Lore} skill. You gain the {@feat Arcane Sense} skill feat."
 			],
 			"boosts": [
-				"Intelligence",
-				"Charisma",
-				"Free"
+				"intelligence",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Arcana"
+				"arcana"
 			],
 			"lore": [
 				"Library"
 			],
-			"feat": [
+			"feats": [
 				"Arcane Sense"
 			]
 		},
@@ -30,22 +30,22 @@
 			"page": 4,
 			"entries": [
 				"You're a trained physician who can ably tend wounds of many kinds. But more than a practitioner, you're a scholar.",
-				"Some cultures shape flesh to extreme degrees, creating aberrations from humanoid forms. The fleshforges of distant Nex practice this fleshwarping, as do certain subterranean societies you hope to one day study\u2014 preferably from a safe and clinical distance.",
+				"Some cultures shape flesh to extreme degrees, creating aberrations from humanoid forms. The fleshforges of distant Nex practice this fleshwarping, as do certain subterranean societies you hope to one day study\u2014preferably from a safe and clinical distance.",
 				"Choose two ability boosts. One must be to Intelligence or Wisdom, and one is a free ability boost.",
 				"You're trained in the {@skill Medicine} skill and the {@skill Lore||Fleshwarp Lore} skill. You gain the {@feat Assurance} skill feat with {@skill Medicine}."
 			],
 			"boosts": [
-				"Intelligence",
-				"Wisdom",
-				"Free"
+				"intelligence",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Medicine"
+				"medicine"
 			],
 			"lore": [
 				"Fleshwarp"
 			],
-			"feat": [
+			"feats": [
 				"Assurance"
 			]
 		},
@@ -59,17 +59,17 @@
 				"You're trained in {@skill Athletics} and the {@skill Lore||Swamp Lore} skill. You gain the {@feat Titan Wrestler} skill feat."
 			],
 			"boosts": [
-				"Strength",
-				"Charisma",
-				"Free"
+				"strength",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Athletics"
+				"athletics"
 			],
 			"lore": [
 				"Swamp"
 			],
-			"feat": [
+			"feats": [
 				"Titan Wrestler"
 			]
 		},
@@ -78,22 +78,22 @@
 			"source": "AV0",
 			"page": 4,
 			"entries": [
-				"Keeleno Lathenar, the proprietor of Otari Market, is a grim and bitter man. A werewolf named Jaul Mezmin mauled his wife, Ayla, to death 30 years ago. Keeleno has never forgotten nor forgiven this attack, and he believes against all odds that Jaul has evaded justice and is alive and well. Running errands for Keeleno around town, you've gotten to know him almost as well as you know Otari. Keeleno's suspicions have rubbed off on you a bit, so you keep a wary eye on other people\u2014 particularly around the full moon.",
+				"Keeleno Lathenar, the proprietor of Otari Market, is a grim and bitter man. A werewolf named Jaul Mezmin mauled his wife, Ayla, to death 30 years ago. Keeleno has never forgotten nor forgiven this attack, and he believes against all odds that Jaul has evaded justice and is alive and well. Running errands for Keeleno around town, you've gotten to know him almost as well as you know Otari. Keeleno's suspicions have rubbed off on you a bit, so you keep a wary eye on other people\u2014particularly around the full moon.",
 				"Choose two ability boosts. One must be to Constitution or Charisma, and one is a free ability boost.",
 				"You're trained in the {@skill Diplomacy} skill and the {@skill Lore||Otari Lore} skill. You gain the {@feat Hobnobber} skill feat."
 			],
 			"boosts": [
-				"Constitution",
-				"Charisma",
-				"Free"
+				"constitution",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Diplomacy"
+				"diplomacy"
 			],
 			"lore": [
 				"Otari"
 			],
-			"feat": [
+			"feats": [
 				"Hobnobber"
 			]
 		},
@@ -108,17 +108,17 @@
 				"You're trained in {@skill Acrobatics} and the {@skill Lore||Roseguard Lore} skill. You gain the {@feat Cat Fall} skill feat."
 			],
 			"boosts": [
-				"Dexterity",
-				"Intelligence",
-				"Free"
+				"dexterity",
+				"intelligence",
+				"free"
 			],
 			"skills": [
-				"Acrobatics"
+				"acrobatics"
 			],
 			"lore": [
 				"Roseguard"
 			],
-			"feat": [
+			"feats": [
 				"Cat Fall"
 			]
 		},
@@ -132,17 +132,17 @@
 				"You're trained in the {@skill Occultism} skill and the {@skill Lore||Astrology Lore} skill. You gain the {@feat Dubious Knowledge} skill feat."
 			],
 			"boosts": [
-				"Constitution",
-				"Intelligence",
-				"Free"
+				"constitution",
+				"intelligence",
+				"free"
 			],
 			"skills": [
-				"Occultism"
+				"occultism"
 			],
 			"lore": [
 				"Astrology"
 			],
-			"feat": [
+			"feats": [
 				"Dubious Knowledge"
 			]
 		},
@@ -157,17 +157,17 @@
 				"You're trained in {@skill Survival} and the {@skill Lore||Wisp Lore} skill. You gain the {@feat Terrain Expertise} skill feat with both swamp terrain and subterranean bodies of water."
 			],
 			"boosts": [
-				"Dexterity",
-				"Wisdom",
-				"Free"
+				"dexterity",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Survival"
+				"survival"
 			],
 			"lore": [
 				"Wisp"
 			],
-			"feat": [
+			"feats": [
 				"Terrain Expertise"
 			]
 		}

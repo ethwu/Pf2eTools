@@ -24,7 +24,7 @@ class DeitiesPage extends ListPage {
 
 		const source = Parser.sourceJsonToAbv(g.source);
 		const hash = UrlUtil.autoEncodeHash(g);
-		const alignment = g.alignment ? g.alignment.map(x => x.length > 2 ? x : x.toUpperCase()).join("") : "\u2014";
+		const alignment = g.alignment?.alignment ? g.alignment.alignment.map(x => x.length > 2 ? x : x.toUpperCase()).join("") : "\u2014";
 		const domains = g._fDomains ? g._fDomains.join(", ") : "\u2014";
 
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border">
@@ -32,7 +32,7 @@ class DeitiesPage extends ListPage {
 			<span class="col-2 text-center">${g.category}</span>
 			<span class="col-2 text-center">${alignment}</span>
 			<span class="col-3 ${!g._fDomains || g._fDomains[0] === VeCt.STR_NONE ? `list-entry-none` : ""}">${domains}</span>
-			<span class="col-2 text-center ${Parser.sourceJsonToColor(g.source)} pr-0" title="${Parser.sourceJsonToFull(g.source)}" ${BrewUtil.sourceJsonToStyle(g.source)}>${source}</span>
+			<span class="col-2 text-center ${Parser.sourceJsonToColor(g.source)}" title="${Parser.sourceJsonToFull(g.source)}" ${BrewUtil.sourceJsonToStyle(g.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -46,6 +46,7 @@ class DeitiesPage extends ListPage {
 				category: g.category,
 				alignment,
 				domains,
+				aliases: g.alias ? g.alias.join(" - ") : "",
 			},
 			{
 				uniqueId: g.uniqueId ? g.uniqueId : dtI,
@@ -68,7 +69,7 @@ class DeitiesPage extends ListPage {
 	getSublistItem (g, pinId) {
 		const hash = UrlUtil.autoEncodeHash(g);
 
-		const alignment = g.alignment ? g.alignment.join("") : "\u2014";
+		const alignment = g.alignment?.alignment ? g.alignment.alignment.join("") : "\u2014";
 
 		const $ele = $(`<li class="row">
 			<a href="#${hash}" class="lst--border">
@@ -116,22 +117,35 @@ function renderStatblock (deity) {
 	function buildStatsTab () {
 		$content.append(Renderer.deity.getRenderedString(deity));
 	}
-	async function buildLoreTab () {
-		const pGetFluff = async () => {
-			const fluff = await Renderer.deity.pGetFluff(deity);
-			return fluff ? fluff.entries || [] : [];
-		}
-		$content.append(Renderer.deity.getRenderedLore({lore: await pGetFluff()}))
-	}
 	function buildIntercessionTab () {
 		$content.append(Renderer.deity.getIntercession(deity))
 	}
+	async function buildFluffTab () {
+		const pGetFluff = async () => {
+			const fluff = await Renderer.pGetFluff(deity);
+			return fluff ? fluff.entries || [] : [];
+		}
+		$content.append(Renderer.getRenderedLore({lore: await pGetFluff()}))
+	}
 	const buildInfoTab = async () => {
-		const quickRules = await Renderer.utils.pGetQuickRules("deity");
-		$content.append(quickRules);
+		if (deity.category === "Philosophy") {
+			const quickRules = await Renderer.utils.pGetQuickRules("deityPhilosophy");
+			$content.append(quickRules);
+		} else {
+			const quickRules = await Renderer.utils.pGetQuickRules("deity");
+			$content.append(quickRules);
+			if (deity.category === "Pantheon") {
+				const quickRulesExtra = await Renderer.utils.pGetQuickRules("deityPantheon");
+				$content.append(quickRulesExtra);
+			}
+			if (deity.intercession) {
+				const quickRulesExtra = await Renderer.utils.pGetQuickRules("deityIntercession");
+				$content.append(quickRulesExtra);
+			}
+		}
 	}
 	const buildImageTab = async () => {
-		$content.append(Renderer.deity.getImage(deity))
+		$content.append(Renderer.getImage(deity))
 	}
 	const statTab = Renderer.utils.tabButton(
 		"Deity",
@@ -146,7 +160,7 @@ function renderStatblock (deity) {
 	const loreTab = Renderer.utils.tabButton(
 		"Lore",
 		() => {},
-		buildLoreTab,
+		buildFluffTab,
 	);
 	const infoTab = Renderer.utils.tabButton(
 		"Quick Rules",
@@ -158,11 +172,12 @@ function renderStatblock (deity) {
 		() => {},
 		buildImageTab,
 	);
-	const tabs = [statTab]
+	const tabs = [statTab];
 	if (deity.intercession) tabs.push(intercessionTab);
-	if (deity.hasLore) tabs.push(loreTab);
+	// Kill Fluff for Paizo
+	// if (deity.hasLore) tabs.push(loreTab);
 	if (deity.images) tabs.push(imageTab);
-	tabs.push(infoTab)
+	tabs.push(infoTab);
 	Renderer.utils.bindTabButtons(...tabs);
 }
 

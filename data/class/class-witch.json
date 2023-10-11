@@ -133,6 +133,26 @@
 			],
 			"subclasses": [
 				{
+					"name": "Mosquito Witch",
+					"type": "Patron Theme",
+					"shortName": "Mosquito Witch",
+					"source": "LOMM",
+					"page": 75,
+					"subclassFeatures": [
+						"Patron|Witch|APG|Mosquito Witch|LOMM|1"
+					]
+				},
+				{
+					"name": "Pacts",
+					"type": "Patron Theme",
+					"shortName": "Pacts",
+					"source": "DA",
+					"page": 159,
+					"subclassFeatures": [
+						"Patron|Witch|APG|Pacts|DA|1"
+					]
+				},
+				{
 					"name": "Baba Yaga",
 					"type": "Patron Theme",
 					"shortName": "Baba Yaga",
@@ -1089,7 +1109,7 @@
 								{
 									"type": "item",
 									"name": "Granted Spell",
-									"entry": "{@spell command}"
+									"entry": "{@spell true strike}"
 								}
 							]
 						}
@@ -1325,6 +1345,100 @@
 									"type": "item",
 									"name": "Granted Spell",
 									"entry": "{@spell gust of wind}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Patron",
+			"source": "DA",
+			"page": 159,
+			"className": "Witch",
+			"classSource": "APG",
+			"subclassShortName": "Pacts",
+			"subclassSource": "DA",
+			"level": 1,
+			"entries": [
+				{
+					"type": "pf2-h4",
+					"name": "Pacts ({@trait Rare})",
+					"source": "DA",
+					"page": 159,
+					"entries": [
+						"Your patron deals only in promises and bargains, and no lesson is ever given for free.",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Spell List",
+									"entry": "{@filter occult|spells||tradition & spell list=occult}"
+								},
+								{
+									"type": "item",
+									"name": "Patron Skill",
+									"entry": "{@skill Occultism}"
+								},
+								{
+									"type": "item",
+									"name": "Hex Cantrip",
+									"entry": "{@spell pact broker|DA}"
+								},
+								{
+									"type": "item",
+									"name": "Granted Spell",
+									"entry": "{@spell command}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Patron",
+			"source": "LOMM",
+			"page": 75,
+			"className": "Witch",
+			"classSource": "APG",
+			"subclassShortName": "Mosquito Witch",
+			"subclassSource": "LOMM",
+			"level": 1,
+			"entries": [
+				{
+					"type": "pf2-h4",
+					"name": "Mosquito Witch ({@trait Rare})",
+					"source": "LOMM",
+					"page": 75,
+					"entries": [
+						"Few in Shimmerford or elsewhere would be foolish enough to attempt to draw the {@creature Mosquito Witch|LOMM}'s attention, but whether you're one of those foolish few or simply someone who attracted the Mosquito Witch's attention unwittingly or unwillingly, she grants you powers over insects and other arthropods.",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Spell List",
+									"entry": "{@filter primal|spells||tradition & spell list=primal}"
+								},
+								{
+									"type": "item",
+									"name": "Patron Skill",
+									"entry": "{@skill Nature}"
+								},
+								{
+									"type": "item",
+									"name": "Hex Cantrip",
+									"entry": "{@spell buzzing bites|LOMM}"
+								},
+								{
+									"type": "item",
+									"name": "Granted Spell",
+									"entry": "{@spell pest form}"
 								}
 							]
 						}

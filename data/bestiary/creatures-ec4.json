@@ -2,7 +2,6 @@
 	"creature": [
 		{
 			"name": "Arskuva The Gnasher",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 55,
 			"level": 12,
@@ -11,9 +10,6 @@
 				"medium",
 				"minion",
 				"undead"
-			],
-			"creatureType": [
-				"Undead"
 			],
 			"perception": {
 				"std": 22
@@ -25,15 +21,15 @@
 			],
 			"languages": {
 				"languages": [
-					"Draconic",
-					"Undercommon"
+					"draconic",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 25
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 20
 				}
 			},
@@ -45,31 +41,6 @@
 				"wis": 4,
 				"cha": 2
 			},
-			"ac": {
-				"std": 31
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 25
-				},
-				"ref": {
-					"std": 18
-				},
-				"will": {
-					"std": 22
-				}
-			},
-			"hp": [
-				{
-					"hp": 270,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"death effects",
-				"disease",
-				"paralyzed"
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -84,7 +55,6 @@
 						"sweep",
 						"trip"
 					],
-					"effects": [],
 					"damage": "{@damage 3d10+11} bludgeoning plus {@damage 1d6} fire",
 					"types": [
 						"bludgeoning",
@@ -95,7 +65,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 23,
-					"effects": [],
 					"damage": "{@damage 3d8+11} piercing",
 					"types": [
 						"piercing"
@@ -108,7 +77,6 @@
 					"traits": [
 						"agile"
 					],
-					"effects": [],
 					"damage": "{@damage 3d4+11} slashing",
 					"types": [
 						"slashing"
@@ -124,11 +92,36 @@
 						"name": "Minion"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 31
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 25
+					},
+					"ref": {
+						"std": 18
+					},
+					"will": {
+						"std": 22
+					}
+				},
+				"hp": [
+					{
+						"hp": 270
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyzed"
+				]
 			}
 		},
 		{
 			"name": "Aukashungi Swarm",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 50,
 			"level": 10,
@@ -139,9 +132,6 @@
 				"aberration",
 				"amphibious",
 				"swarm"
-			],
-			"creatureType": [
-				"Aberration"
 			],
 			"perception": {
 				"std": 18
@@ -157,7 +147,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 20
 				}
 			},
@@ -169,35 +159,10 @@
 				"wis": 1,
 				"cha": -2
 			},
-			"ac": {
-				"std": 28
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 17
-				},
-				"ref": {
-					"std": 24
-				},
-				"will": {
-					"std": 13
-				}
-			},
-			"hp": [
-				{
-					"hp": 210,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"precision",
-				"swarm mind"
-			],
 			"speed": {
 				"walk": 35,
 				"burrow": 35
 			},
-			"attacks": [],
 			"abilities": {
 				"bot": [
 					{
@@ -206,7 +171,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The swarm deals {@damage 4d6} piercing damage and {@damage 2d4} {@condition persistent damage ||persistent bleed damage} to every creature in its space (DC 29 basic Reflex save). The first time per round that a creature is affected by an aukashungi swarm's Burrowing Agony, the creature is also exposed to expeditious evolution."
+							"The swarm deals {@damage 4d6} piercing damage and {@damage 2d4} {@condition persistent damage||persistent bleed damage} to every creature in its space ({@dc 29} basic Reflex save). The first time per round that a creature is affected by an aukashungi swarm's Burrowing Agony, the creature is also exposed to expeditious evolution."
 						],
 						"name": "Burrowing Agony"
 					},
@@ -217,23 +182,47 @@
 							"curse",
 							"disease"
 						],
-						"note": " This affliction can't\nbe reduced below stage 1, nor the damage from it healed,\nuntil successfully treated with remove curse or a similar\neffect; the affliction can then be removed as normal for\na disease.",
+						"note": "This affliction can't be reduced below stage 1, nor the damage from it healed, until successfully treated with remove curse or a similar effect; the affliction can then be removed as normal for a disease.",
 						"DC": 27,
 						"savingThrow": "Fortitude",
 						"stages": [
 							{
 								"stage": 1,
-								"entry": "The aukashungi swarm chooses two of the victim's ability modifiers .",
+								"entry": "The aukashungi swarm chooses two of the victim's ability modifiers.",
 								"duration": "such as Strength and Charisma"
 							}
 						]
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 28
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 17
+					},
+					"ref": {
+						"std": 24
+					},
+					"will": {
+						"std": 13
+					}
+				},
+				"hp": [
+					{
+						"hp": 210
+					}
+				],
+				"immunities": [
+					"precision",
+					"swarm mind"
+				]
 			}
 		},
 		{
 			"name": "Brughadatch",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 78,
 			"level": 10,
@@ -242,9 +231,6 @@
 				"medium",
 				"amphibious",
 				"fey"
-			],
-			"creatureType": [
-				"Fey"
 			],
 			"perception": {
 				"std": 19
@@ -256,24 +242,24 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Sylvan"
+					"common",
+					"sylvan"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 19
 				},
-				"Deception": {
+				"deception": {
 					"std": 22
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 22
 				},
-				"Nature": {
+				"nature": {
 					"std": 22
 				},
-				"Survival": {
+				"survival": {
 					"std": 20
 				}
 			},
@@ -285,26 +271,6 @@
 				"wis": 4,
 				"cha": 6
 			},
-			"ac": {
-				"std": 30
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 22
-				},
-				"ref": {
-					"std": 16
-				},
-				"will": {
-					"std": 20
-				}
-			},
-			"hp": [
-				{
-					"hp": 210,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"swim": 25
@@ -329,7 +295,6 @@
 					"traits": [
 						"agile"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+5} slashing",
 					"types": [
 						"slashing"
@@ -338,9 +303,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
 					"type": "Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"DC": 28,
 					"attack": 22,
 					"entry": {
@@ -403,7 +367,7 @@
 						],
 						"entries": [
 							"The brughadatch conjures a decadent, enticing feast void of nutritional substance. This conjuration takes 1 minute and lasts for 24 hours.",
-							"For each item of illusory food a creature eats, it must attempt a DC 29 Will save.",
+							"For each item of illusory food a creature eats, it must attempt a {@dc 29} Will save.",
 							{
 								"type": "successDegree",
 								"entries": {
@@ -424,19 +388,40 @@
 						"requirements": "Targets must have critically failed a save against a brughadatch's Deceitful Feast or charm innate spell",
 						"frequency": {
 							"unit": "round",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
-							"The brughadatch feasts on the souls of the creatures they've tricked. They target up to five creatures within 30 feet and feast on their ambient brainpower, dealing {@damage 4d10} mental damage (DC 26 basic Will save) to each creature. Unless a target succeeds at the Will save, this damage does not end the charm effect or the effect of Deceitful Feast as a {@condition hostile} action normally would."
+							"The brughadatch feasts on the souls of the creatures they've tricked. They target up to five creatures within 30 feet and feast on their ambient brainpower, dealing {@damage 4d10} mental damage ({@dc 26} basic Will save) to each creature. Unless a target succeeds at the Will save, this damage does not end the charm effect or the effect of Deceitful Feast as a {@condition hostile} action normally would."
 						],
 						"name": "Psychic Sip"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 30
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 22
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 20
+					}
+				},
+				"hp": [
+					{
+						"hp": 210
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Doblagub",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 79,
 			"level": 13,
@@ -445,9 +430,6 @@
 				"large",
 				"amphibious",
 				"fey"
-			],
-			"creatureType": [
-				"Fey"
 			],
 			"perception": {
 				"std": 26
@@ -462,24 +444,24 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Sylvan"
+					"common",
+					"sylvan"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 25
 				},
-				"Deception": {
+				"deception": {
 					"std": 28
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 28
 				},
-				"Nature": {
+				"nature": {
 					"std": 26
 				},
-				"Survival": {
+				"survival": {
 					"std": 24
 				}
 			},
@@ -491,32 +473,6 @@
 				"wis": 5,
 				"cha": 7
 			},
-			"ac": {
-				"std": 35
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 23
-				},
-				"ref": {
-					"std": 18
-				},
-				"will": {
-					"std": 26
-				}
-			},
-			"hp": [
-				{
-					"hp": 250,
-					"abilities": null
-				}
-			],
-			"weaknesses": [
-				{
-					"amount": 15,
-					"name": "cold iron"
-				}
-			],
 			"speed": {
 				"walk": 10,
 				"swim": 10
@@ -527,7 +483,7 @@
 					"name": "jaws",
 					"attack": 27,
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"Grab"
@@ -542,20 +498,17 @@
 					"name": "tongue",
 					"attack": 27,
 					"traits": [
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"effects": [
-						"Grab"
-					],
-					"damage": "Grab and Pull 10 feet",
-					"types": []
+						"Grab and Pull 10 feet"
+					]
 				}
 			],
 			"spellcasting": [
 				{
-					"name": "Primal Innate",
 					"type": "Innate",
-					"tradition": "Primal",
+					"tradition": "primal",
 					"DC": 33,
 					"attack": 27,
 					"entry": {
@@ -631,7 +584,7 @@
 						],
 						"requirements": "A doblagub has bonded with their current location by being called there via a ritual or by remaining in one place for 10 years",
 						"entries": [
-							"40 feet. ; The doblagub grows etheric fibers that they can use to psychically keep prey close. Any time a creature tries to move within this aura, it must succeed at a DC 30 Will save or the movement fails and the action is wasted."
+							"40 feet. ; The doblagub grows etheric fibers that they can use to psychically keep prey close. Any time a creature tries to move within this aura, it must succeed at a {@dc 30} Will save or the movement fails and the action is wasted."
 						],
 						"name": "Etheric Fibers"
 					}
@@ -653,10 +606,10 @@
 						},
 						"frequency": {
 							"unit": "round",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
-							"Requirements The doblagub's etheric fibers aura is active; ; All nonbrughadatch creatures within the aura must succeed at a DC 30 Fortitude save or be pulled 10 feet toward the doblagub."
+							"Requirements The doblagub's etheric fibers aura is active; ; All nonbrughadatch creatures within the aura must succeed at a {@dc 30} Fortitude save or be pulled 10 feet toward the doblagub."
 						],
 						"name": "Etheric Tug"
 					},
@@ -683,11 +636,38 @@
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 35
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 23
+					},
+					"ref": {
+						"std": 18
+					},
+					"will": {
+						"std": 26
+					}
+				},
+				"hp": [
+					{
+						"hp": 250
+					}
+				],
+				"weaknesses": [
+					{
+						"amount": 15,
+						"name": "cold iron"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Faceless Butcher",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 80,
 			"level": 11,
@@ -696,9 +676,6 @@
 				"ne",
 				"medium",
 				"humanoid"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 21
@@ -710,26 +687,26 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				],
 				"abilities": [
 					"one regional language (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 22
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 24
 				},
-				"Deception": {
+				"deception": {
 					"std": 24
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 22
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 24
 				}
 			},
@@ -745,32 +722,6 @@
 				"bag of faces",
 				"cleaver"
 			],
-			"ac": {
-				"std": 31
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 23
-				},
-				"ref": {
-					"std": 22
-				},
-				"will": {
-					"std": 20
-				}
-			},
-			"hp": [
-				{
-					"hp": 175,
-					"abilities": null
-				}
-			],
-			"resistances": [
-				{
-					"amount": 8,
-					"name": "bludgeoning"
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -783,7 +734,6 @@
 						"forceful",
 						"sweep"
 					],
-					"effects": [],
 					"damage": "{@damage 2d12+7} slashing",
 					"types": [
 						"slashing"
@@ -797,7 +747,6 @@
 						"agile",
 						"nonlethal"
 					],
-					"effects": [],
 					"damage": "{@damage 2d10+7} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -808,9 +757,8 @@
 					"name": "cleaver",
 					"attack": 22,
 					"traits": [
-						"thrown 10 feet"
+						"thrown <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d12+7} slashing",
 					"types": [
 						"slashing"
@@ -835,7 +783,7 @@
 							"mental"
 						],
 						"entries": [
-							"10 feet, DC 26. This aura is suppressed if the faceless butcher is using {@action Change Shape|LOAG}."
+							"10 feet, {@dc 26}. This aura is suppressed if the faceless butcher is using {@action Change Shape|LOAG}."
 						],
 						"name": "Frightful Presence",
 						"generic": {
@@ -847,7 +795,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -875,11 +822,38 @@
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 31
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 23
+					},
+					"ref": {
+						"std": 22
+					},
+					"will": {
+						"std": 20
+					}
+				},
+				"hp": [
+					{
+						"hp": 175
+					}
+				],
+				"resistances": [
+					{
+						"amount": 8,
+						"name": "bludgeoning"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Gahlepod",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 78,
 			"level": 7,
@@ -888,9 +862,6 @@
 				"small",
 				"amphibious",
 				"fey"
-			],
-			"creatureType": [
-				"Fey"
 			],
 			"perception": {
 				"std": 13
@@ -907,14 +878,14 @@
 			],
 			"languages": {
 				"languages": [
-					"Sylvan (can't speak any language)"
+					"sylvan (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 17
 				},
-				"Survival": {
+				"survival": {
 					"std": 14
 				}
 			},
@@ -926,32 +897,6 @@
 				"wis": 1,
 				"cha": 0
 			},
-			"ac": {
-				"std": 24
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 17
-				},
-				"ref": {
-					"std": 19
-				},
-				"will": {
-					"std": 14
-				}
-			},
-			"hp": [
-				{
-					"hp": 140,
-					"abilities": null
-				}
-			],
-			"weaknesses": [
-				{
-					"amount": 5,
-					"name": "cold iron"
-				}
-			],
 			"speed": {
 				"walk": 10,
 				"swim": 35
@@ -961,7 +906,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 17,
-					"effects": [],
 					"damage": "{@damage 2d8+7} piercing",
 					"types": [
 						"piercing"
@@ -978,19 +922,46 @@
 						"trigger": "The gahlepod becomes adjacent to at least one other gahlepod",
 						"frequency": {
 							"unit": "round",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
-							"The gahlepod is spurred into a frenzy by the others. For the rest of the round, their jaws {@action Strike} deals {@damage 1d6} {@condition persistent damage ||persistent bleed damage} in addition to the listed damage."
+							"The gahlepod is spurred into a frenzy by the others. For the rest of the round, their jaws {@action Strike} deals {@damage 1d6} {@condition persistent damage||persistent bleed damage} in addition to the listed damage."
 						],
 						"name": "Churning Frenzy"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 24
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 17
+					},
+					"ref": {
+						"std": 19
+					},
+					"will": {
+						"std": 14
+					}
+				},
+				"hp": [
+					{
+						"hp": 140
+					}
+				],
+				"weaknesses": [
+					{
+						"amount": 5,
+						"name": "cold iron"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Giant Aukashungi",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 77,
 			"level": 14,
@@ -1001,9 +972,6 @@
 				"aberration",
 				"amphibious"
 			],
-			"creatureType": [
-				"Aberration"
-			],
 			"perception": {
 				"std": 24
 			},
@@ -1013,7 +981,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 29
 				}
 			},
@@ -1025,40 +993,6 @@
 				"wis": 3,
 				"cha": -2
 			},
-			"ac": {
-				"std": 36
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 28
-				},
-				"ref": {
-					"std": 25
-				},
-				"will": {
-					"std": 21
-				}
-			},
-			"hp": [
-				{
-					"hp": 300,
-					"abilities": null
-				}
-			],
-			"resistances": [
-				{
-					"amount": 10,
-					"name": "bludgeoning"
-				},
-				{
-					"amount": 15,
-					"name": "piercing"
-				},
-				{
-					"amount": 15,
-					"name": "slashing"
-				}
-			],
 			"speed": {
 				"walk": 25,
 				"burrow": 25
@@ -1069,7 +1003,7 @@
 					"name": "jaws",
 					"attack": 29,
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"Improved Grab"
@@ -1084,10 +1018,9 @@
 					"name": "horn",
 					"attack": 27,
 					"traits": [
-						"deadly 2d8",
-						"reach 15 feet"
+						"deadly <2d8>",
+						"reach <15 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d8+13} piercing",
 					"types": [
 						"piercing"
@@ -1119,7 +1052,7 @@
 							"acid"
 						],
 						"entries": [
-							"The giant aukashungi releases an acidic gas from its ventral glands in a 30-foot burst. Each creature that starts its turn in the area takes {@damage 10d8} acid damage plus {@damage 2d8} {@condition persistent damage ||persistent acid damage} (DC 32 basic Fortitude save). The gas moves 10 feet away from the giant aukashungi each round and lasts for 1 minute.",
+							"The giant aukashungi releases an acidic gas from its ventral glands in a 30-foot burst. Each creature that starts its turn in the area takes {@damage 10d8} acid damage plus {@damage 2d8} {@condition persistent damage||persistent acid damage} ({@dc 32} basic Fortitude save). The gas moves 10 feet away from the giant aukashungi each round and lasts for 1 minute.",
 							"The giant aukashungi can't use Acidic Effluence again for 1 minute."
 						],
 						"name": "Acidic Effluence"
@@ -1137,7 +1070,7 @@
 					},
 					{
 						"entries": [
-							"Up, that creature must succeed at a DC 35 Fortitude save or become."
+							"Up, that creature must succeed at a {@dc 35} Fortitude save or become."
 						],
 						"name": "Rolls"
 					},
@@ -1164,11 +1097,46 @@
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 36
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 28
+					},
+					"ref": {
+						"std": 25
+					},
+					"will": {
+						"std": 21
+					}
+				},
+				"hp": [
+					{
+						"hp": 300
+					}
+				],
+				"resistances": [
+					{
+						"amount": 10,
+						"name": "bludgeoning"
+					},
+					{
+						"amount": 15,
+						"name": "piercing"
+					},
+					{
+						"amount": 15,
+						"name": "slashing"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Harrow Doll",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 81,
 			"level": 8,
@@ -1177,9 +1145,6 @@
 				"n",
 				"large",
 				"construct"
-			],
-			"creatureType": [
-				"Construct"
 			],
 			"perception": {
 				"std": 14
@@ -1191,11 +1156,11 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
-				"Fortune-Telling Lore": {
+				"fortune-telling lore": {
 					"std": 16
 				}
 			},
@@ -1209,40 +1174,6 @@
 			},
 			"items": [
 				"metal harrow deck"
-			],
-			"ac": {
-				"std": 26
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 16
-				},
-				"ref": {
-					"std": 16
-				},
-				"will": {
-					"std": 17
-				}
-			},
-			"hp": [
-				{
-					"hp": 120,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"bleed",
-				"death effects",
-				"disease",
-				"doomed",
-				"drained"
-			],
-			"resistances": [
-				{
-					"amount": 5,
-					"name": "physical",
-					"note": "(except adamantine)"
-				}
 			],
 			"speed": {
 				"walk": 25
@@ -1270,7 +1201,7 @@
 					"attack": 18,
 					"traits": [
 						"magical",
-						"range increment 60 feet"
+						"range increment <60 feet>"
 					],
 					"effects": [
 						"harrowing misfortune"
@@ -1283,9 +1214,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Innate",
 					"type": "Innate",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 27,
 					"entry": {
 						"2": {
@@ -1342,16 +1272,51 @@
 							"misfortune"
 						],
 						"entries": [
-							"A creature struck by one of the harrow doll's cards must attempt a DC 25 Will save or be cursed with misfortune, which forces the creature to roll twice and take the lower result on its next roll of a specific type, determined by the card's suit (roll {@dice 1d6} to randomly determine the suit). A creature can be cursed with only one effect from harrowing misfortune at a time, with a new curse overriding any previous curse. The curse ends after 1 minute or after the specified roll is made, whichever comes first. The suits and their effects are: Hammers (melee attack roll), Keys (Reflex save), Shields (Fortitude save), Books (skill check), Stars (Will save), and Crowns (spell attack roll)."
+							"A creature struck by one of the harrow doll's cards must attempt a {@dc 25} Will save or be cursed with misfortune, which forces the creature to roll twice and take the lower result on its next roll of a specific type, determined by the card's suit (roll {@dice 1d6} to randomly determine the suit). A creature can be cursed with only one effect from harrowing misfortune at a time, with a new curse overriding any previous curse. The curse ends after 1 minute or after the specified roll is made, whichever comes first. The suits and their effects are: Hammers (melee attack roll), Keys (Reflex save), Shields (Fortitude save), Books (skill check), Stars (Will save), and Crowns (spell attack roll)."
 						],
 						"name": "Harrowing Misfortune"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 26
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 16
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 17
+					}
+				},
+				"hp": [
+					{
+						"hp": 120
+					}
+				],
+				"immunities": [
+					"bleed",
+					"death effects",
+					"disease",
+					"doomed",
+					"drained"
+				],
+				"resistances": [
+					{
+						"amount": 5,
+						"name": "physical",
+						"note": "except adamantine"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Helg Eats-the-eaters",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 87,
 			"level": 15,
@@ -1361,9 +1326,7 @@
 				"large",
 				"aberration"
 			],
-			"creatureType": [
-				"Aberration"
-			],
+			"description": "Female gug necromancer (Pathfinder Bestiary 198)",
 			"perception": {
 				"std": 26
 			},
@@ -1374,33 +1337,33 @@
 			],
 			"languages": {
 				"languages": [
-					"Aklo",
-					"Common",
-					"Draconic",
-					"Undercommon"
+					"aklo",
+					"common",
+					"draconic",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 26,
 					"to Squeeze": 30
 				},
-				"Arcana": {
+				"arcana": {
 					"std": 29
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 28
 				},
-				"Deception": {
+				"deception": {
 					"std": 21
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 27
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 24
 				},
-				"Survival": {
+				"survival": {
 					"std": 22
 				}
 			},
@@ -1416,26 +1379,6 @@
 				"religious symbol of Bokrug",
 				"spellbook"
 			],
-			"ac": {
-				"std": 37
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 29
-				},
-				"ref": {
-					"std": 23
-				},
-				"will": {
-					"std": 26
-				}
-			},
-			"hp": [
-				{
-					"hp": 275,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"climb": 20
@@ -1446,9 +1389,8 @@
 					"name": "jaws",
 					"attack": 30,
 					"traits": [
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d12+13} piercing",
 					"types": [
 						"piercing"
@@ -1460,9 +1402,8 @@
 					"attack": 30,
 					"traits": [
 						"agile",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d8+13} slashing",
 					"types": [
 						"slashing"
@@ -1471,9 +1412,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Prepared",
 					"type": "Prepared",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 36,
 					"attack": 28,
 					"entry": {
@@ -1563,9 +1503,7 @@
 							"spells": [
 								{
 									"name": "blood feast",
-									"notes": [
-										"page 74"
-									]
+									"source": "EC4"
 								},
 								{
 									"name": "cloudkill"
@@ -1598,9 +1536,7 @@
 							"spells": [
 								{
 									"name": "entrancing eyes",
-									"notes": [
-										"page 74"
-									]
+									"source": "EC4"
 								},
 								{
 									"name": "vampiric exsanguination"
@@ -1623,11 +1559,29 @@
 							]
 						}
 					}
+				},
+				{
+					"name": "Wizard School Spells",
+					"type": "Focus",
+					"DC": 36,
+					"fp": 1,
+					"entry": {
+						"8": {
+							"spells": [
+								{
+									"name": "call of the grave"
+								},
+								{
+									"name": "life siphon"
+								}
+							]
+						}
+					}
 				}
 			],
 			"rituals": [
 				{
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 36,
 					"rituals": [
 						{
@@ -1638,35 +1592,18 @@
 						},
 						{
 							"name": "statuette",
-							"notes": [
-								"page 75"
-							]
+							"source": "EC4"
 						}
 					]
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+28, {@skill Deception} +21, {@skill Occultism} +27, {@skill Stealth} +24,"
-						],
-						"name": "Athletics"
-					},
-					{
-						"entries": [
-							"+22 Str +7, Dex +3, Con +4, Int +6, Wis +3, Cha +0 Items religious symbol of Bokrug, spellbook."
-						],
-						"name": "Survival"
-					}
-				],
 				"mid": [
 					{
 						"activity": {
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -1676,7 +1613,7 @@
 				"bot": [
 					{
 						"entries": [
-							"Despite her size, Helg's multiple joints allow her to fit through tight spaces as if she were a Medium creature. While Squeezing, she can move at her full Speed."
+							"Despite her size, Helg's multiple joints allow her to fit through tight spaces as if she were a Medium creature. While {@action Squeeze||Squeezing}, she can move at her full Speed."
 						],
 						"name": "Eerie Flexibility"
 					},
@@ -1691,10 +1628,19 @@
 						"requirements": "Helg's most recent action was to cast a non-cantrip necromancy spell",
 						"frequency": {
 							"unit": "turn",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
-							"Helg drains away the life force from a creature targeted by the spell, with a result depending on its Fortitude save (DC 36). This effect is magical and can be counteracted with dispel magic (Level 15, DC 36). This ability cannot affect a creature that critically succeeded at the spell's saving throw, if any. Critical Success No effect. Success {@condition Enfeebled|CRB|Enfeebled 1} for 1 round. Failure {@condition Fatigued}. Critical Failure {@condition Fatigued}, and rest does not remove the creature's {@condition fatigued} condition for 1 week."
+							"Helg drains away the life force from a creature targeted by the spell, with a result depending on its Fortitude save ({@dc 36}). This effect is magical and can be counteracted with {@spell dispel magic} (Level 15, {@dc 36}). This ability cannot affect a creature that critically succeeded at the spell's saving throw, if any.",
+							{
+								"type": "successDegree",
+								"entries": {
+									"Critical Success": "No effect.",
+									"Success": "{@condition Enfeebled|CRB|Enfeebled 1} for 1 round.",
+									"Failure": "{@condition Fatigued}.",
+									"Critical Failure": "{@condition Fatigued}, and rest does not remove the creature's {@condition fatigued} condition for 1 week."
+								}
+							}
 						],
 						"name": "Enervating Tug"
 					},
@@ -1704,7 +1650,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Helg makes up to three claw Strikes, each against a different target. These attacks all count toward Helg's multiple attack penalty, but the penalty doesn't increase until after she makes all her attacks."
+							"Helg makes up to three claw {@action Strike||Strikes}, each against a different target. These attacks all count toward Helg's multiple attack penalty, but the penalty doesn't increase until after she makes all her attacks."
 						],
 						"name": "Furious Claws"
 					},
@@ -1713,21 +1659,40 @@
 							"number": 1,
 							"unit": "action"
 						},
-						"traits": [
+						"entries": [
 							"claw"
 						],
-						"entries": [],
 						"name": "Rend",
 						"generic": {
 							"tag": "ability"
 						}
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 37
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 29
+					},
+					"ref": {
+						"std": 23
+					},
+					"will": {
+						"std": 26
+					}
+				},
+				"hp": [
+					{
+						"hp": 275
+					}
+				]
 			}
 		},
 		{
 			"name": "Ledorick Banyan",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 89,
 			"level": 14,
@@ -1738,35 +1703,37 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Male human folk hero",
 			"perception": {
-				"std": 24
+				"std": 24,
+				"when using Perception for initiative": 26
 			},
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"acrobatics": {
+					"std": 24
+				},
+				"athletics": {
 					"std": 25,
 					"to Disarm": 27
 				},
-				"Deception": {
+				"deception": {
 					"std": 23
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 25
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 25
 				},
-				"Society": {
+				"society": {
 					"std": 20
 				},
-				"Willowside Lore": {
+				"willowside lore": {
 					"std": 18
 				}
 			},
@@ -1778,25 +1745,12 @@
 				"wis": 2,
 				"cha": 5
 			},
-			"ac": {
-				"std": 36
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 28
-				},
-				"ref": {
-					"std": 26
-				},
-				"will": {
-					"std": 22
-				}
-			},
-			"hp": [
-				{
-					"hp": 260,
-					"abilities": null
-				}
+			"items": [
+				"+1 resilient chain shirt",
+				"+1 striking composite longbow (40 arrows)",
+				"moderate healing potion",
+				"+2 greater striking longsword",
+				"ring of sustenance"
 			],
 			"speed": {
 				"walk": 25
@@ -1808,9 +1762,8 @@
 					"attack": 29,
 					"traits": [
 						"magical",
-						"versatile p"
+						"versatile <p>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d8+13} slashing",
 					"types": [
 						"slashing"
@@ -1826,7 +1779,6 @@
 						"nonlethal",
 						"unarmed"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+11} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -1837,14 +1789,13 @@
 					"name": "composite longbow",
 					"attack": 27,
 					"traits": [
-						"deadly 2d10",
+						"deadly <2d10>",
 						"magical",
 						"propulsive",
-						"range increment 100 feet",
-						"reload 0",
-						"volley 30 feet"
+						"range increment <100 feet>",
+						"reload <0>",
+						"volley <30 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+11} piercing",
 					"types": [
 						"piercing"
@@ -1852,26 +1803,12 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+23, {@skill Diplomacy} +25, {@skill Intimidation} +25,"
-						],
-						"name": "Deception"
-					},
-					{
-						"entries": [
-							"+20, {@skill Lore||Willowside Lore} +18 Str +5, Dex +4, Con +2, Int +0, Wis +2, Cha +5 Items +1 resilient chain shirt, +1 striking composite longbow (40 arrows), moderate healing potion, +2 greater striking longsword, ring of sustenance."
-						],
-						"name": "Society"
-					}
-				],
 				"mid": [
 					{
 						"entries": [
-							"Ledorick rolls a success on a Fortitude save, it is a critical success instead."
+							"When Ledorick rolls a success on a Fortitude save, it is a critical success instead."
 						],
-						"name": "Juggernaut When"
+						"name": "Juggernaut"
 					},
 					{
 						"activity": {
@@ -1879,7 +1816,7 @@
 							"unit": "reaction"
 						},
 						"entries": [
-							"Ledorick gains an additional reaction at the beginning of each of his turns that he can use only for an Attack of."
+							"Ledorick gains an additional reaction at the beginning of each of his turns that he can use only for an Attack of Opportunity."
 						],
 						"name": "Attack of Opportunity",
 						"generic": {
@@ -1887,23 +1824,16 @@
 						}
 					},
 					{
-						"entries": [],
-						"name": "Opportunity."
-					},
-					{
 						"activity": {
 							"number": 1,
 							"unit": "reaction"
 						},
-						"requirements": "Ledorick is using",
-						"entries": [],
-						"name": "Dueling Riposte"
-					},
-					{
+						"requirements": "Ledorick is using Dueling Parry",
+						"trigger": "A creature within Ledorick's reach critically fails a {@action Strike} against him",
 						"entries": [
-							"A creature within Ledorick's reach critically fails a {@action Strike} against him; Ledorick makes a melee {@action Strike} against the triggering creature or attempts to {@action Disarm} the triggering creature."
+							"Ledorick makes a melee {@action Strike} against the triggering creature or attempts to {@action Disarm} the triggering creature."
 						],
-						"name": "Dueling Parry; Trigger"
+						"name": "Dueling Riposte"
 					}
 				],
 				"bot": [
@@ -1925,15 +1855,15 @@
 						},
 						"requirements": "Ledorick has a single one-handed melee weapon in one hand and has his other hand free",
 						"entries": [
-							"Ledorick Strikes with the required weapon. On a hit, he moves the target up to 10 feet into a space he can reach, even moving the target through his own space. On a failed {@action Strike}, Ledorick can still move the target 5 feet in this way. This action can be used only if Ledorick has a multiple attack penalty."
+							"Ledorick {@action Strike||Strikes} with the required weapon. On a hit, he moves the target up to 10 feet into a space he can reach, even moving the target through his own space. On a failed {@action Strike}, Ledorick can still move the target 5 feet in this way. This action can be used only if Ledorick has a multiple attack penalty."
 						],
 						"name": "Guiding Finish"
 					},
 					{
 						"entries": [
-							"Ledorick can see and be seen by at least two allies, his attacks deal {@dice 3d6} extra precision damage."
+							"When Ledorick can see and be seen by at least two allies, his attacks deal {@dice 3d6} extra precision damage."
 						],
-						"name": "Show-Off When"
+						"name": "Show-Off"
 					},
 					{
 						"activity": {
@@ -1946,11 +1876,31 @@
 						"name": "Sudden Charge"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 36
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 28
+					},
+					"ref": {
+						"std": 26
+					},
+					"will": {
+						"std": 22
+					}
+				},
+				"hp": [
+					{
+						"hp": 260
+					}
+				]
 			}
 		},
 		{
 			"name": "Lyrt Cozurn",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 40,
 			"level": 15,
@@ -1962,10 +1912,7 @@
 				"spirit",
 				"undead"
 			],
-			"creatureType": [
-				"Spirit",
-				"Undead"
-			],
+			"description": "Male dybbuk cult leader",
 			"perception": {
 				"std": 27
 			},
@@ -1976,28 +1923,28 @@
 			],
 			"languages": {
 				"languages": [
-					"Abyssal",
-					"Aklo",
-					"Common"
+					"abyssal",
+					"aklo",
+					"common"
 				],
 				"abilities": [
 					"telepathy 100 feet"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 28
 				},
-				"Deception": {
+				"deception": {
 					"std": 31
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 27
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 29
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 28
 				}
 			},
@@ -2009,43 +1956,6 @@
 				"wis": 6,
 				"cha": 8
 			},
-			"ac": {
-				"std": 35
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 19
-				},
-				"ref": {
-					"std": 28
-				},
-				"will": {
-					"std": 29
-				}
-			},
-			"hp": [
-				{
-					"hp": 280,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects"
-			],
-			"resistances": [
-				{
-					"amount": 15,
-					"name": "all damage"
-				},
-				{
-					"name": "ghost touch"
-				},
-				{
-					"name": "or"
-				}
-			],
 			"speed": {
 				"fly": 50
 			},
@@ -2060,7 +1970,6 @@
 						"finesse",
 						"magical"
 					],
-					"effects": [],
 					"damage": "{@damage 8d6} negative plus {@damage 2d6} evil",
 					"types": [
 						"evil",
@@ -2070,9 +1979,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
 					"type": "Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"DC": 35,
 					"attack": 31,
 					"entry": {
@@ -2128,14 +2036,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+29, {@skill Stealth} +28 Str \u20135, Dex +7, Con +0, Int +1, Wis +6, Cha +8."
-						],
-						"name": "Intimidation"
-					}
-				],
 				"mid": [
 					{
 						"traits": [
@@ -2147,7 +2047,7 @@
 							"mental"
 						],
 						"entries": [
-							"30 feet, DC 33."
+							"30 feet, {@dc 33}"
 						],
 						"name": "Frightful Presence",
 						"generic": {
@@ -2162,11 +2062,14 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Lyrt possesses a Large or smaller object within 20 feet, making it an animated object (Bestiary 20)",
+							"Lyrt possesses a {@trait Large} or smaller object within 20 feet, making it an animated object (Bestiary 20)",
 							"This animated object's level can be no higher than Lyrt's level \u2013 2. If the target object is being held by a creature, the bearer can attempt a Will save to prevent the possession.",
 							"This possession ends when the object is destroyed or Lyrt leaves it. At this point, Lyrt reappears in the object's square and can't Inhabit an Object again for {@dice 1d4} rounds."
 						],
-						"name": "Inhabit Object"
+						"name": "Inhabit Object",
+						"generic": {
+							"tag": "ability"
+						}
 					},
 					{
 						"activity": {
@@ -2176,14 +2079,55 @@
 						"entries": [
 							"Lyrt attempts to possess an adjacent corporeal creature. This has the same effect as the {@spell possession} spell with an unlimited duration, except since Lyrt doesn't have a physical body, he is unaffected by that restriction. When Lyrt departs, the target has only {@condition confused} and incoherent memories of the period during which they were possessed. If a creature dies while possessed by Lyrt and its corpse remains intact, Lyrt can immediately inhabit the corpse (see Inhabit Object) as a reaction, in which case the corpse acts like an animated object."
 						],
-						"name": "Malevolent Possession"
+						"name": "Malevolent Possession",
+						"generic": {
+							"tag": "ability"
+						}
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 35
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 19
+					},
+					"ref": {
+						"std": 28
+					},
+					"will": {
+						"std": 29
+					}
+				},
+				"hp": [
+					{
+						"hp": 280,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyzed",
+					"poison",
+					"precision",
+					"unconscious"
+				],
+				"resistances": [
+					{
+						"amount": 15,
+						"name": "all damage",
+						"note": "except force, {@item ghost touch}, or positive; double resistance vs. non-magical"
 					}
 				]
 			}
 		},
 		{
 			"name": "Qurashith",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 82,
 			"level": 17,
@@ -2193,10 +2137,6 @@
 				"huge",
 				"aberration",
 				"fiend"
-			],
-			"creatureType": [
-				"Aberration",
-				"Fiend"
 			],
 			"perception": {
 				"std": 33
@@ -2216,7 +2156,7 @@
 			],
 			"languages": {
 				"languages": [
-					"Abyssal"
+					"abyssal"
 				],
 				"abilities": [
 					"telepathy 120 feet",
@@ -2224,19 +2164,19 @@
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 30
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 32
 				},
-				"Deception": {
+				"deception": {
 					"std": 29
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 32
 				},
-				"Survival": {
+				"survival": {
 					"std": 28
 				}
 			},
@@ -2248,42 +2188,6 @@
 				"wis": 5,
 				"cha": 6
 			},
-			"ac": {
-				"std": 40
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 29
-				},
-				"ref": {
-					"std": 30
-				},
-				"will": {
-					"std": 28
-				}
-			},
-			"hp": [
-				{
-					"hp": 340,
-					"abilities": null
-				}
-			],
-			"weaknesses": [
-				{
-					"amount": 15,
-					"name": "good"
-				},
-				{
-					"amount": 15,
-					"name": "lawful"
-				}
-			],
-			"resistances": [
-				{
-					"amount": 15,
-					"name": "acid"
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"fly": 60
@@ -2297,7 +2201,7 @@
 						"chaotic",
 						"evil",
 						"magical",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
 					"effects": [
 						"paralytic spittle"
@@ -2316,9 +2220,8 @@
 						"chaotic",
 						"evil",
 						"magical",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d10+15} slashing",
 					"types": [
 						"slashing"
@@ -2329,7 +2232,7 @@
 					"name": "spittle",
 					"attack": 30,
 					"traits": [
-						"range 60 feet"
+						"range <60 feet>"
 					],
 					"effects": [
 						"paralytic saliva"
@@ -2342,9 +2245,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Innate",
 					"type": "Innate",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 35,
 					"entry": {
 						"6": {
@@ -2374,7 +2276,7 @@
 				"mid": [
 					{
 						"entries": [
-							"Any creature that Strikes the qurashith with a melee weapon must attempt a DC 37 Reflex save. On a failure, the creature is disarmed of its weapon, which becomes stuck to the qurashith's body; if the {@action Strike} was an unarmed attack, the creature's limb sticks to the qurashith's body and the creature becomes {@condition immobilized}. A creature must succeed at a DC 31 {@skill Athletics} check to retrieve a stuck weapon. On a failure, the creature takes {@damage 2d6} acid damage and the weapon remains stuck, and on a critical failure, the creature also becomes stuck to the qurashith and becomes {@condition immobilized}. A stuck creature takes {@damage 2d6} acid damage each round it remains stuck to the qurashith and can use an {@action Escape} action to try to free itself from the monster (DC 31)."
+							"Any creature that {@action Strike||Strikes} the qurashith with a melee weapon must attempt a {@dc 37} Reflex save. On a failure, the creature is disarmed of its weapon, which becomes stuck to the qurashith's body; if the {@action Strike} was an unarmed attack, the creature's limb sticks to the qurashith's body and the creature becomes {@condition immobilized}. A creature must succeed at a {@dc 31} {@skill Athletics} check to retrieve a stuck weapon. On a failure, the creature takes {@damage 2d6} acid damage and the weapon remains stuck, and on a critical failure, the creature also becomes stuck to the qurashith and becomes {@condition immobilized}. A stuck creature takes {@damage 2d6} acid damage each round it remains stuck to the qurashith and can use an {@action Escape} action to try to free itself from the monster ({@dc 31})."
 						],
 						"name": "Adhesive Body"
 					},
@@ -2386,7 +2288,7 @@
 							"mental"
 						],
 						"entries": [
-							"90 feet, DC 33."
+							"90 feet, {@dc 33}"
 						],
 						"name": "Frightful Presence",
 						"generic": {
@@ -2397,7 +2299,7 @@
 				"bot": [
 					{
 						"entries": [
-							"A creature that takes damage from a qurashith's jaws or spittle must succeed at a DC 39 Fortitude save or be {@condition slowed|CRB|slowed 1} for {@dice 1d4} rounds ({@condition slowed|CRB|slowed 2} on a critical failure). If a creature is already {@condition slowed} when it fails its save, it becomes {@condition paralyzed} for 1 round."
+							"A creature that takes damage from a qurashith's jaws or spittle must succeed at a {@dc 39} Fortitude save or be {@condition slowed|CRB|slowed 1} for {@dice 1d4} rounds ({@condition slowed|CRB|slowed 2} on a critical failure). If a creature is already {@condition slowed} when it fails its save, it becomes {@condition paralyzed} for 1 round."
 						],
 						"name": "Paralytic Saliva"
 					},
@@ -2407,7 +2309,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"The qurashith unleashes a debilitating psionic scream. Creatures in a 60-foot cone must succeed at a DC 35 Will save or become {@condition stupefied|CRB|stupefied 2} ({@condition stupefied|CRB|stupefied 4} on a critical failure) for 1 minute. A creature that critically succeeds at its Will save is immune to the qurashith's Psychic Howl for 24 hours. The qurashith can't use Psychic Howl again for {@dice 1d4} rounds."
+							"The qurashith unleashes a debilitating psionic scream. Creatures in a 60-foot cone must succeed at a {@dc 35} Will save or become {@condition stupefied|CRB|stupefied 2} ({@condition stupefied|CRB|stupefied 4} on a critical failure) for 1 minute. A creature that critically succeeds at its Will save is immune to the qurashith's Psychic Howl for 24 hours. The qurashith can't use Psychic Howl again for {@dice 1d4} rounds."
 						],
 						"name": "Psychic Howl"
 					},
@@ -2419,18 +2321,54 @@
 						"traits": [
 							"claw"
 						],
-						"entries": [],
 						"name": "Rend",
 						"generic": {
 							"tag": "ability"
 						}
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 40
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 29
+					},
+					"ref": {
+						"std": 30
+					},
+					"will": {
+						"std": 28
+					}
+				},
+				"hp": [
+					{
+						"hp": 340
+					}
+				],
+				"weaknesses": [
+					{
+						"amount": 15,
+						"name": "good"
+					},
+					{
+						"amount": 15,
+						"name": "lawful"
+					}
+				],
+				"resistances": [
+					{
+						"amount": 15,
+						"name": "acid"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Sodden Sentinels",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 32,
 			"level": 11,
@@ -2439,9 +2377,6 @@
 				"ne",
 				"medium",
 				"undead"
-			],
-			"creatureType": [
-				"Undead"
 			],
 			"perception": {
 				"std": 15
@@ -2452,7 +2387,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 26
 				}
 			},
@@ -2464,41 +2399,6 @@
 				"wis": 0,
 				"cha": -2
 			},
-			"ac": {
-				"std": 28
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 24
-				},
-				"ref": {
-					"std": 14
-				},
-				"will": {
-					"std": 19
-				}
-			},
-			"hp": [
-				{
-					"hp": 320,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects"
-			],
-			"weaknesses": [
-				{
-					"amount": 15,
-					"name": "positive"
-				},
-				{
-					"amount": 15,
-					"name": "slashing"
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -2507,7 +2407,6 @@
 					"range": "Melee",
 					"name": "fist",
 					"attack": 24,
-					"effects": [],
 					"damage": "{@damage 2d12+16} bludgeoning plus",
 					"types": [
 						"bludgeoning"
@@ -2526,14 +2425,13 @@
 				"mid": [
 					{
 						"entries": [
-							"When a sodden sentinel is reduced to 0 Hit Points, it explodes, dealing {@damage 6d6} bludgeoning damage to each creature in a 10-foot emanation (DC 30 basic Reflex save). A creature that fails this save is also {@condition blinded} for {@dice 1d4} rounds (1 minute on a critical failure)."
+							"When a sodden sentinel is reduced to 0 Hit Points, it explodes, dealing {@damage 6d6} bludgeoning damage to each creature in a 10-foot emanation ({@dc 30} basic Reflex save). A creature that fails this save is also {@condition blinded} for {@dice 1d4} rounds (1 minute on a critical failure)."
 						],
 						"name": "Tainted Guts"
 					}
 				],
 				"bot": [
 					{
-						"entries": [],
 						"name": "Improved Knockdown",
 						"generic": {
 							"tag": "ability"
@@ -2556,16 +2454,52 @@
 							"water"
 						],
 						"entries": [
-							"The sodden sentinel vomits up a supernaturally tainted wave of seawater in a 30-foot cone. Each living creature in the area takes {@damage 6d10} negative damage (DC 30 basic Reflex save). It can't use Seawater Retch again for {@dice 1d4} rounds."
+							"The sodden sentinel vomits up a supernaturally tainted wave of seawater in a 30-foot cone. Each living creature in the area takes {@damage 6d10} negative damage ({@dc 30} basic Reflex save). It can't use Seawater Retch again for {@dice 1d4} rounds."
 						],
 						"name": "Seawater Retch"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 28
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 24
+					},
+					"ref": {
+						"std": 14
+					},
+					"will": {
+						"std": 19
+					}
+				},
+				"hp": [
+					{
+						"hp": 320,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects"
+				],
+				"weaknesses": [
+					{
+						"amount": 15,
+						"name": "positive"
+					},
+					{
+						"amount": 15,
+						"name": "slashing"
 					}
 				]
 			}
 		},
 		{
 			"name": "Starved Staff",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 16,
 			"level": 14,
@@ -2574,9 +2508,6 @@
 				"ne",
 				"huge",
 				"undead"
-			],
-			"creatureType": [
-				"Undead"
 			],
 			"perception": {
 				"std": 26
@@ -2588,14 +2519,14 @@
 			],
 			"languages": {
 				"languages": [
-					"Common (can't speak any language)"
+					"common (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 29
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 26
 				}
 			},
@@ -2607,31 +2538,6 @@
 				"wis": 3,
 				"cha": 3
 			},
-			"ac": {
-				"std": 32
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 24
-				},
-				"ref": {
-					"std": 16
-				},
-				"will": {
-					"std": 21
-				}
-			},
-			"hp": [
-				{
-					"hp": 250,
-					"abilities": [
-						"negative healing"
-					]
-				}
-			],
-			"immunities": [
-				"death effects"
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -2641,7 +2547,7 @@
 					"name": "jaws",
 					"attack": 29,
 					"traits": [
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"Grab"
@@ -2657,9 +2563,8 @@
 					"attack": 29,
 					"traits": [
 						"agile",
-						"reach 15 feet"
+						"reach <15 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d8+16} slashing",
 					"types": [
 						"slashing"
@@ -2676,7 +2581,7 @@
 							"necromancy"
 						],
 						"entries": [
-							"60 feet. Any creature that ends its turn in the aura feels the intense pain of starvation and must attempt a DC 32 Fortitude save. On a failure, the creature becomes {@condition fatigued} and takes {@dice 7d6} damage. The damage and fatigue a creature takes from this aura can't be healed until the affected creature has eaten a full meal."
+							"60 feet. Any creature that ends its turn in the aura feels the intense pain of starvation and must attempt a {@dc 32} Fortitude save. On a failure, the creature becomes {@condition fatigued} and takes {@dice 7d6} damage. The damage and fatigue a creature takes from this aura can't be healed until the affected creature has eaten a full meal."
 						],
 						"name": "Starvation Aura"
 					}
@@ -2693,7 +2598,7 @@
 						],
 						"entries": [
 							"The gashadokuro breathes a spray of bone shards in a 30-foot cone.",
-							"Each creature in the area takes {@damage 9d12} piercing damage (DC 36 basic Reflex save). It can't use Breath Weapon again for {@dice 1d4} rounds."
+							"Each creature in the area takes {@damage 9d12} piercing damage ({@dc 36} basic Reflex save). It can't use Breath Weapon again for {@dice 1d4} rounds."
 						],
 						"name": "Breath Weapon"
 					},
@@ -2724,11 +2629,37 @@
 						}
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 32
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 24
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 21
+					}
+				},
+				"hp": [
+					{
+						"hp": 250,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects"
+				]
 			}
 		},
 		{
 			"name": "Stirvyn Banyan",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 39,
 			"level": 12,
@@ -2739,9 +2670,7 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Male human town protector",
 			"perception": {
 				"std": 21
 			},
@@ -2752,23 +2681,23 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
-				"Arcana": {
+				"arcana": {
 					"std": 20
 				},
-				"Deception": {
+				"deception": {
 					"std": 23
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 21
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 23
 				},
-				"Society": {
+				"society": {
 					"std": 20
 				}
 			},
@@ -2783,27 +2712,7 @@
 			"items": [
 				"major mentalist's staff",
 				"scroll of false life",
-				"Sheriff"
-			],
-			"ac": {
-				"std": 31
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 21
-				},
-				"ref": {
-					"std": 22
-				},
-				"will": {
-					"std": 21
-				}
-			},
-			"hp": [
-				{
-					"hp": 230,
-					"abilities": null
-				}
+				"Sheriff Banyan's map of the sea caves"
 			],
 			"speed": {
 				"walk": 25
@@ -2815,9 +2724,8 @@
 					"attack": 24,
 					"traits": [
 						"magical",
-						"two-hand d8"
+						"two-hand <d8>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+6} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -2826,9 +2734,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Arcane Spontaneous",
 					"type": "Spontaneous",
-					"tradition": "Arcane",
+					"tradition": "arcane",
 					"DC": 32,
 					"attack": 24,
 					"entry": {
@@ -2964,17 +2871,30 @@
 							}
 						}
 					}
+				},
+				{
+					"name": "Sorcerer Bloodline Spells",
+					"type": "Focus",
+					"DC": 32,
+					"fp": 3,
+					"entry": {
+						"6": {
+							"spells": [
+								{
+									"name": "ancestral memories"
+								},
+								{
+									"name": "arcane countermeasure"
+								},
+								{
+									"name": "extend spell"
+								}
+							]
+						}
+					}
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+23, {@skill Society} +20 Str +0, Dex +4, Con +3, Int +2, Wis +3, Cha +5 Items major mentalist's staff, scroll of false life, Sheriff Banyan's map of the sea caves."
-						],
-						"name": "Intimidation"
-					}
-				],
 				"mid": [
 					{
 						"activity": {
@@ -2995,15 +2915,15 @@
 				"bot": [
 					{
 						"entries": [
-							"Stirvyn casts a bloodline spell, a surge of ancestral memories grants either him or a target of the spell a +1 status bonus to skill checks for 1 round."
+							"When Stirvyn casts a bloodline spell, a surge of ancestral memories grants either him or a target of the spell a +1 status bonus to skill checks for 1 round."
 						],
-						"name": "Bloodline Magic When"
+						"name": "Bloodline Magic"
 					},
 					{
 						"entries": [
-							"Casts a Spell from a spell slot, if the spell deals damage and doesn't have a duration, he gains a status bonus to that spell's damage equal to the spell's level."
+							"When Stirvyn {@action Casts a Spell} from a spell slot, if the spell deals damage and doesn't have a duration, he gains a status bonus to that spell's damage equal to the spell's level."
 						],
-						"name": "Dangerous Sorcery When Stirvyn"
+						"name": "Dangerous Sorcery"
 					},
 					{
 						"entries": [
@@ -3012,11 +2932,31 @@
 						"name": "Steady Spellcasting"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 31
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 21
+					},
+					"ref": {
+						"std": 22
+					},
+					"will": {
+						"std": 21
+					}
+				},
+				"hp": [
+					{
+						"hp": 230
+					}
+				]
 			}
 		},
 		{
 			"name": "Tallow Ooze",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 83,
 			"level": 11,
@@ -3025,9 +2965,6 @@
 				"medium",
 				"mindless",
 				"ooze"
-			],
-			"creatureType": [
-				"Ooze"
 			],
 			"perception": {
 				"std": 14
@@ -3042,7 +2979,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 23
 				}
 			},
@@ -3054,46 +2991,6 @@
 				"wis": 0,
 				"cha": -5
 			},
-			"ac": {
-				"std": 19
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 22
-				},
-				"ref": {
-					"std": 10
-				},
-				"will": {
-					"std": 13
-				}
-			},
-			"hp": [
-				{
-					"hp": 270,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"acid",
-				"mental",
-				"piercing",
-				"precision",
-				"slashing",
-				"critical hits"
-			],
-			"weaknesses": [
-				{
-					"amount": 10,
-					"name": "fire"
-				}
-			],
-			"resistances": [
-				{
-					"amount": 10,
-					"name": "cold"
-				}
-			],
 			"speed": {
 				"walk": 20,
 				"swim": 20
@@ -3133,7 +3030,7 @@
 							"aura"
 						],
 						"entries": [
-							"10 feet. Any creature that starts its turn in or enters a square in the area must attempt a DC 30 {@skill Acrobatics} check to {@action Balance}. A creature that takes a {@action Step} doesn't need to roll this check."
+							"10 feet. Any creature that starts its turn in or enters a square in the area must attempt a {@dc 30} {@skill Acrobatics} check to {@action Balance}. A creature that takes a {@action Step} doesn't need to roll this check."
 						],
 						"name": "Greasy Seepage"
 					}
@@ -3145,7 +3042,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"DC 30, {@damage 4d10} bludgeoning, {@action Escape} DC 26, Rupture 25."
+							"{@dc 30}, {@damage 4d10} bludgeoning, {@action Escape} {@dc 26}, Rupture 25."
 						],
 						"name": "Engulf",
 						"generic": {
@@ -3154,17 +3051,58 @@
 					},
 					{
 						"entries": [
-							"When the tallow ooze critically succeeds at an attack against a creature or a creature escapes from being engulfed by the ooze, that creature's hands and gear become slick with grease. For {@dice 1d4} rounds, the affected creature must attempt a DC 30 Reflex save whenever it uses any item (including weapons) that must be wielded or held. On a failure, the creature takes a \u20132 circumstance penalty to any attack roll or check to use the item; on a critical failure, the creature drops the item, which lands in a random adjacent square.",
+							"When the tallow ooze critically succeeds at an attack against a creature or a creature escapes from being engulfed by the ooze, that creature's hands and gear become slick with grease. For {@dice 1d4} rounds, the affected creature must attempt a {@dc 30} Reflex save whenever it uses any item (including weapons) that must be wielded or held. On a failure, the creature takes a \u20132 circumstance penalty to any attack roll or check to use the item; on a critical failure, the creature drops the item, which lands in a random adjacent square.",
 							"The creature (or an adjacent ally) can use 1 {@action Interact} action to wipe off the grease from an item or from its hands."
 						],
 						"name": "Residual Grease"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 19
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 22
+					},
+					"ref": {
+						"std": 10
+					},
+					"will": {
+						"std": 13
+					}
+				},
+				"hp": [
+					{
+						"hp": 270
+					}
+				],
+				"immunities": [
+					"acid",
+					"mental",
+					"piercing",
+					"precision",
+					"slashing",
+					"critical hits"
+				],
+				"weaknesses": [
+					{
+						"amount": 10,
+						"name": "fire"
+					}
+				],
+				"resistances": [
+					{
+						"amount": 10,
+						"name": "cold"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Tashlock Banyan",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 39,
 			"level": 12,
@@ -3175,43 +3113,41 @@
 				"human",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Male human town protector",
 			"perception": {
 				"std": 20
 			},
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 23
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 19
 				},
-				"Deception": {
+				"deception": {
 					"std": 19
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 17
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 19
 				},
-				"Society": {
+				"society": {
 					"std": 16
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 23
 				},
-				"Survival": {
+				"survival": {
 					"std": 16
 				},
-				"Thievery": {
+				"thievery": {
 					"std": 21
 				}
 			},
@@ -3223,25 +3159,13 @@
 				"wis": 2,
 				"cha": 3
 			},
-			"ac": {
-				"std": 33
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 19
-				},
-				"ref": {
-					"std": 24
-				},
-				"will": {
-					"std": 19
-				}
-			},
-			"hp": [
-				{
-					"hp": 215,
-					"abilities": null
-				}
+			"items": [
+				"chalk",
+				"+1 striking composite shortbow (20 arrows)",
+				"lesser darkvision elixir",
+				"invisibility potion",
+				"+1 resilient leather armor",
+				"+1 rapier"
 			],
 			"speed": {
 				"walk": 25
@@ -3252,12 +3176,11 @@
 					"name": "rapier",
 					"attack": 24,
 					"traits": [
-						"deadly 1d8",
+						"deadly <1d8>",
 						"disarm",
 						"finesse",
 						"magical"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+11} piercing",
 					"types": [
 						"piercing"
@@ -3268,13 +3191,12 @@
 					"name": "composite shortbow",
 					"attack": 26,
 					"traits": [
-						"deadly 2d10",
+						"deadly <2d10>",
 						"magical",
 						"propulsive",
-						"range increment 60 feet",
-						"reload 0"
+						"range increment <60 feet>",
+						"reload <0>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+11} piercing",
 					"types": [
 						"piercing"
@@ -3285,19 +3207,7 @@
 				"top": [
 					{
 						"entries": [
-							"+17, {@skill Intimidation} +19, {@skill Society} +16, {@skill Stealth} +23,"
-						],
-						"name": "Diplomacy"
-					},
-					{
-						"entries": [
-							"+16, {@skill Thievery} +21 Str +3, Dex +5, Con +0, Int +2, Wis +2, Cha +3 Items chalk, +1 striking composite shortbow (20 arrows), lesser darkvision elixir, invisibility potion, +1 resilient leather armor, +1 rapier."
-						],
-						"name": "Survival"
-					},
-					{
-						"entries": [
-							"Tashlock can move his full Speed when Sneaking."
+							"Tashlock can move his full Speed when {@action Sneak||Sneaking}."
 						],
 						"name": "Swift Sneak"
 					}
@@ -3324,9 +3234,9 @@
 				"bot": [
 					{
 						"entries": [
-							"Tashlock deals damage to a target on a critical hit, the target is {@condition slowed|CRB|slowed 2} until the end of Tashlock's next turn."
+							"When Tashlock deals damage to a target on a critical hit, the target is {@condition slowed|CRB|slowed 2} until the end of Tashlock's next turn."
 						],
-						"name": "Pierced Tendon When"
+						"name": "Pierced Tendon"
 					},
 					{
 						"activity": {
@@ -3334,7 +3244,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Tashlock Interacts to draw a weapon, then Strikes with that weapon."
+							"Tashlock {@action Interact||Interacts} to draw a weapon, then {@action Strike||Strikes} with that weapon."
 						],
 						"name": "Quick Draw"
 					},
@@ -3349,9 +3259,9 @@
 					},
 					{
 						"entries": [
-							"Tashlock rolls a failure on a {@action Sneak} action, he gets a success instead."
+							"When Tashlock rolls a failure on a {@action Sneak} action, he gets a success instead."
 						],
-						"name": "Sneak Savant When"
+						"name": "Sneak Savant"
 					},
 					{
 						"entries": [
@@ -3360,11 +3270,31 @@
 						"name": "Surprise Attack"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 33
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 19
+					},
+					"ref": {
+						"std": 24
+					},
+					"will": {
+						"std": 19
+					}
+				},
+				"hp": [
+					{
+						"hp": 215
+					}
+				]
 			}
 		},
 		{
 			"name": "The Vanish Man",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 47,
 			"level": 16,
@@ -3374,9 +3304,7 @@
 				"medium",
 				"humanoid"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Variant faceless butcher (page 80)",
 			"perception": {
 				"std": 28
 			},
@@ -3387,23 +3315,23 @@
 			],
 			"languages": {
 				"languages": [
-					"Common (can't speak any language)"
+					"common (can't speak any language)"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 29
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 33
 				},
-				"Deception": {
+				"deception": {
 					"std": 33
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 29
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 31
 				}
 			},
@@ -3419,32 +3347,6 @@
 				"bag of faces",
 				"cleaver"
 			],
-			"ac": {
-				"std": 39
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 29
-				},
-				"ref": {
-					"std": 28
-				},
-				"will": {
-					"std": 27
-				}
-			},
-			"hp": [
-				{
-					"hp": 265,
-					"abilities": null
-				}
-			],
-			"resistances": [
-				{
-					"amount": 10,
-					"name": "bludgeoning"
-				}
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -3454,11 +3356,10 @@
 					"name": "cleaver",
 					"attack": 32,
 					"traits": [
-						"deadly d12",
+						"deadly <d12>",
 						"forceful",
 						"sweep"
 					],
-					"effects": [],
 					"damage": "{@damage 3d12+9} slashing",
 					"types": [
 						"slashing"
@@ -3472,7 +3373,6 @@
 						"agile",
 						"nonlethal"
 					],
-					"effects": [],
 					"damage": "{@damage 3d10+9} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -3483,10 +3383,9 @@
 					"name": "cleaver",
 					"attack": 30,
 					"traits": [
-						"deadly d12",
-						"thrown 10 feet"
+						"deadly <d12>",
+						"thrown <10 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d12+9} slashing",
 					"types": [
 						"slashing"
@@ -3495,9 +3394,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Occult Innate",
 					"type": "Innate",
-					"tradition": "Occult",
+					"tradition": "occult",
 					"DC": 34,
 					"entry": {
 						"2": {
@@ -3518,7 +3416,15 @@
 								}
 							]
 						},
-						"constant": {}
+						"constant": {
+							"8": {
+								"spells": [
+									{
+										"name": "pass without trace"
+									}
+								]
+							}
+						}
 					}
 				}
 			],
@@ -3526,15 +3432,9 @@
 				"top": [
 					{
 						"entries": [
-							"+29, {@skill Stealth} +31 Str +9, Dex +5, Con +6, Int +1, Wis +4, Cha +7 Items bag of faces, cleaver."
+							"The Vanish Man doesn't have an alignment aura and cannot be detected by spells such as {@spell detect alignment}."
 						],
-						"name": "Intimidation"
-					},
-					{
-						"entries": [
-							"Man doesn't have an alignment aura and cannot be detected by spells such as detect alignment."
-						],
-						"name": "Vanished Alignment The Vanish"
+						"name": "Vanished Alignment"
 					}
 				],
 				"mid": [
@@ -3546,7 +3446,7 @@
 							"mental"
 						],
 						"entries": [
-							"10 feet, DC 33. This aura is suppressed while the Vanish Man is using."
+							"10 feet, {@dc 33}. This aura is suppressed while the Vanish Man is using Change Shape."
 						],
 						"name": "Frightful Presence",
 						"generic": {
@@ -3554,15 +3454,10 @@
 						}
 					},
 					{
-						"entries": [],
-						"name": "Change Shape."
-					},
-					{
 						"activity": {
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -3610,11 +3505,37 @@
 						"name": "Sudden Slices"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 39
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 29
+					},
+					"ref": {
+						"std": 28
+					},
+					"will": {
+						"std": 27
+					}
+				},
+				"hp": [
+					{
+						"hp": 265
+					}
+				],
+				"resistances": [
+					{
+						"amount": 10,
+						"name": "bludgeoning"
+					}
+				]
 			}
 		},
 		{
 			"name": "War Sauropelta",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 46,
 			"level": 12,
@@ -3625,9 +3546,6 @@
 				"animal",
 				"dinosaur"
 			],
-			"creatureType": [
-				"Animal"
-			],
 			"perception": {
 				"std": 23
 			},
@@ -3637,7 +3555,7 @@
 				}
 			],
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 25
 				}
 			},
@@ -3649,29 +3567,6 @@
 				"wis": 4,
 				"cha": 0
 			},
-			"ac": {
-				"std": 34
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 25
-				},
-				"ref": {
-					"std": 20
-				},
-				"will": {
-					"std": 22
-				}
-			},
-			"hp": [
-				{
-					"hp": 220,
-					"abilities": null
-				}
-			],
-			"immunities": [
-				"olfactory"
-			],
 			"speed": {
 				"walk": 25
 			},
@@ -3682,7 +3577,7 @@
 					"attack": 24,
 					"traits": [
 						"backswing",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"Push",
@@ -3697,7 +3592,6 @@
 					"range": "Melee",
 					"name": "foot",
 					"attack": 24,
-					"effects": [],
 					"damage": "{@damage 3d6+13} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -3712,7 +3606,7 @@
 							"unit": "reaction"
 						},
 						"entries": [
-							"DC 32."
+							"{@dc 32}"
 						],
 						"name": "Buck",
 						"generic": {
@@ -3727,7 +3621,7 @@
 						"trigger": "The war sauropelta would be affected by the {@condition immobilized}, {@condition paralyzed}, {@condition slowed}, or {@condition stunned} conditions, or by an effect that would give it a penalty to its Speeds, from a source of 14th level or less",
 						"frequency": {
 							"unit": "minute",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
 							"The war sauropelta negates the triggering condition or effect."
@@ -3738,7 +3632,7 @@
 				"bot": [
 					{
 						"entries": [
-							"A creature struck by the war sauropelta's tail must attempt a DC 32 Fortitude save. On a failure, it's {@condition stunned|CRB|stunned 1}; on a critical failure, it's {@condition stunned|CRB|stunned 3}."
+							"A creature struck by the war sauropelta's tail must attempt a {@dc 32} Fortitude save. On a failure, it's {@condition stunned|CRB|stunned 1}; on a critical failure, it's {@condition stunned|CRB|stunned 3}."
 						],
 						"name": "Punishing Tail"
 					},
@@ -3748,7 +3642,7 @@
 							"unit": "action"
 						},
 						"entries": [
-							"Medium or smaller, foot, DC 32."
+							"Medium or smaller, foot, {@dc 32}"
 						],
 						"name": "Trample",
 						"generic": {
@@ -3756,11 +3650,34 @@
 						}
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 34
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 25
+					},
+					"ref": {
+						"std": 20
+					},
+					"will": {
+						"std": 22
+					}
+				},
+				"hp": [
+					{
+						"hp": 220
+					}
+				],
+				"immunities": [
+					"olfactory"
+				]
 			}
 		},
 		{
 			"name": "Wight Cultist",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 34,
 			"level": 12,
@@ -3770,9 +3687,7 @@
 				"medium",
 				"undead"
 			],
-			"creatureType": [
-				"Undead"
-			],
+			"description": "Variant wight (Pathfinder Bestiary 332)",
 			"perception": {
 				"std": 22
 			},
@@ -3783,20 +3698,20 @@
 			],
 			"languages": {
 				"languages": [
-					"Common"
+					"common"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 25
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 24
 				},
-				"Occultism": {
+				"occultism": {
 					"std": 17
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 22
 				}
 			},
@@ -3810,29 +3725,7 @@
 			},
 			"items": [
 				"+1 striking ranseur",
-				"platinum religious symbol of"
-			],
-			"ac": {
-				"std": 32
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 24
-				},
-				"ref": {
-					"std": 20
-				},
-				"will": {
-					"std": 22
-				}
-			},
-			"hp": [
-				{
-					"hp": 235,
-					"abilities": [
-						"negative healing"
-					]
-				}
+				"platinum religious symbol of Bokrug worth 150 gp"
 			],
 			"speed": {
 				"walk": 25
@@ -3870,9 +3763,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Innate",
 					"type": "Innate",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 29,
 					"entry": {
 						"0": {
@@ -3900,10 +3792,7 @@
 									"name": "confusion"
 								},
 								{
-									"name": "downpour",
-									"notes": [
-										"Core Rulebook 391"
-									]
+									"name": "downpour"
 								}
 							]
 						},
@@ -3918,14 +3807,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+22 Str +7, Dex +4, Con +6, Int \u20131, Wis +6, Cha +4 Items +1 striking ranseur, platinum religious symbol of Bokrug worth 150 gp."
-						],
-						"name": "Stealth"
-					}
-				],
 				"mid": [
 					{
 						"activity": {
@@ -3946,7 +3827,7 @@
 							"necromancy"
 						],
 						"entries": [
-							"When the wight damages a living creature with its claw or ranseur {@action Strike}, the wight gains 12 temporary Hit Points and the creature must succeed at a DC 29 Fortitude save or become {@condition drained|CRB|drained 1}. Further damage dealt by the wight increases the amount of drain by 1 on a failed save, to a maximum of {@condition drained|CRB|drained 4}."
+							"When the wight damages a living creature with its claw or ranseur {@action Strike}, the wight gains 12 temporary Hit Points and the creature must succeed at a {@dc 29} Fortitude save or become {@condition drained|CRB|drained 1}. Further damage dealt by the wight increases the amount of drain by 1 on a failed save, to a maximum of {@condition drained|CRB|drained 4}."
 						],
 						"name": "Drain Life"
 					},
@@ -3961,11 +3842,41 @@
 						"name": "Wight Spawn"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 32
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 24
+					},
+					"ref": {
+						"std": 20
+					},
+					"will": {
+						"std": 22
+					}
+				},
+				"hp": [
+					{
+						"hp": 235,
+						"abilities": [
+							"negative healing"
+						]
+					}
+				],
+				"immunities": [
+					"death effects",
+					"disease",
+					"paralyzed",
+					"poison",
+					"unconscious"
+				]
 			}
 		},
 		{
 			"name": "Xilvirek",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 84,
 			"level": 12,
@@ -3974,9 +3885,6 @@
 				"ce",
 				"large",
 				"fiend"
-			],
-			"creatureType": [
-				"Fiend"
 			],
 			"perception": {
 				"std": 23
@@ -3993,20 +3901,20 @@
 			],
 			"languages": {
 				"languages": [
-					"Abyssal"
+					"abyssal"
 				]
 			},
 			"skills": {
-				"Athletics": {
+				"athletics": {
 					"std": 25
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 22
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 23
 				},
-				"Survival": {
+				"survival": {
 					"std": 25
 				}
 			},
@@ -4018,36 +3926,6 @@
 				"wis": 5,
 				"cha": 4
 			},
-			"ac": {
-				"std": 34
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 26
-				},
-				"ref": {
-					"std": 21
-				},
-				"will": {
-					"std": 19
-				}
-			},
-			"hp": [
-				{
-					"hp": 215,
-					"abilities": null
-				}
-			],
-			"weaknesses": [
-				{
-					"amount": 10,
-					"name": "good"
-				},
-				{
-					"amount": 10,
-					"name": "lawful"
-				}
-			],
 			"speed": {
 				"walk": 40,
 				"swim": 30
@@ -4062,7 +3940,6 @@
 						"evil",
 						"magical"
 					],
-					"effects": [],
 					"damage": "{@damage 3d10+13} piercing",
 					"types": [
 						"piercing"
@@ -4077,7 +3954,7 @@
 						"chaotic",
 						"evil",
 						"magical",
-						"reach 10 feet"
+						"reach <10 feet>"
 					],
 					"effects": [
 						"Grab"
@@ -4095,8 +3972,8 @@
 						"chaotic",
 						"evil",
 						"magical",
-						"reach 15 feet",
-						"versatile p"
+						"reach <15 feet>",
+						"versatile <p>"
 					],
 					"effects": [
 						"Knockdown"
@@ -4109,9 +3986,8 @@
 			],
 			"spellcasting": [
 				{
-					"name": "Divine Innate",
 					"type": "Innate",
-					"tradition": "Divine",
+					"tradition": "divine",
 					"DC": 28,
 					"entry": {
 						"2": {
@@ -4147,7 +4023,7 @@
 				"top": [
 					{
 						"entries": [
-							"+25 Str +7, Dex +5, Con +6, Int +0, Wis +5,"
+							"+25 Str +7, Dex +5, Con +6, Int +0, Wis +5"
 						],
 						"name": "Survival"
 					},
@@ -4174,7 +4050,7 @@
 							"mental"
 						],
 						"entries": [
-							"30 feet. A creature that begins its turn in the area must succeed at a DC 32 Will save or become {@condition fascinated} with the xilvirek. If the creature is already {@condition fascinated} by the xilvirek and fails its save, the creature is compelled to approach the xilvirek and allow itself to be {@condition grabbed}, which ends the fascination."
+							"30 feet. A creature that begins its turn in the area must succeed at a {@dc 32} Will save or become {@condition fascinated} with the xilvirek. If the creature is already {@condition fascinated} by the xilvirek and fails its save, the creature is compelled to approach the xilvirek and allow itself to be {@condition grabbed}, which ends the fascination."
 						],
 						"name": "Hypnotic Stench"
 					},
@@ -4183,7 +4059,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -4201,7 +4076,7 @@
 							"inhaled"
 						],
 						"entries": [
-							"The xilvirek retches a small pool of debilitating, acrid bile onto itself. All creatures within 30 feet take {@damage 4d6} acid damage as they inhale the bile's noxious fumes (DC 32 basic Fortitude save; on a failure, the creature is {@condition sickened|CRB|sickened 1}, or {@condition sickened|CRB|sickened 2} on a critical failure). The xilvirek can't Disgorge Bile again for {@dice 1d4} rounds."
+							"The xilvirek retches a small pool of debilitating, acrid bile onto itself. All creatures within 30 feet take {@damage 4d6} acid damage as they inhale the bile's noxious fumes ({@dc 32} basic Fortitude save; on a failure, the creature is {@condition sickened|CRB|sickened 1}, or {@condition sickened|CRB|sickened 2} on a critical failure). The xilvirek can't Disgorge Bile again for {@dice 1d4} rounds."
 						],
 						"name": "Disgorge Bile"
 					},
@@ -4212,11 +4087,42 @@
 						"name": "Feasting Tentacles"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 34
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 26
+					},
+					"ref": {
+						"std": 21
+					},
+					"will": {
+						"std": 19
+					}
+				},
+				"hp": [
+					{
+						"hp": 215
+					}
+				],
+				"weaknesses": [
+					{
+						"amount": 10,
+						"name": "good"
+					},
+					{
+						"amount": 10,
+						"name": "lawful"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Xulgath Gutrager",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 85,
 			"level": 10,
@@ -4225,9 +4131,6 @@
 				"medium",
 				"humanoid",
 				"xulgath"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 19
@@ -4239,18 +4142,18 @@
 			],
 			"languages": {
 				"languages": [
-					"Draconic",
-					"Undercommon"
+					"draconic",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 22
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 22
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 20
 				}
 			},
@@ -4262,32 +4165,6 @@
 				"wis": 1,
 				"cha": -1
 			},
-			"ac": {
-				"std": 28
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 23
-				},
-				"ref": {
-					"std": 22
-				},
-				"will": {
-					"std": 17
-				}
-			},
-			"hp": [
-				{
-					"hp": 190,
-					"abilities": null
-				}
-			],
-			"resistances": [
-				{
-					"amount": 10,
-					"name": "acid"
-				}
-			],
 			"speed": {
 				"walk": 40
 			},
@@ -4296,7 +4173,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 21,
-					"effects": [],
 					"damage": "{@damage 2d6+8} piercing plus {@damage 2d6} acid",
 					"types": [
 						"acid",
@@ -4311,10 +4187,26 @@
 						"agile",
 						"finesse"
 					],
-					"effects": [],
 					"damage": "{@damage 2d8+8} slashing",
 					"types": [
 						"slashing"
+					]
+				},
+				{
+					"range": "Ranged",
+					"activity": {
+						"number": 2,
+						"unit": "action"
+					},
+					"traits": [
+						"acid",
+						"range increment <60 feet>"
+					],
+					"name": "bile jet",
+					"attack": 23,
+					"damage": "{@damage 4d8+7} acid",
+					"types": [
+						"acid"
 					]
 				}
 			],
@@ -4342,7 +4234,7 @@
 							"acid"
 						],
 						"entries": [
-							"Requirements The gutrager has 45 or fewer HP; The gutrager compresses its gut and explodes in a burst of viscera, {@condition dying} instantly and dealing {@damage 8d8} acid damage to creatures and unattended objects in a 20-foot emanation centered on the gutrager (DC 31 basic Reflex save)."
+							"Requirements The gutrager has 45 or fewer HP; The gutrager compresses its gut and explodes in a burst of viscera, {@condition dying} instantly and dealing {@damage 8d8} acid damage to creatures and unattended objects in a 20-foot emanation centered on the gutrager ({@dc 31} basic Reflex save)."
 						],
 						"name": "Self-Detonate"
 					}
@@ -4358,19 +4250,46 @@
 						],
 						"frequency": {
 							"unit": "round",
-							"freq": 1
+							"number": 1
 						},
 						"entries": [
-							"The gutrager propels its esophagus out of its body to deliver an acidic blow. It makes an unarmed {@action Strike} against a creature or unattended object within 30 feet with a +23 attack bonus. On a hit, the target takes {@damage 2d6+8} bludgeoning plus {@damage 4d6} acid damage. On a critical hit, the target also takes {@damage 2d6} {@condition persistent damage ||persistent acid damage}. The gutrager is {@condition clumsy|CRB|clumsy 1} for 1 round as it re-coils its esophagus."
+							"The gutrager propels its esophagus out of its body to deliver an acidic blow. It makes an unarmed {@action Strike} against a creature or unattended object within 30 feet with a +23 attack bonus. On a hit, the target takes {@damage 2d6+8} bludgeoning plus {@damage 4d6} acid damage. On a critical hit, the target also takes {@damage 2d6} {@condition persistent damage||persistent acid damage}. The gutrager is {@condition clumsy|CRB|clumsy 1} for 1 round as it re-coils its esophagus."
 						],
 						"name": "Corrosive Kiss"
 					}
 				]
-			}
+			},
+			"defenses": {
+				"ac": {
+					"std": 28
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 23
+					},
+					"ref": {
+						"std": 22
+					},
+					"will": {
+						"std": 17
+					}
+				},
+				"hp": [
+					{
+						"hp": 190
+					}
+				],
+				"resistances": [
+					{
+						"amount": 10,
+						"name": "acid"
+					}
+				]
+			},
+			"hasImages": true
 		},
 		{
 			"name": "Xulgath Hardscale",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 53,
 			"level": 12,
@@ -4380,38 +4299,41 @@
 				"humanoid",
 				"xulgath"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
 			"perception": {
-				"std": 21
+				"std": 21,
+				"when using Perception for initiative": 23
 			},
+			"senses": [
+				{
+					"name": "darkvision"
+				}
+			],
 			"languages": {
 				"languages": [
-					"Draconic",
-					"Undercommon"
+					"draconic",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 19
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 23
 				},
-				"Diplomacy": {
+				"diplomacy": {
 					"std": 19
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 21
 				},
-				"Nature": {
+				"nature": {
 					"std": 19
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 19
 				},
-				"Survival": {
+				"survival": {
 					"std": 21
 				}
 			},
@@ -4423,26 +4345,13 @@
 				"wis": 3,
 				"cha": 1
 			},
-			"ac": {
-				"std": 32,
-				"with shield raised": 34
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 25
-				},
-				"ref": {
-					"std": 22
-				},
-				"will": {
-					"std": 19
-				}
-			},
-			"hp": [
-				{
-					"hp": 215,
-					"abilities": null
-				}
+			"items": [
+				"+1 resilient breastplate",
+				"moderate elixir of life",
+				"javelins (3)",
+				"necklace of bone and gems worth 100 gp",
+				"lesser sturdy shield (Hardness 10, HP 80, BT 40)",
+				"+1 striking warhammer"
 			],
 			"speed": {
 				"walk": 25
@@ -4453,11 +4362,10 @@
 					"name": "warhammer",
 					"attack": 24,
 					"traits": [
-						"deadly 2d8",
+						"deadly <2d8>",
 						"magical",
 						"shove"
 					],
-					"effects": [],
 					"damage": "{@damage 3d8+11} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -4467,7 +4375,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 23,
-					"effects": [],
 					"damage": "{@damage 3d6+11} piercing",
 					"types": [
 						"piercing"
@@ -4480,7 +4387,6 @@
 					"traits": [
 						"agile"
 					],
-					"effects": [],
 					"damage": "{@damage 3d4+11} slashing",
 					"types": [
 						"slashing"
@@ -4491,9 +4397,8 @@
 					"name": "javelin",
 					"attack": 21,
 					"traits": [
-						"thrown 20 feet"
+						"thrown <20 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+11} piercing",
 					"types": [
 						"piercing"
@@ -4501,14 +4406,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+21, {@skill Nature} +19, {@skill Stealth} +19, {@skill Survival} +21 Str +5, Dex +3, Con +4, Int +0, Wis +3, Cha +1 Items +1 resilient breastplate, moderate elixir of life, javelins (3), necklace of bone and gems worth 100 gp, lesser sturdy shield (Hardness 10, HP 80, BT 40), +1 striking warhammer."
-						],
-						"name": "Intimidation"
-					}
-				],
 				"mid": [
 					{
 						"entries": [
@@ -4522,13 +4419,13 @@
 							"olfactory"
 						],
 						"entries": [
-							"30 feet. As xulgath herd-tender (page 10), but DC 32."
+							"30 feet. As xulgath herd-tender (page 10), but {@dc 32}."
 						],
 						"name": "Powerful Stench"
 					},
 					{
 						"entries": [
-							"If the hardscale has their shield raised, they can Shield Block when an attack is made against an adjacent ally. If they do, the shield prevents that ally from taking damage instead of the hardscale."
+							"If the hardscale has their shield raised, they can {@ability Shield Block} when an attack is made against an adjacent ally. If they do, the shield prevents that ally from taking damage instead of the hardscale."
 						],
 						"name": "Shield Warden"
 					},
@@ -4537,9 +4434,9 @@
 							"number": 1,
 							"unit": "free"
 						},
-						"trigger": "The hardscale uses the Shield",
+						"trigger": "The hardscale uses the {@ability Shield Block} reaction, and the opponent that triggered {@ability Shield Block} is adjacent to the hardscale and is not more than one size larger than it",
 						"entries": [
-							"Block reaction, and the opponent that triggered Shield Block is adjacent to the hardscale and is not more than one size larger than it; The hardscale makes an {@skill Athletics} check to {@action Shove} the opponent. This {@action Shove} doesn't increase the hardscale's multiple attack penalty. If they roll a critical failure, they get a failure instead. If they roll a success, they get a critical success instead."
+							"The hardscale makes an {@skill Athletics} check to {@action Shove} the opponent. This {@action Shove} doesn't increase the hardscale's multiple attack penalty. If they roll a critical failure, they get a failure instead. If they roll a success, they get a critical success instead."
 						],
 						"name": "Aggressive Block"
 					},
@@ -4548,7 +4445,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -4560,7 +4456,7 @@
 							"unit": "reaction"
 						},
 						"entries": [
-							"At the beginning of each of their turns, the hardscale receives an additional reaction that they can use only for Shield Block."
+							"At the beginning of each of their turns, the hardscale receives an additional reaction that they can use only for {@ability Shield Block}."
 						],
 						"name": "Shield Block",
 						"generic": {
@@ -4576,11 +4472,32 @@
 						"name": "Hammer Mastery"
 					}
 				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 32,
+					"with shield raised": 34
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 25
+					},
+					"ref": {
+						"std": 22
+					},
+					"will": {
+						"std": 19
+					}
+				},
+				"hp": [
+					{
+						"hp": 215
+					}
+				]
 			}
 		},
 		{
 			"name": "Xulgath Herd-tender",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 10,
 			"level": 8,
@@ -4589,9 +4506,6 @@
 				"medium",
 				"humanoid",
 				"xulgath"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 17
@@ -4603,30 +4517,30 @@
 			],
 			"languages": {
 				"languages": [
-					"Draconic",
-					"Undercommon"
+					"draconic",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 16
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 18
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 16
 				},
-				"Nature": {
+				"nature": {
 					"std": 17
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 16
 				},
-				"Survival": {
+				"survival": {
 					"std": 17
 				},
-				"Dinosaur Lore": {
+				"dinosaur lore": {
 					"std": 11
 				}
 			},
@@ -4638,25 +4552,11 @@
 				"wis": 3,
 				"cha": 2
 			},
-			"ac": {
-				"std": 27
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 18
-				},
-				"ref": {
-					"std": 16
-				},
-				"will": {
-					"std": 14
-				}
-			},
-			"hp": [
-				{
-					"hp": 135,
-					"abilities": null
-				}
+			"items": [
+				"moderate alchemist's fire (4)",
+				"+1 striking composite shortbow (20 arrows)",
+				"hide armor",
+				"whip"
 			],
 			"speed": {
 				"walk": 25
@@ -4670,10 +4570,9 @@
 						"disarm",
 						"finesse",
 						"nonlethal",
-						"reach 10 feet",
+						"reach <10 feet>",
 						"trip"
 					],
-					"effects": [],
 					"damage": "{@damage 1d4+10} slashing",
 					"types": [
 						"slashing"
@@ -4683,7 +4582,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 19,
-					"effects": [],
 					"damage": "{@damage 2d8+10} piercing",
 					"types": [
 						"piercing"
@@ -4696,7 +4594,6 @@
 					"traits": [
 						"agile"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+10} slashing",
 					"types": [
 						"slashing"
@@ -4707,13 +4604,12 @@
 					"name": "composite shortbow",
 					"attack": 20,
 					"traits": [
-						"deadly 2d10",
+						"deadly <2d10>",
 						"magical",
 						"propulsive",
-						"range increment 60 feet",
-						"reload 0"
+						"range increment <60 feet>",
+						"reload <0>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+10} piercing",
 					"types": [
 						"piercing"
@@ -4724,13 +4620,13 @@
 					"name": "moderate alchemist's fire",
 					"attack": 20,
 					"traits": [
-						"range increment 20 feet",
+						"range increment <20 feet>",
 						"splash"
 					],
 					"effects": [
 						"{@dice 2d8}"
 					],
-					"damage": "{@dice 2d8} plus 2 {@condition persistent damage ||persistent fire damage} and 2 fire splash damage",
+					"damage": "{@dice 2d8} plus 2 {@condition persistent damage||persistent fire damage} and 2 fire {@trait splash} damage",
 					"types": [
 						"fire",
 						"persistent"
@@ -4738,14 +4634,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+16, {@skill Nature} +17, {@skill Stealth} +16, {@skill Survival} +17 Str +4, Dex +4, Con +2, Int \u20131, Wis +3, Cha +2 Items moderate alchemist's fire (4), +1 striking composite shortbow (20 arrows), hide armor, whip."
-						],
-						"name": "Intimidation"
-					}
-				],
 				"mid": [
 					{
 						"activity": {
@@ -4753,7 +4641,7 @@
 							"unit": "reaction"
 						},
 						"trigger": "The herd-tender is targeted with a melee or ranged attack by an attacker they can see",
-						"prerequisites": "The herd-tender is mounted;",
+						"prerequisites": "The herd-tender is mounted",
 						"entries": [
 							"The herd-tender gains a +2 circumstance bonus to AC against the triggering attack."
 						],
@@ -4765,7 +4653,7 @@
 							"olfactory"
 						],
 						"entries": [
-							"30 feet. A creature that enters the area must attempt a DC 26 Fortitude save.",
+							"30 feet. A creature that enters the area must attempt a {@dc 26} Fortitude save.",
 							"On a failure, the creature is {@condition sickened|CRB|sickened 2}, and on a critical failure, the creature is also {@condition slowed|CRB|slowed 1} for as long as it is {@condition sickened}. While within the aura, the creature takes a \u20132 circumstance penalty to saves to recover from the {@condition sickened} condition. A creature that succeeds at its save is temporarily immune to all xulgaths' stenches for 1 minute."
 						],
 						"name": "Powerful Stench"
@@ -4784,16 +4672,36 @@
 					},
 					{
 						"entries": [
-							"A mounted xulgath's Strikes deal an additional {@dice 1d8} damage to creatures that aren't mounted."
+							"A mounted xulgath's {@action Strike||Strikes} deal an additional {@dice 1d8} damage to creatures that aren't mounted."
 						],
 						"name": "Mounted Superiority"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 27
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 18
+					},
+					"ref": {
+						"std": 16
+					},
+					"will": {
+						"std": 14
+					}
+				},
+				"hp": [
+					{
+						"hp": 135
 					}
 				]
 			}
 		},
 		{
 			"name": "Xulgath Roughrider",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 23,
 			"level": 11,
@@ -4802,9 +4710,6 @@
 				"medium",
 				"humanoid",
 				"xulgath"
-			],
-			"creatureType": [
-				"Humanoid"
 			],
 			"perception": {
 				"std": 21
@@ -4816,27 +4721,28 @@
 			],
 			"languages": {
 				"languages": [
-					"Draconic",
-					"Undercommon"
+					"draconic",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 21
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 22
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 18
 				},
-				"Nature": {
-					"std": 21
+				"nature": {
+					"std": 21,
+					"to Command an Animal": 23
 				},
-				"Survival": {
+				"survival": {
 					"std": 19
 				},
-				"Dinosaur Lore": {
+				"dinosaur lore": {
 					"std": 16
 				}
 			},
@@ -4853,26 +4759,6 @@
 				"hide armor",
 				"javelins (6)"
 			],
-			"ac": {
-				"std": 31
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 22
-				},
-				"ref": {
-					"std": 23
-				},
-				"will": {
-					"std": 19
-				}
-			},
-			"hp": [
-				{
-					"hp": 195,
-					"abilities": null
-				}
-			],
 			"speed": {
 				"walk": 30
 			},
@@ -4884,9 +4770,8 @@
 					"traits": [
 						"magical",
 						"reach",
-						"versatile s"
+						"versatile <s>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d10+11} piercing",
 					"types": [
 						"piercing"
@@ -4896,7 +4781,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 23,
-					"effects": [],
 					"damage": "{@damage 2d8+11} piercing",
 					"types": [
 						"piercing"
@@ -4909,7 +4793,6 @@
 					"traits": [
 						"agile"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+11} slashing",
 					"types": [
 						"slashing"
@@ -4920,9 +4803,8 @@
 					"name": "javelin",
 					"attack": 22,
 					"traits": [
-						"thrown 30 feet"
+						"thrown <30 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 1d6+11} piercing",
 					"types": [
 						"piercing"
@@ -4930,20 +4812,6 @@
 				}
 			],
 			"abilities": {
-				"top": [
-					{
-						"entries": [
-							"+18, {@skill Nature} +21 (+23 to Command an."
-						],
-						"name": "Intimidation"
-					},
-					{
-						"entries": [
-							"+19 Str +5, Dex +4, Con +3, Int \u20131, Wis +4, Cha +1 Items +1 striking halberd, hide armor, javelins (6)"
-						],
-						"name": "Animal), Survival"
-					}
-				],
 				"mid": [
 					{
 						"activity": {
@@ -4955,7 +4823,7 @@
 							"move"
 						],
 						"trigger": "The roughrider is targeted with an attack from a creature they can see",
-						"prerequisites": "The roughrider is mounted;",
+						"prerequisites": "The roughrider is mounted",
 						"entries": [
 							"The roughrider's mount becomes the target of the attack instead. The roughrider must succeed at a DC {@flatDC 5} flat check or they fall off their mount and land {@condition prone}. If the check is a critical failure, the roughrider also takes {@damage 1d6} bludgeoning damage in addition to the normal damage from the fall."
 						],
@@ -4967,7 +4835,7 @@
 							"olfactory"
 						],
 						"entries": [
-							"30 feet. As xulgath herd-tender (page 10), but DC 30."
+							"30 feet. As xulgath herd-tender (page 10), but {@dc 30}."
 						],
 						"name": "Powerful Stench"
 					}
@@ -4985,16 +4853,36 @@
 					},
 					{
 						"entries": [
-							"A mounted roughrider's Strikes deal an additional {@dice 1d10} damage to creatures that aren't mounted."
+							"A mounted roughrider's {@action Strike||Strikes} deal an additional {@dice 1d10} damage to creatures that aren't mounted."
 						],
 						"name": "Mounted Superiority"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 31
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 22
+					},
+					"ref": {
+						"std": 23
+					},
+					"will": {
+						"std": 19
+					}
+				},
+				"hp": [
+					{
+						"hp": 195
 					}
 				]
 			}
 		},
 		{
 			"name": "Zashathal Head-taker",
-			"isNpc": false,
 			"source": "EC4",
 			"page": 90,
 			"level": 15,
@@ -5005,9 +4893,7 @@
 				"humanoid",
 				"xulgath"
 			],
-			"creatureType": [
-				"Humanoid"
-			],
+			"description": "Male xulgath zealous hardscale",
 			"perception": {
 				"std": 27
 			},
@@ -5023,29 +4909,29 @@
 			],
 			"languages": {
 				"languages": [
-					"Common",
-					"Draconic",
-					"Undercommon"
+					"common",
+					"draconic",
+					"undercommon"
 				]
 			},
 			"skills": {
-				"Acrobatics": {
+				"acrobatics": {
 					"std": 22
 				},
-				"Athletics": {
+				"athletics": {
 					"std": 29
 				},
-				"Intimidation": {
+				"intimidation": {
 					"std": 25,
 					"to Demoralize": 27
 				},
-				"Religion": {
+				"religion": {
 					"std": 25
 				},
-				"Stealth": {
+				"stealth": {
 					"std": 22
 				},
-				"Survival": {
+				"survival": {
 					"std": 25
 				}
 			},
@@ -5057,32 +4943,10 @@
 				"wis": 4,
 				"cha": 2
 			},
-			"ac": {
-				"std": 36
-			},
-			"savingThrows": {
-				"fort": {
-					"std": 29
-				},
-				"ref": {
-					"std": 23
-				},
-				"will": {
-					"std": 26
-				}
-			},
-			"hp": [
-				{
-					"hp": 250,
-					"abilities": null
-				}
-			],
-			"resistances": [
-				{
-					"amount": 14,
-					"name": "physical",
-					"note": "(from weapons only)"
-				}
+			"items": [
+				"ankylostar (page 75)",
+				"religious symbol of Zevgavizeb",
+				"stoneraiser javelin (page 76)"
 			],
 			"speed": {
 				"walk": 35
@@ -5096,9 +4960,8 @@
 						"backswing",
 						"magical",
 						"shove",
-						"versatile p"
+						"versatile <p>"
 					],
-					"effects": [],
 					"damage": "{@damage 3d10+12} bludgeoning",
 					"types": [
 						"bludgeoning"
@@ -5108,7 +4971,6 @@
 					"range": "Melee",
 					"name": "jaws",
 					"attack": 28,
-					"effects": [],
 					"damage": "{@damage 3d8+12} piercing",
 					"types": [
 						"piercing"
@@ -5121,7 +4983,6 @@
 					"traits": [
 						"agile"
 					],
-					"effects": [],
 					"damage": "{@damage 3d6+12} slashing",
 					"types": [
 						"slashing"
@@ -5132,9 +4993,8 @@
 					"name": "stoneraiser javelin",
 					"attack": 25,
 					"traits": [
-						"thrown 30 feet"
+						"thrown <30 feet>"
 					],
-					"effects": [],
 					"damage": "{@damage 2d6+12} piercing",
 					"types": [
 						"piercing"
@@ -5145,12 +5005,6 @@
 				"top": [
 					{
 						"entries": [
-							"+25, {@skill Stealth} +22, {@skill Survival} +25 Str +6, Dex +1, Con +5, Int +0, Wis +4, Cha +2 Items ankylostar (page 75), religious symbol of {@deity Zevgavizeb|EC3}, stoneraiser javelin (page 76)"
-						],
-						"name": "to Demoralize), Religion"
-					},
-					{
-						"entries": [
 							"Zashathal's disgust for cowardice is so powerful that he can detect the presence of {@condition frightened} creatures, even if he can't see them."
 						],
 						"name": "Coward Sense"
@@ -5158,13 +5012,10 @@
 				],
 				"mid": [
 					{
-						"traits": [
-							"rolls"
-						],
 						"entries": [
-							"a success on a Fortitude save, it is a critical success instead. Zashathal halves damage he takes from failing a Fortitude save."
+							"When Zashathal rolls a success on a Fortitude save, it is a critical success instead. Zashathal halves damage he takes from failing a Fortitude save."
 						],
-						"name": "Fanatical Juggernaut When Zashathal"
+						"name": "Fanatical Juggernaut "
 					},
 					{
 						"traits": [
@@ -5172,7 +5023,7 @@
 							"olfactory"
 						],
 						"entries": [
-							"30 feet. As xulgath herd-tender (page 10), but DC 34."
+							"30 feet. As xulgath herd-tender (page 10), but {@dc 34}."
 						],
 						"name": "Powerful Stench"
 					},
@@ -5181,7 +5032,6 @@
 							"number": 1,
 							"unit": "reaction"
 						},
-						"entries": [],
 						"name": "Attack of Opportunity",
 						"generic": {
 							"tag": "ability"
@@ -5252,6 +5102,37 @@
 							"Zashathal makes a melee {@action Strike} against all creatures within his reach. Each attack counts toward his multiple attack penalty, but his multiple attack penalty doesn't increase until he's made all his attacks."
 						],
 						"name": "Whirlwind Strike"
+					}
+				]
+			},
+			"defenses": {
+				"ac": {
+					"std": 36
+				},
+				"savingThrows": {
+					"fort": {
+						"std": 29
+					},
+					"ref": {
+						"std": 23
+					},
+					"will": {
+						"std": 26
+					},
+					"abilities": [
+						"fanatical juggernaut"
+					]
+				},
+				"hp": [
+					{
+						"hp": 250
+					}
+				],
+				"resistances": [
+					{
+						"amount": 14,
+						"name": "physical",
+						"note": "from weapons only"
 					}
 				]
 			}

@@ -65,12 +65,12 @@ class PageFilterBestiary extends PageFilter {
 			itemSortFn: SortUtil.ascSort,
 		});
 
-		this._strengthFilter = new RangeFilter({header: "Strength"});
-		this._dexterityFilter = new RangeFilter({header: "Dexterity"});
-		this._constitutionFilter = new RangeFilter({header: "Constitution"});
-		this._intelligenceFilter = new RangeFilter({header: "Intelligence"});
-		this._wisdomFilter = new RangeFilter({header: "Wisdom"});
-		this._charismaFilter = new RangeFilter({header: "Charisma"});
+		this._strengthFilter = new RangeFilter({ header: "Strength" });
+		this._dexterityFilter = new RangeFilter({ header: "Dexterity" });
+		this._constitutionFilter = new RangeFilter({ header: "Constitution" });
+		this._intelligenceFilter = new RangeFilter({ header: "Intelligence" });
+		this._wisdomFilter = new RangeFilter({ header: "Wisdom" });
+		this._charismaFilter = new RangeFilter({ header: "Charisma" });
 		this._abilityFilter = new MultiFilter({
 			header: "Ability Modifiers",
 			filters: [this._strengthFilter, this._dexterityFilter, this._constitutionFilter, this._intelligenceFilter, this._wisdomFilter, this._charismaFilter],
@@ -148,6 +148,11 @@ class PageFilterBestiary extends PageFilter {
 			filters: [this._spelltypeFilter, this._spellDCFilter, this._highestSpellFilter, this._ritualTraditionFilter],
 		});
 
+		this._foundInFilter = new Filter({
+			header: "Found In",
+			itemSortFn: SortUtil.ascSort,
+		});
+
 		this._miscellaneousFilter = new Filter({
 			header: "Miscellaneous",
 			itemSortFn: SortUtil.ascSort,
@@ -160,7 +165,7 @@ class PageFilterBestiary extends PageFilter {
 		if (cr.isNpc) cr._fMisc.push("NPC");
 		cr._fSources = SourceFilter.getCompleteFilterSources(cr);
 		cr._fTraits = [...(cr.traits || [])];
-		cr._fSenses = {precise: [], imprecise: [], vague: [], other: []};
+		cr._fSenses = { precise: [], imprecise: [], vague: [], other: [] };
 		if (cr.senses && cr.senses.length) {
 			cr.senses.forEach(s => {
 				// .replace(/within.+/, "")
@@ -168,25 +173,27 @@ class PageFilterBestiary extends PageFilter {
 			})
 		}
 		cr._flanguages = cr.languages == null ? [] : cr.languages.languages || [];
-		cr._flanguages = cr._flanguages.map(l => l.replace(/\s\(.+/, "")).filter(l => !l.includes(" "));
+		cr._flanguages = cr._flanguages.map(l => l.replace(/\s\(.+/, "")).filter(l => !l.includes(" ")).map(l => l.toTitleCase());
 		cr._fskills = new Set();
-		Object.keys(cr.skills).forEach((k) => {
-			if (k.match(/lore/i)) cr._fskills.add("Lore");
-			else cr._fskills.add(k);
-		});
+		if (cr.skills) {
+			Object.keys(cr.skills).forEach((k) => {
+				if (k.match(/lore/i)) cr._fskills.add("Lore");
+				else if (k !== "notes") cr._fskills.add(k.toTitleCase());
+			})
+		}
 		cr._fskills = Array.from(cr._fskills);
 
 		cr._fHP = 0;
-		cr.hp.forEach((d) => {
-			cr._fHP += d.hp;
+		cr.defenses.hp.forEach((d) => {
+			cr._fHP = d.hp;
 		})
 
-		cr._fResistances = cr.resistances ? cr.resistances.map(r => r.name === "all" ? "all damage" : r.name) : [];
-		cr._fWeaknesses = cr.weaknesses ? cr.weaknesses.map(w => w.name === "all" ? "all damage" : w.name) : [];
+		cr._fResistances = cr.defenses.resistances ? cr.defenses.resistances.map(r => r.name === "all" ? "all damage" : r.name) : [];
+		cr._fWeaknesses = cr.defenses.weaknesses ? cr.defenses.weaknesses.map(w => w.name === "all" ? "all damage" : w.name) : [];
 		cr._fSpeedtypes = [];
 		cr._fSpeed = 0;
 		Object.keys(cr.speed).forEach((k) => {
-			if (k !== "abilities") {
+			if (k !== "abilities" && k !== "speedNote") {
 				cr._fSpeed = Math.max(cr.speed[k], cr._fSpeed);
 				cr._fSpeedtypes.push(k);
 			}
@@ -198,7 +205,9 @@ class PageFilterBestiary extends PageFilter {
 		if (cr.spellcasting) {
 			cr.spellcasting.forEach((f) => {
 				if (f.type !== "Focus") {
-					cr._fSpellTypes.push(`${f.type} ${f.tradition}`)
+					if (f.type && f.tradition) cr._fSpellTypes.push(`${f.type} ${f.tradition}`.toTitleCase())
+					else if (f.type) cr._fSpellTypes.push(`${f.type}`.toTitleCase())
+					else cr._fSpellTypes.push(`${f.tradition}`.toTitleCase())
 				} else cr._fSpellTypes.push(f.type)
 				Object.keys(f.entry).forEach((k) => {
 					if (k.isNumeric() && Number(k) > cr._fHighestSpell) cr._fHighestSpell = Number(k)
@@ -209,15 +218,17 @@ class PageFilterBestiary extends PageFilter {
 		cr._fRitualTraditions = []
 		if (cr.rituals != null) {
 			cr.rituals.forEach((r) => {
-				cr._fRitualTraditions.push(r.tradition)
+				if (r.tradition) cr._fRitualTraditions.push(r.tradition.toTitleCase())
 			});
 		}
 		cr._fCreatureType = []
 
-		this.handleTraitImplies(cr, {traitProp: "_fTraits", entityTypes: ["creature"]});
+		this.handleTraitImplies(cr, { traitProp: "_fTraits", entityTypes: ["creature"] });
 		cr._fTraits = cr._fTraits.map(t => Parser.getTraitName(t));
 		if (!cr._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "Rarity")).some(Boolean)) cr._fTraits.push("Common");
 		cr._fCreatureType = cr._fTraits.map(t => Renderer.trait.isTraitInCategory(t, "Creature Type") ? t : null).filter(Boolean);
+
+		cr._fFoundIn = cr.foundIn || [];
 	}
 
 	addToFilters (cr, isExcluded) {
@@ -242,12 +253,12 @@ class PageFilterBestiary extends PageFilter {
 		this._languageFilter.addItem(cr._flanguages);
 		this._skillsFilter.addItem(cr._fskills);
 
-		this._ACFilter.addItem(cr.ac.std);
+		this._ACFilter.addItem(cr.defenses.ac.std);
 		this._HPFilter.addItem(cr._fHP);
-		this._fortitudeFilter.addItem(cr.savingThrows.fort.std);
-		this._reflexFilter.addItem(cr.savingThrows.ref.std);
-		this._willFilter.addItem(cr.savingThrows.will.std);
-		this._immunityFilter.addItem(cr.immunities);
+		this._fortitudeFilter.addItem(cr.defenses.savingThrows.fort.std);
+		this._reflexFilter.addItem(cr.defenses.savingThrows.ref.std);
+		this._willFilter.addItem(cr.defenses.savingThrows.will.std);
+		this._immunityFilter.addItem(cr.defenses.immunities);
 		this._weaknessFilter.addItem(cr._fWeaknesses);
 		this._resistanceFilter.addItem(cr._fResistances);
 
@@ -259,6 +270,7 @@ class PageFilterBestiary extends PageFilter {
 		if (cr._fHighestSpell > 0) this._highestSpellFilter.addItem(cr._fHighestSpell);
 		this._ritualTraditionFilter.addItem(cr._fRitualTraditions);
 
+		this._foundInFilter.addItem(cr._fFoundIn);
 		this._miscellaneousFilter.addItem(cr._fMisc);
 	}
 
@@ -274,6 +286,7 @@ class PageFilterBestiary extends PageFilter {
 			this._defenseFilter,
 			this._speedMultiFilter,
 			this._spellcastingFilter,
+			this._foundInFilter,
 			this._miscellaneousFilter,
 		];
 	}
@@ -302,12 +315,12 @@ class PageFilterBestiary extends PageFilter {
 				c.abilityMods.cha,
 			],
 			[
-				c.ac.default,
+				c.defenses.ac.std,
 				c._fHP,
-				c.savingThrows.fort.std,
-				c.savingThrows.ref.std,
-				c.savingThrows.will.std,
-				c.immunities,
+				c.defenses.savingThrows.fort.std,
+				c.defenses.savingThrows.ref.std,
+				c.defenses.savingThrows.will.std,
+				c.defenses.immunities,
 				c._fWeaknesses,
 				c._fResistances,
 			],
@@ -321,6 +334,7 @@ class PageFilterBestiary extends PageFilter {
 				c._fHighestSpell,
 				c._fRitualTraditions,
 			],
+			c._fFoundIn,
 			c._fMisc,
 		);
 	}

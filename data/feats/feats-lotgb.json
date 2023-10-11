@@ -88,7 +88,7 @@
 			"prerequisites": "{@feat Spell Trickster Dedication|LOTGB}, ability to cast {@spell shield}",
 			"entries": [
 				"When you cast {@spell shield}, you can modify the spell to create a solid barrier you can use for cover, but not for blocking.",
-				"You can't use the {@action Shield Block} reaction when the spell is modified in this way, but you (and only you) can spend an action to {@action Take Cover} to gain standard cover from it."
+				"You can't use the {@feat Shield Block} reaction when the spell is modified in this way, but you (and only you) can spend an action to {@action Take Cover} to gain standard cover from it."
 			]
 		},
 		{
@@ -270,7 +270,7 @@
 			"requirements": "You have an innate non-cantrip captivator spell of the same school.",
 			"entries": [
 				"Your enchantments and illusions are so dominant that you can use them to counteract similar magic cast by others.",
-				"When a foe casts an enchantment or illusion spell and you can see its manifestations, you can use your own innate magic to disrupt it. You lose an innate, non-cantrip spell of the same school as the triggering spell as if you had Cast the Spell. You then attempt to counteract the triggering spell with your spell."
+				"When a foe casts an enchantment or illusion spell and you can see its manifestations, you can use your own innate magic to disrupt it. You lose an innate, non-cantrip spell of the same school as the triggering spell as if you had {@action Cast a Spell||Cast the Spell}. You then attempt to counteract the triggering spell with your spell."
 			]
 		},
 		{
@@ -344,7 +344,7 @@
 			"prerequisites": "{@feat Spell Trickster Dedication|LOTGB}, ability to cast {@spell floating disk}",
 			"entries": [
 				"When you cast {@spell floating disk}, you can modify its duration to be sustained, up to 10 minutes. If you do, add the following heightened entry to its effects.",
-				"Heightened (3rd) The disk can hold up to 10 Bulk. The spell no longer ends if you ride atop the disk (though it does if any other creature rides atop it, including if the creature is riding on you). If you are riding the disk, it changes its capacity to hold you, plus additional Bulk equal to the maximum you could carry without being {@condition encumbered}. If you ride atop the disk, you can direct it to move along the ground up to 30 feet or your Speed, whichever is slower, each time you {@action Sustain a Spell||Sustain the Spell}. While you ride atop it, the disk can move over liquids as long as it ends its movement on solid ground. If it ends its movement on a surface that can't support it, the spell ends."
+				"{@b Heightened (3rd)} The disk can hold up to 10 Bulk. The spell no longer ends if you ride atop the disk (though it does if any other creature rides atop it, including if the creature is riding on you). If you are riding the disk, it changes its capacity to hold you, plus additional Bulk equal to the maximum you could carry without being {@condition encumbered}. If you ride atop the disk, you can direct it to move along the ground up to 30 feet or your Speed, whichever is slower, each time you {@action Sustain a Spell||Sustain the Spell}. While you ride atop it, the disk can move over liquids as long as it ends its movement on solid ground. If it ends its movement on a surface that can't support it, the spell ends."
 			]
 		},
 		{
@@ -363,8 +363,7 @@
 			"prerequisites": "{@feat Spell Trickster Dedication|LOTGB}, ability to cast {@spell obscuring mist}",
 			"entries": [
 				"When you cast {@spell obscuring mist}, you can modify it to add the following heightened entry to its effects.",
-				"Heightened (3rd) Your mist is particularly laden with moisture.",
-				"Non-magical fires within the area are automatically extinguished. Choose one magical fire or fire spell in the area and attempt to counteract it."
+				"{@b Heightened (3rd)} Your mist is particularly laden with moisture. Non-magical fires within the area are automatically extinguished. Choose one magical fire or fire spell in the area and attempt to counteract it."
 			]
 		},
 		{
@@ -550,7 +549,7 @@
 			],
 			"frequency": {
 				"unit": "hour",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "A creature you can see damages you with a melee {@action Strike}.",
 			"entries": [
@@ -624,8 +623,8 @@
 			],
 			"prerequisites": "{@feat Spell Trickster Dedication|LOTGB}, ability to cast {@spell fireball}",
 			"entries": [
-				"When you cast {@spell fireball}, you can modify its effects, decreasing the base damage to {@dice 5d6} and causing it to deal 2 {@condition persistent damage ||persistent fire damage} to creatures that fail their save, doubled as normal on a critical failure. If you do, replace its heightened entry with the following.",
-				"{@b Heightened (+1)} The damage is increased by {@dice 1d6} and the {@condition persistent damage ||persistent fire damage} is increased by 2."
+				"When you cast {@spell fireball}, you can modify its effects, decreasing the base damage to {@dice 5d6} and causing it to deal 2 {@condition persistent damage||persistent fire damage} to creatures that fail their save, doubled as normal on a critical failure. If you do, replace its heightened entry with the following.",
+				"{@b Heightened (+1)} The damage is increased by {@dice 1d6} and the {@condition persistent damage||persistent fire damage} is increased by 2."
 			]
 		},
 		{
@@ -649,7 +648,7 @@
 			"prerequisites": "{@feat Captivator Dedication|LOTGB}",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"If your illusions or enchantments fail to ensnare the minds of others, you can cast them again. If your next action is to cast an innate enchantment or illusion spell and it fails to affect any targets, you do not lose the spell. You must use the same number of actions to recast the same spell on your following turn; if you can't, or choose not to, you waste that number of actions with no effect. After this second casting, you lose the spell whether it affected any targets or not.",
@@ -743,7 +742,7 @@
 			"prerequisites": "{@feat Captivator Dedication|LOTGB}",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You are the target of a spell or attack.",
 			"entries": [
@@ -760,7 +759,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You have the {@condition dying} condition and are about to attempt a recovery check.",
 			"entries": [

@@ -10,17 +10,17 @@
 				"You're trained in the {@skill Religion} skill and the {@skill Lore||Scribing Lore} skill. You gain the {@feat Student of the Canon} skill feat."
 			],
 			"boosts": [
-				"Intelligence",
-				"Wisdom",
-				"Free"
+				"intelligence",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Religion"
+				"religion"
 			],
 			"lore": [
 				"Scribing"
 			],
-			"feat": [
+			"feats": [
 				"Student of the Canon"
 			]
 		},
@@ -34,17 +34,17 @@
 				"You're trained in the {@skill Acrobatics} skill and the {@skill Lore||Circus Lore} skill. You gain the {@feat Steady Balance} skill feat."
 			],
 			"boosts": [
-				"Strength",
-				"Dexterity",
-				"Free"
+				"strength",
+				"dexterity",
+				"free"
 			],
 			"skills": [
-				"Acrobatics"
+				"acrobatics"
 			],
 			"lore": [
 				"Circus"
 			],
-			"feat": [
+			"feats": [
 				"Steady Balance"
 			]
 		},
@@ -58,18 +58,18 @@
 				"You're trained in the {@skill Nature} skill and a {@skill Lore} skill related to one terrain inhabited by animals you like (such as {@skill Lore||Plains Lore} or {@skill Lore||Swamp Lore}). You gain the {@feat Train Animal} skill feat."
 			],
 			"boosts": [
-				"Wisdom",
-				"Charisma",
-				"Free"
+				"wisdom",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Nature"
+				"nature"
 			],
 			"lore": [
 				"Plains",
 				"Swamp"
 			],
-			"feat": [
+			"feats": [
 				"Train Animal"
 			]
 		},
@@ -84,17 +84,17 @@
 				"You gain the {@feat Specialty Crafting} skill feat."
 			],
 			"boosts": [
-				"Strength",
-				"Intelligence",
-				"Free"
+				"strength",
+				"intelligence",
+				"free"
 			],
 			"skills": [
-				"Crafting"
+				"crafting"
 			],
 			"lore": [
 				"Guild"
 			],
-			"feat": [
+			"feats": [
 				"Specialty Crafting"
 			]
 		},
@@ -109,17 +109,17 @@
 				"You're trained in the {@skill Crafting} skill and the {@skill Lore||Art Lore} skill. You gain the {@feat Specialty Crafting} skill feat."
 			],
 			"boosts": [
-				"Dexterity",
-				"Charisma",
-				"Free"
+				"dexterity",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Crafting"
+				"crafting"
 			],
 			"lore": [
 				"Art"
 			],
-			"feat": [
+			"feats": [
 				"Specialty Crafting"
 			]
 		},
@@ -133,17 +133,17 @@
 				"You're trained in the {@skill Diplomacy} skill and the {@skill Lore||Alcohol Lore} skill. You gain the {@feat Hobnobber} skill feat."
 			],
 			"boosts": [
-				"Constitution",
-				"Charisma",
-				"Free"
+				"constitution",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Diplomacy"
+				"diplomacy"
 			],
 			"lore": [
 				"Alcohol"
 			],
-			"feat": [
+			"feats": [
 				"Hobnobber"
 			]
 		},
@@ -158,17 +158,17 @@
 				"You gain the {@feat Group Impression} skill feat."
 			],
 			"boosts": [
-				"Intelligence",
-				"Charisma",
-				"Free"
+				"intelligence",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Diplomacy"
+				"diplomacy"
 			],
 			"lore": [
 				"Legal"
 			],
-			"feat": [
+			"feats": [
 				"Group Impression"
 			]
 		},
@@ -183,17 +183,17 @@
 				"You gain the {@feat Experienced Tracker} skill feat."
 			],
 			"boosts": [
-				"Strength",
-				"Wisdom",
-				"Free"
+				"strength",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Survival"
+				"survival"
 			],
 			"lore": [
 				"Legal"
 			],
-			"feat": [
+			"feats": [
 				"Experienced Tracker"
 			]
 		},
@@ -207,17 +207,17 @@
 				"You're trained in the {@skill Deception} skill and the {@skill Lore||Underworld Lore} skill. You gain the {@feat Charming Liar} skill feat."
 			],
 			"boosts": [
-				"Intelligence",
-				"Charisma",
-				"Free"
+				"intelligence",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Deception"
+				"deception"
 			],
 			"lore": [
 				"Underworld"
 			],
-			"feat": [
+			"feats": [
 				"Charming Liar"
 			]
 		},
@@ -231,17 +231,17 @@
 				"You're trained in the {@skill Stealth} skill and the {@skill Lore||Underworld Lore} skill. You gain the {@feat Experienced Smuggler} skill feat."
 			],
 			"boosts": [
-				"Dexterity",
-				"Intelligence",
-				"Free"
+				"dexterity",
+				"intelligence",
+				"free"
 			],
 			"skills": [
-				"Stealth"
+				"stealth"
 			],
 			"lore": [
 				"Underworld"
 			],
-			"feat": [
+			"feats": [
 				"Experienced Smuggler"
 			]
 		},
@@ -255,17 +255,17 @@
 				"You're trained in the {@skill Society} skill and the {@skill Lore||Underworld Lore} skill. You gain the {@feat Streetwise} skill feat."
 			],
 			"boosts": [
-				"Intelligence",
-				"Wisdom",
-				"Free"
+				"intelligence",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Society"
+				"society"
 			],
 			"lore": [
 				"Underworld"
 			],
-			"feat": [
+			"feats": [
 				"Streetwise"
 			]
 		},
@@ -279,14 +279,14 @@
 				"You're trained in the {@skill Society} skill and a {@skill Lore} skill related to one city you've visited often. You gain the {@feat Multilingual} skill feat."
 			],
 			"boosts": [
-				"Intelligence",
-				"Charisma",
-				"Free"
+				"intelligence",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Society"
+				"society"
 			],
-			"feat": [
+			"feats": [
 				"Multilingual"
 			]
 		},
@@ -300,17 +300,17 @@
 				"You're trained in the {@skill Performance} skill and the {@skill Lore||Theater Lore} skill. You gain the {@feat Fascinating Performance} skill feat."
 			],
 			"boosts": [
-				"Dexterity",
-				"Charisma",
-				"Free"
+				"dexterity",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Performance"
+				"performance"
 			],
 			"lore": [
 				"Theater"
 			],
-			"feat": [
+			"feats": [
 				"Fascinating Performance"
 			]
 		},
@@ -324,17 +324,17 @@
 				"You're trained in the {@skill Athletics} skill and the {@skill Lore||Farming Lore} skill. You gain the {@feat Assurance} skill feat with {@skill Athletics}."
 			],
 			"boosts": [
-				"Constitution",
-				"Wisdom",
-				"Free"
+				"constitution",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Athletics"
+				"athletics"
 			],
 			"lore": [
 				"Farming"
 			],
-			"feat": [
+			"feats": [
 				"Assurance"
 			]
 		},
@@ -349,18 +349,18 @@
 				"You're trained in the {@skill Medicine} skill and the {@skill Lore||Warfare Lore} skill. You gain the {@feat Battle Medicine} skill feat."
 			],
 			"boosts": [
-				"Constitution",
-				"Wisdom",
-				"Free"
+				"constitution",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Medicine"
+				"medicine"
 			],
 			"lore": [
 				"Warfare"
 			],
-			"feat": [
-				"Battle Medic"
+			"feats": [
+				"Battle Medicine"
 			]
 		},
 		{
@@ -374,17 +374,17 @@
 				"You're trained in the {@skill Occultism} skill and the {@skill Lore||Fortune-Telling Lore} skill. You gain the {@feat Oddity Identification} skill feat."
 			],
 			"boosts": [
-				"Intelligence",
-				"Charisma",
-				"Free"
+				"intelligence",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Occultism"
+				"occultism"
 			],
 			"lore": [
 				"Fortune-Telling"
 			],
-			"feat": [
+			"feats": [
 				"Oddity Identification"
 			]
 		},
@@ -398,17 +398,17 @@
 				"You're trained in the {@skill Deception} skill and the {@skill Lore||Games Lore} skill. You gain the {@feat Lie to Me} skill feat."
 			],
 			"boosts": [
-				"Dexterity",
-				"Charisma",
-				"Free"
+				"dexterity",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Deception"
+				"deception"
 			],
 			"lore": [
 				"Games"
 			],
-			"feat": [
+			"feats": [
 				"Lie to Me"
 			]
 		},
@@ -423,17 +423,17 @@
 				"You're trained in the {@skill Performance} skill and the {@skill Lore||Gladiatorial Lore} skill. You gain the {@feat Impressive Performance} skill feat."
 			],
 			"boosts": [
-				"Strength",
-				"Charisma",
-				"Free"
+				"strength",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Performance"
+				"performance"
 			],
 			"lore": [
 				"Gladiatorial"
 			],
-			"feat": [
+			"feats": [
 				"Impressive Performance"
 			]
 		},
@@ -448,18 +448,18 @@
 				"You're trained in the {@skill Intimidation} skill and the {@skill Lore||Legal Lore} or {@skill Lore||Warfare Lore} skill. You gain the {@feat Quick Coercion} skill feat."
 			],
 			"boosts": [
-				"Strength",
-				"Charisma",
-				"Free"
+				"strength",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Intimidation"
+				"intimidation"
 			],
 			"lore": [
 				"Legal",
 				"Warfare"
 			],
-			"feat": [
+			"feats": [
 				"Quick Coercion"
 			]
 		},
@@ -474,18 +474,18 @@
 				"You're trained in the {@skill Nature} skill and the {@skill Lore||Herbalism Lore} skill. You gain the {@feat Natural Medicine} skill feat."
 			],
 			"boosts": [
-				"Constitution",
-				"Wisdom",
-				"Free"
+				"constitution",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Nature",
-				"Medicine"
+				"nature",
+				"medicine"
 			],
 			"lore": [
 				"Herbalism"
 			],
-			"feat": [
+			"feats": [
 				"Natural Medicine"
 			]
 		},
@@ -500,19 +500,19 @@
 				"You're trained in the {@skill Nature} or {@skill Occultism} skill, plus a {@skill Lore} skill related to the terrain you lived in as a hermit (such as {@skill Lore||Cave Lore} or {@skill Lore||Desert Lore}). You gain the {@feat Dubious Knowledge} skill feat."
 			],
 			"boosts": [
-				"Constitution",
-				"Intelligence",
-				"Free"
+				"constitution",
+				"intelligence",
+				"free"
 			],
 			"skills": [
-				"Nature",
-				"Occultism"
+				"nature",
+				"occultism"
 			],
 			"lore": [
 				"Cave",
 				"Desert"
 			],
-			"feat": [
+			"feats": [
 				"Dubious Knowledge"
 			]
 		},
@@ -526,17 +526,17 @@
 				"You're trained in the {@skill Survival} skill and the {@skill Lore||Tanning Lore} skill. You gain the {@feat Survey Wildlife} skill feat."
 			],
 			"boosts": [
-				"Dexterity",
-				"Wisdom",
-				"Free"
+				"dexterity",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Survival"
+				"survival"
 			],
 			"lore": [
 				"Tanning"
 			],
-			"feat": [
+			"feats": [
 				"Survey Wildlife"
 			]
 		},
@@ -551,17 +551,17 @@
 				"You gain the {@feat Hefty Hauler} skill feat in {@skill Athletics}."
 			],
 			"boosts": [
-				"Strength",
-				"Constitution",
-				"Free"
+				"strength",
+				"constitution",
+				"free"
 			],
 			"skills": [
-				"Athletics"
+				"athletics"
 			],
 			"lore": [
 				"Labor"
 			],
-			"feat": [
+			"feats": [
 				"Hefty Hauler"
 			]
 		},
@@ -575,13 +575,13 @@
 				"You're trained in your choice of the {@skill Acrobatics} or {@skill Athletics} skill. You gain a skill feat: {@feat Cat Fall} if you chose {@skill Acrobatics} or {@feat Quick Jump} if you chose {@skill Athletics}. You're also trained in the {@skill Lore||Warfare Lore} skill."
 			],
 			"boosts": [
-				"Strength",
-				"Dexterity",
-				"Free"
+				"strength",
+				"dexterity",
+				"free"
 			],
 			"skills": [
-				"Acrobatics",
-				"Athletics"
+				"acrobatics",
+				"athletics"
 			],
 			"lore": [
 				"Warfare"
@@ -597,17 +597,17 @@
 				"You're trained in the {@skill Diplomacy} skill and the {@skill Lore||Mercantile Lore} skill. You gain the {@feat Bargain Hunter} skill feat."
 			],
 			"boosts": [
-				"Intelligence",
-				"Charisma",
-				"Free"
+				"intelligence",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Diplomacy"
+				"diplomacy"
 			],
 			"lore": [
 				"Mercantile"
 			],
-			"feat": [
+			"feats": [
 				"Bargain Hunter"
 			]
 		},
@@ -616,22 +616,22 @@
 			"source": "CRB",
 			"page": 63,
 			"entries": [
-				"You earned a living wrenching precious minerals from the lightless depths of the earth. Adventuring might have seemed lucrative or glamorous compared to this backbreaking labor\u2014 and if you have to head back underground, this time you plan to do so armed with a real weapon instead of a miner's pick.",
+				"You earned a living wrenching precious minerals from the lightless depths of the earth. Adventuring might have seemed lucrative or glamorous compared to this backbreaking labor\u2014and if you have to head back underground, this time you plan to do so armed with a real weapon instead of a miner's pick.",
 				"Choose two ability boosts. One must be to Strength or Wisdom, and one is a free ability boost.",
 				"You're trained in the {@skill Survival} skill and the {@skill Lore||Mining Lore} skill. You gain the {@feat Terrain Expertise} skill feat with underground terrain."
 			],
 			"boosts": [
-				"Strength",
-				"Wisdom",
-				"Free"
+				"strength",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Survival"
+				"survival"
 			],
 			"lore": [
 				"Mining"
 			],
-			"feat": [
+			"feats": [
 				"Terrain Expertise"
 			]
 		},
@@ -645,18 +645,18 @@
 				"You're trained in the {@skill Society} skill and your choice of the {@skill Lore||Genealogy Lore} or {@skill Lore||Heraldry Lore} skill. You gain the {@feat Courtly Graces} skill feat."
 			],
 			"boosts": [
-				"Intelligence",
-				"Charisma",
-				"Free"
+				"intelligence",
+				"charisma",
+				"free"
 			],
 			"skills": [
-				"Society"
+				"society"
 			],
 			"lore": [
 				"Genealogy",
 				"Heraldry"
 			],
-			"feat": [
+			"feats": [
 				"Courtly Graces"
 			]
 		},
@@ -670,18 +670,18 @@
 				"You're trained in the {@skill Survival} skill and a {@skill Lore} skill related to one terrain you traveled in (such as {@skill Lore||Desert Lore} or {@skill Lore||Swamp Lore}). You gain the {@feat Assurance} skill feat with {@skill Survival}."
 			],
 			"boosts": [
-				"Constitution",
-				"Wisdom",
-				"Free"
+				"constitution",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Survival"
+				"survival"
 			],
 			"lore": [
 				"Desert",
 				"Swamp"
 			],
-			"feat": [
+			"feats": [
 				"Assurance"
 			]
 		},
@@ -696,17 +696,17 @@
 				"You're trained in the {@skill Stealth} skill and the {@skill Lore||Underworld Lore} skill. You gain the {@feat Experienced Smuggler} skill feat."
 			],
 			"boosts": [
-				"Strength",
-				"Constitution",
-				"Free"
+				"strength",
+				"constitution",
+				"free"
 			],
 			"skills": [
-				"Stealth"
+				"stealth"
 			],
 			"lore": [
 				"Underworld"
 			],
-			"feat": [
+			"feats": [
 				"Experienced Smuggler"
 			]
 		},
@@ -721,17 +721,17 @@
 				"You gain the {@feat Underwater Marauder} skill feat."
 			],
 			"boosts": [
-				"Strength",
-				"Dexterity",
-				"Free"
+				"strength",
+				"dexterity",
+				"free"
 			],
 			"skills": [
-				"Athletics"
+				"athletics"
 			],
 			"lore": [
 				"Sailing"
 			],
-			"feat": [
+			"feats": [
 				"Underwater Marauder"
 			]
 		},
@@ -746,20 +746,20 @@
 				"You're trained in your choice of the {@skill Arcana}, {@skill Nature}, {@skill Occultism}, or {@skill Religion} skill, and gain the {@feat Assurance} skill feat in your chosen skill. You're also trained in the {@skill Lore||Academia Lore} skill."
 			],
 			"boosts": [
-				"Intelligence",
-				"Wisdom",
-				"Free"
+				"intelligence",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Nature",
-				"Occultism",
-				"Religion",
-				"Arcana"
+				"nature",
+				"occultism",
+				"religion",
+				"arcana"
 			],
 			"lore": [
 				"Academia"
 			],
-			"feat": [
+			"feats": [
 				"Assurance"
 			]
 		},
@@ -773,18 +773,18 @@
 				"You're trained in the {@skill Survival} skill and a {@skill Lore} skill related to one terrain you scouted in (such as {@skill Lore||Forest Lore} or {@skill Lore||Cavern Lore}). You gain the {@feat Forager} skill feat."
 			],
 			"boosts": [
-				"Dexterity",
-				"Wisdom",
-				"Free"
+				"dexterity",
+				"wisdom",
+				"free"
 			],
 			"skills": [
-				"Survival"
+				"survival"
 			],
 			"lore": [
 				"Forest",
 				"Cavern"
 			],
-			"feat": [
+			"feats": [
 				"Forager"
 			]
 		},
@@ -798,18 +798,18 @@
 				"You're trained in {@skill Thievery} and a {@skill Lore} skill for the city you lived in as a street urchin (such as {@skill Lore||Absalom Lore} or {@skill Lore||Magnimar Lore}). You gain the {@feat Pickpocket} skill feat."
 			],
 			"boosts": [
-				"Dexterity",
-				"Constitution",
-				"Free"
+				"dexterity",
+				"constitution",
+				"free"
 			],
 			"skills": [
-				"Thievery"
+				"thievery"
 			],
 			"lore": [
 				"Absalom",
 				"Magnimar"
 			],
-			"feat": [
+			"feats": [
 				"Pickpocket"
 			]
 		},
@@ -824,17 +824,17 @@
 				"You're trained in the {@skill Crafting} skill and the {@skill Lore||Engineering Lore} skill. You gain the {@feat Specialty Crafting} skill feat."
 			],
 			"boosts": [
-				"Dexterity",
-				"Intelligence",
-				"Free"
+				"dexterity",
+				"intelligence",
+				"free"
 			],
 			"skills": [
-				"Crafting"
+				"crafting"
 			],
 			"lore": [
 				"Engineering"
 			],
-			"feat": [
+			"feats": [
 				"Specialty Crafting"
 			]
 		},
@@ -848,17 +848,17 @@
 				"You're trained in the {@skill Intimidation} skill and the {@skill Lore||Warfare Lore} skill. You gain the {@feat Intimidating Glare} skill feat."
 			],
 			"boosts": [
-				"Strength",
-				"Constitution",
-				"Free"
+				"strength",
+				"constitution",
+				"free"
 			],
 			"skills": [
-				"Intimidation"
+				"intimidation"
 			],
 			"lore": [
 				"Warfare"
 			],
-			"feat": [
+			"feats": [
 				"Intimidating Glare"
 			]
 		}

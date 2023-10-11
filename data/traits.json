@@ -1,6 +1,350 @@
 {
 	"trait": [
 		{
+			"name": "Wood",
+			"source": "RoE",
+			"page": 238,
+			"categories": [
+				"Energy & Element",
+				"Planar"
+			],
+			"entries": [
+				"Effects with the metal trait conjure or manipulate wood. Those that manipulate wood have no effect in an area without wood. Creatures with this trait consist primarily of wood or have a connection to magical wood."
+			]
+		},
+		{
+			"name": "Metal",
+			"source": "RoE",
+			"page": 237,
+			"categories": [
+				"Energy & Element",
+				"Planar"
+			],
+			"entries": [
+				"Effects with the metal trait conjure or manipulate metal. Those that manipulate metal have no effect in an area without metal. Creatures with this trait consist primarily of metal or have a connection to magical metal."
+			]
+		},
+		{
+			"name": "Overflow",
+			"source": "RoE",
+			"page": 15,
+			"categories": [
+				"Action & Ability"
+			],
+			"entries": [
+				"Powerful impulses temporarily overdraw the energy of your kinetic gate. When you use an impulse that has the overflow trait, your kinetic aura deactivates until you revitalize it (typically with {@action Channel Elements|RoE}). Extinguishing your element this severely is taxing, and consequently, you can use only one overflow impulse per round, even if you reactivate your kinetic gate."
+			]
+		},
+		{
+			"name": "Infusion",
+			"source": "RoE",
+			"page": 15,
+			"categories": [
+				"Action & Ability"
+			],
+			"entries": [
+				"Actions with the infusion trait tweak your kineticist impulses. You must use an infusion action directly before the impulse action you want to alter. If you use any action (including free actions and reactions) other than an impulse action directly after, you waste the benefits of the infusion action. Any additional effects added by an infusion action are part of the impulse's effect, not of the infusion action itself."
+			]
+		},
+		{
+			"name": "Composite",
+			"source": "RoE",
+			"page": 15,
+			"categories": [
+				"Action & Ability"
+			],
+			"entries": [
+				"A composite impulse combines multiple elements. You can gain an impulse with the composite trait only if your kinetic elements include all the elements listed in the impulse's traits."
+			]
+		},
+		{
+			"name": "Impulse",
+			"source": "RoE",
+			"page": 15,
+			"categories": [
+				"Action & Ability"
+			],
+			"entries": [
+				"The primary magical actions kineticists use are called impulses. You can use an impulse only if your kinetic aura is active and channeling that element, and only if you have a hand free to shape the elemental flow. The impulse trait means the action has the {@trait concentrate} trait unless another ability changes this. If an impulse allows you to choose an element, you can choose any element you're channeling, and the impulse gains that element's trait."
+			]
+		},
+		{
+			"name": "Kineticist",
+			"source": "RoE",
+			"page": 237,
+			"categories": [
+				"Class"
+			],
+			"entries": [
+				"This indicates abilities from the kineticist class."
+			]
+		},
+		{
+			"name": "Charau-ka",
+			"source": "LOME",
+			"page": 296,
+			"otherSources": {
+				"Originally": [
+					"AoA2|84"
+				]
+			},
+			"categories": [
+				"Creature"
+			],
+			"entries": [
+				"Mandrill-like humanoids that are brutal warriors. Many charau-ka live in Usaro."
+			]
+		},
+		{
+			"name": "Inscribed",
+			"source": "TV",
+			"page": 8,
+			"entries": [
+				"The armor has been treated so it can be inscribed with magical symbols using the same method as {@action Craft||Crafting} a {@item scroll (generic)||scroll}. Inscribed attire can hold one scroll inscribed on it. You need a free hand to {@action Activate an Item||Activate} the scroll, but you don't need to {@action Interact} to draw it. You can also {@action Activate an Item||Activate} the magic to erase the scroll the armor currently contains. You can't inscribe a new scroll onto the armor if a scroll is currently inscribed on it or if the armor is broken."
+			],
+			"categories": [
+				"Armor"
+			]
+		},
+		{
+			"name": "Ponderous",
+			"source": "TV",
+			"page": 8,
+			"entries": [
+				"The armor has moving parts or other complications that lengthen the wearer's initial reaction time. While wearing the armor, you take a \u20131 penalty to initiative checks. If you don't meet the armor's required Strength score, this penalty increases to be equal to the armor's check penalty if it's worse."
+			],
+			"categories": [
+				"Armor"
+			]
+		},
+		{
+			"name": "Laminar",
+			"source": "TV",
+			"page": 8,
+			"entries": [
+				"The armor is made up of layered sections, so when it breaks, it isn't as much of a problem. The status penalty to AC if this armor is broken is \u20131 for broken medium armor, \u20132 for broken heavy armor, or no penalty for broken light armor."
+			],
+			"categories": [
+				"Armor"
+			]
+		},
+		{
+			"name": "Hindering",
+			"source": "TV",
+			"page": 8,
+			"entries": [
+				"This armor is so heavy and bulky it slows you down no matter what. You take a \u20135 penalty to all your Speeds (to a minimum of a 5‑foot Speed). This is separate from and in addition to the armor's Speed penalty, and affects you even if your Strength or an ability lets you reduce or ignore the armor's Speed penalty."
+			],
+			"categories": [
+				"Armor"
+			]
+		},
+		{
+			"name": "Entrench",
+			"source": "TV",
+			"variable": true,
+			"page": 8,
+			"entries": [
+				"You can position yourself in the armor or reposition its articulated pieces to better protect against some attacks. If you're trained in this armor, while wearing it you can spend a single action to gain a +1 circumstance bonus to AC against a certain type of attack until the start of your next turn. The entrench trait lists the type of attack this bonus applies against, typically entrench melee or entrench ranged."
+			],
+			"categories": [
+				"Armor"
+			]
+		},
+		{
+			"name": "Aquadynamic",
+			"source": "TV",
+			"page": 8,
+			"entries": [
+				"This armor is designed for use underwater, with streamlined design and buoyant materials used in strategic places. You don't apply the armor's check penalty to {@skill Acrobatics} or {@skill Athletics} checks in water or similar liquids."
+			],
+			"categories": [
+				"Armor"
+			]
+		},
+		{
+			"name": "Adjusted",
+			"variable": true,
+			"source": "TV",
+			"page": 8,
+			"entries": [
+				"The equipment comes with an adjustment described in its entry. This adjustment is built into the equipment permanently, meaning the equipment can't have another adjustment added, nor can it be swapped out for a different adjustment. If the adjustment alters the item's base statistics, such as adding the {@trait noisy} trait, that's reflected in the equipment's table entry. Armor adjustments can be found {@filter here|items||category=Adjustment}."
+			],
+			"categories": [
+				"Armor"
+			]
+		},
+		{
+			"name": "Spellshot",
+			"source": "G&G",
+			"page": 140,
+			"entries": [],
+			"categories": [
+				"Class"
+			]
+		},
+		{
+			"name": "City-state",
+			"source": "LOIL",
+			"page": 113,
+			"entries": [],
+			"categories": [
+				"Settlement"
+			]
+		},
+		{
+			"name": "Vishkanya",
+			"source": "LOIL",
+			"page": 343,
+			"entries": [
+				"An ancestry with snake-like features and powerful venom."
+			],
+			"categories": [
+				"Ancestry & Heritage"
+			]
+		},
+		{
+			"name": "Vanara",
+			"source": "LOIL",
+			"page": 343,
+			"entries": [
+				"An inquisitive ancestry with primate-like features and prehensile tails."
+			],
+			"categories": [
+				"Ancestry & Heritage"
+			]
+		},
+		{
+			"name": "Nagaji",
+			"source": "LOIL",
+			"page": 347,
+			"entries": [
+				"A traditionalist ancestry with reptilian features and serpentine heads."
+			],
+			"categories": [
+				"Ancestry & Heritage"
+			]
+		},
+		{
+			"name": "Kashrishi",
+			"source": "LOIL",
+			"page": 341,
+			"entries": [
+				"A stout ancestry bearing distinctive crystal horns and inherent psychic abilities."
+			],
+			"categories": [
+				"Ancestry & Heritage"
+			]
+		},
+		{
+			"name": "Ghoran",
+			"source": "LOIL",
+			"page": 341,
+			"entries": [
+				"An intelligent plant ancestry that maintain long lives by rejuvenating themselves from seeds."
+			],
+			"categories": [
+				"Ancestry & Heritage"
+			]
+		},
+		{
+			"name": "Amp",
+			"source": "DA",
+			"page": 218,
+			"entries": [
+				"An amp is a special thoughtform that modifies the properties of your psi cantrips. Psi cantrips each have their own amp, and feats with the amp trait provide different amps you can apply to psi cantrips in place of their normal amps."
+			],
+			"categories": [
+				"Feat",
+				"Spell"
+			]
+		},
+		{
+			"name": "Deviant",
+			"source": "DA",
+			"page": 218,
+			"entries": [
+				"This trait describes strange supernatural or paranormal abilities.",
+				"{@note See {@variantrule Deviant Abilities|DA} for more information.}"
+			],
+			"categories": [
+				"Feat",
+				"Class",
+				"Action & Ability"
+			]
+		},
+		{
+			"name": "Aftermath",
+			"source": "DA",
+			"page": 218,
+			"entries": [
+				"This trait describes feats that represent special abilities gained after exposure to the weird and deadly.",
+				"{@note See {@variantrule Aftermath Feats|DA} for more information.}"
+			],
+			"categories": [
+				"Feat",
+				"Class"
+			]
+		},
+		{
+			"name": "Esoterica",
+			"source": "DA",
+			"page": 220,
+			"entries": [
+				"The esoterica trait is present in many thaumaturge feats and class features that incorporate the various talismans, supernatural trinkets, and other objects you carry with you. Abilities that have the esoterica trait require you to be in possession of your esoterica to use them. Normally, you're assumed to always have your esoterica with you, but in some rare circumstances, you might either not have them on hand or have your gear stripped from you."
+			],
+			"categories": [
+				"Feat",
+				"Action & Ability"
+			]
+		},
+		{
+			"name": "Thaumaturge",
+			"source": "DA",
+			"page": 222,
+			"categories": [
+				"Class"
+			],
+			"entries": [
+				"This indicates abilities from the {@class thaumaturge|da} class."
+			]
+		},
+		{
+			"name": "Psychic",
+			"source": "DA",
+			"page": 221,
+			"categories": [
+				"Class"
+			],
+			"entries": [
+				"This indicates abilities from the {@class psychic|da} class."
+			]
+		},
+		{
+			"name": "Mindshift",
+			"source": "DA",
+			"page": 13,
+			"categories": [
+				"Action & Ability",
+				"Combat"
+			],
+			"entries": [
+				"An action with this trait can always be altered to use the raw power of your mind. When you take this action, you can choose to replace any damage it deals with mental damage, give it the mental trait, and replace any save it requires with a Will save. The action loses any traits matching damage types it no longer deals."
+			]
+		},
+		{
+			"name": "Psyche",
+			"source": "DA",
+			"page": 13,
+			"categories": [
+				"Action & Ability",
+				"Combat"
+			],
+			"entries": [
+				"Your psyche must be unleashed to use abilities that have the psyche trait, and they end automatically when your unleashed psyche subsides."
+			]
+		},
+		{
 			"name": "[Class]",
 			"source": "SoM",
 			"page": 219,
@@ -16,10 +360,22 @@
 			"source": "B1",
 			"page": 342,
 			"categories": [
-				"Schools & Traditions"
+				"Tradition"
 			],
 			"entries": [
 				"{@note Replace this trait with another fitting magic tradition, such as {@trait Arcane}, {@trait Divine}, {@trait Primal}, or {@trait Occult}.}"
+			]
+		},
+		{
+			"name": "Reflection",
+			"source": "DA",
+			"page": 221,
+			"categories": [
+				"Ancestry & Heritage",
+				"Creature"
+			],
+			"entries": [
+				"A creature with this trait has the reflection versatile heritage. Reflections are beings who are copies of living people, whether through cloning, planar duplication, or another mechanism. An ability with this trait can be used or selected only by reflections."
 			]
 		},
 		{
@@ -57,8 +413,7 @@
 			"source": "CRB",
 			"page": 628,
 			"categories": [
-				"Schools & Traditions",
-				"_school"
+				"School"
 			],
 			"implies": {
 				"spell": {
@@ -107,7 +462,7 @@
 				]
 			},
 			"categories": [
-				"Energy & Elements"
+				"Energy & Element"
 			],
 			"entries": [
 				"Effects with this trait deal acid damage. Creatures with this trait have a magical connection to acid."
@@ -116,18 +471,26 @@
 		{
 			"name": "Additive",
 			"source": "CRB",
+			"variable": true,
 			"page": 75,
-			"categories": [],
 			"entries": [
-				"Feats with the additive trait allow you to spend actions to add special substances to bombs or elixirs. You can add only one additive to a single alchemical item, and attempting to add another spoils the item. You can typically use actions with the additive trait only when you're creating an {@trait infused} {@trait alchemical} item, and some can be used only with the {@action Quick Alchemy|CRB} action. The additive trait is always followed by a level, such as additive 2. An additive adds its level to the level of the alchemical item you're modifying; the result is the new level of the mixture. The mixture's item level must be no higher than your advanced alchemy level."
+				"Feats with the additive trait allow you to spend actions to add special substances to bombs or elixirs. You can add only one additive to a single alchemical item, and attempting to add another spoils the item. You can typically use actions with the additive trait only when you're creating an {@trait infused} {@trait alchemical} item, and some can be used only with the {@action Quick Alchemy} action. The additive trait is always followed by a level, such as {@trait additive <2>}. An additive adds its level to the level of the alchemical item you're modifying; the result is the new level of the mixture. The mixture's item level must be no higher than your advanced alchemy level."
+			],
+			"categories": [
+				"Feat"
 			]
 		},
 		{
 			"name": "Adjustment",
 			"source": "LOTGB",
 			"page": 133,
+			"otherSources": {
+				"Reprinted": [
+					"TV|11"
+				]
+			},
 			"entries": [
-				"Items with this trait alter existing pieces of equipment, typically armors, shields, and weapons. A given adjustment notes which type of equipment it modifies, and a piece of equipment can only be affected by a single adjustment at a time. Unless otherwise noted, adding or removing an adjustment takes 10 minutes of work and a repair kit."
+				"Items with this trait alter existing pieces of equipment, typically armors, shields, and weapons. A given adjustment notes which type of equipment it modifies, and a piece of equipment can only be affected by a single adjustment at a time. Unless otherwise noted, adding or removing an adjustment takes 10 minutes of work and a {@item repair kit}."
 			]
 		},
 		{
@@ -156,7 +519,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"The multiple attack penalty you take with this weapon on the second attack on your turn is \u20134 instead of \u20135, and \u20138 instead of \u201310 on the third and subsequent attacks in the turn."
@@ -178,7 +541,7 @@
 				]
 			},
 			"categories": [
-				"Energy & Elements",
+				"Energy & Element",
 				"Planar"
 			],
 			"entries": [
@@ -234,13 +597,18 @@
 				"Creature"
 			],
 			"entries": [
-				"An amphibious creature can breathe in water and in air, even outside of its preferred environment, usually indefinitely but at least for hours. These creatures often have a swim Speed. Their bludgeoning and slashing unarmed Strikes don't take the usual \u20132 penalty for being underwater."
+				"An amphibious creature can breathe in water and in air, even outside of its preferred environment, usually indefinitely but at least for hours. These creatures often have a swim Speed. Their bludgeoning and slashing unarmed {@action Strike||Strikes} don't take the usual \u20132 penalty for being underwater."
 			]
 		},
 		{
 			"name": "Anadi",
 			"source": "LOME",
 			"page": 308,
+			"otherSources": {
+				"Originally": [
+					"AoA1|84"
+				]
+			},
 			"categories": [
 				"Ancestry & Heritage",
 				"Creature"
@@ -342,7 +710,7 @@
 				"Creature"
 			],
 			"entries": [
-				"Aquatic creatures are at home underwater. Their bludgeoning and slashing unarmed Strikes don't take the usual \u20132 penalty for being underwater. Aquatic creatures can breathe water but not air."
+				"Aquatic creatures are at home underwater. Their bludgeoning and slashing unarmed {@action Strike||Strikes} don't take the usual \u20132 penalty for being underwater. Aquatic creatures can breathe water but not air."
 			]
 		},
 		{
@@ -355,7 +723,7 @@
 				]
 			},
 			"categories": [
-				"Schools & Traditions"
+				"Tradition"
 			],
 			"entries": [
 				"This magic comes from the arcane tradition, which is built on logic and rationality. Anything with this trait is {@trait magical}.",
@@ -373,7 +741,7 @@
 				]
 			},
 			"categories": [
-				"General"
+				"Feat"
 			],
 			"entries": [
 				"This feat belongs to an archetype."
@@ -421,6 +789,7 @@
 		{
 			"name": "Attached",
 			"source": "CRB",
+			"variable": true,
 			"page": 282,
 			"otherSources": {
 				"Reprinted": [
@@ -428,7 +797,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"An attached weapon must be combined with another piece of gear to be used. The trait lists what type of item the weapon must be attached to. You must be wielding or wearing the item the weapon is attached to in order to attack with it. For example, {@item shield spikes} are attached to a shield, allowing you to attack with the spikes instead of a shield bash, but only if you're wielding the shield. An attached weapon is usually bolted onto or built into the item it's attached to, and typically an item can have only one weapon attached to it. An attached weapon can be affixed to an item with 10 minutes of work and a successful DC 10 {@skill Crafting} check; this includes the time needed to remove the weapon from a previous item, if necessary. If an item is destroyed, its attached weapon can usually be salvaged."
@@ -528,7 +897,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"When you hit a {@condition flat-footed} creature, this weapon deals 1 precision damage in addition to its normal damage. The precision damage increases to 2 if the weapon is a +3 weapon."
@@ -544,7 +913,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"You can use the momentum from a missed attack with this weapon to lead into your next attack. After missing with this weapon on your turn, you gain a +1 circumstance bonus to your next attack with this weapon before the end of your turn."
@@ -623,7 +992,7 @@
 			},
 			"categories": [
 				"Item",
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"An alchemical bomb combines volatile alchemical components that explode when the bomb hits a creature or object. Most alchemical bombs deal damage, though some produce other effects.",
@@ -635,7 +1004,7 @@
 			"source": "B2",
 			"page": 310,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"A ranged attack with this trait uses its Strength modifier instead of Dexterity on the attack roll."
@@ -646,7 +1015,7 @@
 			"source": "CRB",
 			"page": 274,
 			"categories": [
-				"Armor & Weapon"
+				"Armor"
 			],
 			"entries": [
 				"The armor covers you so completely that it provides benefits against some damaging effects. On Reflex saves to avoid a damaging effect, such as a {@spell fireball}, you add a +3 modifier instead of your Dexterity modifier."
@@ -673,21 +1042,74 @@
 			"source": "CRB",
 			"page": 629,
 			"categories": [
-				"General"
+				"Spell"
 			],
 			"entries": [
 				"A spell you can cast at will that is automatically heightened to half your level rounded up."
 			]
 		},
 		{
-			"name": "Capacity",
-			"source": "G&G",
-			"page": 150,
+			"name": "Range Increment",
+			"alias": [
+				"Range"
+			],
+			"source": "CRB",
+			"variable": true,
+			"page": 279,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
-				"Weapons that have the capacity trait typically have multiple barrels or chambers capable of containing a round of ammunition. Capacity is always accompanied by a number indicating the number of barrels or chambers. After a capacity weapon is fired, you can select the next loaded barrel or chamber as an {@action Interact} action that doesn't require a free hand. Each barrel or chamber can be reloaded after it's fired as a separate {@action Interact} action."
+				"{@note While not an official trait but instead a weapon statistic, this is used in the traits entry of many creatures attacks. You can find the rules for range increments {@quickref here|CRB|1|range|0}.}"
+			]
+		},
+		{
+			"name": "Reload",
+			"source": "CRB",
+			"variable": true,
+			"page": 279,
+			"categories": [
+				"Weapon"
+			],
+			"entries": [
+				"{@note While not an official trait but instead a weapon statistic, this is used in the traits entry of many creatures attacks. You can find the rules for reloading {@quickref here|CRB|1|reload|0}.}"
+			]
+		},
+		{
+			"name": "Missive",
+			"source": "TV",
+			"page": 220,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"A missive is a piece of magical stationery that must be crafted and composed before it can be activated. All missives have the missive and {@trait consumable} traits. Missives are often constructed of paper, parchment, or vellum, but any other thin, portable material that can hold writing or embossing upon it can be crafted into missives. After being crafted, the missive is a blank sheet until a message is composed upon it, completing its magic."
+			]
+		},
+		{
+			"name": "Relic",
+			"source": "TV",
+			"page": 204,
+			"categories": [
+				"Item"
+			],
+			"entries": []
+		},
+		{
+			"name": "Capacity",
+			"source": "TV",
+			"otherSources": {
+				"Originally": [
+					"G&G|150"
+				]
+			},
+			"variable": true,
+			"page": 24,
+			"categories": [
+				"Weapon"
+			],
+			"entries": [
+				"Weapons that have the capacity trait typically have multiple barrels or chambers capable of containing a round of ammunition. Capacity is always accompanied by a number indicating the number of barrels or chambers. After a capacity weapon is fired, you can select the next loaded barrel or chamber as an {@action Interact} action that doesn't require a free hand. You can use abilities that let or require you to {@action Interact} to reload to switch barrels or chambers of a capacity weapon instead. Each barrel or chamber can be reloaded after it's fired as a separate {@action Interact} action."
 			]
 		},
 		{
@@ -754,6 +1176,17 @@
 			],
 			"entries": [
 				"Creatures that hail from or have a strong connection to the good-aligned planes are called celestials. Celestials can survive the basic environmental effects of planes in the Outer Sphere."
+			]
+		},
+		{
+			"name": "Certain Kill",
+			"source": "FRP3",
+			"page": 51,
+			"categories": [
+				"Combat"
+			],
+			"entries": [
+				"The party has faced the Lightkeepers before, but never somewhere the villains could exhibit their full power. When Syndara chose these four fighters as his champions, he granted each a limited sovereignty over the planar laws of the {@i Glass Lighthouse}. {@creature Syu Tak-nwa|FRP3} received control over space, {@creature Shino Hakusa|FRP3|Hakusa} over life, {@creature Ran-to|FRP3} over gravity, and {@creature Blue Viper|FRP3} over time. The Lightkeepers trained to integrate these planar abilities into their unique fighting styles, and now that they're fighting in the Lighthouse itself, they can use the fullest extent of their power. Each of their members can use a Certain Kill Art as long as they are within the {@i Glass Lighthouse}\u2014these abilities, which have the certain kill trait, cause obvious distortions in the Lighthouse's fabric as the user calls upon their technique. However, as each technique requires one of the Lightkeepers to temporarily take command of the demiplane from the rest of their team, only one Certain Kill Art can be used by any of the Lightkeepers in a given round."
 			]
 		},
 		{
@@ -836,8 +1269,7 @@
 			"source": "GMG",
 			"page": 250,
 			"categories": [
-				"General",
-				"_settlement"
+				"Settlement"
 			],
 			"entries": [
 				"Settlements with this trait tend to be relatively large, with levels typically ranging from 5 to 7."
@@ -872,7 +1304,7 @@
 			"source": "AAWS",
 			"page": 1,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"The hand holding this weapon is freely available to {@action Climb}."
@@ -916,7 +1348,7 @@
 			"source": "G&G",
 			"page": 231,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This firearm is cobbled together and likely to misfire. No matter how well you upkeep it, on a failed attack roll, the attack misses and you must roll a DC {@flatDC 5} flat check. If you fail this check, the weapon misfires."
@@ -935,7 +1367,7 @@
 				]
 			},
 			"categories": [
-				"Energy & Elements"
+				"Energy & Element"
 			],
 			"entries": [
 				"Effects with this trait deal cold damage. Creatures with this trait have a connection to magical cold."
@@ -946,7 +1378,7 @@
 			"source": "G&G",
 			"page": 231,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"Combination is a new trait for weapons that combine the functionality of melee weapons and firearms in unique or unusual ways. A combination weapon has both a firearm form or usage and a melee weapon form or usage. {@table Uncommon Combination Weapons|G&G|Table 4\u20133: Uncommon Combination Weapons} lists the firearm statistics first, and the melee weapon statistics indented beneath, just above the ammunition. Switching between the melee weapon usage and the firearm usage requires an {@action Interact} action. However, if your last action was a successful melee {@action Strike} against a foe using a combination weapon, you can make a firearm {@action Strike} with the combination weapon against that foe without fully switching to the firearm usage, firing the firearm just as you hit with the melee attack. In this case, the combination weapon returns to its melee usage after the firearm {@action Strike}.",
@@ -958,7 +1390,7 @@
 			"source": "CRB",
 			"page": 275,
 			"categories": [
-				"Armor & Weapon"
+				"Armor"
 			],
 			"entries": [
 				"The armor is so comfortable that you can rest normally while wearing it."
@@ -1009,7 +1441,7 @@
 				]
 			},
 			"categories": [
-				"General"
+				"Hazard"
 			],
 			"entries": [
 				"A hazard with this trait takes turns in an encounter."
@@ -1020,7 +1452,7 @@
 			"source": "CRB",
 			"page": 629,
 			"categories": [
-				"General"
+				"Spell"
 			],
 			"entries": [
 				"To cast a composition cantrip or focus spell, you usually use a type of {@skill Performance}. If the spell includes a verbal component, you must use an {@trait auditory} performance, and if it includes a somatic component, you must use a {@trait visual} one. The spell gains all the traits of the performance you used. You can cast only one composition spell each turn, and you can have only one active at a time. If you cast a new composition spell, any ongoing effects from your previous composition spell end immediately."
@@ -1031,7 +1463,7 @@
 			"source": "G&G",
 			"page": 231,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This weapon is designed to be inconspicuous or easily {@condition concealed}. You gain a +2 circumstance bonus to {@skill Stealth} checks and DCs to hide or conceal a weapon with this trait."
@@ -1048,7 +1480,8 @@
 				]
 			},
 			"categories": [
-				"Combat"
+				"Combat",
+				"Action & Ability"
 			],
 			"entries": [
 				"An action with this trait requires a degree of mental concentration and discipline."
@@ -1059,7 +1492,7 @@
 			"source": "G&G",
 			"page": 231,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"These weapons smash as much as puncture. When determining a creature's resistance or immunity to damage from this weapon, use the weaker of the target's resistance or immunity to piercing or bludgeoning. For instance, if the creature were immune to piercing and had no resistance or immunity to bludgeoning damage, it would take full damage from a concussive weapon. Resistance or immunity to all physical damage, or all damage, applies as normal."
@@ -1075,8 +1508,7 @@
 				]
 			},
 			"categories": [
-				"Schools & Traditions",
-				"_school"
+				"School"
 			],
 			"implies": {
 				"spell": {
@@ -1119,7 +1551,8 @@
 			"source": "CRB",
 			"page": 630,
 			"categories": [
-				"General"
+				"Spell",
+				"Effect"
 			],
 			"entries": [
 				"A consecration spell enhances an area for an extended period of time. A given area can have only a single consecration effect at a time. The new effect attempts to counteract any existing one in areas of overlap."
@@ -1178,10 +1611,10 @@
 			"source": "SoM",
 			"page": 252,
 			"categories": [
-				"General"
+				"Spell"
 			],
 			"entries": [
-				"Spells with this trait grant you an action during the spell's effects, typically a reaction with a special trigger. They typically have a long duration, such as 24 hours. You can have only one spell with the contingency trait, or one contingency spell, active at a time. If you cast another spell with the contingency trait or contingency, the newer casting supersedes the older."
+				"Spells with this trait grant you an action during the spell's effects, typically a reaction with a special trigger. They typically have a long duration, such as 24 hours. You can have only one spell with the contingency trait, or one {@spell contingency} spell, active at a time. If you cast another spell with the contingency trait or {@spell contingency}, the newer casting supersedes the older."
 			]
 		},
 		{
@@ -1211,7 +1644,7 @@
 			"source": "G&G",
 			"page": 231,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"Critical fusion is a new trait for combination weapons that grants you two additional options for the critical specialization effect when using the combination weapon's melee version to make a melee attack while the firearm is loaded. If you choose to use one of them, they replace the melee usage's normal critical specialization effect. First, you can discharge the firearm to create a loud bang and concussion, using the critical specialization effect for firearms instead of the melee weapon group's critical specialization effect. Second, you can choose to discharge the firearm to increase the critical hit's momentum or shoot the foe as you attack them in melee, dealing 2 additional damage per weapon damage die. Both options discharge the firearm, which typically means you have to reload it before firing it again."
@@ -1230,7 +1663,7 @@
 				]
 			},
 			"categories": [
-				"General"
+				"Effect"
 			],
 			"entries": [
 				"A curse is an effect that places some long-term affliction on a creature. Curses are always magical and are typically the result of a spell or trap. Effects with this trait can be removed only by effects that specifically target curses.",
@@ -1248,6 +1681,9 @@
 			"name": "Cursebound",
 			"source": "APG",
 			"page": 267,
+			"categories": [
+				"Spell"
+			],
 			"entries": [
 				"Spells with this trait increase the severity of your oracular curse when cast. Usually only revelation spells have this trait. You can't cast a cursebound spell if you don't have an oracular curse."
 			]
@@ -1289,7 +1725,7 @@
 			"source": "CRB",
 			"page": 630,
 			"categories": [
-				"General"
+				"Effect"
 			],
 			"entries": [
 				"Darkness effects extinguish non-magical light in the area, and can counteract less powerful magical light. You must usually target light magic with your darkness magic directly to counteract the light, but some darkness spells automatically attempt to counteract light."
@@ -1298,6 +1734,7 @@
 		{
 			"name": "Deadly",
 			"source": "CRB",
+			"variable": true,
 			"page": 282,
 			"otherSources": {
 				"Reprinted": [
@@ -1305,7 +1742,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"On a critical hit, the weapon adds a weapon damage die of the listed size. Roll this after doubling the weapon's damage. This increases to two dice if the weapon has a {@item greater striking||greater striking rune} and three dice if the weapon has a {@item major striking||major striking rune}. For instance, a rapier with a {@item greater striking||greater striking rune} deals {@damage 2d8} extra piercing damage on a critical hit. An ability that changes the size of the weapon's normal damage dice doesn't change the size of its deadly die."
@@ -1332,7 +1769,7 @@
 				]
 			},
 			"categories": [
-				"General"
+				"Feat"
 			],
 			"entries": [
 				"You must select a feat with this trait to apply an archetype to your character."
@@ -1448,7 +1885,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"You can use this weapon to {@action Disarm} with the {@skill Athletics} skill even if you don't have a free hand. This uses the weapon's reach (if different from your own) and adds the weapon's item bonus to attack rolls (if any) as an item bonus to the {@skill Athletics} check. If you critically fail a check to Disarm using the weapon, you can drop the weapon to take the effects of a failure instead of a critical failure. On a critical success, you still need a free hand if you want to take the item."
@@ -1481,8 +1918,7 @@
 				]
 			},
 			"categories": [
-				"Schools & Traditions",
-				"_school"
+				"School"
 			],
 			"implies": {
 				"spell": {
@@ -1518,7 +1954,7 @@
 				]
 			},
 			"categories": [
-				"Schools & Traditions"
+				"Tradition"
 			],
 			"entries": [
 				"This magic comes from the divine tradition, drawing power from deities or similar sources. Anything with this trait is {@trait magical}."
@@ -1529,7 +1965,7 @@
 			"source": "G&G",
 			"page": 232,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This weapon has two barrels that are each loaded separately. You can fire both barrels of a double barrel weapon in a single {@action Strike} to increase the weapon damage die by one step. If the weapon has the {@trait fatal} trait, this increases the fatal die by one step."
@@ -1540,7 +1976,7 @@
 			"source": "CRB",
 			"page": 631,
 			"categories": [
-				"General"
+				"Action & Ability"
 			],
 			"entries": [
 				"An activity with this trait takes a day or more, and can be used only during downtime."
@@ -1675,7 +2111,7 @@
 				]
 			},
 			"categories": [
-				"Energy & Elements",
+				"Energy & Element",
 				"Planar"
 			],
 			"entries": [
@@ -1721,7 +2157,7 @@
 				]
 			},
 			"categories": [
-				"Energy & Elements"
+				"Energy & Element"
 			],
 			"entries": [
 				"Effects with this trait deal electricity damage. A creature with this trait has a magical connection to electricity."
@@ -1799,8 +2235,7 @@
 				]
 			},
 			"categories": [
-				"Schools & Traditions",
-				"_school"
+				"School"
 			],
 			"implies": {
 				"spell": {
@@ -1830,7 +2265,7 @@
 			"source": "LOAG",
 			"page": 139,
 			"categories": [
-				"Energy & Elements"
+				"Energy & Element"
 			],
 			"entries": [
 				"{@note No entries available.}"
@@ -1841,7 +2276,7 @@
 			"source": "CRB",
 			"page": 631,
 			"categories": [
-				"General"
+				"Hazard"
 			],
 			"entries": [
 				"A hazard with this trait is something dangerous that's part of the natural world, such as quicksand or harmful mold."
@@ -1921,8 +2356,7 @@
 				]
 			},
 			"categories": [
-				"Schools & Traditions",
-				"_school"
+				"School"
 			],
 			"implies": {
 				"spell": {
@@ -1952,7 +2386,7 @@
 			"source": "SoM",
 			"page": 57,
 			"categories": [
-				"General"
+				"Feat"
 			],
 			"entries": [
 				"Feats with this trait affect your eidolon instead of you, typically by granting it additional physical capabilities."
@@ -1968,7 +2402,7 @@
 				]
 			},
 			"categories": [
-				"General"
+				"Action & Ability"
 			],
 			"entries": [
 				"An activity with this trait takes more than a turn to use, and can usually be used only during exploration mode."
@@ -1984,7 +2418,8 @@
 				]
 			},
 			"categories": [
-				"General"
+				"Effect",
+				"Item"
 			],
 			"entries": [
 				"This effect or item creates an extradimensional space. An extradimensional effect placed inside another extradimensional space ceases to function until it is removed."
@@ -1992,10 +2427,11 @@
 		},
 		{
 			"name": "Fatal",
+			"variable": true,
 			"source": "CRB",
 			"page": 282,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"The fatal trait includes a die size. On a critical hit, the weapon's damage die increases to that die size instead of the normal die size, and the weapon adds one additional damage die of the listed size."
@@ -2004,9 +2440,10 @@
 		{
 			"name": "Fatal Aim",
 			"source": "G&G",
+			"variable": true,
 			"page": 150,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"It's possible to hold the stock of this weapon under one arm so you can fire it with a single hand as long as the other hand isn't holding a weapon, shield, or anything else you would need to move and position, to ensure the weapon doesn't slip out from under your arm. However, if you use both hands, the weapon can make fatal attacks. When you wield the weapon in two hands, it gains the {@trait fatal} trait with the listed damage die. Holding the weapon underarm stably enough to fire is significantly more complicated than just releasing one hand from the weapon, so to switch between the two grips, you must do so with an {@action Interact} action rather than {@action Release||Releasing} or as part of reloading."
@@ -2110,7 +2547,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"You can use your Dexterity modifier instead of your Strength modifier on attack rolls using this melee weapon. You still use your Strength modifier when calculating damage."
@@ -2155,7 +2592,7 @@
 				]
 			},
 			"categories": [
-				"Energy & Elements",
+				"Energy & Element",
 				"Planar"
 			],
 			"entries": [
@@ -2166,7 +2603,7 @@
 					"page": 251,
 					"entries": [
 						"Planes with this trait are composed of flames that continually burn with no fuel source. Fire planes are extremely hostile to non-fire creatures.",
-						"Unprotected wood, paper, cloth, and other flammable materials catch fire almost immediately, and creatures wearing unprotected flammable clothing catch fire, typically taking {@damage 1d6} persistent fire damage. Extraplanar creatures take moderate environmental fire damage at the end of each round (sometimes minor environmental damage in safer areas, or major or massive damage in even more fiery areas). Fire magic is enhanced, and {@trait cold} and {@trait water} magic are impeded. Water creatures are extremely uncomfortable on a fire plane, and any natural resistance they have against fire doesn't function against this environmental fire damage."
+						"Unprotected wood, paper, cloth, and other flammable materials catch fire almost immediately, and creatures wearing unprotected flammable clothing catch fire, typically taking {@damage 1d6} {@condition persistent damage||persistent fire damage}. Extraplanar creatures take moderate environmental fire damage at the end of each round (sometimes minor environmental damage in safer areas, or major or massive damage in even more fiery areas). Fire magic is enhanced, and {@trait cold} and {@trait water} magic are impeded. Water creatures are extremely uncomfortable on a fire plane, and any natural resistance they have against fire doesn't function against this environmental fire damage."
 					]
 				}
 			]
@@ -2188,7 +2625,7 @@
 			"source": "CRB",
 			"page": 275,
 			"categories": [
-				"Armor & Weapon"
+				"Armor"
 			],
 			"entries": [
 				"The armor is flexible enough that it doesn't hinder most actions. You don't apply its check penalty to {@skill Acrobatics} or {@skill Athletics} checks."
@@ -2244,7 +2681,7 @@
 				]
 			},
 			"categories": [
-				"Energy & Elements"
+				"Energy & Element"
 			],
 			"entries": [
 				"Effects with this trait deal force damage or create objects made of pure magical force."
@@ -2260,7 +2697,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This weapon becomes more dangerous as you build momentum. When you attack with it more than once on your turn, the second attack gains a circumstance bonus to damage equal to the number of weapon damage dice, and each subsequent attack gains a circumstance bonus to damage equal to double the number of weapon damage dice."
@@ -2292,7 +2729,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This weapon doesn't take up your hand, usually because it is built into your armor. A free-hand weapon can't be {@action Disarm|CRB|Disarmed}. You can use the hand covered by your free hand weapon to wield other items, perform {@trait manipulate} actions, and so on. You can't attack with a free hand weapon if you're wielding anything in that hand or otherwise using that hand. When you're not wielding anything and not otherwise using the hand, you can use abilities that require you to have a hand free as well as those that require you to be wielding a weapon in that hand. Each of your hands can have only one free-hand weapon on it.",
@@ -2311,7 +2748,7 @@
 			"source": "SoM",
 			"page": 253,
 			"categories": [
-				"General"
+				"Item"
 			],
 			"entries": [
 				"Fulus are small paper charms that can be affixed to a suit of armor, a shield, a weapon, a creature, or even a structure. Some fulus are composed of multiple such charms, taking effect only once all have been affixed. Normal fulus have effects immediately once affixed, while fulu talismans have an effect only once activated. Once a fulu has been activated, it lasts for the given duration and then burns out. Unless otherwise noted, fulus expire one year after being created, reverting to mundane paper.",
@@ -2371,7 +2808,7 @@
 			"source": "CRB",
 			"page": 632,
 			"categories": [
-				"General"
+				"Feat"
 			],
 			"entries": [
 				"A type of feat that any character can select, regardless of ancestry and class, as long as they meet the prerequisites. You can select a feat with this trait when your class grants a general feat."
@@ -2567,7 +3004,7 @@
 			"source": "CRB",
 			"page": 283,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"You can use this weapon to {@action Grapple} with the {@skill Athletics} skill even if you don't have a free hand. This uses the weapon's reach (if different from your own) and adds the weapon's item bonus to attack rolls as an item bonus to the {@skill Athletics} check. If you critically fail a check to Grapple using the weapon, you can drop the weapon to take the effects of a failure instead of a critical failure."
@@ -2633,9 +3070,7 @@
 			"categories": [
 				"Class"
 			],
-			"entries": [
-				"{@note No entries found.}"
-			]
+			"entries": []
 		},
 		{
 			"name": "Hag",
@@ -2725,7 +3160,7 @@
 			"source": "LOAG",
 			"page": 139,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"A weapon with the hampering trait is designed to be shaken, cast outward, or whipped about to control space on the battlefield. You can use an Interact action to thrash the weapon in a square within the weapon's reach. That square becomes {@quickref difficult terrain||3|terrain} until you attack with the weapon, move, or would otherwise stop intentionally thrashing it."
@@ -2741,7 +3176,7 @@
 				]
 			},
 			"categories": [
-				"General"
+				"Hazard"
 			],
 			"entries": [
 				"A hazard with this trait is a spiritual echo, often of someone with a tragic death. Putting a haunt to rest often involves resolving the haunt's unfinished business. A haunt that hasn't been properly put to rest always returns after a time."
@@ -2878,8 +3313,7 @@
 				]
 			},
 			"categories": [
-				"Schools & Traditions",
-				"_school"
+				"School"
 			],
 			"implies": {
 				"spell": {
@@ -2937,12 +3371,12 @@
 			"source": "SoM",
 			"page": 132,
 			"categories": [
-				"General"
+				"Spell"
 			],
 			"entries": [
 				"A spell with the incarnate trait is similar in theme to spells that summon creatures, but it doesn't conjure a minion with the summoned trait. Instead, when summoned, the incarnate creature takes its Arrive action when you finish {@action Cast a Spell||Casting the Spell}. At the end of your next turn, the incarnate creature can either Step, Stride, or take the action for another movement type it has (such as Climb or Burrow), and then takes its Depart action. The spell then ends. The names of specific Arrive and Depart actions are listed in italics after the word \"Arrive\" or \"Depart\" respectively, along with any traits.",
 				"A creature summoned by an incarnate spell acts in your interests, directs its effects away from you and your allies as much as possible, and might listen to your requests, but ultimately makes its own decisions. If the spell indicates that the incarnate makes a decision, the GM determines what the incarnate would do. It might even become more inclined to do precisely as you wish over multiple summonings.",
-				"The incarnate is not fully a creature. It can't take any other actions, nor can it be targeted or harmed by Strikes, spells, or other effects unless they would be able to target or end a spell effect (such as dispel magic). It has a size for the purposes of determining its placement for effects, but it doesn't block movement. If applicable, its effects use your spell DCs and spell attack roll modifier."
+				"The incarnate is not fully a creature. It can't take any other actions, nor can it be targeted or harmed by {@action Strike||Strikes}, spells, or other effects unless they would be able to target or end a spell effect (such as dispel magic). It has a size for the purposes of determining its placement for effects, but it doesn't block movement. If applicable, its effects use your spell DCs and spell attack roll modifier."
 			]
 		},
 		{
@@ -2960,8 +3394,8 @@
 			],
 			"entries": [
 				"An incorporeal creature or object has no physical form. It can pass through solid objects, including walls. When inside an object, an incorporeal creature can't perceive, attack, or interact with anything outside the object, and if it starts its turn in an object, it is {@condition slowed|crb} 1. Corporeal creatures can pass through an incorporeal creature, but they can't end their movement in its space.",
-				"An incorporeal creature can't attempt Strength-based checks against physical creatures or objects\u2014only against incorporeal ones\u2014unless those objects have the ghost touch property rune. Likewise, a corporeal creature can't attempt Strength-based checks against incorporeal creatures or objects.",
-				"Incorporeal creatures usually have immunity to effects or conditions that require a physical body, like disease, poison, and precision damage. They usually have resistance against all damage (except force damage and damage from Strikes with the ghost touch property rune), with double the resistance against non-magical damage."
+				"An incorporeal creature can't attempt Strength-based checks against physical creatures or objects\u2014only against incorporeal ones\u2014unless those objects have the {@item ghost touch} property rune. Likewise, a corporeal creature can't attempt Strength-based checks against incorporeal creatures or objects.",
+				"Incorporeal creatures usually have immunity to effects or conditions that require a physical body, like disease, poison, and precision damage. They usually have resistance against all damage (except force damage and damage from {@action Strike||Strikes} with the {@item ghost touch} property rune), with double the resistance against non-magical damage."
 			]
 		},
 		{
@@ -3023,7 +3457,7 @@
 			"source": "G&G",
 			"page": 233,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This weapon can be filled with an injury poison. Immediately after a successful attack with the weapon, you can inject the target with the loaded poison with a single {@action Interact} action. Refilling the weapon with a new substance requires three {@action Interact} actions and uses both hands."
@@ -3045,7 +3479,7 @@
 			"source": "CRB",
 			"page": 87,
 			"categories": [
-				"General"
+				"Action & Ability"
 			],
 			"entries": [
 				"Instinct abilities require a specific instinct; you lose access if you perform acts anathema to your instinct."
@@ -3074,9 +3508,7 @@
 			"categories": [
 				"Class"
 			],
-			"entries": [
-				"{@note No entries found.}"
-			]
+			"entries": []
 		},
 		{
 			"name": "Invested",
@@ -3109,8 +3541,9 @@
 			"name": "Jousting",
 			"source": "CRB",
 			"page": 283,
+			"variable": true,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"The weapon is suited for mounted combat with a harness or similar means. When mounted, if you moved at least 10 feet on the action before your attack, add a circumstance bonus to damage for that attack equal to the number of damage dice for the weapon. In addition, while mounted, you can wield the weapon in one hand, changing the damage die to the listed value."
@@ -3129,7 +3562,7 @@
 			"source": "G&G",
 			"page": 234,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"A kickback weapon is extra powerful and difficult to use due to its high recoil. A kickback weapon deals 1 additional damage with all attacks. Firing a kickback weapon gives a \u20132 circumstance penalty to the attack roll, but characters with 14 or more Strength ignore the penalty. Attaching a kickback weapon to a deployed bipod, tripod, or other stabilizer can lower or negate this penalty."
@@ -3316,7 +3749,7 @@
 			"source": "CRB",
 			"page": 633,
 			"categories": [
-				"General"
+				"Spell"
 			],
 			"entries": [
 				"Litanies are special devotion spells, typically used by {@class champion|CRB|champions} and requiring a single action, that usually give temporary immunity to further litanies."
@@ -3437,7 +3870,7 @@
 				]
 			},
 			"categories": [
-				"General"
+				"Hazard"
 			],
 			"entries": [
 				"A hazard with this trait is a constructed physical object."
@@ -3492,6 +3925,17 @@
 			]
 		},
 		{
+			"name": "Spellshape",
+			"source": "RoE",
+			"page": 238,
+			"categories": [
+				"General"
+			],
+			"entries": [
+				"Actions with the spellshape trait tweak the properties of your spells. You must use a spellshape action directly before casting the spell you want to alter. If you use any action (including free actions and reactions) other than casting a spell directly after, you waste the benefits of the spellshape action. Any additional effects added by a spellshape action are part of the spell's effect, not of the spellshape action itself."
+			]
+		},
+		{
 			"name": "Metamagic",
 			"source": "CRB",
 			"page": 634,
@@ -3519,8 +3963,7 @@
 			"source": "GMG",
 			"page": 253,
 			"categories": [
-				"General",
-				"_settlement"
+				"Settlement"
 			],
 			"entries": [
 				"Settlements with this trait are the largest of cities, often with a level of 8 or higher."
@@ -3609,7 +4052,7 @@
 			"source": "G&G",
 			"page": 234,
 			"categories": [
-				"Armor & Weapon"
+				"Feat"
 			],
 			"entries": [
 				"A feat with this trait alters the construction of your innovation. If you have the {@classFeature reconfigure|inventor|g&g|3} class feature, you can retrain such a feat more easily."
@@ -3618,6 +4061,7 @@
 		{
 			"name": "Modular",
 			"source": "LOGM",
+			"variable": true,
 			"page": 120,
 			"otherSources": {
 				"Reprinted": [
@@ -3629,7 +4073,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"implies": {
 				"item": {
@@ -3705,7 +4149,7 @@
 				"Effect"
 			],
 			"entries": [
-				"Effects that slightly alter a creature's form have the morph trait. Any Strikes specifically granted by a morph effect are magical. You can be affected by multiple morph spells at once, but if you morph the same body part more than once, the second morph effect attempts to counteract the first (in the same manner as two {@trait polymorph} effects, described in that trait).",
+				"Effects that slightly alter a creature's form have the morph trait. Any {@action Strike||Strikes} specifically granted by a morph effect are magical. You can be affected by multiple morph spells at once, but if you morph the same body part more than once, the second morph effect attempts to counteract the first (in the same manner as two {@trait polymorph} effects, described in that trait).",
 				"Your morph effects might also end if you are polymorphed and the polymorph effect invalidates or overrides your morph effect. The GM determines which morph effects can be used together and which can't."
 			]
 		},
@@ -3714,7 +4158,7 @@
 			"source": "G&G",
 			"page": 234,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"Mounted siege weapons take up a certain size and space, and typically have statistics to allow them to be attacked. They're used for large-scale warfare. 72."
@@ -3736,7 +4180,7 @@
 			"source": "CRB",
 			"page": 635,
 			"categories": [
-				"General"
+				"Feat"
 			],
 			"entries": [
 				"Archetypes with the multiclass trait represent diversifying your training into another class's specialties. You can't select a multiclass archetype's dedication feat if you are a member of the class of the same name."
@@ -3820,8 +4264,7 @@
 				]
 			},
 			"categories": [
-				"Schools & Traditions",
-				"_school"
+				"School"
 			],
 			"implies": {
 				"spell": {
@@ -3861,7 +4304,7 @@
 				]
 			},
 			"categories": [
-				"Energy & Elements"
+				"Energy & Element"
 			],
 			"entries": [
 				"Effects with this trait heal undead creatures with negative energy, deal negative damage to living creatures, or manipulate negative energy. Creatures with this trait are natives of the Negative Energy Plane. They can survive the basic environmental effects of the Negative Energy Plane.",
@@ -3900,7 +4343,7 @@
 			"source": "CRB",
 			"page": 275,
 			"categories": [
-				"Armor & Weapon"
+				"Armor"
 			],
 			"entries": [
 				"This armor is loud and likely to alert others to your presence. The armor's check penalty applies to {@skill Stealth} checks even if you meet the required Strength score."
@@ -3916,7 +4359,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"An effect with this trait is nonlethal. Damage from a nonlethal effect knocks a creature out rather than killing it.",
@@ -3939,7 +4382,7 @@
 			"source": "CRB",
 			"page": 109,
 			"categories": [
-				"General"
+				"Feat"
 			],
 			"entries": [
 				"Oaths add an additional tenet to your code. You can usually have only one feat with this trait."
@@ -3955,7 +4398,7 @@
 				]
 			},
 			"categories": [
-				"Schools & Traditions"
+				"Tradition"
 			],
 			"entries": [
 				"This magic comes from the occult tradition, calling upon bizarre and ephemeral mysteries. Anything with this trait is {@trait magical}."
@@ -4073,7 +4516,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This weapon can be used defensively to block attacks. While wielding this weapon, if your proficiency with it is trained or better, you can spend a single action to position your weapon defensively, gaining a +1 circumstance bonus to AC until the start of your next turn."
@@ -4181,7 +4624,7 @@
 			"source": "G&G",
 			"page": 235,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"Portable siege weapons, such as battering rams, can be more easily carried and have a role in both warfare and smaller conflicts or exploration. 73."
@@ -4200,7 +4643,7 @@
 				]
 			},
 			"categories": [
-				"Energy & Elements"
+				"Energy & Element"
 			],
 			"entries": [
 				"Effects with this trait heal living creatures with positive energy, deal positive energy damage to undead, or manipulate positive energy.",
@@ -4287,7 +4730,7 @@
 				]
 			},
 			"categories": [
-				"Schools & Traditions"
+				"Tradition"
 			],
 			"entries": [
 				"This magic comes from the primal tradition, connecting to the natural world and instinct. Anything with this trait is {@trait magical}."
@@ -4298,7 +4741,7 @@
 			"source": "CRB",
 			"page": 283,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"You add half your Strength modifier (if positive) to damage rolls with a propulsive ranged weapon. If you have a negative Strength modifier, you add your full Strength modifier instead."
@@ -4375,12 +4818,13 @@
 			"page": 85,
 			"otherSources": {
 				"Reprinted": [
+					"LOGM|120",
 					"APG|269",
 					"G&G|235"
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"The weapon can be used to {@action Trip} with the {@skill Athletics} skill at a distance up to the weapon's first range increment. The skill check is attempted with a \u20132 circumstance penalty. You can add the weapon's item bonus to attack rolls as a bonus to the check. As with using a melee weapon to {@action Trip}, a ranged trip weapon doesn't deal any damage when used to {@action Trip}. This trait usually appears only on a {@trait thrown} weapon."
@@ -4458,8 +4902,9 @@
 					"G&G|235"
 				]
 			},
+			"variable": true,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This weapon is long and can be used to attack creatures up to 10 feet away instead of only adjacent creatures. For creatures that already have reach with the limb or limbs that wield the weapon, the weapon increases their reach by 5 feet."
@@ -4475,7 +4920,7 @@
 				]
 			},
 			"categories": [
-				"General"
+				"Action & Ability"
 			],
 			"entries": [
 				"Actions that have the reckless trait push the pilot and the vehicle beyond the normal parameters for safe operation, and the pilot risks losing control of the vehicle. When performing a reckless action, the pilot must first attempt an appropriate piloting check to keep control of the vehicle, with the following effects. Resolve this piloting check before resolving the action itself.",
@@ -4493,7 +4938,7 @@
 			"source": "G&G",
 			"page": 62,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"These weapons can't be loaded with individual bolts or bullets like other crossbows and firearms; instead, they require a magazine of specialized ammunition to be loaded into a special slot. Once that magazine is in place, the ammunition loads automatically each time the weapon is cocked to fire, reducing its reload to the value in its reload entry (typically 0). When the ammunition runs out, a new magazine must be loaded, which requires a free hand and 3 Interact actions (to remove the old magazine, retrieve the new magazine, and slot the new magazine in place). These actions don't need to be consecutive."
@@ -4504,7 +4949,7 @@
 			"source": "LOAG",
 			"page": 139,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This weapon can channel energy damage. You gain the {@action Conduct Energy|LOAG} free action while wielding a resonant weapon.",
@@ -4558,11 +5003,12 @@
 			"name": "Scatter",
 			"source": "G&G",
 			"page": 235,
+			"variable": true,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
-				"This weapon fires a cluster of pellets in a wide spray. Scatter always has an area listed with it, indicating the radius of the spray. On a hit, the primary target of attacks with a scatter weapon take the listed damage, and the target and all other creatures within the listed radius around it take 1 point of splash damage per weapon damage die."
+				"This weapon fires a cluster of pellets in a wide spray. Scatter always has an area listed with it, indicating the radius of the spray. On a hit, the primary target of attacks with a scatter weapon take the listed damage, and the target and all other creatures within the listed radius around it take 1 point of {@trait splash} damage per weapon damage die."
 			]
 		},
 		{
@@ -4671,6 +5117,212 @@
 			]
 		},
 		{
+			"name": "Barding",
+			"source": "TV",
+			"page": 216,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"You can purchase special armor for animals, called barding. All animals have a trained proficiency rank in light barding, and combat-trained animals are trained in heavy barding. Barding uses the same rules as armor except for the following. The Price and Bulk of barding depend on the animal's size. Unlike for a suit of armor, barding's Strength entry is listed as a modifier, not a score. Barding can't be etched with magic runes, though special magical barding might be available."
+			]
+		},
+		{
+			"name": "Spellgun",
+			"source": "TV",
+			"page": 221,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"The spellgun trait appears on items that can generate a magical effect that flies out like a bullet. You can make either a spell attack roll with a spellgun or a ranged attack roll using your proficiency with simple firearms. Spellguns have a range increment, which applies regardless of which type of attack roll you make. Though you can use your modifier for simple firearms, a spellgun isn't actually a firearm. You don't get the damage of a firearm {@action Strike}, nor other benefits like critical specialization. Similarly, you can't load or reload a spellgun, {@action affix a talisman||affix talismans} to one, make a spellgun {@action Strike} as part of an action that lets you make a firearm {@action Strike}, and so on."
+			]
+		},
+		{
+			"name": "Foldaway",
+			"source": "TV",
+			"page": 218,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"This shield can collapse into a smaller form attached to a {@item gauntlet} for stability and easy travel. You can use an Interact action to deploy or stow the shield. While it's deployed, you can {@action Raise the Shield} as long as you have that hand free or are holding an object of light Bulk that's not a weapon in that hand. The shield impedes the use of your hand while it's deployed. Though you can still hold items in that hand, you can't wield weapons in that hand, operate anything that takes two hands, or attack with the {@item gauntlet}.",
+				"A foldaway shield must be attached to a {@item gauntlet} for stability. It can be affixed to an item with 10 minutes of work and a successful DC 10 {@skill Crafting} check; this includes the time needed to remove the shield from a previous {@item gauntlet}, if necessary. If the {@item gauntlet} is destroyed, the foldaway shield can usually be salvaged. The collapsible nature of the shield makes it impossible to affix an attached weapon to it."
+			]
+		},
+		{
+			"name": "Harnessed",
+			"source": "TV",
+			"page": 219,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"This shield features a special brace or opening designed to hold lances or other jousting weapons. Jousters often use these shields as a backup in narrow passages and other places where they're unable to ride a mount. You can Interact to lock a weapon with the jousting trait in place in the shield, enabling you to use two hands to wield the shield and weapon simultaneously. If you're not wielding the combined unit with both hands, you can use neither the weapon nor the shield.",
+				"While you have the shield raised, you can gain the jousting benefit of a weapon as if you were mounted. Because a significant portion of the weapon needs to be braced behind the shield, the weapon's reach is reduced by 5 feet if it is greater than 5 feet."
+			]
+		},
+		{
+			"name": "Coda",
+			"source": "TV",
+			"page": 217,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"Instruments with the coda trait work mostly like staves and have the {@trait staff} trait. There are two differences: Coda instruments are in the form of musical instruments, and they can be prepared only by bards. Because they're not physically staves, you can't attack with a coda instrument, nor can you etch it with weapon runes.",
+				"The process of preparing a coda instrument involves playing significant portions of songs related to the spells within the instrument\u2014either old standards or ones of your own creation. This leaves magical reverberations within the instrument that allow you to complete the songs by playing their coda later in the day."
+			]
+		},
+		{
+			"name": "Hefty",
+			"source": "TV",
+			"page": 219,
+			"variable": true,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"A hefty shield is so heavy that raising it takes more effort. Raising a Shield with the hefty trait is a two-action activity unless your Strength score equals or exceeds the number with the trait."
+			]
+		},
+		{
+			"name": "Launching",
+			"source": "TV",
+			"page": 220,
+			"variable": true,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"A mechanism within this shield can shoot projectiles, causing the shield to also function as a ranged weapon. The trait lists the type of weapon, such as \"launching dart.\" Striking with the launcher requires the same number of hands as normal, except that the hand holding the shield counts toward this total, so a one-handed ranged weapon would require only one hand. Reloading takes the normal number of {@action Interact} actions, to a minimum of 1 action, and you can't use the hand holding your shield to reload."
+			]
+		},
+		{
+			"name": "Shield Throw",
+			"source": "TV",
+			"page": 219,
+			"variable": true,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"A shield with this trait is designed to be thrown as a ranged attack. When thrown, the shield is a martial {@trait thrown} ranged weapon. Its damage dice and type are the same as its shield bash attack, but if the shield includes an attached weapon or integrated weapon, you can choose to attack with it instead when you throw the shield. You add your Strength modifier to damage, as typical of a {@trait thrown} weapon. The trait also includes the range increment."
+			]
+		},
+		{
+			"name": "Integrated",
+			"source": "TV",
+			"page": 219,
+			"variable": true,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"This shield has been created to include a weapon in its construction, which works like an attached weapon but can't be removed from the shield. This also prevents other attached weapons from being added to the shield. The integrated weapon's damage is listed alongside the trait, such as \"integrated d6 S,\" with any traits in parentheses. Unless otherwise noted in the shield's description, an integrated weapon is a martial weapon in the shield weapon group and requires one hand to attack with. The attached weapon can have runes etched onto it like other attached weapons. You can continue fighting normally with the integrated weapon if the shield is broken, but if the shield is destroyed, so is the weapon."
+			]
+		},
+		{
+			"name": "Deflecting",
+			"source": "TV",
+			"page": 20,
+			"variable": true,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"This shield is designed to block or divert certain types of attacks or weapons. Increase the shield's Hardness against the listed type of attack by 2."
+			]
+		},
+		{
+			"name": "Expandable",
+			"source": "TV",
+			"page": 56,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"An item with the expandable trait increases to a specific size when activated. Unless otherwise noted, this space must be adjacent to you and on the ground, and the item needs to have enough open space to expand into or else the activation has no effect. When the effect ends, the expanded item disintegrates if it's a consumable or shrinks back to its normal size if it's not a consumable."
+			]
+		},
+		{
+			"name": "Processed",
+			"source": "TV",
+			"page": 46,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"An alchemical consumable with the processed trait can be created with {@action Quick Alchemy} but is too complex to create in a single action. Using {@action Quick Alchemy} to create a processed item takes 1 minute. If the item would take more than 3 actions to Activate, the time the item remains potent after you create it is equal to its activation time. For instance, a processed item that takes 10 minutes to Activate would remain potent for 10 minutes when created with {@action Quick Alchemy} instead of remaining potent only until the start of your next turn. This trait doesn't change other specifics of {@action Quick Alchemy}. You could, for example, use double brew to create two of the same processed item over the course of 1 minute."
+			]
+		},
+		{
+			"name": "Lozenge",
+			"source": "TV",
+			"page": 46,
+			"categories": [
+				"Item"
+			],
+			"entries": [
+				"You {@action Activate an Item||Activate} an alchemical lozenge by putting it in your mouth. It stays there, slowly dissolving and releasing its ingredients over time. You can bite a lozenge for a secondary effect. The action this takes is noted in the item under the Secondary Effect heading. As soon as this secondary effect is over, the lozenge is used up and its benefits for you end. You can drink elixirs, potions, and beverages with a lozenge in your mouth, but you can't benefit from more than one lozenge at a time. If you have two lozenges in your mouth at the same time, both become inert. You can also spit out a lozenge as a single action to end its effect and make it inert. A lozenge dissolves due to its alchemical ingredients, so it typically still works even if you don't have saliva."
+			]
+		},
+		{
+			"name": "Training",
+			"source": "TV",
+			"page": 26,
+			"categories": [
+				"Weapon"
+			],
+			"entries": [
+				"A training weapon is designed to be used when training an animal to participate in combat by identifying the target for the animal to attack. {@action Strike||Striking} a creature with a training weapon gives your animal companion or your bonded animal a +1 circumstance bonus to its next attack roll against that target."
+			]
+		},
+		{
+			"name": "Razing",
+			"source": "TV",
+			"page": 26,
+			"categories": [
+				"Weapon"
+			],
+			"entries": [
+				"Razing weapons are particularly good at damaging objects, structures, and vehicles. Whenever you deal damage to an object (including shields and animated objects), structure, or vehicle with a razing weapon, the object takes an amount of additional damage equal to double the number of weapon damage dice."
+			]
+		},
+		{
+			"name": "Vehicular",
+			"source": "TV",
+			"page": 26,
+			"categories": [
+				"Weapon"
+			],
+			"entries": [
+				"A vehicular weapon is attached to a vehicle or worn by a mount and can typically only be wielded by the driver of the vehicle or the mount's primary rider. The driver or rider can control a vehicular weapon with the same hands they use to steer the vehicle or guide the mount. A vehicular weapon can be {@action Disarm||Disarmed} by knocking the controls (typically reins for a mount or a steering device for a vehicle) out of the wielder's hands."
+			]
+		},
+		{
+			"name": "Recovery",
+			"source": "TV",
+			"page": 26,
+			"categories": [
+				"Weapon"
+			],
+			"entries": [
+				"Recovery weapons are thrown weapons designed to return to the thrower when they miss the target. When you make an unsuccessful thrown Strike with this weapon, it flies back to your hand after the Strike is complete, allowing you to try again. If your hands are full when the weapon returns, it falls to the ground in your space."
+			]
+		},
+		{
+			"name": "Brace",
+			"source": "TV",
+			"page": 24,
+			"categories": [
+				"Weapon"
+			],
+			"entries": [
+				"A brace weapon is effective at damaging moving opponents. When you {@action Ready} to {@action Strike} an opponent that moves within your reach, until the start of your next turn {@action Strike||Strikes} with the brace weapon deal an additional 2 precision damage for each weapon damage die it has."
+			]
+		},
+		{
 			"name": "Shisk",
 			"source": "LOME",
 			"page": 310,
@@ -4704,7 +5356,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"You can use this weapon to {@action Shove} with the {@skill Athletics} skill even if you don't have a free hand. This uses the weapon's reach (if different from your own) and adds the weapon's item bonus to attack rolls as an item bonus to the {@skill Athletics} check. If you critically fail a check to {@action Shove} using the weapon, you can drop the weapon to take the effects of a failure instead of a critical failure."
@@ -4732,7 +5384,7 @@
 			"source": "CRB",
 			"page": 636,
 			"categories": [
-				"General"
+				"Feat"
 			],
 			"entries": [
 				"A general feat with the skill trait improves your skills and their actions or gives you new actions for a skill. A feat with this trait can be selected when a class grants a skill feat or general feat. Archetype feats with the skill trait can be selected in place of a skill feat if you have that archetype's dedication feat."
@@ -4803,7 +5455,7 @@
 				]
 			},
 			"categories": [
-				"Energy & Elements"
+				"Energy & Element"
 			],
 			"entries": [
 				"An effect with the sonic trait functions only if it makes sound, meaning it has no effect in an area of silence or in a vacuum. This is different from an auditory spell, which is effective only if the target can hear it. A sonic effect might deal sonic damage. A creature with this trait has a magical connection to powerful sound."
@@ -4875,11 +5527,11 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"Most bombs also have the splash trait. When you use a thrown weapon with the splash trait, you don't add your Strength modifier to the damage roll. If an attack with a splash weapon fails, succeeds, or critically succeeds, all creatures within 5 feet of the target (including the target) take the listed splash damage. On a critical failure, the bomb misses entirely, dealing no damage. Add splash damage together with the initial damage against the target before applying the target's resistance or weakness. You don't multiply splash damage on a critical hit.",
-				"For example, if you throw a {@item lesser acid flask} and hit your target, that creature takes 1 acid damage, {@damage 1d6} persistent acid damage, and 1 acid splash damage. All other creatures within 5 feet of it take 1 acid splash damage. On a critical hit, the target takes 2 acid damage and 2d6 persistent acid damage, but the splash damage is still 1. If you miss, the target and all creatures within 5 feet take only 1 splash damage. If you critically fail, no one takes any damage."
+				"For example, if you throw a {@item lesser acid flask} and hit your target, that creature takes 1 acid damage, {@damage 1d6} {@condition persistent damage||persistent acid damage}, and 1 acid splash damage. All other creatures within 5 feet of it take 1 acid splash damage. On a critical hit, the target takes 2 acid damage and {@damage 2d6} {@condition persistent damage||persistent acid damage}, but the splash damage is still 1. If you miss, the target and all creatures within 5 feet take only 1 splash damage. If you critically fail, no one takes any damage."
 			]
 		},
 		{
@@ -4937,7 +5589,7 @@
 			"source": "GMG",
 			"page": 254,
 			"categories": [
-				"General"
+				"Planar"
 			],
 			"entries": [
 				"The physical nature of a plane with this trait can't be changed in any way."
@@ -5076,7 +5728,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This weapon makes wide sweeping or spinning attacks, making it easier to attack multiple enemies. When you attack with this weapon, you gain a +1 circumstance bonus to your attack roll if you already attempted to attack a different target this turn using this weapon."
@@ -5115,7 +5767,7 @@
 			"source": "SoM",
 			"page": 57,
 			"categories": [
-				"General"
+				"Action & Ability"
 			],
 			"entries": [
 				"Actions with this trait involve you and your eidolon acting in concert. You can't use a tandem action if either you or your eidolon can't act, if you haven't {@action Manifest Eidolon|SoM|Manifested your Eidolon}, or if you've {@action Manifest Eidolon|SoM|Manifested your Eidolon} in a way where it isn't a separate entity (such as with the {@feat Meld into Eidolon|SoM} feat). Tandem actions often let both you and your eidolon take separate actions, but these must be actions taken separately by you and your eidolon; you can't use a tandem action to take another tandem action."
@@ -5134,15 +5786,12 @@
 		},
 		{
 			"name": "Tattoo",
-			"source": "LOTGB",
-			"page": 135,
-			"entries": [
-				"A type of item that is drawn or cut into a creature's skin and that usually takes the form of images or symbols."
-			]
-		},
-		{
-			"name": "Tattoo",
 			"source": "LOWG",
+			"otherSources": {
+				"Reprinted": [
+					"LOTGB|135"
+				]
+			},
 			"page": 124,
 			"categories": [
 				"Item"
@@ -5189,7 +5838,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This weapon is attached to a length of rope or chain that allows you to retrieve it after it has left your hand. If you have a free hand while wielding this weapon, you can use an {@action Interact} action to pull the weapon back into your grasp after you have thrown it as a ranged attack or after it has been {@action disarm|crb|disarmed} (unless it is being held by another creature)."
@@ -5197,6 +5846,7 @@
 		},
 		{
 			"name": "Thrown",
+			"variable": true,
 			"source": "CRB",
 			"page": 283,
 			"otherSources": {
@@ -5205,7 +5855,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"You can throw this weapon as a ranged attack; it is a ranged weapon when thrown. You add your Strength modifier to damage as you would for a melee weapon. When this trait appears on a melee weapon, it also includes the range increment. Ranged weapons with this trait use the range increment in the weapon's Range entry."
@@ -5261,8 +5911,7 @@
 			"source": "GMG",
 			"page": 254,
 			"categories": [
-				"General",
-				"_settlement"
+				"Settlement"
 			],
 			"entries": [
 				"Settlements with this trait are modest in size, with a level usually ranging from 2\u20134."
@@ -5279,8 +5928,7 @@
 				]
 			},
 			"categories": [
-				"Schools & Traditions",
-				"_school"
+				"School"
 			],
 			"implies": {
 				"spell": {
@@ -5315,7 +5963,7 @@
 				]
 			},
 			"categories": [
-				"General"
+				"Hazard"
 			],
 			"entries": [
 				"A hazard or item with this trait is constructed to hinder interlopers."
@@ -5326,7 +5974,7 @@
 			"source": "CRB",
 			"page": 283,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"You can use this weapon to {@action Trip} with the {@skill Athletics} skill even if you don't have a free hand. This uses the weapon's reach (if different from your own) and adds the weapon's item bonus to attack rolls as an item bonus to the {@skill Athletics} check. If you critically fail a check to Trip using the weapon, you can drop the weapon to take the effects of a failure instead of a critical failure."
@@ -5372,7 +6020,7 @@
 			"source": "CRB",
 			"page": 283,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"These weapons are used as a pair, complementing each other. When you attack with a twin weapon, you add a circumstance bonus to the damage roll equal to the weapon's number of damage dice if you have previously attacked with a different weapon of the same type this turn. The weapons must be of the same type to benefit from this trait, but they don't need to have the same runes."
@@ -5380,7 +6028,11 @@
 		},
 		{
 			"name": "Two-Hand",
+			"alias": [
+				"Two-Handed"
+			],
 			"source": "CRB",
+			"variable": true,
 			"page": 283,
 			"otherSources": {
 				"Reprinted": [
@@ -5388,7 +6040,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This weapon can be wielded with two hands. Doing so changes its weapon damage die to the indicated value. This change applies to all the weapon's damage dice, such as those from {@i striking} runes."
@@ -5399,7 +6051,7 @@
 			"source": "CRB",
 			"page": 283,
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"An unarmed attack uses your body rather than a manufactured weapon. An unarmed attack isn't a weapon, though it's categorized with weapons for weapon groups, and it might have weapon traits. Since it's part of your body, an unarmed attack can't be {@action Disarm|CRB|Disarmed}. It also doesn't take up a hand, though a fist or other grasping appendage generally works like a free-hand weapon."
@@ -5410,7 +6062,7 @@
 			"source": "GMG",
 			"page": 255,
 			"categories": [
-				"General"
+				"Planar"
 			],
 			"entries": [
 				"Planes with this trait loop back on themselves when a creature reaches the plane's \"edge\"."
@@ -5546,6 +6198,7 @@
 		{
 			"name": "Versatile",
 			"source": "CRB",
+			"variable": true,
 			"page": 283,
 			"otherSources": {
 				"Reprinted": [
@@ -5553,7 +6206,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"implies": {
 				"item": {
@@ -5569,14 +6222,25 @@
 			]
 		},
 		{
+			"name": "Social",
+			"source": "APG",
+			"page": 270,
+			"categories": [
+				"Feat"
+			],
+			"entries": [
+				"Actions and abilities with the social trait can be used only while a {@archetype vigilante|APG} is in their social identity."
+			]
+		},
+		{
 			"name": "Vigilante",
 			"source": "APG",
 			"page": 271,
 			"categories": [
-				"General"
+				"Feat"
 			],
 			"entries": [
-				"Using actions and abilities with the vigilante trait while in your social identity risks exposing you as a vigilante."
+				"Using actions and abilities with the vigilante trait while in your social identity risks exposing you as a {@archetype vigilante|APG}."
 			]
 		},
 		{
@@ -5584,8 +6248,7 @@
 			"source": "GMG",
 			"page": 255,
 			"categories": [
-				"General",
-				"_settlement"
+				"Settlement"
 			],
 			"entries": [
 				"Settlements with this trait tend to be small and usually have a level no higher than 1."
@@ -5627,6 +6290,7 @@
 		{
 			"name": "Volley",
 			"source": "CRB",
+			"variable": true,
 			"page": 283,
 			"otherSources": {
 				"Reprinted": [
@@ -5634,7 +6298,7 @@
 				]
 			},
 			"categories": [
-				"Armor & Weapon"
+				"Weapon"
 			],
 			"entries": [
 				"This ranged weapon is less effective at close distances. Your attacks against targets that are at a distance within the range listed take a \u20132 penalty."
@@ -5665,7 +6329,7 @@
 				]
 			},
 			"categories": [
-				"Energy & Elements",
+				"Energy & Element",
 				"Planar"
 			],
 			"entries": [
@@ -5678,17 +6342,6 @@
 						"These planes are mostly liquid. Visitors who can't breathe water or reach an air pocket likely drown. Water magic is enhanced, and {@trait fire} magic is impeded. Creatures with a weakness to water take damage equal to double their weakness at the end of each round."
 					]
 				}
-			]
-		},
-		{
-			"name": "Wayfaring",
-			"source": "LOCG",
-			"page": 135,
-			"categories": [
-				"General"
-			],
-			"entries": [
-				"Wayfaring entities are focused on exploration and discovery."
 			]
 		},
 		{

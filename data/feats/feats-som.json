@@ -28,7 +28,7 @@
 			],
 			"prerequisites": "{@feat Basic Martial Magic|SoM}",
 			"entries": [
-				"You gain one {@filter magus|feats||Class=magus} feat. For the purpose of meeting its prerequisites, your magus level is equal to half your character level."
+				"You gain one {@filter magus|feats||Class=magus|level=[1;10]} feat. For the purpose of meeting its prerequisites, your magus level is equal to half your character level."
 			],
 			"special": [
 				"You can select this feat more than once. Each time you select it, you gain another magus feat."
@@ -49,7 +49,7 @@
 			],
 			"prerequisites": "{@feat Basic Synergy|SoM}",
 			"entries": [
-				"You gain one {@filter summoner|feats||Class=summoner} feat. For the purpose of meeting its prerequisites, your summoner level is equal to half your character level."
+				"You gain one {@filter summoner|feats||Class=summoner|level=[1;10]} feat. For the purpose of meeting its prerequisites, your summoner level is equal to half your character level."
 			],
 			"special": [
 				"You can select this feat more than once. Each time you select it, you gain another summoner feat."
@@ -159,7 +159,7 @@
 			"prerequisites": "{@action Arcane Cascade|SoM}, {@action Spellstrike|SoM}",
 			"frequency": {
 				"unit": "turn",
-				"freq": 1
+				"number": 1
 			},
 			"requirements": "Your most recent action was to {@action Cast a Spell} from a spell slot or make a {@action Spellstrike|SoM} with a spell from a spell slot.",
 			"entries": [
@@ -237,7 +237,7 @@
 			"frequency": {
 				"unit": "minute",
 				"interval": 10,
-				"freq": 1
+				"number": 1
 			},
 			"requirements": "Your previous action was to cast a spell with the {@trait air}, {@trait cold}, {@trait earth}, {@trait fire}, {@trait plant}, or {@trait water} trait",
 			"entries": [
@@ -465,7 +465,7 @@
 			],
 			"prerequisites": "{@feat Elementalist Dedication|SoM}",
 			"entries": [
-				"You enhance your spell with elemental fire, causing it to set the target on fire. If the next action you use is to {@action Cast a Spell||Cast a non-cantrip Spell} that deals damage at a single target, the spell deals additional {@condition persistent damage ||persistent fire damage} equal to the spell level, in addition to its other effects. This has no effect if the spell already deals {@condition persistent damage ||persistent fire damage}. The spell gains the {@trait fire} trait."
+				"You enhance your spell with elemental fire, causing it to set the target on fire. If the next action you use is to {@action Cast a Spell||Cast a non-cantrip Spell} that deals damage at a single target, the spell deals additional {@condition persistent damage||persistent fire damage} equal to the spell level, in addition to its other effects. This has no effect if the spell already deals {@condition persistent damage||persistent fire damage}. The spell gains the {@trait fire} trait."
 			]
 		},
 		{
@@ -504,6 +504,7 @@
 			"name": "Cantrip Expansion",
 			"source": "SoM",
 			"page": 42,
+			"add_hash": "Magus",
 			"level": 2,
 			"traits": [
 				"magus"
@@ -540,7 +541,7 @@
 			],
 			"prerequisites": "{@action Arcane Cascade|SoM}, focus pool",
 			"entries": [
-				"When in {@action Arcane Cascade|SoM}, you can make yourself resistant to magic. You learn the {@spell cascade countermeasure|SoM} conflux spel. Increase the number of Focus Points in your focus pool by 1."
+				"When in {@action Arcane Cascade|SoM}, you can make yourself resistant to magic. You learn the {@spell cascade countermeasure|SoM} conflux spell. Increase the number of Focus Points in your focus pool by 1."
 			]
 		},
 		{
@@ -754,7 +755,7 @@
 			"prerequisites": "{@action Arcane Cascade|SoM}, {@class Magus|SoM|inexorable iron|inexorable iron|SoM} hybrid study, {@action Spellstrike|SoM}",
 			"requirements": "You are in {@action Arcane Cascade|SoM} stance and your {@action Spellstrike|SoM} is charged.",
 			"entries": [
-				"Your {@action Spellstrike|SoM} sweeps are so wide and devastating, they splash onto nearby foes. Make a {@action Spellstrike|SoM}. Foes adjacent to the target take splash damage equal to 2 + the extra damage from {@action Arcane Cascade|SoM}. The damage type is the same as {@action Arcane Cascade|SoM}; if the spell already deals splash damage of the same type, combine the damage together before applying weaknesses or resistances."
+				"Your {@action Spellstrike|SoM} sweeps are so wide and devastating, they splash onto nearby foes. Make a {@action Spellstrike|SoM}. Foes adjacent to the target take {@trait splash} damage equal to 2 + the extra damage from {@action Arcane Cascade|SoM}. The damage type is the same as {@action Arcane Cascade|SoM}; if the spell already deals {@trait splash} damage of the same type, combine the damage together before applying weaknesses or resistances."
 			]
 		},
 		{
@@ -846,7 +847,7 @@
 			"prerequisites": "{@feat Elementalist Dedication|SoM}",
 			"entries": [
 				"You enhance your spell with elemental water, soaking the target. If the next action you use is to {@action Cast a Spell} targeting a single creature, you soak the target of the spell with water.",
-				"If the target has {@condition persistent damage ||persistent acid} or fire damage, the DC to end those conditions is reduced to 10, and the creature can attempt a flat check to end those types of {@condition persistent damage} immediately. The spell gains the {@trait water} trait (causing it to deal extra damage to creatures with weakness to water)."
+				"If the target has {@condition persistent damage||persistent acid} or fire damage, the DC to end those conditions is reduced to 10, and the creature can attempt a flat check to end those types of {@condition persistent damage} immediately. The spell gains the {@trait water} trait (causing it to deal extra damage to creatures with weakness to water)."
 			]
 		},
 		{
@@ -1091,6 +1092,7 @@
 			"name": "Enhanced Familiar",
 			"source": "SoM",
 			"page": 42,
+			"add_hash": "Magus",
 			"level": 2,
 			"traits": [
 				"magus"
@@ -1301,7 +1303,7 @@
 			"prerequisites": "flame order",
 			"frequency": {
 				"unit": "minute",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "An opponent adjacent to you hits you with a melee weapon or a melee unarmed attack.",
 			"entries": [
@@ -1318,7 +1320,7 @@
 			],
 			"prerequisites": "flame order",
 			"entries": [
-				"A lifetime of proximity to flames has inured your lungs and eyes to smoke. You can breathe normally in areas of ash and smoke without risk of suffocation, and you ignore the {@condition concealed} condition from smoke. You need only a successful DC {@flatDC 10} flat check to recover from {@condition persistent damage ||persistent fire damage}, rather than DC 15 (and the DC when receiving particularly effective assistance is 5 instead of 10)."
+				"A lifetime of proximity to flames has inured your lungs and eyes to smoke. You can breathe normally in areas of ash and smoke without risk of suffocation, and you ignore the {@condition concealed} condition from smoke. You need only a successful DC {@flatDC 10} flat check to recover from {@condition persistent damage||persistent fire damage}, rather than DC 15 (and the DC when receiving particularly effective assistance is 5 instead of 10)."
 			]
 		},
 		{
@@ -1446,7 +1448,7 @@
 						"{@bold Mountain} ({@trait earth}) The rugged endurance of the mountain protects you from harm. You gain resistance to physical damage (except adamantine) equal to the spell level for 1 round.",
 						"{@bold Plains} ({@trait plant}) The growing fields and pulsing vitality of the plains provide you vigor. You gain temporary Hit Points equal to the spell level for 1 round.",
 						"{@bold Sky} ({@trait air}) A gust of wind carries you aloft. You can {@action Fly} up to 10 feet. If you're in the air at the end of the turn and don't have a fly Speed, you fall.",
-						"{@bold Swamp} ({@trait plant}) Your magic draws in noxious swamp gas to fumigate your foes. Affected foes take {@condition persistent damage ||persistent poison damage} equal to half the spell's level (minimum 1 damage) with a basic Fortitude save.",
+						"{@bold Swamp} ({@trait plant}) Your magic draws in noxious swamp gas to fumigate your foes. Affected foes take {@condition persistent damage||persistent poison damage} equal to half the spell's level (minimum 1 damage) with a basic Fortitude save.",
 						"{@bold Underground} ({@trait earth}) The endless darkness of the cavern depths opens up its secrets to your senses. For 1 round, you gain {@ability darkvision} as well as imprecise {@ability tremorsense} out to 15 feet."
 					]
 				}
@@ -2209,7 +2211,7 @@
 			"prerequisites": "{@feat Geomancer Dedication|SoM}, legendary in {@skill Nature}",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"requirements": "Your previous action was {@feat Attunement Shift|SoM}.",
 			"entries": [
@@ -2293,7 +2295,7 @@
 			"prerequisites": "{@action Spellstrike|SoM}",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You tap into an arcane trick to recover your ability to meld spells and attacks. You recharge your {@action Spellstrike|SoM}."
@@ -2456,7 +2458,7 @@
 				"skill",
 				"true name"
 			],
-			"prerequisites": "trained in {@skill Intimidation} and at least one of {@skill Arcana}, {@skill Nature}, {@skill Occult}, and {@skill Religion}",
+			"prerequisites": "trained in {@skill Intimidation} and at least one of {@skill Arcana}, {@skill Nature}, {@skill Occultism}, and {@skill Religion}",
 			"entries": [
 				"You attempt to get a creature to do as you wish by threatening them with your knowledge of their true name.",
 				"You must know and speak the creature's true name and say what you want the creature to do. Attempt an {@skill Intimidation} check against the target's Will DC.",
@@ -3005,8 +3007,7 @@
 					],
 					"activity": {
 						"number": 1,
-						"unit": "action",
-						"entry": "{@as 1}"
+						"unit": "action"
 					},
 					"requirements": "If summoning a weapon or shield, you have the hands free to wield it; if summoning armor, you aren't wearing any armor",
 					"entries": [
@@ -3230,7 +3231,7 @@
 			],
 			"prerequisites": "{@action Arcane Cascade|SoM}, {@class Magus|SoM|twisting tree|twisting tree|SoM} hybrid study",
 			"entries": [
-				"You've studied the staff extensively to learn the hidden capabilities of your chosen weapon. When you critically succeed at an attack roll using a staff, you apply the critical specialization effect of the {@group club} group. While you're in {@action Arcane Cascade|SoM} stance, your staff gains the {@trait deadly d6} trait, with the damage from the deadly die being the same damage type as the extra damage from {@action Arcane Cascade|SoM}.",
+				"You've studied the staff extensively to learn the hidden capabilities of your chosen weapon. When you critically succeed at an attack roll using a staff, you apply the critical specialization effect of the {@group club} group. While you're in {@action Arcane Cascade|SoM} stance, your staff gains the {@trait deadly <d6>} trait, with the damage from the deadly die being the same damage type as the extra damage from {@action Arcane Cascade|SoM}.",
 				"In addition, you can place property runes into a magic staff you prepare, even though a magic staff can't typically hold property runes. You must first inscribe the property runes into your spellbook, using the same process as transferring a rune (Core Rulebook 580). The rune takes the form of a specialized diagram in your spellbook, occupying one page. You can't inscribe runes that can't be placed on a non-magical staff, nor can you inscribe the {@item shifting} rune. When you prepare a staff, you can impart any number of property runes from your spellbook into the staff, up to the limit imposed by the staff's {@item weapon potency} rune."
 			]
 		},
@@ -3252,7 +3253,7 @@
 			"prerequisites": "Charisma 14",
 			"entries": [
 				"You've formed a bond with an eidolon, an entity that manifests in a physical body only through its link to your life force. Your bond may be tenuous, but that doesn't make your connection any less special. You gain an {@filter eidolon|companionsfamiliars||Type=Eidolon} as well as the {@action Manifest Eidolon|SoM} activity.",
-				"Due to your tenuous link, you can't gain or use {@trait tandem} actions. Because you don't have {@action Act Together|SOM}, only you or your eidolon can perform an {@trait exploration} activity at one time, so for instance you couldn't both be {@action Search||{@action Search||Searching}} or {@action Investigate||Investigating}.",
+				"Due to your tenuous link, you can't gain or use {@trait tandem} actions. Because you don't have {@action Act Together|SOM}, only you or your eidolon can perform an {@trait exploration} activity at one time, so for instance you couldn't both be {@action Search||Searching}} or {@action Investigate||Investigating}.",
 				"Your eidolon is trained in unarmed attacks and unarmored defense, and shares your proficiency rank for {@skill Perception}, saving throws, and skill checks. Choose an eidolon type. You become trained in your eidolon's listed skills. For each of those skills that you are already trained in, you become trained in a different skill of your choice.",
 				"Your eidolon's initial ability scores are reduced. It starts with a 16 in any ability score listed at 18 for its eidolon array. It otherwise gains the statistics listed for an eidolon of that type.",
 				"At 5th level, the eidolon's ability score that was reduced to 16 increases to 18, before applying ability boosts. At levels 5, 10, 15, and 20, your eidolon also gets four ability boosts, which follow the same rules as yours."
@@ -3328,8 +3329,8 @@
 			"trigger": "You {@action Cast a Spell} using a spell slot.",
 			"requirements": "You're in {@action Arcane Cascade|SoM} stance.",
 			"entries": [
-				"You pull magic into your weapon, using its substance to transform the magic into restorative energy. You regain Hit Points equal to double the spell's level and roll to end any {@condition persistent damage ||persistent negative damage} you have.",
-				"If the spell was of the necromancy school, any {@condition persistent damage ||persistent negative damage} you have ends automatically, and you can change the damage type from {@action Arcane Cascade|SoM} to positive if you wish. (Positive damage typically damages only undead or other creatures with {@ability negative healing}.)."
+				"You pull magic into your weapon, using its substance to transform the magic into restorative energy. You regain Hit Points equal to double the spell's level and roll to end any {@condition persistent damage||persistent negative damage} you have.",
+				"If the spell was of the necromancy school, any {@condition persistent damage||persistent negative damage} you have ends automatically, and you can change the damage type from {@action Arcane Cascade|SoM} to positive if you wish. (Positive damage typically damages only undead or other creatures with {@ability negative healing|b2}.)."
 			]
 		},
 		{
@@ -3369,25 +3370,6 @@
 			]
 		},
 		{
-			"name": "Tattoo Artist",
-			"source": "SoM",
-			"page": 164,
-			"level": 2,
-			"featType": {
-				"skill": [
-					"Crafting"
-				]
-			},
-			"traits": [
-				"general",
-				"skill"
-			],
-			"prerequisites": "trained in {@skill Crafting}",
-			"entries": [
-				"You can craft tattoos, including magical tattoos. When you select this feat, you gain the formulas for four common magical tattoos of 2nd level or lower. You gain a +1 circumstance bonus to {@skill Crafting} checks to {@action Craft} tattoos. If you're a master in {@skill Crafting}, this bonus increases to +2."
-			]
-		},
-		{
 			"name": "Terrain Shield",
 			"source": "SoM",
 			"page": 213,
@@ -3404,7 +3386,7 @@
 			"frequency": {
 				"unit": "minute",
 				"interval": 10,
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "A {@action Strike} would damage you.",
 			"requirements": "You gained a terrain attunement benefit since the start of your most recent turn and that attunement matches the terrain you're in.",
@@ -3549,7 +3531,7 @@
 			"frequency": {
 				"unit": "minute",
 				"interval": 10,
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "An enemy reduces you to 0 HP, an enemy critically hits you, or you critically fail a saving throw against an enemy's effect.",
 			"entries": [
@@ -3598,7 +3580,7 @@
 			"prerequisites": "{@feat Reflective Ripple Stance|SoM}",
 			"frequency": {
 				"unit": "minute",
-				"freq": 1
+				"number": 1
 			},
 			"requirements": "You're in Reflective Ripple Stance.",
 			"entries": [

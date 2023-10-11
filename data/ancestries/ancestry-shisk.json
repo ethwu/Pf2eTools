@@ -121,11 +121,11 @@
 				{
 					"type": "pf2-sidebar",
 					"page": 125,
+					"source": "LOME",
 					"name": "Shisk Enclaves",
-					"entries": [
-						"Most shisks can be found in small communities burrowed into the Barrier Wall, existing in caverns and tunnels that riddle the mountains from peak to base. A few scattered enclaves can be found in the Bandu Hills\u2014the dry and arid region well-suited to shisk tastes. Occasionally, shisk societies burrow deeply enough that they reside within the Mwangi Darklands, while other brave families or individuals seek out the academic haven of Nantambu, hoping to accelerate their education.",
-						"Shisks are almost completely unknown outside of the Mwangi Expanse. A few can be found on the Thuvian side of the Barrier Wall, and at least one shisk is believed to have approached the Citadel of the Alchemist to be accepted as a student. One small and bold enclave is rumored to reside in the Shattered Range near the nation of Nex, hoping to glean secrets from the many powerful wizards who live there."
-					]
+					"reference": {
+						"auto": true
+					}
 				}
 			],
 			"heritageInfo": [
@@ -168,11 +168,11 @@
 							},
 							"frequency": {
 								"unit": "day",
-								"freq": 1
+								"number": 1
 							},
 							"trigger": "You are hit with an unarmed strike or a strike with a non-reach melee weapon.",
 							"entries": [
-								"You break off quills in your attacker's flesh. You deal {@damage 1d8} piercing damage to the triggering creature (basic Reflex save using your class DC or spell DC, whichever is higher.) On a critical failure, the creature also takes {@damage 1d4} {@condition persistent damage||persistent bleed damage} as your quills hook into its flesh. At 3rd level, and every 2 levels thereafter, this damage increases by {@damage 1d8} and the persistent piercing damage increases by 1."
+								"You break off quills in your attacker's flesh. You deal {@damage 1d8} piercing damage to the triggering creature (basic Reflex save using your class DC or spell DC, whichever is higher.) On a critical failure, the creature also takes {@damage 1d4} {@condition persistent damage||persistent bleed damage} as your quills hook into its flesh. At 3rd level, and every 2 levels thereafter, this damage increases by {@damage 1d8} and the {@condition persistent damage||persistent piercing damage} increases by 1."
 							]
 						}
 					]

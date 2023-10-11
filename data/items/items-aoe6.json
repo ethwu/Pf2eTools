@@ -37,13 +37,12 @@
 					"type": "ability",
 					"activity": {
 						"number": 10,
-						"unit": "minute",
-						"entry": "10 minutes"
+						"unit": "minute"
 					},
 					"components": [
-						"(command",
+						"command",
 						"envision",
-						"Interact)"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The Cane of the Maelstrom casts a 5th-level {@spell hallucinatory terrain} spell and infuses the illusion with quasi-real substance drawn from the primal chaos of the Maelstrom. Creatures that don't {@quickref disbelieve the illusion|CRB|2|disbelieving illusions|0} treat structures and terrain created through the spell as though they were real, ascending illusory stairs, becoming trapped by illusory quicksand, and so on. If no creature {@quickref disbelieves the illusion|CRB|2|disbelieving illusions|0} during its duration, the changes become wholly real and permanent when its duration expires."
@@ -53,11 +52,10 @@
 					"type": "ability",
 					"activity": {
 						"number": 1,
-						"unit": "minute",
-						"entry": "1 minute"
+						"unit": "minute"
 					},
 					"components": [
-						"(Interact)"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The Cane of the Maelstrom casts a 5th-level {@spell creation} spell, except the duration is unlimited and you can create delicate or complex objects by succeeding at an applicable {@skill Crafting} skill check when you activate this ability."
@@ -93,7 +91,7 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The Radiant Spark casts a 10th-level {@spell dominate} spell (DC 49) on a creature that isn't from the Material Plane. Celestials get an outcome one degree of success worse than the result of their save."
@@ -121,7 +119,7 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"trigger": "The target critically fails their save against the Radiant Spark's {@spell dominate} spell or you critically succeed at binding the target with the planar binding ritual using the artifact",
 					"entries": [

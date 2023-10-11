@@ -86,7 +86,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You exert your will over a mindless creature within 30 feet. If the target is a mindless creature of 3rd level or lower, it must attempt a DC 20 Will save. If you are a devil, the target uses an outcome one degree of success worse than the result of its saving throw.",
@@ -127,11 +127,17 @@
 					"type": "ability",
 					"activity": {
 						"number": 1,
-						"unit": "varies",
-						"entry": "{@as 1} {@action Interact} (concentrate) Frequency"
+						"unit": "action"
+					},
+					"frequency": {
+						"unit": "hour",
+						"number": 1
 					},
 					"components": [
-						"once per hour"
+						"{@action Interact}"
+					],
+					"traits": [
+						"concentrate"
 					],
 					"entries": [
 						"You play a pounding rhythm on the drum. If the next action you use is to cast a {@filter composition cantrip that has an emanation|spells||Spell Type=cantrip;focus=sand~sand~b1|General=Composition|Area Type=Emanation}, increase the area of the emanation by 30 feet."
@@ -169,10 +175,10 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
-						"By touching a weapon you wield to the symbol and uttering a plea for {@deity Erastil}'s steadying hand, you grant that weapon the deadly d12 trait. Against undead, the weapon instead gains the fatal d12 trait. This blessing lasts for 1 minute, until you score a critical hit with the weapon, or until you aren't wielding the weapon."
+						"By touching a weapon you wield to the symbol and uttering a plea for {@deity Erastil}'s steadying hand, you grant that weapon the {@trait deadly <d12>} trait. Against undead, the weapon instead gains the fatal <d12> trait. This blessing lasts for 1 minute, until you score a critical hit with the weapon, or until you aren't wielding the weapon."
 					]
 				}
 			]
@@ -203,13 +209,13 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
 			"entries": [
 				"After you drink this mutagen, your skin continually renews itself, thickening into large, scaly patches.",
-				"Benefit For 1 minute, you gain fast healing 2 and automatically succeed at flat checks to recover from {@condition persistent damage ||persistent bleed damage}.",
+				"Benefit For 1 minute, you gain fast healing 2 and automatically succeed at flat checks to recover from {@condition persistent damage||persistent bleed damage}.",
 				"Drawback Your thickened skin makes quick movement difficult, and your excess skin flakes off with the slightest movement.",
 				"You take a \u20132 penalty to Reflex saves for 1 minute. Any creature attempting to {@action Track} you in the next 24 hours gains a +4 circumstance bonus to their check."
 			]
@@ -259,10 +265,10 @@
 			"category": "Contract",
 			"entries": [
 				"You negotiate for might and viciousness.",
-				"{@b Benefit} Your successful {@action Strike||Strikes} with slashing and piercing melee weapons deal 1 {@condition persistent damage ||persistent bleed damage}. On a critical success, this {@condition persistent damage ||persistent bleed damage} is equal to half your level.",
+				"{@b Benefit} Your successful {@action Strike||Strikes} with slashing and piercing melee weapons deal 1 {@condition persistent damage||persistent bleed damage}. On a critical success, this {@condition persistent damage||persistent bleed damage} is equal to half your level.",
 				"{@b Payment} You regain half the normal number of Hit Points from resting (including Hit Points gained from long-term rest) and from any application of the {@skill Medicine} skill.",
 				"{@b Hidden Condition} The barbazu owns any weapons you find. No more often than once per month, the barbazu can demand a single weapon of its choice (often the best weapon in your possession). You are compelled to hand over the weapon immediately, without question.",
-				"{@b Termination Clause} The contract guarantees that you will not \"be slain by the barbazu or by barbazu action.\" This wording is vague; if any barbazu kills you, or if you die from {@condition persistent damage ||persistent bleed damage} from any source, the contract is voided."
+				"{@b Termination Clause} The contract guarantees that you will not \"be slain by the barbazu or by barbazu action.\" This wording is vague; if any barbazu kills you, or if you die from {@condition persistent damage||persistent bleed damage} from any source, the contract is voided."
 			],
 			"contract": {
 				"devil": "{@creature barbazu}",
@@ -326,7 +332,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -334,7 +340,6 @@
 				"This complex toxin makes the muscles beneath a creature's skin loose and malleable, which fleshwarpers find useful in their work. Rough or jerky movements the victim performs concentrate the toxin in subdermal muscles and eventually cause skin and muscle to slough away.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 25,
 					"savingThrow": "Fortitude",
 					"onset": "1 round",

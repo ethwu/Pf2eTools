@@ -21,7 +21,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -92,7 +92,7 @@
 				"components": [
 					"envision"
 				],
-				"trigger": "You {@action Shield Block} a melee attack with the affixed shield."
+				"trigger": "You {@feat Shield Block} a melee attack with the affixed shield."
 			},
 			"category": "Talisman",
 			"entries": [
@@ -120,12 +120,12 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Bomb",
 			"entries": [
-				"Blight bombs contain volatile toxic chemicals that rot flesh. A blight bomb deals the listed poison damage, {@condition persistent damage||persistent poison damage}, and splash damage. Many types grant an item bonus to attack rolls."
+				"Blight bombs contain volatile toxic chemicals that rot flesh. A blight bomb deals the listed poison damage, {@condition persistent damage||persistent poison damage}, and {@trait splash} damage. Many types grant an item bonus to attack rolls."
 			],
 			"generic": "G",
 			"variants": [
@@ -137,12 +137,12 @@
 						"amount": 3
 					},
 					"entries": [
-						"The bomb deals {@damage 1d6} poison damage, {@damage 1d4} {@condition persistent damage||persistent poison damage}, and 1 poison splash damage."
+						"The bomb deals {@damage 1d6} poison damage, {@damage 1d4} {@condition persistent damage||persistent poison damage}, and 1 poison {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
 							"replaceTags": true,
-							"with": "A lesser blight bomb deals {@damage 1d6} {@condition persistent damage||persistent poison damage} and 1 poison splash damage."
+							"with": "A lesser blight bomb deals {@damage 1d6} {@condition persistent damage||persistent poison damage} and 1 poison {@trait splash} damage."
 						}
 					}
 				},
@@ -154,12 +154,12 @@
 						"amount": 10
 					},
 					"entries": [
-						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d6} poison damage, {@damage 2d4} {@condition persistent damage ||persistent poison damage}, and 2 poison splash damage."
+						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d6} poison damage, {@damage 2d4} {@condition persistent damage||persistent poison damage}, and 2 poison {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
 							"replaceTags": true,
-							"with": "A moderate blight bomb deals {@damage 2d6} poison damage, {@damage 2d4} {@condition persistent damage ||persistent poison damage}, and 2 poison splash damage. You gain a +1 item bonus to attack rolls."
+							"with": "A moderate blight bomb deals {@damage 2d6} poison damage, {@damage 2d4} {@condition persistent damage||persistent poison damage}, and 2 poison {@trait splash} damage. You gain a +1 item bonus to attack rolls."
 						}
 					}
 				},
@@ -171,12 +171,12 @@
 						"amount": 250
 					},
 					"entries": [
-						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d6} poison damage, {@damage 3d4} {@condition persistent damage ||persistent poison damage}, and 3 poison splash damage."
+						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d6} poison damage, {@damage 3d4} {@condition persistent damage||persistent poison damage}, and 3 poison {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
 							"replaceTags": true,
-							"with": "A greater blight bomb deals {@damage 3d6} poison damage, {@damage 3d4} {@condition persistent damage ||persistent poison damage}, and 3 poison splash damage. You gain a +2 item bonus to attack rolls."
+							"with": "A greater blight bomb deals {@damage 3d6} poison damage, {@damage 3d4} {@condition persistent damage||persistent poison damage}, and 3 poison {@trait splash} damage. You gain a +2 item bonus to attack rolls."
 						}
 					}
 				},
@@ -188,12 +188,12 @@
 						"amount": 2500
 					},
 					"entries": [
-						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 4d6} poison damage, {@damage 4d4} {@condition persistent damage ||persistent poison damage}, and 4 poison splash damage."
+						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 4d6} poison damage, {@damage 4d4} {@condition persistent damage||persistent poison damage}, and 4 poison {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
 							"replaceTags": true,
-							"with": "A major blight bomb deals {@damage 4d6} poison damage, {@damage 4d4} {@condition persistent damage ||persistent poison damage}, and 4 poison splash damage. You gain a +3 item bonus to attack rolls."
+							"with": "A major blight bomb deals {@damage 4d6} poison damage, {@damage 4d4} {@condition persistent damage||persistent poison damage}, and 4 poison {@trait splash} damage. You gain a +3 item bonus to attack rolls."
 						}
 					}
 				}
@@ -201,7 +201,7 @@
 			"_vmod": {
 				"entries": {
 					"mode": "replaceTxt",
-					"replace": "A blight bomb deals the listed poison damage, {@condition persistent damage\\|\\|persistent poison damage}, and splash damage. Many types grant an item bonus to attack rolls."
+					"replace": "A blight bomb deals the listed poison damage, {@condition persistent damage\\|\\|persistent poison damage}, and {@trait splash} damage. Many types grant an item bonus to attack rolls."
 				},
 				"entriesMode": "generic"
 			}
@@ -224,7 +224,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -307,7 +307,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -340,7 +340,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -372,7 +372,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -380,7 +380,6 @@
 				"Made from a carefully distilled blend of serpentine hemotoxins, the fast-acting cerulean scourge is infamous for transforming the blood vessels near the original wound, which glow with a bright blue light before painfully bursting.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": "36",
 					"savingThrow": "Fortitude",
 					"maxDuration": "6 rounds",
@@ -440,13 +439,13 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": "any",
 			"category": "Consumable",
 			"entries": [
-				"This peculiar ammunition is coated in yellow dust that leaves a stain on anything it touches. When activated corrosive ammunition hits a target, it dissolves across the target's armor. The armor takes {@damage 1d8} {@condition persistent damage ||persistent acid damage} that ignores the armor's Hardness; if the target isn't wearing armor, it takes the acid damage instead. This damage occurs at the end of the target's turns.",
+				"This peculiar ammunition is coated in yellow dust that leaves a stain on anything it touches. When activated corrosive ammunition hits a target, it dissolves across the target's armor. The armor takes {@damage 1d8} {@condition persistent damage||persistent acid damage} that ignores the armor's Hardness; if the target isn't wearing armor, it takes the acid damage instead. This damage occurs at the end of the target's turns.",
 				"The creature can end this effect by spending an {@action Interact} action to wipe off the corrosive dust, and otherwise the effect ends once the armor becomes {@condition broken}."
 			]
 		},
@@ -471,12 +470,12 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Bomb",
 			"entries": [
-				"This flask holds a pressurized red-brown gas flecked with bits of sublimated crystal. You gain the listed item bonus to attack rolls. When the bomb explodes, it deals the listed piercing damage and piercing splash damage as the mixture suddenly turns into solid crystals flying at high speeds.",
+				"This flask holds a pressurized red-brown gas flecked with bits of sublimated crystal. You gain the listed item bonus to attack rolls. When the bomb explodes, it deals the listed piercing damage and piercing {@trait splash} damage as the mixture suddenly turns into solid crystals flying at high speeds.",
 				"Surfaces in the splash area grow brittle, gleaming red crystals that crumble to dust after 1 minute. The crystals on level surfaces are caltrops (Core Rulebook 287). The crystals on vertical surfaces can be used briefly as handholds, granting the listed item bonus to the next {@skill Athletics} check to {@action Climb} each space. The crystals in each space crumble after the creature leaves, whether Climbing or moving through the caltrops."
 			],
 			"generic": "G",
@@ -489,7 +488,7 @@
 						"amount": 16
 					},
 					"entries": [
-						"The item bonus is +1. The bomb deals {@damage 2d4} piercing damage and 4 piercing splash damage."
+						"The item bonus is +1. The bomb deals {@damage 2d4} piercing damage and 4 piercing {@trait splash} damage."
 					]
 				},
 				{
@@ -500,7 +499,7 @@
 						"amount": 350
 					},
 					"entries": [
-						"The item bonus is +2. The bomb deals {@damage 3d4} piercing damage and 5 piercing splash damage."
+						"The item bonus is +2. The bomb deals {@damage 3d4} piercing damage and 5 piercing {@trait splash} damage."
 					]
 				},
 				{
@@ -511,7 +510,7 @@
 						"amount": 4000
 					},
 					"entries": [
-						"The item bonus is +3. The bomb deals {@damage 4d4} piercing damage and 6 piercing splash damage."
+						"The item bonus is +3. The bomb deals {@damage 4d4} piercing damage and 6 piercing {@trait splash} damage."
 					]
 				}
 			]
@@ -554,7 +553,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -678,12 +677,12 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Bomb",
 			"entries": [
-				"This flask is filled with a murky purple gas that briefly interferes with normal brain activity. A dread ampoule deals the listed mental damage and mental splash damage.",
+				"This flask is filled with a murky purple gas that briefly interferes with normal brain activity. A dread ampoule deals the listed mental damage and mental {@trait splash} damage.",
 				"On a hit, the target becomes {@condition frightened|CRB|frightened 1}, or {@condition frightened|CRB|frightened 2} on a critical hit. Many types also grant an item bonus to attack rolls."
 			],
 			"generic": "G",
@@ -696,7 +695,7 @@
 						"amount": 3
 					},
 					"entries": [
-						"The bomb deals {@damage 1d6} mental damage and 1 mental splash damage."
+						"The bomb deals {@damage 1d6} mental damage and 1 mental {@trait splash} damage."
 					]
 				},
 				{
@@ -707,7 +706,7 @@
 						"amount": 10
 					},
 					"entries": [
-						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d6} mental damage and 2 mental splash damage."
+						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d6} mental damage and 2 mental {@trait splash} damage."
 					]
 				},
 				{
@@ -718,7 +717,7 @@
 						"amount": 300
 					},
 					"entries": [
-						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d6} mental damage and 3 mental splash damage."
+						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d6} mental damage and 3 mental {@trait splash} damage."
 					]
 				},
 				{
@@ -729,7 +728,7 @@
 						"amount": 3000
 					},
 					"entries": [
-						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 4d6} mental damage and 4 mental splash damage."
+						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 4d6} mental damage and 4 mental {@trait splash} damage."
 					]
 				}
 			]
@@ -769,7 +768,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -830,11 +829,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You {@action Burrow} through dirt and stone up to your land Speed, leaving no tunnels or signs of your passing. If you end your movement inside solid stone, you are forcibly expelled into the nearest open area, taking {@damage 1d6} bludgeoning damage for every 5 feet between the end of your movement and the open area."
@@ -868,16 +867,15 @@
 					"type": "ability",
 					"activity": {
 						"number": 1,
-						"unit": "minute",
-						"entry": "1 minute"
+						"unit": "minute"
 					},
 					"components": [
-						"(envision",
-						"Interact)"
+						"envision",
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You hold the box closed and, while envisioning the earth around you, turn the box clockwise three times and then give it three slow shakes. When you open the box, the sand has arranged itself to replicate, in miniature, the stone terrain surrounding you, to a range of 60 feet. This shows details of paths; hills; embankments; boulders; and even artificial structures like walls, ditches, and tunnels, as long as they're made of stone and earth.",
@@ -944,11 +942,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You lose the ability to produce language and instead communicate wordlessly through a series of psychic projections. This acts as telepathy with a range of 100 feet, but it is understandable to all creatures regardless of whether they have a language. When communicating with non-aeons, however, your meaning is often vague and mysterious. This effect lasts for 10 minutes."
@@ -982,7 +980,7 @@
 						"unit": "free"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"trigger": "The exploding shield is destroyed",
 					"entries": [
@@ -1075,11 +1073,11 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You {@action Stride} (or {@action Burrow} or {@action Fly}, if you have the corresponding Speed) into any fire large enough to contain you, including magical fires. You vanish into the fire and take no damage from it. You can sense all sufficiently large fires within 100 feet of where you vanish, and you reemerge from any of those fires, either within the fire or adjacent to it. If you end your movement in the fire, it affects you as normal."
@@ -1129,7 +1127,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -1207,7 +1205,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -1246,7 +1244,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You twist the gem along the blade corresponding with the desired weapon rune: red for flaming, blue for frost, or yellow for shock. You take {@dice 1d6} damage of the type the chosen rune deals. You can instead twist the black gem to disable the active property rune, taking no damage."
@@ -1276,7 +1274,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": "any",
@@ -1310,7 +1308,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -1339,12 +1337,12 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Bomb",
 			"entries": [
-				"These spring-loaded metal canisters contain a mixture of chemicals and salts that drain and disintegrate nearby undead creatures. A ghost charge deals the listed positive damage and splash damage, though as usual for positive damage, this damage harms only undead and creatures with negative healing. Ghost charges are designed to explode even on contact with a spiritual substance, making them ideal for damaging incorporeal undead. A primary target that takes damage from a ghost charge becomes {@condition enfeebled} until the start of your next turn. Many types grant an item bonus to attack rolls."
+				"These spring-loaded metal canisters contain a mixture of chemicals and salts that drain and disintegrate nearby undead creatures. A ghost charge deals the listed positive damage and {@trait splash} damage, though as usual for positive damage, this damage harms only undead and creatures with negative healing. Ghost charges are designed to explode even on contact with a spiritual substance, making them ideal for damaging incorporeal undead. A primary target that takes damage from a ghost charge becomes {@condition enfeebled} until the start of your next turn. Many types grant an item bonus to attack rolls."
 			],
 			"generic": "G",
 			"variants": [
@@ -1356,7 +1354,7 @@
 						"amount": 3
 					},
 					"entries": [
-						"The bomb deals {@damage 1d8} positive damage and 1 positive splash damage, and the target is {@condition enfeebled|CRB|enfeebled 1} until the start of your next turn."
+						"The bomb deals {@damage 1d8} positive damage and 1 positive {@trait splash} damage, and the target is {@condition enfeebled|CRB|enfeebled 1} until the start of your next turn."
 					]
 				},
 				{
@@ -1367,7 +1365,7 @@
 						"amount": 10
 					},
 					"entries": [
-						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d8} positive damage and 2 positive splash damage, and the target is {@condition enfeebled|CRB|enfeebled 1} until the start of your next turn."
+						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d8} positive damage and 2 positive {@trait splash} damage, and the target is {@condition enfeebled|CRB|enfeebled 1} until the start of your next turn."
 					]
 				},
 				{
@@ -1378,7 +1376,7 @@
 						"amount": 250
 					},
 					"entries": [
-						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d8} positive damage and 3 positive splash damage, and the target is {@condition enfeebled|CRB|enfeebled 2} until the start of your next turn."
+						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d8} positive damage and 3 positive {@trait splash} damage, and the target is {@condition enfeebled|CRB|enfeebled 2} until the start of your next turn."
 					]
 				},
 				{
@@ -1389,7 +1387,7 @@
 						"amount": 2500
 					},
 					"entries": [
-						"The bomb deals {@damage 4d8} positive damage and 4 positive splash damage, and the target is {@condition enfeebled|CRB|enfeebled 2} until the start of your next turn."
+						"The bomb deals {@damage 4d8} positive damage and 4 positive {@trait splash} damage, and the target is {@condition enfeebled|CRB|enfeebled 2} until the start of your next turn."
 					]
 				}
 			]
@@ -1446,7 +1444,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "You {@action Feint}",
 					"requirements": "You have the glamorous buckler raised",
@@ -1484,11 +1482,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"{@action Stride}. Each square you move through during your {@action Stride} is scorched with hellish flames, becoming hazardous terrain for 1 minute. A creature that moves through one of these spaces takes {@damage 3d6} fire damage."
@@ -1519,7 +1517,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -1553,7 +1551,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You twist the sword cane's hilt, magically merging the blade into the cane. While the blade is merged, it can't be drawn and gains the benefits of a 3rd-level {@spell magic aura} spell to appear non-magical. Passive observers can't attempt a check to notice the cane is anything more than a mundane, if superb, fashion accessory. Those carefully examining it can discern the cane is more than it appears, but doing so is extremely difficult (DC 30 {@skill Perception})",
@@ -1586,7 +1584,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -1594,10 +1592,9 @@
 				"Once injected, this synthetic toxin sinks into the extremities, numbing them nearly to paralysis.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": "20",
 					"savingThrow": "Fortitude",
-					"maxDuration": "6\nrounds",
+					"maxDuration": "6 rounds",
 					"stages": [
 						{
 							"stage": 1,
@@ -1647,11 +1644,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You grasp the hands of a willing creature you have strong positive feelings about, regardless of the nature of those feelings.",
@@ -1686,11 +1683,11 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The mask emits a soul-chilling scream that deals {@damage 6d10} negative damage to each living creature in a 20-foot emanation (DC 25 basic Fortitude save)."
@@ -1742,11 +1739,14 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact (visual)"
+						"{@action Interact}"
+					],
+					"traits": [
+						"visual"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You reveal the medusa's face, focusing its gaze on one creature within 30 feet. The shield casts flesh to stone with a range of 30 feet."
@@ -1848,7 +1848,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -1904,7 +1904,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -1934,7 +1934,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -2020,7 +2020,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -2075,7 +2075,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -2138,7 +2138,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -2210,7 +2210,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -2238,7 +2238,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -2329,7 +2329,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -2364,10 +2364,10 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
-						"You rub your thumb on one side of the coin with the intent of slightly tweaking the strands of fate, then flip the coin into the air in a coin toss. No matter how the toss is resolved\u2014 letting the coin fall to the ground, slapping it down on the back of your hand, or catching it on your open palm\u2014it always lands with the side you rubbed face up."
+						"You rub your thumb on one side of the coin with the intent of slightly tweaking the strands of fate, then flip the coin into the air in a coin toss. No matter how the toss is resolved\u2014letting the coin fall to the ground, slapping it down on the back of your hand, or catching it on your open palm\u2014it always lands with the side you rubbed face up."
 					]
 				}
 			]
@@ -2392,7 +2392,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -2493,7 +2493,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You touch the rod to a {@trait magical} effect or magic item and attempt to counteract the effect or item.",
@@ -2526,11 +2526,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You hold one end of the rope and point to a destination.",
@@ -2597,7 +2597,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -2626,7 +2626,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -2709,7 +2709,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You {@action Administer First Aid} without requiring healer's tools. You either gain a +2 item bonus to the {@skill Medicine} check, or you can use the skinstitch salve's {@skill Medicine} modifier of +13 instead of your own."
@@ -2722,7 +2722,7 @@
 						"unit": "free"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"trigger": "You {@action Treat Wounds} or use Battle",
 					"entries": [
@@ -2759,7 +2759,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You use a piece of chalk to write up to 25 words on a slate. As you write, the writing also appears on the other slate in its matched pair, no matter how far away it is, as long as it is on the same plane. Wiping one slate clean erases the writing from both slates. Each slate can be activated once per hour."
@@ -2896,7 +2896,7 @@
 			"bulk": 2,
 			"category": "Held",
 			"entries": [
-				"This +1 striking ghost touch crossbow has an array of crystalline lenses and silver fittings along the stock and feels strangely light.",
+				"This +1 striking {@item ghost touch} crossbow has an array of crystalline lenses and silver fittings along the stock and feels strangely light.",
 				{
 					"type": "ability",
 					"activity": {
@@ -2908,7 +2908,7 @@
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You aim through the crossbow's crystalline lenses, gaining imprecise vision onto the Ethereal Plane with a range of 60 feet in addition to your normal senses for the rest of your turn. While this effect lasts, your next {@action Strike} with the spiritsight crossbow can also affect targets on the Ethereal Plane during the first 60 feet of its flight."
@@ -3235,7 +3235,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": "any",
@@ -3277,16 +3277,13 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
 			"entries": [
-				"This purple potion has a bitter taste and seems to blur with motion. When you drink a time shield potion, you are frozen in time for {@dice 2d4} rounds. You can't act or be targeted, you become immune to all effects, and you vanish from your space; as far as the universe is concerned, you simply don't exist as long as the potion lasts. The durations of {@trait any} effects targeting you when you drink the potion are suspended until it wears off.",
-				"Once the potion's duration expires, you return to the normal flow of time and your former space; if that space is now occupied, you get shunted to the nearest unoccupied space.",
-				"Effects with durations immediately resume affecting you, elapsing as though no time has passed. If you are within the area of an effect created while you were outside of time, you immediately take those effects upon returning. The GM might determine that other changes that occurred while you were outside of time (such as the ground beneath you crumbling) also affect you upon your return.",
-				"Permanent Magic Items and Runes These peculiar or awe-inspiring magic items might be the spoils of bold adventures or the creations of diligent research and toil in a crafter's workshop. As permanent items, they can be used repeatedly over an adventurer's career. You can find these permanent items organized by level and subcategory on the treasure tables on pages 250\u2013251.",
-				"Full rules for special types of items, such as staves and wands, are in the Core Rulebook, and the page numbers where they appear can be found in the glossary and index, starting on page 266 of this book."
+				"This purple potion has a bitter taste and seems to blur with motion. When you drink a time shield potion, you are frozen in time for {@dice 2d4} rounds. You can't act or be targeted, you become immune to all effects, and you vanish from your space; as far as the universe is concerned, you simply don't exist as long as the potion lasts. The durations of any effects targeting you when you drink the potion are suspended until it wears off.",
+				"Once the potion's duration expires, you return to the normal flow of time and your former space; if that space is now occupied, you get shunted to the nearest unoccupied space. Effects with durations immediately resume affecting you, elapsing as though no time has passed. If you are within the area of an effect created while you were outside of time, you immediately take those effects upon returning. The GM might determine that other changes that occurred while you were outside of time (such as the ground beneath you crumbling) also affect you upon your return."
 			]
 		},
 		{
@@ -3311,7 +3308,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -3338,7 +3335,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -3425,11 +3422,14 @@
 					},
 					"components": [
 						"envision",
-						"Interact (attack)"
+						"{@action Interact}"
+					],
+					"traits": [
+						"attack"
 					],
 					"frequency": {
 						"unit": "round",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The urn shoots a bolt of negative energy at a foe within 30 feet. Attempt a spell attack roll against the target's AC, using a modifier of +15 or your own spell attack roll modifier, whichever is higher. On a success, the bolt deals {@damage 4d4} negative damage (doubled on a critical success)."
@@ -3476,24 +3476,24 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You touch one of the tabard's four fields representing one of your victories and recall your triumph over that creature. That creature vanishes from the tabard, and for 1 minute, you gain resistance 5 to a damage type based on the creature's trait (you gain resistance to only one type, even if the creature has more than one trait that could apply):",
 						{
 							"type": "list",
 							"items": [
-								"{@bold Aberration or} Fey mental",
-								"Celestial good",
-								"Construct poison",
-								"{@bold Dragon or} Elemental one energy type that matches one of the dragon's or elemental's traits",
-								"Fiend evil",
-								"Ooze precision, and the resistance is 10",
-								"Undead negative"
+								"{@bold Aberration or Fey} mental",
+								"{@b Celestial} good",
+								"{@b Construct} poison",
+								"{@bold Dragon or Elemental} one energy type that matches one of the dragon's or elemental's traits",
+								"{@b Fiend} evil",
+								"{@b Ooze} precision, and the resistance is 10",
+								"{@b Undead} negative"
 							]
 						}
 					]
@@ -3570,7 +3570,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1,
+						"number": 1,
 						"overcharge": true
 					},
 					"entries": [
@@ -3644,7 +3644,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1,
+						"number": 1,
 						"overcharge": true
 					},
 					"entries": [
@@ -3702,7 +3702,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1,
+						"number": 1,
 						"overcharge": true
 					},
 					"entries": [
@@ -3795,11 +3795,11 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1,
+						"number": 1,
 						"overcharge": true
 					},
 					"entries": [
-						"You cast {@spell cone of cold}. The ground within the spell's area is swathed in deep snow, becoming difficult terrain for 1 minute."
+						"You cast {@spell cone of cold}. The ground within the spell's area is swathed in deep snow, becoming {@quickref difficult terrain||3|terrain} for 1 minute."
 					]
 				}
 			],
@@ -3852,7 +3852,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1,
+						"number": 1,
 						"overcharge": true
 					},
 					"entries": [
@@ -3881,7 +3881,7 @@
 						"amount": 1400
 					},
 					"entries": [
-						"The strands deal {@damage 2d6} poison damage plus {@damage 1d6} {@condition persistent damage ||persistent poison damage}."
+						"The strands deal {@damage 2d6} poison damage plus {@damage 1d6} {@condition persistent damage||persistent poison damage}."
 					],
 					"variantType": "4th-level spell"
 				}
@@ -3912,11 +3912,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You trace the rune on the front of the breastplate and the armor's ephemeral wings grow tangible, granting you a fly Speed of 25 feet or your land Speed, whichever is slower. This effect lasts for 5 minutes or until you {@action Dismiss} it. Once the effect ends, the wings disappear completely, reappearing in their ephemeral form 1 hour later."

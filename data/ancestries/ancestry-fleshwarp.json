@@ -128,16 +128,18 @@
 				},
 				{
 					"type": "pf2-h2",
+					"source": "LOAG",
 					"page": 89,
 					"name": "Fleshwarps on Golarion",
 					"entries": [
 						{
 							"type": "pf2-sidebar",
 							"page": 91,
+							"source": "LOAG",
 							"name": "Fleshwarp Settlements",
-							"entries": [
-								"No settlements consisting entirely of fleshwarps exist openly outside of the Mana Wastes; elsewhere, citizens keep the secret so well that their community's existence isn't known to the world at large. Fleshwarps are more likely to live on the fringes of other settlements, working in industries where their hardy constitution is an advantage and their uncanny appearance isn't a liability. Some are herbalists or trappers, working in the wilderness and interacting with others only rarely. Locals might come to consider a fleshwarp their equal or friend, and take umbrage at outsiders who make a big deal out of the \"monster\" in their midst. Sentiment might turn quickly upon supernatural events or strange attacks, however, and, tragically, more than a few fleshwarps have been turned out of homes they've occupied for decades when faced with a misguided mob."
-							]
+							"reference": {
+								"auto": true
+							}
 						},
 						"The eldritch magic and aberrant alchemy used to create fleshwarps are rare but not unique. A number of different organizations and effects in Golarion produce fleshwarps, and one of a fleshwarp's most important aspects\u2014beyond appearance or attitude\u2014is their origin, which influences both their form and their attitude toward the world.",
 						"Fleshwarps fall into two major groups: those born a member of a different ancestry and transformed into a fleshwarp or those born as a fleshwarp, knowing no other existence. The former sometimes hide their new forms, seeking shelter among their prior society with those open-minded enough to shield them from the less understanding\u2014though unfortunately, there are no guarantees that their friends and family members will be protectors, rather than persecutors. These fleshwarps know best how to blend into their erstwhile societies and might go undiscovered for a long period of time. Fleshwarps born into their warped forms generally have a more difficult upbringing and were likely often forced to fend for themselves, particularly if rejected by parents who considered their form blasphemous or ill-fated. They're likely to accept their own bodies, as they've never known another.",
@@ -148,9 +150,38 @@
 							"reference": {
 								"auto": true
 							},
-							"name": "Fleshwarp Origins",
-							"entries": []
+							"name": "Fleshwarp Origins"
 						}
+					]
+				},
+				{
+					"type": "entriesOtherSource",
+					"source": "LOIL",
+					"page": 28,
+					"reference": {
+						"index": 3,
+						"entry": "the rest"
+					},
+					"entries": [
+						{
+							"type": "pf2-sidebar",
+							"source": "LOIL",
+							"page": 29,
+							"name": "The Mana Wastes",
+							"reference": {
+								"auto": true
+							}
+						},
+						{
+							"type": "pf2-sidebar",
+							"source": "LOIL",
+							"page": 29,
+							"name": "Fleshforges",
+							"reference": {
+								"auto": true
+							}
+						},
+						"Beyond their transformations, little binds these people into a shared identity: some, especially those who experience their corporeal changes later in life, reject identifying as fleshwarps and cling to the ancestries of their birth, while others, often those who were born into these states of transfiguration, are more accepting of the fleshwarp identity. Adding to these disparate origins, scant uniformity exists for fleshwarps' physical features, except for those literally built to certain designs. One fleshwarp might have limbs swathed in brilliantly plumed patagia to glide on the surge winds. Another fleshwarp might look like the rest of their battle batch, their prodigious frame crisscrossed symmetrically with thousands of tiny hook quills to facilitate rigging armored plates."
 					]
 				}
 			],
@@ -192,6 +223,33 @@
 					"page": 91,
 					"entries": [
 						"Your transformation is due to manipulation by advanced technology, like that found in Numeria. Your emotions are dulled and hard to influence. When you roll a success on a saving throw against an {@trait emotion} effect, you get a critical success instead."
+					]
+				},
+				{
+					"name": "Cataphract Fleshwarp",
+					"shortName": "Cataphract",
+					"source": "LOIL",
+					"page": 28,
+					"entries": [
+						"Your battle-hardened skeleton is laced with additional cartilage and muscle to help bear armor across vast areas of operation, and your skin is bedecked with tiny spurs of pliable, resilient keratin to optimize the grip and weight distribution of your armor. You gain the {@feat Armor Proficiency} feat. If your class makes you trained in all types of armor, you instead become trained in {@skill Athletics} (or a skill of your choice if you're already trained in {@skill Athletics}) and gain the {@feat Armor Assist|APG} skill feat."
+					]
+				},
+				{
+					"name": "Discarded Fleshwarp",
+					"shortName": "Discarded",
+					"source": "LOIL",
+					"page": 28,
+					"entries": [
+						"The biomancers and mutagenists who warped your form labeled you a \"discard on discovery\"\u2014a euphemism for destroying you on sight. An anomaly among anomalies, your body stubbornly repudiates the efforts of fleshcrafters seeking to mold you to their grandiose visions, and your immune responses blunt the worst effects of unwanted fleshwarping attempts. If you roll a success on a saving throw against a {@trait transmutation} effect, you get a critical success instead."
+					]
+				},
+				{
+					"name": "Surgewise Fleshwarp",
+					"shortName": "Surgewise",
+					"source": "LOIL",
+					"page": 28,
+					"entries": [
+						"The undulations of your body's cilia are hyper-attuned to wellsprings of magic; they trill and thrum with insights into occult energies, and their vibrations alert you to the presence of secrets. You gain the trained proficiency rank in {@skill Occultism}. If you're trained in {@skill Occultism}, you instead become trained in another skill of your choice. You also gain the {@feat Oddity Identification} skill feat."
 					]
 				}
 			],

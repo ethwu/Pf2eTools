@@ -26,7 +26,7 @@
 			},
 			"category": "Bomb",
 			"entries": [
-				"This flask filled with corrosive acid deals 1 acid damage, the listed {@condition persistent damage||persistent acid damage}, and the listed acid splash damage. Many types grant an item bonus to attack rolls."
+				"This flask filled with corrosive acid deals 1 acid damage, the listed {@condition persistent damage||persistent acid damage}, and the listed acid {@trait splash} damage. Many types grant an item bonus to attack rolls."
 			],
 			"generic": "G",
 			"variants": [
@@ -39,12 +39,12 @@
 						"amount": 3
 					},
 					"entries": [
-						"It deals {@damage 1d6} {@condition persistent damage||persistent acid damage} and 1 acid splash damage."
+						"It deals {@damage 1d6} {@condition persistent damage||persistent acid damage} and 1 acid {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
 							"replaceTags": true,
-							"with": "{@damage 1d6} {@condition persistent damage||persistent acid damage} and 1 acid splash damage."
+							"with": "{@damage 1d6} {@condition persistent damage||persistent acid damage} and 1 acid {@trait splash} damage."
 						}
 					}
 				},
@@ -56,12 +56,12 @@
 						"amount": 10
 					},
 					"entries": [
-						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d6} {@condition persistent damage||persistent acid damage} and 2 acid splash damage."
+						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d6} {@condition persistent damage||persistent acid damage} and 2 acid {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
 							"replaceTags": true,
-							"with": "{@damage 2d6} {@condition persistent damage||persistent acid damage} and 2 acid splash damage. You gain a +1 item bonus to attack rolls."
+							"with": "{@damage 2d6} {@condition persistent damage||persistent acid damage} and 2 acid {@trait splash} damage. You gain a +1 item bonus to attack rolls."
 						}
 					}
 				},
@@ -73,12 +73,12 @@
 						"amount": 250
 					},
 					"entries": [
-						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d6} {@condition persistent damage||persistent acid damage} and 3 acid splash damage."
+						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d6} {@condition persistent damage||persistent acid damage} and 3 acid {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
 							"replaceTags": true,
-							"with": "{@damage 3d6} {@condition persistent damage||persistent acid damage} and 3 acid splash damage. You gain a +2 item bonus to attack rolls."
+							"with": "{@damage 3d6} {@condition persistent damage||persistent acid damage} and 3 acid {@trait splash} damage. You gain a +2 item bonus to attack rolls."
 						}
 					}
 				},
@@ -90,12 +90,12 @@
 						"amount": 2500
 					},
 					"entries": [
-						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 4d6} {@condition persistent damage||persistent acid damage} and 4 acid splash damage."
+						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 4d6} {@condition persistent damage||persistent acid damage} and 4 acid {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
 							"replaceTags": true,
-							"with": "{@damage 4d6} {@condition persistent damage||persistent acid damage} and 4 acid splash damage. You gain a +3 item bonus to attack rolls."
+							"with": "{@damage 4d6} {@condition persistent damage||persistent acid damage} and 4 acid {@trait splash} damage. You gain a +3 item bonus to attack rolls."
 						}
 					}
 				}
@@ -103,7 +103,7 @@
 			"_vmod": {
 				"entries": {
 					"mode": "replaceTxt",
-					"replace": "the listed {@condition persistent damage\\|\\|persistent acid damage}, and the listed acid splash damage\\. Many types grant an item bonus to attack rolls\\."
+					"replace": "the listed {@condition persistent damage\\|\\|persistent acid damage}, and the listed acid {@trait splash} damage\\. Many types grant an item bonus to attack rolls\\."
 				},
 				"entriesMode": "generic"
 			}
@@ -272,7 +272,7 @@
 			],
 			"usage": "worn armor",
 			"bulk": "varies by armor",
-			"category": "Armor",
+			"category": "Material",
 			"entries": [
 				"Adamantine armor has a shiny, black appearance and is amazingly durable."
 			],
@@ -316,8 +316,7 @@
 				"uncommon"
 			],
 			"usage": "varies by shield",
-			"category": "Shield",
-			"group": "Shield",
+			"category": "Material",
 			"entries": [
 				"Adamantine shields are particularly sturdy, and when used for a shield bash, they are adamantine weapons."
 			],
@@ -410,7 +409,7 @@
 			],
 			"usage": "varies by weapon",
 			"bulk": "varies by weapon",
-			"category": "Weapon",
+			"category": "Material",
 			"entries": [
 				"Adamantine weapons have a shiny black appearance and cut through lesser items with ease. They treat any object they hit as if it had half as much Hardness as usual, unless the object's Hardness is greater than that of the adamantine weapon."
 			],
@@ -479,6 +478,7 @@
 				"transmutation"
 			],
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"Over millennia, these mysterious, intricately cut gemstones have been hoarded by mystics and fanatics hoping to discover their secrets. Despite their myriad forms and functions, these stones are purportedly all fragments of crystal tools used by otherworldly entities to construct the universe in primeval times.",
@@ -605,7 +605,6 @@
 					"page": 121,
 					"entries": [
 						"This aeon stone allows you to cast 2nd-level {@spell augury} as a divine innate spell once per day.",
-						"Secrets of the Pathfinder Society Whether stored in the vaults of the Grand Lodge, {@condition hidden} in the minds of various agents, or lost to time from the {@skill Society}'s ancient past, the Pathfinder Society is rife with secrets. Some take the form of unusual magic items; others are spells or special techniques. Agents who discover and use these secrets gain an edge that can help them as they undertake {@skill Society} missions. All characters affiliated with the Pathfinder Society have access to the uncommon options in this section.",
 						"The resonant power causes the {@spell augury} spell from the aeon stone to always succeed at the DC {@flatDC 6} flat check to give an answer other than \"nothing.\""
 					]
 				},
@@ -654,7 +653,7 @@
 					"entries": [
 						"The first time each day you die, your vital and spiritual essences mingle together and reside within this aeon stone.",
 						"You have a limited sense of how many life forces are currently within 30 feet of the stone, which you can potentially use to determine when it's safe to call on the stone's power. At any time within the next hour after your body died, you can spend 1 minute concentrating in order to return to your body.",
-						"As long as your body is still intact, you are no longer dead\u2014 you are restored to 1 HP with the {@condition doomed 3} and {@condition wounded 3} conditions. You can benefit from the effects of only one pale orange rhomboid aeon stone in a given day.",
+						"As long as your body is still intact, you are no longer dead\u2014you are restored to 1 HP with the {@condition doomed 3} and {@condition wounded 3} conditions. You can benefit from the effects of only one pale orange rhomboid aeon stone in a given day.",
 						"The resonant power allows you to wait more than an hour to return to your body with the aeon stone; as long as the wayfinder remains on the body, your body doesn't decay and you can return at any point."
 					]
 				},
@@ -669,7 +668,7 @@
 					"source": "LOPSG",
 					"page": 121,
 					"entries": [
-						"While invested, this aeon stone grants the benefit of the ghost touch property rune to your weapons and unarmed attacks.",
+						"While invested, this aeon stone grants the benefit of the {@item ghost touch} property rune to your weapons and unarmed attacks.",
 						"The resonant power grants a special activation.",
 						"{@b Activate} {@as 1} envision; {@b Frequency} once per minute; {@b Effect} You gain the effects of see invisibility for 1 round."
 					]
@@ -757,6 +756,7 @@
 				"transmutation"
 			],
 			"usage": "worn eyepiece",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"These brass goggles are engraved with flame patterns and have thick, heavy lenses. While worn, they give you a +1 item bonus to {@skill Crafting} checks to {@action Craft} alchemical items and a +1 item bonus to attack rolls with alchemical bombs. You can also ignore lesser cover when making {@action Strike||Strikes} with alchemical bombs."
@@ -839,12 +839,12 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Bomb",
 			"entries": [
-				"Alchemist's fire is a combination of volatile liquids that ignite when exposed to air. Alchemist's fire deals the listed fire damage, {@condition persistent damage||persistent fire damage}, and splash damage. Many types grant an item bonus to attack rolls."
+				"Alchemist's fire is a combination of volatile liquids that ignite when exposed to air. Alchemist's fire deals the listed fire damage, {@condition persistent damage||persistent fire damage}, and {@trait splash} damage. Many types grant an item bonus to attack rolls."
 			],
 			"generic": "G",
 			"variants": [
@@ -857,7 +857,7 @@
 						"amount": 3
 					},
 					"entries": [
-						"The bomb deals {@damage 1d8} fire damage, 1 {@condition persistent damage||persistent fire damage}, and 1 fire splash damage."
+						"The bomb deals {@damage 1d8} fire damage, 1 {@condition persistent damage||persistent fire damage}, and 1 fire {@trait splash} damage."
 					]
 				},
 				{
@@ -868,7 +868,7 @@
 						"amount": 10
 					},
 					"entries": [
-						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d8} fire damage, 2 {@condition persistent damage||persistent fire damage}, and 2 fire splash damage."
+						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d8} fire damage, 2 {@condition persistent damage||persistent fire damage}, and 2 fire {@trait splash} damage."
 					]
 				},
 				{
@@ -879,7 +879,7 @@
 						"amount": 250
 					},
 					"entries": [
-						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d8} fire damage, 3 {@condition persistent damage||persistent fire damage}, and 3 fire splash damage."
+						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d8} fire damage, 3 {@condition persistent damage||persistent fire damage}, and 3 fire {@trait splash} damage."
 					]
 				},
 				{
@@ -890,7 +890,7 @@
 						"amount": 2500
 					},
 					"entries": [
-						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 4d8} fire damage, 4 {@condition persistent damage||persistent fire damage}, and 4 fire splash damage."
+						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 4d8} fire damage, 4 {@condition persistent damage||persistent fire damage}, and 4 fire {@trait splash} damage."
 					]
 				}
 			],
@@ -956,10 +956,11 @@
 				"amount": 3
 			},
 			"bulk": 1,
-			"hands": 2,
+			"hands": "1 or 2*",
 			"category": "Adventuring Gear",
 			"entries": [
-				"This mobile collection of vials and chemicals can be used for simple alchemical tasks. If you wear your alchemist's tools, you can draw and replace them as part of the action that uses them."
+				"This mobile collection of vials and chemicals can be used for simple alchemical tasks. If you wear your alchemist's tools, you can draw and replace them as part of the action that uses them.",
+				"{@note *You can use the set of tools with one hand if you are wearing it.}"
 			]
 		},
 		{
@@ -986,7 +987,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -1126,6 +1127,7 @@
 				"amount": 15000
 			},
 			"usage": "worn anklets",
+			"bulk": "\u2014",
 			"category": "Apex",
 			"entries": [
 				"These gem-studded golden anklets give you a +3 item bonus to {@skill Acrobatics} checks. When you invest the anklets, you either increase your Dexterity score by 2 or increase it to 18, whichever would give you a higher score.",
@@ -1137,11 +1139,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You click the anklets together, gaining a +20-foot status bonus to all your Speeds and the effects of water walk for the next 10 minutes."
@@ -1158,7 +1160,8 @@
 			"traits": [
 				"alchemical",
 				"consumable",
-				"elixir"
+				"elixir",
+				"healing"
 			],
 			"usage": "held in 1 hand",
 			"bulk": "L",
@@ -1168,7 +1171,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -1291,15 +1294,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
 						"command"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "A spell targets you or includes you in its area",
 					"entries": [
@@ -1336,7 +1338,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -1355,7 +1357,8 @@
 			"traits": [
 				"alchemical",
 				"consumable",
-				"elixir"
+				"elixir",
+				"healing"
 			],
 			"usage": "held in 1 hand",
 			"bulk": "L",
@@ -1365,7 +1368,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -1598,17 +1601,35 @@
 			"name": "Arrow",
 			"source": "CRB",
 			"page": 282,
-			"traits": [],
-			"price": {
-				"coin": "sp",
-				"amount": 1,
-				"note": "(price for 10)"
-			},
+			"bulk": "L",
 			"category": "Ammunition",
 			"entries": [
-				"These projectiles are the ammunition for bows. The shaft of an arrow is made of wood. It is stabilized in flight by fletching at one end and bears a metal head on the other."
+				"These projectiles are the ammunition for bows. The shaft of an arrow is made of wood. It is stabilized in flight by fletching at one end and bears a metal head on the other.",
+				"{@note Different weapons have different prices for ammunition. The prices listed are thus, only for reference in the weapon statblocks themselves.}"
 			],
-			"variants": null
+			"generic": "G",
+			"variants": [
+				{
+					"variantType": "5-pack",
+					"name": "Arrow",
+					"price": {
+						"coin": "sp",
+						"amount": 1,
+						"note": "(price for 5)"
+					},
+					"add_hash": "5"
+				},
+				{
+					"variantType": "10-pack",
+					"name": "Arrow",
+					"price": {
+						"coin": "sp",
+						"amount": 1,
+						"note": "(price for 10)"
+					},
+					"add_hash": "10"
+				}
+			]
 		},
 		{
 			"name": "Arrow-catching Shield",
@@ -1627,7 +1648,6 @@
 			"usage": "held in 1 hand",
 			"bulk": 1,
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"This remarkable wooden shield (Hardness 10, HP 60, BT 30) is carved with images of overlapping fletched arrows.",
 				{
@@ -1635,15 +1655,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "A ranged weapon {@action Strike} targets a creature within 15 feet of you when you have this shield raised, and the attacker has not yet rolled their attack",
 					"entries": [
@@ -1677,7 +1696,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -1685,7 +1704,6 @@
 				"This toxin is a compound of arsenic and other substances. You can't reduce your {@condition sickened} condition while affected.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 18,
 					"savingThrow": "Fortitude",
 					"onset": "10 minutes",
@@ -1721,10 +1739,11 @@
 				"amount": 4
 			},
 			"bulk": 2,
-			"hands": 2,
+			"hands": "1 or 2*",
 			"category": "Adventuring Gear",
 			"entries": [
-				"You need these tools to create items from raw materials with the {@action Craft} skill. Different sets are needed for different work, as determined by the GM; for example, blacksmith's tools differ from woodworker's tools. If you wear your artisan's tools, you can draw and replace them as part of the action that uses them."
+				"You need these tools to create items from raw materials with the {@action Craft} skill. Different sets are needed for different work, as determined by the GM; for example, blacksmith's tools differ from woodworker's tools. If you wear your artisan's tools, you can draw and replace them as part of the action that uses them.",
+				"{@note *You can use the set of tools with one hand if you are wearing it.}"
 			],
 			"generic": "G",
 			"variants": [
@@ -1785,6 +1804,7 @@
 				"coin": "sp",
 				"amount": 1
 			},
+			"bulk": "\u2014",
 			"category": "Adventuring Gear",
 			"entries": [
 				"A backpack holds up to 4 Bulk of items. and the first 2 Bulk of these items don't count against your Bulk limits. If you're carrying or stowing the pack rather than wearing it on your back, its Bulk is light instead of negligible."
@@ -1918,11 +1938,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You trace a finger along the wind motifs on the barding, granting your companion wearing the barding a fly Speed of 30 feet for 10 minutes. Even if the companion doesn't have the mount special ability, it can still {@action Fly} while being ridden."
@@ -1954,7 +1974,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -1976,7 +1996,7 @@
 			"hands": 2,
 			"category": "Adventuring Gear",
 			"entries": [
-				"This book contains the {@quickref formulas|CRB|1|formulas|0} for {@action Craft||Crafting} the {@filter common items in Chapter 6: Equipment of the Core Rulebook|items||Source=CRB|Rarity=Common|Type=Equipment;!Specific Variant}."
+				"This book contains the {@quickref formulas|CRB|1|formulas|0} for {@action Craft||Crafting} {@filter all 0-level common items in Chapter 6: Equipment of the Core Rulebook|items||Source=CRB|Rarity=Common|Type=Equipment;!Specific Variant|Level=[0]}."
 			]
 		},
 		{
@@ -2000,7 +2020,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -2050,14 +2070,15 @@
 					"number": 1,
 					"unit": "action"
 				},
-				"components": "Interact"
+				"components": [
+					"{@action Interact}"
+				]
 			},
 			"category": "Poison",
 			"entries": [
 				"Sometimes called \"deadly nightshade,\" belladonna is a widely available toxin produced from a plant similar to a tomato.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 19,
 					"savingThrow": "Fortitude",
 					"onset": "10 minutes",
@@ -2108,11 +2129,10 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"trigger": "You are targeted by a thrown rock attack, or a rock would fall on you",
 					"entries": [
@@ -2158,11 +2178,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You tighten the belt one notch to gain a regeneration effect. For {@dice 2d4} rounds, at the start of your turn each round, you recover 15 Hit Points unless you took acid or fire damage since the start of your previous turn."
@@ -2200,11 +2220,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"requirements": "You are a dwarf",
 					"entries": [
@@ -2321,7 +2341,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -2463,7 +2483,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -2471,7 +2491,6 @@
 				"Adder venom is a simple but effective way to enhance a weapon.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 18,
 					"savingThrow": "Fortitude",
 					"maxDuration": "3 rounds",
@@ -2520,7 +2539,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -2528,7 +2547,6 @@
 				"Black lotus extract causes severe internal bleeding.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 42,
 					"savingThrow": "Fortitude",
 					"onset": "1 minute",
@@ -2598,7 +2616,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -2606,7 +2624,6 @@
 				"This tacky, hardened sap is harvested from trees infected by fungal blights and exposed to open flames.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 31,
 					"savingThrow": "Fortitude",
 					"onset": "1 minute",
@@ -2670,11 +2687,11 @@
 				"amount": 20
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -2690,7 +2707,6 @@
 			"name": "Blowgun Dart",
 			"source": "CRB",
 			"page": 281,
-			"traits": [],
 			"price": {
 				"coin": "cp",
 				"amount": 5,
@@ -2699,24 +2715,41 @@
 			"category": "Ammunition",
 			"entries": [
 				"These thin, light darts are typically made of hardwood and stabilized with fletching of down or fur. They are often hollow so they can be used to deliver poison."
-			],
-			"variants": null
+			]
 		},
 		{
 			"name": "Bolt",
 			"source": "CRB",
 			"page": 281,
-			"traits": [],
-			"price": {
-				"coin": "sp",
-				"amount": 1,
-				"note": "(price for 10)"
-			},
+			"bulk": "L",
 			"category": "Ammunition",
 			"entries": [
-				"Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows."
+				"Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.",
+				"{@note Different weapons have different prices for ammunition. The prices listed are thus, only for reference in the weapon statblocks themselves.}"
 			],
-			"variants": null
+			"generic": "G",
+			"variants": [
+				{
+					"variantType": "5-pack",
+					"name": "Bolt",
+					"price": {
+						"coin": "sp",
+						"amount": 1,
+						"note": "(price for 5)"
+					},
+					"add_hash": "5"
+				},
+				{
+					"variantType": "10-pack",
+					"name": "Bolt",
+					"price": {
+						"coin": "sp",
+						"amount": 1,
+						"note": "(price for 10)"
+					},
+					"add_hash": "10"
+				}
+			]
 		},
 		{
 			"name": "Bomb Snare",
@@ -2736,7 +2769,7 @@
 			},
 			"category": "Snare",
 			"entries": [
-				"You create a snare that catalyzes three 3rd-level moderate alchemical bombs of the same type to explode when a creature enters the snare's square. The target and all creatures in adjacent squares must attempt a DC 26 Reflex save, as the snare deals damage equal to three times the direct hit damage from one of the component bombs (for example, {@damage 6d6} electricity damage from bottled lightning) with no splash damage or other effects.",
+				"You create a snare that catalyzes three 3rd-level moderate alchemical bombs of the same type to explode when a creature enters the snare's square. The target and all creatures in adjacent squares must attempt a DC 26 Reflex save, as the snare deals damage equal to three times the direct hit damage from one of the component bombs (for example, {@damage 6d6} electricity damage from bottled lightning) with no {@trait splash} damage or other effects.",
 				{
 					"type": "successDegree",
 					"entries": {
@@ -2770,7 +2803,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -2882,15 +2915,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
 						"envision"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"Until the end of your turn, you ignore {@quickref difficult terrain||3|terrain} when moving on the ground. If you're wearing a cloak of elvenkind, you also gain a +5-foot status bonus to your land Speed until the end of your turn."
@@ -2949,11 +2981,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You click the heels of the boots together and gain the {@condition quickened} condition for 1 minute. You can use the extra action to {@action Stride}, {@action Climb}, or {@action Swim}. (You must still attempt an {@skill Athletics} check for the {@action Climb} and {@action Swim} actions unless you have the appropriate movement type.)"
@@ -2989,7 +3021,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You draw a breath of air from the bottle. This allows you to breathe even in an airless or toxic environment. Air doesn't escape the mouth of the bottle, so leaving the open bottle in an airless environment doesn't change the environment."
@@ -3018,12 +3050,12 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Bomb",
 			"entries": [
-				"Bottled lightning is packed with volatile reagents that create a blast of electricity when they are exposed to air. Bottled lightning deals the listed electricity damage and electricity splash damage. On a hit, the target becomes {@condition flat-footed} until the start of your next turn. Many types grant an item bonus to attack rolls."
+				"Bottled lightning is packed with volatile reagents that create a blast of electricity when they are exposed to air. Bottled lightning deals the listed electricity damage and electricity {@trait splash} damage. On a hit, the target becomes {@condition flat-footed} until the start of your next turn. Many types grant an item bonus to attack rolls."
 			],
 			"generic": "G",
 			"variants": [
@@ -3036,12 +3068,12 @@
 						"amount": 3
 					},
 					"entries": [
-						"It deals {@damage 1d6} electricity damage and 1 electricity splash damage."
+						"It deals {@damage 1d6} electricity damage and 1 electricity {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
 							"replaceTags": true,
-							"with": "The bomb deals {@damage 1d6} electricity damage and 1 electricity splash damage. On a hit, the target becomes {@condition flat-footed} until the start of your next turn."
+							"with": "The bomb deals {@damage 1d6} electricity damage and 1 electricity {@trait splash} damage. On a hit, the target becomes {@condition flat-footed} until the start of your next turn."
 						}
 					}
 				},
@@ -3053,12 +3085,12 @@
 						"amount": 10
 					},
 					"entries": [
-						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d6} electricity damage and 2 electricity splash damage."
+						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d6} electricity damage and 2 electricity {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
 							"replaceTags": true,
-							"with": "The bomb deals {@damage 2d6} electricity damage and 2 electricity splash damage. On a hit, the target becomes {@condition flat-footed} until the start of your next turn. You gain a +1 item bonus to attack rolls."
+							"with": "The bomb deals {@damage 2d6} electricity damage and 2 electricity {@trait splash} damage. On a hit, the target becomes {@condition flat-footed} until the start of your next turn. You gain a +1 item bonus to attack rolls."
 						}
 					}
 				},
@@ -3070,12 +3102,12 @@
 						"amount": 250
 					},
 					"entries": [
-						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d6} electricity damage and 3 electricity splash damage."
+						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d6} electricity damage and 3 electricity {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
 							"replaceTags": true,
-							"with": "The bomb deals {@damage 3d6} electricity damage and 3 electricity splash damage. On a hit, the target becomes {@condition flat-footed} until the start of your next turn. You gain a +2 item bonus to attack rolls."
+							"with": "The bomb deals {@damage 3d6} electricity damage and 3 electricity {@trait splash} damage. On a hit, the target becomes {@condition flat-footed} until the start of your next turn. You gain a +2 item bonus to attack rolls."
 						}
 					}
 				},
@@ -3087,12 +3119,12 @@
 						"amount": 2500
 					},
 					"entries": [
-						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 4d6} electricity damage and 4 electricity splash damage."
+						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 4d6} electricity damage and 4 electricity {@trait splash} damage."
 					],
 					"_mod": {
 						"entries": {
 							"replaceTags": true,
-							"with": "The bomb deals {@damage 4d6} electricity damage and 4 electricity splash damage. On a hit, the target becomes {@condition flat-footed} until the start of your next turn. You gain a +3 item bonus to attack rolls."
+							"with": "The bomb deals {@damage 4d6} electricity damage and 4 electricity {@trait splash} damage. On a hit, the target becomes {@condition flat-footed} until the start of your next turn. You gain a +3 item bonus to attack rolls."
 						}
 					}
 				}
@@ -3101,7 +3133,7 @@
 				"entriesMode": "generic",
 				"entries": {
 					"mode": "replaceTxt",
-					"replace": "Bottled lightning deals the listed electricity damage and electricity splash damage. On a hit, the target becomes {@condition flat-footed} until the start of your next turn. Many types grant an item bonus to attack rolls."
+					"replace": "Bottled lightning deals the listed electricity damage and electricity {@trait splash} damage. On a hit, the target becomes {@condition flat-footed} until the start of your next turn. Many types grant an item bonus to attack rolls."
 				}
 			}
 		},
@@ -3137,7 +3169,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You gain a +10-foot status bonus to Speed for 1 minute."
@@ -3243,16 +3275,16 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
+					"trigger": "A ranged weapon attack hits you but doesn't critically hit",
 					"requirements": "You are aware of the attack and not {@condition flat-footed}",
 					"entries": [
 						"The bracers send the missile off-course. You gain a +2 circumstance bonus to AC against the triggering attack. If this would cause the attack to be a failure, the attack misses you."
@@ -3311,7 +3343,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -3408,7 +3440,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You grant allies within 100 feet a +2 status bonus to saves against {@trait fear} effects for 1 minute. When you activate this ability, each affected ally who's {@condition frightened} reduces their {@condition frightened} value by 1."
@@ -3464,7 +3496,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -3472,7 +3504,6 @@
 				"Fumes from the forges of Hell drain health and strength alike.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 36,
 					"savingThrow": "Fortitude",
 					"onset": "1 round",
@@ -3514,11 +3545,11 @@
 				"amount": 7
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -3548,6 +3579,7 @@
 				"amount": 30
 			},
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This piece of silver or gold jewelry is adorned with miniature images of kite shields and can be used to fasten a cloak or cape. The brooch automatically absorbs {@spell magic missile} spells targeting you. A brooch of shielding can absorb 30 individual {@spell magic missile}s before it melts and becomes useless.",
@@ -3583,7 +3615,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You name a destination on the same plane, and the broom speeds toward it at a fly Speed of 40 feet. You must either clutch the broom with two hands in order to ride it, or you need to release the broom to send it off with no rider. If you don't have a good idea of the location, layout, and general direction of the destination, or if your named destination is on another plane, the broom wanders aimlessly, circling back to its starting location after 30 minutes.",
@@ -3625,14 +3657,14 @@
 			"equipment": true,
 			"type": "Item",
 			"price": {
-				"coin": "cp",
+				"coin": "sp",
 				"amount": 3
 			},
 			"bulk": "L",
 			"hands": 1,
 			"category": "Adventuring Gear",
 			"entries": [
-				"These four-pronged metal spikes can damage a creature's feet. You can scatter caltrops in an empty square adjacent to you with an Interact action. The first creature that moves into that square must succeed at a DC 14 {@skill Acrobatics} check or take 1d4 piercing damage and 1 persistent bleed damage. A creature taking persistent bleed damage from caltrops takes a \u20135-foot penalty to its Speed. Spending an Interact action to pluck the caltrops free reduces the DC to stop the bleeding. Once a creature takes damage from caltrops, enough are ruined that other creatures moving into the square are safe. Deployed caltrops can be salvaged and reused if no creatures took damage from them. Otherwise, enough are ruined that they can't be salvaged."
+				"These four-pronged metal spikes can damage a creature's feet. You can scatter caltrops in an empty square adjacent to you with an Interact action. The first creature that moves into that square must succeed at a DC 14 {@skill Acrobatics} check or take 1d4 piercing damage and 1 {@condition persistent damage||persistent bleed damage}. A creature taking {@condition persistent damage||persistent bleed damage} from caltrops takes a \u20135-foot penalty to its Speed. Spending an Interact action to pluck the caltrops free reduces the DC to stop the bleeding. Once a creature takes damage from caltrops, enough are ruined that other creatures moving into the square are safe. Deployed caltrops can be salvaged and reused if no creatures took damage from them. Otherwise, enough are ruined that they can't be salvaged."
 			]
 		},
 		{
@@ -3646,6 +3678,7 @@
 				"amount": 1,
 				"note": "for price of 10"
 			},
+			"bulk": "\u2014",
 			"hands": 1,
 			"category": "Adventuring Gear",
 			"entries": [
@@ -3670,13 +3703,14 @@
 				"amount": 75
 			},
 			"usage": "held in 1 hand",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -3716,11 +3750,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You cast {@spell dimension door}. The space you leave and the one you appear in are filled with puffs of smoke that make anyone within {@condition concealed} until they leave the smoke or the end of your next turn, at which point the smoke dissipates.",
@@ -3755,15 +3789,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
 						"envision"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You gain 1 Focus Point, which you can spend only to cast a cleric domain spell for a domain belonging to the deity the cassock is dedicated to. If you don't spend this Focus Point by the end of this turn, it is lost."
@@ -3797,7 +3830,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -3832,11 +3865,14 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact (sonic)"
+						"{@action Interact}"
+					],
+					"traits": [
+						"sonic"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You pull the white thread free, then whirl the sling in circles at high speed. It lets out an ear-piercing wave of sound.",
@@ -3880,7 +3916,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The armor sprouts glowing wings that grant you a fly Speed of 30 feet. The wings shed bright light in a 40-foot radius (and dim light to the next 40 feet). The wings fade away after 10 minutes."
@@ -3920,6 +3956,7 @@
 				"amount": 1,
 				"note": "for price of 10"
 			},
+			"bulk": "\u2014",
 			"hands": 1,
 			"category": "Adventuring Gear",
 			"entries": [
@@ -3943,6 +3980,7 @@
 				"amount": 56
 			},
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This nugget of polished tektite is trapped in a cage of braided wire and hangs from a silken cord. When wearing this amulet, you gain resistance 5 against damage from {@spell harm} spells if you're living, or against {@spell heal} spells if you're undead."
@@ -3967,7 +4005,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -4079,7 +4117,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You aim the chime at a container, door, or lock you want to open and strike the chime. The chime sends out magical vibrations that attempt a {@skill Thievery} check against the lock's DC, with a {@skill Thievery} bonus of +13. This targets only one lock or binding at a time, so you might need to activate the chime multiple times to open a target with several forms of protection."
@@ -4149,6 +4187,7 @@
 				"amount": 15000
 			},
 			"usage": "worn circlet",
+			"bulk": "\u2014",
 			"category": "Apex",
 			"entries": [
 				"This elegant silver band often resembles curling fig leaves and fits around your brow. You gain a +2 item bonus to {@skill Deception} and {@skill Diplomacy} checks.",
@@ -4165,7 +4204,7 @@
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You cast a 4th-level {@spell charm} spell (DC 38)."
@@ -4199,11 +4238,11 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You pull the cloak's hood up and gain the benefits of nondetection for 1 hour or until you pull the hood back down, whichever comes first."
@@ -4238,6 +4277,11 @@
 			"name": "Climbing Bolt",
 			"source": "CRB",
 			"page": 559,
+			"otherSources": {
+				"Reprinted": [
+					"BB|52"
+				]
+			},
 			"type": "Item",
 			"level": 4,
 			"traits": [
@@ -4322,11 +4366,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You draw the hood up and gain the effects of invisibility, with the spell's normal duration or until you pull the hood back down, whichever comes first. If you're also wearing boots of elvenkind, you can activate this ability twice per day."
@@ -4382,11 +4426,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You can either transform the cloak into bat-like wings that grant you a fly Speed of 30 feet for 10 minutes, or have the cloak turn you into a bat by casting a 4th-level {@spell pest form} spell on you."
@@ -4433,6 +4477,7 @@
 						"coin": "sp",
 						"amount": 1
 					},
+					"bulk": "\u2014",
 					"entries": [
 						"Ordinary clothing is functional with basic tailoring, such as peasant garb, monk's robes, or work clothes."
 					]
@@ -4506,7 +4551,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -4780,7 +4825,7 @@
 			"level": "5+",
 			"usage": "worn armor",
 			"bulk": "varies by armor",
-			"category": "Armor",
+			"category": "Material",
 			"entries": [
 				"Cold iron armor sickens certain creatures that touch it. A creature with weakness to cold iron (such as most demons and fey) that critically fails an unarmed attack against a creature in cold iron armor becomes {@condition sickened 1}. A creature with weakness to cold iron is {@condition sickened 1} as long as it wears cold iron armor."
 			],
@@ -4833,8 +4878,7 @@
 			"type": "Item",
 			"level": "2+",
 			"usage": "varies by shield",
-			"category": "Shield",
-			"group": "Shield",
+			"category": "Material",
 			"entries": [
 				"Cold iron shields don't typically have an additional effect, though when used for a shield bash, they are cold iron weapons."
 			],
@@ -4937,7 +4981,7 @@
 			"level": "2+",
 			"usage": "varies by weapon",
 			"bulk": "varies by weapon",
-			"category": "Weapon",
+			"category": "Material",
 			"entries": [
 				"Cold iron weapons deal additional damage to creatures with weakness to cold iron, like demons and fey."
 			],
@@ -5068,6 +5112,7 @@
 				"coin": "gp",
 				"amount": 1
 			},
+			"bulk": "\u2014",
 			"hands": 1,
 			"category": "Adventuring Gear",
 			"entries": [
@@ -5118,7 +5163,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -5239,6 +5284,7 @@
 				"magical"
 			],
 			"usage": "worn cloak",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This dusty coat is made of mangy brown-and-gray coyote fur.",
@@ -5280,6 +5326,7 @@
 				"transmutation"
 			],
 			"usage": "worn eyepiece",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This rugged metal eyepiece etched with square patterns is designed to be worn over a single eye. Twisting the lens reveals a faint three-dimensional outline of an item you plan to build or repair, with helpful labels on the component parts. While worn, this eyepiece gives you a +1 item bonus to {@skill Crafting} checks. When you {@action Repair} an item, increase the Hit Points restored by 15 per proficiency rank instead of 10."
@@ -5312,10 +5359,10 @@
 								"unit": "minute"
 							},
 							"components": [
-								"Interact"
+								"{@action Interact}"
 							],
 							"frequency": {
-								"freq": 1,
+								"number": 1,
 								"unit": "day"
 							},
 							"entries": [
@@ -5341,10 +5388,10 @@
 											"unit": "minute"
 										},
 										"components": [
-											"Interact"
+											"{@action Interact}"
 										],
 										"frequency": {
-											"freq": 1,
+											"number": 1,
 											"unit": "day"
 										},
 										"entries": [
@@ -5413,17 +5460,17 @@
 				"amount": 7
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
 				],
 				"requirements": "You are trained in {@skill Medicine}.",
-				"trigger": "You critically fail to Administer"
+				"trigger": "You critically fail to {@action Administer First Aid}"
 			},
 			"category": "Talisman",
 			"entries": [
@@ -5453,13 +5500,12 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "minute",
-						"entry": "1 minute"
+						"unit": "minute"
 					},
 					"components": [
-						"(command",
+						"command",
 						"envision",
-						"Interact)"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The crystal ball casts clairvoyance to your specifications."
@@ -5470,17 +5516,16 @@
 					"style": "compact",
 					"activity": {
 						"number": 10,
-						"unit": "minute",
-						"entry": "10 minutes"
+						"unit": "minute"
 					},
 					"components": [
-						"(command",
+						"command",
 						"envision",
-						"Interact)"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 2
+						"number": 2
 					},
 					"entries": [
 						"The crystal ball casts a DC 33 {@spell scrying} spell to your specifications."
@@ -5568,7 +5613,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -5576,7 +5621,6 @@
 				"This thick substance is distilled from the mind-robbing cytillesh fungus, though it lacks memory-altering capabilities.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 19,
 					"savingThrow": "Fortitude",
 					"maxDuration": "4 rounds",
@@ -5625,15 +5669,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You poison the creature you hit with dagger venom."
@@ -5689,12 +5732,12 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You {@action Release} the weapon and it dances through the air, fighting on its own against the last enemy you attacked, or the nearest enemy to it if your target has been defeated. At the end of your turn each round, the weapon can {@action Fly} up to its fly Speed of 40 feet, and then can either {@action Fly} again or {@action Strike} one creature within its reach.",
 						"The weapon has a space of 5 feet, but it doesn't block or impede enemies attempting to move though that space, nor does it benefit from or provide flanking. The weapon can't move through an enemy's space. The weapon can't use reactions, and its {@action Fly} actions don't trigger reactions.",
-						"While it's activated, a dancing weapon makes Strikes with an attack modifier of +24 plus its item bonus to attack rolls. It uses the weapon's normal damage but has a +0 Strength modifier.",
+						"While it's activated, a dancing weapon makes {@action Strike||Strikes} with an attack modifier of +24 plus its item bonus to attack rolls. It uses the weapon's normal damage but has a +0 Strength modifier.",
 						"The weapon's abilities that automatically trigger on a hit or critical hit still function, but the weapon can't be activated or benefit from any of your abilities while dancing.",
 						"Each round, when the weapon is finished using its actions, attempt a DC {@flatDC 6} flat check. On a failure, the activation ends and the weapon falls to the ground. You can't activate the item again for 10 minutes."
 					]
@@ -5714,6 +5757,7 @@
 				"visual"
 			],
 			"usage": "worn belt",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This long and billowing scarf is typically woven of silk or sheer fabric and adorned with bells or other jangling bits of shiny metal. It grants a +1 item bonus to {@skill Performance} checks to dance.",
@@ -5725,7 +5769,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"requirements": "On your most recent action, you succeeded at a {@skill Performance} check to dance",
 					"entries": [
@@ -5819,7 +5863,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -6049,7 +6093,7 @@
 			],
 			"usage": "worn armor",
 			"bulk": "varies by armor",
-			"category": "Armor",
+			"category": "Material",
 			"entries": [
 				"Darkwood armor is 1 Bulk lighter than normal (or light Bulk if its normal Bulk is 1, with no effect on armor that normally has light Bulk). It's easier to wear than normal wood armor, reducing the Strength score necessary to ignore its check penalty by 2 and reducing its Speed penalty by 5 feet. (There are no types of wood armor in this book.)"
 			],
@@ -6093,8 +6137,7 @@
 				"uncommon"
 			],
 			"usage": "varies by shield",
-			"category": "Shield",
-			"group": "Shield",
+			"category": "Material",
 			"entries": [
 				"Darkwood shields are 1 Bulk lighter than normal (or light Bulk if their normal Bulk is 1, with no effect on a shield that normally has light Bulk)."
 			],
@@ -6241,7 +6284,7 @@
 			],
 			"usage": "varies by weapon",
 			"bulk": "varies by weapon",
-			"category": "Weapon",
+			"category": "Material",
 			"entries": [
 				"Darkwood weapons are as dark as ebony, with a slight purple tint. A darkwood weapon's Bulk is reduced by 1 (or to light Bulk if its normal Bulk is 1, with no effect on a weapon that normally has light Bulk)."
 			],
@@ -6292,11 +6335,11 @@
 				"amount": 900
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -6332,7 +6375,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -6340,7 +6383,6 @@
 				"The toxic deathcap mushroom can be dried, ground, and treated to form a flavorless powder with accelerated effects.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 33,
 					"savingThrow": "Fortitude",
 					"onset": "10 minutes",
@@ -6395,7 +6437,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"Speaking \"stream,\" you cause water to pour out at a rate of 1 gallon per round."
@@ -6410,7 +6452,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"Speaking \"fountain,\" you cause water to pour out in a 5-foot-long stream at a rate of 5 gallons per round."
@@ -6425,7 +6467,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"Speaking \"geyser,\" you cause a powerful deluge of water to erupt at a rate of 15 gallons per round. You can direct the stream at a creature, subjecting it to the effects of hydraulic push (spell attack roll +15). You can repeat this once per round as long as the geyser continues, spending an {@action Interact} action to direct the geyser each time."
@@ -6454,7 +6496,7 @@
 			"category": "Armor",
 			"entries": [
 				"Crafted from black iron, this crude suit of +2 resilient full plate is designed to make you look like a horned demon, with your face peering out of the screaming maw of the beast.",
-				"While wearing the armor, you can attack with the helmet's horns. They are a martial melee weapon with the effects of a +2 weapon potency rune. They deal {@damage 2d8} piercing damage and have the deadly d12 trait. On a critical hit with the horns, the target must attempt a DC 30 Fortitude save against the Abyssal plague disease (page 316). The horns can't be etched with any runes.",
+				"While wearing the armor, you can attack with the helmet's horns. They are a martial melee weapon with the effects of a +2 weapon potency rune. They deal {@damage 2d8} piercing damage and have the {@trait deadly <d12>} trait. On a critical hit with the horns, the target must attempt a DC 30 Fortitude save against the Abyssal plague disease (page 316). The horns can't be etched with any runes.",
 				"If you aren't evil, you're {@condition drained 2} and can't recover from this condition while wearing demon armor.",
 				{
 					"type": "ability",
@@ -6468,7 +6510,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You cast {@spell dimension door}."
@@ -6503,11 +6545,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The mask casts a {@spell fear} spell with a DC of 20."
@@ -6571,7 +6613,7 @@
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You gain the effects of {@spell hypercognition}."
@@ -6595,6 +6637,7 @@
 				"amount": 125
 			},
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"When displayed prominently, this brass badge makes creatures find you more agreeable. You gain a +1 item bonus to {@skill Diplomacy} checks.",
@@ -6606,11 +6649,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Recall Knowledge"
+						"{@action Recall Knowledge}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"Attempt a DC 20 check to {@action Recall Knowledge} about people of a human ethnicity, a non-human ancestry, or some other type of creature. (The GM determines what your options are.) If you succeed, the badge's bonus increases to +2 for {@skill Diplomacy} checks with creatures of that group for the rest of the day."
@@ -6681,7 +6724,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -6712,11 +6755,11 @@
 				"amount": 2400
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -6796,6 +6839,7 @@
 				"magical"
 			],
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This item consists of two magically linked rings: an intricate, gleaming golden ring with a square-cut ruby, and a thick, plain iron ring. When you wield a melee weapon in the hand wearing the golden ring, the weapon's fundamental runes are replicated onto any melee weapon you wield in the hand wearing the iron ring. (The fundamental runes are weapon potency and striking, which add an item bonus to attack rolls and extra weapon damage dice, respectively.) Any fundamental runes on the weapon in the hand wearing the iron ring are suppressed.",
@@ -6850,7 +6894,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -6858,7 +6902,6 @@
 				"A mix of digestive juices and green dragon poison glands nauseates the victim as its flesh is digested from within.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 37,
 					"savingThrow": "Fortitude",
 					"onset": "1 minute",
@@ -6900,6 +6943,7 @@
 				"amount": 13
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
@@ -6935,7 +6979,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -7176,7 +7220,7 @@
 			],
 			"usage": "worn armor",
 			"bulk": "varies by armor",
-			"category": "Armor",
+			"category": "Material",
 			"entries": [
 				"Dragonhide armor is immune to one damage type based on the type of dragon it is made from (as listed in the table on page 579). Wearing armor made from dragonhide also grants you a +1 circumstance bonus to your AC and saving throws against attacks and spells that deal the corresponding damage type."
 			],
@@ -7221,7 +7265,6 @@
 			],
 			"usage": "varies by shield",
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"Dragonhide shields are each immune to one damage type based on the type of dragon (see Dragonhide on page 579)."
 			],
@@ -7312,11 +7355,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You unleash a bout of dragon breath with a shape, damage type, and saving throw corresponding to the type of dragon used to make the armor (shown on the table below). The breath weapon deals {@dice 14d6} damage; each creature in the area must attempt a DC 36 basic saving throw."
@@ -7342,7 +7385,6 @@
 			"usage": "held in 1 hand",
 			"bulk": 1,
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"A dragonslayer's shield is a steel shield covered with dragonhide from a certain type of dragon, which distinguishes each shield from the others. While raised, this steel shield (Hardness 8, HP 32, BT 16) grants its circumstance bonus to Reflex saves against area effects (as well as to AC, as normal)",
 				"While you hold the shield, it also grants you a +2 circumstance bonus to Will saves against a dragon's frightful presence ability. The shield has resistance 10 against the damage type corresponding to the type of dragon whose hide was used in its creation (see dragonhide on page 579); this applies after reducing the damage for Hardness, so when you use {@feat Shield Block}, the dragonslayer's shield takes 18 less damage from attacks of that damage type. You can use {@feat Shield Block} against attacks that deal damage of that type."
@@ -7370,6 +7412,7 @@
 				"amount": 15000
 			},
 			"usage": "worn eyepiece",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"When tied over your eyes, this ragged strip of black linen gives you a +3 item bonus to {@skill Intimidation} checks and {@ability darkvision}. You can see through the blindfold, but only using {@ability darkvision}.",
@@ -7379,15 +7422,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
 						"command"
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "You damage a creature with a {@action Strike}",
 					"entries": [
@@ -7422,15 +7464,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
 						"envision"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You gain 1 Focus Point, which you can spend only to cast an order spell. If you don't spend this Focus Point by the end of this turn, it is lost."
@@ -7457,13 +7498,14 @@
 				"amount": 50
 			},
 			"usage": "held in 1 hand",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -7478,6 +7520,7 @@
 			"type": "Item",
 			"level": 9,
 			"traits": [
+				"uncommon",
 				"consumable",
 				"illusion",
 				"magical"
@@ -7487,13 +7530,14 @@
 				"amount": 135
 			},
 			"usage": "held in 1 hand",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -7520,7 +7564,7 @@
 			"bulk": 1,
 			"category": "Weapon",
 			"entries": [
-				"This +2 striking warhammer is inlaid with precious metals and decorated with geometric patterns in a dwarven style. If you're a dwarf, a dwarven thrower functions for you as a +2 greater striking returning warhammer with the thrown 30 feet trait, and your attacks with the hammer deal {@damage 1d8} additional damage against giants."
+				"This +2 striking warhammer is inlaid with precious metals and decorated with geometric patterns in a dwarven style. If you're a dwarf, a dwarven thrower functions for you as a +2 greater striking returning warhammer with the thrown <30 feet> trait, and your attacks with the hammer deal {@damage 1d8} additional damage against giants."
 			]
 		},
 		{
@@ -7542,7 +7586,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -7642,13 +7686,14 @@
 				"amount": 7
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				],
 				"requirements": "You're an expert in {@skill Acrobatics}."
 			},
@@ -7686,11 +7731,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You cast a 2nd-level {@spell shocking grasp} with a spell attack modifier of +19."
@@ -7717,12 +7762,16 @@
 				"amount": 200
 			},
 			"usage": "held in 1 hand",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 2,
 					"unit": "action"
 				},
-				"components": "command, Interact"
+				"components": [
+					"command",
+					"{@action Interact}"
+				]
 			},
 			"category": "Consumable",
 			"entries": [
@@ -7750,7 +7799,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -7875,7 +7924,8 @@
 				"uncommon",
 				"alchemical",
 				"consumable",
-				"elixir"
+				"elixir",
+				"healing"
 			],
 			"usage": "held in 1 hand",
 			"bulk": "L",
@@ -7907,10 +7957,10 @@
 				"uncommon"
 			],
 			"usage": "worn armor",
-			"bulk": 1,
+			"bulk": "L",
 			"category": "Armor",
 			"entries": [
-				"Elven chain is a chain shirt made of {@item mithral} that glitters in even the faintest light. It grants a +2 item bonus to AC and has no check penalty.",
+				"Elven chain is a chain shirt made of {@item mithral} that glitters in even the faintest light. It has no check penalty.",
 				"Created by elven artisans employing ancient crafting techniques, elven chain is exceptionally quiet. Unlike other chain shirts\u2014even other mithral chain shirts\u2014elven chain does not have the {@trait noisy} trait. This suit of armor can be etched with runes like any other mithral chain shirt."
 			],
 			"generic": "G",
@@ -7958,11 +8008,11 @@
 				"amount": 30
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -8053,7 +8103,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You gain the effects of an {@spell ethereal jaunt} spell. This doesn't require concentration and lasts for 10 minutes or until you choose to return to material form as a free action."
@@ -8068,6 +8118,11 @@
 			"name": "Everburning Torch",
 			"source": "CRB",
 			"page": 573,
+			"otherSources": {
+				"Reprinted": [
+					"BB|54"
+				]
+			},
 			"type": "Item",
 			"level": 1,
 			"traits": [
@@ -8115,11 +8170,11 @@
 						"entry": "(10 minutes)"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The rolled-up tent expands into a spacious yurt complete with a fire pit, 10 {@item bedroll|crb|bedrolls}, various cooking utensils, and basic food and water.",
@@ -8147,7 +8202,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -8208,6 +8263,7 @@
 				"coin": "sp",
 				"amount": 1
 			},
+			"bulk": "\u2014",
 			"category": "Adventuring Gear",
 			"entries": [
 				"Using a {@item writing set}, you can draft correspondence and scribe scrolls. If you've written a large amount, you can refill your kit with extra ink and paper."
@@ -8230,11 +8286,11 @@
 				"amount": 400
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -8263,6 +8319,7 @@
 				"amount": 2700
 			},
 			"usage": "worn eyepiece",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"Adherents of Erastil, god of the hunt, create these magical eye patches. An eye of fortune has a jeweled eye symbol on its front, allowing you to magically see through the eye patch as though it were transparent.",
@@ -8271,11 +8328,13 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
-						"envision (fortune)"
+						"envision"
+					],
+					"traits": [
+						"fortune"
 					],
 					"trigger": "You attack a {@condition concealed} or {@condition hidden} creature and haven't attempted the flat check yet",
 					"entries": [
@@ -8300,6 +8359,7 @@
 				"amount": 700
 			},
 			"usage": "worn eyepiece",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"These lenses of amber crystal fit over your eyes. They grant you {@ability low-light vision} and a +2 item bonus to {@skill Perception} checks that involve sight."
@@ -8322,11 +8382,11 @@
 				"amount": 320
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -8358,17 +8418,20 @@
 				"amount": 20
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 2,
 					"unit": "action"
 				},
-				"components": "Intimidating Strike"
+				"components": [
+					"{@feat Intimidating Strike}"
+				]
 			},
 			"category": "Talisman",
 			"entries": [
-				"Dark smoke seems to writhe within this obsidian gem. When you activate the gem, you make an Intimidating {@action Strike}, as the fighter feat (page 146)",
-				"If you have the Intimidating {@action Strike} feat, increase the {@condition frightened} condition value from this Intimidating {@action Strike} to {@condition frightened 2}, or {@condition frightened 3} on a critical hit."
+				"Dark smoke seems to writhe within this obsidian gem. When you activate the gem, you make an {@feat Intimidating Strike}, as the fighter feat.",
+				"If you have the {@feat Intimidating Strike} feat, increase the {@condition frightened} condition value from this Intimidating {@action Strike} to {@condition frightened 2}, or {@condition frightened 3} on a critical hit."
 			]
 		},
 		{
@@ -8388,11 +8451,11 @@
 				"amount": 8
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -8410,6 +8473,11 @@
 			"name": "Feather Token",
 			"source": "CRB",
 			"page": 570,
+			"otherSources": {
+				"Reprinted": [
+					"BB|53"
+				]
+			},
 			"type": "Item",
 			"level": "1+",
 			"traits": [
@@ -8418,13 +8486,14 @@
 				"magical"
 			],
 			"usage": "held in 1 hand",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -8536,6 +8605,32 @@
 						"This feather transforms into a +1 striking dancing whip when activated. The whip immediately jumps from your grasp and proceeds to attack your enemies until 1 minute has passed or it fails its flat check for dancing, at which point it vanishes.",
 						"If the whip's target isn't {@condition prone}, the whip uses its actions to attempt to {@action Trip} that creature instead of making a {@action Strike}. The whip's total attack modifier for Striking or Tripping is +18 instead of the normal bonus for a dancing weapon."
 					]
+				},
+				{
+					"variantType": "balloon",
+					"level": 6,
+					"source": "PFUM",
+					"page": 0,
+					"price": {
+						"coin": "gp",
+						"amount": 50
+					},
+					"entries": [
+						"This feather can't be activated underwater. When activated, the feather transforms into a balloon of waxed cloth that is 3 feet in diameter and filled with hot air. Handles on the bottom of the balloon allow up to two creatures sized Medium or smaller to hold onto the balloon. One round after being activated, the balloon rises up into the air at a speed of 20 feet per round. After rising for 3 rounds, the balloon floats in place for two rounds as the air inside cools, then descends at a speed of 20 feet per round. When the balloon reaches its original elevation, the balloon deflates."
+					]
+				},
+				{
+					"variantType": "puddle",
+					"level": 3,
+					"source": "PFUM",
+					"page": 0,
+					"price": {
+						"coin": "gp",
+						"amount": 8
+					},
+					"entries": [
+						"When activated, the feather transforms into two gallons of fresh, clear water. If no one drinks it, the water evaporates after 1 day."
+					]
 				}
 			]
 		},
@@ -8631,6 +8726,7 @@
 				"amount": 1800
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
@@ -8671,7 +8767,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You cast the {@spell produce flame} cantrip from the sword as a 7th-level arcane spell, using your melee attack modifier with flametongue as your spell attack modifier."
@@ -8756,6 +8852,7 @@
 				"coin": "cp",
 				"amount": 5
 			},
+			"bulk": "\u2014",
 			"hands": 2,
 			"category": "Adventuring Gear",
 			"entries": [
@@ -8775,7 +8872,6 @@
 			"usage": "strapped to 1 hand",
 			"bulk": "L",
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"A floating shield is usually carved with wing motifs. This buckler (Hardness 6, HP 24, BT 12) can protect you on its own.",
 				{
@@ -8786,11 +8882,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The shield magically releases itself and floats off your arm into the air next to you, granting you its bonus automatically, as if you had Raised the Shield. Because you're not wielding the shield, you can't use reactions such as {@feat Shield Block} with the shield, but you gain its benefits even when using both of your hands. After 1 minute, the shield drops to the ground, ending its floating effect. While the shield is adjacent to you, you can {@action Interact} to grasp it, ending its floating effect early."
@@ -8861,7 +8957,6 @@
 			"usage": "held in 1 hand",
 			"bulk": "L",
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"The edges of this elaborately engraved steel shield (Hardness 8, HP 32, BT 16) bear tiny glass tiles set in mosaic patterns.",
 				{
@@ -8876,7 +8971,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The shield surrounds you with a bubble of force that protects you from harm, granting you resistance 5 to physical damage for 1 minute. The bubble disappears if you cease holding the shield."
@@ -8902,7 +8997,6 @@
 			"usage": "held in 1 hand",
 			"bulk": 1,
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"The religious symbol of Torag, the forge god\u2014an ornate hammer of dwarven construction\u2014adorns the face of this reinforced steel shield (Hardness 10, HP 24, BT 12). The shield is a religious symbol of Torag.",
 				"You and any adjacent allies have fire resistance 5 while you have the shield raised. When used for a {@feat Shield Block}, the forge warden rings out like the hammer strike of a blacksmith, and the symbol glows as if lit by the fires of a furnace.",
@@ -8911,11 +9005,13 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
-						"command (fire)"
+						"command"
+					],
+					"traits": [
+						"fire"
 					],
 					"trigger": "You use the forge warden to {@feat Shield Block} an adjacent creature's attack and the shield takes damage",
 					"entries": [
@@ -9056,7 +9152,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You swing the frost brand into the area of an ongoing magical fire, and the blade attempts to counteract the fire with a counteract modifier of +27. If it fails, it can't attempt to counteract the same fire again."
@@ -9085,12 +9181,12 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Bomb",
 			"entries": [
-				"The liquid reagents in this vial rapidly absorb heat when exposed to air. A frost vial deals the listed cold damage and cold splash damage. On a hit, the target takes a status penalty to its Speeds until the end of its next turn. Many types of frost vial also grant an item bonus to attack rolls."
+				"The liquid reagents in this vial rapidly absorb heat when exposed to air. A frost vial deals the listed cold damage and cold {@trait splash} damage. On a hit, the target takes a status penalty to its Speeds until the end of its next turn. Many types of frost vial also grant an item bonus to attack rolls."
 			],
 			"generic": "G",
 			"variants": [
@@ -9104,11 +9200,11 @@
 					},
 					"_mod": {
 						"entries": {
-							"with": "A lesser frost vial deals {@damage 1d6} cold damage and 1 cold splash damage. On a hit, the target takes a \u20135-foot status penalty to its Speeds until the end of its next turn."
+							"with": "A lesser frost vial deals {@damage 1d6} cold damage and 1 cold {@trait splash} damage. On a hit, the target takes a \u20135-foot status penalty to its Speeds until the end of its next turn."
 						}
 					},
 					"entries": [
-						"The bomb deals {@damage 1d6} cold damage and 1 cold splash damage, and the target takes a \u20135-foot penalty."
+						"The bomb deals {@damage 1d6} cold damage and 1 cold {@trait splash} damage, and the target takes a \u20135-foot penalty."
 					]
 				},
 				{
@@ -9120,11 +9216,11 @@
 					},
 					"_mod": {
 						"entries": {
-							"with": "A moderate frost vial deals {@damage 2d6} cold damage and 2 cold splash damage. On a hit, the target takes a \u201310-foot status penalty to its Speeds until the end of its next turn. You gain a +1 item bonus to attack rolls."
+							"with": "A moderate frost vial deals {@damage 2d6} cold damage and 2 cold {@trait splash} damage. On a hit, the target takes a \u201310-foot status penalty to its Speeds until the end of its next turn. You gain a +1 item bonus to attack rolls."
 						}
 					},
 					"entries": [
-						"You gain a +1 item bonus to attack rolls, the bomb deals {@damage 2d6} cold damage and 2 cold splash damage, and the target takes a \u201310-foot penalty."
+						"You gain a +1 item bonus to attack rolls, the bomb deals {@damage 2d6} cold damage and 2 cold {@trait splash} damage, and the target takes a \u201310-foot penalty."
 					]
 				},
 				{
@@ -9136,11 +9232,11 @@
 					},
 					"_mod": {
 						"entries": {
-							"with": "A greater frost vial deals {@damage 3d6} cold damage and 3 cold splash damage. On a hit, the target takes a \u201310-foot status penalty to its Speeds until the end of its next turn. You gain a +2 item bonus to attack rolls."
+							"with": "A greater frost vial deals {@damage 3d6} cold damage and 3 cold {@trait splash} damage. On a hit, the target takes a \u201310-foot status penalty to its Speeds until the end of its next turn. You gain a +2 item bonus to attack rolls."
 						}
 					},
 					"entries": [
-						"You gain a +2 item bonus to attack rolls, the bomb deals {@damage 3d6} cold damage and 3 cold splash damage, and the target takes a \u201310-foot penalty."
+						"You gain a +2 item bonus to attack rolls, the bomb deals {@damage 3d6} cold damage and 3 cold {@trait splash} damage, and the target takes a \u201310-foot penalty."
 					]
 				},
 				{
@@ -9152,11 +9248,11 @@
 					},
 					"_mod": {
 						"entries": {
-							"with": "A major frost vial deals {@damage 4d6} cold damage and 4 cold splash damage. On a hit, the target takes a \u201315-foot status penalty to its Speeds until the end of its next turn. You gain a +3 item bonus to attack rolls."
+							"with": "A major frost vial deals {@damage 4d6} cold damage and 4 cold {@trait splash} damage. On a hit, the target takes a \u201315-foot status penalty to its Speeds until the end of its next turn. You gain a +3 item bonus to attack rolls."
 						}
 					},
 					"entries": [
-						"You gain a +3 item bonus to attack rolls, the bomb deals {@damage 4d6} cold damage and 4 cold splash damage, and the target takes a \u201315-foot penalty."
+						"You gain a +3 item bonus to attack rolls, the bomb deals {@damage 4d6} cold damage and 4 cold {@trait splash} damage, and the target takes a \u201315-foot penalty."
 					]
 				}
 			],
@@ -9164,7 +9260,7 @@
 				"entriesMode": "generic",
 				"entries": {
 					"mode": "replaceTxt",
-					"replace": "A frost vial deals the listed cold damage and cold splash damage. On a hit, the target takes a status penalty to its Speeds until the end of its next turn. Many types of frost vial also grant an item bonus to attack rolls."
+					"replace": "A frost vial deals the listed cold damage and cold {@trait splash} damage. On a hit, the target takes a status penalty to its Speeds until the end of its next turn. Many types of frost vial also grant an item bonus to attack rolls."
 				}
 			}
 		},
@@ -9185,14 +9281,14 @@
 				"amount": 100
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				],
 				"requirements": "You're a master in {@skill Intimidation}.",
 				"trigger": "You attack an adjacent creature and haven't rolled your attack roll"
@@ -9221,7 +9317,7 @@
 			],
 			"category": "Ammunition",
 			"entries": [
-				"Ghost ammunition is cool to the touch. This ammunition has the benefits of the ghost touch property rune and can fly through any obstacle except those that can block incorporeal creatures or effects. Though the ammunition penetrates barriers and ignores all cover, the target still benefits from the flat check from being {@condition concealed} or {@condition hidden}. You still can't target an {@condition undetected} creature without guessing.",
+				"Ghost ammunition is cool to the touch. This ammunition has the benefits of the {@item ghost touch} property rune and can fly through any obstacle except those that can block incorporeal creatures or effects. Though the ammunition penetrates barriers and ignores all cover, the target still benefits from the flat check from being {@condition concealed} or {@condition hidden}. You still can't target an {@condition undetected} creature without guessing.",
 				"After it is launched, the ammunition vanishes into mist.",
 				"However, in the dead of the night {@dice 1d4} days later, it reappears in the last quiver or other container it was taken from."
 			]
@@ -9243,11 +9339,11 @@
 				"amount": 1800
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -9280,7 +9376,7 @@
 				"Weapon"
 			],
 			"entries": [
-				"The weapon can harm creatures without physical form. A ghost touch weapon is particularly effective against incorporeal creatures, which almost always have a specific weakness to ghost touch weapons. Incorporeal creatures can touch, hold, and wield ghost touch weapons (unlike most physical objects)."
+				"The weapon can harm creatures without physical form. A {@item ghost touch} weapon is particularly effective against incorporeal creatures, which almost always have a specific weakness to {@item ghost touch} weapons. Incorporeal creatures can touch, hold, and wield {@item ghost touch} weapons (unlike most physical objects)."
 			]
 		},
 		{
@@ -9327,11 +9423,11 @@
 			"bulk": "L",
 			"activate": {
 				"activity": {
-					"number": 3,
+					"number": 2,
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -9339,7 +9435,6 @@
 				"Giant centipede venom causes severe muscle stiffness.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 17,
 					"savingThrow": "Fortitude",
 					"maxDuration": "6 rounds",
@@ -9387,7 +9482,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -9395,7 +9490,6 @@
 				"Scorpion venom is excruciating and its effects are somewhat debilitating.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 22,
 					"savingThrow": "Fortitude",
 					"maxDuration": "6 rounds",
@@ -9443,7 +9537,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -9451,7 +9545,6 @@
 				"Giant wasp venom interferes with a victim's movement.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 25,
 					"savingThrow": "Fortitude",
 					"maxDuration": "6 rounds",
@@ -9553,6 +9646,7 @@
 				"amount": 340
 			},
 			"usage": "worn gloves",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"An item can be stored inside these supple leather gloves, held in an extradimensional space. When an item is inside the glove, an image of the item appears as a simple, stitched pattern on the back of each glove.",
@@ -9565,7 +9659,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"requirements": "No item is stored in the gloves",
 					"entries": [
@@ -9577,11 +9671,10 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"requirements": "An item is stored in the gloves, and you have a free hand",
 					"entries": [
@@ -9602,6 +9695,7 @@
 				"transmutation"
 			],
 			"usage": "worn eyepiece",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"The opaque crystal lenses of these sleek goggles do not obscure vision, but rather enhance it. While wearing the goggles, you gain a +1 item bonus to {@skill Perception} checks involving sight.",
@@ -9613,11 +9707,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"Rotating the lenses 90 degrees, you gain {@ability darkvision} for 1 hour."
@@ -9776,7 +9870,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -9784,7 +9878,6 @@
 				"The opaque white sap from the graveroot shrub clouds the mind.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 19,
 					"savingThrow": "Fortitude",
 					"maxDuration": "4 rounds",
@@ -9868,11 +9961,11 @@
 				"amount": 55
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -9991,10 +10084,11 @@
 				"transmutation"
 			],
 			"usage": "worn gloves",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"As you invest these embroidered strips of cloth, you must meditate and slowly wrap them around your hands. These handwraps have weapon runes etched into them to give your unarmed attacks the benefits of those runes, making your unarmed attacks work like magic weapons. For example, +1 striking handwraps of mighty blows would give you a +1 item bonus to attack rolls with your unarmed attacks and increase the damage of your unarmed attacks from one weapon die to two (normally {@dice 2d4} instead of {@dice 1d4}, but if your fists have a different weapon damage die or you have other unarmed attacks, use two of that die size instead)",
-				"You can upgrade, add, and transfer runes to and from the handwraps just as you would for a weapon, and you can attach talismans to the handwraps. Treat the handwraps as melee weapons of the brawling group with light Bulk for these purposes. Property runes apply only when they would be applicable to the unarmed attack you're using. For example, a property that must be applied to a slashing weapon wouldn't function when you attacked with a fist, but you would gain its benefits if you attacked with a claw or some other slashing unarmed attack.",
+				"You can upgrade, add, and transfer runes to and from the handwraps just as you would for a weapon, and you can attach talismans to the handwraps. Treat the handwraps as melee weapons of the {@group brawling} group with light Bulk for these purposes. Property runes apply only when they would be applicable to the unarmed attack you're using. For example, a property that must be applied to a slashing weapon wouldn't function when you attacked with a fist, but you would gain its benefits if you attacked with a claw or some other slashing unarmed attack.",
 				"The entries below list the most typical combinations of fundamental runes."
 			],
 			"generic": "G",
@@ -10067,6 +10161,7 @@
 				"magical"
 			],
 			"usage": "worn headwear",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This ordinary-looking hat allows you to cloak yourself in illusions.",
@@ -10075,15 +10170,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "minute",
-						"entry": "1 minute"
+						"unit": "minute"
 					},
 					"components": [
-						"(Interact)"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The hat casts a 1st-level {@spell illusory disguise} spell on you.",
@@ -10127,6 +10221,7 @@
 				"invested"
 			],
 			"usage": "worn headwear",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This hat comes in many forms, such as a colorful turban or a pointy hat with a brim, and can bear symbols or runes. It grants you a +1 item bonus to {@skill Arcana} checks and allows you to cast the {@spell prestidigitation} cantrip as an arcane innate spell."
@@ -10173,6 +10268,7 @@
 				"amount": 15000
 			},
 			"usage": "worn circlet",
+			"bulk": "\u2014",
 			"category": "Apex",
 			"entries": [
 				"This simple cloth headband remains pristine and clean at all times, no matter the circumstances. When you invest the headband, you either increase your Wisdom score by 2 or increase it to 18, whichever would give you a higher score.",
@@ -10188,7 +10284,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"When you are considering a course of action, you get a gut feeling about whether it's a good idea. You gain the effects of an {@spell augury} spell, except that you receive the result from your own instincts rather than an external source."
@@ -10199,15 +10295,17 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
-						"envision (fortune)"
+						"envision"
+					],
+					"traits": [
+						"fortune"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "You fail a saving throw against an effect that makes you {@condition confused}, {@condition fascinated}, or {@condition stupefied}",
 					"entries": [
@@ -10240,11 +10338,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You can soothe a willing, living, adjacent creature, restoring {@dice 2d6+7} Hit Points to that creature. This is a {@trait positive} {@trait healing} effect. You can't harm undead with this healing."
@@ -10286,10 +10384,11 @@
 				"amount": 5
 			},
 			"bulk": 1,
-			"hands": 2,
+			"hands": "1 or 2*",
 			"category": "Adventuring Gear",
 			"entries": [
-				"This kit of bandages, herbs, and suturing tools is necessary for {@skill Medicine} checks to {@action Administer First Aid}, {@action Treat Disease}, {@action Treat Poison}, or {@action Treat Wounds}. If you wear your healer's tools, you can draw and replace them as part of the action that uses them."
+				"This kit of bandages, herbs, and suturing tools is necessary for {@skill Medicine} checks to {@action Administer First Aid}, {@action Treat Disease}, {@action Treat Poison}, or {@action Treat Wounds}. If you wear your healer's tools, you can draw and replace them as part of the action that uses them.",
+				"{@note *You can use the set of tools with one hand if you are wearing it.}"
 			],
 			"generic": "G",
 			"variants": [
@@ -10315,6 +10414,11 @@
 			"name": "Healing Potion",
 			"source": "CRB",
 			"page": 563,
+			"otherSources": {
+				"Reprinted": [
+					"BB|52"
+				]
+			},
 			"type": "Item",
 			"level": "1+",
 			"traits": [
@@ -10332,7 +10436,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -10455,7 +10559,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -10463,7 +10567,6 @@
 				"Concentrated hemlock is a particularly deadly toxin that halts muscle action\u2014including that of the victim's heart.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 40,
 					"savingThrow": "Fortitude",
 					"onset": "30 minutes",
@@ -10528,6 +10631,7 @@
 			"price": {
 				"amount": 0
 			},
+			"bulk": "\u2014",
 			"hands": 1,
 			"category": "Adventuring Gear",
 			"entries": [
@@ -10561,15 +10665,15 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
 						"command"
 					],
+					"trigger": "You critically succeed at an attack roll against an {@trait evil} creature with the weapon",
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You regain HP equal to double the evil creature's level. This is a {@trait good}, {@trait positive}, {@trait healing} effect."
@@ -10612,7 +10716,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You command the sword and point it at a creature you can see. The sword casts detect alignment to detect evil, but this targets only the selected creature instead of detecting in an area.",
@@ -10638,7 +10742,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"requirements": "You hit a creature using the holy avenger on your previous action",
 					"entries": [
@@ -10664,6 +10768,7 @@
 				"positive"
 			],
 			"usage": "held in 1 hand",
+			"bulk": "\u2014",
 			"category": "Held",
 			"entries": [
 				"This strand of ordinary-looking prayer beads glows with a soft light and becomes warm to the touch the first time you cast a divine spell while holding it. When you do, the prayer beads become attuned to your deity, changing their form and iconography to prominently incorporate your deity's religious symbol and iconography. The beads don't transform or function for an evil spellcaster.",
@@ -10715,6 +10820,7 @@
 			"type": "Item",
 			"level": 1,
 			"traits": [
+				"necromancy",
 				"consumable",
 				"divine",
 				"good",
@@ -10732,13 +10838,13 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Consumable",
 			"entries": [
 				"This vial contains water blessed by a good deity. You activate a vial of holy water by throwing it as a {@action Strike}. It's a simple thrown weapon with a range increment of 20 feet. Unlike an alchemical bomb, it doesn't add the {@trait manipulate} trait to the attack made with it.",
-				"Holy water deals {@damage 1d6} good damage and 1 good splash damage. It damages only fiends, undead, and creatures that have a weakness to good damage."
+				"Holy water deals {@damage 1d6} good damage and 1 good {@trait splash} damage. It damages only fiends, undead, and creatures that have a weakness to good damage."
 			]
 		},
 		{
@@ -10768,11 +10874,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "round",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"When you activate the horn by blowing into it with destructive intent, you create a blast note targeting one creature within 30 feet. The blast deals {@damage 3d6} sonic damage. (DC 28 basic Fortitude save)."
@@ -10786,11 +10892,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You can blow even louder to create an intense blast wave in a 30-foot cone that deals {@damage 8d6} sonic damage. Each creature attempts a DC 28 Fortitude save with the following effects.",
@@ -10834,11 +10940,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You activate the horn by blowing deeply into it, causing it to issue forth a low blast and cast a 2nd-level {@spell obscuring mist} spell. You can {@action Dismiss} the mist at any time by blowing a second note on the horn using an {@action Interact} action."
@@ -10920,11 +11026,11 @@
 				"amount": 6
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -10961,7 +11067,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -10969,7 +11075,6 @@
 				"This venom erodes its target's defenses, aiding the spider in securing prey.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 21,
 					"savingThrow": "Fortitude",
 					"maxDuration": "6 rounds",
@@ -11020,7 +11125,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You push the button to anchor the rod in place. It doesn't move, defying gravity if need be. If the button is pushed again, the rod deactivates, ending the anchoring magic. While anchored, the rod can be moved only if 8,000 pounds of pressure are applied to it or if a creature uses {@skill Athletics} to {@action Force Open} the rod with a DC of 40 (though most intelligent creatures can just push the button to release the rod)."
@@ -11073,7 +11178,6 @@
 			"usage": "held in 1 hand",
 			"bulk": 1,
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"An indestructible shield is a high-grade adamantine shield (Hardness 13, HP 90) that can withstand just about any damage. It can be damaged only by a {@spell disintegrate} spell (roll damage as if against a creature that failed its save) or by an artifact tied to destruction, such as a sphere of annihilation."
 			],
@@ -11112,11 +11216,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You command the apparatus to magically jury-rig an item you hold or that's within 5 feet of you. The item is repaired, as a 3rd-level {@spell mending} spell. This lasts for 10 minutes, after which the item returns to its previous state of disrepair unless you've Repaired it before then."
@@ -11148,7 +11252,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -11208,7 +11312,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You toss the cube on the ground, and it immediately unfolds into an adamantine fortress.",
@@ -11251,7 +11355,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"Whispering the command word, you become {@condition invisible} for 1 minute, gaining the effects of a 2nd-level {@spell invisibility} spell."
@@ -11310,7 +11414,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -11335,20 +11439,21 @@
 				"amount": 50
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 2,
 					"unit": "action"
 				},
 				"components": [
-					"Knockdown"
+					"{@feat Knockdown}"
 				],
 				"requirements": "You are an expert with the affixed weapon."
 			},
 			"category": "Talisman",
 			"entries": [
-				"This cube of blackened iron is affixed to a weapon with an iron chain. When you activate the cube, you use Knockdown, as the fighter feat (page 146)",
-				"If you have the Knockdown feat, ignore its normal size restrictions."
+				"This cube of blackened iron is affixed to a weapon with an iron chain. When you activate the cube, you use {@feat Knockdown}, as the fighter feat.",
+				"If you have the {@feat Knockdown} feat, ignore its normal size restrictions."
 			]
 		},
 		{
@@ -11368,12 +11473,15 @@
 				"amount": 900
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
 					"unit": "action"
 				},
-				"components": "Brutal Finish"
+				"components": [
+					"{@feat Brutal Finish}"
+				]
 			},
 			"category": "Talisman",
 			"entries": [
@@ -11399,18 +11507,21 @@
 				"amount": 400
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
 					"unit": "action"
 				},
-				"components": "Certain Strike",
+				"components": [
+					"{@feat Certain Strike}"
+				],
 				"requirements": "You are a master with the affixed weapon."
 			},
 			"category": "Talisman",
 			"entries": [
-				"This small iron band has a shifting weight that helps equalize the affixed weapon's balance. When you activate it, you use Certain {@action Strike}, as the fighter feat (page 150). You must meet the normal requirements, including those of the {@trait press} trait.",
-				"If you have the Certain {@action Strike} feat, the failure effect increases to deal the weapon's normal damage."
+				"This small iron band has a shifting weight that helps equalize the affixed weapon's balance. When you activate it, you use {@feat Certain Strike}, as the fighter feat. You must meet the normal requirements, including those of the {@trait press} trait.",
+				"If you have the {@feat Certain Strike} feat, the failure effect increases to deal the weapon's normal damage."
 			]
 		},
 		{
@@ -11430,11 +11541,11 @@
 				"amount": 175
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -11466,6 +11577,7 @@
 				"amount": 100
 			},
 			"usage": "affixed to a melee weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
@@ -11499,11 +11611,11 @@
 				"amount": 6
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"command"
@@ -11539,7 +11651,10 @@
 					"number": 2,
 					"unit": "action"
 				},
-				"components": "command, Interact"
+				"components": [
+					"command",
+					"{@action Interact}"
+				]
 			},
 			"category": "Consumable",
 			"entries": [
@@ -11570,7 +11685,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -11703,7 +11818,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -11854,7 +11969,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -11912,7 +12027,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -11920,7 +12035,6 @@
 				"Lethargy poison is commonly used in hit-and-run tactics by drow and others who want their victims alive; the ambusher retreats until the poison sets in and the victim falls {@condition unconscious}. Further exposure to lethargy poison does not require the target to attempt additional saving throws; only failing an saving throw against an ongoing exposure can progress its stage.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 18,
 					"savingThrow": "Fortitude",
 					"maxDuration": "4 hours",
@@ -11942,7 +12056,7 @@
 						},
 						{
 							"stage": 4,
-							"entry": "{@condition unconscious} with no {@skill Perception} check to wake up .",
+							"entry": "{@condition unconscious} with no {@skill Perception} check to wake up.",
 							"duration": "{@dice 1d4} hours"
 						}
 					]
@@ -11973,7 +12087,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -11981,7 +12095,6 @@
 				"Dust salvaged from the remains of a destroyed lich has paralytic properties that make it a valuable poison.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 28,
 					"savingThrow": "Fortitude",
 					"onset": "10 minutes",
@@ -12034,7 +12147,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You lift an object of up to 8 Bulk as though it were weightless. This requires two hands, and if the object is locked or otherwise held in place, you can attempt to {@action Force Open||Force it Open} using {@skill Athletics} as part of this activation. The object still has its full weight and Bulk for all other purposes\u2014you just ignore that weight. The effect lasts until the end of your next turn."
@@ -12059,7 +12172,6 @@
 			"usage": "held in 1 hand",
 			"bulk": 1,
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"This steel shield (Hardness 6, HP 36, BT 18) is forged into the shape of a roaring lion's head.",
 				"The lion's head functions as +1 striking shield boss that can't be removed from the shield.",
@@ -12071,11 +12183,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Raise a Shield"
+						"{@action Raise a Shield}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You animate the lion's head. You Raise the Shield and make a melee {@action Strike} with it as part of the same action. The shield's biting maw is a martial melee weapon that deals {@damage 2d6} piercing damage and has the deadly {@dice 1d6} trait; it can't be enhanced by runes. The shield remains animated for 1 minute, during which time you can {@action Strike} with it each time you Raise the Shield, as well as with a {@action Strike} action."
@@ -12089,6 +12201,7 @@
 			"page": 288,
 			"equipment": true,
 			"type": "Item",
+			"bulk": "\u2014",
 			"hands": 2,
 			"category": "Adventuring Gear",
 			"entries": [
@@ -12172,7 +12285,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "You miss on a {@action Strike} with the luck blade",
 					"entries": [
@@ -12230,11 +12343,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You play the instrument, causing it to cast a DC 17 {@spell charm} spell."
@@ -12301,7 +12414,7 @@
 						"{@action Cast a Spell}"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day",
 						"overcharge": true
 					},
@@ -12409,6 +12522,7 @@
 				"coin": "gp",
 				"amount": 40
 			},
+			"bulk": "\u2014",
 			"hands": 1,
 			"category": "Adventuring Gear",
 			"entries": [
@@ -12440,15 +12554,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
 						"envision"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "You are hit or critically hit with an attack, but damage hasn't been rolled yet",
 					"entries": [
@@ -12482,7 +12595,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -12490,7 +12603,6 @@
 				"Malyass root paste sees use to impede opponents in athletic competitions, in addition to espionage and tracking.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 26,
 					"savingThrow": "Fortitude",
 					"onset": "1 minute",
@@ -12516,6 +12628,7 @@
 			"page": 288,
 			"equipment": true,
 			"type": "Item",
+			"bulk": "\u2014",
 			"hands": 2,
 			"category": "Adventuring Gear",
 			"entries": [
@@ -12622,7 +12735,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Treat Poison or 8 hours (Treat Disease)"
+						"{@action Treat Poison} or 8 hours ({@action Treat Disease})"
 					],
 					"entries": [
 						"You can activate the tools when you use them to {@action Treat Poison} in order to produce the effects of neutralize poison, or when you {@action Treat Disease} in order to produce the effects of remove disease. Once these medicines have been used to treat a patient's poison or disease, they can't be used again to treat the same affliction for that patient."
@@ -12699,11 +12812,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You dig furiously with the mattock to non-magically replicate the effects of an {@spell earthquake} spell."
@@ -12732,11 +12845,11 @@
 				"amount": 525
 			},
 			"usage": "affixed to a shield or weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"command"
@@ -12792,8 +12905,8 @@
 						{
 							"type": "list",
 							"items": [
-								"{@bold Cantrip} daze",
-								"{@bold 1st} mindlink, phantom pain"
+								"{@bold Cantrip} {@spell daze}",
+								"{@bold 1st} {@spell mindlink}, {@spell phantom pain}"
 							]
 						}
 					]
@@ -12809,8 +12922,8 @@
 						{
 							"type": "list",
 							"items": [
-								"{@bold 2nd} paranoia",
-								"{@bold 3rd} hypercognition, phantom pain"
+								"{@bold 2nd} {@spell paranoia}",
+								"{@bold 3rd} {@spell hypercognition}, {@spell phantom pain}"
 							]
 						}
 					]
@@ -12826,8 +12939,8 @@
 						{
 							"type": "list",
 							"items": [
-								"{@bold 4th} modify memory, telepathy",
-								"{@bold 5th} phantom pain, synaptic pulse, synesthesia"
+								"{@bold 4th} {@spell modify memory}, {@spell telepathy}",
+								"{@bold 5th} {@spell phantom pain}, {@spell synaptic pulse}, {@spell synesthesia}"
 							]
 						}
 					]
@@ -12866,11 +12979,11 @@
 				"amount": 7
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -12895,6 +13008,7 @@
 				"magical"
 			],
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This silver signet ring changes to match the insignia of a lord or organization you serve (or your own face, if you serve no one else). It grants you a +2 item bonus to {@skill Diplomacy} checks and lets you cast {@spell message} as an arcane innate spell at will.",
@@ -12903,15 +13017,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "minute",
-						"entry": "1 minute"
+						"unit": "minute"
 					},
 					"components": [
-						"(envision)"
+						"envision"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The ring casts animal messenger to your specification. The animal is a magical creature that springs from the ring, and its appearance suits the iconography or heraldry of the lord or organization represented by the ring."
@@ -12967,7 +13080,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -12975,7 +13088,6 @@
 				"Mindfog mist can be used to undermine spellcasters, as its effect on a victim's mental faculties are swift and powerful.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 35,
 					"savingThrow": "Fortitude",
 					"onset": "1 round",
@@ -13010,6 +13122,7 @@
 				"amount": 1,
 				"coin": "gp"
 			},
+			"bulk": "\u2014",
 			"hands": 1,
 			"category": "Adventuring Gear",
 			"entries": []
@@ -13035,7 +13148,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -13265,7 +13378,7 @@
 			],
 			"usage": "worn armor",
 			"bulk": "varies by armor",
-			"category": "Armor",
+			"category": "Material",
 			"entries": [
 				"Mithral armor is 1 Bulk lighter than normal (or light Bulk if its normal Bulk is 1, with no effect on armor that normally has light Bulk). It's easier to wear than normal metal armor, reducing the Strength score necessary to ignore its check penalty by 2 and reducing its Speed penalty by 5 feet."
 			],
@@ -13309,7 +13422,6 @@
 			],
 			"usage": "varies by shield",
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"Mithral shields are 1 Bulk lighter than normal (or light Bulk if their normal Bulk is 1, with no effect on a shield that normally has light Bulk). When used for a shield bash, they are treated as silver weapons."
 			],
@@ -13444,13 +13556,14 @@
 				"amount": 6
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
 					"unit": "action"
 				},
 				"components": [
-					"Climb"
+					"{@action Climb}"
 				],
 				"requirements": "You are trained in {@skill Athletics}"
 			},
@@ -13488,11 +13601,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You touch the stitched image of the new moon on the armor's collar and suppress the {@condition dazzled} condition for 1 minute."
@@ -13513,6 +13626,7 @@
 				"amount": 1,
 				"coin": "cp"
 			},
+			"bulk": "\u2014",
 			"hands": 1,
 			"category": "Adventuring Gear",
 			"entries": []
@@ -13534,6 +13648,7 @@
 				"amount": 175
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
@@ -13567,11 +13682,11 @@
 				"amount": 66
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"command"
@@ -13654,6 +13769,7 @@
 				"magical"
 			],
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This string of beads appears to be a hemp string with lustrous red beads of various sizes hanging from it. When activated, it briefly appears in its true form: a golden chain with golden spheres attached by fine threads.",
@@ -13666,7 +13782,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You detach a sphere from the necklace, causing it to glow with orange light. After you activate a sphere, if you or anyone else hurls it (an {@action Interact} action with the ranged trait), it detonates as a fireball where it lands. Your toss can place the center of the {@spell fireball} anywhere within 70 feet, though at the GM's discretion you might need to make an attack roll if the throw is unusually challenging. If no one hurls the sphere by the start of your next turn, it turns into a non-magical red bead."
@@ -13827,7 +13943,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -13859,7 +13975,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -13867,7 +13983,6 @@
 				"Concentrated sap of stinging weeds makes an effective toxin.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 27,
 					"savingThrow": "Fortitude",
 					"onset": "1 minute",
@@ -13916,7 +14031,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -13924,7 +14039,6 @@
 				"Purportedly sourced from any number of outlandish locales, nightmare vapor is most often created by boiling the sweat collected from humanoids caught in the throes of terrible nightmares.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 36,
 					"savingThrow": "Fortitude",
 					"onset": "1 round",
@@ -14009,7 +14123,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -14028,6 +14142,7 @@
 				"amount": 1,
 				"coin": "cp"
 			},
+			"bulk": "\u2014",
 			"hands": 2,
 			"category": "Adventuring Gear",
 			"entries": [
@@ -14059,7 +14174,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -14092,7 +14207,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -14147,7 +14262,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -14179,7 +14294,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -14215,7 +14330,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -14299,11 +14414,11 @@
 				"amount": 7
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -14452,7 +14567,7 @@
 			],
 			"usage": "worn armor",
 			"bulk": "varies by armor",
-			"category": "Armor",
+			"category": "Material",
 			"entries": [
 				"Orichalcum armor can be etched with four magic property runes instead of three due to the magical empowerment of orichalcum. If you are wearing armor made of orichalcum, the armor grants you insights into the future, granting you a +1 circumstance bonus to initiative rolls."
 			],
@@ -14484,7 +14599,6 @@
 			],
 			"usage": "varies by shield",
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"Orichalcum shields' time-bending properties are particularly useful for keeping them intact. The first time each day an orichalcum shield would be destroyed, it is instead left with 1 Hit Point and the {@condition broken} condition."
 			],
@@ -14567,11 +14681,11 @@
 				"amount": 3
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -14609,7 +14723,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -14630,6 +14744,7 @@
 				"occult"
 			],
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This amulet is hollow and shaped in the form of an unblinking eye. Its cavity typically holds some fragment of occult text. While wearing the pendant, you gain a +1 item bonus to {@skill Occultism} checks, and you can cast the {@spell guidance} cantrip as an occult innate spell."
@@ -14680,7 +14795,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -14707,6 +14822,7 @@
 				"magical"
 			],
 			"usage": "worn mask",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"Despite covering the entire face, this alabaster mask does not hinder vision or other senses. Wearing the mask grants a +1 item bonus to {@skill Performance} checks while acting, orating, performing comedy, or singing.",
@@ -14771,17 +14887,19 @@
 					"number": 1,
 					"unit": "action"
 				},
-				"components": "Interact or 1 or more days"
+				"components": [
+					"{@action Interact} or 1 or more days"
+				]
 			},
 			"category": "Tool",
 			"entries": [
-				"An alchemist with the {@action Craft} Philosopher's Stone feat can create a philosopher's stone once per month by spending 1 batch of infused reagents during their daily preparations using the advanced alchemy class feature. This is the only way to create a philosopher's stone.",
-				"At a glance, a philosopher's stone appears to be an ordinary, sooty piece of natural rock. Breaking the rock open with a {@action Force Open} action (DC 35) reveals a cavity at the stone's heart. The cavity is lined with a rare type of quicksilver that can transmute base metals into precious metals or create an elixir of rejuvenation (page 548)",
+				"An {@class alchemist} with the {@feat Craft Philosopher's Stone} feat can create a philosopher's stone once per month by spending 1 batch of infused reagents during their daily preparations using the advanced alchemy class feature. This is the only way to create a philosopher's stone.",
+				"At a glance, a philosopher's stone appears to be an ordinary, sooty piece of natural rock. Breaking the rock open with a {@action Force Open} action (DC 35) reveals a cavity at the stone's heart. The cavity is lined with a rare type of quicksilver that can transmute base metals into precious metals or create an {@item elixir of rejuvenation}.",
 				"To use the quicksilver, you must be legendary in {@skill Crafting} and have the {@feat Alchemical Crafting} feat. You can then use the stone's quicksilver for one of two effects:",
 				{
 					"type": "list",
 					"items": [
-						"You can apply the stone's quicksilver to an infused true elixir of life using an {@action Interact} action. This turns the elixir into an infused elixir of rejuvenation instantaneously. This doesn't require any crafting time or additional materials.",
+						"You can apply the stone's quicksilver to an {@trait infused} {@item true elixir of life} using an {@action Interact} action. This turns the elixir into an {@trait infused} {@item elixir of rejuvenation} instantaneously. This doesn't require any crafting time or additional materials.",
 						"You can spend up to a month of downtime applying the quicksilver either to iron to create silver or to lead to create gold. Treat this as a 20th-level task to {@action Earn Income} using {@skill Crafting}, except that you create 500 gp worth of your chosen metal per day on a success or 750 gp worth per day on a critical success."
 					]
 				}
@@ -14815,7 +14933,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You ask for guidance about a particular course of action, gaining the effects of an {@spell augury} spell."
@@ -14859,6 +14977,7 @@
 				"amount": 1,
 				"coin": "cp"
 			},
+			"bulk": "\u2014",
 			"hands": 1,
 			"category": "Adventuring Gear",
 			"entries": [
@@ -14919,7 +15038,7 @@
 					"components": [
 						"command",
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You place the miniature theater on the ground, filling it with any set dressing and up to six figures you choose. Then, you tap a rhythm on the miniature, causing it to grow into a modest stage 20 feet wide and 15 feet deep. It's dressed with the decorations you selected, and simple mannequins wear the costumes you chose. A wooden proscenium arch frames the stage, and simple curtains along the sides conceal the wings.",
@@ -14953,12 +15072,11 @@
 					"style": "compact",
 					"activity": {
 						"number": 10,
-						"unit": "minute",
-						"entry": "10 minutes"
+						"unit": "minute"
 					},
 					"components": [
-						"(envision",
-						"Interact)"
+						"envision",
+						"{@action Interact}"
 					],
 					"entries": [
 						"As you flip through the book, you think about a broad topic you want to know more about. Choose one skill: {@skill Arcana}, {@skill Crafting}, {@skill Medicine}, {@skill Nature}, {@skill Occultism}, {@skill Religion}, {@skill Society}, or a single subcategory of {@skill Lore}. The book's pages fill with information about that skill, though only you can see the information. While the pages are full, you can spend an {@action Interact} action perusing the book just before attempting a check to {@action Recall Knowledge} with the chosen skill. This grants you a +3 item bonus to the check, and if you roll a critical failure, you get a failure instead.",
@@ -14985,11 +15103,11 @@
 				"amount": 4
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -15022,7 +15140,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -15065,6 +15183,11 @@
 			"name": "Potion of Leaping",
 			"source": "CRB",
 			"page": 563,
+			"otherSources": {
+				"Reprinted": [
+					"BB|52"
+				]
+			},
 			"type": "Item",
 			"level": 5,
 			"traits": [
@@ -15085,7 +15208,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -15117,7 +15240,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -15129,6 +15252,11 @@
 			"name": "Potion of Resistance",
 			"source": "CRB",
 			"page": 563,
+			"otherSources": {
+				"Reprinted": [
+					"BB|52"
+				]
+			},
 			"type": "Item",
 			"level": "6+",
 			"traits": [
@@ -15145,7 +15273,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -15231,7 +15359,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -15295,7 +15423,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -15327,7 +15455,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -15339,6 +15467,11 @@
 			"name": "Potion of Water Breathing",
 			"source": "CRB",
 			"page": 564,
+			"otherSources": {
+				"Reprinted": [
+					"BB|53"
+				]
+			},
 			"type": "Item",
 			"level": 3,
 			"traits": [
@@ -15359,7 +15492,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -15378,6 +15511,7 @@
 				"transmutation"
 			],
 			"usage": "held in 1 hand",
+			"bulk": "\u2014",
 			"category": "Held",
 			"entries": [
 				"This sprig of berry-festooned holly and mistletoe doesn't wilt or rot. It can be used as a primal focus, and it also grants the creature holding it a +1 item bonus to {@skill Nature} checks.",
@@ -15389,12 +15523,12 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "minute",
 						"interval": 10,
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You squeeze juice from one of the berries and smear it onto a club or staff to cast {@spell shillelagh} upon it."
@@ -15408,11 +15542,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You can twine the sprig around the wrist of one hand and touch a tree to cast {@spell tree shape} upon yourself, except instead of a becoming a tree, you become a vine on the touched tree."
@@ -15467,7 +15601,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -15475,7 +15609,6 @@
 				"Venom from enormous purple worms leaves a victim weakened.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 32,
 					"savingThrow": "Fortitude",
 					"maxDuration": "6 rounds",
@@ -15520,7 +15653,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -15639,7 +15772,6 @@
 			"usage": "held in 1 hand",
 			"bulk": "L",
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"This high-grade silver buckler (Hardness 6, HP 24, BT 12) is polished to a mirrorlike sheen. The shield functions as a spellguard shield (see below) that can also reflect spells.",
 				{
@@ -15647,15 +15779,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
 						"command"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"requirements": "The reflecting shield is raised",
 					"entries": [
@@ -15762,6 +15893,7 @@
 				"coin": "sp",
 				"amount": 1
 			},
+			"bulk": "\u2014",
 			"category": "Adventuring Gear",
 			"entries": [
 				"If you've crafted a large number of disguises, you can replenish your cosmetics supply with replacement cosmetics suitable for the type of your {@item disguise kit}."
@@ -15795,6 +15927,7 @@
 			"page": 288,
 			"equipment": true,
 			"type": "Item",
+			"bulk": "\u2014",
 			"category": "Adventuring Gear",
 			"entries": [
 				"If your {@item thieves' tools (generic)||thieves' tools} are broken, you can repair them by replacing the lock picks with replacement picks appropriate to your tools; this doesn't require using the {@action Repair} action."
@@ -15896,6 +16029,11 @@
 			"name": "Retribution Axe",
 			"source": "CRB",
 			"page": 602,
+			"otherSources": {
+				"Reprinted": [
+					"BB|51"
+				]
+			},
 			"type": "Item",
 			"level": 3,
 			"traits": [
@@ -15910,7 +16048,7 @@
 			"bulk": 2,
 			"category": "Weapon",
 			"entries": [
-				"The blade of this +1 greataxe bears a design of a human skull. Whenever a creature damages you with an attack, the skull changes its appearance to look like the face of that creature. You gain a +2 circumstance bonus to your next damage roll against that creature before the end of your next turn.",
+				"The blade of this {@runeItem greataxe||+1 weapon potency|} bears a design of a human skull. Whenever a creature damages you with an attack, the skull changes its appearance to look like the face of that creature. You gain a +2 circumstance bonus to your next damage roll against that creature before the end of your next turn.",
 				"Because the face reshapes each time you're damaged, you get the additional damage only if you attack the creature that damaged you most recently."
 			]
 		},
@@ -15978,6 +16116,7 @@
 				"amount": 1750
 			},
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"Claw-like prongs on his thick golden band bears extend to dig deep into sheer surfaces when you are Climbing. This ring grants you a climb Speed equal to half your land Speed.",
@@ -16001,6 +16140,7 @@
 				"amount": 925
 			},
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This ornate silver ring bears two competing geometric designs of brightly colored and wildly clashing inlaid gemstones. A spellcaster can cast a single spell into this ring as long as no spell is currently stored within, expending the normal time, costs, and so forth to {@action Cast a Spell||Cast the Spell}. The spell's effect doesn't occur; the spell's power is instead stored within the ring.",
@@ -16010,8 +16150,7 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
 						"envision"
@@ -16050,6 +16189,7 @@
 				"magical"
 			],
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This ring grants you resistance 5 against one type of energy damage: acid, cold, electricity, fire, or sonic. Each ring is crafted to protect against a particular type of energy damage, and its design usually embodies the type of energy it protects the wearer from in some way. For instance, a ring of fire resistance might be capped with a ruby, whereas a ring of cold resistance features a sapphire instead."
@@ -16106,6 +16246,7 @@
 				"amount": 850
 			},
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This plain silver ring has an almost oily sheen. While wearing the ring, you gain a +2 item bonus to {@skill Deception} checks.",
@@ -16117,11 +16258,11 @@
 						"unit": "action"
 					},
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"Snapping your fingers on the hand that wears the ring causes the ring to cast {@spell glibness} on you with no visual manifestations of a spell being cast."
@@ -16141,6 +16282,7 @@
 				"magical"
 			],
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This ring seems like simple tarnished brass, but it enhances your curiosity about traps and devices of all kinds. You can use an {@action Interact} action to pull a set of {@item thieves' tools} from the ring. These tools appear in your hand and fold back into the ring if they would leave your possession. They grant you a +2 item bonus to {@skill Thievery} checks to {@action Disable a Device} and to {@action Pick a Lock}, and the ring's insights grant you the same bonus to {@skill Crafting} checks to {@action Craft} and {@action Repair} snares and traps.",
@@ -16149,15 +16291,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 10,
-						"unit": "minute",
-						"entry": "10 minutes"
+						"unit": "minute"
 					},
 					"components": [
-						"(Interact)"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You create a 4th-level {@spell glyph of warding} containing fireball. You can have only one glyph of warding from a ring of maniacal devices active at a time, even if you have multiple rings, and the spell ends if you lose your investiture in the ring."
@@ -16205,6 +16346,7 @@
 				"amount": 67000
 			},
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This golden ring has three diamonds set into its face.",
@@ -16213,8 +16355,7 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
 						"envision"
@@ -16243,6 +16384,7 @@
 				"amount": 325
 			},
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This polished wooden ring constantly refreshes your body and mind. You don't need to eat or drink while wearing it, and you need only 2 hours of sleep per day to gain the benefits of 8 hours of sleep. A ring of sustenance doesn't function until it's been worn and invested continuously for a week. Removing it resets this interval."
@@ -16264,6 +16406,7 @@
 				"amount": 1750
 			},
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This blue metal ring grants you a swim Speed equal to half your land Speed. Penalties to your Speed (including from your armor) apply before halving."
@@ -16282,6 +16425,7 @@
 				"magical"
 			],
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This heavy iron ring is shaped to look like the head of a ram, with curling horns.",
@@ -16290,17 +16434,18 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "action"
+						"unit": "action",
+						"entry": "{@as 1} or more"
 					},
 					"components": [
-						"or more (Interact)"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
-						"A ram-shaped blast of force slams into one foe that you can see within 60 feet. The number of actions you spend to {@b Activate} this Item (from 1 to 3) determines the intensity of the force. The blow deals {@damage 2d6} force damage per action spent and pushes the target 5 feet per action spent. The target must attempt a DC 22 Fortitude save.",
+						"A ram-shaped blast of force slams into one foe that you can see within 60 feet. The number of actions you spend to {@action Activate an Item||Activate this Item} (from 1 to 3) determines the intensity of the force. The blow deals {@damage 2d6} force damage per action spent and pushes the target 5 feet per action spent. The target must attempt a DC 22 Fortitude save.",
 						{
 							"type": "successDegree",
 							"entries": {
@@ -16350,6 +16495,7 @@
 				"invested"
 			],
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This ring is made from the purest platinum and is covered in esoteric arcane symbols. It does nothing unless you have a spellcasting class feature with the arcane tradition. While wearing the ring of wizardry, you gain a +1 item bonus to {@skill Arcana} checks and have two additional 1st-level arcane spell slots each day. You prepare spells in these slots or cast from them spontaneously, just as you normally cast your spells.",
@@ -16471,7 +16617,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You pluck an eye from the robe and toss it into the air, where it turns {@condition invisible} and floats to a destination you choose, with the same effect as a 5th-level {@spell prying eye} spell.",
@@ -16503,8 +16649,7 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
 						"command"
@@ -16570,7 +16715,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"This rod emits a thin, gray beam that negates a spell or magic item, casting a 6th-level {@spell dispel magic} spell with a counteract modifier of +23. Once activated, the rod can't be activated again for {@dice 2d6} hours."
@@ -16613,137 +16758,137 @@
 					"entries": [
 						"Choose a creature within 60 feet and roll d% on the table below to determine the rod's effect. If an entry lists only a spell name, the rod casts that spell at its lowest level. You make any decisions for a spell cast by the rod unless otherwise indicated, except that it must target the creature you chose, or the creature you chose must be the center of the spell's area, if it has an area but no targets. If the spell's range is less than 60 feet, increase the range to 60 feet.",
 						"Any spell DC required is DC 27, and any spell attack roll required is +17. If the rod casts a spell on you, you don't get a saving throw or other defense against it.",
-						"Once activated, the rod can't be activated again for {@dice 1d4} hours.",
-						{
-							"type": "table",
-							"id": "1-3",
-							"rollable": true,
-							"labelRowIdx": [
-								0
-							],
-							"colSizes": [
-								2,
-								6
-							],
-							"rows": [
-								[
-									"{@dice d100|D%}",
-									"Wondrous Effect"
-								],
-								[
-									"1\u20133",
-									"Leaves grow from the target; they last 24 hours"
-								],
-								[
-									"4\u20138",
-									"{@spell Darkness}"
-								],
-								[
-									"10\u201313",
-									"A stream of 600 large and colorful butterflies pours forth, fluttering in a 20-foot burst for 2 rounds; creatures are {@condition blinded} while in the cloud of butterflies"
-								],
-								[
-									"14\u201315",
-									"All the target's weapons animate with the effects of the {@item dancing|crb|dancing rune}"
-								],
-								[
-									"16\u201325",
-									"{@spell Lightning bolt}"
-								],
-								[
-									"26\u201329",
-									"Grass grows in a 60-foot cone in front of the rod, or existing grass grows at 10 × normal rate"
-								],
-								[
-									"30",
-									"Target turns blue, green, or purple with an unlimited duration"
-								],
-								[
-									"31",
-									"Summon an {@creature elephant} (6th-level {@spell summon animal})"
-								],
-								[
-									"32\u201334",
-									"Heavy rain falls in a 60-foot radius around you for 1 round"
-								],
-								[
-									"35\u201338",
-									"{@spell Stinking cloud}"
-								],
-								[
-									"39",
-									"Summon an ineffective mouse (1st-level {@spell summon animal})"
-								],
-								[
-									"40\u201342",
-									"{@spell Vibrant pattern}, with a 1-round duration"
-								],
-								[
-									"43\u201344",
-									"The rod casts {@spell mirror image} on you"
-								],
-								[
-									"45\u201346",
-									"{@spell Gust of wind}"
-								],
-								[
-									"47\u201348",
-									"The non-living, unattended object closest to the target (up to 30 cubic feet in size) turns ethereal for an unlimited duration"
-								],
-								[
-									"49\u201353",
-									"{@spell Slow}"
-								],
-								[
-									"54",
-									"You turn blue, green, or purple with an unlimited duration"
-								],
-								[
-									"55\u201359",
-									"The rod casts {@spell pest form} on you, lasting {@dice 1d4} rounds"
-								],
-								[
-									"60\u201361",
-									"{@dice 1d4 * 10|1d4 × 10} gems, each worth 1 sp, shoot from the rod, dealing 1 piercing damage to each creature in a 15-foot cone"
-								],
-								[
-									"62",
-									"{@spell Sleep}, with a 100-foot burst"
-								],
-								[
-									"63\u201372",
-									"{@spell Fireball}"
-								],
-								[
-									"73\u201377",
-									"{@spell Mind reading}"
-								],
-								[
-									"78\u201380",
-									"Roll again; the target believes you created the effect of the second roll"
-								],
-								[
-									"81\u201384",
-									"{@spell Enlarge}"
-								],
-								[
-									"85\u201387",
-									"Target is coated in nectar, making it {@condition clumsy} 1 for 1 round"
-								],
-								[
-									"88\u201392",
-									"{@spell Faerie fire}"
-								],
-								[
-									"93\u201397",
-									"The rod casts {@spell invisibility} on you"
-								],
-								[
-									"98\u2013100",
-									"The rod casts {@spell shrink} on you, lasting 1 day"
-								]
-							]
-						}
+						"Once activated, the rod can't be activated again for {@dice 1d4} hours."
+					]
+				},
+				{
+					"type": "table",
+					"id": "1-3",
+					"rollable": true,
+					"labelRowIdx": [
+						0
+					],
+					"colSizes": [
+						2,
+						6
+					],
+					"rows": [
+						[
+							"{@dice d100|D%}",
+							"Wondrous Effect"
+						],
+						[
+							"1\u20133",
+							"Leaves grow from the target; they last 24 hours"
+						],
+						[
+							"4\u20138",
+							"{@spell Darkness}"
+						],
+						[
+							"10\u201313",
+							"A stream of 600 large and colorful butterflies pours forth, fluttering in a 20-foot burst for 2 rounds; creatures are {@condition blinded} while in the cloud of butterflies"
+						],
+						[
+							"14\u201315",
+							"All the target's weapons animate with the effects of the {@item dancing|crb|dancing rune}"
+						],
+						[
+							"16\u201325",
+							"{@spell Lightning bolt}"
+						],
+						[
+							"26\u201329",
+							"Grass grows in a 60-foot cone in front of the rod, or existing grass grows at 10 × normal rate"
+						],
+						[
+							"30",
+							"Target turns blue, green, or purple with an unlimited duration"
+						],
+						[
+							"31",
+							"Summon an {@creature elephant} (6th-level {@spell summon animal})"
+						],
+						[
+							"32\u201334",
+							"Heavy rain falls in a 60-foot radius around you for 1 round"
+						],
+						[
+							"35\u201338",
+							"{@spell Stinking cloud}"
+						],
+						[
+							"39",
+							"Summon an ineffective mouse (1st-level {@spell summon animal})"
+						],
+						[
+							"40\u201342",
+							"{@spell Vibrant pattern}, with a 1-round duration"
+						],
+						[
+							"43\u201344",
+							"The rod casts {@spell mirror image} on you"
+						],
+						[
+							"45\u201346",
+							"{@spell Gust of wind}"
+						],
+						[
+							"47\u201348",
+							"The non-living, unattended object closest to the target (up to 30 cubic feet in size) turns ethereal for an unlimited duration"
+						],
+						[
+							"49\u201353",
+							"{@spell Slow}"
+						],
+						[
+							"54",
+							"You turn blue, green, or purple with an unlimited duration"
+						],
+						[
+							"55\u201359",
+							"The rod casts {@spell pest form} on you, lasting {@dice 1d4} rounds"
+						],
+						[
+							"60\u201361",
+							"{@dice 1d4 * 10|1d4 × 10} gems, each worth 1 sp, shoot from the rod, dealing 1 piercing damage to each creature in a 15-foot cone"
+						],
+						[
+							"62",
+							"{@spell Sleep}, with a 100-foot burst"
+						],
+						[
+							"63\u201372",
+							"{@spell Fireball}"
+						],
+						[
+							"73\u201377",
+							"{@spell Mind reading}"
+						],
+						[
+							"78\u201380",
+							"Roll again; the target believes you created the effect of the second roll"
+						],
+						[
+							"81\u201384",
+							"{@spell Enlarge}"
+						],
+						[
+							"85\u201387",
+							"Target is coated in nectar, making it {@condition clumsy 1} for 1 round"
+						],
+						[
+							"88\u201392",
+							"{@spell Faerie fire}"
+						],
+						[
+							"93\u201397",
+							"The rod casts {@spell invisibility} on you"
+						],
+						[
+							"98\u2013100",
+							"The rod casts {@spell shrink} on you, lasting 1 day"
+						]
 					]
 				}
 			]
@@ -16839,7 +16984,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -16902,7 +17047,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -16965,7 +17110,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Oil",
@@ -16991,11 +17136,11 @@
 				"amount": 7
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"command"
@@ -17252,7 +17397,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -17340,7 +17485,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -17503,7 +17648,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -17606,7 +17751,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -17614,7 +17759,6 @@
 				"Distilled from the Plane of Shadow, this oily substance imposes tenebrous effects. The {@condition enfeebled} condition from shadow essence lasts for 24 hours.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 29,
 					"savingThrow": "Fortitude",
 					"maxDuration": "6 rounds",
@@ -17655,11 +17799,11 @@
 				"amount": 23
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"command"
@@ -17701,7 +17845,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The weapon takes the shape of another melee weapon that requires the same number of hands to wield. The weapon's runes and any precious material it's made of apply to the weapon's new shape. Any property runes that can't apply to the new form are suppressed until the item takes a shape to which they can apply."
@@ -17713,6 +17857,11 @@
 			"name": "Shining Ammunition",
 			"source": "CRB",
 			"page": 560,
+			"otherSources": {
+				"Reprinted": [
+					"BB|52"
+				]
+			},
 			"type": "Item",
 			"level": 1,
 			"traits": [
@@ -17796,7 +17945,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"onset": "1 minute",
@@ -17864,6 +18013,7 @@
 				"amount": 8,
 				"coin": "cp"
 			},
+			"bulk": "\u2014",
 			"hands": 2,
 			"category": "Adventuring Gear",
 			"entries": [
@@ -18080,7 +18230,7 @@
 			"level": "5+",
 			"usage": "worn armor",
 			"bulk": "varies by armor",
-			"category": "Armor",
+			"category": "Material",
 			"entries": [
 				"Silver armor sickens certain creatures that touch it. A creature with weakness to silver that critically fails an unarmed attack against a creature in silver armor becomes {@condition sickened 1}. A creature with weakness to silver is {@condition sickened 1} as long as it wears silver armor."
 			],
@@ -18133,8 +18283,7 @@
 			"type": "Item",
 			"level": "2+",
 			"usage": "varies by shield",
-			"category": "Shield",
-			"group": "Shield",
+			"category": "Material",
 			"entries": [
 				"Silver shields don't typically have an additional effect, though when used for a shield bash, they are silver weapons."
 			],
@@ -18231,7 +18380,7 @@
 			"level": "2+",
 			"usage": "varies by weapon",
 			"bulk": "varies by weapon",
-			"category": "Weapon",
+			"category": "Material",
 			"entries": [
 				"Silver weapons deal additional damage to creatures with weakness to silver, like werewolves, and ignore the resistances of some other creatures, like devils."
 			],
@@ -18297,7 +18446,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Tool",
@@ -18326,7 +18475,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -18454,6 +18603,7 @@
 				"transmutation"
 			],
 			"usage": "held in 1 hand",
+			"bulk": "\u2014",
 			"category": "Held",
 			"entries": [
 				"A grinning skull tops the bow of this macabre key. This key can be used in place of {@item thieves' tools} when attempting to {@action Pick a Lock}, and it grants a +1 item bonus to the {@skill Thievery} check.",
@@ -18463,15 +18613,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "You attempt to {@action Pick a Lock} but haven't rolled yet",
 					"entries": [
@@ -18528,8 +18677,7 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
 						"command"
@@ -18567,7 +18715,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -18654,7 +18802,6 @@
 			"name": "Sling Bullets",
 			"source": "CRB",
 			"page": 282,
-			"traits": [],
 			"price": {
 				"coin": "cp",
 				"amount": 1,
@@ -18663,8 +18810,7 @@
 			"category": "Ammunition",
 			"entries": [
 				"These are small metal balls, typically either iron or lead, designed to be used as ammunition in {@item sling||slings}."
-			],
-			"variants": null
+			]
 		},
 		{
 			"name": "Slippers of Spider Climbing",
@@ -18698,7 +18844,7 @@
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"Tiny, hairlike tendrils extend from the slippers' soles, allowing you to walk on vertical surfaces or even to move upside down along ceilings. For 1 minute, you gain a 20-foot climb Speed and you don't need to use your hands to {@action Climb}. However, the slippers require decent traction for you to walk on a wall, so they provide no benefit when you're moving across greased, icy, or oiled surfaces."
@@ -18731,7 +18877,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -18740,7 +18886,6 @@
 				"Characters {@condition unconscious} from slumber wine can't wake up by any means while the poison lasts, don't need to eat or drink while {@condition unconscious} in this way, and appear to be recently dead unless an examiner succeeds at a DC 40 {@skill Medicine} check.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 32,
 					"savingThrow": "Fortitude",
 					"onset": "1 hour",
@@ -18758,7 +18903,7 @@
 						},
 						{
 							"stage": 3,
-							"entry": "{@condition unconscious} .",
+							"entry": "{@condition unconscious}.",
 							"duration": "3 days"
 						}
 					]
@@ -18783,7 +18928,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Tool",
@@ -18856,7 +19001,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Tool",
@@ -18921,13 +19066,14 @@
 				"amount": 22
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				],
 				"requirements": "You are an expert in {@skill Thievery}."
 			},
@@ -18946,6 +19092,7 @@
 				"amount": 2,
 				"coin": "cp"
 			},
+			"bulk": "\u2014",
 			"hands": 1,
 			"category": "Adventuring Gear",
 			"entries": []
@@ -19071,15 +19218,19 @@
 			"usage": "held in 1 hand",
 			"bulk": 1,
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
-				"This shield bears eldritch glyphs to guard against magic. While you have this steel shield (Hardness 6, HP 24, BT 12) raised, you gain its circumstance bonus to saving throws against spells that target you (as well as to AC)."
+				"This shield bears eldritch glyphs to guard against magic. While you have this steel shield (Hardness 6, HP 24, BT 12) raised, you gain its circumstance bonus to saving throws against spells that target you (as well as to AC) and you can {@action Shield Block} spells that target you if you have that action."
 			]
 		},
 		{
 			"name": "Spellstrike Ammunition",
 			"source": "CRB",
 			"page": 560,
+			"otherSources": {
+				"Reprinted": [
+					"BB|52"
+				]
+			},
 			"type": "Item",
 			"level": "3+",
 			"traits": [
@@ -19092,7 +19243,9 @@
 					"number": 2,
 					"unit": "action"
 				},
-				"components": "{@action Cast a Spell}"
+				"components": [
+					"{@action Cast a Spell}"
+				]
 			},
 			"ammunition": [
 				"any"
@@ -19374,7 +19527,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -19382,7 +19535,6 @@
 				"A paste made by mashing the fine, threadlike roots of a certain creeper vine, spider root renders a victim {@condition clumsy} and maladroit.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 28,
 					"savingThrow": "Fortitude",
 					"onset": "1 minute",
@@ -19445,7 +19597,6 @@
 			"usage": "held in 1 hand",
 			"bulk": 1,
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"Five jagged spines project from the surface of this steel shield (Hardness 6, HP 24, BT 12). The spines are +1 striking shield spikes. When you use the {@feat Shield Block} reaction with this shield, the spines take the damage before the shield itself does. When the shield would take damage (after applying Hardness), one spine snaps off per 6 damage, reducing the damage by 6. The shield takes any remaining damage. When there are no spines left, the shield takes damage as normal.",
 				"When all the spines are gone, you lose the ability to attack with them until the spines regenerate the next day.",
@@ -19457,7 +19608,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You shoot one of the shield's spines at a target. A fired spine uses the spikes' statistics, but it is a martial ranged weapon with a range increment of 120 feet."
@@ -20154,7 +20305,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The gem at the top of the staff glows as a torch, shedding bright light in a 20-foot radius (and dim light to the next 20 feet) for 10 minutes."
@@ -20597,7 +20748,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -20635,7 +20786,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -20666,7 +20817,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -20716,7 +20867,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You cast a 6th-level {@spell lightning bolt} (DC 33)."
@@ -20727,8 +20878,7 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
 						"command"
@@ -20736,7 +20886,7 @@
 					"frequency": {
 						"unit": "minute",
 						"interval": 10,
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "An {@trait electricity} effect targets you or a creature within 10 feet of you, or has you or a creature within 10 feet of you in its area",
 					"entries": [
@@ -20784,7 +20934,7 @@
 				"Weapon"
 			],
 			"entries": [
-				"A striking rune stores destructive magic in the weapon, increasing the weapon damage dice it deals to two instead of one. For instance, a +1 striking dagger would deal {@dice 2d4} damage instead of {@dice 1d4} damage.",
+				"A striking rune stores destructive magic in the weapon, increasing the weapon damage dice it deals to two instead of one. For instance, a +1 striking dagger would deal {@damage 2d4} damage instead of {@dice 1d4} damage.",
 				"You can upgrade the striking rune already etched on a weapon to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes' Prices."
 			],
 			"generic": "G",
@@ -20886,7 +21036,6 @@
 			"usage": "held in 1 hand",
 			"bulk": 1,
 			"category": "Shield",
-			"group": "Shield",
 			"entries": [
 				"With a superior design and excellent craftsmanship, this steel shield has higher Hardness than its non-magical counterparts, making it harder to break and destroy."
 			],
@@ -21014,7 +21163,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Tool",
@@ -21080,11 +21229,11 @@
 				"amount": 70
 			},
 			"usage": "affixed to a shield",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -21131,7 +21280,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Bomb",
@@ -21300,7 +21449,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -21308,7 +21457,6 @@
 				"Tears of death are among the most powerful of alchemical poisons, distilled from extracts of five other deadly poisons in just the right ratios.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 46,
 					"savingThrow": "Fortitude",
 					"onset": "1 minute",
@@ -21402,28 +21550,18 @@
 				"amount": 3
 			},
 			"bulk": "L",
-			"hands": 2,
+			"hands": "1 or 2*",
 			"category": "Adventuring Gear",
 			"entries": [
-				"You need thieves' tools to {@action Pick a Lock||Pick Locks} or {@action Disable a Device||Disable Devices} (of some types) using the {@skill Thievery} skill. If your thieves' tools are broken, you can repair them by replacing the lock picks with {@item replacement picks (generic)||replacement picks} appropriate to your tools; this doesn't require using the {@action Repair} action. If you wear your thieves' tools, you can draw and replace them as part of the action that uses them."
+				"You need thieves' tools to {@action Pick a Lock||Pick Locks} or {@action Disable a Device||Disable Devices} (of some types) using the {@skill Thievery} skill. If your thieves' tools are broken, you can repair them by replacing the lock picks with {@item replacement picks (generic)||replacement picks} appropriate to your tools; this doesn't require using the {@action Repair} action. If you wear your thieves' tools, you can draw and replace them as part of the action that uses them.",
+				"{@note *You can use the set of tools with one hand if you are wearing it.}"
 			],
 			"generic": "G",
 			"variants": [
 				{
 					"name": "Thieves' Tools",
 					"variantType": "Base",
-					"entries": [],
-					"_mod": {
-						"entries": [
-							{
-								"mode": "prependArr",
-								"items": [
-									"You need thieves' tools to {@action Pick a Lock||Pick Locks} or {@action Disable a Device||Disable Devices} (of some types) using the {@skill Thievery} skill. If your thieves' tools are broken, you can repair them by replacing the lock picks with {@item replacement picks} appropriate to your tools; this doesn't require using the {@action Repair} action. If you wear your thieves' tools, you can draw and replace them as part of the action that uses them."
-								]
-							}
-						],
-						"entriesMode": "variant"
-					}
+					"entries": []
 				},
 				{
 					"level": 3,
@@ -21435,17 +21573,6 @@
 					"entries": [
 						"Infiltrator thieves' tools add a +1 item bonus to checks to {@action Pick a Lock||Pick Locks} and {@action Disable a Device||Disable Devices}."
 					],
-					"_mod": {
-						"entries": [
-							{
-								"mode": "prependArr",
-								"items": [
-									"You need thieves' tools to {@action Pick a Lock||Pick Locks} or {@action Disable a Device||Disable Devices} (of some types) using the {@skill Thievery} skill. If your thieves' tools are broken, you can repair them by replacing the lock picks with {@item infiltrator replacement picks||replacement picks} appropriate to your tools; this doesn't require using the {@action Repair} action. If you wear your thieves' tools, you can draw and replace them as part of the action that uses them."
-								]
-							}
-						],
-						"entriesMode": "variant"
-					},
 					"variantType": "Infiltrator"
 				},
 				{
@@ -21463,17 +21590,6 @@
 					"entries": [
 						"Smaller and made of stronger materials than most sets of thieves' tools, the items in this kit are much easier to conceal. You gain a +1 item bonus to {@skill Stealth} checks to {@action Conceal an Object||Conceal} these tools. They otherwise function as {@item infiltrator thieves' tools}."
 					],
-					"_mod": {
-						"entries": [
-							{
-								"mode": "prependArr",
-								"items": [
-									"You need thieves' tools to {@action Pick a Lock||Pick Locks} or {@action Disable a Device||Disable Devices} (of some types) using the {@skill Thievery} skill. If your thieves' tools are broken, you can repair them by replacing the lock picks with {@item concealable replacement picks|lopsg|replacement picks} appropriate to your tools; this doesn't require using the {@action Repair} action. If you wear your thieves' tools, you can draw and replace them as part of the action that uses them."
-								]
-							}
-						],
-						"entriesMode": "variant"
-					},
 					"variantType": "Concealable"
 				}
 			]
@@ -21494,6 +21610,7 @@
 				"amount": 40000
 			},
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"When invested, this ornate crown and its incandescent gemstone meld into your head and take the form of a tattoo.",
@@ -21512,7 +21629,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You gain the effects of an 8th-level {@spell true seeing} spell."
@@ -21584,12 +21701,12 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Bomb",
 			"entries": [
-				"When this stone hits a creature or a hard surface, it explodes with a deafening bang. A thunderstone deals the listed sonic damage and sonic splash damage, and each creature within 10 feet of the space in which the stone exploded must succeed at a Fortitude saving throw with the listed DC or be {@condition deafened} until the end of its next turn. Many types of thunderstone grant an item bonus to attack rolls."
+				"When this stone hits a creature or a hard surface, it explodes with a deafening bang. A thunderstone deals the listed sonic damage and sonic {@trait splash} damage, and each creature within 10 feet of the space in which the stone exploded must succeed at a Fortitude saving throw with the listed DC or be {@condition deafened} until the end of its next turn. Many types of thunderstone grant an item bonus to attack rolls."
 			],
 			"generic": "G",
 			"variants": [
@@ -21601,15 +21718,15 @@
 						"amount": 3
 					},
 					"entries": [
-						"The bomb deals {@damage 1d4} sonic damage and 1 sonic splash damage, and the DC is 17."
+						"The bomb deals {@damage 1d4} sonic damage and 1 sonic {@trait splash} damage, and the DC is 17."
 					],
 					"equipment": true,
 					"_mod": {
 						"entries": [
 							{
 								"mode": "replaceTxt",
-								"replace": "the listed sonic damage and sonic splash damage",
-								"with": "{@damage 1d4} sonic damage and 1 sonic splash damage"
+								"replace": "the listed sonic damage and sonic {@trait splash} damage",
+								"with": "{@damage 1d4} sonic damage and 1 sonic {@trait splash} damage"
 							},
 							{
 								"mode": "replaceTxt",
@@ -21633,14 +21750,14 @@
 						"amount": 10
 					},
 					"entries": [
-						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d4} sonic damage and 2 sonic splash damage, and the DC is 20."
+						"You gain a +1 item bonus to attack rolls. The bomb deals {@damage 2d4} sonic damage and 2 sonic {@trait splash} damage, and the DC is 20."
 					],
 					"_mod": {
 						"entries": [
 							{
 								"mode": "replaceTxt",
-								"replace": "the listed sonic damage and sonic splash damage",
-								"with": "{@damage 2d4} sonic damage and 2 sonic splash damage"
+								"replace": "the listed sonic damage and sonic {@trait splash} damage",
+								"with": "{@damage 2d4} sonic damage and 2 sonic {@trait splash} damage"
 							},
 							{
 								"mode": "replaceTxt",
@@ -21664,14 +21781,14 @@
 						"amount": 250
 					},
 					"entries": [
-						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d4} sonic damage and 3 sonic splash damage, and the DC is 28."
+						"You gain a +2 item bonus to attack rolls. The bomb deals {@damage 3d4} sonic damage and 3 sonic {@trait splash} damage, and the DC is 28."
 					],
 					"_mod": {
 						"entries": [
 							{
 								"mode": "replaceTxt",
-								"replace": "the listed sonic damage and sonic splash damage",
-								"with": "{@damage 3d4} sonic damage and 3 sonic splash damage"
+								"replace": "the listed sonic damage and sonic {@trait splash} damage",
+								"with": "{@damage 3d4} sonic damage and 3 sonic {@trait splash} damage"
 							},
 							{
 								"mode": "replaceTxt",
@@ -21695,14 +21812,14 @@
 						"amount": 2500
 					},
 					"entries": [
-						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 4d4} sonic damage and 4 sonic splash damage, and the DC is 36."
+						"You gain a +3 item bonus to attack rolls. The bomb deals {@damage 4d4} sonic damage and 4 sonic {@trait splash} damage, and the DC is 36."
 					],
 					"_mod": {
 						"entries": [
 							{
 								"mode": "replaceTxt",
-								"replace": "the listed sonic damage and sonic splash damage",
-								"with": "{@damage 4d4} sonic damage and 4 sonic splash damage"
+								"replace": "the listed sonic damage and sonic {@trait splash} damage",
+								"with": "{@damage 4d4} sonic damage and 4 sonic {@trait splash} damage"
 							},
 							{
 								"mode": "replaceTxt",
@@ -21744,7 +21861,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You light the incense inside the censer, and it burns for 1 hour. During that time, as long you are holding the thurible, you gain a +1 item bonus to {@skill Religion} checks, and any critical failure you roll when you {@action Decipher Writing} of a religious nature is a failure instead."
@@ -21803,11 +21920,11 @@
 				"amount": 30
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -21837,13 +21954,14 @@
 				"note": "for price of 10"
 			},
 			"usage": "held in 1 hand",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Tool",
@@ -21969,7 +22087,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact",
+						"{@action Interact}",
 						"envision"
 					],
 					"entries": [
@@ -22038,7 +22156,10 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact (auditory)"
+						"{@action Interact}"
+					],
+					"traits": [
+						"auditory"
 					],
 					"entries": [
 						"You can raise the conch to your lips and blow into it, letting out a long, rumbling note. For the next minute, you and all allies who were within 30 feet of you when you activated the conch gain a +2 item bonus to {@skill Athletics} checks to {@action Swim} and can breathe under water."
@@ -22070,7 +22191,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -22104,7 +22225,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Potion",
@@ -22148,7 +22269,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You cause the twigs to rapidly grow or contract, reshaping into a +1 striking staff, a +1 striking bo staff, or its disc form. In its disc form, it has negligible Bulk and must be held in one hand to be activated. In the other forms, it has the same Bulk as a normal weapon of its type. You can switch your grip as part of the activation.",
@@ -22185,15 +22306,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
 						"command"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "You critically succeed at an attack roll against a good creature with the weapon",
 					"entries": [
@@ -22213,6 +22333,7 @@
 			"type": "Item",
 			"level": 1,
 			"traits": [
+				"necromancy",
 				"consumable",
 				"divine",
 				"evil",
@@ -22230,13 +22351,13 @@
 					"unit": "action"
 				},
 				"components": [
-					"Strike"
+					"{@action Strike}"
 				]
 			},
 			"category": "Consumable",
 			"entries": [
 				"An evil deity's malice lies within this vial of water. You activate a vial of unholy water by throwing it as a {@action Strike}. It's a simple thrown weapon with a range increment of 20 feet. Unlike an alchemical bomb, it doesn't add the {@trait manipulate} trait to the attack made with it.",
-				"Unholy water deals {@damage 1d6} evil damage and 1 evil splash damage.",
+				"Unholy water deals {@damage 1d6} evil damage and 1 evil {@trait splash} damage.",
 				"It damages only celestials and creatures that have a weakness to evil damage."
 			]
 		},
@@ -22257,11 +22378,11 @@
 				"amount": 160
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -22286,6 +22407,7 @@
 				"magical"
 			],
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This elegant copper ring has miniature images of songbirds engraved around its circumference. You gain a +1 item bonus to {@skill Deception} checks.",
@@ -22299,10 +22421,10 @@
 					},
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"Twisting the ring around your finger allows you to magically throw your voice, with the effects of a {@spell ventriloquism} spell (DC 19)."
@@ -22348,7 +22470,7 @@
 										"unit": "action"
 									},
 									"components": [
-										"Interact"
+										"{@action Interact}"
 									],
 									"entries": [
 										"Twisting the ring around your finger allows you to magically throw your voice, with the effects of a 2nd-level {@spell ventriloquism} (DC 27)."
@@ -22378,7 +22500,7 @@
 			"bulk": 1,
 			"category": "Staff",
 			"entries": [
-				"This oak branch grows leaves in spring that change color in autumn and shed in winter. While wielding it, you gain a +2 circumstance bonus to {@skill Nature} checks to identify plants.",
+				"This oak branch grows leaves in spring that change color in autumn and shed in winter. While wielding it, you gain a +2 circumstance bonus to checks to identify plants and fungus.",
 				{
 					"type": "ability",
 					"style": "compact",
@@ -22405,9 +22527,9 @@
 						{
 							"type": "list",
 							"items": [
-								"Cantrips tanglefoot",
-								"{@bold 1st} shillelagh (can target the verdant staff)",
-								"{@bold 2nd} barkskin, entangle, shape wood, tree shape"
+								"{@b Cantrips} {tanglefoot}",
+								"{@bold 1st} {@b shillelagh} (can target the verdant staff)",
+								"{@bold 2nd} {@b barkskin}, {@b entangle}, {@b shape wood}, {@b tree shape}"
 							]
 						}
 					],
@@ -22424,9 +22546,9 @@
 						{
 							"type": "list",
 							"items": [
-								"{@bold 3rd} wall of thorns",
-								"{@bold 4th} barkskin, speak with plants",
-								"{@bold 5th} plant form, wall of thorns"
+								"{@bold 3rd} {@b wall of thorns}",
+								"{@bold 4th} {@b barkskin}, {@b speak with plants}",
+								"{@bold 5th} {@b plant form}, {@b wall of thorns}"
 							]
 						}
 					]
@@ -22518,6 +22640,7 @@
 				"amount": 850
 			},
 			"usage": "affixed to a weapon",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
@@ -22563,12 +22686,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
-						"envision (death",
-						"incapacitation)"
+						"envision"
+					],
+					"traits": [
+						"death",
+						"incapacitation"
 					],
 					"trigger": "You roll a natural 20 on a {@action Strike} with the weapon, critically succeed, and deal slashing damage.",
 					"entries": [
@@ -22594,6 +22719,7 @@
 				"amount": 14800
 			},
 			"usage": "worn backpack",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This leather rucksack has icons burned into it, and every time it's taken to a plane it hasn't been to before, a new icon representing that plane scorches into the surface. The pack grants you a +3 bonus to {@skill Survival} checks.",
@@ -22604,13 +22730,12 @@
 					"style": "compact",
 					"activity": {
 						"number": 10,
-						"unit": "minute",
-						"entry": "10 minutes"
+						"unit": "minute"
 					},
 					"components": [
-						"(command",
+						"command",
 						"envision",
-						"Interact)"
+						"{@action Interact}"
 					],
 					"entries": [
 						"As you activate the pack, you can harness up to four willing creatures to the ropes on the pack. At the end of the activation time, the pack casts a 7th-level {@spell plane shift} or {@spell teleport} spell, transporting you and everyone attached to the pack. Attempt a DC 45 {@skill Survival} check. On a success, you arrive 25 miles off target using plane shift or halve the distance you're off-target with teleport. On a critical success, you arrive exactly on target."
@@ -22640,7 +22765,7 @@
 						"{@action Cast a Spell}"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day",
 						"overcharge": true
 					},
@@ -22753,7 +22878,7 @@
 						"{@action Cast a Spell}"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day",
 						"overcharge": true
 					},
@@ -22828,7 +22953,7 @@
 						"{@action Cast a Spell}"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day",
 						"overcharge": true
 					},
@@ -22895,7 +23020,7 @@
 						"{@action Cast a Spell}"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day",
 						"overcharge": true
 					},
@@ -23008,7 +23133,7 @@
 						"{@action Cast a Spell}"
 					],
 					"frequency": {
-						"freq": 1,
+						"number": 1,
 						"unit": "day",
 						"overcharge": true
 					},
@@ -23163,6 +23288,7 @@
 				"amount": 28
 			},
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This compact compass repurposes ancient technology to draw fantastic powers from the mysterious magical items called aeon stones. It serves as a badge of office for agents of the Pathfinder Society and as a status symbol among adventurers of any stripe. A wayfinder functions as a compass.",
@@ -23276,7 +23402,7 @@
 					"page": 106,
 					"entries": [
 						"The item bonus to attack rolls is +4, and the weapon can be etched with three property runes.",
-						"{@note This version of the potency rune has been added by PF2eTools. This rune is not available for purchase or {@action Crafting} through mundane means. It only exists on Unique and/or Artifact weaponry, such as {@item Axe Of The Dwarven Lords|GMG} or {@item Serithtial|GMG}.}"
+						"{@note This version of the potency rune has been added by PF2eTools. This rune is not available for purchase or {@action Craft||Crafting} through mundane means. It only exists on Unique and/or Artifact weaponry, such as {@item Axe Of The Dwarven Lords|GMG} or {@item Serithtial|GMG}.}"
 					],
 					"_mod": {
 						"entriesMode": "variant"
@@ -23309,6 +23435,7 @@
 				"amount": 60000
 			},
 			"usage": "worn",
+			"bulk": "\u2014",
 			"category": "Worn",
 			"entries": [
 				"This delicate necklace contains bottled whispers distilled from a source on the Astral Plane rumored to be connected to the first lie ever told.",
@@ -23321,7 +23448,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact",
+						"{@action Interact}",
 						"envision",
 						"command"
 					],
@@ -23363,11 +23490,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You speak a command word and click the boots' heels together to cause the wings to animate and flap rapidly, granting you a fly Speed of 30 feet for 10 minutes."
@@ -23394,7 +23521,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Elixir",
@@ -23453,11 +23580,11 @@
 				"amount": 4
 			},
 			"usage": "affixed to armor",
+			"bulk": "\u2014",
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -23494,7 +23621,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -23503,7 +23630,6 @@
 				"If you are afflicted with lycanthropy and survive stage 3 of wolfsbane, you're immediately cured of the lycanthropy.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 30,
 					"savingThrow": "Fortitude",
 					"onset": "10 minutes",
@@ -23552,7 +23678,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You activate the statue by placing it on solid ground and then speaking its name, causing the statuette to transform into a living creature or creatures. In creature form, the figurine has the minion trait. It can understand your language and it obeys you to the best of its ability when you use an action to command it. The specifics of each creature, as well as the activation's frequency (if any), appear in its entry below.",
@@ -23688,7 +23814,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -23696,7 +23822,6 @@
 				"Properly harvested and preserved, the poison from a wyvern's sting is effective and direct.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 26,
 					"savingThrow": "Fortitude",
 					"maxDuration": "6 rounds",

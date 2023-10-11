@@ -97,6 +97,12 @@ class AncestriesPage extends BaseComponent {
 			$btnReset: $(`#reset`),
 			namespace: "ancestries.ancestries",
 		});
+		this._list.on("updated", () => {
+			$(`.lst__wrp-search-visible.ancestries`).html(`${this._list.visibleItems.length}/${this._list.items.length}`);
+		});
+		this._listFeat.on("updated", () => {
+			$(`.lst__wrp-search-visible.feats`).html(`${this._listFeat.visibleItems.length}/${this._listFeat.items.length}`);
+		});
 		await this._featFilter.pInitFilterBox({
 			$iptSearch: $(`#feat-lst__search`),
 			$wrpFormTop: $(`#feat-filter-search-group`),
@@ -459,7 +465,6 @@ class AncestriesPage extends BaseComponent {
 		Object.keys(validHLookup).forEach(k => {
 			if (!seenKeys.has(k) && target[k]) target[k] = false;
 		});
-
 		// Run the sync in the other direction, a loop that *should* break once the hash/state match perfectly
 		if (!isInitialLoad) this._setHashFromState();
 	}
@@ -552,10 +557,22 @@ class AncestriesPage extends BaseComponent {
 
 		const $lnk = $(`<a href="#${hash}" class="lst--border">
 			<span class="bold col-8 pl-0">${anc.name}</span>
-			<span class="col-4 text-center ${Parser.sourceJsonToColor(anc.source)} pr-0" title="${Parser.sourceJsonToFull(anc.source)}" ${BrewUtil.sourceJsonToStyle(anc.source)}>${source}</span>
+			<span class="col-4 text-center ${Parser.sourceJsonToColor(anc.source)}" title="${Parser.sourceJsonToFull(anc.source)}" ${BrewUtil.sourceJsonToStyle(anc.source)}>${source}</span>
 		</a>`);
 
 		const $ele = $$`<li class="row ${isExcluded ? "row--blacklisted" : ""}">${$lnk}</li>`;
+
+		$ele.on("click", () => {
+			setTimeout(() => {
+				// Kill Fluff for Paizo (at least fill the page with heritages if no fluff is shown)
+				const nxtState = {};
+				this._listHeritage.visibleItems.concat(this._listVeHeritage.visibleItems)
+					.filter(it => it.values.mod === "brew" || it.values.mod === "fresh")
+					.map(it => it.values.stateKey)
+					.forEach(stateKey => nxtState[stateKey] = true);
+				this._proxyAssign("state", "_state", "__state", nxtState);
+			}, 1);
+		})
 
 		return new ListItem(
 			ancI,
@@ -564,6 +581,7 @@ class AncestriesPage extends BaseComponent {
 			{
 				hash,
 				source,
+				aliases: anc.alias ? anc.alias.join(" - ") : "",
 			},
 			{
 				$lnk,
@@ -582,7 +600,7 @@ class AncestriesPage extends BaseComponent {
 			<span class="bold col-5 pl-0">${feat.name}</span>
 			<span class="col-1-5 text-center">${Parser.getOrdinalForm(feat.level)}</span>
 			<span class="col-4 text-center">${feat._slPrereq}</span>
-			<span class="col-1-5 text-center ${Parser.sourceJsonToColor(feat.source)} pr-0" title="${Parser.sourceJsonToFull(feat.source)}" ${BrewUtil.sourceJsonToStyle(feat.source)}>${source}</span>
+			<span class="col-1-5 text-center ${Parser.sourceJsonToColor(feat.source)}" title="${Parser.sourceJsonToFull(feat.source)}" ${BrewUtil.sourceJsonToStyle(feat.source)}>${source}</span>
 		</a>`);
 
 		const $ele = $$`<li class="row ${isExcluded ? "row--blacklisted" : ""}">${$lnk}</li>`;
@@ -965,7 +983,8 @@ class AncestriesPage extends BaseComponent {
 			isInverted: true,
 		}).title("Toggle Ancestry Features");
 
-		const $btnToggleFluff = ComponentUiUtil.$getBtnBool(this, "isShowFluff", {text: "Info"}).title("Toggle Ancestry Info");
+		// Kill Fluff for Paizo
+		const $btnToggleFluff = "" // ComponentUiUtil.$getBtnBool(this, "isShowFluff", {text: "Info"}).title("Toggle Ancestry Info");
 
 		const $btnToggleFeats = ComponentUiUtil.$getBtnBool(this, "isShowFeats", {
 			text: "Show Feats",
@@ -1332,7 +1351,7 @@ class AncestriesPage extends BaseComponent {
 
 AncestriesPage._DEFAULT_STATE = {
 	isHideFeatures: false,
-	isShowFluff: true,
+	isShowFluff: false,
 	isShowVeHeritages: false,
 	isShowHSources: false,
 	isShowFeats: false,
@@ -1343,4 +1362,13 @@ window.addEventListener("load", async () => {
 	await Renderer.trait.preloadTraits();
 	ancestriesPage = new AncestriesPage();
 	ancestriesPage.pOnLoad()
+	// Kill Fluff for Paizo (at least fill the page with heritages if no fluff is shown)
+		.then(() => {
+			const nxtState = {};
+			this._listHeritage.visibleItems.concat(this._listVeHeritage.visibleItems)
+				.filter(it => it.values.mod === "brew" || it.values.mod === "fresh")
+				.map(it => it.values.stateKey)
+				.forEach(stateKey => nxtState[stateKey] = true);
+			this._proxyAssign("state", "_state", "__state", nxtState);
+		})
 });

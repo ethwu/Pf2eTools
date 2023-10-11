@@ -33,7 +33,7 @@ class TablesPage extends ListPage {
 
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border">
 			<span class="bold col-10 pl-0">${it.name}</span>
-			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
+			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)}" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -44,6 +44,7 @@ class TablesPage extends ListPage {
 				hash,
 				sortName,
 				source,
+				aliases: it.alias ? it.alias.join(" - ") : "",
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : tbI,
@@ -81,15 +82,46 @@ class TablesPage extends ListPage {
 	}
 
 	doLoadHash (id) {
-		Renderer.get().setFirstSection(true);
 		const it = this._dataList[id];
 		it.type = it.type || "table";
-		const rendered = $$`
-		${Renderer.utils.getExcludedDiv(it, "table")}
-		${Renderer.get().setFirstSection(true).render(it)}
-		${Renderer.utils.getPageP(it)}`;
-
-		$("#pagecontent").empty().append(rendered);
+		const $pgContent = $("#pagecontent").empty();
+		const buildStatsTab = () => {
+			$pgContent.append(Renderer.table.getRenderedString(it));
+			$pgContent.append(Renderer.utils.getPageP(it));
+		};
+		const buildInfoTab = async () => {
+			let quickRulesType;
+			switch (it.source) {
+				case "CHD":
+					quickRulesType = "criticalHitDeck";
+					break;
+				case "CFD":
+					quickRulesType = "criticalFumbleDeck";
+					break;
+				case "HPD":
+					quickRulesType = "heroPointDeck";
+					break;
+				default:
+					return;
+			}
+			const quickRules = await Renderer.utils.pGetQuickRules(quickRulesType);
+			$pgContent.append(quickRules);
+		}
+		const statsTab = Renderer.utils.tabButton(
+			"Table",
+			() => {},
+			buildStatsTab,
+		);
+		const tabs = [statsTab];
+		if (it.source === "CFD" || it.source === "CHD" || it.source === "HPD") {
+			const infoTab = Renderer.utils.tabButton(
+				"Quick Rules",
+				() => {},
+				buildInfoTab,
+			);
+			tabs.push(infoTab);
+		}
+		Renderer.utils.bindTabButtons(...tabs);
 
 		ListUtil.updateSelected();
 	}

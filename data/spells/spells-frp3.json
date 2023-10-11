@@ -14,7 +14,7 @@
 				"sorcerer"
 			],
 			"subclass": {
-				"Sorcerer|Bloodline": [
+				"Bloodline|Sorcerer": [
 					"Phoenix"
 				]
 			},
@@ -52,7 +52,7 @@
 				"sorcerer"
 			],
 			"subclass": {
-				"Sorcerer|Bloodline": [
+				"Bloodline|Sorcerer": [
 					"Phoenix"
 				]
 			},
@@ -102,7 +102,7 @@
 				"sorcerer"
 			],
 			"subclass": {
-				"Sorcerer|Bloodline": [
+				"Bloodline|Sorcerer": [
 					"Phoenix"
 				]
 			},
@@ -123,13 +123,9 @@
 				"entry": "10-foot emanation"
 			},
 			"duration": {
-				"type": "timed",
-				"entry": "sustained up to 1 minute",
-				"sustain": true,
-				"duration": {
-					"number": 1,
-					"unit": "minute"
-				}
+				"number": 1,
+				"unit": "minute",
+				"sustained": true
 			},
 			"entries": [
 				"You encircle yourself in an aura of protective flames.",

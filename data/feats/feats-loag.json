@@ -79,7 +79,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "A creature targets you with an attack or other targeted effect, and you can see the attacker.",
 			"entries": [
@@ -100,7 +100,7 @@
 			],
 			"frequency": {
 				"unit": "hour",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You take acid, electricity, or sonic damage.",
 			"entries": [
@@ -256,7 +256,7 @@
 			],
 			"entries": [
 				"You have full control over your shape and can transform into your inherent animal.",
-				"You can use {@action Change Shape (Beastkin)|LOAG} to enter an animal shape. When you gain this feat, choose either {@spell aerial form}, {@spell animal form}, {@spell dinosaur form} or {@spell insect form}; after you choose a form, you can't change the form. While in animal shape, you gain the effects of a 5th-level casting of your chosen form spell, except you always transform into an animal matching your inherent animal and can use your humanoid form's AC if it's higher than what the animal form grants. If your inherent animal isn't among the animals listed in the form, you default to the statistics and abilities of the bird battle form, cat battle form, deinonychus battle form or ant battle form for {@spell aerial form}, {@spell animal form}, {@spell dinosaur form}, and {@spell insect form}, respectively (at the GM's discretion, you instead default to a different form that is closest to your inherent animal). You can remain in animal shape indefinitely and can use {@action Change Shape (Beastkin)|LOAG} to return to your humanoid or hybrid shape at any time.",
+				"You can use {@action Change Shape (Beastkin)|LOAG|Change Shape} to enter an animal shape. When you gain this feat, choose either {@spell aerial form}, {@spell animal form}, {@spell dinosaur form} or {@spell insect form}; after you choose a form, you can't change the form. While in animal shape, you gain the effects of a 5th-level casting of your chosen form spell, except you always transform into an animal matching your inherent animal and can use your humanoid form's AC if it's higher than what the animal form grants. If your inherent animal isn't among the animals listed in the form, you default to the statistics and abilities of the bird battle form, cat battle form, deinonychus battle form or ant battle form for {@spell aerial form}, {@spell animal form}, {@spell dinosaur form}, and {@spell insect form}, respectively (at the GM's discretion, you instead default to a different form that is closest to your inherent animal). You can remain in animal shape indefinitely and can use {@action Change Shape (Beastkin)|LOAG|Change Shape} to return to your humanoid or hybrid shape at any time.",
 				"If you have the {@feat Critter Shape|LOAG} feat, you can choose to gain the effects of a 4th-level {@spell pest form}, can remain in critter shape indefinitely, and can return to your critter shape at any time after leaving the shape, just as you can with Animal Shape."
 			]
 		},
@@ -313,7 +313,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"If you and up to four other creatures are in contact with a body of water deep enough for you to fully submerge, you can spend 10 minutes adapting the creatures to that specific body of water. This allows them to breathe normally while within that body of water and protects them from deep ocean pressure. These effects last until the creatures are no longer in contact with that body of water or until you use this ability again, whichever comes first for each creature."
@@ -421,9 +421,12 @@
 				"tiefling"
 			],
 			"entries": [
-				"One of your ancestors was a {@trait rakshasa}, the corrupt and aristocratic reincarnated souls that call Golarion home. You have some dim echo of your ancestor's memories\u2014 enough to play the role of noble as needed, no matter your origins. You're trained in {@skill Society}. If you're already trained in {@skill Society} (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the {@feat Courtly Graces} skill feat."
+				"One of your ancestors was a {@trait rakshasa}, the corrupt and aristocratic reincarnated souls that call Golarion home. You have some dim echo of your ancestor's memories\u2014enough to play the role of noble as needed, no matter your origins. You're trained in {@skill Society}. If you're already trained in {@skill Society} (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the {@feat Courtly Graces} skill feat."
 			],
 			"leadsTo": [
+				"Reveal Hidden Self|LOIL",
+				"Jalmeri Rakshasa Magic|LOIL",
+				"Idol Threat|LOIL",
 				"Rakshasa Magic|LOAG"
 			]
 		},
@@ -445,7 +448,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "Your turn begins.",
 			"entries": [
@@ -537,11 +540,11 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "A creature that has blood and is not at its maximum Hit Points hits you with a melee {@action Strike}",
 					"entries": [
-						"You channel salt and brine from your blood into the creature's wounds. The creature must attempt a Fortitude save using your class DC or spell DC, whichever is higher. On a failure, the creature takes {@damage 1d6} {@condition persistent damage ||persistent acid damage} and is {@condition sickened 1} by the pain. On a critical failure, it instead takes {@damage 2d6} {@condition persistent damage ||persistent acid damage} and is {@condition sickened 2}."
+						"You channel salt and brine from your blood into the creature's wounds. The creature must attempt a Fortitude save using your class DC or spell DC, whichever is higher. On a failure, the creature takes {@damage 1d6} {@condition persistent damage||persistent acid damage} and is {@condition sickened 1} by the pain. On a critical failure, it instead takes {@damage 2d6} {@condition persistent damage||persistent acid damage} and is {@condition sickened 2}."
 					]
 				}
 			]
@@ -565,7 +568,7 @@
 			"prerequisites": "expert in {@skill Performance}",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You've spent many an evening learning songs and tales featuring calacas, death's wandering minstrels. You dramatically unleash a stunning blast of sound by smashing an instrument you hold or belting out a discordant note. This has the effects of synaptic pulse, but the effect is auditory rather than mental. The DC is either your class DC or spell DC, whichever is higher."
@@ -612,7 +615,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "An adjacent and willing ally would be reduced to 0 HP but not killed.",
 			"entries": [
@@ -648,7 +651,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"The life-giving energy that flows in your blood revitalizes you. You recover {@dice 4d6} Hit Points and gain 10 temporary Hit Points for 1 minute.",
@@ -672,7 +675,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "A living creature within 60 feet would die.",
 			"entries": [
@@ -805,7 +808,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You would die as a result of a failed saving throw or recovery check.",
 			"entries": [
@@ -829,7 +832,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You tap into the Godmind's collective cognitive well, rapidly parsing near-infinite variables to read your surroundings. For 1 minute, you gain precise motion sense out to 60 feet, you can see {@condition invisible} creatures and objects, and you gain the effects of a 9th-level {@spell true seeing}."
@@ -851,7 +854,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"Your next fire spell leaves embers in its wake. If your next action is to {@action Cast a Spell} with an area and the {@trait fire} trait, for 1 minute, your spell's area becomes {@quickref difficult terrain||3|terrain} as well as hazardous terrain, dealing 1 fire damage for each square a creature moves through."
@@ -867,7 +870,7 @@
 				"lineage"
 			],
 			"entries": [
-				"The fire of your elemental ancestor manifests like {@condition dying} embers of a blaze, and your inner charcoal helps staunch bleeding, purify simple poisons, and absorb acid. The DC for you to recover from {@condition persistent damage ||persistent acid}, bleed, and poison damage is 10 instead of 15 (or 5 if you have particularly effective assistance)."
+				"The fire of your elemental ancestor manifests like {@condition dying} embers of a blaze, and your inner charcoal helps staunch bleeding, purify simple poisons, and absorb acid. The DC for you to recover from {@condition persistent damage||persistent acid}, bleed, and poison damage is 10 instead of 15 (or 5 if you have particularly effective assistance)."
 			]
 		},
 		{
@@ -915,7 +918,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You secrete a cloak of concentrated poison that harms any who dare attack you. For 1 minute, any creature that touches you or damages you with an unarmed attack or melee weapon without the {@trait reach} trait takes {@damage 3d6} poison damage."
@@ -954,7 +957,7 @@
 				"fleshwarp"
 			],
 			"entries": [
-				"An acidic ooze coats your limbs. Your unarmed attacks deal an additional {@damage 1d4} {@condition persistent damage ||persistent acid damage} on a critical hit."
+				"An acidic ooze coats your limbs. Your unarmed attacks deal an additional {@damage 1d4} {@condition persistent damage||persistent acid damage} on a critical hit."
 			]
 		},
 		{
@@ -1041,7 +1044,7 @@
 				"beastkin"
 			],
 			"entries": [
-				"Once per hour, you can use {@action Change Shape (Beastkin)|LOAG} to enter a critter shape. While in critter shape, you gain the effect of a 1st-level {@spell pest form}, except you can only transform into an animal matching your inherent animal. You can remain in critter shape for up to 10 minutes, after which you transform back into your hybrid shape and can't enter your critter shape again for 1 hour. You can instead use {@action Change Shape (Beastkin)|LOAG} to return to your humanoid or hybrid shape at any time during the duration of Critter Shape. If your inherent animal is normally larger than Tiny, you transform into a smaller, younger version of the animal, such as a Tiny bear cub. If your inherent animal has a fly Speed, you can turn into that animal (unlike normal for 1st-level {@spell pest form}), but you still don't gain a fly Speed."
+				"Once per hour, you can use {@action Change Shape (Beastkin)|LOAG|Change Shape} to enter a critter shape. While in critter shape, you gain the effect of a 1st-level {@spell pest form}, except you can only transform into an animal matching your inherent animal. You can remain in critter shape for up to 10 minutes, after which you transform back into your hybrid shape and can't enter your critter shape again for 1 hour. You can instead use {@action Change Shape (Beastkin)|LOAG|Change Shape} to return to your humanoid or hybrid shape at any time during the duration of Critter Shape. If your inherent animal is normally larger than Tiny, you transform into a smaller, younger version of the animal, such as a Tiny bear cub. If your inherent animal has a fly Speed, you can turn into that animal (unlike normal for 1st-level {@spell pest form}), but you still don't gain a fly Speed."
 			]
 		},
 		{
@@ -1083,7 +1086,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You've learned to disperse the crystalline motes coating your body as a haze. You become {@condition concealed}, though you can't use this concealment to {@action Hide} or {@action Sneak}, as normal for concealment where your position is still obvious. The motes stay within an inch of your skin, move with you, and last for a number of rounds equal to half your level."
@@ -1170,11 +1173,11 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You are about to gain the {@condition dying} condition as a result of another creature's attack or ability, and that creature is within your melee reach.",
 			"entries": [
-				"Once, you died because someone\u2014murderer or monster, soldier or executioner\u2014 chose to strike you down. Just before losing consciousness, make a melee {@action Strike} against the triggering creature."
+				"Once, you died because someone\u2014murderer or monster, soldier or executioner\u2014chose to strike you down. Just before losing consciousness, make a melee {@action Strike} against the triggering creature."
 			],
 			"special": [
 				"You can select this feat only at 1st level, and you can't retrain into or out of this feat."
@@ -1295,7 +1298,7 @@
 				"Your draconic anatomy becomes especially pronounced. You increase the power of one of the following kobold heritages or feats you have.",
 				"Dracomancer Increase the number of times you can cast each of the granted 1st- and 2nd-level innate spells by 1.",
 				"Kobold Breath Creatures that critically fail their save against your Kobold Breath take {@damage 3d4} {@condition persistent damage} of the type dealt by your draconic patron.",
-				"Strongjaw Kobold Your jaws unarmed attack gains the deadly d6 trait.",
+				"Strongjaw Kobold Your jaws unarmed attack gains the {@trait deadly <d6>} trait.",
 				"Venomtail Kobold You produce enough venom to use the {@action Tail Toxin|APG} action twice per day."
 			]
 		},
@@ -1401,11 +1404,11 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You shroud your arms and held weapons in elemental magic. Choose one element.",
-				"Until the end of your next turn, your Strikes deal an additional {@dice 1d6} damage of the indicated type and have the trait corresponding to the element: electricity for air, bludgeoning for earth, fire for fire, or cold for water."
+				"Until the end of your next turn, your {@action Strike||Strikes} deal an additional {@dice 1d6} damage of the indicated type and have the trait corresponding to the element: electricity for air, bludgeoning for earth, fire for fire, or cold for water."
 			],
 			"leadsTo": [
 				"Continuous Assault|LOAG",
@@ -1574,7 +1577,7 @@
 			"prerequisites": "{@feat Evanescent Wings|LOAG}",
 			"frequency": {
 				"unit": "hour",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You stoke your magic to energize your wings, temporarily transforming them into glowing, majestic forms. For 1 minute, you gain a fly Speed of 30 feet."
@@ -1593,7 +1596,7 @@
 			],
 			"prerequisites": "{@feat Lawbringer|APG}",
 			"entries": [
-				"You never fail to strike down the ever-expanding reaches of chaos. All your weapon and unarmed Strikes deal 1 additional lawful damage and have the {@trait lawful} and {@trait magical} traits."
+				"You never fail to strike down the ever-expanding reaches of chaos. All your weapon and unarmed {@action Strike||Strikes} deal 1 additional lawful damage and have the {@trait lawful} and {@trait magical} traits."
 			]
 		},
 		{
@@ -1657,7 +1660,7 @@
 			],
 			"frequency": {
 				"recurs": true,
-				"freq": 1,
+				"number": 1,
 				"unit": "minute",
 				"interval": 10
 			},
@@ -1725,7 +1728,7 @@
 			"prerequisites": "{@feat Adhyabhau|LOAG}",
 			"frequency": {
 				"unit": "hour",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You deal mental damage.",
 			"entries": [
@@ -1763,7 +1766,7 @@
 			"frequency": {
 				"unit": "minute",
 				"interval": 10,
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"With heavy wing beats, you whip up a furious gust and direct it at your opponents. This air blast has the effects of gust of wind with a DC equal to your class DC or spell DC, whichever is higher."
@@ -1848,14 +1851,14 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
-				"You embrace your monstrous blood and make it your own, screaming out to the heavens and hells alike in rage, pain, and defiance. Reality buckles and twists under your sudden power\u2014each tiefling has a unique transformation, but it might include sulfurous flames, choruses of shrieks, or twisting, serpentine lightning. Every creature within 10 feet of you is {@condition deafened} and {@condition dazzled} for 1 round unless they succeed at a Fortitude save using your class DC or spell DC, whichever is higher. Your final form has the effects of divine vessel for a deity that shares an alignment with your fiendish lineage. Your final form resembles a creature from your fiendish lineage, and you remain in that form for 1 minute. While in your final form, you can cast {@spell chilling darkness}, fireball, and lightning bolt as 6th-level divine innate spells, once each per use of this feat.",
+				"You embrace your monstrous blood and make it your own, screaming out to the heavens and hells alike in rage, pain, and defiance. Reality buckles and twists under your sudden power\u2014each tiefling has a unique transformation, but it might include sulfurous flames, choruses of shrieks, or twisting, serpentine lightning. Every creature within 10 feet of you is {@condition deafened} and {@condition dazzled} for 1 round unless they succeed at a Fortitude save using your class DC or spell DC, whichever is higher. Your final form has the effects of divine vessel for a deity that shares an alignment with your fiendish lineage. Your final form resembles a creature from your fiendish lineage, and you remain in that form for 1 minute. While in your final form, you can cast {@spell chilling darkness}, {@spell fireball}, and {@spell lightning bolt} as 6th-level divine innate spells, once each per use of this feat.",
 				"When you emerge from your final form, you become {@condition drained 3}. In addition, if you have this feat, you gain weakness 10 to good even when not in your final form, and you take good damage even if you aren't evil."
 			],
 			"special": [
-				"At the GM's discretion, the specific elements of this feat can be adjusted to better fit the tiefling's lineage\u2014for example, a GM might decide that a particular beastbrood tiefling could cast a 6th-level {@spell phantasmal killer} instead of fireball."
+				"At the GM's discretion, the specific elements of this feat can be adjusted to better fit the tiefling's lineage\u2014for example, a GM might decide that a particular beastbrood tiefling could cast a 6th-level {@spell phantasmal killer} instead of {@spell fireball}."
 			]
 		},
 		{
@@ -1913,7 +1916,7 @@
 			"prerequisites": "{@feat Emberkin|LOAG}",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"Your peri lineage has opened your mind to fire's raw, purging essence. You can spend 1 minute in focused preparation, then enter a fire your size or larger to instantly teleport to any fire that is your size or larger up to 5 miles away. You take no damage from entering or exiting fires when using this ability. Once you enter the fire, you instantly know the rough locations of other large fires within range and can exit from the original fire, if you prefer. You can't carry extradimensional spaces with you when you teleport; if you attempt to do so, the activity fails."
@@ -1933,7 +1936,7 @@
 			],
 			"frequency": {
 				"unit": "round",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You can fly through the air in short bursts at half your land Speed. If you don't end your movement on solid ground, you fall at the end of your turn."
@@ -2007,7 +2010,7 @@
 			"prerequisites": "{@feat Shield Block}",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You reinforce your shield with a rocky outgrowth of metal and stone. You Raise your Shield. If you use the {@feat Shield Block} reaction before your next turn, add your character level to your shield's Hardness when determining how much damage is blocked."
@@ -2027,7 +2030,7 @@
 			],
 			"frequency": {
 				"unit": "hour",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You always have time for a joke or prank. You {@action Create a Diversion}, {@action Conceal an Object}, or {@action Hide}. All creatures who witnessed your Fox Trick then wise up to it, becoming temporarily immune to your Fox Trick for 24 hours."
@@ -2103,7 +2106,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "A creature you are aware of damages you with a melee {@action Strike}.",
 			"entries": [
@@ -2235,7 +2238,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You are descended from the einherji, the worthy warriors of chaos. You call upon your ascendant blood with a mighty cry that fills you with a revitalizing energy for 1 minute or until you critically fail a {@action Strike}, whichever comes first. For the duration, the first time each round you successfully {@action Strike} a creature of your level or higher, you regain Hit Points equal to half your level."
@@ -2312,7 +2315,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You are about to attempt a skill check or saving throw.",
 			"entries": [
@@ -2335,7 +2338,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "A creature within 60 feet is about to attempt an attack roll or skill check.",
 			"entries": [
@@ -2369,7 +2372,7 @@
 			"prerequisites": "{@feat Winglets|LOAG}",
 			"frequency": {
 				"unit": "round",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You can fly a little! You {@action Fly} up to half your Speed. If you don't end your movement on solid ground, you fall at the end of your turn."
@@ -2411,7 +2414,7 @@
 			"frequency": {
 				"unit": "minute",
 				"interval": 10,
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "An effect would deal fire damage to you, even if you resist all the damage.",
 			"entries": [
@@ -2479,7 +2482,7 @@
 			"prerequisites": "{@feat Storm's Lash|APG}",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You critically hit a foe with a {@action Strike} with a slashing weapon.",
 			"entries": [
@@ -2495,7 +2498,7 @@
 				"kitsune"
 			],
 			"entries": [
-				"When you {@action Change Shape (Beastkin)|LOAG}, you retain elements of your kitsune form, allowing you to speak in a fox form, use kitsune unarmed attacks in a tailless form, or gain a tail in your tailless form to use abilities that require one. You can {@action Change Shape (Beastkin)|LOAG} to alter the details of your hybrid form without fully changing into your true form or your alternate form. While in hybrid form, your foxlike features make it obvious that you aren't a normal humanoid."
+				"When you {@action Change Shape (Kitsune)|LOAG|Change Shape}, you retain elements of your kitsune form, allowing you to speak in a fox form, use kitsune unarmed attacks in a tailless form, or gain a tail in your tailless form to use abilities that require one. You can {@action Change Shape (Kitsune)|LOAG|Change Shape} to alter the details of your hybrid form without fully changing into your true form or your alternate form. While in hybrid form, your foxlike features make it obvious that you aren't a normal humanoid."
 			]
 		},
 		{
@@ -2571,7 +2574,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You would critically fail a skill check or suffer an effect with the {@trait misfortune} trait.",
 			"entries": [
@@ -2645,7 +2648,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You Disable a hazard.",
 			"requirements": "The hazard isn't {@condition broken}.",
@@ -2667,7 +2670,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"requirements": "You're afflicted by a disease or poison, or are taking {@condition persistent damage}.",
 			"entries": [
@@ -2753,10 +2756,10 @@
 			"prerequisites": "{@feat Brine May|APG}, {@feat Snow May|LOAG}, {@feat Veil May|LOAG}, or {@feat Virga May|LOAG}",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
-				"You summon an aura of shimmering heat, flurrying snow, crashing waves, or swirling wind and lightning. For 1 minute, you gain concealment against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers {@dice 1d12} damage (basic Reflex save using your class DC or spell DC, whichever is higher). At 13th and 17th level, this damage increases by {@dice 1d12}. A veil may changeling deals fire damage, a snow may changeling deals cold damage, a brine may changeling deals bludgeoning damage and the effect gains the {@trait water} trait, and a virga may changeling deals electricity damage."
+				"You summon an aura of shimmering heat, flurrying snow, crashing waves, or swirling wind and lightning. For 1 minute, you gain concealment against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers {@dice 1d12} damage (basic Reflex save using your class DC or spell DC, whichever is higher). At 13th and 17th level, this damage increases by {@damage 1d12}. A veil may changeling deals fire damage, a snow may changeling deals cold damage, a brine may changeling deals bludgeoning damage and the effect gains the {@trait water} trait, and a virga may changeling deals electricity damage."
 			],
 			"leadsTo": [
 				"Stormy Heart|LOAG"
@@ -2800,7 +2803,7 @@
 				"lizardfolk"
 			],
 			"entries": [
-				"Your iruxi unarmed attacks channel the spiritual energy of your ancestors. Any unarmed attacks you acquire from iruxi heritages or ancestry feats gain the effects of a ghost touch property rune (Core Rulebook 584)."
+				"Your iruxi unarmed attacks channel the spiritual energy of your ancestors. Any unarmed attacks you acquire from iruxi heritages or ancestry feats gain the effects of a {@item ghost touch} property rune (Core Rulebook 584)."
 			]
 		},
 		{
@@ -2854,7 +2857,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You unfold your wings for travel and can keep them unfolded for 10 minutes. You gain a fly Speed equal to your land Speed while your wings are unfurled. If you have Fledgling Flight, you gain a +10-foot status bonus to your fly Speed with Juvenile Flight. As normal, since your fly Speed is derived from your land Speed, this status bonus isn't cumulative with a status bonus to your land Speed, if you have one."
@@ -2995,7 +2998,7 @@
 				"lineage"
 			],
 			"entries": [
-				"Your elemental lineage manifests as magma and molten rock, and you can focus the magma into your hand to attack your foes. You gain a magma spike unarmed attack, which requires a free hand to use. This is an {@trait agile}, {@trait finesse}, {@trait unarmed} attack in the {@group brawling} weapon group that deals {@damage 1d4} piercing damage, as well as 1 additional fire damage. Instead of the normal critical specialization effect, the target takes {@damage 1d6} {@condition persistent damage ||persistent fire damage}; you gain a bonus on this {@condition persistent damage} equal to your item bonus to attack rolls on unarmed attacks."
+				"Your elemental lineage manifests as magma and molten rock, and you can focus the magma into your hand to attack your foes. You gain a magma spike unarmed attack, which requires a free hand to use. This is an {@trait agile}, {@trait finesse}, {@trait unarmed} attack in the {@group brawling} weapon group that deals {@damage 1d4} piercing damage, as well as 1 additional fire damage. Instead of the normal critical specialization effect, the target takes {@damage 1d6} {@condition persistent damage||persistent fire damage}; you gain a bonus on this {@condition persistent damage} equal to your item bonus to attack rolls on unarmed attacks."
 			]
 		},
 		{
@@ -3019,7 +3022,7 @@
 				"orc"
 			],
 			"entries": [
-				"The impulse to survive and continue fighting resonates deep within you. You gain a circumstance bonus to damage rolls on your melee Strikes equal to twice the sum of your {@condition wounded} and {@condition doomed} conditions (to a maximum of a +8 circumstance bonus to damage) whenever you have one or both conditions."
+				"The impulse to survive and continue fighting resonates deep within you. You gain a circumstance bonus to damage rolls on your melee {@action Strike||Strikes} equal to twice the sum of your {@condition wounded} and {@condition doomed} conditions (to a maximum of a +8 circumstance bonus to damage) whenever you have one or both conditions."
 			]
 		},
 		{
@@ -3115,7 +3118,7 @@
 			],
 			"frequency": {
 				"unit": "minute",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You cast a non-cantrip occult spell or an innate spell from a changeling ancestry feat.",
 			"entries": [
@@ -3230,7 +3233,7 @@
 			"prerequisites": "{@feat Orc Warmask|LOAG}",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You fail a saving throw against an effect from your warmask's magical tradition.",
 			"requirements": "You're wearing your warmask.",
@@ -3357,7 +3360,7 @@
 			],
 			"frequency": {
 				"unit": "minute",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "An adjacent ally is hit by an attack.",
 			"entries": [
@@ -3390,7 +3393,7 @@
 				"kitsune"
 			],
 			"entries": [
-				"With a bit of self-discovery, you find a new form. You gain the alternate form of a kitsune heritage other than your own, adding it to the options for your {@action Change Shape (Beastkin)|LOAG}."
+				"With a bit of self-discovery, you find a new form. You gain the alternate form of a kitsune heritage other than your own, adding it to the options for your {@action Change Shape (Kitsune)|LOAG|Change Shape}."
 			]
 		},
 		{
@@ -3408,7 +3411,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"Your nanites fly out of your body, swarming around you in a cloud. You become {@condition concealed} for a number of rounds equal to half your level. You can't use this concealment to {@action Hide} or {@action Sneak}, as normal for concealment that makes your position obvious. While Nanite Shroud is active, you can't use other abilities that require the use of your nanites."
@@ -3429,7 +3432,7 @@
 			],
 			"frequency": {
 				"unit": "hour",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You attempt a skill check requiring three actions or fewer.",
 			"entries": [
@@ -3559,7 +3562,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You have a connection to olethroses, the enigmatic psychopomps who successfully swayed the yamaraj to permit the creation of the first duskwalkers. You place a finger on fate's scales by wrapping silk around your bow. The first time this turn that you hit a creature with a {@action Strike} using a weapon in the bow group you've modified in this way, that creature takes an additional 60 damage (basic Fortitude save using your class DC or spell DC, whichever is higher) as the arrow works to cut short their very destiny. This additional damage is of the same type as the initial attack dealt. If you hit more than one creature at the same time, choose one to suffer the effect of your decree."
@@ -3695,8 +3698,7 @@
 				"fleshwarp"
 			],
 			"entries": [
-				"Your stomach is particularly durable. When you succeed at a Fortitude save to reduce your {@condition sickened} value, you reduce it by 2 (or by 3 on a critical success)",
-				"Lady Kedley: A wealthy noble in Spinhead Vanluk: This Mana Wastes."
+				"Your stomach is particularly durable. When you succeed at a Fortitude save to reduce your {@condition sickened} value, you reduce it by 2 (or by 3 on a critical success)."
 			]
 		},
 		{
@@ -3731,7 +3733,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You would take bludgeoning, piercing, or slashing damage.",
 			"entries": [
@@ -3791,7 +3793,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You call on your celestial forebears to rid your body of all toxins and impurities. For each disease or poison currently affecting you, attempt a {@skill Religion} check to counteract that disease or poison. As normal, your counteract level is equal to half your level, rounded up."
@@ -3825,7 +3827,7 @@
 			"trigger": "You roll initiative.",
 			"entries": [
 				"Your instincts kick in and you take on an aggressive stance.",
-				"You use {@action Change Shape (Beastkin)|LOAG} to enter your hybrid form or a new form granted by a beastkin feat."
+				"You use {@action Change Shape (Beastkin)|LOAG|Change Shape} to enter your hybrid form or a new form granted by a beastkin feat."
 			]
 		},
 		{
@@ -3846,7 +3848,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"Your skin glows with intensity. Creatures within 10 feet who can see you must succeed at a Fortitude save against your class DC or spell DC, whichever is higher.",
@@ -3937,7 +3939,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You call out to your allies and push them to give their all in combat. All allies within 30 feet that can hear you gain a number of temporary Hit Points equal to your level. In addition, these allies become {@condition quickened} for 1 minute but can only use the extra action to {@action Step}, {@action Stride}, or {@action Strike}."
@@ -4044,7 +4046,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You surround your body with a thin layer of water drawn from the moisture in the air. You can spend one hour resting to rehydrate your gills and skin, which counts as submerging your body in water. At the GM's discretion, incredibly dry areas, such as deserts, might not have enough moisture in the air for your Rehydration to work."
@@ -4065,7 +4067,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You trigger your body's repair programming, causing your body's nanites to heal your wounds. You gain fast healing equal to half your level for 1 minute. While {@action Repair} Module is active, you can't use other abilities that require the use of your nanites."
@@ -4110,7 +4112,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You have the {@condition dying} condition and are about to attempt a recovery check.",
 			"entries": [
@@ -4195,7 +4197,7 @@
 				"catfolk"
 			],
 			"entries": [
-				"You have long fangs, natural or augmented. You gain a jaws unarmed attack that deals {@damage 1d6} piercing damage. Your jaws are in the brawling group and have the {@trait unarmed} trait."
+				"You have long fangs, natural or augmented. You gain a jaws unarmed attack that deals {@damage 1d6} piercing damage. Your jaws are in the {@group brawling} group and have the {@trait unarmed} trait."
 			]
 		},
 		{
@@ -4207,7 +4209,7 @@
 				"orc"
 			],
 			"entries": [
-				"Glorious, storied scars cover and protect much of your body. Your DC on flat checks to end {@condition persistent damage ||persistent bleed damage} is reduced from 15 to 10, or from 10 to 5 after receiving especially appropriate assistance."
+				"Glorious, storied scars cover and protect much of your body. Your DC on flat checks to end {@condition persistent damage||persistent bleed damage} is reduced from 15 to 10, or from 10 to 5 after receiving especially appropriate assistance."
 			]
 		},
 		{
@@ -4252,7 +4254,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You make a weapon unbearable to hold. Attempt an {@skill Athletics} check to {@action Disarm} a target creature. You don't need to have a hand free to make this {@action Disarm} attempt. If the {@action Disarm} attempt succeeds, the target takes {@damage 4d6} fire damage unless it drops the weapon, and on a critical success, it takes {@damage 4d6} fire damage and drops the weapon. If you're legendary in {@skill Athletics}, this increases to {@damage 8d6} fire damage."
@@ -4343,7 +4345,7 @@
 			],
 			"frequency": {
 				"unit": "hour",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You draw on your connection with the Shadow Plane to see through all but the deepest darkness. You gain {@ability darkvision||greater darkvision} for 1 minute."
@@ -4420,7 +4422,7 @@
 			"prerequisites": "tailless alternate form",
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You wear many faces, even those that don't belong to you. When you Change Shape into your tailless form, you gain the effects of 3rd-level {@spell illusory disguise} for 1 hour or until you shift back, except it's a {@trait transmutation} effect rather than an illusion."
@@ -4807,7 +4809,7 @@
 			],
 			"frequency": {
 				"unit": "hour",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You unleash a cloud of pollen or similar spores. All creatures in a 10-foot emanation around you must attempt a Fortitude save using your class DC or spell DC (whichever is higher) with the following results. Plants and fungi are immune to this effect.",
@@ -4872,10 +4874,6 @@
 			],
 			"entries": [
 				"You are trained in {@skill Intimidation} (or another skill of your choice, if you were already trained in {@skill Intimidation}) and gain the {@feat Intimidating Glare} skill feat as a bonus feat."
-			],
-			"leadsTo": [
-				"Frightening Appearance|APG",
-				"Stunning Appearance|APG"
 			]
 		},
 		{
@@ -4905,7 +4903,7 @@
 				"undine"
 			],
 			"entries": [
-				"You transform your fire spells into steam, making them more effective underwater. If your next action is to {@action Cast a Spell} with the {@trait fire} trait, you can cast it underwater. When you do so, it takes the form of scalding steam. Underwater creatures do not gain the normal fire resistance for being underwater against this spell, but they don't light things on fire or cause {@condition persistent damage ||persistent fire damage}, nor do they add other effects that would apply to fire but not steam (at the GM's discretion)."
+				"You transform your fire spells into steam, making them more effective underwater. If your next action is to {@action Cast a Spell} with the {@trait fire} trait, you can cast it underwater. When you do so, it takes the form of scalding steam. Underwater creatures do not gain the normal fire resistance for being underwater against this spell, but they don't light things on fire or cause {@condition persistent damage||persistent fire damage}, nor do they add other effects that would apply to fire but not steam (at the GM's discretion)."
 			]
 		},
 		{
@@ -5036,11 +5034,11 @@
 			"frequency": {
 				"unit": "minute",
 				"interval": 10,
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "You, or a strix ally you can see, are damaged by an enemy's critical hit.",
 			"entries": [
-				"You dedicate yourself to destroying those who harm your kin. Until the end of your next turn, you deal an additional{@dice +1d6} damage on Strikes against the triggering enemy. The bonus increases to{@dice +2d6} if you use a striking weapon or unarmed attack and{@dice +3d6} if you use a major striking weapon or unarmed attack."
+				"You dedicate yourself to destroying those who harm your kin. Until the end of your next turn, you deal an additional{@dice +1d6} damage on {@action Strike||Strikes} against the triggering enemy. The bonus increases to{@dice +2d6} if you use a striking weapon or unarmed attack and{@dice +3d6} if you use a major striking weapon or unarmed attack."
 			]
 		},
 		{
@@ -5143,9 +5141,6 @@
 			],
 			"special": [
 				"The Speed increase from this feat isn't cumulative with any Speed increase from your ancestry feats (such as Nimble Elf)."
-			],
-			"leadsTo": [
-				"Legendary Sneak"
 			]
 		},
 		{
@@ -5197,11 +5192,11 @@
 				{
 					"type": "ability",
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You cast one of the spells contained in your tengu feather fan. {@action Activate an Item||Activating} the fan takes the spell's normal number of actions. You can also Activate the fan to cast a cantrip you've gained from a heritage or ancestry feat; this activation doesn't count against the fan's uses per day."
@@ -5223,7 +5218,7 @@
 			],
 			"prerequisites": "{@feat Elemental Assault|LOAG}",
 			"entries": [
-				"Your Elemental Assault cycles through all four elements. When you use Elemental Assault, instead of choosing a single element, you can choose an element from the list when using the action, and then choose a different element at the beginning of each of your next 3 turns without spending an action; once you have chosen an element, you can't choose it again during this Elemental Assault, meaning you must select all four elements over the course of 4 turns. Each time you choose an element, until the beginning of your next turn, your Strikes deal an additional {@dice 1d6} damage of the indicated type and have the trait corresponding to that element."
+				"Your Elemental Assault cycles through all four elements. When you use Elemental Assault, instead of choosing a single element, you can choose an element from the list when using the action, and then choose a different element at the beginning of each of your next 3 turns without spending an action; once you have chosen an element, you can't choose it again during this Elemental Assault, meaning you must select all four elements over the course of 4 turns. Each time you choose an element, until the beginning of your next turn, your {@action Strike||Strikes} deal an additional {@dice 1d6} damage of the indicated type and have the trait corresponding to that element."
 			]
 		},
 		{
@@ -5236,7 +5231,7 @@
 			],
 			"prerequisites": "{@feat Seedpod|LOCG} (Character Guide 54)",
 			"entries": [
-				"When your seedpods strike a felling blow, they burst into viciously thorny vines. When you critically succeed at a seedpod {@action Strike}, vines twist and stab your foe, dealing {@damage 1d4} {@condition persistent damage ||persistent piercing damage}."
+				"When your seedpods strike a felling blow, they burst into viciously thorny vines. When you critically succeed at a seedpod {@action Strike}, vines twist and stab your foe, dealing {@damage 1d4} {@condition persistent damage||persistent piercing damage}."
 			]
 		},
 		{
@@ -5282,7 +5277,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You conjure the force of the tides to gain a +4 circumstance bonus to AC until the end of your next turn. Any allies adjacent to you during the duration gain a +2 circumstance bonus to AC as long as they remain adjacent to you. You can Sustain the effect to a maximum duration of 5 rounds. When a creature receiving a circumstance bonus to AC from Tidal Shield would take damage from an attack, as a reaction, you can reduce the damage to that creature by 40; after you do so, Tidal Shield ends."
@@ -5356,7 +5351,7 @@
 			],
 			"frequency": {
 				"recurs": true,
-				"freq": 1,
+				"number": 1,
 				"unit": "minute",
 				"interval": 10
 			},
@@ -5694,7 +5689,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"trigger": "An ally within 30 feet takes damage that would otherwise reduce them to 0 Hit Points and give them the {@condition dying} condition.",
 			"entries": [
@@ -5784,7 +5779,7 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
 				"You can strain to call forth feathered or cloudy wings from your back. Once manifested, these wings remain for 10 minutes. You gain a fly Speed equal to your land Speed while you've manifested your wings."
@@ -5833,10 +5828,10 @@
 			],
 			"frequency": {
 				"unit": "day",
-				"freq": 1
+				"number": 1
 			},
 			"entries": [
-				"You have been granted a sliver of the power of the yamaraj, the magistrates of the dead who agreed to allow duskwalkers to exist at all. You exhale a blast of icy wind and ravenous insects. This is a 30-foot cone that deals {@damage 14d6} slashing damage and {@damage 4d6} {@condition persistent damage ||persistent slashing damage} (basic Reflex save using your class DC or spell DC, whichever is higher). On a critical failure, targets also become {@condition sickened 2}."
+				"You have been granted a sliver of the power of the yamaraj, the magistrates of the dead who agreed to allow duskwalkers to exist at all. You exhale a blast of icy wind and ravenous insects. This is a 30-foot cone that deals {@damage 14d6} slashing damage and {@damage 4d6} {@condition persistent damage||persistent slashing damage} (basic Reflex save using your class DC or spell DC, whichever is higher). On a critical failure, targets also become {@condition sickened 2}."
 			]
 		}
 	]

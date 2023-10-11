@@ -133,6 +133,13 @@ class DiceTag {
 		str = str.replace(/{@dice ([-+0-9d ]*)}( {@condition persistent)/gi, (...m) => {
 			return `{@damage ${m[1]}}${m[2]}`;
 		});
+		// TODO: @scaledamage?
+		str = str.replace(/damage increases by {@dice ([-+0-9d ]*)}/gi, (...m) => {
+			return `damage increases by {@damage ${m[1]}}`;
+		});
+		str = str.replace(/deal {@dice ([-+0-9d ]*)} damage/gi, (...m) => {
+			return `deal {@damage ${m[1]}} damage`;
+		});
 		if (lastKey === "damage") {
 			str = str.replace(/{@dice ([-+0-9d ]*)} (bludgeoning|piercing|slashing|acid|cold|electricity|fire|sonic|positive|negative|force|chaotic|evil|good|lawful|mental|poison|bleed|precision)/gi, (...m) => {
 				return `{@damage ${m[1]}} ${m[2]}`;
@@ -218,7 +225,7 @@ class ConditionTag {
 			if (m[2]) return `{@condition ${m[1]}||${m[1]}${m[2]}}`;
 			else return `{@condition ${m[1]}}`;
 		}).replace(/persistent ((damage)|(?:bludgeoning|piercing|slashing|acid|cold|electricity|fire|sonic|positive|negative|force|chaotic|evil|good|lawful|mental|poison|bleed|precision)(?: damage)?)/gi, (...m) => {
-			return `{@condition persistent damage${m[2] ? "" : ` ||persistent ${m[1]}`}}`
+			return `{@condition persistent damage${m[2] ? "" : `||persistent ${m[1]}`}}`
 		});
 	}
 }

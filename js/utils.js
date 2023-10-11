@@ -5,7 +5,7 @@ if (typeof module !== "undefined") require("./parser.js");
 
 // in deployment, `IS_DEPLOYED = "<version number>";` should be set below.
 IS_DEPLOYED = undefined;
-VERSION_NUMBER = /* PF2ETOOLS_VERSION__OPEN */"0.6.4"/* PF2ETOOLS_VERSION__CLOSE */;
+VERSION_NUMBER = /* PF2ETOOLS_VERSION__OPEN */"0.8.6"/* PF2ETOOLS_VERSION__CLOSE */;
 DEPLOYED_STATIC_ROOT = ""; // ""; // FIXME re-enable this when we have a CDN again
 IS_VTT = false;
 
@@ -347,15 +347,20 @@ CleanUtil.JSON_REPLACEMENTS_REGEX = new RegExp(Object.keys(CleanUtil.JSON_REPLAC
 // SOURCES =============================================================================================================
 SourceUtil = {
 	ADV_BOOK_GROUPS: [
-		{group: "core", displayName: "Core"},
-		{group: "lost-omens", displayName: "Lost Omens"},
-		{group: "homebrew", displayName: "Homebrew"},
-		{group: "other", displayName: "Miscellaneous"},
+		{ group: "core", displayName: "Core" },
+		{ group: "lost-omens", displayName: "Lost Omens" },
+		{ group: "homebrew", displayName: "Homebrew" },
+		{ group: "other", displayName: "Miscellaneous" },
 	],
 
 	isAdventure (source) {
 		if (source instanceof FilterItem) source = source.item;
 		return Parser.SOURCES_ADVENTURES.has(source);
+	},
+
+	isAccessory (source) {
+		if (source instanceof FilterItem) source = source.item;
+		return Parser.SOURCES_ACCESSORIES.has(source);
 	},
 
 	isCoreOrSupplement (source) {
@@ -1597,6 +1602,7 @@ ContextUtil = {
 
 		this._userData = null;
 
+		// TODO: Sort the spell levels properly (1, 2, 3... 10; not 1, 10, 2, 3...)
 		const $elesAction = this._actions.map(it => {
 			if (it == null) return $(`<div class="my-1 w-100 ui-ctx__divider"></div>`);
 
@@ -2005,6 +2011,8 @@ UrlUtil.PG_VEHICLES = "vehicles.html"
 UrlUtil.PG_GM_SCREEN = "gmscreen.html";
 UrlUtil.PG_CHANGELOG = "changelog.html";
 UrlUtil.PG_PLACES = "places.html";
+UrlUtil.PG_EVENTS = "events.html";
+UrlUtil.PG_RELICGIFTS = "relicgifts.html";
 UrlUtil.PG_OPTIONAL_FEATURES = "optionalfeatures.html";
 UrlUtil.PG_SEARCH = "search.html";
 UrlUtil.PG_GENERIC_DATA = "genericData";
@@ -2026,17 +2034,19 @@ UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_VARIANTRULES] = (it) => UrlUtil.encodeFor
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ADVENTURE] = (it) => UrlUtil.encodeForHash(it.id);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BOOK] = (it) => UrlUtil.encodeForHash(it.id);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_DEITIES] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
-UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_HAZARDS] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
+UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_HAZARDS] = (it) => UrlUtil.encodeForHash([it.add_hash ? `${it.name} (${it.add_hash})` : it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_TABLES] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ORGANIZATIONS] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_CREATURETEMPLATE] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ACTIONS] = (it) => UrlUtil.encodeForHash([it.add_hash ? `${it.name} (${it.add_hash})` : it.name, it.source]);
-UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ABILITIES] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
+UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_ABILITIES] = (it) => UrlUtil.encodeForHash([it.add_hash ? `${it.name} (${it.add_hash})` : it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_LANGUAGES] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_TRAITS] = (it) => UrlUtil.encodeForHash(BrewUtil.hasSourceJson(it.source) ? [it.name, it.source] : [it.name]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_VEHICLES] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_PLACES] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
-UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_OPTIONAL_FEATURES] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
+UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_EVENTS] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
+UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_RELICGIFTS] = (it) => UrlUtil.encodeForHash([it.add_hash ? `${it.name} (${it.add_hash})` : it.name, it.source]);
+UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_OPTIONAL_FEATURES] = (it) => UrlUtil.encodeForHash([it.add_hash ? `${it.name} (${it.add_hash})` : it.name, it.source]);
 // region Fake pages (props)
 UrlUtil.URL_TO_HASH_BUILDER["subclass"] = it => {
 	const hashParts = [
@@ -2083,6 +2093,7 @@ UrlUtil.PG_TO_NAME[UrlUtil.PG_LANGUAGES] = "Languages";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_GM_SCREEN] = "GM Screen";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_CHANGELOG] = "Changelog";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_PLACES] = "Planes and Places";
+UrlUtil.PG_TO_NAME[UrlUtil.PG_EVENTS] = "Events";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_OPTIONAL_FEATURES] = "Optional Features";
 
 UrlUtil.CAT_TO_PAGE = {};
@@ -2124,6 +2135,7 @@ UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_ABILITY] = UrlUtil.PG_ABILITIES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_DEITY] = UrlUtil.PG_DEITIES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_LANGUAGE] = UrlUtil.PG_LANGUAGES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_PLACE] = UrlUtil.PG_PLACES;
+UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_EVENT] = UrlUtil.PG_EVENTS;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_PLANE] = UrlUtil.PG_PLACES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_ORGANIZATION] = UrlUtil.PG_ORGANIZATIONS;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_CREATURETEMPLATE] = UrlUtil.PG_CREATURETEMPLATE;
@@ -2131,6 +2143,7 @@ UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_NATION] = UrlUtil.PG_PLACES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_SETTLEMENT] = UrlUtil.PG_PLACES;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_RITUAL] = UrlUtil.PG_RITUALS;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_VEHICLE] = UrlUtil.PG_VEHICLES;
+UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_RELICGIFT] = UrlUtil.PG_RELICGIFTS;
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_TRAIT] = UrlUtil.PG_TRAITS;
 
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_PAGE] = null;
@@ -2469,7 +2482,7 @@ DataUtil = {
 					additionalData.forEach(dataAndSource => {
 						const findWith = dataAndSource.findWith;
 						const ad = dataAndSource.sourceData;
-						const toAppend = ad[prop].filter(it => it.otherSources && it.otherSources.find(os => os.source === findWith));
+						const toAppend = ad[prop].filter(it => it.otherSources && Object.keys(it.otherSources).map(x => it.otherSources[x]).find(os => os.source === findWith));
 						if (toAppend.length) data[prop] = (data[prop] || []).concat(toAppend);
 					});
 				}));
@@ -2495,12 +2508,12 @@ DataUtil = {
 		return `${toCsv(headers)}\n${rows.map(r => toCsv(r)).join("\n")}`;
 	},
 
-	userDownload (filename, data, {fileType = null, isSkipAdditionalMetadata = false, propVersion = "siteVersion", valVersion = VERSION_NUMBER} = {}) {
+	userDownload (filename, data, { fileType = null, isSkipAdditionalMetadata = false, propVersion = "siteVersion", valVersion = VERSION_NUMBER } = {}) {
 		filename = `${filename}.json`;
 		if (isSkipAdditionalMetadata || data instanceof Array) return DataUtil._userDownload(filename, JSON.stringify(data, null, "\t"), "text/json");
 
-		data = {[propVersion]: valVersion, ...data};
-		if (fileType != null) data = {fileType, ...data};
+		data = { [propVersion]: valVersion, ...data };
+		if (fileType != null) data = { fileType, ...data };
 		return DataUtil._userDownload(filename, JSON.stringify(data, null, "\t"), "text/json");
 	},
 
@@ -2510,15 +2523,15 @@ DataUtil = {
 
 	_userDownload (filename, data, mimeType) {
 		const a = document.createElement("a");
-		const t = new Blob([data], {type: mimeType});
+		const t = new Blob([data], { type: mimeType });
 		a.href = window.URL.createObjectURL(t);
 		a.download = filename;
-		a.dispatchEvent(new MouseEvent("click", {bubbles: true, cancelable: true, view: window}));
+		a.dispatchEvent(new MouseEvent("click", { bubbles: true, cancelable: true, view: window }));
 		setTimeout(() => window.URL.revokeObjectURL(a.href), 100);
 	},
 
 	/** Always returns an array of files, even in "single" mode. */
-	pUserUpload ({isMultiple = false, expectedFileType = null, propVersion = "siteVersion"} = {}) {
+	pUserUpload ({ isMultiple = false, expectedFileType = null, propVersion = "siteVersion" } = {}) {
 		return new Promise(resolve => {
 			const $iptAdd = $(`<input type="file" ${isMultiple ? "multiple" : ""} accept=".json" style="position: fixed; top: -100px; left: -100px; display: none;">`).on("change", (evt) => {
 				const input = evt.target;
@@ -2548,11 +2561,11 @@ DataUtil = {
 							out.push(json);
 						}
 					} catch (e) {
-						errs.push({filename: name, message: e.message});
+						errs.push({ filename: name, message: e.message });
 					}
 
 					if (input.files[readIndex]) reader.readAsText(input.files[readIndex++]);
-					else resolve({jsons: out, errors: errs});
+					else resolve({ jsons: out, errors: errs });
 				};
 
 				reader.readAsText(input.files[readIndex++]);
@@ -2699,6 +2712,11 @@ DataUtil = {
 
 			if (copyMeta._mod) normaliseMods(copyMeta);
 
+			// apply weak/elite adjustment to copied creature
+			if (copyMeta.creatureAdjustment) {
+				scaleCreature.applyAdjustment(copyFrom, copyMeta.creatureAdjustment.toLowerCase());
+			}
+
 			// copy over required values
 			Object.keys(copyFrom).forEach(k => {
 				if (copyTo[k] === null) return delete copyTo[k];
@@ -2783,44 +2801,51 @@ DataUtil = {
 				});
 			}
 
-			function doMod_prependArr (modInfo, prop) {
+			function doMod_prependArr (modInfo, path) {
 				doEnsureArray(modInfo, "items");
-				copyTo[prop] = copyTo[prop] ? modInfo.items.concat(copyTo[prop]) : modInfo.items
+				const current = getPropertyFromPath(copyTo, path);
+				const replacement = current ? modInfo.items.concat(current) : modInfo.items;
+				setPropertyFromPath(copyTo, replacement, path);
 			}
 
-			function doMod_appendArr (modInfo, prop) {
+			function doMod_appendArr (modInfo, path) {
 				doEnsureArray(modInfo, "items");
-				copyTo[prop] = copyTo[prop] ? copyTo[prop].concat(modInfo.items) : modInfo.items
+				const current = getPropertyFromPath(copyTo, path);
+				const replacement = current ? current.concat(modInfo.items) : modInfo.items;
+				setPropertyFromPath(copyTo, replacement, path);
 			}
 
-			function doMod_appendIfNotExistsArr (modInfo, prop) {
+			function doMod_appendIfNotExistsArr (modInfo, path) {
 				doEnsureArray(modInfo, "items");
-				if (!copyTo[prop]) return copyTo[prop] = modInfo.items;
-				copyTo[prop] = copyTo[prop].concat(modInfo.items.filter(it => !copyTo[prop].some(x => CollectionUtil.deepEquals(it, x))));
+				const current = getPropertyFromPath(copyTo, path);
+				if (!current) return setPropertyFromPath(copyTo, modInfo.items, path);
+				const replacement = arr.concat(modInfo.items.filter(it => !current.some(x => CollectionUtil.deepEquals(it, x))));
+				setPropertyFromPath(copyTo, replacement, path);
 			}
 
-			function doMod_replaceArr (modInfo, prop, isThrow = true) {
+			function doMod_replaceArr (modInfo, path, isThrow = true) {
 				doEnsureArray(modInfo, "items");
+				const current = getPropertyFromPath(copyTo, path);
 
-				if (!copyTo[prop]) {
-					if (isThrow) throw new Error(`Could not find "${prop}" array`);
+				if (!current) {
+					if (isThrow) throw new Error(`Could not find "${path}" array`);
 					return false;
 				}
 
 				let ixOld;
 				if (modInfo.replace.regex) {
 					const re = new RegExp(modInfo.replace.regex, modInfo.replace.flags || "");
-					ixOld = copyTo[prop].findIndex(it => it.idName || it.name ? re.test(it.idName || it.name) : typeof it === "string" ? re.test(it) : false);
+					ixOld = current.findIndex(it => it.idName || it.name ? re.test(it.idName || it.name) : typeof it === "string" ? re.test(it) : false);
 				} else if (modInfo.replace.index != null) {
 					ixOld = modInfo.replace.index;
 				} else {
-					ixOld = copyTo[prop].findIndex(it => it.idName || it.name ? it.idName || it.name === modInfo.replace : it === modInfo.replace);
+					ixOld = current.findIndex(it => it.idName || it.name ? it.idName || it.name === modInfo.replace : it === modInfo.replace);
 				}
 
 				if (~ixOld) {
-					copyTo[prop].splice(ixOld, 1, ...modInfo.items);
+					current.splice(ixOld, 1, ...modInfo.items);
 					return true;
-				} else if (isThrow) throw new Error(`Could not find "${prop}" item with name or title "${modInfo.replace}" to replace`);
+				} else if (isThrow) throw new Error(`Could not find "${path}" item with name or title "${modInfo.replace}" to replace`);
 				return false;
 			}
 
@@ -2880,6 +2905,13 @@ DataUtil = {
 				else applyTo(modInfo.prop);
 			}
 
+			function doMod_setProps (modInfo, path) {
+				doEnsureArray(modInfo, "items");
+				const current = getPropertyFromPath(copyTo, path);
+				const replacement = current ? Object.assign(current, modInfo.props) : modInfo.props;
+				setPropertyFromPath(copyTo, replacement, path);
+			}
+
 			function doMod (modInfos, ...properties) {
 				function handleProp (prop) {
 					modInfos.forEach(modInfo => {
@@ -2914,6 +2946,8 @@ DataUtil = {
 									return doMod_scalarAddProp(modInfo, prop);
 								case "scalarMultProp":
 									return doMod_scalarMultProp(modInfo, prop);
+								case "setProps":
+									return doMod_setProps(modInfo, prop);
 								default:
 									throw new Error(`Unhandled mode: ${modInfo.mode}`);
 							}
@@ -3021,6 +3055,8 @@ DataUtil = {
 		_MERGE_REQUIRES_PRESERVE: {
 			page: true,
 			otherSources: true,
+			hasImages: true,
+			description: true,
 		},
 		_mergeCache: {},
 		async pMergeCopy (crList, cr, options) {
@@ -3129,7 +3165,7 @@ DataUtil = {
 			}
 			variant.type = generic.type || "Item";
 			variant.generic = "V";
-			variant.genericItem = `${generic.name} (generic)${generic.source.toLowerCase() !== "crb" ? `|${generic.source}` : "||"}${generic.name}`;
+			variant.genericItem = `${generic.name} (generic)|${generic.source.toLowerCase() !== "crb" ? `${generic.source}` : ""}|${generic.name}`;
 			await DataUtil.generic._pApplyCopy(DataUtil.item, generic, variant, {});
 			delete variant.variants;
 			return variant;
@@ -3954,7 +3990,7 @@ BrewUtil = {
 		if (!IS_VTT && !IS_DEPLOYED) {
 			const data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}${VeCt.JSON_HOMEBREW_INDEX}`);
 			// auto-load from `homebrew/`, for custom versions of the site
-			if (data.toImport.length) {
+			if (data.toImport && data.toImport.length) {
 				const page = BrewUtil._PAGE || UrlUtil.getCurrentPage();
 				const allData = await Promise.all(data.toImport.map(it => DataUtil.loadJSON(`homebrew/${it}`)));
 				await Promise.all(allData.map(d => callbackFn(d, page)));
@@ -4613,6 +4649,8 @@ BrewUtil = {
 				return ["deity", "domain"];
 			case UrlUtil.PG_LANGUAGES:
 				return ["language"];
+			case UrlUtil.PG_EVENTS:
+				return ["event"];
 			case UrlUtil.PG_PLACES:
 				return ["place"];
 			case UrlUtil.PG_ORGANIZATIONS:
@@ -4625,6 +4663,8 @@ BrewUtil = {
 				return ["optionalfeature"];
 			case UrlUtil.PG_VEHICLES:
 				return ["vehicle"];
+			case UrlUtil.PG_RELICGIFTS:
+				return ["relicGift", "relic", "gift"];
 			case UrlUtil.PG_TRAITS:
 				return ["trait"];
 			case UrlUtil.PG_MAKE_BREW:
@@ -4735,6 +4775,7 @@ BrewUtil = {
 			case "place":
 			case "ritual":
 			case "vehicle":
+			case "relicGift":
 			case "trait":
 			case "group":
 			case "domain":
@@ -4834,7 +4875,7 @@ BrewUtil = {
 		obj.uniqueId = CryptUtil.md5(JSON.stringify(obj));
 	},
 
-	_STORABLE: ["variantrule", "table", "tableGroup", "book", "bookData", "ancestry", "heritage", "versatileHeritage", "background", "class", "subclass", "classFeature", "subclassFeature", "archetype", "feat", "companion", "familiar", "eidolon", "adventure", "adventureData", "hazard", "action", "creature", "condition", "item", "baseitem", "spell", "disease", "curse", "ability", "deity", "language", "place", "ritual", "vehicle", "trait", "group", "domain", "skill", "optionalfeature", "organization", "creatureTemplate"],
+	_STORABLE: ["variantrule", "table", "tableGroup", "book", "bookData", "ancestry", "heritage", "versatileHeritage", "background", "class", "subclass", "classFeature", "subclassFeature", "archetype", "feat", "companion", "familiar", "eidolon", "adventure", "adventureData", "hazard", "action", "creature", "condition", "item", "baseitem", "spell", "disease", "curse", "ability", "deity", "language", "place", "ritual", "vehicle", "relicGift", "trait", "group", "domain", "skill", "optionalfeature", "organization", "creatureTemplate"],
 	async pDoHandleBrewJson (json, page, pFuncRefresh) {
 		page = BrewUtil._PAGE || page;
 		await BrewUtil._lockHandleBrewJson.pLock();
@@ -4976,10 +5017,12 @@ BrewUtil = {
 			case UrlUtil.PG_DEITIES:
 			case UrlUtil.PG_LANGUAGES:
 			case UrlUtil.PG_PLACES:
+			case UrlUtil.PG_EVENTS:
 			case UrlUtil.PG_ORGANIZATIONS:
 			case UrlUtil.PG_CREATURETEMPLATE:
 			case UrlUtil.PG_RITUALS:
 			case UrlUtil.PG_VEHICLES:
+			case UrlUtil.PG_RELICGIFTS:
 			case UrlUtil.PG_OPTIONAL_FEATURES:
 			case UrlUtil.PG_TRAITS:
 				await (BrewUtil._pHandleBrew || handleBrew)(MiscUtil.copy(toAdd));
@@ -5059,6 +5102,7 @@ BrewUtil = {
 		return BrewUtil.homebrewMeta && BrewUtil.homebrewMeta.sources ? BrewUtil.homebrewMeta.sources : [];
 	},
 
+	// FIXME:
 	hasSourceJson (source) {
 		if (!source) return false;
 		source = source.toLowerCase();
@@ -5581,6 +5625,16 @@ Array.prototype.unique = Array.prototype.unique || function (fnGetProp) {
 		seen.add(val);
 		return true;
 	});
+};
+
+/**
+ * Returns duplicates in an array, if none are found return false
+ * @param {Array} - array to check for duplicates
+ * @returns {(Array|boolean)} - array of duplicates or false if none are found
+ */
+Array.prototype.findDuplicates = Array.prototype.findDuplicates || function () {
+	const array = this.filter((e, i, a) => a.indexOf(e) !== i)
+	return array.length ? array : false;
 };
 
 Array.prototype.zip = Array.prototype.zip || function (otherArray) {

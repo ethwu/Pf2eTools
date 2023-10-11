@@ -6,7 +6,6 @@
 			"page": 91,
 			"type": "Item",
 			"level": 0,
-			"traits": [],
 			"price": {
 				"coin": "sp",
 				"amount": 20
@@ -67,11 +66,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"(command)"
+						"command"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You wield your great stature to make a {@action Request} of a creature. If you roll a success on the check, you get a critical success instead."
@@ -133,7 +132,7 @@
 			"category": "Held",
 			"entries": [
 				"These ominous swords are decorated with crimson lacquer and serve as perfect conduits for the Crimson Oath's power. The first was granted to Clarethe Iomedar by a mysterious patron who many Reclaimers believe to be an emissary of Ragathiel.",
-				"A crimson brand is a +1 striking wounding bastard sword. When the wielder uses the crimson brand to cast {@spell invoke the Crimson Oath|LOCG} (page 90), they can generate a 60-foot line or a 30-foot cone instead of the normal 20-foot cone. Whenever the wielder would inflict {@condition persistent damage ||persistent bleed damage} on an undead creature with the crimson brand, they can instead wreathe the creature in ruby energy, inflicting the same amount of {@condition persistent damage ||persistent positive damage} instead of {@condition persistent damage ||persistent bleed damage}."
+				"A crimson brand is a +1 striking wounding bastard sword. When the wielder uses the crimson brand to cast {@spell invoke the Crimson Oath|LOCG} (page 90), they can generate a 60-foot line or a 30-foot cone instead of the normal 20-foot cone. Whenever the wielder would inflict {@condition persistent damage||persistent bleed damage} on an undead creature with the crimson brand, they can instead wreathe the creature in ruby energy, inflicting the same amount of {@condition persistent damage||persistent positive damage} instead of {@condition persistent damage||persistent bleed damage}."
 			]
 		},
 		{
@@ -157,8 +156,7 @@
 			"activate": {
 				"activity": {
 					"number": 1,
-					"unit": "free",
-					"entry": "{@as F}"
+					"unit": "free"
 				},
 				"components": [
 					"envision"
@@ -226,12 +224,12 @@
 						"unit": "action"
 					},
 					"components": [
-						"(command",
-						"Interact)"
+						"command",
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You place the door knocker against a wall, floor, or ceiling. The door knocker fuses in place and creates a usable door within the surface. Any creature can move through the door normally, as if the door had always been there. The door can penetrate up to 1 foot of material, so thick material, such as heavy stone walls, can cause this effect to fail, expending its use for the day. A thin layer of metal in a wall, floor, or ceiling also causes the effect to fail. You can use an {@action Interact} action to release the door knocker from the surface and return the surface to its previous shape."
@@ -384,7 +382,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You switch the pouch to allow access to its extradimensional space instead of its normal space, or vice versa. This lasts until you next activate it. Items in the other space are inaccessible and hard to find until you switch the pouch back."
@@ -451,7 +449,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"requirements": "The scroll case contains a single scroll of a 1st-level spell",
 					"entries": [
@@ -519,7 +517,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You brandish the weapon and focus its power, causing the serrated shards to buzz as they spin at a dizzying speed. On your next hit with the weapon this turn that deals slashing damage, the serrating rune adds an additional {@dice 1d12} damage instead of the additional {@dice 1d4} damage, and then the shards return to their usual speed."
@@ -558,7 +556,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You hold the wayfinder and ask for guidance. The wayfinder casts guidance on you."
@@ -573,11 +571,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You call upon the wayfinder's divine blessings for yourself and your allies. The wayfinder casts bless, with an emanation centered on itself. Once per turn, you can use a single action, which has the {@trait concentrate} trait, to increase the emanation's radius by 5 feet."
@@ -616,7 +614,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"(envision)"
+						"envision"
 					],
 					"entries": [
 						"With a thought, the wearer activates a disguise. While the sinister knight armor's disguise is active, any identifying insignia or aesthetic of the armor is replaced by generic malevolent aesthetics such as spikes or demonic faces. While in the disguise, the wearer is always considered to be taking precautions against lifesense, and even a creature that successfully notices the wearer with its lifesense mistakes the wearer for an undead unless it critically succeeds at its {@skill Perception} check or the wearer critically fails a {@skill Deception} or {@skill Stealth} check. Finally, while in the disguise, the rune attempts to counteract any effects that would reveal your alignment; on a successful counteract check, rather than negate the effect, the rune causes the effect to perceive your alignment as evil (maintaining any lawful or chaotic component of your alignment)",
@@ -649,7 +647,7 @@
 					"entry": "{@as R}"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				],
 				"trigger": "You begin to fall."
 			},
@@ -680,16 +678,15 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "minute",
-						"entry": "1 minute"
+						"unit": "minute"
 					},
 					"components": [
-						"(envision",
-						"Interact)"
+						"envision",
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"requirements": "You are Impersonating someone else",
 					"entries": [
@@ -771,11 +768,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You turn the wayfinder in a circle while invoking its command word, gaining the effects of a 2nd-level {@spell invisibility} spell for 5 minutes."

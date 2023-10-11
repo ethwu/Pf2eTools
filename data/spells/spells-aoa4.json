@@ -26,12 +26,12 @@
 			},
 			"targets": "1 hinge or latch",
 			"entries": [
-				"You create an {@hazard electric latch rune} hazard on the target, creating a special crystalline lock on the object. You can also substitute your spell DC for any of the hazard's listed DCs. You can have only one such hazard active at a time, and if you cast this spell while a previous electric latch rune is active, the older hazard discharges harmlessly."
+				"You create an {@hazard electric latch rune} hazard on the target, creating a special crystalline lock on the object. You can also substitute your spell DC for any of the hazard's listed DCs. You can have only one such hazard active at a time, and if you cast this spell while a previous {@hazard electric latch rune} is active, the older hazard discharges harmlessly."
 			],
 			"heightened": {
 				"plusX": {
 					"2": [
-						"The hazard's damage increases by {@dice 1d12}."
+						"The hazard's damage increases by {@damage 1d12}."
 					]
 				}
 			}
@@ -97,13 +97,9 @@
 			},
 			"targets": "1 creature",
 			"duration": {
-				"type": "timed",
-				"entry": "sustained up to 1 minute",
-				"sustain": true,
-				"duration": {
-					"number": 1,
-					"unit": "minute"
-				}
+				"number": 1,
+				"unit": "minute",
+				"sustained": true
 			},
 			"entries": [
 				"You suppress your choice of one of the following conditions that's affecting the target: {@condition clumsy}, {@condition encumbered}, {@condition enfeebled}, or {@condition fatigued}. If you don't remove the effect that caused the condition, the condition returns after the spell's duration expires."

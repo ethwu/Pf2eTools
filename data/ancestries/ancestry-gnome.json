@@ -184,9 +184,9 @@
 							"page": 30,
 							"source": "LOCG",
 							"name": "Gnome Enclaves",
-							"entries": [
-								"Due to their haphazard diaspora from the First World and a drive to explore, gnomes have dispersed widely. Populations gravitate to wherever there are exciting opportunities, powerful sources of supernatural energy, or both. The following pages describe popular gnome enclaves."
-							]
+							"reference": {
+								"auto": true
+							}
 						},
 						{
 							"type": "pf2-sidebar",
@@ -363,7 +363,7 @@
 					"source": "LOCG",
 					"page": 31,
 					"entries": [
-						"You have an incredibly strong connection to the positive energy that flows through the First World, making it harder to attack your life force with negative energy. You gain negative resistance equal to half your level (minimum 1). When you have the {@condition doomed} condition, the condition affects you as if its value was 1 lower than it actually is ({@condition doomed} 1 has no effect, {@condition doomed} 2 causes you to die at dying 3, and so on)."
+						"You have an incredibly strong connection to the positive energy that flows through the First World, making it harder to attack your life force with negative energy. You gain negative resistance equal to half your level (minimum 1). When you have the {@condition doomed} condition, the condition affects you as if its value was 1 lower than it actually is ({@condition doomed 1} has no effect, {@condition doomed 2} causes you to die at dying 3, and so on)."
 					]
 				}
 			],

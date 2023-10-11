@@ -22,9 +22,9 @@ class OptionalFeaturesPage extends ListPage {
 		const hash = UrlUtil.autoEncodeHash(it);
 
 		eleLi.innerHTML = `<a href="#${hash}" class="lst--border">
-			<span class="bold col-6 pl-0">${it.name}</span>
+			<span class="bold col-6 pl-0">${it.name}${it.add_hash ? `<span class="ve-muted"> (${it.add_hash})</span>` : ""}</span>
 			<span class="col-3 text-center">${it.type}</span>
-			<span class="col-3 ${Parser.sourceJsonToColor(it.source)} text-center pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
+			<span class="col-3 ${Parser.sourceJsonToColor(it.source)} text-center" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>`;
 
 		const listItem = new ListItem(
@@ -35,6 +35,7 @@ class OptionalFeaturesPage extends ListPage {
 				hash,
 				source,
 				type: it.type,
+				aliases: it.alias ? it.alias.join(" - ") : "",
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : ivI,
@@ -59,7 +60,7 @@ class OptionalFeaturesPage extends ListPage {
 
 		const $ele = $(`<li class="row">
 			<a href="#${hash}" class="lst--border">
-				<span class="bold col-6 pl-0">${it.name}</span>
+				<span class="bold col-6 pl-0">${it.name}${it.add_hash ? `<span class="ve-muted"> (${it.add_hash})</span>` : ""}</span>
 				<span class="col-6 text-center">${it.type}</span>
 			</a>
 		</li>`)

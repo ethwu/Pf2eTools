@@ -45,7 +45,7 @@ class ItemsPage extends ListPage {
 			<span class="col-1-5 text-center">${level}</span>
 			<span class="col-1-8 text-center">${Parser.priceToFull(item.price)}</span>
 			<span class="col-1-2 text-center">${item.bulk ? item.bulk : "\u2014"}</span>
-			<span class="source col-1-3 text-center ${Parser.sourceJsonToColor(item.source)} pr-0" title="${Parser.sourceJsonToFull(item.source)}" ${BrewUtil.sourceJsonToStyle(item.source)}>${source}</span>
+			<span class="source col-1-3 text-center ${Parser.sourceJsonToColor(item.source)}" title="${Parser.sourceJsonToFull(item.source)}" ${BrewUtil.sourceJsonToStyle(item.source)}>${source}</span>
 		</a>`;
 
 		eleLi.firstElementChild.addEventListener("click", evt => this._handleItemsLinkClick(evt));
@@ -61,6 +61,7 @@ class ItemsPage extends ListPage {
 				price: item._sPrice,
 				bulk: item._fBulk,
 				category: cats.join(", "),
+				aliases: item.alias ? item.alias.join(" - ") : "",
 				_searchStr: item.generic === "G" && item.variants ? item.variants.map(v => `${v.variantType} ${item.name}`).join(" - ") : "",
 			},
 			{
@@ -125,15 +126,23 @@ class ItemsPage extends ListPage {
 		function buildStatsTab () {
 			$content.append(Renderer.item.getRenderedString(item));
 		}
-		const buildFluffTab = async () => {
+		async function buildFluffTab () {
 			const pGetFluff = async () => {
-				const item = this._dataList[Hist.lastLoadedId];
 				const fluff = await Renderer.item.pGetFluff(item);
 				return fluff ? fluff.entries || [] : [];
 			}
-			const fluffEntries = await pGetFluff();
+			$content.append(Renderer.getRenderedLore({lore: await pGetFluff()}))
+		}
+
+		const buildImageTab = async () => {
+			const pGetImages = async () => {
+				const item = this._dataList[Hist.lastLoadedId];
+				const fluff = await Renderer.item.pGetFluff(item);
+				return fluff ? fluff.images || [] : [];
+			}
+			const fluffImages = await pGetImages();
 			const renderStack = [];
-			Renderer.get().recursiveRender(fluffEntries, renderStack);
+			Renderer.get().recursiveRender(fluffImages.map(l => `<a href="${l}" target="_blank" rel="noopener noreferrer">${l}</a>`), renderStack);
 			$content.append(renderStack.join(""));
 		}
 
@@ -147,8 +156,14 @@ class ItemsPage extends ListPage {
 			() => { },
 			buildFluffTab,
 		);
+		const imageTab = Renderer.utils.tabButton(
+			"Images",
+			() => {},
+			buildImageTab,
+		);
 		const tabs = [statTab];
 		if (item.hasFluff) tabs.push(fluffTab);
+		if (item.hasImages) tabs.push(imageTab);
 
 		Renderer.utils.bindTabButtons(...tabs);
 
@@ -432,7 +447,7 @@ class ItemsPage extends ListPage {
 							$content,
 							Renderer.hover.getWindowPositionFromEvent(evt),
 							{
-								title: `${toRender.name} \u2014 Source Data`,
+								title: `${toRender.name} \u2014 Source Data${evt.ctrlKey ? " (<span style='color:#FFFF00'>Dev</span>)" : ""}`,
 								isPermanent: true,
 								isBookContent: true,
 							},

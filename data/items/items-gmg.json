@@ -21,7 +21,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -113,7 +113,7 @@
 				"Other"
 			],
 			"entries": [
-				"An {@i arsonous} curse creates flaws in the mystic pathways that channel magic through an item, allowing excess power to escape as sparks. Whenever you {@action activate an item||activate} the magic item, a random ally within 30 feet takes {@dice 1d10} persistent fire damage. If no ally is in range, you take the damage instead. At the GM's discretion, this curse might ignite an unattended object or the surrounding environment instead."
+				"An {@i arsonous} curse creates flaws in the mystic pathways that channel magic through an item, allowing excess power to escape as sparks. Whenever you {@action activate an item||activate} the magic item, a random ally within 30 feet takes {@dice 1d10} {@condition persistent damage||persistent fire damage}. If no ally is in range, you take the damage instead. At the GM's discretion, this curse might ignite an unattended object or the surrounding environment instead."
 			]
 		},
 		{
@@ -134,7 +134,7 @@
 			"category": "Artifact",
 			"entries": [
 				"The blade of this {@runeItem Dwarven War Axe||+4 weapon potency|GMG|major striking||keen||returning||speed|} is carved with an intricate design depicting countless generations of great dwarven warriors and leaders.",
-				"The axe has the {@trait thrown 30 feet} weapon trait, in addition to the normal weapon traits for a dwarven waraxe. {@action Strike||Strikes} with the axe deal an additional {@dice 1d6} damage to orcs. While the axe is in your possession, you gain a +4 item bonus when {@action Craft||Crafting} armor, jewelry, metalworking, stonemasonry, snares, traps, and weapons. If you are a dwarf, you gain {@ability darkvision||greater darkvision} while holding the axe. If you are not a dwarf, you are {@condition stupefied 4} while holding the axe, and if you are an orc, you are also {@condition drained 4} and {@condition enfeebled 4} while holding it.",
+				"The axe has the {@trait thrown <30 feet>} weapon trait, in addition to the normal weapon traits for a dwarven waraxe. {@action Strike||Strikes} with the axe deal an additional {@dice 1d6} damage to orcs. While the axe is in your possession, you gain a +4 item bonus when {@action Craft||Crafting} armor, jewelry, metalworking, stonemasonry, snares, traps, and weapons. If you are a dwarf, you gain {@ability darkvision||greater darkvision} while holding the axe. If you are not a dwarf, you are {@condition stupefied 4} while holding the axe, and if you are an orc, you are also {@condition drained 4} and {@condition enfeebled 4} while holding it.",
 				{
 					"type": "ability",
 					"style": "compact",
@@ -144,7 +144,7 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The axe casts a 10th-level {@spell summon elemental} spell to conjure an elite {@creature elemental avalanche}. The spell is automatically sustained, requiring no action on your part but still allowing you to command the elemental on each of your turns. You can {@action Dismiss} the Spell."
@@ -244,7 +244,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -252,7 +252,6 @@
 				"This potent drug is distilled from a certain tropical vine into a deep-red syrup that, over time, stains the user's lips and teeth a vivid shade of red.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 16,
 					"savingThrow": "Fortitude",
 					"onset": "10 minutes",
@@ -318,7 +317,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -326,7 +325,6 @@
 				"A strong blend including several spices common in the Padishah Empire of Kelesh, bloodeye coffee is a favorite morning drink across the Inner Sea region. The maximum addiction stage of bloodeye coffee never progresses beyond stage 1.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 14,
 					"savingThrow": "Fortitude",
 					"onset": "10 minutes",
@@ -389,8 +387,8 @@
 			"bulk": "L",
 			"category": "Worn",
 			"entries": [
-				"Appearing as a magic cloak such as a cloak of elvenkind, this garment is made of highly volatile fabric. While wearing it, if you take fire damage, you also take {@damage 1d10} {@condition persistent damage ||persistent fire damage}. Taking fire damage while the {@condition persistent damage ||persistent fire damage} is in effect has no additional effect. You can extinguish the {@condition persistent damage ||persistent fire damage} as normal.",
-				"Any creature that hits you with a melee unarmed attack while you are taking this {@condition persistent damage ||persistent fire damage} takes fire damage equal to the {@condition persistent damage ||persistent fire damage} you took on your previous turn. Once the curse has activated for the first time, the boots fuse to you."
+				"Appearing as a magic cloak such as a cloak of elvenkind, this garment is made of highly volatile fabric. While wearing it, if you take fire damage, you also take {@damage 1d10} {@condition persistent damage||persistent fire damage}. Taking fire damage while the {@condition persistent damage||persistent fire damage} is in effect has no additional effect. You can extinguish the {@condition persistent damage||persistent fire damage} as normal.",
+				"Any creature that hits you with a melee unarmed attack while you are taking this {@condition persistent damage||persistent fire damage} takes fire damage equal to the {@condition persistent damage||persistent fire damage} you took on your previous turn. Once the curse has activated for the first time, the boots fuse to you."
 			]
 		},
 		{
@@ -419,7 +417,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -427,7 +425,6 @@
 				"Deros use cytillesh in a variety of ways, and some surface-dwellers seek out the fungus for their own use. Memories lost to cytillesh can be restored through modify memory. The save for addiction to cytillesh is DC 20, and the addiction has the {@trait virulent} trait.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 15,
 					"savingThrow": "Fortitude",
 					"maxDuration": "8 hours",
@@ -471,7 +468,7 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You declare how many cards you will draw facedown from the deck, then draw your first card. The card takes effect immediately. Any further cards must be drawn within the next hour, and any card you don't voluntarily draw flits off the deck and affects you anyway. You can never activate the same deck of many things again.",
@@ -579,7 +576,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -587,7 +584,6 @@
 				"This lemony tea blended from rare Vudrani herbs and flowers is widely circulated by occult circles looking to transcend the boundaries of reality. The saving throw for addiction to dreamtime tea is DC 19.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 21,
 					"savingThrow": "Fortitude",
 					"maxDuration": "30 minutes",
@@ -599,7 +595,7 @@
 						},
 						{
 							"stage": 2,
-							"entry": "{@condition unconscious} and can ask a question with the effects of augury except the flat check DC is 10",
+							"entry": "{@condition unconscious} and can ask a question with the effects of {@spell augury} except the flat check DC is {@flatDC 10}",
 							"duration": "10 minutes"
 						}
 					]
@@ -654,7 +650,7 @@
 					"components": [
 						"command",
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The elder sign casts a 10th-level {@spell banishment} spell on an eldritch creature. Even if the creature isn't extraplanar, the elder sign can still banish it, sending it back to the part of the Material Plane from which it originated. If the creature is a Great Old One, the elder sign banishes it automatically (as if it critically failed its save) but is then forever destroyed."
@@ -670,7 +666,7 @@
 					"components": [
 						"command",
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The elder sign casts {@spell dispel magic} on an effect from an eldritch creature, using a counteract level of 10 and +30 modifier for the roll."
@@ -686,7 +682,7 @@
 					"components": [
 						"command",
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The elder sign casts {@spell dimensional lock}, though it wards against travel by only eldritch creatures. Each time the elder sign casts {@spell dimensional lock} in this way, the previous {@spell dimensional lock} spell ends."
@@ -722,7 +718,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -730,7 +726,6 @@
 				"Specialists in Kyonin prepare this emerald-green beverage.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 20,
 					"savingThrow": "Fortitude",
 					"onset": "1 hour",
@@ -814,7 +809,7 @@
 						"unit": "minute"
 					},
 					"components": [
-						"({@action Interact})"
+						"{@action Interact}"
 					],
 					"requirements": "The prism has only one input stream, and a creature is encased in magic in the input stream",
 					"entries": [
@@ -826,11 +821,10 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "minute",
-						"entry": "1 minute"
+						"unit": "minute"
 					},
 					"components": [
-						"{@action Interact}"
+						"({@action Interact})"
 					],
 					"requirements": "The prism has two input streams, and a creature is encased in magic in each of the input streams",
 					"entries": [
@@ -868,7 +862,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -876,7 +870,6 @@
 				"The flayleaf plant is relatively common, though the mildly euphoric effects of smoking its dried leaves increase when it's sourced from plants specifically grown to produce such effects.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 12,
 					"savingThrow": "Fortitude",
 					"onset": "10 minutes",
@@ -935,15 +928,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "You are hit by an attack",
 					"entries": [
@@ -958,11 +950,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You call upon on the restorative powers of the seal to repair an item within reach. The rune instantly restores the item to full Hit Points, even if the item was destroyed, using the effects of the {@spell remake} spell, so long as the majority of the item is available for the repair. The seal can restore even magic items and artifacts of its level or lower. Once you have used this ability, the seal's ability to automatically repair shields becomes inactive until the next time you make your daily preparations."
@@ -973,8 +965,7 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
 						"envision"
@@ -1059,11 +1050,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The genius diadem casts 7th-level {@spell feeblemind}."
@@ -1137,8 +1128,7 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "free",
-						"entry": "{@as F}"
+						"unit": "free"
 					},
 					"components": [
 						"envision"
@@ -1160,7 +1150,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The Horns of Naraga transform into Naraga, an ancient black dragon (Bestiary 106). Naraga appears in an adjacent appropriate space, and if no such space is available, she does not appear. Naraga follows your commands without question. She remains for up to 1 hour or until you use an {@action Interact} action to dismiss her, after which she reverts back to the helm. If Naraga is slain, she immediately reverts back to the helm and can't be summoned for 1 week. You don't receive any of the helm's other benefits while it is transformed."
@@ -1270,12 +1260,17 @@
 					"type": "ability",
 					"style": "compact",
 					"activity": {
-						"number": 1,
-						"unit": "varies",
-						"entry": "{@as 2} envision (emotion, enchantment, incapacitation,"
+						"number": 2,
+						"unit": "action"
 					},
 					"components": [
-						"visual)"
+						"envision"
+					],
+					"traits": [
+						"emotion",
+						"enchantment",
+						"incapacitation",
+						"visual"
 					],
 					"entries": [
 						"You force a creature looking at the mirror to attempt an additional Will save against the mirror's fascination effect, even if they succeeded at their save."
@@ -1285,12 +1280,16 @@
 					"type": "ability",
 					"style": "compact",
 					"activity": {
-						"number": 1,
-						"unit": "varies",
-						"entry": "{@as 3} command (emotion, enchantment,"
+						"number": 3,
+						"unit": "action"
 					},
 					"components": [
-						"incapacitation)"
+						"command"
+					],
+					"traits": [
+						"emotion",
+						"enchantment",
+						"incapacitation"
 					],
 					"requirements": "The target must be {@condition fascinated} by the mirror",
 					"entries": [
@@ -1388,11 +1387,11 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 3
+						"number": 3
 					},
 					"entries": [
 						"You breathe an elemental blast that deals {@dice 25d6} damage (DC 40 basic Reflex save) in either a 60-foot cone or a 100-foot line (your choice). The breath's damage type matches the Breath Weapon of the dragon type associated with the orb of dragonkind (acid for the black orb, electricity for the blue orb, and so on)"
@@ -1454,7 +1453,7 @@
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You use the extractor to produce an alchemical item of your level or lower whose formula you know. The extractor can create 56 levels' worth of items per day in this way.",
@@ -1573,7 +1572,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -1581,7 +1580,6 @@
 				"When eaten or smoked, pesh gives users a sense of well-being, sometimes with hallucinations, aggression, and exhaustion.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 12,
 					"savingThrow": "Fortitude",
 					"onset": "1 minute",
@@ -1653,7 +1651,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -1661,7 +1659,6 @@
 				"This gritty powder improves responsiveness but suppresses thoughts and leaves you weakened. The saving throw for addiction to scour is DC 30, and the addiction is virulent.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 25,
 					"savingThrow": "Fortitude",
 					"onset": "1 hour",
@@ -1748,7 +1745,7 @@
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"Serithtial spends the appropriate number of actions and casts a 9th level {@spell heal} or {@spell zone of truth} spell (DC 45 for either of the two spells)."
@@ -1784,7 +1781,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -1793,10 +1790,9 @@
 				"The addiction to shiver has the {@trait virulent} trait.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 19,
 					"savingThrow": "Fortitude",
-					"maxDuration": "4\nhours",
+					"maxDuration": "4 hours",
 					"stages": [
 						{
 							"stage": 1,
@@ -1836,7 +1832,7 @@
 			"entries": [
 				"Legends claim that some long-forgotten god stole the original bundle of shots of the First Vault from Abadar's repository.",
 				"Since then, individual pieces have turned up throughout the multiverse. When you pick up a shot of the First Vault, it immediately reshapes itself to function with any ranged weapon and establishes you as its owner until another creature picks it up. As its owner, you can use the shot's single-action activation after shooting it.",
-				"Instead of rolling weapon damage dice, a shot of the First Vault deals 25 damage plus any bonuses or additional damage as if 25 were the result of the weapon's damage dice; the damage type matches that normally dealt by the weapon. Upon damaging a creature, the shot of the First Vault shatters, and the fragments ricochet to hit any other enemies within 30 feet, making attack rolls with the same attack bonus. The shattered fragments remain lodged in the creatures they damage; the creatures are {@condition clumsy 2} while the fragments remain in place. A total of 3 actions, which have the {@trait manipulate} trait, are required to remove the fragments from yourself or an adjacent creature; alternatively, a single action and a successful DC 30 {@skill Medicine} check can be used. A critical failure on this {@skill Medicine} check deals 10 {@condition persistent damage ||persistent bleed damage} to the creature with the embedded fragment.",
+				"Instead of rolling weapon damage dice, a shot of the First Vault deals 25 damage plus any bonuses or additional damage as if 25 were the result of the weapon's damage dice; the damage type matches that normally dealt by the weapon. Upon damaging a creature, the shot of the First Vault shatters, and the fragments ricochet to hit any other enemies within 30 feet, making attack rolls with the same attack bonus. The shattered fragments remain lodged in the creatures they damage; the creatures are {@condition clumsy 2} while the fragments remain in place. A total of 3 actions, which have the {@trait manipulate} trait, are required to remove the fragments from yourself or an adjacent creature; alternatively, a single action and a successful DC 30 {@skill Medicine} check can be used. A critical failure on this {@skill Medicine} check deals 10 {@condition persistent damage||persistent bleed damage} to the creature with the embedded fragment.",
 				{
 					"type": "ability",
 					"style": "compact",
@@ -1848,7 +1844,7 @@
 						"command"
 					],
 					"entries": [
-						"You recall the shot of the First Vault, which automatically reloads itself into your weapon. If the shot had fragmented, the fragments violently dislodge themselves, dealing 15 {@condition persistent damage ||persistent bleed damage} to each creature in which they were embedded.",
+						"You recall the shot of the First Vault, which automatically reloads itself into your weapon. If the shot had fragmented, the fragments violently dislodge themselves, dealing 15 {@condition persistent damage||persistent bleed damage} to each creature in which they were embedded.",
 						"The fragments then unite to re-form the shot of the First Vault, which automatically reloads itself into your weapon."
 					]
 				},
@@ -1860,7 +1856,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"requirements": "The shot is loaded in your ranged weapon, or at hand if your ranged weapon has a reload of 0",
 					"entries": [
@@ -1942,7 +1938,7 @@
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The singing sword casts {@spell inspire courage}."
@@ -1960,7 +1956,7 @@
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The singing sword casts {@spell inspire defense}."
@@ -1971,15 +1967,14 @@
 					"style": "compact",
 					"activity": {
 						"number": 1,
-						"unit": "reaction",
-						"entry": "{@as R}"
+						"unit": "reaction"
 					},
 					"components": [
 						"command"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"trigger": "You or an ally within 60 feet rolls a saving throw against an {@trait auditory} effect",
 					"entries": [
@@ -2135,7 +2130,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Poison",
@@ -2143,7 +2138,6 @@
 				"This bitter paste is used among some gladiatorial rings for its short-term benefits in a fight.",
 				{
 					"type": "affliction",
-					"traits": [],
 					"DC": 20,
 					"savingThrow": "Fortitude",
 					"maxDuration": "1 hour",

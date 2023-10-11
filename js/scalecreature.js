@@ -420,6 +420,7 @@ class ScaleCreature {
 	}
 
 	_initRng (cr, toLvl) {
+		if (typeof toLvl !== "number") throw Error(`toLvl must be an integer!`);
 		let h = CryptUtil.hashCode(toLvl);
 		h = 31 * h + CryptUtil.hashCode(cr.source);
 		h = 31 * h + CryptUtil.hashCode(cr.name);
@@ -442,6 +443,11 @@ class ScaleCreature {
 
 	// FIXME: We assume at least trained in everything
 	/**
+	 * Scales a copy of the given creature to the provided level and returns it.
+	 *
+	 * When the target level is one higher or lower than the current level, the Weak or Elite adjustments from B1 are used.
+	 * For larger level changes, the creature is adjusted using the creature building rules from the GMG.
+	 *
 	 * @async
 	 * @param creature Creature data.
 	 * @param toLvl target level, as a number.
@@ -451,19 +457,23 @@ class ScaleCreature {
 		if (toLvl == null || toLvl === "Unknown") throw new Error("Attempting to scale unknown level!");
 
 		this._initRng(creature, toLvl);
-		creature = JSON.parse(JSON.stringify(creature));
+		creature = MiscUtil.copy(creature);
 
 		const lvlIn = creature.level;
 		if (lvlIn > 25) throw new Error("Attempting to scale a creature beyond level 25!");
 		if (lvlIn < -1) throw new Error("Attempting to scale a creature below level -1!");
 
-		const opts = {};
-		opts.flatAddProf = 0;
-
 		if (lvlIn === toLvl && !this.isProfNoLvl()) return creature;
-		else if (lvlIn === toLvl + 1) creature = this._scaleWeak(creature, opts);
-		else if (lvlIn === toLvl - 1) creature = this._scaleElite(creature, opts);
-		else {
+		else if (lvlIn === toLvl + 1) {
+			creature = this._scaleWeak(creature);
+			creature._displayName = `Weak ${creature.name}`;
+		} else if (lvlIn === toLvl - 1) {
+			creature = this._scaleElite(creature);
+			creature._displayName = `Elite ${creature.name}`;
+		} else {
+			const opts = {};
+			opts.flatAddProf = 0;
+
 			// only needed here
 			await this._pInitSpellCache();
 			// Use creature building rules: Gamemastery Guide, pages 56 ff.
@@ -472,16 +482,37 @@ class ScaleCreature {
 			creature.level = toLvl;
 			if (lvlIn !== toLvl) {
 				creature._displayName = `${creature.name} (Lvl ${toLvl})`;
-				creature._isScaledLvl = true;
-				creature._scaledLvl = toLvl;
-				creature._originalLvl = creature._originalLvl || lvlIn;
 			}
 		}
+
+		creature._isScaledLvl = true;
+		creature._scaledLvl = toLvl;
+		creature._originalLvl = creature._originalLvl || lvlIn;
 
 		return creature;
 	}
 
+	/**
+	 * Applies Weak or Elite adjustments (B1) to a creature.
+	 * The creature data is modified in-place.
+	 *
+	 * @param creature Creature data.
+	 * @param adjustement "weak"|"elite"
+	 * @return {creature} the scaled creature
+	 */
+	applyAdjustment (creature, adjustment) {
+		if (adjustment === "elite") {
+			this._scaleElite(creature);
+		} else if (adjustment === "weak") {
+			this._scaleWeak(creature);
+		} else {
+			throw new Error("Unknown adjustment.");
+		}
+	}
+
 	applyVarRules (creature) {
+		if (!this.isProfNoLvl()) return creature;
+
 		const level = creature.level;
 		this._initRng(creature, level);
 		creature = JSON.parse(JSON.stringify(creature));
@@ -493,14 +524,14 @@ class ScaleCreature {
 		return creature;
 	}
 
-	_scaleElite (creature, opts) {
+	_scaleElite (creature) {
 		/*
 		Elite Adjustments
 		Sometimes you’ll want a creature that’s just a bit more powerful than normal so that you can present a challenge
 		that would otherwise be trivial, or show that one enemy is stronger than its kin. To do this quickly and easily,
 		apply the elite adjustments to its statistics as follows:
 		• Increase the creature’s AC, attack modifiers, DCs, saving throws, Perception, and skill modifiers by 2.
-		• Increase the damage of its Strikes and other offensive abilities by 2. If the creature has limits on how many
+		• Increase the damage of its {@action Strike||Strikes} and other offensive abilities by 2. If the creature has limits on how many
 		  times or how often it can use an ability (such as a spellcaster’s spells or a dragon’s Breath Weapon),
 		  increase the damage by 4 instead.
 		• Increase the creature’s Hit Points based on its starting level (see the table below).
@@ -512,32 +543,29 @@ class ScaleCreature {
 		20+            | 30
 		 */
 
-		opts.flatAddProf += 2;
+		const opts = {};
+		opts.flatAddProf = 2;
 		opts.flatAddDamage = 2;
 		opts.flatAddDamageLimited = 4;
 		creature = this._scaleEliteWeak(creature, opts);
 
-		if (creature.level < 2) creature.hp[0].hp += 10;
-		else if (creature.level < 5) creature.hp[0].hp += 15;
-		else if (creature.level < 20) creature.hp[0].hp += 20;
-		else creature.hp[0].hp += 30;
+		if (creature.level < 2) creature.defenses.hp[0].hp += 10;
+		else if (creature.level < 5) creature.defenses.hp[0].hp += 15;
+		else if (creature.level < 20) creature.defenses.hp[0].hp += 20;
+		else creature.defenses.hp[0].hp += 30;
 
-		creature._displayName = `Elite ${creature.name}`;
-		creature._originalLvl = creature._originalLvl || creature.level;
 		creature.level += 1;
-		creature._isScaledLvl = true;
-		creature._scaledLvl = creature.level;
 		return creature;
 	}
 
-	_scaleWeak (creature, opts) {
+	_scaleWeak (creature) {
 		/*
 	Weak Adjustments
 	Sometimes you’ll want a creature that’s weaker than normal so you can use a creature that would otherwise be too
 	challenging, or show that one enemy is weaker than its kin. To do this quickly and easily, apply the weak
 	adjustments to its statistics as follows.
 	• Decrease the creature’s AC, attack modifiers, DCs, saving throws, and skill modifiers by 2.
-	• Decrease the damage of its Strikes and other offensive abilities by 2. If the creature has limits on how many
+	• Decrease the damage of its {@action Strike||Strikes} and other offensive abilities by 2. If the creature has limits on how many
 	  times or how often it can use an ability (such as a spellcaster’s spells or a dragon’s Breath Weapon),
 	  decrease the damage by 4 instead.
 	• Decrease the creature’s HP based on its starting level.
@@ -549,31 +577,34 @@ class ScaleCreature {
 	21+            | –30
 	 */
 
-		opts.flatAddProf -= 2;
+		const opts = {};
+		opts.flatAddProf = -2;
 		opts.flatAddDamage = -2;
 		opts.flatAddDamageLimited = -4;
 		creature = this._scaleEliteWeak(creature, opts);
 
-		if (creature.level < 2) creature.hp[0].hp -= 10;
-		else if (creature.level < 5) creature.hp[0].hp -= 15;
-		else if (creature.level < 20) creature.hp[0].hp -= 20;
-		else creature.hp[0].hp -= 30;
+		if (creature.level < 2) creature.defenses.hp[0].hp -= 10;
+		else if (creature.level < 5) creature.defenses.hp[0].hp -= 15;
+		else if (creature.level < 20) creature.defenses.hp[0].hp -= 20;
+		else creature.defenses.hp[0].hp -= 30;
 
-		creature._displayName = `Weak ${creature.name}`;
-		creature._originalLvl = creature._originalLvl || creature.level;
 		creature.level -= 1;
-		creature._isScaledLvl = true;
-		creature._scaledLvl = creature.level;
 		return creature;
 	}
 
 	_scaleEliteWeak (creature, opts) {
-		Object.keys(creature.ac).forEach(key => {
-			if (key !== "abilities") creature.ac[key] += opts.flatAddProf;
+		Object.keys(creature.defenses.ac).forEach(key => {
+			if (key !== "abilities") creature.defenses.ac[key] += opts.flatAddProf;
 		});
-		["fort", "ref", "will"].forEach(st => Object.keys(creature.savingThrows[st]).forEach(key => creature.savingThrows[st][key] += opts.flatAddProf));
+		["fort", "ref", "will"].forEach(st => Object.keys(creature.defenses.savingThrows[st]).forEach(key => creature.defenses.savingThrows[st][key] += opts.flatAddProf));
 		Object.keys(creature.perception).forEach(key => creature.perception[key] += opts.flatAddProf);
-		Object.keys(creature.skills).forEach(skill => Object.keys(creature.skills[skill]).forEach(key => creature.skills[skill][key] += opts.flatAddProf));
+		if (Object.keys(creature.skills).length) {
+			Object.keys(creature.skills).forEach(skill => {
+				Object.keys(creature.skills[skill]).forEach(key => {
+					if (key !== "note") creature.skills[skill][key] += opts.flatAddProf;
+				})
+			});
+		}
 		if (creature.spellcasting != null) {
 			creature.spellcasting.forEach(sc => {
 				if (sc.DC) sc.DC += opts.flatAddProf;
@@ -625,28 +656,26 @@ class ScaleCreature {
 		return creature;
 	}
 
-	_scaleValue (lvlIn, toLvl, value, map) {
+	_scaleValue (lvlIn, toLvl, value, map, precision = 1) {
 		const rangesIn = map[lvlIn];
 		const toRanges = map[toLvl];
 		const lowerIdx = rangesIn.findIndex(it => it < value);
-		const upperIdx = rangesIn.length - 1 - MiscUtil.copy(rangesIn).reverse().findIndex(it => it >= value);
+		const upperIdx = rangesIn.length - 1 - MiscUtil.copy(rangesIn).reverse().findIndex(it => it > value);
 
-		const a = rangesIn[lowerIdx] || 0;
-		const b = rangesIn[upperIdx] || value;
+		const a = rangesIn[lowerIdx] || value - (rangesIn[upperIdx] - value);
+		const b = rangesIn[upperIdx] || value + (value - rangesIn[lowerIdx]);
 		let c, d;
 		// There was no suggested value less than the value we are scaling.
-		// TODO: Why shouldn't this be less than 1?
-		if (lowerIdx === -1) c = Math.max(1, toRanges[upperIdx] - b + a);
+		if (lowerIdx === -1) c = toRanges[upperIdx] - (b - a);
 		else c = toRanges[lowerIdx];
 
-		// There was no suggested value greater than or equal to the value we are scaling.
-		if (upperIdx === rangesIn.length) d = c + b - a;
+		// There was no suggested value greater than the value we are scaling.
+		if (upperIdx === rangesIn.length) d = c + (b - a);
 		else d = toRanges[upperIdx];
 
-		// Handle singletons, then finally scale the interval [a,b] to [c,d] linearly, and return the scaled value.
-		if (a === b) return a;
-		// CRITICAL FIXME: This rounding is making everything wrong. You could floor it instead but it doesn't alleviate the issue of wrong calculations from the start.
-		return Math.round((value - a) * ((d - c) / (b - a)) + c);
+		// Scale the interval [a,b] to [c,d] linearly, and return the scaled value.
+		// N.B: a =/= b is ensured above
+		return Math.round(precision * ((value - a) * ((d - c) / (b - a)) + c)) / precision;
 	}
 
 	_getDiceEV (diceExp) {
@@ -692,29 +721,31 @@ class ScaleCreature {
 	}
 
 	_adjustSkills (creature, lvlIn, toLvl, opts) {
-		Object.keys(creature.skills).forEach(skill => {
-			const defaultSkill = creature.skills[skill].std;
-			creature.skills[skill].std = this._scaleValue(lvlIn, toLvl, defaultSkill, this._LvlSkills) + opts.flatAddProf;
-			Object.keys(creature.skills[skill]).forEach(key => {
-				if (key !== "std") creature.skills[skill][key] += creature.skills[skill].std - defaultSkill;
-			});
-		});
+		if (Object.keys(creature.skills ?? {}).length) {
+			Object.keys(creature.skills).forEach(skill => {
+				const defaultSkill = creature.skills[skill].std;
+				creature.skills[skill].std = this._scaleValue(lvlIn, toLvl, defaultSkill, this._LvlSkills) + opts.flatAddProf;
+				Object.keys(creature.skills[skill]).forEach(key => {
+					if (key !== "std" && key !== "note") creature.skills[skill][key] += creature.skills[skill].std - defaultSkill;
+				});
+			})
+		}
 	}
 
 	_adjustAC (creature, lvlIn, toLvl, opts) {
-		const defaultAc = creature.ac.std;
-		creature.ac.std = this._scaleValue(lvlIn, toLvl, defaultAc, this._LvlAC) + opts.flatAddProf;
-		Object.keys(creature.ac).forEach(key => {
-			if (key !== "std" && key !== "abilities") creature.ac[key] += creature.ac.std - defaultAc;
+		const defaultAc = creature.defenses.ac.std;
+		creature.defenses.ac.std = this._scaleValue(lvlIn, toLvl, defaultAc, this._LvlAC) + opts.flatAddProf;
+		Object.keys(creature.defenses.ac).forEach(key => {
+			if (key !== "std" && key !== "abilities") creature.defenses.ac[key] += creature.defenses.ac.std - defaultAc;
 		});
 	}
 
 	_adjustSavingThrows (creature, lvlIn, toLvl, opts) {
 		["fort", "ref", "will"].forEach(st => {
-			const defaultSave = creature.savingThrows[st].std;
-			creature.savingThrows[st].std = this._scaleValue(lvlIn, toLvl, defaultSave, this._LvlSavingThrows) + opts.flatAddProf;
-			Object.keys(creature.savingThrows[st]).forEach(key => {
-				if (key !== "std") creature.savingThrows[st][key] += creature.savingThrows[st].std - defaultSave;
+			const defaultSave = creature.defenses.savingThrows[st].std;
+			creature.defenses.savingThrows[st].std = this._scaleValue(lvlIn, toLvl, defaultSave, this._LvlSavingThrows) + opts.flatAddProf;
+			Object.keys(creature.defenses.savingThrows[st]).forEach(key => {
+				if (key !== "std") creature.defenses.savingThrows[st][key] += creature.defenses.savingThrows[st].std - defaultSave;
 			});
 		});
 	}
@@ -724,7 +755,7 @@ class ScaleCreature {
 	}
 
 	_adjustHP (creature, lvlIn, toLvl, opts) {
-		for (let hp of creature.hp) {
+		for (let hp of creature.defenses.hp) {
 			hp.hp = this._scaleValue(lvlIn, toLvl, hp.hp, this._LvlHP);
 			if (hp.hp > 100) {
 				hp.hp += 2;
@@ -740,14 +771,14 @@ class ScaleCreature {
 	}
 
 	_adjustResistancesWeaknesses (creature, lvlIn, toLvl, opts) {
-		if (creature.resistances) {
-			creature.resistances.forEach(r => {
+		if (creature.defenses.resistances) {
+			creature.defenses.resistances.forEach(r => {
 				if (r.amount) r.amount = this._scaleValue(lvlIn, toLvl, r.amount, this._LvlResistanceWeakness);
 			});
 		}
 
-		if (creature.weaknesses) {
-			creature.weaknesses.forEach(w => {
+		if (creature.defenses.weaknesses) {
+			creature.defenses.weaknesses.forEach(w => {
 				if (w.amount) w.amount = this._scaleValue(lvlIn, toLvl, w.amount, this._LvlResistanceWeakness);
 			});
 		}
@@ -758,13 +789,15 @@ class ScaleCreature {
 		if (creature.attacks == null) return;
 		creature.attacks.forEach(a => {
 			a.attack = this._scaleValue(lvlIn, toLvl, a.attack, this._LvlAttackBonus) + opts.flatAddProf;
-			const dpr = (a.damage.match(/\d+d\d+[+-]?\d*/g) || []).map(f => this._getDiceEV(f)).reduce((a, b) => a + b, 0);
-			const scaledDpr = this._scaleValue(lvlIn, toLvl, dpr, this._LvlExpectedDamage);
-			a.damage = a.damage.replaceAll(/\d+d\d+([+-]?\d*)/g, (formula, mod) => {
-				const scaleTo = this._getDiceEV(formula) * scaledDpr / dpr;
-				const opts = mod ? {} : {noMod: true};
-				return this._scaleDice(formula, scaleTo, opts);
-			});
+			if (a.damage) {
+				const dpr = (a.damage.match(/\d+d\d+[+-]?\d*/g) || []).map(f => this._getDiceEV(f)).reduce((a, b) => a + b, 0);
+				const scaledDpr = this._scaleValue(lvlIn, toLvl, dpr, this._LvlExpectedDamage, 2);
+				a.damage = a.damage.replaceAll(/\d+d\d+([+-]?\d*)/g, (formula, mod) => {
+					const scaleTo = this._getDiceEV(formula) * scaledDpr / dpr;
+					const opts = mod ? {} : {noMod: true};
+					return this._scaleDice(formula, scaleTo, opts);
+				});
+			}
 		});
 	}
 
@@ -808,7 +841,10 @@ class ScaleCreature {
 						let randomSpell = null;
 						let tries = 20;
 						while ((sc.entry[lvl].spells.map(it => it.name.toLowerCase()).includes(randomSpell) || !randomSpell) && tries-- > 0) {
-							randomSpell = this._spells[sc.tradition][lvl][RollerUtil.roll(this._spells[sc.tradition][lvl].length, this._rng)];
+							const tradition = sc.tradition.toLowerCase();
+							// FIXME/TODO: This will stop the errors, but we still trust the data
+							if (!this._spells[tradition]) return;
+							randomSpell = this._spells[tradition][lvl][RollerUtil.roll(this._spells[tradition][lvl].length, this._rng)];
 						}
 						sc.entry[lvl].spells.push({"name": randomSpell});
 					}
@@ -838,13 +874,12 @@ class ScaleCreature {
 		});
 	}
 
-	_pInitSpellCache () {
+	async _pInitSpellCache () {
 		if (this._spells) return Promise.resolve();
 
 		this._spells = {};
-		return this._spells = DataUtil.loadJSON(`${Renderer.get().baseUrl}data/spells/spells-crb.json`).then(data => {
-			this.__initSpellCache(data);
-		});
+		const data = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/spells/spells-crb.json`);
+		this.__initSpellCache(data);
 	}
 	__initSpellCache (data) {
 		data.spell.forEach(sp => {

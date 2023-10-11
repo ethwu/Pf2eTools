@@ -11,7 +11,7 @@
 				"consumable",
 				"gadget"
 			],
-			"usage": "attached to armor or traveler's clothing",
+			"usage": "attached <to armor or traveler's clothing>",
 			"bulk": 1,
 			"category": "Consumable",
 			"entries": [
@@ -120,7 +120,7 @@
 				"consumable",
 				"gadget"
 			],
-			"usage": "attached to a shield",
+			"usage": "attached <to a shield>",
 			"bulk": 1,
 			"category": "Consumable",
 			"entries": [
@@ -245,8 +245,8 @@
 					"entries": {
 						"Critical Success": "The creature is unaffected.",
 						"Success": "The creature takes full damage.",
-						"Failure": "The creature takes full damage and 5 {@condition persistent damage ||persistent acid damage}.",
-						"Critical Failure": "The creature takes double damage and 10 {@condition persistent damage ||persistent acid damage}."
+						"Failure": "The creature takes full damage and 5 {@condition persistent damage||persistent acid damage}.",
+						"Critical Failure": "The creature takes double damage and 10 {@condition persistent damage||persistent acid damage}."
 					}
 				}
 			]
@@ -330,7 +330,7 @@
 				"coin": "gp",
 				"amount": 75
 			},
-			"usage": "attached to firearm (firing mechanism)",
+			"usage": "attached <to firearm (firing mechanism)>",
 			"category": "Customization",
 			"subCategory": "Firing Mechanism",
 			"appliesTo": [
@@ -396,10 +396,10 @@
 					},
 					"traits": [
 						"manipulate",
-						"range increment 100 feet"
+						"range increment <100 feet>"
 					],
 					"entries": [
-						"{@dice 10d6} damage and 3 splash damage, three different targets within a 15-foot burst, DC 30 Reflex. The damage type depends on the alchemical ammunition used: acid, cold, electricity, or fire. Creatures take the splash damage only once from the launch, even if they're in the area of more than one of the three splashes."
+						"{@dice 10d6} damage and 3 {@trait splash} damage, three different targets within a 15-foot burst, DC 30 Reflex. The damage type depends on the alchemical ammunition used: acid, cold, electricity, or fire. Creatures take the {@trait splash} damage only once from the launch, even if they're in the area of more than one of the three splashes."
 					]
 				}
 			],
@@ -506,7 +506,7 @@
 					},
 					"traits": [
 						"manipulate",
-						"range increment 50 feet"
+						"range increment <50 feet>"
 					],
 					"entries": [
 						"{@dice 10d12} bludgeoning, 50-foot burst, DC 33 Reflex"
@@ -659,7 +659,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The animate dreamer attempts to achieve its goal of occupying a body of its own and casts {@spell possession} as a 7th-level spell with a spell DC of 33. The weapon still functions as a +2 greater striking spell-storing scattergun while this effect is active but loses all other special abilities until the spell expires and the animate dreamer's intellect returns to it."
@@ -710,7 +710,7 @@
 			"entries": [
 				"This walnut and brass +1 striking blunderbuss has a natural look, with wood worn smooth by time, but left knotted and gnarled. The handgrip beneath the flared muzzle is a wellpositioned bulging tree knot, and the long stock looks as if it was grown to fit you. On closer examination, the whorls and rings in the wood resemble eyes.",
 				"Arboreal's revenge is a haunted firearm constructed with wood hewn from a living arboreal, slaying the arboreal and trapping its spirit in the firearm. Perhaps a patient wielder could one day put the arboreal's spirit to rest, or at least come to terms with it, abating the drawbacks of the weapon while keeping its advantages.",
-				"When you first fire arboreal's revenge, the blunderbuss fuses with you, after which it's almost impossible to remove it from your possession with a remove curse or similar effect, like many cursed items. You gain weakness 5 to fire and the flat check for you to recover from {@condition persistent damage ||persistent fire damage} increases from 15 to 17, or from 10 to 12 if you receive appropriate help.",
+				"When you first fire arboreal's revenge, the blunderbuss fuses with you, after which it's almost impossible to remove it from your possession with a remove curse or similar effect, like many cursed items. You gain weakness 5 to fire and the flat check for you to recover from {@condition persistent damage||persistent fire damage} increases from 15 to 17, or from 10 to 12 if you receive appropriate help.",
 				"Whenever you wield arboreal's revenge, the arboreal spirit bound to the blunderbuss attempts to overtake you.",
 				"The wood handgrip sprouts roots which grow around your hand, binding both of your hands to the firearm. You gain a +4 circumstance bonus to your Reflex DC when defending against checks to {@action Disarm} you. However, you can't {@action Release} your grip on the blunderbuss until you forcibly tear off the roots, though they do allow you to move your hands enough (and only enough) to reload and fire the blunderbuss. Tearing off the roots takes 1 minute.",
 				"The arboreal haunting the firearm can use the following two effects whenever it wants, often using them at random.",
@@ -726,7 +726,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The arboreal haunting the blunderbuss attempts to regrow itself into a new physical body by sprouting from the bodies of all the creatures that the firearm recently harmed. You and all creatures within 60 feet damaged by arboreal's revenge within the last minute must attempt a DC 20 Fortitude saving throw. On a failure, they take a \u201310-foot circumstance penalty to their Speeds as roots rapidly sprout from their wounds, which lasts until they {@action Escape} (DC 20)."
@@ -740,11 +740,11 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You cast {@spell barkskin} from the blunderbuss as a 2ndlevel primal spell. However, the weakness to fire imposed by barkskin is cumulative with the weakness to fire imposed by this weapon's curse, for a total of weakness 8 to fire."
@@ -772,7 +772,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -801,7 +801,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -862,8 +862,7 @@
 			"name": "Backpack Ballista Bolts",
 			"source": "G&G",
 			"page": 63,
-			"type": "Equipment",
-			"traits": [],
+			"type": "Item",
 			"price": {
 				"coin": "sp",
 				"amount": 1,
@@ -881,8 +880,7 @@
 			"name": "Backpack Catapult Stones",
 			"source": "G&G",
 			"page": 63,
-			"type": "Equipment",
-			"traits": [],
+			"type": "Item",
 			"price": {
 				"coin": "sp",
 				"amount": 1,
@@ -953,7 +951,7 @@
 					"traits": [
 						"attack",
 						"manipulate",
-						"range increment 100 feet"
+						"range increment <100 feet>"
 					],
 					"entries": [
 						"{@damage 4d12} piercing, single target, DC 19 Reflex"
@@ -1155,7 +1153,9 @@
 					"number": 1,
 					"unit": "action"
 				},
-				"components": "{@action Interact}"
+				"components": [
+					"{@action Interact}"
+				]
 			},
 			"ammunition": [
 				"Dose or Round of Black Powder|G&G|rounds"
@@ -1245,7 +1245,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -1379,7 +1379,7 @@
 					"traits": [
 						"attack",
 						"manipulate",
-						"range increment 100 feet"
+						"range increment <100 feet>"
 					],
 					"requirements": "The other members of the crew have Readied to {@action Stride} on your order",
 					"entries": [
@@ -1491,7 +1491,7 @@
 				}
 			},
 			"entries": [
-				"Possessing a boisterous, proud demeanor, this {@runeItem jezail|g&g|+1 weapon potency|} is an aspiring big game hunter, always quick to share a tale of its bold adventures and predatory conquests\u2014although the veracity of such tales is often questionable. A boastful hunter enjoys tracking and hunting animals of all kinds but takes particular pleasure in taking down large, dangerous, or rare animals. Against an animal, the boastful hunter deals {@damage 1d6} additional damage. On a critical hit against an animal, the boastful hunter also deals {@damage 1d6} {@condition persistent damage ||persistent bleed damage}.",
+				"Possessing a boisterous, proud demeanor, this {@runeItem jezail|g&g|+1 weapon potency|} is an aspiring big game hunter, always quick to share a tale of its bold adventures and predatory conquests\u2014although the veracity of such tales is often questionable. A boastful hunter enjoys tracking and hunting animals of all kinds but takes particular pleasure in taking down large, dangerous, or rare animals. Against an animal, the boastful hunter deals {@damage 1d6} additional damage. On a critical hit against an animal, the boastful hunter also deals {@damage 1d6} {@condition persistent damage||persistent bleed damage}.",
 				"A boastful hunter urges you to face off against tougher and tougher creatures\u2014a challenge the ambitious rifle may not be adequate to deal with. If the boastful hunter goes one week without participating in a hunt against an animal of at least your level, it becomes bored. A bored boastful hunter complains incessantly and imposes a \u20131 item penalty to attack rolls against non-animal targets. A bored boastful hunter can be appeased by using it in combat against an animal of at least your level.",
 				"Unable to accept its own weaknesses, a boastful hunter blames any failed hunts on you, and considers remarks about its strength or quality a terrible insult. An insulted boastful hunter badmouths you to sentient creatures you interact with, imposing a \u20131 item penalty to {@skill Deception}, {@skill Diplomacy}, and {@skill Intimidation} skill checks, and all attacks with it incur a misfire chance until the weapon is appeased. An insulted boastful hunter can be appeased by complimenting it and succeeding at a {@skill Diplomacy} check against its Will DC two days in a row. You can only attempt a {@skill Diplomacy} check to appease the boastful hunter once each day."
 			]
@@ -1571,7 +1571,7 @@
 					},
 					"traits": [
 						"manipulate",
-						"range increment 150 feet"
+						"range increment <150 feet>"
 					],
 					"entries": [
 						"{@damage 4d10} bludgeoning, 10-foot burst, DC 19 Reflex"
@@ -1643,7 +1643,7 @@
 			"subCategory": "Beast Gun",
 			"entries": [
 				"A breath blaster is a +1 striking blunderbuss most commonly crafted from the trachea of a dragon, though other creatures with breath weapons or the ability to spit energy are occasionally used. The implementation of the dragon's trachea allows the firearm to unleash a torrent of pure energy in the form of gouts of flame or bolts of electricity.",
-				"A breath blaster's Strikes deal either acid, cold, electricity, fire, or poison damage, depending on the dragon type or other creature from which it was made, though it can otherwise be used like a normal blunderbuss. A breath blaster also can be activated to fire a line of energy in a 30-foot line or 15-foot cone, chosen when it's created and typically corresponding to the shape of the breath weapon used by the type of dragon or creature from which the breath blaster was created.",
+				"A breath blaster's {@action Strike||Strikes} deal either acid, cold, electricity, fire, or poison damage, depending on the dragon type or other creature from which it was made, though it can otherwise be used like a normal blunderbuss. A breath blaster also can be activated to fire a line of energy in a 30-foot line or 15-foot cone, chosen when it's created and typically corresponding to the shape of the breath weapon used by the type of dragon or creature from which the breath blaster was created.",
 				"In theory, the foundational techniques required to create a breath blaster would allow for other damage types, but such breath blasters would require the trachea from the correct dragon or creature type and additional creation techniques, making such a breath blaster rare rather than uncommon.",
 				{
 					"type": "ability",
@@ -1652,7 +1652,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"traits": [
 						"evocation",
@@ -1660,7 +1660,7 @@
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You fire the breath blaster, dealing {@dice 4d6} damage of the appropriate type in the appropriate area.",
@@ -1720,7 +1720,7 @@
 				"coin": "gp",
 				"amount": 10
 			},
-			"usage": "attached to firearm (firing mechanism)",
+			"usage": "attached <to firearm (firing mechanism)>",
 			"category": "Consumable",
 			"entries": [
 				"These spring-loaded inserts can be fitted into the breech of a double-barreled firearm over the course of 10 minutes or during the firearm's daily maintenance. After the weapon is fired, the ejectors hasten the reloading process by ejecting the spent detritus from the fired rounds.",
@@ -1731,7 +1731,7 @@
 			"name": "Camouflage Suit",
 			"source": "G&G",
 			"page": 178,
-			"type": "Equipment",
+			"type": "Item",
 			"level": 3,
 			"traits": [
 				"uncommon"
@@ -1834,7 +1834,7 @@
 					},
 					"traits": [
 						"manipulate",
-						"range increment 200 feet"
+						"range increment <200 feet>"
 					],
 					"entries": [
 						"{@damage 6d12} bludgeoning, single target, DC 23 Reflex"
@@ -1946,7 +1946,7 @@
 					"traits": [
 						"attack",
 						"manipulate",
-						"range increment 150 feet"
+						"range increment <150 feet>"
 					],
 					"entries": [
 						"{@damage 5d10} bludgeoning, 10-foot burst, DC 22 Reflex."
@@ -2025,12 +2025,12 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
 			"entries": [
-				"This small, clockwork torch device uses a trigger-operated sparker to ignite a flow of flammable gas, creating a short, hot flame capable of rapidly cauterizing wounds and helping to stop bleeding. The cauterizing torch is applied to yourself or an adjacent target. The target attempts an immediate flat check to end any {@condition persistent damage ||persistent bleed} effect with the lower DC for particularly effective assistance."
+				"This small, clockwork torch device uses a trigger-operated sparker to ignite a flow of flammable gas, creating a short, hot flame capable of rapidly cauterizing wounds and helping to stop bleeding. The cauterizing torch is applied to yourself or an adjacent target. The target attempts an immediate flat check to end any {@condition persistent damage||persistent bleed} effect with the lower DC for particularly effective assistance."
 			]
 		},
 		{
@@ -2053,7 +2053,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -2198,7 +2198,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The diving suit shoots out a water jet that causes you to {@action Swim} 25 feet in a straight line. The distance of this movement is unaffected by your swim Speed, if you have one, or the armor's Speed penalty.",
@@ -2227,7 +2227,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -2321,9 +2321,8 @@
 			"name": "Concealed Holster",
 			"source": "G&G",
 			"page": 178,
-			"type": "Equipment",
+			"type": "Item",
 			"level": 3,
-			"traits": [],
 			"price": {
 				"coin": "gp",
 				"amount": 25
@@ -2356,7 +2355,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -2373,7 +2372,7 @@
 						"amount": 3
 					},
 					"entries": [
-						"The area is a 5-foot burst, the {@skill Acrobatics} DC is 17, and the cold splash damage is 1. The floating ice can support one creature up to Medium size."
+						"The area is a 5-foot burst, the {@skill Acrobatics} DC is 17, and the cold {@trait splash} damage is 1. The floating ice can support one creature up to Medium size."
 					],
 					"_mod": {
 						"entries": [
@@ -2393,7 +2392,7 @@
 								"mode": "replaceTxt",
 								"replaceTags": true,
 								"replace": "deals cold splash",
-								"with": "deals 1 cold splash"
+								"with": "deals 1 cold {@trait splash}"
 							},
 							{
 								"mode": "replaceTxt",
@@ -2413,7 +2412,7 @@
 						"amount": 25
 					},
 					"entries": [
-						"The area is a 10-foot burst, the {@skill Acrobatics} DC is 21, and the cold splash damage is 3. The floating ice can support one Large creature or two Medium or smaller creatures."
+						"The area is a 10-foot burst, the {@skill Acrobatics} DC is 21, and the cold {@trait splash} damage is 3. The floating ice can support one Large creature or two Medium or smaller creatures."
 					],
 					"_mod": {
 						"entries": [
@@ -2433,7 +2432,7 @@
 								"mode": "replaceTxt",
 								"replaceTags": true,
 								"replace": "deals cold splash",
-								"with": "deals 3 cold splash"
+								"with": "deals 3 cold {@trait splash}"
 							},
 							{
 								"mode": "replaceTxt",
@@ -2453,7 +2452,7 @@
 						"amount": 250
 					},
 					"entries": [
-						"The area is a 15-foot burst, the {@skill Acrobatics} DC is 30, and the cold splash damage is 5. The floating ice can support one Huge creature, two Large creatures, or four Medium or smaller creatures."
+						"The area is a 15-foot burst, the {@skill Acrobatics} DC is 30, and the cold {@trait splash} damage is 5. The floating ice can support one Huge creature, two Large creatures, or four Medium or smaller creatures."
 					],
 					"_mod": {
 						"entries": [
@@ -2473,7 +2472,7 @@
 								"mode": "replaceTxt",
 								"replaceTags": true,
 								"replace": "deals cold splash",
-								"with": "deals 5 cold splash"
+								"with": "deals 5 cold {@trait splash}"
 							},
 							{
 								"mode": "replaceTxt",
@@ -2493,7 +2492,7 @@
 						"amount": 2500
 					},
 					"entries": [
-						"The area is a 20-foot burst, the {@skill Acrobatics} DC is 39, and the cold splash damage is 8. The floating ice can support one Gargantuan creature, two Huge creatures, four Large creatures, or eight Medium or smaller creatures. The ice can't support Gargantuan creatures larger than a 20-by-20-foot space, such as a {@creature mu spore}."
+						"The area is a 20-foot burst, the {@skill Acrobatics} DC is 39, and the cold {@trait splash} damage is 8. The floating ice can support one Gargantuan creature, two Huge creatures, four Large creatures, or eight Medium or smaller creatures. The ice can't support Gargantuan creatures larger than a 20-by-20-foot space, such as a {@creature mu spore}."
 					],
 					"_mod": {
 						"entries": [
@@ -2513,7 +2512,7 @@
 								"mode": "replaceTxt",
 								"replaceTags": true,
 								"replace": "deals cold splash",
-								"with": "deals 8 cold splash"
+								"with": "deals 8 cold {@trait splash}"
 							},
 							{
 								"mode": "replaceTxt",
@@ -2537,7 +2536,7 @@
 				"divination",
 				"magical"
 			],
-			"usage": "attached to firearm or crossbow (scope)",
+			"usage": "attached <to firearm or crossbow (scope)>",
 			"bulk": "L",
 			"category": "Customization",
 			"subCategory": "Scope",
@@ -2553,7 +2552,7 @@
 						"number": 1
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You gain {@ability darkvision} until the beginning of your next turn, as long as you continue to look through the scope."
@@ -2719,8 +2718,8 @@
 					"entries": {
 						"Critical Success": "The creature is unaffected.",
 						"Success": "The creature takes half damage.",
-						"Failure": "The creature takes full damage and 3 {@condition persistent damage ||persistent bleed damage}.",
-						"Critical Failure": "The creature takes double damage and 6 {@condition persistent damage ||persistent bleed damage}."
+						"Failure": "The creature takes full damage and 3 {@condition persistent damage||persistent bleed damage}.",
+						"Critical Failure": "The creature takes double damage and 6 {@condition persistent damage||persistent bleed damage}."
 					}
 				}
 			]
@@ -2786,7 +2785,7 @@
 			"category": "Weapon",
 			"subCategory": "Beast Gun",
 			"entries": [
-				"A drake rifle is a firearm made from the saliva glands of a drake. The firearm launches small bursts of empowered spittle instead of typical rounds of ammunition. A drake rifle is a {@item +1 weapon potency||+1} weapon. It's a distinct type of martial firearm that deals {@damage 1d10} damage with a range increment of 150 feet and reload 1. It deals acid, cold, electricity, fire, or poison damage, depending on the drake from which it was made. On a critical hit, the spittle clings to the target and they take persistent damage of the same type as the weapon equal to {@damage 1d4} + the number of weapon damage dice. A drake rifle does not add critical specialization effects.",
+				"A drake rifle is a firearm made from the saliva glands of a drake. The firearm launches small bursts of empowered spittle instead of typical rounds of ammunition. A drake rifle is a {@item +1 weapon potency||+1} weapon. It's a distinct type of martial firearm that deals {@damage 1d10} damage with a range increment of 150 feet and reload 1. It deals acid, cold, electricity, fire, or poison damage, depending on the drake from which it was made. On a critical hit, the spittle clings to the target and they take {@condition persistent damage} of the same type as the weapon equal to {@damage 1d4} + the number of weapon damage dice. A drake rifle does not add critical specialization effects.",
 				{
 					"type": "ability",
 					"activity": {
@@ -2794,7 +2793,7 @@
 						"number": 3
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"traits": [
 						"evocation",
@@ -2802,10 +2801,10 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
-						"You fire a large, specialized burst designed to hamper your foes. Make a ranged {@action Strike} with the drake rifle. As long as the {@action Strike} isn't a critical failure, the drake rifle deals 1 splash damage per weapon damage die to the target and creatures within 5 feet of the target. This splash damage is of the same type as its normal damage.",
+						"You fire a large, specialized burst designed to hamper your foes. Make a ranged {@action Strike} with the drake rifle. As long as the {@action Strike} isn't a critical failure, the drake rifle deals 1 {@trait splash} damage per weapon damage die to the target and creatures within 5 feet of the target. This {@trait splash} damage is of the same type as its normal damage.",
 						"On a hit, the drake rifle provides one of the following additional effects based on its damage type:",
 						{
 							"type": "list",
@@ -2976,7 +2975,7 @@
 					],
 					"frequency": {
 						"unit": "round",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The duchy defender focuses its will on a single target it can see and who it knows is guilty of committing a crime within Alkenstar's borders. The next time the duchy defender damages this target, it deals an additional {@damage 2d8} precision damage."
@@ -3006,8 +3005,7 @@
 			"name": "Earplugs",
 			"source": "G&G",
 			"page": 178,
-			"type": "Equipment",
-			"traits": [],
+			"type": "Item",
 			"price": {
 				"coin": "sp",
 				"amount": 1
@@ -3064,7 +3062,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -3074,9 +3072,9 @@
 					"type": "successDegree",
 					"entries": {
 						"Critical Success": "You gain the {@condition quickened} condition for 1 minute and can use the extra action each round only to {@action Stride} or {@action Strike}.",
-						"Success": "As critical success, but you also take 3 persistent electrical damage.",
-						"Failure": "You gain the {@condition quickened} condition for 2 rounds and can use the extra action each round only to {@action Stride} or {@action Strike}. You take 3 persistent electrical damage.",
-						"Critical Failure": "You take {@damage 2d6} electrical damage and 3 persistent electrical damage."
+						"Success": "As critical success, but you also take 3 {@condition persistent damage||persistent electrical damage}.",
+						"Failure": "You gain the {@condition quickened} condition for 2 rounds and can use the extra action each round only to {@action Stride} or {@action Strike}. You take 3 {@condition persistent damage||persistent electrical damage}.",
+						"Critical Failure": "You take {@damage 2d6} electrical damage and 3 {@condition persistent damage||persistent electrical damage}."
 					}
 				}
 			]
@@ -3137,7 +3135,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -3145,7 +3143,7 @@
 			],
 			"category": "Consumable",
 			"entries": [
-				"Eroding bullets cast a faint green glow, and smell like the sicklysweet organic gases that rise from corpses. Handling an eroding bullet without gloves deals 1 point of acid damage and leaves the putrid scent coated on your fingers. Upon Striking an enemy, the glass casing inside the bullet bursts, releasing a splattering of bubbling green acid that coats the target. The target takes {@damage 2d6} {@condition persistent damage ||persistent acid damage} in addition to the damage normally dealt by the attack."
+				"Eroding bullets cast a faint green glow, and smell like the sicklysweet organic gases that rise from corpses. Handling an eroding bullet without gloves deals 1 point of acid damage and leaves the putrid scent coated on your fingers. Upon Striking an enemy, the glass casing inside the bullet bursts, releasing a splattering of bubbling green acid that coats the target. The target takes {@damage 2d6} {@condition persistent damage||persistent acid damage} in addition to the damage normally dealt by the attack."
 			]
 		},
 		{
@@ -3167,7 +3165,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -3269,7 +3267,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -3369,7 +3367,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -3377,7 +3375,7 @@
 			],
 			"category": "Consumable",
 			"entries": [
-				"This ammunition includes a small reservoir of a tacky red substance that coats the ammunition when you activate it. The substance makes a creature bleed more freely. For 1 minute after you deal damage to a creature with an activated exsanguinating ammunition that creature gains the listed weakness to {@condition persistent damage ||persistent bleed damage}. In addition, the DC of any flat checks to end {@condition persistent damage ||persistent bleed damage} increases from 15 to 17 (from 10 to 12 when receiving particularly effective assistance) for the duration."
+				"This ammunition includes a small reservoir of a tacky red substance that coats the ammunition when you activate it. The substance makes a creature bleed more freely. For 1 minute after you deal damage to a creature with an activated exsanguinating ammunition that creature gains the listed weakness to {@condition persistent damage||persistent bleed damage}. In addition, the DC of any flat checks to end {@condition persistent damage||persistent bleed damage} increases from 15 to 17 (from 10 to 12 when receiving particularly effective assistance) for the duration."
 			],
 			"generic": "G",
 			"variants": [
@@ -3388,7 +3386,7 @@
 						"amount": 15
 					},
 					"entries": [
-						"The target gains weakness 1 to {@condition persistent damage ||persistent bleed damage}."
+						"The target gains weakness 1 to {@condition persistent damage||persistent bleed damage}."
 					],
 					"_mod": {
 						"entries": {
@@ -3404,7 +3402,7 @@
 						"amount": 80
 					},
 					"entries": [
-						"The target gains weakness 3 to {@condition persistent damage ||persistent bleed damage}."
+						"The target gains weakness 3 to {@condition persistent damage||persistent bleed damage}."
 					],
 					"_mod": {
 						"entries": {
@@ -3420,7 +3418,7 @@
 						"amount": 360
 					},
 					"entries": [
-						"The target gains weakness 5 {@condition persistent damage ||persistent bleed damage}."
+						"The target gains weakness 5 {@condition persistent damage||persistent bleed damage}."
 					],
 					"_mod": {
 						"entries": {
@@ -3481,7 +3479,10 @@
 					"number": 2,
 					"unit": "action"
 				},
-				"components": "command, envision"
+				"components": [
+					"command",
+					"envision"
+				]
 			},
 			"ammunition": [
 				"Dose or Round of Black Powder|G&G|round"
@@ -3547,7 +3548,7 @@
 					},
 					"traits": [
 						"manipulate",
-						"range increment 300 feet"
+						"range increment <300 feet>"
 					],
 					"entries": [
 						"{@damage 8d12} bludgeoning, single target, DC 27 Reflex."
@@ -3626,8 +3627,7 @@
 			"name": "Firearm Cleaning Kit",
 			"source": "G&G",
 			"page": 178,
-			"type": "Equipment",
-			"traits": [],
+			"type": "Item",
 			"price": {
 				"coin": "sp",
 				"amount": 1
@@ -3697,7 +3697,7 @@
 						"manipulate"
 					],
 					"entries": [
-						"{@damage 8d6} fire plus {@damage 1d6} {@condition persistent damage ||persistent fire}, 60-foot line or 30-foot cone, DC 23 Reflex. Switching between the firedrake's line or cone mode takes an {@action Interact} action, and any of the crew can perform the action."
+						"{@damage 8d6} fire plus {@damage 1d6} {@condition persistent damage||persistent fire}, 60-foot line or 30-foot cone, DC 23 Reflex. Switching between the firedrake's line or cone mode takes an {@action Interact} action, and any of the crew can perform the action."
 					]
 				}
 			],
@@ -3796,7 +3796,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -3906,11 +3906,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You activate the wheelchair's springs to make hopping leaps.",
@@ -3924,11 +3924,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You activate the wheelchair's tongue to grab a nearby object and bring it to you. {@action Interact} to pick up an unattended object within 15 feet and bring it to your empty hand. If you don't have a hand to take the object, it falls in your space instead."
@@ -3983,7 +3983,12 @@
 					"number": 1,
 					"unit": "action"
 				},
-				"components": "Interact (move)"
+				"components": [
+					"{@action Interact}"
+				],
+				"traits": [
+					"move"
+				]
 			},
 			"category": "Consumable",
 			"entries": [
@@ -4019,11 +4024,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You drive the coil into a living creature that has 0 HP while attaching the other end to yourself, in order to damage their heart and possibly siphon their life force. The galvanic mortal coil casts death knell on the creature (DC 27)."
@@ -4037,11 +4042,11 @@
 						"entry": "(10 minutes)"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You implant the coil into a corpse. The coil casts talking corpse on the body."
@@ -4072,7 +4077,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -4100,7 +4105,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -4187,7 +4192,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -4299,7 +4304,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"traits": [
 						"magical",
@@ -4307,7 +4312,7 @@
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"Make a ranged {@action Strike}. On a hit, the creature becomes covered in a mass of flesh that continues to grow on the target for a brief time. The creature becomes {@condition slowed|CRB|slowed 1} for 1 round, after which the growth withers and falls off."
@@ -4465,7 +4470,7 @@
 					"traits": [
 						"attack",
 						"manipulate",
-						"range increment 120 feet"
+						"range increment <120 feet>"
 					],
 					"entries": [
 						"{@damage 4d12} piercing, single target, DC 19 Reflex"
@@ -4575,7 +4580,7 @@
 					},
 					"traits": [
 						"manipulate",
-						"range increment 250 feet"
+						"range increment <250 feet>"
 					],
 					"entries": [
 						"{@damage 7d10} bludgeoning, 20-foot burst, DC 25 Reflex."
@@ -4662,7 +4667,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"requirements": "The holy steam ball is filled with evaporated holy water and incense smoke",
 					"entries": [
@@ -4726,7 +4731,7 @@
 					},
 					"traits": [
 						"manipulate",
-						"range increment 300 feet"
+						"range increment <300 feet>"
 					],
 					"entries": [
 						"{@damage 4d8} piercing, 20-foot burst, DC 18 Reflex. If you loaded at least 70 hwacha arrows, the area increases to a 25-foot burst. If you loaded 100 hwacha arrows, the area increases to a 30-foot burst and the damage to {@damage 5d8} piercing."
@@ -4799,7 +4804,7 @@
 			"category": "Poison",
 			"entries": [
 				"This +2 greater striking hand cannon is carved and crafted from a single large fang, worn with age and cracked with red lines. The tip of the fang has been filed down, but still leaks black fluid occasionally. It was fashioned from the tooth of the tor linnorm Hyldarf by a half-Ulfen gunsmith from Tian Xia who sought the title of linnorm king. Though the smith failed to slay the linnorm, he did claim the mighty dragon's tooth and fashion it into a magic firearm that still drips warm venom. Hyldarf survived the encounter with her attacker and slew the gunsmith years later, though by then the smith had already bequeathed the weapon to his chosen heir and it was far out of her grasp. The linnorm still searches for her missing tooth, portending potential doom for the weapon's owner.",
-				"The weapon deals an additional {@damage 2d6} fire damage on a successful {@action Strike}, plus {@damage 3d10} {@condition persistent damage ||persistent fire damage} on a critical hit. Fire damage dealt by this weapon (including {@condition persistent damage ||persistent fire damage} and damage from Hyldarf's Venom) ignores the target's fire resistance.",
+				"The weapon deals an additional {@damage 2d6} fire damage on a successful {@action Strike}, plus {@damage 3d10} {@condition persistent damage||persistent fire damage} on a critical hit. Fire damage dealt by this weapon (including {@condition persistent damage||persistent fire damage} and damage from Hyldarf's Venom) ignores the target's fire resistance.",
 				{
 					"type": "ability",
 					"activity": {
@@ -4812,7 +4817,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You call upon Hyldarf's power to gain the magic of a linnorm for a brief time. For 1 minute, you gain the effects of fly, freedom of movement, and true seeing as well as fire resistance 20."
@@ -4825,11 +4830,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You soak your shot in the fluid of the fang, imbuing it with Hyldarf's venom. The next {@action Strike} you make with Hydalf's Fang before the end of your next turn delivers the venom to the target.",
@@ -4891,7 +4896,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"Up to two firearms currently holstered in the immaculate holsters are instantly cleaned and oiled, protecting them from accidental misfires (though not misfires caused as a result of using a feat or ability). The holstered weapons are also reloaded with non-magical 0-level ammunition appropriate to a weapon of their type; if a firearm has multiple chambers, such as a slide pistol, each empty chamber is loaded. Immaculate holsters can't reload the cartridge of a repeating weapon."
@@ -4919,8 +4924,8 @@
 				"This charred and blackened +2 striking clan pistol is coated in a thick layer of soot and grease and its retort sounds uncomfortably like a scream. Clearly at dangerous risk of misfire, this weapon claimed the life of its dwarven crafter shortly after completion and is haunted by that pained spirit.",
 				"This ever-burning spirit keeps the firearm warm to the touch, regardless of surrounding environment.",
 				"No matter how much you clean and maintain it, an immolation clan pistol is always at risk of a misfire, and the flat check to avoid a misfire is DC 7 rather than DC 5.",
-				"On a misfire, an immolation hand cannon releases a blast of concentrated fire, dealing you {@damage 2d6} fire damage and {@damage 2d6} {@condition persistent damage ||persistent fire damage}.",
-				"An immolation clan pistol fuses with you when you first fire it. While you're fused with the immolation clan pistol, the pained spirit haunts your dreams, forcing you to relive its death each night. If you fired the immolation clan pistol that day, you are unharmed by these dreams. If you didn't fire the immolation clan pistol that day, but still possess it, you awaken {@condition fatigued}. If you no longer possess the immolation clan pistol, the spirit of its dwarven smith is enraged by your neglect; you awaken {@condition fatigued} and aflame, taking {@damage 2d6} {@condition persistent damage ||persistent fire damage}."
+				"On a misfire, an immolation hand cannon releases a blast of concentrated fire, dealing you {@damage 2d6} fire damage and {@damage 2d6} {@condition persistent damage||persistent fire damage}.",
+				"An immolation clan pistol fuses with you when you first fire it. While you're fused with the immolation clan pistol, the pained spirit haunts your dreams, forcing you to relive its death each night. If you fired the immolation clan pistol that day, you are unharmed by these dreams. If you didn't fire the immolation clan pistol that day, but still possess it, you awaken {@condition fatigued}. If you no longer possess the immolation clan pistol, the spirit of its dwarven smith is enraged by your neglect; you awaken {@condition fatigued} and aflame, taking {@damage 2d6} {@condition persistent damage||persistent fire damage}."
 			]
 		},
 		{
@@ -4950,7 +4955,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You deploy the tripod and press a button to lock it into place via the immovable rod, allowing you to deploy the tripod in midair, underwater, or anywhere else where you don't have a solid horizontal surface available. If you {@action Activate an Item||Activate} the tripod by pushing the button again, you release and retrieve the tripod. While anchored, the tripod can be moved only if 8,000 pounds of pressure are applied to it or if a creature uses {@skill Athletics} to {@action Force Open} the tripod with a DC of 40 (though most intelligent creatures can just push the button to release the tripod)."
@@ -5154,7 +5159,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -5184,7 +5189,7 @@
 			"bulk": 2,
 			"category": "Held",
 			"entries": [
-				"This +1 striking jezail is built from white hot metal and has a ruby fused into the palm wood stock. When the iris of the sky misfires, you take 5 {@condition persistent damage ||persistent fire damage}.",
+				"This +1 striking jezail is built from white hot metal and has a ruby fused into the palm wood stock. When the iris of the sky misfires, you take 5 {@condition persistent damage||persistent fire damage}.",
 				"The first firearm of this type came as the result of a gunslinger who entreated an efreeti, wishing for the might of the desert sun. The weapon constantly glows and burns with a brilliant intensity. The firearm has since belonged to an extensive string of users and been replicated several times, though each wielder of the weapon, whether the original or one of its copies, has eventually ended up as a charred husk, slain by fire in battle or unusual accidents that no one could quite explain except, perhaps, the efreet.",
 				{
 					"type": "ability",
@@ -5197,10 +5202,10 @@
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
-						"You focus the solar energy housed in the ruby to release a gout of solar flame instead of a bullet. Make a {@action Strike} with the iris of the sky. All damage from this {@action Strike} is fire damage and the target takes an additional {@damage 1d6} fire damage and {@damage 1d6} {@condition persistent damage ||persistent fire damage}."
+						"You focus the solar energy housed in the ruby to release a gout of solar flame instead of a bullet. Make a {@action Strike} with the iris of the sky. All damage from this {@action Strike} is fire damage and the target takes an additional {@damage 1d6} fire damage and {@damage 1d6} {@condition persistent damage||persistent fire damage}."
 					]
 				},
 				{
@@ -5211,14 +5216,17 @@
 					},
 					"components": [
 						"command",
-						"envision (fortune)"
+						"envision"
+					],
+					"traits": [
+						"fortune"
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
-						"You make a wish into the iris of the sky, yearning for it to strike true, and then fire. {@action Strike} against a foe with the iris, rolling the attack roll twice and taking the better result. If the attack is a failure, you take 5 {@condition persistent damage ||persistent fire damage}."
+						"You make a wish into the iris of the sky, yearning for it to strike true, and then fire. {@action Strike} against a foe with the iris, rolling the attack roll twice and taking the better result. If the attack is a failure, you take 5 {@condition persistent damage||persistent fire damage}."
 					]
 				}
 			]
@@ -5236,9 +5244,10 @@
 				"coin": "gp",
 				"amount": 120
 			},
-			"usage": "attached to firearm",
+			"usage": "attached <to firearm>",
 			"bulk": 1,
 			"category": "Customization",
+			"subCategory": "Weapon",
 			"entries": [
 				"These modifications include a heavier stock and larger replacement barrel designed to increase the stopping power of firearms. Large bore modifications can only be applied to firearms with the kickback or scatter traits, and attaching large bore modifications takes 1 hour, though this time can overlap with the standard time required to maintain and clean your firearm to prevent misfires.",
 				"When you attach large bore modifications to a {@trait kickback} weapon, the circumstance bonus to damage granted by the kickback trait increases from 1 to 2 additional damage and the Strength requirement to fire the weapon without penalty increases to 18.",
@@ -5264,7 +5273,7 @@
 			"bulk": "L",
 			"category": "Held",
 			"entries": [
-				"This dubious weapon gets its name from the fact that it's typically crafted with multiple false barrels so that it's more difficult for enemies to predict the weapon's angle of fire from the four working barrels. Most of the time, this gun functions as a +1 striking pepperbox with capacity 4 instead of capacity 3, albeit one with a complicated loading mechanism involving rotating the barrels. In a pinch though, all four of the real barrels can be fired simultaneously.",
+				"This dubious weapon gets its name from the fact that it's typically crafted with multiple false barrels so that it's more difficult for enemies to predict the weapon's angle of fire from the four working barrels. Most of the time, this gun functions as a {@runeItem pepperbox|G&G|+1 weapon potency||striking|} with {@trait capacity <4>} instead of {@trait capacity <3>}, albeit one with a complicated loading mechanism involving rotating the barrels. In a pinch though, all four of the real barrels can be fired simultaneously.",
 				{
 					"type": "ability",
 					"activity": {
@@ -5272,10 +5281,10 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
-						"Make up to four Strikes with the liar's gun. Each of the four Strikes must be against a different target within a 20-foot cone. You apply and increasing your multiple attack penalty for the four Strikes only after resolving all attacks. If the weapon misfires on any of these attacks, wait to apply the misfire until you resolve all of the attacks."
+						"Make up to four {@action Strike||Strikes} with the liar's gun. Each of the four {@action Strike||Strikes} must be against a different target within a 20-foot cone. You apply and increasing your multiple attack penalty for the four {@action Strike||Strikes} only after resolving all attacks. If the weapon misfires on any of these attacks, wait to apply the misfire until you resolve all of the attacks."
 					]
 				}
 			]
@@ -5329,11 +5338,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You draw a card from the bandolier and {@action Interact} to load the card into a gun or crossbow you're wielding that requires 1 action to reload. The drawn card immediately transforms into magical ammunition with a type depending on the drawn card's suit, and a new copy of that card returns to the deck, ready to be drawn again.",
@@ -5385,7 +5394,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -5468,7 +5477,7 @@
 				"magical",
 				"transmutation"
 			],
-			"usage": "attached to firearm (scope)",
+			"usage": "attached <to firearm (scope)>",
 			"bulk": "L",
 			"category": "Customization",
 			"subCategory": "Scope",
@@ -5484,7 +5493,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The next {@action Strike} you make this round with the gun to which the scope is attached has its scatter radius increased by 5 feet."
@@ -5531,7 +5540,7 @@
 				"divination",
 				"magical"
 			],
-			"usage": "attached to firearm or crossbow (scope)",
+			"usage": "attached <to firearm or crossbow (scope)>",
 			"bulk": "L",
 			"category": "Customization",
 			"subCategory": "Scope",
@@ -5547,7 +5556,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"While gazing through the scope, you zoom in on your targets to make it easier to hit them at a distance. You increase the range increment of the weapon to which the scope is attached by 5 feet until the beginning of your next turn or until you're no longer wielding the weapon, whichever comes first."
@@ -5617,7 +5626,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -5741,7 +5750,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"ammunition": [
@@ -5873,7 +5882,7 @@
 					},
 					"traits": [
 						"manipulate",
-						"range increment 100 feet"
+						"range increment <100 feet>"
 					],
 					"entries": [
 						"{@damage 5d10} slashing, 20-foot burst, DC 21. Because a mortar launches its round at a high angle, the mortar round descends on the center of the burst from above, not in a straight line from the mortar. This affects whether creatures have cover from the mortar launch."
@@ -5951,7 +5960,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"requirements": "the mountebank's passage isn't loaded",
 					"entries": [
@@ -5965,7 +5974,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"requirements": "the mountebank's passage isn't loaded",
 					"entries": [
@@ -6129,7 +6138,10 @@
 					"unit": "action"
 				},
 				"requirements": "Your last action was an {@action Interact} action to stow the affixed firearm or crossbow.",
-				"components": "envision, manipulate"
+				"components": [
+					"envision",
+					"manipulate"
+				]
 			},
 			"category": "Talisman",
 			"entries": [
@@ -6198,7 +6210,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"traits": [
 						"magical",
@@ -6242,7 +6254,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"Choose a creature within 60 feet and roll a percentile die on the table below to determine the pistol's effect. If an entry lists a spell, the pistol Casts that Spell at the indicated level (or at its lowest level, if no level is listed). You make any decisions for a spell cast by the pistol unless otherwise indicated, except that it must only target the creature you chose, or the creature you chose must be the center of the spell's area, if it has an area but no targets. The only exception to the limitation on targeting is if the effect specifically states it targets you. If the spell's range is less than 60 feet, increase the range to 60 feet.",
@@ -6330,8 +6342,7 @@
 			"name": "Practice Targets",
 			"source": "G&G",
 			"page": 178,
-			"type": "Equipment",
-			"traits": [],
+			"type": "Item",
 			"price": {
 				"coin": "sp",
 				"amount": 2,
@@ -6424,7 +6435,10 @@
 						"unit": "action"
 					},
 					"components": [
-						"envision (evil)"
+						"envision"
+					],
+					"traits": [
+						"evil"
 					],
 					"requirements": "There's at least one soul stored in the reaper's grasp",
 					"entries": [
@@ -6439,7 +6453,10 @@
 						"unit": "action"
 					},
 					"components": [
-						"envision (evil)"
+						"envision"
+					],
+					"traits": [
+						"evil"
 					],
 					"requirements": "There's at least one soul stored in the reaper's grasp",
 					"entries": [
@@ -6452,8 +6469,7 @@
 			"name": "Repeating Magazine",
 			"source": "G&G",
 			"page": 63,
-			"type": "Equipment",
-			"traits": [],
+			"type": "Item",
 			"price": {
 				"coin": "sp",
 				"amount": 9,
@@ -6493,41 +6509,39 @@
 			"name": "Round",
 			"source": "G&G",
 			"page": 150,
-			"type": "Equipment",
+			"type": "Item",
 			"traits": [
 				"alchemical"
 			],
-			"price": {
-				"coin": "sp",
-				"amount": 1,
-				"note": "(price for 5)"
-			},
 			"bulk": "L",
 			"category": "Ammunition",
 			"entries": [
-				"Firearms require ammunition consisting of a projectile and black powder. A round of ammo can vary in its composition but is typically either a prepackaged paper cartridge, including wadding, bullet, and black powder, or loose shot packed in manually. Some weapons, like hand cannons and blunderbusses, can fire other materials, but their ammunition has the same Price due to the cost of the black powder. Because making rounds of firearm ammunition requires creating black powder, you need the {@feat Alchemical Crafting} skill feat to make them. Firearm rounds are a valid option for magical ammunition, just like {@item arrow||arrows} or {@item bolt||bolts}. Crafting magical firearm ammunition requires you to be able to craft both alchemical and magical items."
+				"Firearms require ammunition consisting of a projectile and black powder. A round of ammo can vary in its composition but is typically either a prepackaged paper cartridge, including wadding, bullet, and black powder, or loose shot packed in manually. Some weapons, like hand cannons and blunderbusses, can fire other materials, but their ammunition has the same Price due to the cost of the black powder. Because making rounds of firearm ammunition requires creating black powder, you need the {@feat Alchemical Crafting} skill feat to make them. Firearm rounds are a valid option for magical ammunition, just like {@item arrow (generic)||arrows} or {@item bolt (generic)||bolts}. Crafting magical firearm ammunition requires you to be able to craft both alchemical and magical items.",
+				"{@note Different weapons have different prices for ammunition. The prices listed are thus, only for reference in the weapon statblocks themselves.}"
 			],
-			"add_hash": "5"
-		},
-		{
-			"name": "Round",
-			"source": "G&G",
-			"page": 150,
-			"type": "Equipment",
-			"traits": [
-				"alchemical"
-			],
-			"price": {
-				"coin": "sp",
-				"amount": 1,
-				"note": "(price for 10)"
-			},
-			"bulk": "L",
-			"category": "Ammunition",
-			"entries": [
-				"Firearms require ammunition consisting of a projectile and black powder. A round of ammo can vary in its composition but is typically either a prepackaged paper cartridge, including wadding, bullet, and black powder, or loose shot packed in manually. Some weapons, like hand cannons and blunderbusses, can fire other materials, but their ammunition has the same Price due to the cost of the black powder. Because making rounds of firearm ammunition requires creating black powder, you need the {@feat Alchemical Crafting} skill feat to make them. Firearm rounds are a valid option for magical ammunition, just like {@item arrow||arrows} or {@item bolt||bolts}. Crafting magical firearm ammunition requires you to be able to craft both alchemical and magical items."
-			],
-			"add_hash": "10"
+			"generic": "G",
+			"variants": [
+				{
+					"variantType": "5-pack",
+					"name": "Round",
+					"price": {
+						"coin": "sp",
+						"amount": 1,
+						"note": "(price for 5)"
+					},
+					"add_hash": "5"
+				},
+				{
+					"variantType": "10-pack",
+					"name": "Round",
+					"price": {
+						"coin": "sp",
+						"amount": 1,
+						"note": "(price for 10)"
+					},
+					"add_hash": "10"
+				}
+			]
 		},
 		{
 			"name": "Rowan Rifle",
@@ -6546,7 +6560,7 @@
 			"category": "Held",
 			"entries": [
 				"In a dense forest within Arcadia, djezet fell from the sky millennia ago, even before Earthfall. While this metal was poisonous to most of the plant life growing nearby, one stubborn rowan tree refused to die, its roots slowly absorbing djezet in small particles from the ground until the entire plant was suffused with it. Fey bowyers discovered the remarkable plant and coaxed it into growing into a very particular shape, its branching trunks woven together into a tightly twisted and naturally rifled barrel.",
-				"One of the legendary star guns, Arcadia's greatest treasures, the Rowan Rifle is a +2 greater fearsome speed greater striking (Advanced Player's Guide 260) advanced firearm with a range of increment of 300 feet. It deals {@damage 1d8} fire damage and has the backstabber, concussive, and fatal d12 traits.",
+				"One of the legendary star guns, Arcadia's greatest treasures, the Rowan Rifle is a +2 greater fearsome speed greater striking (Advanced Player's Guide 260) advanced firearm with a range of increment of 300 feet. It deals {@damage 1d8} fire damage and has the backstabber, concussive, and fatal <d12> traits.",
 				"As a star gun, the Rowan Rifle runs on magic, and doesn't use ammunition or {@item black powder}. As a weapon forged to protect the fey peoples of Arcadia, the Rowan Rifle's enchantments prevent it from ever causing harm to a creature with the {@trait fey} trait; any attempt to shoot a fey with it results in an automatic misfire. This legendary star gun is as much a badge of office as a weapon, as it denotes dominion over all Briarbough. If the Rowan Rifle's wielder is fey, or if they were specifically given the Rowan Rifle by a fey creature who recognized them as a worthy champion, they can use the following activations.",
 				{
 					"type": "ability",
@@ -6569,7 +6583,7 @@
 					},
 					"components": [
 						"command",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"The Rowan Rifle fires a 60-foot line of liquid djezet that wraps around all creatures in the affected area before hardening, which impedes them with metallic vines unless the affected creature succeeds at a DC 35 Reflex save. A creature who fails the save takes a \u201315-foot circumstance penalty to their Speeds, and a creature who critically fails is {@condition immobilized}. A creature who succeeds at a DC 35 {@action Escape} check ends this effect. Otherwise, the djezet vines last for 10 minutes before crumbling away."
@@ -6580,8 +6594,12 @@
 					"components": [
 						"command",
 						"envision",
-						"Interact (1 minute)"
+						"{@action Interact} (1 minute)"
 					],
+					"frequency": {
+						"unit": "minute",
+						"number": 10
+					},
 					"entries": [
 						"You hold aloft the Rowan Rifle and step into a tree in Briarbough, and you tree stride to another tree in Briarbough."
 					]
@@ -6621,7 +6639,7 @@
 				"coin": "gp",
 				"amount": 900
 			},
-			"usage": "attached to firearm (scope)",
+			"usage": "attached <to firearm (scope)>",
 			"bulk": "L",
 			"category": "Customization",
 			"subCategory": "Scope",
@@ -6637,12 +6655,15 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact (auditory",
+						"{@action Interact}"
+					],
+					"traits": [
+						"auditory",
 						"light",
-						"transmutation)"
+						"transmutation"
 					],
 					"entries": [
-						"If your next {@action Strike} from the weapon to which the scope is attached hits a creature, the sound of the impact transforms into light, causing the creature to glow until the end of your next turn. A visible creature can't be {@condition concealed} while they glow. If a creature is {@condition invisible}, they're {@condition concealed} while glowing, rather than being {@condition undetected}. Because the effect requires a solid impact, incorporeal creatures are unaffected unless the bullet can deal force damage or has the effects of the ghost touch property rune."
+						"If your next {@action Strike} from the weapon to which the scope is attached hits a creature, the sound of the impact transforms into light, causing the creature to glow until the end of your next turn. A visible creature can't be {@condition concealed} while they glow. If a creature is {@condition invisible}, they're {@condition concealed} while glowing, rather than being {@condition undetected}. Because the effect requires a solid impact, incorporeal creatures are unaffected unless the bullet can deal force damage or has the effects of the {@item ghost touch} property rune."
 					]
 				}
 			]
@@ -6661,7 +6682,7 @@
 				"coin": "gp",
 				"amount": 3000
 			},
-			"usage": "attached to firearm or crossbow (scope)",
+			"usage": "attached <to firearm or crossbow (scope)>",
 			"bulk": "L",
 			"category": "Customization",
 			"subCategory": "Scope",
@@ -6677,11 +6698,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"For the next 10 minutes, you can see things through the scope as they actually are. The GM rolls a secret counteract check with a +20 counteract modifier and a counteract level of 7 against any illusion or transmutation in the area, but only for the purpose of determining whether you see through it, not to end the spell or effect. For instance, if the check succeeds against a polymorph spell, you can see the creature's true form, but you don't end the spell."
@@ -6724,7 +6745,7 @@
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The screech shooter unleashes a frightening wail. All creatures in a 30-foot emanation from you must attempt a DC 25 Will save.",
@@ -6802,7 +6823,7 @@
 					"unit": "free"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				],
 				"trigger": "You Shield Block a foe's melee unarmed attack or melee attack with the affixed shield."
 			},
@@ -6837,8 +6858,8 @@
 					"entries": {
 						"Critical Success": "The creature in unaffected",
 						"Success": "The creature takes half damage and is {@condition deafened} for 1 round.",
-						"Failure": "The creature takes full damage, {@damage 2d6} {@condition persistent damage ||persistent piercing damage}, and is {@condition deafened} for 1 minute.",
-						"Critical Failure": "The creature takes double damage, {@damage 4d6} {@condition persistent damage ||persistent piercing damage}, and is {@condition deafened} for 1 minute."
+						"Failure": "The creature takes full damage, {@damage 2d6} {@condition persistent damage||persistent piercing damage}, and is {@condition deafened} for 1 minute.",
+						"Critical Failure": "The creature takes double damage, {@damage 4d6} {@condition persistent damage||persistent piercing damage}, and is {@condition deafened} for 1 minute."
 					}
 				}
 			]
@@ -6881,8 +6902,7 @@
 			"name": "Silencer",
 			"source": "G&G",
 			"page": 178,
-			"type": "Equipment",
-			"traits": [],
+			"type": "Item",
 			"price": {
 				"coin": "sp",
 				"amount": 1
@@ -6983,7 +7003,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -7033,7 +7053,7 @@
 				"talisman",
 				"transmutation"
 			],
-			"usage": "affixed to a two-handed firearm or",
+			"usage": "affixed to a two-handed firearm or crossbow",
 			"bulk": "\u2013",
 			"activate": {
 				"activity": {
@@ -7114,11 +7134,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The chair shoots a web line at a solid wall, floor, or ceiling up to 60 feet away and then pulls itself and you to that location."
@@ -7131,11 +7151,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You cause the chair to launch an enormous web to hinder your foes, with the effects of a 4th-level {@spell web} spell."
@@ -7159,7 +7179,7 @@
 			"category": "Weapon",
 			"subCategory": "Beast Gun",
 			"entries": [
-				"A spider gun is a +1 striking weapon. It's a distinct type of martial firearm made from the fangs and spinneret of a Large spider. It deals {@damage 1d10} poison damage with a range Petrification Cannon increment of 30 feet and reload 1. On a critical hit, the venom clings to the target and they take {@condition persistent damage ||persistent poison damage} equal to {@dice 1d4} + the number of weapon damage dice.",
+				"A spider gun is a +1 striking weapon. It's a distinct type of martial firearm made from the fangs and spinneret of a Large spider. It deals {@damage 1d10} poison damage with a range increment of 30 feet and {@trait reload <1>}. On a critical hit, the venom clings to the target and they take {@condition persistent damage||persistent poison damage} equal to {@dice 1d4} + the number of weapon damage dice.",
 				"A spider gun does not add critical specialization effects.",
 				"The gun can be activated to fire webbing that hampers other creatures.",
 				{
@@ -7169,7 +7189,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"traits": [
 						"conjuration",
@@ -7246,7 +7266,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"traits": [
 						"evocation",
@@ -7437,7 +7457,7 @@
 					"traits": [
 						"attack",
 						"manipulate",
-						"range increment 100 feet"
+						"range increment <100 feet>"
 					],
 					"entries": [
 						"{@damage 5d8} piercing, three different targets within a 15-foot burst, DC 22 Reflex."
@@ -7543,7 +7563,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You turn the steamflight pack on or off."
@@ -7619,7 +7639,7 @@
 					},
 					"traits": [
 						"manipulate",
-						"range increment 500 feet"
+						"range increment <500 feet>"
 					],
 					"entries": [
 						"{@damage 8d12} bludgeoning, 20-foot burst, DC 30 Reflex"
@@ -7691,7 +7711,10 @@
 					"number": 1,
 					"unit": "action"
 				},
-				"components": "envision, Interact"
+				"components": [
+					"envision",
+					"{@action Interact}"
+				]
 			},
 			"ammunition": [
 				"Dose or Round of Black Powder|G&G|round"
@@ -7753,13 +7776,16 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact (electricity",
+						"{@action Interact}"
+					],
+					"traits": [
+						"electricity",
 						"evocation",
-						"magical)"
+						"magical"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You create a ball of electricity around the chair, surrounding it in a damaging aura of electricity and using electromagnetism to briefly levitate. For 1 minute, you gain a fly Speed equal to your Speed and adjacent creatures that hit you with a melee attack, as well as creatures that touch or hit you with an unarmed attack, take {@damage 2d6} electricity damage each time. As normal, this applies to creatures who choose to touch you, not when you touch or attack another creature."
@@ -7772,13 +7798,16 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact (electricity",
+						"{@action Interact}"
+					],
+					"traits": [
+						"electricity",
 						"evocation",
-						"magical)"
+						"magical"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You release the majority of the stored up energy from your storm chair, devastating foes in a chain of electricity. This has the effects of chain lightning with a DC of 31."
@@ -7841,7 +7870,7 @@
 				}
 			},
 			"entries": [
-				"A sunken pistol is imbued with the unfulfilled desires and insatiable greed of its previous wielder, a notorious pirate drowned at sea. Once a beautiful and artistically wrought weapon, a sunken pistol is coated in a fine layer of dried salt and encrusted with barnacles. Each shot fired from this {@runeItem dragon mouth pistol|G&G|+1 weapon potency||striking|} is now coated in a layer of salty ectoplasm and has the effects of a ghost touch rune. You can shoot the sunken pistol underwater, even when using black powder ammunition.",
+				"A sunken pistol is imbued with the unfulfilled desires and insatiable greed of its previous wielder, a notorious pirate drowned at sea. Once a beautiful and artistically wrought weapon, a sunken pistol is coated in a fine layer of dried salt and encrusted with barnacles. Each shot fired from this {@runeItem dragon mouth pistol|G&G|+1 weapon potency||striking|} is now coated in a layer of salty ectoplasm and has the effects of a {@item ghost touch} rune. You can shoot the sunken pistol underwater, even when using black powder ammunition.",
 				"A sunken pistol urges you to amass a horde of treasure even a dragon would be proud of. The methods used to acquire these riches matter not to the greedy pirate pistol, so long as you amass and hoard excessive wealth. Above all else, a sunken pistol desires the return of its own treasure, which might rest in the wreck of its sunken ship's hold or be {@condition hidden} on a dangerous island.",
 				"In pursuit of treasure, a sunken pistol offers nautical and navigation advice to you, though it refuses such aid during less lucrative ventures. If you prove a profitable partner, the sunken pistol aids you in combat by Demoralizing your opponents (see the first Activation below). If you prove charitable or unwilling to retrieve its treasure, the sunken pistol turns its ire on you, Demoralizing you during combat until you relent. If you repeatedly refuse the sunken pistol, it would be wise to not accept water breathing from it, as it might attempt to drown you to allow a more suitable wielder to acquire it from your corpse. The sunken pistol can use the following activations.",
 				{
@@ -7855,7 +7884,7 @@
 					],
 					"frequency": {
 						"unit": "minute",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The sunken pistol curses and insults a creature it can see, attempting an {@skill Intimidation} check to {@action Demoralize} that creature."
@@ -7872,7 +7901,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The sunken pistol casts water breathing on you as a 3rd-level arcane spell. The sunken pistol can {@action Dismiss} this spell, so be sure to keep the gun happy if you're relying on its good graces to breathe!"
@@ -7896,7 +7925,7 @@
 			"category": "Weapon",
 			"subCategory": "Beast Gun",
 			"entries": [
-				"A tentacle cannon is a +1 striking weapon, built using components from squids, krakens, and sometimes even stranger tentacled creatures like alghollthu. It's a distinct type of martial firearm that deals {@damage 1d8} piercing damage. It has the capacity 5, concussive, and fatal d12 traits, a range increment of 30 feet, and reload 2. The weapon itself resembles a five-barreled handheld cannon with each barrel made from a hollowed out tentacle.",
+				"A tentacle cannon is a +1 striking weapon, built using components from squids, krakens, and sometimes even stranger tentacled creatures like alghollthu. It's a distinct type of martial firearm that deals {@damage 1d8} piercing damage. It has the {@trait capacity <5>}, {@trait concussive}, and {@trait fatal <d12>} traits, a range increment of 30 feet, and {@trait reload <2>}. The weapon itself resembles a five-barreled handheld cannon with each barrel made from a hollowed out tentacle.",
 				{
 					"type": "ability",
 					"activity": {
@@ -7904,7 +7933,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"traits": [
 						"magical",
@@ -7921,7 +7950,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"requirements": "The tentacle cannon has a creature {@condition grabbed}",
 					"entries": [
@@ -7936,11 +7965,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "hour",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The cannon fires a spray of ink in a 15-foot cone. Creatures in the area must attempt a DC 23 Reflex save. On a failure, the creature is covered in ink and becomes {@condition blinded} for 1 round and {@condition dazzled} for 1 minute or until it removes the ink. On a critical failure, the creature becomes {@condition blinded} and {@condition dazzled}; both conditions last for 1 minute or until it removes the ink. The creature, or an adjacent creature, can use an {@action Interact} action to remove the ink from its eyes to remove the {@condition blinded} and {@condition dazzled} conditions."
@@ -8007,7 +8036,7 @@
 			"category": "Held",
 			"entries": [
 				"This +2 striking fearsome dueling pistol (Advanced Player's Guide 260) is made from fine tigerwood, with the head of a tiger as the muzzle. Beneath the tiger head is a claw shaped bayonet. One of a set of four guns crafted as a gift to a Zenj family for delivery of rare healing and diseaseabating herbs during an outbreak of a deadly disease in the Grand Duchy of Alkenstar, these firearms are now passed down to those who have done brave acts in service to the Zenj people. The flintlock sparks thrown by this weapon take the shape of pouncing tigers and the firearm's report sounds like a tiger's growl. Clever wielders use the firearm's report to panic their prey into mistakes and then pounce for the kill.",
-				"This firearm's bullets deal slashing damage instead of piercing and add an additional {@damage 1d6} {@condition persistent damage ||persistent bleed damage} on a critical hit. This {@condition persistent damage ||persistent bleed damage} causes tiger-claw-shaped wounds to appear on the target.",
+				"This firearm's bullets deal slashing damage instead of piercing and add an additional {@damage 1d6} {@condition persistent damage||persistent bleed damage} on a critical hit. This {@condition persistent damage||persistent bleed damage} causes tiger-claw-shaped wounds to appear on the target.",
 				{
 					"type": "ability",
 					"activity": {
@@ -8019,7 +8048,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You capitalize on the fears your firearm engenders, terrifying your foes. Make a ranged {@action Strike} with this firearm against a target. If you successfully deal damage to your target, the target is also affected by a 4th-level {@spell phantasmal killer} with a spell DC of 28. While phantasmal killer typically takes the shape of the target's worst fear, this effect always appears to the target in the form of a majestic and ferocious tiger."
@@ -8183,7 +8212,7 @@
 					"traits": [
 						"attack",
 						"manipulate",
-						"range increment 400 feet"
+						"range increment <400 feet>"
 					],
 					"entries": [
 						"{@damage 8d10} bludgeoning, 20-foot burst, DC 26 Reflex"
@@ -8238,8 +8267,7 @@
 			"name": "Tripod",
 			"source": "G&G",
 			"page": 178,
-			"type": "Equipment",
-			"traits": [],
+			"type": "Item",
 			"price": {
 				"coin": "sp",
 				"amount": 2
@@ -8299,15 +8327,14 @@
 				"coin": "gp",
 				"amount": 600
 			},
-			"usage": "attached to firearm (firing mechanism)",
+			"usage": "attached <to firearm (firing mechanism)>",
 			"category": "Customization",
 			"subCategory": "Firing Mechanism",
 			"appliesTo": [
 				"Weapon"
 			],
 			"entries": [
-				"This device replaces the attached firearm's normal firing mechanism (normally, most of the guns in this chapter use a flintlock or matchlock firing mechanism). When the firearm's wielder fires the weapon, a small rune etched on a piece of stone affixed inside the mechanism releases a magical spark that's propelled through the firing mechanism and into the firearm, launching its bullet. An underwater firing mechanism allows the attached firearm to be fired underwater or in other conditions that would normally prevent the ignition of black powder. Attaching an underwater firing mechanism to a firearm takes 1 hour, though this time can overlap with the standard time required to maintain and clean your firearm to prevent misfires.",
-				"Talismans A talisman is a small object affixed to armor, a shield, or a weapon (which is called the affixed item). You must be wielding or wearing an item to activate a talisman attached to that item. Once activated, a talisman burns out permanently. The talismans included in this section are particularly useful for characters who wield firearms or crossbows."
+				"This device replaces the attached firearm's normal firing mechanism (normally, most of the guns in this chapter use a flintlock or matchlock firing mechanism). When the firearm's wielder fires the weapon, a small rune etched on a piece of stone affixed inside the mechanism releases a magical spark that's propelled through the firing mechanism and into the firearm, launching its bullet. An underwater firing mechanism allows the attached firearm to be fired underwater or in other conditions that would normally prevent the ignition of black powder. Attaching an underwater firing mechanism to a firearm takes 1 hour, though this time can overlap with the standard time required to maintain and clean your firearm to prevent misfires."
 			]
 		},
 		{
@@ -8337,11 +8364,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You apply the violet ray to an adjacent creature and attempt to counteract the {@condition blinded}, {@condition clumsy}, {@condition confused}, {@condition deafened}, {@condition drained}, {@condition enfeebled}, {@condition sickened}, or {@condition stupefied} condition with a counteract level of 6 and a counteract modifier of +22, using the source of the condition to determine the condition's counteract level and DC. If the condition was caused by an ongoing effect and you don't remove that effect, the condition returns after 1 minute. Each use of this ability can only counteract a single condition.",
@@ -8354,8 +8381,7 @@
 			"name": "Waterproof Firearm Carrying Case",
 			"source": "G&G",
 			"page": 178,
-			"type": "Equipment",
-			"traits": [],
+			"type": "Item",
 			"price": {
 				"coin": "sp",
 				"amount": 2
@@ -8392,7 +8418,7 @@
 					"unit": "action"
 				},
 				"components": [
-					"Interact"
+					"{@action Interact}"
 				]
 			},
 			"category": "Consumable",
@@ -8410,7 +8436,7 @@
 				"rare",
 				"clockwork"
 			],
-			"usage": "attached to a thrown weapon",
+			"usage": "attached <to a thrown weapon>",
 			"category": "Customization",
 			"subCategory": "Weapon",
 			"entries": [

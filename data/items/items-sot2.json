@@ -28,11 +28,11 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You shake the bag to produce a single cat. You cast a 3rd-level {@spell summon animal} to produce a leopard (Bestiary 52)."
@@ -46,11 +46,11 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You pull the bag over your head and it covers you completely. You then exit the bag in the form of a large cat.",
@@ -90,14 +90,14 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
-						"You bow to an ally within 30 feet, creating a magical bond between the two of you. You cast {@spell shield} other targeting the ally. The link remains even if you move more than 30 feet away from them. At the end of the spell's duration, your ally recovers {@dice 4d8} Hit Points and you recover half of what they recover."
+						"You bow to an ally within 30 feet, creating a magical bond between the two of you. You cast {@spell shield other} targeting the ally. The link remains even if you move more than 30 feet away from them. At the end of the spell's duration, your ally recovers {@dice 4d8} Hit Points and you recover half of what they recover."
 					]
 				}
 			]
@@ -131,11 +131,11 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You touch the ruby and hurl the spear at a square within 40 feet. When the spear lands, it detonates, dealing {@damage 6d6} fire damage (DC 23 basic Reflex save) to all creatures in a 10-foot emanation. It then flies back to your hand."
@@ -162,7 +162,7 @@
 			"bulk": 1,
 			"category": "Held",
 			"entries": [
-				"Long associated with a notorious crime boss in Nantambu, this stout +1 striking fearsomeAPG club is studded with vicious-looking knobs of obsidian and wrapped in cloth for a better grip.",
+				"Long associated with a notorious crime boss in Nantambu, this stout +1 striking {@item fearsome|APG} club is studded with vicious-looking knobs of obsidian and wrapped in cloth for a better grip.",
 				"It emits a ghastly groan when swung.",
 				{
 					"type": "ability",
@@ -171,7 +171,7 @@
 						"unit": "action"
 					},
 					"components": [
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You gesture at a square within 40 feet with Habu's Cudgel. The club causes a frightful wail to unleash from that square and casts fear (DC 24 Will save) targeting the creature in that square and all adjacent creatures."
@@ -211,7 +211,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"You call upon the ferocity and grace of the leopard. The armor's rings flatten out to become a solid piece of flexible armor. You gain a +2 item bonus to {@skill Stealth} checks and {@skill Intimidation} checks to {@action Demoralize}, but take a \u20132 penalty to {@skill Diplomacy} and {@skill Society} checks.",
@@ -279,11 +279,10 @@
 				"components": [
 					"envision"
 				],
-				"trigger": "You attempt a"
+				"trigger": "You attempt a {@skill Performance} check."
 			},
 			"category": "Talisman",
 			"entries": [
-				"{@skill Performance} check.",
 				"This small figurine is carved from a single piece of silvery, spiky stone and resembles a beautiful dryad pouring water into a small pool. When you activate the muse, you are momentarily enlightened with inspiration that bolsters your performance. If you roll a success on your triggering check, you get a critical success instead."
 			]
 		},
@@ -318,7 +317,7 @@
 					],
 					"frequency": {
 						"unit": "day",
-						"freq": 1
+						"number": 1
 					},
 					"entries": [
 						"The dagger casts a 4th-level {@spell dispel magic} targeting the most powerful spell effect affecting the creature you critically hit. The counteract check is +15."
@@ -350,7 +349,7 @@
 					},
 					"components": [
 						"envision",
-						"Interact"
+						"{@action Interact}"
 					],
 					"entries": [
 						"You ring the chime, unleashing its magic. The specifics of each chime, as well as the activation's frequency (if any), appear in its entry below."

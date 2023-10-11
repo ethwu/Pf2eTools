@@ -43,7 +43,7 @@
 			],
 			"name": "Deadly Strike",
 			"entries": [
-				"Through precise calculation, you've found the perfect shape for your weapon to deal extreme damage on a well-placed strike. Your innovation gains the {@trait deadly d8} trait. If your innovation was already deadly, it increases its {@trait deadly} die to {@damage d12} instead of gaining deadly {@damage d8}."
+				"Through precise calculation, you've found the perfect shape for your weapon to deal extreme damage on a well-placed strike. Your innovation gains the {@trait deadly <d8>} trait. If your innovation was already deadly, it increases its {@trait deadly} die to {@damage d12} instead of gaining deadly {@damage d8}."
 			]
 		},
 		{
@@ -189,6 +189,7 @@
 				}
 			],
 			"name": "Rune Capacity",
+			"add_hash": "Weapon",
 			"entries": [
 				"Whether you've dabbled with orichalcum or found another engineering solution, you've built your innovation in such a way that it can hold an additional property rune. Your innovation can have one more property rune than a normal item of its kind (to a maximum of four property runes with a {@item +3 weapon potency||+3 potency} weapon)."
 			]
@@ -458,7 +459,7 @@
 			],
 			"name": "Physical Protections",
 			"entries": [
-				"Your armor has so many adjustments and precautions that it can guard against all physical damage. While wearing your armor, you gain resistance to all physical damage (bludgeoning, piercing, and slashing damage, as well as persistent bleed damage) equal to half your level. You must have the dense plating, layered mesh, or tensile absorption breakthrough modification to select this modification."
+				"Your armor has so many adjustments and precautions that it can guard against all physical damage. While wearing your armor, you gain resistance to all physical damage (bludgeoning, piercing, and slashing damage, as well as {@condition persistent damage||persistent bleed damage}) equal to half your level. You must have the dense plating, layered mesh, or tensile absorption breakthrough modification to select this modification."
 			]
 		},
 		{
@@ -480,6 +481,7 @@
 				}
 			],
 			"name": "Rune Capacity",
+			"add_hash": "Armor",
 			"entries": [
 				"Whether you've done some dabbling in orichalcum alloys or found another engineering solution, you've built your innovation in such a way that it can hold an additional property rune. Your innovation can have one more property rune than a normal item of its kind (to a maximum of four property runes with a {@item +3 armor potency||+3 potency} armor)."
 			]
@@ -559,7 +561,7 @@
 			],
 			"name": "Inconspicuous Appearance",
 			"entries": [
-				"Your innovation is built for easy concealment and surprise attacks. It gains the backstabber and versatile P traits. If the weapon has light Bulk, it also gains the {@trait concealable} trait."
+				"Your innovation is built for easy concealment and surprise attacks. It gains the {@trait backstabber} and {@trait versatile <P>} traits. If the weapon has light Bulk, it also gains the {@trait concealable} trait."
 			]
 		},
 		{
@@ -1046,7 +1048,7 @@
 			],
 			"name": "Complex Simplicity",
 			"entries": [
-				"Increase your innovation's weapon damage die by one step ({@damage d4} to {@damage d6}, {@damage d6} to {@damage d8}, {@damage d8} to {@damage d10}, {@damage d10} to {@damage d12}). In addition, it gains one of the following traits of your choice: {@trait versatile B}, {@trait versatile P}, or {@trait versatile S}."
+				"Increase your innovation's weapon damage die by one step ({@damage d4} to {@damage d6}, {@damage d6} to {@damage d8}, {@damage d8} to {@damage d10}, {@damage d10} to {@damage d12}). In addition, it gains one of the following traits of your choice: {@trait versatile B}, {@trait versatile <P>}, or {@trait versatile S}."
 			]
 		},
 		{
@@ -1072,7 +1074,7 @@
 			],
 			"name": "Dynamic Weighting",
 			"entries": [
-				"Your weapon's modified weight distribution can increase power in exchange for taking more hands to wield. Your innovation gains the {@trait two-hand} trait, with a damage die one size higher than the weapon's normal weapon damage die size (for instance, a {@item longsword} would gain the {@trait two-hand d10} trait). Your innovation also gains the {@trait versatile B} trait."
+				"Your weapon's modified weight distribution can increase power in exchange for taking more hands to wield. Your innovation gains the {@trait two-hand} trait, with a damage die one size higher than the weapon's normal weapon damage die size (for instance, a {@item longsword} would gain the {@trait two-hand <d10>} trait). Your innovation also gains the {@trait versatile B} trait."
 			]
 		},
 		{
@@ -1124,7 +1126,7 @@
 			],
 			"name": "Hampering Spikes",
 			"entries": [
-				"You've added long, snagging spikes to your weapon, which you can use to impede your foes' movement. Your innovation gains the {@trait hampering} and {@trait versatile P} traits."
+				"You've added long, snagging spikes to your weapon, which you can use to impede your foes' movement. Your innovation gains the {@trait hampering} and {@trait versatile <P>} traits."
 			]
 		},
 		{
@@ -1775,6 +1777,40 @@
 			"type": "Major Lesson",
 			"entries": [
 				"You gain the {@spell glacial heart|lol} hex, and your familiar learns {@spell wall of ice}."
+			]
+		},
+		{
+			"name": "Lesson of Favors",
+			"source": "DA",
+			"page": 159,
+			"prerequisite": [
+				{
+					"feat": [
+						"Greater Lesson|APG"
+					]
+				}
+			],
+			"type": "Greater Lesson",
+			"entries": [
+				"{@note A witch with the {@class witch|apg|pacts|pacts|DA} patron can select the lesson of favors when a feat or other effect grants a greater lesson. The GM might determine that other witches who find themselves dealing primarily in favors can uncover this lesson, as well.}",
+				"You gain the {@spell return the favor|DA} hex, and your familiar learns {@spell mind of menace|SoM}."
+			]
+		},
+		{
+			"name": "Lesson of Bargains",
+			"source": "DA",
+			"page": 159,
+			"prerequisite": [
+				{
+					"feat": [
+						"Major Lesson|APG"
+					]
+				}
+			],
+			"type": "Major Lesson",
+			"entries": [
+				"{@note A witch with the {@class witch|apg|pacts|pacts|DA} patron can select the lesson of bargains when a feat or other effect grants a major lesson. The GM might determine that other witches who find themselves making bargains and holding double-crossers accountable can uncover this lesson, as well.}",
+				"You gain the {@spell over the coals|DA} hex, and your familiar learns {@spell subconscious suggestion}."
 			]
 		}
 	]
